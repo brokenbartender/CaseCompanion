@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Page from "../components/ui/Page";
 import { Card, CardBody, CardHeader, CardSubtitle, CardTitle } from "../components/ui/Card";
 import { readJson, writeJson } from "../utils/localStore";
+import { getMatterId, getWorkspaceId } from "../services/authStorage";
 
 const STORAGE_KEY = "case_companion_settings_v1";
 const EXPORT_KEYS = [
@@ -36,11 +37,27 @@ export default function CaseSettingsView() {
       authToken: ""
     })
   );
+  const [sessionIds, setSessionIds] = useState<{ workspaceId: string; matterId: string }>({
+    workspaceId: "",
+    matterId: ""
+  });
 
   function update(next: Partial<CaseSettings>) {
     const updated = { ...settings, ...next };
     setSettings(updated);
     writeJson(STORAGE_KEY, updated);
+  }
+
+  useEffect(() => {
+    setSessionIds({
+      workspaceId: getWorkspaceId(),
+      matterId: getMatterId()
+    });
+  }, []);
+
+  function copyText(value: string) {
+    if (!value) return;
+    navigator.clipboard?.writeText(value);
   }
 
   function exportData() {
@@ -141,6 +158,42 @@ export default function CaseSettingsView() {
             </div>
             <div className="mt-2 text-xs text-slate-500">
               Optional: connect to the backend for uploads and audit logs.
+            </div>
+          </CardBody>
+        </Card>
+
+        <Card>
+          <CardHeader>
+            <CardSubtitle>Session IDs</CardSubtitle>
+            <CardTitle>Workspace + Matter</CardTitle>
+          </CardHeader>
+          <CardBody>
+            <div className="grid gap-3 md:grid-cols-2">
+              <div className="rounded-md border border-white/10 bg-white/5 px-3 py-2 text-sm text-slate-200">
+                <div className="text-xs text-slate-400">Workspace ID</div>
+                <div className="mt-1 break-all">{sessionIds.workspaceId || "Not set"}</div>
+                <button
+                  type="button"
+                  className="mt-2 text-xs text-amber-200"
+                  onClick={() => copyText(sessionIds.workspaceId)}
+                >
+                  Copy
+                </button>
+              </div>
+              <div className="rounded-md border border-white/10 bg-white/5 px-3 py-2 text-sm text-slate-200">
+                <div className="text-xs text-slate-400">Matter ID</div>
+                <div className="mt-1 break-all">{sessionIds.matterId || "Not set"}</div>
+                <button
+                  type="button"
+                  className="mt-2 text-xs text-amber-200"
+                  onClick={() => copyText(sessionIds.matterId)}
+                >
+                  Copy
+                </button>
+              </div>
+            </div>
+            <div className="mt-3 text-xs text-slate-500">
+              If these are blank, log in and return here. These IDs are required for document ingestion.
             </div>
           </CardBody>
         </Card>
