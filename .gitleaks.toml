@@ -1,0 +1,9 @@
+[allowlist]
+paths = [
+  "node_modules",
+  "dist",
+  "dist-embed",
+  "build",
+  ".cache",
+  "server/uploads"
+]

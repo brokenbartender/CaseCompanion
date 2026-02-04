@@ -1,0 +1,114 @@
+﻿services:
+  db:
+    image: pgvector/pgvector:pg16
+    container_name: lexipro-db
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:?error}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?error}
+      POSTGRES_DB: ${POSTGRES_DB:?error}
+    ports:
+      - "5433:5432"
+    networks:
+      - lexipro-net
+      - lexipro-internal
+    volumes:
+      - lexipro_pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER} -d ${POSTGRES_DB}"]
+      interval: 2s
+      timeout: 5s
+      retries: 30
+
+  backend:
+    build:
+      context: ./server
+      dockerfile: Dockerfile
+    image: lexipro-backend
+    depends_on:
+      db:
+        condition: service_healthy
+    env_file:
+      - ./server/.env
+    environment:
+      DATABASE_URL: ${DATABASE_URL:?error}
+      AUTO_SEED: ${AUTO_SEED:?error}
+      SEED_DEMO_EXHIBITS: ${SEED_DEMO_EXHIBITS:?error}
+      AI_FALLBACK_MODE: ${AI_FALLBACK_MODE:?error}
+      OLLAMA_URL: ${OLLAMA_URL:?error}
+      OLLAMA_MODEL: ${OLLAMA_MODEL:?error}
+      OLLAMA_AUDIT_MODEL: ${OLLAMA_AUDIT_MODEL:?error}
+      NODE_ENV: development
+      BUILDER_MODE: "1"
+      CODEX_BRIDGE_URL: http://host.docker.internal:8790
+    ports:
+      - "8787:8787"
+    networks:
+      - lexipro-net
+      - lexipro-internal
+    volumes:
+      - lexipro_uploads:/app/uploads
+
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        VITE_API_BASE_URL: ${VITE_API_BASE_URL}
+        VITE_AGENT_PANEL: ${VITE_AGENT_PANEL}
+    image: apptest-frontend
+    depends_on:
+      backend:
+        condition: service_started
+    ports:
+      - "3001:3000"
+    networks:
+      - lexipro-net
+
+  integrity-audit:
+    image: alpine:3.20
+    container_name: lexipro-integrity-audit
+    depends_on:
+      backend:
+        condition: service_started
+    env_file:
+      - ./server/.env
+    networks:
+      - lexipro-internal
+    restart: on-failure
+    entrypoint: ["/bin/sh","-c"]
+    command: |
+      apk add --no-cache curl ca-certificates >/dev/null 2>&1 || apk add --no-cache curl ca-certificates
+      echo "0 * * * * curl -sS -X POST http://backend:8787/internal/integrity/audit -H 'x-internal-token: $${INTERNAL_AUDIT_TOKEN}' >/proc/1/fd/1 2>/proc/1/fd/2" > /etc/crontabs/root
+      # Run once on startup, then hourly
+      curl -sS -X POST http://backend:8787/internal/integrity/audit -H "x-internal-token: $${INTERNAL_AUDIT_TOKEN}" >/proc/1/fd/1 2>/proc/1/fd/2 || true
+      crond -f -l 2
+
+  ollama:
+    image: ollama/ollama:latest
+    container_name: lexipro-ai-local
+    ports:
+      - "11434:11434"
+    volumes:
+      - ollama_data:/root/.ollama
+    entrypoint: /bin/sh
+    command: -c "ollama serve & sleep 5 && ollama pull mistral && wait"
+    networks:
+      - lexipro-net
+    healthcheck:
+      test: ["CMD-SHELL", "ollama list >/dev/null 2>&1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+networks:
+  lexipro-net:
+    name: enterprise_default
+    driver: bridge
+
+  lexipro-internal:
+    internal: true
+
+volumes:
+  lexipro_pgdata:
+  lexipro_uploads:
+  ollama_data:

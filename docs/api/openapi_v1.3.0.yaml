@@ -1,0 +1,113 @@
+openapi: 3.0.3
+info:
+  title: LexiPro Forensic OS API
+  version: 1.3.0
+  description: Minimal OpenAPI spec for core AI, Exhibit, and Audit endpoints.
+servers:
+  - url: https://api.lexipro.local
+paths:
+  /api/ai/chat:
+    post:
+      summary: Generate grounded AI response
+      description: Returns a grounded response with citations anchored to evidence.
+      security:
+        - bearerAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                message:
+                  type: string
+                context:
+                  type: object
+                  additionalProperties: true
+              required:
+                - message
+      responses:
+        "200":
+          description: Grounded response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  summary:
+                    type: string
+                  claims:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        text:
+                          type: string
+                        anchorIds:
+                          type: array
+                          items:
+                            type: string
+        "422":
+          description: Grounding failure
+  /api/exhibits:
+    post:
+      summary: Upload an exhibit
+      description: Upload a file to the current workspace (x-workspace-id header required).
+      security:
+        - bearerAuth: []
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                file:
+                  type: string
+                  format: binary
+                matterId:
+                  type: string
+      responses:
+        "200":
+          description: Exhibit created
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: string
+                  filename:
+                    type: string
+                  workspaceId:
+                    type: string
+  /api/audit/chain:
+    get:
+      summary: Verify audit chain integrity
+      security:
+        - bearerAuth: []
+      parameters:
+        - in: header
+          name: x-workspace-id
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Audit chain verification result
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  isValid:
+                    type: boolean
+                  details:
+                    type: array
+                    items:
+                      type: object
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer

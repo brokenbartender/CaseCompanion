@@ -1,0 +1,38 @@
+name: no-demo-scaffold-gate
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  forbid-demo-scaffold:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Fail if demo/mock scaffold strings exist
+        shell: bash
+        run: |
+          set -euo pipefail
+          # Strings that indicate demo/mock scaffolding shipped in the prod build.
+          FORBIDDEN_REGEX='(mock_exhibits|demoMode|initialData|State of Michigan v)'
+
+          # Scan only owned source trees to avoid dependency false positives.
+          # IMPORTANT: never scan node_modules.
+          if grep -RIn \
+            --exclude-dir=node_modules \
+            --exclude-dir=.git \
+            --exclude-dir=dist \
+            --exclude-dir=dist-embed \
+            --exclude-dir=build \
+            --exclude-dir=.cache \
+            --exclude-dir=demo \
+            --exclude=*.lock \
+            --exclude=*.zip \
+            --exclude=no-demo-scaffold-gate.yml \
+            -E "$FORBIDDEN_REGEX" \
+            src server docs .github; then
+            echo "\nERROR: Forbidden demo/mock scaffold string found. Purge demo data and toggles before merging." >&2
+            exit 1
+          fi
+
+          echo "OK: no forbidden demo/mock scaffold strings found."

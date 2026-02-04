@@ -1,0 +1,12 @@
+# Replace placeholder owners with your GitHub teams/users.
+* @lexipro-platform
+
+# Sensitive areas
+/server/ @lexipro-platform @lexipro-security
+/src/security/ @lexipro-security
+/server/utils/signing.ts @lexipro-security
+/server/lib/releaseCert.ts @lexipro-security
+/server/audit.ts @lexipro-security
+/server/middleware/audit* @lexipro-security
+/server/routes/audit* @lexipro-security
+/server/services/audit* @lexipro-security

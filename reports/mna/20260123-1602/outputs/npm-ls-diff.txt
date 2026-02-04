@@ -1,0 +1,6 @@
+lexipro-forensic-backend@1.1.0 <REPO_ROOT>\server
+`-- ts-node@10.9.2
+  `-- diff@4.0.2
+
+
+

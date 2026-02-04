@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="LexiPro">
+  <defs>
+    <linearGradient id="lexi-gradient" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="50%" stop-color="#818cf8"/>
+      <stop offset="100%" stop-color="#22c55e"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="96" fill="#0b0f1a"/>
+  <path d="M144 140h56v176h168v56H144z" fill="url(#lexi-gradient)"/>
+  <circle cx="352" cy="176" r="48" fill="#0f172a" stroke="url(#lexi-gradient)" stroke-width="16"/>
+</svg>

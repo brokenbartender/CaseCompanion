@@ -1,0 +1,50 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "SystemAudit",
+  "description": "Workspace-scoped integrity worker output for forensic chain-of-custody.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "audit_id",
+    "workspace_id",
+    "timestamp",
+    "total_files_scanned",
+    "integrity_failures_count",
+    "status",
+    "resource_ids"
+  ],
+  "properties": {
+    "audit_id": {
+      "type": "string",
+      "description": "Unique audit identifier."
+    },
+    "workspace_id": {
+      "type": "string",
+      "description": "Workspace scope for data isolation."
+    },
+    "timestamp": {
+      "type": "string",
+      "format": "date-time",
+      "description": "When the audit completed."
+    },
+    "total_files_scanned": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "integrity_failures_count": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "status": {
+      "type": "string",
+      "enum": ["SUCCESS", "WARNING", "CRITICAL"]
+    },
+    "resource_ids": {
+      "type": "array",
+      "description": "Resource UUIDs associated with the audit (no file paths).",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

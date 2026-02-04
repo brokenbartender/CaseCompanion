@@ -1,0 +1,4 @@
+node v20.20.0
+npm 10.8.2
+git 6657cf7fc0553f104cd9210d94308674533aaa64
+os Microsoft Windows NT 10.0.26200.0
