@@ -1,0 +1,1 @@
+gXMLBuffer="<?xml version=\"1.0\" encoding=\"UTF-8\"?><ck><di ky=\"0\" rd=\"Court_Rules_Book_Ch_2/Court_Rules_Chapter_2/Court_Rules_Chapter_2.htm|Court Rules Chapter 2\" ct=\"    MICHIGAN COURT RULES OF 1985 Chapter 2. Civil Procedure Chapter Updated with MSC Order(s) Effect ...\" bc=\"\"/></ck>";

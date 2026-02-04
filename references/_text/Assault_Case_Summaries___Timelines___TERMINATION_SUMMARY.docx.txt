@@ -1,0 +1,53 @@
+TERMINATION SUMMARY
+Cody E. McKenzie — Workplace Assault Case
+This document outlines the circumstances, legal implications, and financial damages associated with the wrongful termination on October 17, 2025.
+------------------------------------------------------------
+TERMINATION DETAILS
+------------------------------------------------------------
+Termination Date: October 17, 2025
+Cause: Retaliation after requesting owed wages
+Documentation Provided: None
+Workers’ Comp Status: Employer never filed claim
+------------------------------------------------------------
+CONTEXT OF TERMINATION
+------------------------------------------------------------
+• Assault occurred August 20, 2025.
+• Employer discouraged medical care.
+• Employer refused to document injury.
+• Hours were cut after reporting injury.
+• Wages were withheld (415.52 hours).
+• Termination occurred immediately after wage request.
+This sequence is consistent with:
+• Retaliation
+• Wage theft
+• Workers’ comp interference
+• Wrongful termination under Michigan law
+------------------------------------------------------------
+WAGE LOSS FROM TERMINATION
+------------------------------------------------------------
+Average Weekly Wage (AWW): $577.67
+Weeks since termination (10/17 → 01/04): 11.43 weeks
+Termination wage loss:
+11.43 × $577.67 = $6,602.77
+------------------------------------------------------------
+WORKERS’ COMP WAGE LOSS (DUE TO TERMINATION)
+------------------------------------------------------------
+WC wage-loss rate: $369.00/week
+WC wage-loss owed (Aug 20 → Jan 4):
+19.6 × $369.00 = $7,232.40
+------------------------------------------------------------
+TOTAL TERMINATION DAMAGES
+------------------------------------------------------------
+• Lost wages: $6,602.77
+• WC wage-loss owed: $7,232.40
+TOTAL TERMINATION DAMAGES:
+**$13,835.17**
+------------------------------------------------------------
+SUMMARY
+------------------------------------------------------------
+The termination was:
+• Retaliatory
+• Unlawful
+• Directly connected to protected activity
+• Financially devastating
+This termination significantly increases the value of the case across multiple legal lanes.

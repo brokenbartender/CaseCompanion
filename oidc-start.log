@@ -1,0 +1,8 @@
+
+> lexipro-forensic-backend@1.1.0 start
+> tsx index.ts
+
+{"ts":"2026-01-19T08:55:19.044Z","level":"info","message":"server_listening","port":8787}
+{"ts":"2026-01-19T08:55:25.996Z","level":"info","message":"http_request","requestId":"b1fc4058-77b2-4db6-b2e5-378b66a99e76","method":"GET","path":"/api/health","status":200,"durationMs":11}
+{"ts":"2026-01-19T08:55:37.326Z","level":"info","message":"http_request","requestId":"06d64a78-f932-487a-ba31-2818ea114ffa","method":"GET","path":"/api/auth/oidc/login","status":302,"durationMs":659}
+{"ts":"2026-01-19T08:55:51.408Z","level":"info","message":"http_request","requestId":"6139f6b3-d47f-4de8-add6-2d74bfa91869","method":"HEAD","path":"/api/auth/oidc/login","status":302,"durationMs":3}

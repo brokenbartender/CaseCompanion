@@ -1,0 +1,6 @@
+DO $$
+BEGIN
+  ALTER TYPE "ExhibitType" ADD VALUE IF NOT EXISTS 'WEB_CAPTURE';
+EXCEPTION
+  WHEN duplicate_object THEN NULL;
+END$$;

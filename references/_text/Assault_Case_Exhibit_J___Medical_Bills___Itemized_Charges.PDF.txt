@@ -1,0 +1,43 @@
+=== Page 1 ===
+PO Box 933327
+THIS IS NOT A BILL
+Cleveland,OH 44193
+Date:January 05, 2026
+Patient Name: Cody McKenzie
+Cody McKenzie
+Guarantor ID: 100614936
+900 Spence St
+PONTIAC MI 48340
+The following document contains the requested services for Cody McKenzie (Guarantor #100614936). If you
+have any questions, please contact customer service.
+Insurance Payments
+Charges and Adjustments Patient Payments Patient Adjustments Total Balance
+14,412.00 -14,412.00 0.00 0.00 0.00
+Trinity Health
+Account: 1040007649770
+Trinity Health Emergency Center - Oakland Hospital
+Svc Date Rev Code Description Qty Amount
+Code
+Charges
+08/21/25 0250 A9270 Acetaminophen 325 Mg Tablet (71399-1025-3) 2 1.00
+08/21/25 0250 A9270 Alprazolam 0.5 Mg Tablet (60687-388-11) 1 1.00
+08/21/25 0250 A9270 Alprazolam 0.5 Mg Tablet (60687-388-11) 1 1.00
+08/21/25 0250 A9270 Hydrocodone-Acetaminophen 5-325 Mg Tablet (50268- 1 1.00
+401-15)
+08/21/25 0320 73030 HC Xr Shoulder > 2 Views Rt 1 360.00
+08/21/25 0351 70450 HC CT Head/Brain W/O Contrast 1 2,708.00
+08/21/25 0352 71250 HC CT Thorax Diagnostic W/O Contrast 1 2,432.00
+08/21/25 0352 72125 HC CT Cervical Spine W/O Contrast 1 2,580.00
+08/21/25 0352 74176 HC CT Abdomen & Pelvis W/O Contrast 1 5,229.00
+08/21/25 0450 99283 HC ED Type a Level 3 1 1,099.00
+Total Charges 14,412.00
+Insurance Payments and Adjustments
+09/08/25 2000 Insurance Payment 1 -279.52
+09/08/25 3000 Payor Contractual Allowance 1 -14,143.23
+09/08/25 3010 Contract-to-Payment Variance 1 10.75
+Total Insurance Payments and Adjustments -14,412.00
+=== Page 2 ===
+Guarantor #100614936
+Page 2 of 2
+If you have any questions please call Customer Service at 800-494-5797 between 9:00 am - 5:00 pm (M-F)
+.

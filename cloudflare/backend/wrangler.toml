@@ -1,0 +1,17 @@
+name = "lexipro-backend"
+main = "cloudflare/backend/worker.ts"
+compatibility_date = "2026-02-02"
+
+[[containers]]
+class_name = "LexiProBackend"
+image = "./server/Dockerfile"
+instance_type = "standard-2"
+max_instances = 2
+
+[[durable_objects.bindings]]
+name = "LEXIPRO_BACKEND"
+class_name = "LexiProBackend"
+
+[[migrations]]
+tag = "v1"
+new_sqlite_classes = ["LexiProBackend"]

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LexiPro Forensic Report</title>
+    <style>
+      body { font-family: "Segoe UI", Arial, sans-serif; color: #0f172a; margin: 36px; background: #f8fafc; }
+      h1 { margin: 0 0 6px; letter-spacing: 0.08em; text-transform: uppercase; font-size: 20px; }
+      h2 { margin: 0 0 8px; font-size: 16px; }
+      .header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 18px; }
+      .badge { display: inline-flex; align-items: center; gap: 6px; padding: 6px 10px; border-radius: 999px; background: #0f172a; color: #fff; font-size: 11px; letter-spacing: 0.08em; }
+      .summary { border: 1px solid #e2e8f0; padding: 16px; border-radius: 12px; background: #fff; }
+      .hash { font-family: "Courier New", monospace; font-size: 12px; word-break: break-all; color: #334155; }
+      .pill { display: inline-block; padding: 4px 8px; border-radius: 999px; background: #e2e8f0; font-size: 11px; margin-right: 8px; }
+      .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 18px; }
+      .panel { border: 1px solid #cbd5f5; background: #fff; border-radius: 12px; padding: 12px; }
+      .transcript { font-family: "Courier New", monospace; font-size: 12px; white-space: pre-wrap; color: #111827; background: #f1f5f9; padding: 10px; border-radius: 8px; min-height: 160px; }
+      .capture img { max-width: 100%; border-radius: 10px; border: 1px solid #e2e8f0; }
+      .footer { margin-top: 20px; font-size: 11px; color: #475569; }
+    </style>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "LegalService",
+        "name": "LexiPro Forensic OS",
+        "description": "Deterministic forensic intelligence with anchored citations and tamper-evident audit trails.",
+        "serviceType": "Forensic Evidence Review",
+        "areaServed": "United States",
+        "slogan": "Logic processed by: local gemma:2b"
+      }
+    </script>
+  </head>
+  <body>
+    <div class="header">
+      <div>
+        <h1>Forensic Integrity Report</h1>
+        <div class="pill">Generated: {{GENERATED_AT}}</div>
+      </div>
+      <div class="badge">Logic processed by: local gemma:2b</div>
+    </div>
+
+    <div class="summary">
+      <h2>Forensic Integrity Summary</h2>
+      <p><strong>SHA-256:</strong> <span class="hash">{{INTEGRITY_HASH}}</span></p>
+      <p>All citations are anchored to source bytes or timestamps. Any unanchored claim is blocked.</p>
+      <p><strong>Total Human Review Time Reclaimed:</strong> {{ROI_HOURS}} hours</p>
+    </div>
+
+    <div class="grid">
+      <div class="panel">
+        <h2>Video Transcript (Kill-Shot Evidence)</h2>
+        <div class="transcript">{{TRANSCRIPT_TEXT}}</div>
+      </div>
+      <div class="panel capture">
+        <h2>Web Witness Capture</h2>
+        <img src="data:image/png;base64,{{WEB_CAPTURE_BASE64}}" alt="Web capture" />
+      </div>
+    </div>
+
+    <div class="footer">
+      Evidence package includes hash registry, audit chain, and source artifacts for full verification.
+    </div>
+  </body>
+</html>

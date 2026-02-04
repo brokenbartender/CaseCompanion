@@ -1,0 +1,1343 @@
+# Procedural Structure Map (Sources Only)
+
+## Michigan Court Rules Chapter 2 (Civil Procedure)
+Source: C:\Users\codym\CaseCompanion\references\mcr_ch2.txt
+- Rule 2.001 Applicability
+- Rule 2.002 Waiver of Fees for Indigent Persons
+- Rule 2.003 Disqualification of Judge
+- Rule 2.004 Incarcerated Parties
+- Rule 2.101 Form and Commencement of Action
+- Rule 2.102 Summons; Expiration of Summons; Dismissal of Action for Failure to Serve
+- Rule 2.103 Process; Who May Serve
+- Rule 2.104 Process; Proof of Service
+- Rule 2.105 Process; Manner of Service
+- Rule 2.106 Notice by Posting or Publication
+- Rule 2.107 Service and Filing of Pleadings and Other Documents
+- Rule 2.108 Time
+- Rule 2.109 Security for Costs
+- Rule 2.110 Pleadings
+- Rule 2.111 General Rules of Pleading
+- Rule 2.112 Pleading Special Matters
+- Rule 2.113 Form, Captioning, Signing, and Verifying of Documents
+- Rule 2.115 Motion to Correct or to Strike Pleadings
+- Rule 2.116 Summary Disposition
+- Rule 2.117 Appearances
+- Rule 2.118 Amended and Supplemental Pleadings
+- Rule 2.119 Motion Practice
+- Rule 2.201 Parties Plaintiff and Defendant; Capacity
+- Rule 2.202 Substitution of Parties
+- Rule 2.203 Joinder of Claims, Counterclaims, and Cross-Claims
+- Rule 2.204 Third-Party Practice
+- Rule 2.205 Necessary Joinder of Parties
+- Rule 2.206 Permissive Joinder of Parties
+- Rule 2.207 Misjoinder and Nonjoinder of Parties
+- Rule 2.209 Intervention
+- Rule 2.221 Motion for Change of Venue
+- Rule 2.222 Change of Venue; Venue Proper
+- Rule 2.223 Change of Venue; Venue Improper
+- Rule 2.224 Change of Venue in Tort Actions
+- Rule 2.225 Joinder of Party to Control Venue
+- Rule 2.226 Change of Venue; Transfer of Jurisdiction; Orders
+- Rule 2.227 Transfer of Actions on Finding of Lack of Jurisdiction
+- Rule 2.228 Transfer to the Court of Claims
+- Rule 2.301 Availability and Timing of Discovery
+- Rule 2.302 Duty to Disclose; General Rules Governing Discovery
+- Rule 2.303 Depositions Before Action or Pending Appeal
+- Rule 2.304 Persons Before Whom Depositions May Be Taken
+- Rule 2.305 Discovery Subpoena to a Non-Party
+- Rule 2.306 Depositions on Oral Examination of a party
+- Rule 2.307 Depositions on Written Questions
+- Rule 2.308 Use of Depositions in Court Proceedings
+- Rule 2.309 Interrogatories to Parties
+- Rule 2.310 Requests for Production of Documents and Other Things; Entry on Land for Inspection and Other Purposes
+- Rule 2.311 Physical and Mental Examination of Persons
+- Rule 2.312 Request for Admission
+- Rule 2.313 Failure to Serve Disclosure or to Provide or to Permit Discovery; Sanctions
+- Rule 2.314 Discovery of Medical Information Concerning Party
+- Rule 2.315 Video Depositions
+- Rule 2.316 Removal of Disclosure and Discovery Materials From File
+- Rule 2.401 Pretrial Procedures; Conferences; Scheduling Orders
+- Rule 2.402 Use of Communication Equipment
+- Rule 2.403 Case Evaluation
+- Rule 2.404 Selection of Case Evaluation Panels
+- Rule 2.405 Offers to Stipulate to Entry of Judgment
+- Rule 2.406 Use of Facsimile Communication Equipment
+- Rule 2.407 Videoconferencing
+- Rule 2.408 Use of Videoconferencing Technology in Civil Cases
+- Rule 2.410 Alternative Dispute Resolution
+- Rule 2.411 Mediation
+- Rule 2.412   Mediation Communications; Confidentiality and Disclosure
+- Rule 2.420 Settlements and Judgments for Minors and Legally Incapacitated Individuals
+- Rule 2.421 Notice of Bankruptcy Proceedings
+- Rule 2.501 Scheduling Trials; Court Calendars
+- Rule 2.502 Dismissal for Lack of Progress
+- Rule 2.503 Adjournments
+- Rule 2.504 Dismissal of Actions
+- Rule 2.505 Consolidation; Separate Trials
+- Rule 2.506 Subpoena; Order to Attend
+- Rule 2.507 Conduct of Trials
+- Rule 2.508 Jury Trial of Right
+- Rule 2.509 Trial by Jury or by Court
+- Rule 2.510 Juror Personal History Questionnaire
+- Rule 2.511 Impaneling the Jury
+- Rule 2.512 Instructions to Jury
+- Rule 2.513 Conduct of Jury Trial
+- Rule 2.514 Rendering Verdict
+- Rule 2.515 Special Verdicts
+- Rule 2.516 Motion for Directed Verdict
+- Rule 2.517 Findings by Court
+- Rule 2.518 Receipt and Return or Disposal of Exhibits
+- Rule 2.601 Judgments
+- Rule 2.602 Entry of Judgments and Orders
+- Rule 2.603 Default and Default Judgment
+- Rule 2.604 Judgment in Actions Involving Multiple Claims or Multiple Parties
+- Rule 2.605 Declaratory Judgments
+- Rule 2.610 Motion for Judgment Notwithstanding the Verdict
+- Rule 2.611 New Trials; Amendment of Judgments
+- Rule 2.612 Relief From Judgment or Order
+- Rule 2.613 Limitations on Corrections of Error
+- Rule 2.614 Stay of Proceedings to Enforce Judgment
+- Rule 2.615 Enforcement of Tribal Judgments
+- Rule 2.620 Satisfaction of Judgment
+- Rule 2.621 Proceedings Supplementary to Judgment
+- Rule 2.622 Receivers
+- Rule 2.625 Taxation of Costs
+- Rule 2.626 Attorney Fees
+- Rule 2.630 Disability of Judge
+
+## Civil Proceedings Benchbook (TOC)
+Source: C:\Users\codym\CaseCompanion\references\michigan_civil_benchbook.txt
+- Chapter 1: Common Issues Arising in Trial Court
+- 1.1 Access to Court Proceedings................................................................ 1-2
+- A. Open or Closed Trial...................................................................... 1-2
+- B. Limitations on Access to Court Proceedings ................................. 1-4
+- C. Film or Electronic Media Coverage of Court Proceedings ............ 1-5
+- D. “Gag Orders” ................................................................................. 1-5
+- E. Standard of Review ....................................................................... 1-6
+- 1.2 Access to Court Files and Records........................................................ 1-6
+- A. Personal Identifying Information (PII)........................................... 1-6
+- B. Record of Proceedings Required ................................................ 1-12
+- C. Access to Court Records ............................................................. 1-14
+- D. Sealing Court Records ................................................................. 1-16
+- E. Record Retention ........................................................................ 1-19
+- F. Access and Reproduction Fees ................................................... 1-20
+- G. Standard of Review ..................................................................... 1-21
+- 1.3 Access to Judge.................................................................................. 1-21
+- A. Ex Parte Communications............................................................ 1-21
+- B. Judge’s Appearance by Video Communication Equipment ........ 1-22
+- 1.4 Form of Address................................................................................. 1-23
+- 1.5 Americans With Disabilities Act (ADA) Compliance........................... 1-23
+- 1.6 Attorney Conduct............................................................................... 1-23
+- A. Disciplinary Proceedings.............................................................. 1-24
+- B. Motion to Disqualify Attorney .................................................... 1-25
+- C. Standard of Review ..................................................................... 1-25
+- 1.7 Plaintiff’s Conduct - Wrongful Conduct Rule..................................... 1-25
+- 1.8 Contempt of Court............................................................................. 1-27
+- 1.9 Judicial Disqualification...................................................................... 1-27
+- 1.10 Pro Se Litigants................................................................................... 1-30
+- 1.11 Waiver of Fees.................................................................................... 1-32
+- A. Who Qualifies for Waiver or Suspension..................................... 1-32
+- B. Proper Request to Waive Filing Fees .......................................... 1-33
+- C. Domestic Relations Cases ........................................................... 1-34
+- D. Grant or Denial of a Request to Waive Fees ............................... 1-34
+- E. Payment of Service Fees and Costs of Publication ..................... 1-35
+- F. Reinstatement of Requirement for Payment of Fees ................. 1-36
+- G. Prisoners ..................................................................................... 1-36
+- H. Standard of Review ..................................................................... 1-38
+- 1.12 Appointment of Foreign Language Interpreter.................................. 1-38
+- A. Court Rule Regarding Foreign Language Interpreters................. 1-38
+- B. Determining Whether to Appoint a Foreign Language
+- C. Waiver of Right to Interpreter .................................................... 1-43
+- D. Classifications of Foreign Language Interpreters ........................ 1-43
+- E. Appointing More Than One Interpreter ..................................... 1-45
+- F. Avoiding Potential Conflicts of Interest ...................................... 1-45
+- G. Recordings .................................................................................. 1-46
+- H. Interpreter Oath or Affirmation .................................................. 1-46
+- I. Interpreter Costs ......................................................................... 1-46
+- J. Standard of Review ..................................................................... 1-47
+- 1.13 Appointment of Interpreter for Deaf or Deaf-Blind Person............... 1-47
+- A. Determining Whether to Appoint an Interpreter for Deaf or Deaf-
+- B. Waiver of Right to Interpreter .................................................... 1-50
+- C. Classifications of Interpreters for Deaf Person ........................... 1-50
+- D. Appointing More Than One Interpreter ..................................... 1-50
+- E. Interpreter Oath or Affirmation .................................................. 1-51
+- F. Interpreter Costs ......................................................................... 1-51
+- 1.14 Communication Equipment............................................................... 1-52
+- 1.15 Videoconferencing............................................................................. 1-52
+- A. Use of Videoconferencing in Circuit Court.................................. 1-54
+- B. Use of Videoconferencing in District Court ................................ 1-55
+- C. Criteria for Videoconferencing ................................................... 1-55
+- D. Request for Videoconferencing and Participant Contact
+- Chapter 2: Jurisdiction, Venue, and Standing
+- 2.1 Jurisdiction in General.......................................................................... 2-2
+- 2.2 Subject-Matter Jurisdiction in General................................................ 2-2
+- A. Transfer.......................................................................................... 2-3
+- B. Internal Affairs of Foreign Corporations Doctrine ........................ 2-5
+- C. Ecclesiastical Abstention Doctrine ................................................ 2-5
+- D. Standard of Review ....................................................................... 2-6
+- 2.3 District Court Subject-Matter Jurisdiction............................................ 2-6
+- A. Concurrent Jurisdiction................................................................ 2-11
+- B. Removal to Circuit Court ............................................................. 2-11
+- C. Appeals from District Court to Circuit Court ............................... 2-14
+- 2.4 Circuit Court Subject-Matter Jurisdiction........................................... 2-14
+- A. Removal to District Court............................................................ 2-17
+- B. Aggregating Claims ..................................................................... 2-18
+- C. Business Courts ........................................................................... 2-19
+- D. Jurisdiction Pending Appeal ........................................................ 2-21
+- 2.5 Probate Court Subject-Matter Jurisdiction........................................ 2-21
+- A. Concurrent Jurisdiction................................................................ 2-23
+- B. Removal to Probate Court .......................................................... 2-25
+- C. Appeals from Probate Court ...................................................... 2-25
+- 2.6 Concurrent Jurisdiction...................................................................... 2-25
+- 2.7 Court of Claims Subject-Matter Jurisdiction...................................... 2-27
+- A. Exclusive Jurisdiction................................................................... 2-27
+- B. Verified Claim and Notice ........................................................... 2-29
+- C. Notice Requirements .................................................................. 2-30
+- D. Jury Trial Right and Joinder ......................................................... 2-32
+- E. Transfer to the Court of Claims .................................................. 2-33
+- F. Remedy in Federal Court Exception ........................................... 2-33
+- G. Res Judicata ................................................................................ 2-34
+- H. Setoff, Recoupment, or Cross Declaration ................................. 2-34
+- I. Judgment .................................................................................... 2-34
+- J. Caselaw ....................................................................................... 2-34
+- 2.8 Michigan Supreme Court and Court of Appeals Subject-Matter
+- 2.9 Authority of District Court Magistrate............................................... 2-38
+- 2.10 Trial Court’s Authority After Appeal................................................... 2-38
+- A. District Courts and Agencies........................................................ 2-38
+- B. Trial Courts (Exclusive of District Court and Agencies) ............... 2-39
+- 2.11 Federal Court Subject-Matter Jurisdiction......................................... 2-41
+- A. Removal....................................................................................... 2-41
+- B. Bankruptcy .................................................................................. 2-42
+- 2.12 Personal Jurisdiction.......................................................................... 2-42
+- A. General Personal Jurisdiction...................................................... 2-42
+- B. Limited Personal Jurisdiction ...................................................... 2-47
+- C. Constitutional Limitations ........................................................... 2-48
+- D. Standard of Review ..................................................................... 2-51
+- 2.13 Actions In Rem and Quasi In Rem...................................................... 2-51
+- 2.14 Venue................................................................................................. 2-52
+- A. Change of Venue Generally........................................................ 2-54
+- B. Timing ......................................................................................... 2-54
+- C. Change of Proper Venue ............................................................. 2-55
+- D. Change of Improper Venue ......................................................... 2-56
+- E. Standard of Review ..................................................................... 2-58
+- 2.15 Standing and Real Party In Interest Requirements............................ 2-59
+- A. Standing....................................................................................... 2-59
+- B. Real Party in Interest .................................................................. 2-60
+- C. Standard of Review ..................................................................... 2-62
+- 2.16 Assignments....................................................................................... 2-62
+- A. Generally...................................................................................... 2-62
+- B. Partial Assignments .................................................................... 2-63
+- C. Counter-Assignments ................................................................. 2-63
+- 2.17 Res Judicata and Collateral Estoppel.................................................. 2-64
+- A. Res Judicata................................................................................. 2-64
+- B. Collateral Estoppel ...................................................................... 2-70
+- C. Standard of Review ..................................................................... 2-77
+- 2.18 Law of the Case.................................................................................. 2-78
+- 2.19 Judicial Estoppel................................................................................. 2-80
+- 2.20 Mootness........................................................................................... 2-82
+- Chapter 3: Pleadings and Process
+- 3.1 Civil Pleadings....................................................................................... 3-2
+- A. Generally........................................................................................ 3-2
+- B. Electronic Filing ............................................................................. 3-3
+- C. Appearance ................................................................................. 3-12
+- D. Complaint ................................................................................... 3-20
+- E. Responsive Pleading ................................................................... 3-20
+- F. Counterclaims and Cross-Claims ................................................. 3-23
+- G. Service of Pleadings and Other Documents ................................ 3-25
+- H. Filing Documents Under Seal ...................................................... 3-26
+- I. Extending Time for Serving and Filing Pleading .......................... 3-27
+- J. Standard of Review ..................................................................... 3-27
+- 3.2 Joinder................................................................................................ 3-27
+- A. Joinder of Claims.......................................................................... 3-27
+- B. Joinder of Parties ........................................................................ 3-28
+- C. Nonparties .................................................................................. 3-29
+- D. Standard of Review ..................................................................... 3-31
+- 3.3 Summons............................................................................................ 3-31
+- A. First Summons............................................................................. 3-31
+- B. Duplicate Summons .................................................................... 3-32
+- C. Second Summons ....................................................................... 3-32
+- D. Dismissal ..................................................................................... 3-33
+- 3.4 Service of Process............................................................................... 3-34
+- A. Who May Serve Process.............................................................. 3-34
+- B. Proof of Service ........................................................................... 3-34
+- C. Manner of Service ....................................................................... 3-35
+- D. Exemptions from Service and Privileged Persons ....................... 3-37
+- E. Defects in Service of Process or Proof of Service ....................... 3-38
+- 3.5 Motion for More Definite Statement................................................. 3-39
+- A. Generally...................................................................................... 3-39
+- B. Timing ......................................................................................... 3-40
+- C. Standard of Review ..................................................................... 3-40
+- 3.6 Motion to Strike................................................................................. 3-41
+- A. Generally...................................................................................... 3-41
+- B. Timing ......................................................................................... 3-41
+- C. Standard of Review ..................................................................... 3-41
+- 3.7 Amendment of Pleadings................................................................... 3-42
+- A. Amendments of Right.................................................................. 3-42
+- B. Amendments by Consent and by Leave of Court ....................... 3-42
+- C. Amendments Must Be Submitted in Writing .............................. 3-44
+- D. Amendment After Motion for Summary Disposition Filed ......... 3-44
+- E. Amendments to Conform to Evidence ....................................... 3-46
+- F. The “Relation-Back” Rule ............................................................ 3-47
+- G. Response to Amendments .......................................................... 3-50
+- H. Standard of Review ..................................................................... 3-50
+- 3.8 Third Party Practice............................................................................ 3-50
+- A. Generally...................................................................................... 3-50
+- B. Timing ......................................................................................... 3-50
+- C. Standard of Review ..................................................................... 3-50
+- 3.9 Intervention....................................................................................... 3-51
+- A. Intervention of Right................................................................... 3-51
+- B. Permissive Intervention .............................................................. 3-51
+- C. Timing ......................................................................................... 3-51
+- D. Decision and Effect ..................................................................... 3-52
+- E. Costs ........................................................................................... 3-52
+- F. Standard of Review ..................................................................... 3-52
+- Chapter 4: Pretrial Procedures
+- 4.1 Motions................................................................................................ 4-2
+- A. Form............................................................................................... 4-2
+- B. Affidavit (If Required) ................................................................... 4-3
+- C. Filing and Serving Motions and Responses ................................... 4-3
+- D. Filings by Incarcerated Individuals ................................................ 4-4
+- E. Uncontested Orders ..................................................................... 4-5
+- F. Contested Motions ....................................................................... 4-5
+- G. Decision ........................................................................................ 4-6
+- H. Entry of Order ............................................................................... 4-6
+- I. Standard of Review ....................................................................... 4-7
+- 4.2 Summary Disposition........................................................................... 4-7
+- A. Timing............................................................................................ 4-8
+- B. Grounds ...................................................................................... 4-10
+- C. Unavailability of Affidavits .......................................................... 4-23
+- D. Possible Dispositions ................................................................... 4-24
+- E. Ordering Summary Disposition Sua Sponte ................................ 4-27
+- F. Filing Multiple Summary Disposition Motions ............................ 4-28
+- G. Prejudicial Value ......................................................................... 4-28
+- H. Standard of Review ..................................................................... 4-29
+- 4.3 Reconsideration or Rehearing............................................................ 4-29
+- A. Requirements.............................................................................. 4-29
+- B. Decision ...................................................................................... 4-30
+- C. Standard of Review ..................................................................... 4-30
+- 4.4 Revisiting a Judgment In Actions Involving Multiple Claims or Multiple
+- 4.5 Security for Costs............................................................................... 4-32
+- A. Basis............................................................................................. 4-32
+- B. Timing ......................................................................................... 4-32
+- C. Hearing ....................................................................................... 4-32
+- D. Exceptions ................................................................................... 4-32
+- E. Objection to Sufficiency of Security ............................................ 4-33
+- F. Modification of Order ................................................................. 4-33
+- G. Sanction ...................................................................................... 4-33
+- H. Standard of Review ..................................................................... 4-34
+- 4.6 Separate or Joint Trial........................................................................ 4-34
+- A. Court’s Discretion........................................................................ 4-34
+- B. Standard of Review ..................................................................... 4-35
+- 4.7 Substitution or Withdrawal of Attorney............................................ 4-35
+- A. Order Required............................................................................ 4-35
+- 4.8 Adjournments.................................................................................... 4-36
+- A. Applicability................................................................................. 4-36
+- B. Requirements ............................................................................. 4-36
+- C. Order ........................................................................................... 4-37
+- D. Reschedule .................................................................................. 4-37
+- E. Conflict With Another Court ....................................................... 4-38
+- F. Standard of Review ..................................................................... 4-38
+- 4.9 Stay of Proceedings............................................................................ 4-38
+- A. Bankruptcy Stay........................................................................... 4-38
+- B. Servicemembers Civil Relief Act ................................................. 4-39
+- 4.10 Dismissal............................................................................................. 4-40
+- A. Generally...................................................................................... 4-40
+- B. Dismissal for Lack of Progress ..................................................... 4-41
+- C. Voluntary Dismissal .................................................................... 4-42
+- D. Involuntary Dismissal as a Sanction ............................................ 4-43
+- E. Failure to Timely File a Motion for Substitution ......................... 4-46
+- F. Involuntary Dismissal in a Bench Trial ........................................ 4-47
+- G. Costs ........................................................................................... 4-47
+- H. Standard of Review ..................................................................... 4-47
+- 4.11 Default and Default Judgments.......................................................... 4-48
+- A. Default......................................................................................... 4-48
+- B. Default Judgments ...................................................................... 4-51
+- 4.12 Setting Aside Judgments.................................................................... 4-53
+- A. Generally...................................................................................... 4-53
+- B. Setting Aside Default or Default Judgment Under Michigan Court Rule
+- C. Setting Aside Final Judgment Under Michigan Court Rule 2.612 4-59
+- D. Standard of Review ..................................................................... 4-67
+- Chapter 5: Discovery
+- 5.1 Discovery in General............................................................................ 5-2
+- A. Availability, Scope, and Time for Completion................................ 5-2
+- B. Constitutionality of Discovery Orders ........................................... 5-3
+- C. Supplementing Disclosures and Responses .................................. 5-4
+- D. Alternative Forms of Discovery ..................................................... 5-4
+- E. Discovery Planning Conference .................................................... 5-5
+- F. ESI Conference, Plan, and Order ................................................... 5-6
+- G. Final Pretrial Conference and Order ............................................. 5-6
+- H. Mediation of Discovery Disputes .................................................. 5-8
+- I. Award of Expenses ........................................................................ 5-9
+- J. Determining an Appropriate Discovery Violation Sanction ........ 5-10
+- K. Removal of Discovery Materials from File .................................. 5-12
+- L. Standard of Review ..................................................................... 5-13
+- 5.2 Disclosure........................................................................................... 5-13
+- A. Required Initial Disclosures......................................................... 5-13
+- B. Cases Exempt from Disclosure .................................................... 5-15
+- C. Time for Initial Disclosures .......................................................... 5-15
+- D. Failure to Disclose ....................................................................... 5-16
+- E. Removal of Disclosure Materials from File ................................. 5-16
+- 5.3 Depositions........................................................................................ 5-17
+- A. Deposition of Party On Oral Examination.................................... 5-17
+- B. Deposition On Written Questions .............................................. 5-19
+- C. Non-Party Subpoena for Deposition ........................................... 5-19
+- D. Payment of Deposition Expenses ............................................... 5-20
+- 5.4 Interrogatories................................................................................... 5-21
+- 5.5 Request for Documents..................................................................... 5-21
+- A. Generally...................................................................................... 5-21
+- B. Requests to Parties ..................................................................... 5-22
+- C. Requests on Nonparties .............................................................. 5-23
+- D. Standard of Review ..................................................................... 5-24
+- 5.6 Foreign Subpoenas............................................................................. 5-24
+- 5.7 Medical Examinations........................................................................ 5-25
+- A. Generally...................................................................................... 5-25
+- B. Report of Physician, Physician’s Assistant, or Certified Nurse
+- C. Privilege ...................................................................................... 5-26
+- D. Standard of Review ..................................................................... 5-26
+- 5.8 Request for Admission....................................................................... 5-27
+- A. Purpose........................................................................................ 5-27
+- B. Timing and Requirements ........................................................... 5-27
+- C. Scope .......................................................................................... 5-27
+- D. Response ..................................................................................... 5-27
+- E. Effect ........................................................................................... 5-29
+- F. Sanction for Failure to Admit ...................................................... 5-29
+- G. Standard of Review ..................................................................... 5-30
+- 5.9 Party’s Medical Information............................................................... 5-30
+- 5.10 Privileged Materials........................................................................... 5-31
+- A. Medical Records.......................................................................... 5-31
+- B. Hospital Records ......................................................................... 5-32
+- C. Personnel Records ...................................................................... 5-34
+- D. Trade Secrets .............................................................................. 5-35
+- E. Work Product and Attorney-Client Privilege .............................. 5-36
+- 5.11 Disclosure and Discovery Motions..................................................... 5-39
+- A. Motion to Compel........................................................................ 5-39
+- B. Motions for Protective Orders .................................................... 5-43
+- C. Standard of Review ..................................................................... 5-45
+- 5.12 Disclosure of Witnesses..................................................................... 5-45
+- A. Witness Lists................................................................................ 5-45
+- B. Sanctions for Failure to File Witness List .................................... 5-46
+- C. Standard of Review ..................................................................... 5-46
+- Chapter 6: Trial Alternatives
+- 6.1 Early Scheduling Conference................................................................ 6-2
+- A. Purposes ....................................................................................... 6-2
+- B. Participants ................................................................................... 6-3
+- C. Scheduling Orders ......................................................................... 6-5
+- D. Standard of Review ....................................................................... 6-6
+- 6.2 Offer of Judgment................................................................................ 6-6
+- A. Procedure and Timing.................................................................... 6-6
+- B. Costs Payable Upon Rejected Offer .............................................. 6-7
+- C. Standard of Review ....................................................................... 6-9
+- 6.3 Original Action to Enter a Consent Judgment or Consent Order......... 6-9
+- A. Commencing an Action.................................................................. 6-9
+- B. Entry of Final Consent Judgment or Consent Order ................... 6-11
+- C. Dismissal ..................................................................................... 6-11
+- 6.4 Alternative Dispute Resolution.......................................................... 6-11
+- 6.5 Case Evaluation.................................................................................. 6-13
+- A. Scope and Applicability................................................................ 6-13
+- B. Submission of Cases .................................................................... 6-13
+- C. Objections to Case Evaluation .................................................... 6-14
+- D. Fees ............................................................................................. 6-14
+- E. Submission of Summary and Supporting Documents ................ 6-15
+- F. Case Evaluation Decision ............................................................ 6-15
+- G. Judicial Review of Panel Finding a Claim or Defense Frivolous .. 6-16
+- H. Acceptance or Rejection of Evaluation ....................................... 6-17
+- I. Motion to Set Aside Case Evaluation .......................................... 6-19
+- 6.6 Mediation........................................................................................... 6-19
+- A. Generally...................................................................................... 6-19
+- B. Domestic Relations Mediation .................................................... 6-22
+- C. Child Protection Mediation ......................................................... 6-22
+- D. Mediation of Discovery Disputes ................................................ 6-22
+- 6.7 The Uniform Collaborative Law Act................................................... 6-22
+- 6.8 Settlements........................................................................................ 6-22
+- A. Must Be in Writing or on the Record........................................... 6-23
+- B. Attorney’s Authority and Duty .................................................... 6-24
+- C. Court Approval ............................................................................ 6-25
+- D. Conditional Dismissal .................................................................. 6-26
+- E. Wrongful Death Settlements ...................................................... 6-27
+- F. Settlements for Minors and Legally Incapacitated Individuals ... 6-28
+- G. Setting Aside Settlements ........................................................... 6-29
+- H. Disclosure of Settlement ............................................................. 6-29
+- I. Standard of Review ..................................................................... 6-30
+- Chapter 7: Trial
+- 7.1 Is Disqualification an Issue?................................................................. 7-2
+- 7.2 Pretrial Motions................................................................................... 7-3
+- 7.3 Separate or Joint Trial.......................................................................... 7-4
+- 7.4 Oaths or Affirmations of Witnesses and Interpreters.......................... 7-4
+- A. Oath for Witness............................................................................ 7-4
+- B. Oath for Child Witness .................................................................. 7-5
+- C. Oath for Interpreter ...................................................................... 7-5
+- 7.5 Subpoenas............................................................................................ 7-6
+- A. In General...................................................................................... 7-6
+- B. Subpoena for Party or Witness ..................................................... 7-6
+- C. Subpoena Duces Tecum (Subpoena for Production of Evidence) 7-6
+- D. Motion to Quash Subpoena .......................................................... 7-7
+- 7.6 Questions or Comments by Judge........................................................ 7-7
+- A. Generally Permissible Conduct...................................................... 7-7
+- B. Judicial Impartiality During a Jury Trial ......................................... 7-8
+- 7.7 Stipulations........................................................................................ 7-13
+- A. On the Record or in Writing......................................................... 7-13
+- B. Stipulation of Fact and Stipulations of Law ................................ 7-14
+- C. Enforcement ............................................................................... 7-14
+- 7.8 Witness Examination.......................................................................... 7-14
+- A. Direct Examination...................................................................... 7-15
+- B. Cross-Examination ...................................................................... 7-15
+- C. Redirect Examination .................................................................. 7-16
+- D. Recross-Examination .................................................................. 7-16
+- 7.9 Objections.......................................................................................... 7-16
+- 7.10 Mistrial............................................................................................... 7-17
+- A. Generally...................................................................................... 7-17
+- B. Sanctions ..................................................................................... 7-18
+- C. Standard of Review ..................................................................... 7-18
+- 7.11 Opening Statements.......................................................................... 7-19
+- A. Motion on Opening Statement.................................................... 7-19
+- 7.12 Evidentiary Issues............................................................................... 7-19
+- 7.13 Court View.......................................................................................... 7-20
+- 7.14 Motion for Dismissal/Directed Verdict.............................................. 7-20
+- 7.15 Closing Arguments............................................................................. 7-21
+- 7.16 Rebuttal.............................................................................................. 7-21
+- 7.17 Decision.............................................................................................. 7-21
+- 7.18 Right to a Jury Trial............................................................................. 7-22
+- 7.19 Jury Waiver and Jury Demand............................................................ 7-23
+- 7.20 Jury Selection..................................................................................... 7-24
+- A. Juror Qualification....................................................................... 7-24
+- B. Juror Exemption ......................................................................... 7-25
+- C. Composition of Jury Panel .......................................................... 7-26
+- D. Juror Oath Before Voir Dire ........................................................ 7-27
+- E. Voir Dire ...................................................................................... 7-27
+- F. Noncompliance with Jury Selection Rules .................................. 7-28
+- G. Challenges for Cause ................................................................... 7-28
+- H. Peremptory Challenges ............................................................... 7-30
+- I. Discrimination During Voir Dire .................................................. 7-31
+- J. Juror Oath Following Selection ................................................... 7-38
+- K. Alternate Jurors and Removal or Substitution of a Juror at Trial 7-39
+- L. Substitution of Judge .................................................................. 7-39
+- M. Standard of Review ..................................................................... 7-39
+- 7.21 Conducting a Jury Trial....................................................................... 7-40
+- 7.22 Opening Statements.......................................................................... 7-40
+- A. Prejudicial or Inflammatory Remarks.......................................... 7-41
+- B. Motion on Opening Statement ................................................... 7-41
+- 7.23 Interim Commentary.......................................................................... 7-41
+- 7.24 Closing Arguments............................................................................. 7-41
+- A. Scope of Closing Arguments........................................................ 7-42
+- B. Remarks Designed to Invite Sympathy From Jury ...................... 7-42
+- C. Remarks Involving Witness Testimony ....................................... 7-43
+- D. Remarks Involving Opposing Counsel ......................................... 7-43
+- 7.25 Rebuttal.............................................................................................. 7-44
+- 7.26 Summation of Evidence and Final Instructions.................................. 7-44
+- 7.27 Reference Document......................................................................... 7-44
+- 7.28 Jury Note Taking................................................................................. 7-44
+- 7.29 Juror Discussion.................................................................................. 7-45
+- 7.30 Jury Questions.................................................................................... 7-45
+- 7.31 Jury View............................................................................................ 7-45
+- 7.32 Directed Verdict................................................................................. 7-46
+- A. Rule.............................................................................................. 7-46
+- B. Test Applied by the Court ........................................................... 7-46
+- C. Motion on Opening Statement ................................................... 7-46
+- D. Standard of Review ..................................................................... 7-47
+- 7.33 Jury Instructions................................................................................. 7-47
+- A. Pretrial Instructions..................................................................... 7-47
+- B. Interim Instructions .................................................................... 7-47
+- C. Request for Instructions ............................................................. 7-47
+- D. Final Instructions ........................................................................ 7-48
+- E. Model Civil Jury Instructions ....................................................... 7-49
+- F. Supplemental Instructions .......................................................... 7-50
+- G. Objections to Instructions ........................................................... 7-51
+- H. Statement of Issues and Theory of Case ..................................... 7-51
+- I. Standard of Review ..................................................................... 7-51
+- 7.34 Jury Issues Arising During Deliberations............................................ 7-52
+- A. Communication with the Jury...................................................... 7-52
+- B. Materials in Jury Room ............................................................... 7-54
+- C. Requests to Review Testimony or Evidence ............................... 7-54
+- D. Hung Jury .................................................................................... 7-55
+- 7.35 Verdict................................................................................................ 7-56
+- A. Number........................................................................................ 7-56
+- B. Polling the Jury ............................................................................ 7-56
+- C. Special Verdict ............................................................................ 7-57
+- D. Inconsistent Verdicts ................................................................. 7-57
+- Chapter 8: Posttrial Proceedings
+- 8.1 Judgments............................................................................................ 8-2
+- A. Entry of Judgment (Order)............................................................. 8-2
+- B. Service ........................................................................................... 8-3
+- C. Correction of Judgment ................................................................ 8-4
+- D. Relief from Judgment ................................................................... 8-4
+- E. Enforcement of Judgment ............................................................ 8-4
+- F. Satisfaction of Judgment .............................................................. 8-5
+- G. Renewal of Judgment ................................................................... 8-6
+- 8.2 Judgment Notwithstanding the Verdict (JNOV) and New Trial............ 8-6
+- A. Generally........................................................................................ 8-6
+- B. Motion for JNOV Standard ............................................................ 8-6
+- C. Failure to Timely Raise a Request for JNOV .................................. 8-7
+- D. Motion for New Trial Standard ..................................................... 8-7
+- E. Standard of Review ..................................................................... 8-10
+- 8.3 Remittitur and Additur....................................................................... 8-10
+- A. Procedure and Timing.................................................................. 8-10
+- B. Remittitur .................................................................................... 8-11
+- C. Additur ........................................................................................ 8-12
+- D. Standard of Review ..................................................................... 8-12
+- 8.4 Sanctions ........................................................................................... 8-12
+- 8.5 Costs................................................................................................... 8-13
+- A. Authority...................................................................................... 8-13
+- B. Rules for Determining the Prevailing Party ................................ 8-14
+- C. Procedure for Taxing Costs at the Time of Judgment ................. 8-14
+- D. Stay of Collecting Taxed Costs .................................................... 8-15
+- E. Bill of Costs ................................................................................. 8-16
+- F. Procedure for Taxing Costs and Fees After Judgment ................ 8-16
+- G. Attorney Fees .............................................................................. 8-17
+- H. Fees and Expenses as Costs ........................................................ 8-17
+- I. Standard of Review ..................................................................... 8-19
+- 8.6 Attorney Fees..................................................................................... 8-19
+- A. “Reasonable” Fees....................................................................... 8-19
+- B. Evidentiary Hearing .................................................................... 8-25
+- C. Fees for Work of a Legal Assistant .............................................. 8-25
+- D. Settlement and Entitlement to Attorney Fees ............................ 8-25
+- E. Self-Representation .................................................................... 8-26
+- F. Contract Provides for Attorney Fee ............................................ 8-26
+- G. Contingency-Fee vs. Fixed-Fee Agreements ............................... 8-28
+- H. Attorney’s Lien ............................................................................ 8-29
+- I. Referral Fees ............................................................................... 8-29
+- J. Standard of Review ..................................................................... 8-30
+- 8.7 Frivolous Motion, Claim, or Defense.................................................. 8-31
+- A. Caselaw Evaluating a Motion for Frivolousness.......................... 8-32
+- B. Caselaw Evaluating a Claim for Frivolousness ............................ 8-32
+- C. Caselaw Evaluating A Defense for Frivolousness ........................ 8-33
+- D. Joint and Several Liability for Sanctions ...................................... 8-34
+- E. Self-Representation .................................................................... 8-36
+- F. Standard of Review ..................................................................... 8-36
+- Chapter 9: Rules in Particular Actions
+- 9.1 Arbitration Under the Uniform Arbitration Act (UAA)......................... 9-2
+- A. Construct and Scope of Arbitration Agreements........................... 9-2
+- B. Waiver of Requirements or Restriction of Rights Under Uniform
+- C. Jurisdiction: Courts and Arbitrators .............................................. 9-6
+- D. Request for Judicial Relief ............................................................. 9-7
+- E. Specific Motions Heard by Court .................................................. 9-7
+- F. Civil Immunity and Competency to Testify for Arbitrator, Arbitration
+- G. Appeals ....................................................................................... 9-18
+- H. Standard of Review ..................................................................... 9-19
+- 9.2 Arbitration Procedures Under Court Rule.......................................... 9-19
+- A. Applicability................................................................................. 9-19
+- B. Requesting Order Under Court Rule ........................................... 9-20
+- C. Compelling or Staying Arbitration .............................................. 9-20
+- D. Arbitration Hearings ................................................................... 9-20
+- E. Discovery and Subpoenas ........................................................... 9-21
+- F. Arbitration Awards ..................................................................... 9-21
+- 9.3 Class Action........................................................................................ 9-24
+- A. Generally...................................................................................... 9-24
+- B. Timing and Procedure for Certification ...................................... 9-25
+- C. Discovery .................................................................................... 9-27
+- D. Dismissal or Compromise ........................................................... 9-27
+- E. Judgment .................................................................................... 9-28
+- F. Standard of Review ..................................................................... 9-28
+- 9.4 Contracts............................................................................................ 9-28
+- A. Elements...................................................................................... 9-28
+- B. Burden of Proof .......................................................................... 9-29
+- C. Construction ............................................................................... 9-29
+- D. Parol Evidence Rule .................................................................... 9-32
+- E. Statutes of Frauds ....................................................................... 9-33
+- F. Failure to Read Contract ............................................................. 9-35
+- G. Assignments ................................................................................ 9-35
+- H. Release Agreements ................................................................... 9-36
+- I. Third-Party Beneficiary ............................................................... 9-37
+- J. Damages ..................................................................................... 9-38
+- K. Equitable Remedies in Contract Actions ..................................... 9-38
+- L. Standard of Review ..................................................................... 9-39
+- 9.5 Declaratory Judgments...................................................................... 9-39
+- A. Court’s Power to Enter Declaratory Judgment............................ 9-39
+- B. Actual Controversy Required ...................................................... 9-40
+- C. Jury Trial ...................................................................................... 9-40
+- D. Expedited Hearing ...................................................................... 9-40
+- E. Other Relief ................................................................................. 9-41
+- F. Standard of Review ..................................................................... 9-41
+- 9.6 Equity................................................................................................. 9-41
+- A. Generally...................................................................................... 9-41
+- B. Jury Trial ...................................................................................... 9-42
+- C. Unclean Hands ............................................................................ 9-42
+- D. Laches ......................................................................................... 9-43
+- E. Equitable Estoppel ...................................................................... 9-44
+- F. Promissory Estoppel ................................................................... 9-45
+- G. Judicial Estoppel ......................................................................... 9-46
+- H. Unconscionability ....................................................................... 9-47
+- I. Quantum Meruit ......................................................................... 9-49
+- J. Specific Performance .................................................................. 9-50
+- K. Rescission .................................................................................... 9-51
+- L. Standard of Review ..................................................................... 9-63
+- 9.7 Injunctive Relief.................................................................................. 9-63
+- A. Temporary Restraining Order (TRO)............................................ 9-63
+- B. Preliminary Injunction ................................................................ 9-64
+- C. Permanent Injunction ................................................................. 9-66
+- D. Form of Injunction ...................................................................... 9-66
+- E. Standard of Review ..................................................................... 9-66
+- 9.8 Interpleader....................................................................................... 9-66
+- 9.9 Mandamus......................................................................................... 9-67
+- A. Purpose........................................................................................ 9-67
+- B. Issuance ...................................................................................... 9-67
+- C. Standard of Review ..................................................................... 9-70
+- D. Damages ..................................................................................... 9-70
+- 9.10 Superintending Control...................................................................... 9-70
+- A. Purpose........................................................................................ 9-70
+- B. Extraordinary Remedy ................................................................ 9-71
+- C. Validity ........................................................................................ 9-71
+- D. Limitations .................................................................................. 9-71
+- E. Parties ......................................................................................... 9-72
+- F. Standard of Review ..................................................................... 9-72
+- 9.11 Medical Malpractice........................................................................... 9-72
+- A. Statute of Limitations.................................................................. 9-73
+- B. Notice of Intent ........................................................................... 9-74
+- C. Filing the Complaint and Affidavit of Merit ................................ 9-83
+- D. Actions on Behalf of a Minor ...................................................... 9-91
+- E. Statute of Repose ....................................................................... 9-92
+- F. Loss-of-Opportunity .................................................................... 9-95
+- G. Death of a Plaintiff ...................................................................... 9-96
+- H. Medical Malpractice Trial ........................................................... 9-98
+- I. Post-Verdict Phase and Judgment .............................................. 9-98
+- 9.12 Wrongful Death Act (WDA).............................................................. 9-101
+- A. Commencing a Wrongful-Death Action..................................... 9-101
+- B. Damages under the WDA ......................................................... 9-102
+- 9.13 Appointment of Interim Administrator............................................ 9-105
+- A. Commencement of Proceedings............................................... 9-105
+- B. Order of Appointment .............................................................. 9-106
+- C. Service of Notice of Interim Administrator's Appointment ...... 9-107
+- D. Objection to Appointment ........................................................ 9-107
+- E. Duties of Interim Administrator ................................................ 9-107
+- F. Inventory, Accounting, and Reporting ...................................... 9-108
+- G. Conflict of Interest .................................................................... 9-109
+- H. Protection of Client Information, Privilege, Files, and Property 9-109
+- I. Compensation ........................................................................... 9-110
+- 9.14 Application to Pending Actions of Newly Adopted or Previous Version of
+- A. Generally.................................................................................... 9-111
+- B. Caselaw: Determining When An Amended or Previous Version of a
+- C. Standard of Review ................................................................... 9-113
+- Chapter 1: Common Issues Arising in Trial
+- 1.1 Access to Court Proceedings
+- A. Open or Closed Trial
+- B. Limitations on Access to Court Proceedings
+- C. Film or Electronic Media Coverage of Court Proceedings
+- D. “Gag Orders”
+- E. Standard of Review
+- 1.2 Access to Court Files and Records
+- A. Personal Identifying Information (PII)
+- B. Record of Proceedings Required
+- C. Access to Court Records
+- D. Sealing Court Records
+- E. Record Retention
+- F. Access and Reproduction Fees
+- G. Standard of Review
+- 1.3 Access to Judge
+- A. Ex Parte Communications
+- B. Judge’s Appearance by Video Communication
+- 1.4 Form of Address
+- 1.5 Americans With Disabilities Act (ADA) Compliance
+- 1.6 Attorney Conduct
+- A. Disciplinary Proceedings
+- B. Motion to Disqualify Attorney
+- C. Standard of Review
+- 1.7 Plaintiff’s Conduct - Wrongful Conduct Rule
+- 1.8 Contempt of Court
+- 1.9 Judicial Disqualification
+- 1.10 Pro Se Litigants
+- 1.11 Waiver of Fees
+- A. Who Qualifies for Waiver or Suspension
+- B. Proper Request to Waive Filing Fees
+- C. Domestic Relations Cases
+- D. Grant or Denial of a Request to Waive Fees
+- E. Payment of Service Fees and Costs of Publication
+- F. Reinstatement of Requirement for Payment of Fees
+- G. Prisoners
+- H. Standard of Review
+- 1.12 Appointment of Foreign Language Interpreter
+- A. Court Rule Regarding Foreign Language Interpreters
+- C. Waiver of Right to Interpreter
+- D. Classifications of Foreign Language Interpreters
+- E. Appointing More Than One Interpreter
+- F. Avoiding Potential Conflicts of Interest
+- G. Recordings
+- H. Interpreter Oath or Affirmation
+- I. Interpreter Costs
+- J. Standard of Review
+- 1.13 Appointment of Interpreter for Deaf or Deaf-Blind
+- A. Determining Whether to Appoint an Interpreter for Deaf
+- B. Waiver of Right to Interpreter
+- C. Classifications of Interpreters for Deaf Person
+- D. Appointing More Than One Interpreter
+- E. Interpreter Oath or Affirmation
+- F. Interpreter Costs
+- 1.14 Communication Equipment
+- 1.15 Videoconferencing
+- A. Use of Videoconferencing in Circuit Court
+- B. Use of Videoconferencing in District Court
+- C. Criteria for Videoconferencing
+- Chapter 2: Jurisdiction, Venue, and
+- 2.1 Jurisdiction in General
+- 2.2 Subject-Matter Jurisdiction in General
+- A. Transfer
+- B. Internal Affairs of Foreign Corporations Doctrine
+- C. Ecclesiastical Abstention Doctrine
+- D. Standard of Review
+- 2.3 District Court Subject-Matter Jurisdiction
+- A. Concurrent Jurisdiction
+- B. Removal to Circuit Court
+- C. Appeals from District Court to Circuit Court
+- 2.4 Circuit Court Subject-Matter Jurisdiction
+- A. Removal to District Court
+- B. Aggregating Claims
+- C. Business Courts
+- 600.1601 et seq.].” MCL 600.8035(2). “The fees payable in civil
+- D. Jurisdiction Pending Appeal
+- 2.5 Probate Court Subject-Matter Jurisdiction
+- B. Removal to Probate Court
+- C. Appeals from Probate Court
+- 2.6 Concurrent Jurisdiction
+- 600.401 et seq. may file an objection with the state court administrator.
+- 2.7 Court of Claims Subject-Matter Jurisdiction
+- 600.6421 and MCL 600.6440. MCL 600.6419(1).
+- A. Exclusive Jurisdiction
+- B. Verified Claim and Notice
+- C. Notice Requirements
+- 600.6431 has expired).
+- D. Jury Trial Right and Joinder
+- E. Transfer to the Court of Claims
+- F. Remedy in Federal Court Exception
+- G. Res Judicata
+- H. Setoff, Recoupment, or Cross Declaration
+- I. Judgment
+- J. Caselaw
+- 2.8 Michigan Supreme Court and Court of Appeals
+- 2.9 Authority of District Court Magistrate
+- 2.10 Trial Court’s Authority After Appeal
+- A. District Courts and Agencies
+- B. Trial Courts (Exclusive of District Court and Agencies)
+- 2.11 Federal Court Subject-Matter Jurisdiction
+- A. Removal
+- B. Bankruptcy
+- 2.12 Personal Jurisdiction
+- A. General Personal Jurisdiction
+- B. Limited Personal Jurisdiction
+- C. Constitutional Limitations
+- 2.13 Actions In Rem and Quasi In Rem
+- 2.14 Venue
+- 600.1641 respectively.
+- A. Change of Venue Generally
+- B. Timing
+- C. Change of Proper Venue
+- D. Change of Improper Venue
+- 2.15 Standing and Real Party In Interest Requirements
+- A. Standing
+- B. Real Party in Interest
+- 2.16 Assignments
+- A. Generally
+- B. Partial Assignments
+- C. Counter-Assignments
+- 2.17 Res Judicata and Collateral Estoppel
+- A. Res Judicata
+- B. Collateral Estoppel
+- 2.18 Law of the Case
+- 2.19 Judicial Estoppel
+- 2.20 Mootness
+- 3.1 Civil Pleadings
+- B. Electronic Filing
+- 600.1993 ], as follows:
+- 600.101 et seq.].” MCL 600.1989.
+- C. Appearance
+- D. Complaint
+- E. Responsive Pleading
+- F. Counterclaims and Cross-Claims
+- G. Service of Pleadings and Other Documents
+- H. Filing Documents Under Seal
+- I. Extending Time for Serving and Filing Pleading
+- 3.2 Joinder
+- A. Joinder of Claims
+- B. Joinder of Parties
+- C. Nonparties
+- 3.3 Summons
+- A. First Summons
+- B. Duplicate Summons
+- C. Second Summons
+- D. Dismissal
+- 3.4 Service of Process
+- A. Who May Serve Process
+- B. Proof of Service
+- C. Manner of Service
+- D. Exemptions from Service and Privileged Persons
+- E. Defects in Service of Process or Proof of Service
+- 3.5 Motion for More Definite Statement
+- 3.6 Motion to Strike
+- 3.7 Amendment of Pleadings
+- A. Amendments of Right
+- B. Amendments by Consent and by Leave of Court
+- C. Amendments Must Be Submitted in Writing
+- D. Amendment After Motion for Summary Disposition Filed
+- E. Amendments to Conform to Evidence
+- F. The “Relation-Back” Rule
+- G. Response to Amendments
+- 3.8 Third Party Practice
+- 3.9 Intervention
+- A. Intervention of Right
+- B. Permissive Intervention
+- C. Timing
+- D. Decision and Effect
+- E. Costs
+- F. Standard of Review
+- 4.1 Motions
+- A. Form
+- B. Affidavit (If Required)
+- C. Filing and Serving Motions and Responses
+- D. Filings by Incarcerated Individuals
+- E. Uncontested Orders
+- F. Contested Motions
+- G. Decision
+- H. Entry of Order
+- I. Standard of Review
+- 4.2 Summary Disposition
+- A. Timing
+- 2.119 governs summary disposition motions. See MCR
+- B. Grounds
+- C. Unavailability of Affidavits
+- D. Possible Dispositions
+- E. Ordering Summary Disposition Sua Sponte
+- F. Filing Multiple Summary Disposition Motions
+- G. Prejudicial Value
+- 4.3 Reconsideration or Rehearing
+- A. Requirements
+- B. Decision
+- 4.4 Revisiting a Judgment In Actions Involving Multiple
+- 4.5 Security for Costs
+- A. Basis
+- C. Hearing
+- D. Exceptions
+- E. Objection to Sufficiency of Security
+- F. Modification of Order
+- G. Sanction
+- 4.6 Separate or Joint Trial
+- A. Court’s Discretion
+- B. Standard of Review
+- 4.7 Substitution or Withdrawal of Attorney
+- A. Order Required
+- 4.8 Adjournments
+- A. Applicability
+- B. Requirements
+- C. Order
+- D. Reschedule
+- E. Conflict With Another Court
+- 4.9 Stay of Proceedings
+- A. Bankruptcy Stay
+- B. Servicemembers Civil Relief Act
+- 4.10 Dismissal
+- B. Dismissal for Lack of Progress
+- C. Voluntary Dismissal
+- 2.420 (settlements and judgments for minors and legall y
+- D. Involuntary Dismissal as a Sanction
+- E. Failure to Timely File a Motion for Substitution
+- F. Involuntary Dismissal in a Bench Trial
+- G. Costs
+- 4.11 Default and Default Judgments
+- A. Default
+- B. Default Judgments
+- 4.12 Setting Aside Judgments
+- B. Setting Aside Default or Default Judgment Under Michigan
+- C. Setting Aside Final Judgment Under Michigan Court Rule
+- 5.1 Discovery in General
+- A. Availability, Scope, and Time for Completion
+- B. Constitutionality of Discovery Orders
+- C. Supplementing Disclosures and Responses
+- D. Alternative Forms of Discovery
+- E. Discovery Planning Conference
+- F. ESI Conference, Plan, and Order
+- G. Final Pretrial Conference and Order
+- H. Mediation of Discovery Disputes
+- I. Award of Expenses
+- J. Determining an Appropriate Discovery Violation
+- K. Removal of Discovery Materials from File
+- L. Standard of Review
+- 5.2 Disclosure
+- A. Required Initial Disclosures
+- B. Cases Exempt from Disclosure
+- C. Time for Initial Disclosures
+- D. Failure to Disclose
+- E. Removal of Disclosure Materials from File
+- 5.3 Depositions
+- A. Deposition of Party On Oral Examination
+- B. Deposition On Written Questions
+- C. Non-Party Subpoena for Deposition
+- D. Payment of Deposition Expenses
+- 5.4 Interrogatories
+- 5.5 Request for Documents
+- B. Requests to Parties
+- C. Requests on Nonparties
+- 5.11 for information on discovery motions.
+- 5.6 Foreign Subpoenas
+- 5.7 Medical Examinations
+- 2.311 and MCL 600.1445). Discussion of medical examinations in
+- B. Report of Physician, Physician’s Assistant, or Certified
+- C. Privilege
+- 5.8 Request for Admission
+- A. Purpose
+- B. Timing and Requirements
+- C. Scope
+- D. Response
+- E. Effect
+- F. Sanction for Failure to Admit
+- 5.9 Party’s Medical Information
+- 5.10 Privileged Materials
+- A. Medical Records
+- B. Hospital Records
+- 333.21515 applied to defendant (a freestanding surgical outpatien t
+- C. Personnel Records
+- D. Trade Secrets
+- E. Work Product and Attorney-Client Privilege
+- 5.11 Disclosure and Discovery Motions
+- A. Motion to Compel
+- B. Motions for Protective Orders
+- 5.12 Disclosure of Witnesses
+- A. Witness Lists
+- B. Sanctions for Failure to File Witness List
+- 6.1 Early Scheduling Conference
+- A. Purposes
+- B. Participants
+- C. Scheduling Orders
+- 6.2 Offer of Judgment
+- A. Procedure and Timing
+- B. Costs Payable Upon Rejected Offer
+- 6.3 Original Action to Enter a Consent Judgment or
+- A. Commencing an Action
+- 3.210 at the conclusion of any applicable statutory
+- B. Entry of Final Consent Judgment or Consent Order
+- C. Dismissal
+- 6.4 Alternative Dispute Resolution
+- 6.5 Case Evaluation
+- A. Scope and Applicability
+- B. Submission of Cases
+- C. Objections to Case Evaluation
+- D. Fees
+- E. Submission of Summary and Supporting Documents
+- F. Case Evaluation Decision
+- G. Judicial Review of Panel Finding a Claim or Defense
+- H. Acceptance or Rejection of Evaluation
+- I. Motion to Set Aside Case Evaluation
+- 6.6 Mediation
+- 2.412 that a ‘mediation communication’ be uttered by an y
+- B. Domestic Relations Mediation
+- C. Child Protection Mediation
+- D. Mediation of Discovery Disputes
+- 6.7 The Uniform Collaborative Law Act
+- 6.8 Settlements
+- A. Must Be in Writing or on the Record
+- B. Attorney’s Authority and Duty
+- C. Court Approval
+- D. Conditional Dismissal
+- E. Wrongful Death Settlements
+- F. Settlements for Minors and Legally Incapacitated
+- G. Setting Aside Settlements
+- H. Disclosure of Settlement
+- 7.8 Witness Examination.......................................................................... 7-15
+- 7.24 Closing Arguments............................................................................. 7-42
+- 7.28 Jury Note Taking................................................................................. 7-45
+- 7.1 Is Disqualification an Issue?
+- 7.2 Pretrial Motions
+- 7.3 Separate or Joint Trial
+- 7.4 Oaths or Affirmations of Witnesses and Interpreters
+- A. Oath for Witness
+- 600.1432 and MCL 600.1434, MRE 603 prevails over the statutor y
+- B. Oath for Child Witness
+- C. Oath for Interpreter
+- 7.5 Subpoenas
+- A. In General
+- B. Subpoena for Party or Witness
+- C. Subpoena Duces Tecum (Subpoena for Production of
+- D. Motion to Quash Subpoena
+- 7.6 Questions or Comments by Judge
+- A. Generally Permissible Conduct
+- B. Judicial Impartiality During a Jury Trial
+- 7.7 Stipulations
+- A. On the Record or in Writing
+- B. Stipulation of Fact and Stipulations of Law
+- C. Enforcement
+- 7.8 Witness Examination
+- A. Direct Examination
+- B. Cross-Examination
+- C. Redirect Examination
+- D. Recross-Examination
+- 7.9 Objections
+- 7.10 Mistrial
+- B. Sanctions
+- 7.11 Opening Statements
+- A. Motion on Opening Statement
+- 7.12 Evidentiary Issues
+- 7.13 Court View
+- 7.14 Motion for Dismissal/Directed Verdict
+- 7.15 Closing Arguments
+- 7.16 Rebuttal
+- 7.17 Decision
+- 7.18 Right to a Jury Trial
+- 7.19 Jury Waiver and Jury Demand
+- 7.20 Jury Selection
+- 600.1301 et seq. A random selection process must be used. See MCR
+- A. Juror Qualification
+- B. Juror Exemption
+- C. Composition of Jury Panel
+- D. Juror Oath Before Voir Dire
+- E. Voir Dire
+- F. Noncompliance with Jury Selection Rules
+- G. Challenges for Cause
+- H. Peremptory Challenges
+- I. Discrimination During Voir Dire
+- J. Juror Oath Following Selection
+- K. Alternate Jurors and Removal or Substitution of a Juror at
+- L. Substitution of Judge
+- M.Standard of Review
+- 7.21 Conducting a Jury Trial
+- 7.22 Opening Statements
+- A. Prejudicial or Inflammatory Remarks
+- B. Motion on Opening Statement
+- 7.23 Interim Commentary
+- 7.24 Closing Arguments
+- A. Scope of Closing Arguments
+- B. Remarks Designed to Invite Sympathy From Jury
+- C. Remarks Involving Witness Testimony
+- D. Remarks Involving Opposing Counsel
+- 7.25 Rebuttal
+- 7.26 Summation of Evidence and Final Instructions
+- 7.27 Reference Document
+- 7.28 Jury Note Taking
+- 7.29 Juror Discussion
+- 7.30 Jury Questions
+- 7.31 Jury View
+- 7.32 Directed Verdict
+- A. Rule
+- B. Test Applied by the Court
+- C. Motion on Opening Statement
+- 7.33 Jury Instructions
+- A. Pretrial Instructions
+- B. Interim Instructions
+- C. Request for Instructions
+- D. Final Instructions
+- E. Model Civil Jury Instructions
+- F. Supplemental Instructions
+- G. Objections to Instructions
+- H. Statement of Issues and Theory of Case
+- 7.34 Jury Issues Arising During Deliberations
+- A. Communication with the Jury
+- B. Materials in Jury Room
+- C. Requests to Review Testimony or Evidence
+- D. Hung Jury
+- 60.02 to see if that prompts a verdict.
+- 7.35 Verdict
+- A. Number
+- B. Polling the Jury
+- C. Special Verdict
+- D. Inconsistent Verdicts
+- 8.1 Judgments
+- A. Entry of Judgment (Order)
+- B. Service
+- C. Correction of Judgment
+- D. Relief from Judgment
+- E. Enforcement of Judgment
+- F. Satisfaction of Judgment
+- G. Renewal of Judgment
+- 8.2 Judgment Notwithstanding the Verdict (JNOV) and
+- B. Motion for JNOV Standard
+- C. Failure to Timely Raise a Request for JNOV
+- D. Motion for New Trial Standard
+- 2.611 is reviewed for an abuse of discretion. Kelly v Builders Square,
+- 8.3 Remittitur and Additur
+- B. Remittitur
+- C. Additur
+- 8.4 Sanctions
+- 8.5 Costs
+- A. Authority
+- B. Rules for Determining the Prevailing Party
+- C. Procedure for Taxing Costs at the Time of Judgment
+- D. Stay of Collecting Taxed Costs
+- E. Bill of Costs
+- F. Procedure for Taxing Costs and Fees After Judgment
+- G. Attorney Fees
+- H. Fees and Expenses as Costs
+- 8.6 Attorney Fees
+- A. “Reasonable” Fees
+- B. Evidentiary Hearing
+- C. Fees for Work of a Legal Assistant
+- D. Settlement and Entitlement to Attorney Fees
+- E. Self-Representation
+- F. Contract Provides for Attorney Fee
+- G. Contingency-Fee vs. Fixed-Fee Agreements
+- H. Attorney’s Lien
+- I. Referral Fees
+- 8.7 Frivolous Motion, Claim, or Defense
+- A. Caselaw Evaluating a Motion for Frivolousness
+- B. Caselaw Evaluating a Claim for Frivolousness
+- C. Caselaw Evaluating A Defense for Frivolousness
+- 600.2591 where the defendant’s “argument regarding its liability t o
+- D. Joint and Several Liability for Sanctions
+- 9.1 Arbitration Under the Uniform Arbitration Act
+- A. Construct and Scope of Arbitration Agreements
+- 600.5001 et seq. “While the UAA provides that it ‘governs a n
+- B. Waiver of Requirements or Restriction of Rights Under
+- C. Jurisdiction: Courts and Arbitrators
+- D. Request for Judicial Relief
+- E. Specific Motions Heard by Court
+- 691.1704 ].”
+- F. Civil Immunity and Competency to Testify for Arbitrator,
+- G. Appeals
+- 9.2 Arbitration Procedures Under Court Rule
+- B. Requesting Order Under Court Rule
+- C. Compelling or Staying Arbitration
+- D. Arbitration Hearings
+- E. Discovery and Subpoenas
+- F. Arbitration Awards
+- 9.3 Class Action
+- B. Timing and Procedure for Certification
+- C. Discovery
+- D. Dismissal or Compromise
+- E. Judgment
+- 9.4 Contracts
+- A. Elements
+- B. Burden of Proof
+- C. Construction
+- D. Parol Evidence Rule
+- E. Statutes of Frauds
+- 566.132 (general statute of frauds). See also MCL 566.106, whic h
+- F. Failure to Read Contract
+- G. Assignments
+- H. Release Agreements
+- I. Third-Party Beneficiary
+- J. Damages
+- K. Equitable Remedies in Contract Actions
+- 9.5 Declaratory Judgments
+- A. Court’s Power to Enter Declaratory Judgment
+- B. Actual Controversy Required
+- C. Jury Trial
+- D. Expedited Hearing
+- E. Other Relief
+- 9.6 Equity
+- B. Jury Trial
+- C. Unclean Hands
+- D. Laches
+- E. Equitable Estoppel
+- F. Promissory Estoppel
+- G. Judicial Estoppel
+- H. Unconscionability
+- I. Quantum Meruit
+- J. Specific Performance
+- K. Rescission
+- 9.7 Injunctive Relief
+- A. Temporary Restraining Order (TRO)
+- B. Preliminary Injunction
+- C. Permanent Injunction
+- D. Form of Injunction
+- 9.8 Interpleader
+- 2.207 or MCR 2.209.” MCR 3.603(A)(2).
+- 9.9 Mandamus
+- B. Issuance
+- D. Damages
+- 9.10 Superintending Control
+- B. Extraordinary Remedy
+- C. Validity
+- D. Limitations
+- E. Parties
+- 9.11 Medical Malpractice
+- A. Statute of Limitations
+- B. Notice of Intent
+- 600.2301 to determine whether amendment of the NOI or
+- C. Filing the Complaint and Affidavit of Merit
+- 600.2169 to address the standard of practice or care applicable
+- D. Actions on Behalf of a Minor
+- E. Statute of Repose
+- F. Loss-of-Opportunity
+- G. Death of a Plaintiff
+- 600.5852 “provides a maximum of five years from the date th e
+- H. Medical Malpractice Trial
+- I. Post-Verdict Phase and Judgment
+- 600.2959 ], the order of judgment shall be entered
+- 600.6455 on the judgment amounts.” [MCL
+- 9.12 Wrongful Death Act (WDA)
+- A. Commencing a Wrongful-Death Action
+- B. Damages under the WDA
+- 9.13 Appointment of Interim Administrator
+- A. Commencement of Proceedings
+- B. Order of Appointment
+- C. Service of Notice of Interim Administrator's
+- D. Objection to Appointment
+- E. Duties of Interim Administrator
+- 9.307 but may request reimbursement under MCR 9.313 if they do.
+- F. Inventory, Accounting, and Reporting
+- G. Conflict of Interest
+- H. Protection of Client Information, Privilege, Files, and
+- I. Compensation
+- 9.14 Application to Pending Actions of Newly Adopted or
+- B. Caselaw: Determining When An Amended or Previous
+- 2.518 or MCR 3.930 during the pendency of a proceeding ar e
+- 333.16101 to [MCL] 333.18838.” MCL 600.1307a(8)(d).
+
+## Civil Process Handbook (Service of Process) Structure
+Source: C:\Users\codym\CaseCompanion\references\civil_process_overview_2014.txt
+- A. OVERVIEW OF CIVIL PROCESS LAW
+- 1. Serving the Complaint
+- a. In General
+- b. The Summons
+- i. Issuance
+- 1. service of process was in fact properly made or the defendant submitted to the
+- 2. proof of service of process was filed or the failure to file is excused for good
+- 3. motion to set aside dismissal was filed within 28 days after the notice of dismissal
+- c. Who May Serve Process
+- i. In General
+- d. Persons Exempt from Service of Process
+- 1. Any persons going to, attending, or returning from any court proceedings in any
+- 2. Any person brought into the state by or after waiver of extradition, in a civil action
+- 3. A member of the legislature on a day on which there is a scheduled meeting of
+- 4. An elector entitled to vote, on an election day. However, a judge may authorize
+- 5. A Sunday. However, a circuit judge may authorize service of a writ on a Sunday.
+- e. Manner of Service—Personal and Substituted Service Authorized by Court
+- i. Service on Individuals
+- I. Personal Service
+- I. In general
+- v. Service on Corporations
+- f. Manner of Service—Service in the Discretion of the Court
+- 1. On an adult member of the defendant's family at the defendant's usual residence;
+- 2. On the defendant's insurance carrier, Krueger; Hayden v Gokenbach, 179 Mich
+- 3. By publication (used in extreme cases);
+- 4. By posting (used in extreme cases).The method chosen must be the method
+- g. Service Outside the State
+- h. Proof of Service of Process
+- 1. written acknowledgment by the person served;
+- 2. certificate of a sheriff, an officer, an appointed court officer, or an attorney for a
+- 3. an affidavit of any other person making service, or of a person making service
+- 1. service of process was in fact timely made,
+- 2. proof of service was filed or the failure to file is excused for good cause shown,
+- 3. the motion to set aside the dismissal was filed within 28 days after "notice of the
+- 2. Service of Papers After Action Commenced
+- 1. The defaulted party must be served with documents relating to the default,
+- 2. The defaulted party is entitled to service of all subsequent papers if the defaulted
+- 3. Any pleading that states a new claim for relief against the defaulted party must
+- b. Manner of Service
+- 1. A notice of contempt proceedings must be personally delivered to the party
+- 2. After final judgment and after the time for appeal of right has passed, papers
+- 3. The court may order service on the party. MCR 2.107(B)(1)(d).
+- c. Numerous Parties
+- d. Proof of Service
+- e. Effect of Failure to Serve
+- B. MISCELLANEOUS TIPS AND CASE LAW
+- 1. If you are lawfully invited into the defendant’s dwelling, you may search room to room for
+- 2. You may break and enter any building on the defendant’s premises that is not attached to
+- 3. If the building is a combination of a store and a dwelling, the serving officer may break
+- 4. If goods that were available for levy are lost because the officer fails to levy the execution,
+- 5. Installment payment orders do not apply to businesses, including proprietorships,
+- 6. If a garnishee defendant fails to disclose, you may obtain a judgment against that company
+- C. USING EXECUTIONS TO COLLECT DIVORCE JUDGMENT OR CHILD SUPPORT
+- M. Gelman, P.C., 201 Mich.App. 474, 506 N.W.2d 583 (Mich.App. 1993).
+- D. DEPUTY OR COURT OFFICER CAN TRESPASS TO SERVE EXECUTION
+- E. MOTOR VEHICLES—TITLE JOINTLY HELD
+- v. Rix, 6 Mich 144; Michels v. Stork, 44 Mich 2.
+
+## Service of Process Table
+Source: C:\Users\codym\CaseCompanion\references\service_of_process_table.txt
+- Table reference for MCR 2.105 service methods and mail requirements
+
+## Summary Disposition Table
+Source: C:\Users\codym\CaseCompanion\references\summary_disposition_table.txt
+- Table reference for MCR 2.116 grounds, timing, evidence considered
+
+## MCL 750.81 (Statute Reference)
+Source: C:\Users\codym\CaseCompanion\references\mcl_750_81.txt
+- Assault or assault and battery; penalties; enhancements; definitions
+
+## Michigan Law Review (1939) Article
+Source: C:\Users\codym\CaseCompanion\references\assault_battery_intent_to_harm_negligence_liability_for.txt
+- Historical analysis of intent vs negligence in assault/battery (non-binding)

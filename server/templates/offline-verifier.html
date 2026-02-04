@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>LexiPro Offline Admissibility Verifier</title>
+    <style>
+      body {
+        font-family: "Segoe UI", Tahoma, sans-serif;
+        background: #0f172a;
+        color: #e2e8f0;
+        margin: 0;
+        padding: 40px;
+      }
+      .card {
+        max-width: 720px;
+        margin: 0 auto;
+        background: #111827;
+        border: 1px solid #1f2937;
+        border-radius: 16px;
+        padding: 24px;
+      }
+      .title {
+        font-size: 20px;
+        font-weight: 700;
+      }
+      .subtitle {
+        color: #94a3b8;
+        margin-top: 4px;
+      }
+      .row {
+        margin-top: 18px;
+      }
+      label {
+        display: block;
+        font-size: 12px;
+        text-transform: uppercase;
+        letter-spacing: 0.2em;
+        color: #64748b;
+        margin-bottom: 6px;
+      }
+      input[type="file"] {
+        width: 100%;
+        padding: 10px;
+        border-radius: 10px;
+        border: 1px solid #1f2937;
+        background: #0b1220;
+        color: #e2e8f0;
+      }
+      button {
+        margin-top: 16px;
+        padding: 10px 16px;
+        border-radius: 10px;
+        border: 1px solid #1e3a8a;
+        background: #1d4ed8;
+        color: white;
+        font-weight: 600;
+        cursor: pointer;
+      }
+      .result {
+        margin-top: 18px;
+        padding: 14px;
+        border-radius: 12px;
+        font-weight: 700;
+        text-align: center;
+      }
+      .ok {
+        background: #064e3b;
+        border: 1px solid #10b981;
+        color: #d1fae5;
+      }
+      .bad {
+        background: #7f1d1d;
+        border: 1px solid #f87171;
+        color: #fee2e2;
+      }
+      .hash {
+        margin-top: 10px;
+        font-family: "Courier New", monospace;
+        font-size: 12px;
+        word-break: break-all;
+        color: #94a3b8;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <div class="title">LexiPro Offline Admissibility Verifier</div>
+      <div class="subtitle">Verify evidence integrity without LexiPro servers.</div>
+
+      <div class="row">
+        <label>Verification Key (PEM)</label>
+        <input id="file-key" type="file" accept=".pem" />
+      </div>
+      <div class="row">
+        <label>Manifest Signature (manifest.sig)</label>
+        <input id="file-sig" type="file" accept=".sig,.txt" />
+      </div>
+      <div class="row">
+        <label>Chain of Custody JSON</label>
+        <input id="file-json" type="file" accept=".json" />
+      </div>
+      <div class="row">
+        <label>Cloud Anchor Manifest (cloud_anchor.json)</label>
+        <input id="file-anchor" type="file" accept=".json" />
+      </div>
+      <div class="row">
+        <label>Evidence PDF</label>
+        <input id="file-pdf" type="file" accept=".pdf" />
+      </div>
+
+      <button id="verifyBtn">Verify Evidence</button>
+      <button id="anchorBtn">Verify against Cloud Anchor</button>
+
+      <div id="result" class="result" style="display:none;"></div>
+      <div id="hashes" class="hash" style="display:none;"></div>
+    </div>
+
+    <script>
+      const keyInput = document.getElementById("file-key");
+      const sigInput = document.getElementById("file-sig");
+      const jsonInput = document.getElementById("file-json");
+      const anchorInput = document.getElementById("file-anchor");
+      const pdfInput = document.getElementById("file-pdf");
+      const resultEl = document.getElementById("result");
+      const hashesEl = document.getElementById("hashes");
+
+      async function verifySignature(publicKeyPem, signatureHex, dataString) {
+        const pemHeader = "-----BEGIN PUBLIC KEY-----";
+        const pemFooter = "-----END PUBLIC KEY-----";
+        const pemContents = publicKeyPem.substring(
+          publicKeyPem.indexOf(pemHeader) + pemHeader.length,
+          publicKeyPem.lastIndexOf(pemFooter)
+        ).replace(/\s/g, "");
+
+        const binaryDerString = window.atob(pemContents);
+        const binaryDer = new Uint8Array(binaryDerString.length);
+        for (let i = 0; i < binaryDerString.length; i++) {
+          binaryDer[i] = binaryDerString.charCodeAt(i);
+        }
+
+        const key = await window.crypto.subtle.importKey(
+          "spki",
+          binaryDer,
+          { name: "RSASSA-PKCS1-v1_5", hash: "SHA-256" },
+          true,
+          ["verify"]
+        );
+
+        const signatureBytes = new Uint8Array(signatureHex.match(/.{1,2}/g).map((byte) => parseInt(byte, 16)));
+        const dataBytes = new TextEncoder().encode(dataString);
+
+        return window.crypto.subtle.verify("RSASSA-PKCS1-v1_5", key, signatureBytes, dataBytes);
+      }
+
+      async function sha256Text(dataString) {
+        const dataBytes = new TextEncoder().encode(dataString);
+        const hash = await crypto.subtle.digest("SHA-256", dataBytes);
+        return Array.from(new Uint8Array(hash))
+          .map((b) => b.toString(16).padStart(2, "0"))
+          .join("");
+      }
+
+      async function readFile(id) {
+        const input = document.getElementById(id);
+        const file = input && input.files && input.files[0];
+        if (!file) throw new Error(`Missing file: ${id}`);
+        return file.text();
+      }
+
+      async function readFileBuffer(id) {
+        const input = document.getElementById(id);
+        const file = input && input.files && input.files[0];
+        if (!file) throw new Error(`Missing file: ${id}`);
+        return file.arrayBuffer();
+      }
+
+      document.getElementById("verifyBtn").addEventListener("click", async () => {
+        resultEl.style.display = "none";
+        hashesEl.style.display = "none";
+
+        try {
+          const keyText = await readFile("file-key");
+          const sigText = await readFile("file-sig");
+          const jsonText = await readFile("file-json");
+          const pdfBuffer = await readFileBuffer("file-pdf");
+
+          let signatureHex = sigText.trim();
+          let signatureMeta = null;
+          try {
+            signatureMeta = JSON.parse(sigText);
+            if (signatureMeta && signatureMeta.signatureHex) {
+              signatureHex = String(signatureMeta.signatureHex);
+            }
+          } catch {
+            signatureMeta = null;
+          }
+
+          const isAuthentic = await verifySignature(keyText, signatureHex, jsonText);
+          if (!isAuthentic) {
+            throw new Error("CRITICAL FAILURE: Manifest signature invalid. The chain of custody JSON has been tampered with.");
+          }
+
+          const jsonData = JSON.parse(jsonText);
+          const pdfHash = await crypto.subtle.digest("SHA-256", pdfBuffer);
+          const pdfHashHex = Array.from(new Uint8Array(pdfHash))
+            .map((b) => b.toString(16).padStart(2, "0"))
+            .join("");
+
+          if (pdfHashHex !== jsonData.evidenceHash) {
+            throw new Error(`INTEGRITY MISMATCH: PDF Hash (${pdfHashHex}) does not match Record (${jsonData.evidenceHash})`);
+          }
+
+          resultEl.className = "result ok";
+          resultEl.innerHTML = [
+            "<div>ADMISSIBLE</div>",
+            "<div>1. Digital Signature: VERIFIED (Identity Confirmed)</div>",
+            "<div>2. Chain of Custody: INTACT</div>",
+            "<div>3. File Integrity: MATCHED</div>"
+          ].join("");
+          resultEl.style.display = "block";
+          const tsaLine = signatureMeta?.timestamp_authority_signature
+            ? ` | TSA: ${String(signatureMeta.timestamp_authority_signature).slice(0, 18)}...`
+            : "";
+          hashesEl.textContent = `Expected: ${jsonData.evidenceHash} | Computed: ${pdfHashHex}${tsaLine}`;
+          hashesEl.style.display = "block";
+        } catch (err) {
+          resultEl.className = "result bad";
+          resultEl.textContent = "";
+          const title = document.createElement("div");
+          title.textContent = "INADMISSIBLE";
+          const message = document.createElement("div");
+          message.textContent = err.message || "Verification failed.";
+          resultEl.append(title, message);
+          resultEl.style.display = "block";
+        }
+      });
+
+      document.getElementById("anchorBtn").addEventListener("click", async () => {
+        resultEl.style.display = "none";
+        hashesEl.style.display = "none";
+        try {
+          const jsonText = await readFile("file-json");
+          const anchorText = await readFile("file-anchor");
+          const anchor = JSON.parse(anchorText);
+          const localRoot = await sha256Text(jsonText);
+
+          if (String(anchor.rootHash || "") !== localRoot) {
+            throw new Error(`CLOUD ANCHOR MISMATCH: ${localRoot} does not match ${anchor.rootHash || "UNKNOWN"}`);
+          }
+
+          resultEl.className = "result ok";
+          resultEl.innerHTML = [
+            "<div>CLOUD ANCHOR VERIFIED</div>",
+            "<div>Object Lock: CONFIRMED (mock)</div>"
+          ].join("");
+          resultEl.style.display = "block";
+          hashesEl.textContent = `Anchor Root: ${localRoot}`;
+          hashesEl.style.display = "block";
+        } catch (err) {
+          resultEl.className = "result bad";
+          resultEl.textContent = "";
+          const title = document.createElement("div");
+          title.textContent = "ANCHOR VERIFICATION FAILED";
+          const message = document.createElement("div");
+          message.textContent = err.message || "Verification failed.";
+          resultEl.append(title, message);
+          resultEl.style.display = "block";
+        }
+      });
+    </script>
+  </body>
+</html>

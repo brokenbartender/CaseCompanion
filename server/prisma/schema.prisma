@@ -1,0 +1,1264 @@
+// LexiPro Forensic OS — Prisma Schema
+// Phase 1: Backend Foundations
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum Role {
+  owner
+  admin
+  member
+  co_counsel
+  client
+  viewer
+}
+
+enum UserStatus {
+  ACTIVE
+  SUSPENDED
+  DEPROVISIONED
+}
+
+enum VerificationStatus {
+  PENDING
+  CERTIFIED
+  REVOKED
+}
+
+enum ProductionStatus {
+  DRAFT
+  PRODUCED
+  WITHHELD
+}
+
+enum SystemAuditStatus {
+  SUCCESS
+  WARNING
+  CRITICAL
+}
+
+enum IntegrityAlertType {
+  HASH_MISMATCH
+  FILE_MISSING
+  CHAIN_BREAK
+  SYSTEM_INTEGRITY_FAILURE
+}
+
+enum IntegrityAlertSeverity {
+  CRITICAL
+  WARNING
+}
+
+enum RiskLevel {
+  LOW
+  MEDIUM
+  HIGH
+  CRITICAL
+}
+
+enum ExhibitType {
+  PDF
+  VIDEO
+  AUDIO
+  WEB_CAPTURE
+}
+
+enum IntegrationType {
+  CLIO
+  GMAIL
+  ONEDRIVE
+}
+
+enum IntegrationStatus {
+  ACTIVE
+  ERROR
+}
+
+enum DeadlineStatus {
+  DETECTED
+  VERIFIED
+  REJECTED
+}
+
+enum CitationStatus {
+  MISSING
+  PENDING
+  VERIFIED
+  REJECTED
+  PARTIAL
+  CONFLICTED
+}
+
+enum FactStatus {
+  DRAFT
+  VERIFIED
+  DISPUTED
+  RETRACTED
+}
+
+enum FactEvaluation {
+  HELPS
+  HURTS
+  NEUTRAL
+}
+
+enum IssueStatus {
+  OPEN
+  RESOLVED
+  DISMISSED
+}
+
+enum PersonType {
+  PERSON
+  ORG
+  ROLE
+  UNKNOWN
+}
+
+enum ShortNameSource {
+  MANUAL
+  AUTO
+  IMPORTED
+}
+
+enum ShortNameEntityType {
+  FACT
+  ISSUE
+  PERSON
+}
+
+enum PrivilegeTag {
+  NONE
+  ATTORNEY_CLIENT
+  WORK_PRODUCT
+}
+
+enum PrivilegeType {
+  NONE
+  ACP
+  WPD
+  COMMON_INTEREST
+  TRADE_SECRET
+  OTHER
+}
+
+enum DocumentType {
+  PUBLIC
+  CONFIDENTIAL
+  PRIVILEGED
+}
+
+enum RedactionStatus {
+  NONE
+  PENDING
+  APPLIED
+}
+
+enum PrivilegeLogStatus {
+  DRAFT
+  PENDING_APPROVAL
+  APPROVED
+  REJECTED
+}
+
+enum WorkProductType {
+  AI_SUMMARY
+  OTHER
+}
+
+enum WorkProductFormat {
+  PDF
+  JSON
+}
+
+model User {
+  id           String   @id @default(cuid())
+  email        String   @unique
+  passwordHash String
+  status       UserStatus @default(ACTIVE)
+  failedLoginCount Int  @default(0)
+  lockoutUntil DateTime?
+  lockedUntil  DateTime?
+  lastLoginAt  DateTime?
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  memberships    WorkspaceMember[]
+  auditEvents    AuditEvent[]    @relation("AuditActor")
+  auditLogs      AuditLog[]      @relation("AuditLogActor")
+  llmAudits     LlmAudit[]
+  batesReservations BatesReservation[]
+  inferenceStates   InferenceState[]
+  
+  // Back-relation for Auto-Chronology
+  chronologyRuns ChronologyRun[]
+
+  // Research, retention, delivery
+  retentionEvents RetentionEvent[]
+  searchFilters   SearchFilter[]
+  searchHistory   SearchHistory[]
+  researchFolders ResearchFolder[]
+  searchAlerts    SearchAlert[]
+  deliveryItems   DeliveryItem[]
+}
+
+model Workspace {
+  id         String   @id @default(cuid())
+  name       String
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+
+  members     WorkspaceMember[]
+  matters     Matter[]
+  exhibits    Exhibit[]
+  auditEvents AuditEvent[]
+  auditLogs   AuditLog[]
+  llmAudits   LlmAudit[]
+  playbooks   Playbook[]
+  documentChunks DocumentChunk[]
+  clauses     Clause[]
+  riskAssessments RiskAssessment[]
+  auditLedgerProofs AuditLedgerProof[]
+  signingKeys SigningKey[]
+  batesReservations BatesReservation[]
+  inferenceStates   InferenceState[]
+  systemAudits SystemAudit[]
+  integrityAlerts IntegrityAlert[]
+  anchorSnapshots AnchorSnapshot[]
+  secrets     WorkspaceSecret[]
+  preferences WorkspacePreference[]
+  deadlines   Deadline[]
+  integrations Integration[]
+  externalResources ExternalResource[]
+  people      Person[]
+  facts       Fact[]
+  issues      Issue[]
+  citations   Citation[]
+  shortNames  ShortName[]
+  
+  // Back-relations for Auto-Chronology
+  chronologyRuns    ChronologyRun[]
+  chronologyEvents  ChronologyEvent[]
+
+  // Trust, research, retention
+  policies         WorkspacePolicy[]
+  retentionEvents  RetentionEvent[]
+  searchFilters    SearchFilter[]
+  searchHistory    SearchHistory[]
+  researchFolders  ResearchFolder[]
+  searchAlerts     SearchAlert[]
+  deliveryItems    DeliveryItem[]
+}
+
+model WorkspacePreference {
+  id          String   @id @default(cuid())
+  workspaceId String
+  key         String
+  value       String
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  workspace Workspace @relation(fields: [workspaceId], references: [id], onDelete: Cascade)
+
+  @@unique([workspaceId, key])
+  @@index([workspaceId])
+}
+
+model WorkspacePolicy {
+  id          String   @id @default(cuid())
+  workspaceId String
+  uploadsEnabled Boolean @default(true)
+  draftingEnabled Boolean @default(true)
+  retentionDays Int @default(90)
+  mfaRequired Boolean @default(false)
+  ipWhitelistEnabled Boolean @default(false)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  workspace Workspace @relation(fields: [workspaceId], references: [id], onDelete: Cascade)
+
+  @@unique([workspaceId])
+  @@index([workspaceId])
+}
+
+model RetentionEvent {
+  id          String   @id @default(cuid())
+  workspaceId String
+  userId      String
+  action      String
+  reason      String?
+  createdAt   DateTime @default(now())
+
+  workspace Workspace @relation(fields: [workspaceId], references: [id], onDelete: Cascade)
+  user      User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([workspaceId, createdAt])
+  @@index([userId, createdAt])
+}
+
+model WorkspaceSecret {
+  id           String   @id @default(cuid())
+  workspaceId  String
+  provider     String
+  ciphertextB64 String
+  ivB64        String
+  tagB64       String
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  workspace Workspace @relation(fields: [workspaceId], references: [id], onDelete: Cascade)
+
+  @@unique([workspaceId, provider])
+  @@index([workspaceId])
+}
+
+model IpAllowlistEntry {
+  id          String   @id @default(cuid())
+  workspaceId String
+  cidr        String
+  label       String?
+  createdAt   DateTime @default(now())
+
+  workspace Workspace @relation(fields: [workspaceId], references: [id], onDelete: Cascade)
+
+  @@index([workspaceId])
+  @@unique([workspaceId, cidr])
+}
+
+model SsoProvider {
+  id          String   @id @default(cuid())
+  workspaceId String
+  provider    String
+  metadataXml String?
+  issuer      String?
+  enabled     Boolean @default(true)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  workspace Workspace @relation(fields: [workspaceId], references: [id], onDelete: Cascade)
+
+  @@index([workspaceId])
+  @@unique([workspaceId, provider])
+}
+
+model OidcState {
+  state        String   @id
+  codeVerifier String
+  redirectUri  String
+  nonce        String?
+  workspaceId  String?
+  userId       String?
+  createdAt    DateTime @default(now())
+  expiresAt    DateTime
+
+  @@index([expiresAt])
+}
+
+model WorkspaceMember {
+  workspaceId String
+  userId      String
+  role        Role     @default(member)
+  createdAt   DateTime @default(now())
+
+  workspace Workspace @relation(fields: [workspaceId], references: [id], onDelete: Cascade)
+  user      User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@id([workspaceId, userId])
+  @@index([userId])
+}
+
+model Matter {
+  id          String   @id @default(cuid())
+  workspaceId String
+
+  slug        String
+  name        String
+  description String?
+  jurisdiction String?
+  allowedUserIds String[] @default([])
+  ethicalWallEnabled Boolean @default(false)
+  privilegeLogStatus PrivilegeLogStatus @default(DRAFT)
+  privilegeLogApprovedAt DateTime?
+  privilegeLogApprovedByUserId String?
+  deletedAt   DateTime?
+
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  workspace Workspace @relation(fields: [workspaceId], references: [id], onDelete: Cascade)
+  privilegeLogApprovedBy User? @relation(fields: [privilegeLogApprovedByUserId], references: [id], onDelete: SetNull)
+  exhibits  Exhibit[]
+  deadlines Deadline[]
+  documentChunks DocumentChunk[]
+  clauses   Clause[]
+  facts     Fact[]
+  issues    Issue[]
+  people    Person[]
+  
+  // Back-relations for Auto-Chronology
+  chronologyRuns    ChronologyRun[]
+  chronologyEvents  ChronologyEvent[]
+
+  @@unique([workspaceId, slug])
+  @@index([workspaceId])
+  @@index([id, workspaceId])
+}
+
+model Exhibit {
+  id            String   @id @default(cuid())
+  workspaceId   String
+  matterId      String
+  filename      String
+  mimeType      String
+  storageKey    String   @unique
+  type          ExhibitType @default(PDF)
+  mediaMetadataJson String?
+  originalCreatedAt DateTime?
+  originalModifiedAt DateTime?
+  originalAccessedAt DateTime?
+  originalSize BigInt?
+  redactionStatus RedactionStatus @default(NONE)
+  redactedStorageKey String?
+
+  // Chain-of-custody
+  integrityHash String // SHA-256 at ingest
+
+  // Discovery & production fields
+  batesNumber      String?
+  batesSequence    Int?
+  productionStatus ProductionStatus @default(DRAFT)
+
+  // Deterministic verification state (auto-updated by integrity checks)
+  verificationStatus VerificationStatus @default(PENDING)
+  verifiedByUserId   String?
+  verifiedAt         DateTime?
+  revokedAt          DateTime?
+  revocationReason   String?
+  deletedAt          DateTime?
+  reasonForDeletion  String?
+  legalHold          Boolean  @default(false)
+  triageJson         String?
+  privilegeTag       PrivilegeTag @default(NONE)
+  privilegeType      PrivilegeType @default(NONE)
+  privilegePending   Boolean  @default(false)
+  documentType       DocumentType @default(PUBLIC)
+
+  createdAt     DateTime @default(now())
+
+  workspace Workspace @relation(fields: [workspaceId], references: [id], onDelete: Cascade)
+  matter    Matter    @relation(fields: [matterId], references: [id], onDelete: Cascade)
+  anchors   Anchor[]
+  anchorSnapshots AnchorSnapshot[]
+  documentChunks DocumentChunk[]
+  citations Citation[]
+  clauses   Clause[]
+  batesReservations BatesReservation[]
+  inferenceStates   InferenceState[]
+  integrityAlerts IntegrityAlert[]
+  deadlines Deadline[]
+  externalResources ExternalResource[]
+  transcriptSegments TranscriptSegment[]
+  mediaFrames MediaFrame[]
+
+  @@index([workspaceId])
+  @@index([id, workspaceId])
+  @@index([matterId])
+  @@index([verificationStatus])
+  @@index([batesNumber])
+  @@unique([matterId, batesNumber])
+}
+
+model DocumentVersion {
+  id          String   @id @default(cuid())
+  workspaceId String
+  exhibitId   String
+  version     Int
+  storageKey  String
+  integrityHash String
+  createdAt   DateTime @default(now())
+  createdByUserId String?
+
+  workspace Workspace @relation(fields: [workspaceId], references: [id], onDelete: Cascade)
+  exhibit   Exhibit  @relation(fields: [exhibitId], references: [id], onDelete: Cascade)
+  createdBy User?    @relation(fields: [createdByUserId], references: [id], onDelete: SetNull)
+
+  @@unique([exhibitId, version])
+  @@index([workspaceId])
+}
+
+model WorkProduct {
+  id          String   @id @default(cuid())
+  workspaceId String
+  matterId    String
+  exhibitId   String?
+  auditEventId String?
+  title       String
+  type        WorkProductType @default(AI_SUMMARY)
+  format      WorkProductFormat @default(PDF)
+  storageKey  String   @unique
+  sha256      String
+  metadataJson String?
+  createdAt   DateTime @default(now())
+
+  workspace Workspace @relation(fields: [workspaceId], references: [id], onDelete: Cascade)
+  matter    Matter    @relation(fields: [matterId], references: [id], onDelete: Cascade)
+  exhibit   Exhibit?  @relation(fields: [exhibitId], references: [id], onDelete: SetNull)
+  auditEvent AuditEvent? @relation(fields: [auditEventId], references: [id], onDelete: SetNull)
+
+  @@index([workspaceId])
+  @@index([matterId])
+  @@index([exhibitId])
+  @@index([auditEventId])
+}
+
+model RedactionJob {
+  id           String   @id @default(cuid())
+  workspaceId  String
+  matterId     String
+  createdByUserId String?
+  status       RedactionStatus @default(PENDING)
+  termsJson    String
+  exhibitIdsJson String
+  resultsJson  String?
+  startedAt    DateTime?
+  completedAt  DateTime?
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  workspace Workspace @relation(fields: [workspaceId], references: [id], onDelete: Cascade)
+  matter    Matter   @relation(fields: [matterId], references: [id], onDelete: Cascade)
+  createdBy User?    @relation(fields: [createdByUserId], references: [id], onDelete: SetNull)
+
+  @@index([workspaceId])
+  @@index([matterId])
+  @@index([status])
+}
+
+
+model Anchor {
+  id         String   @id @default(cuid())
+  exhibitId  String
+  pageNumber Int
+  lineNumber Int
+  text       String
+  bboxJson   String
+  createdAt  DateTime @default(now())
+
+  exhibit Exhibit @relation(fields: [exhibitId], references: [id], onDelete: Cascade)
+  citations Citation[]
+
+  @@unique([exhibitId, pageNumber, lineNumber])
+  @@index([exhibitId, pageNumber])
+}
+
+model Person {
+  id          String   @id @default(cuid())
+  workspaceId String
+  matterId    String?
+  fullName    String
+  shortName   String?
+  type        PersonType @default(PERSON)
+  role        String?
+  notes       String?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  workspace Workspace @relation(fields: [workspaceId], references: [id], onDelete: Cascade)
+  matter    Matter?   @relation(fields: [matterId], references: [id], onDelete: SetNull)
+  facts     FactPerson[]
+  issues    IssuePerson[]
+  aliases   PersonAlias[]
+
+  @@index([workspaceId])
+  @@index([matterId])
+  @@index([workspaceId, fullName])
+}
+
+model PersonAlias {
+  id        String   @id @default(cuid())
+  personId  String
+  alias     String
+  isShort   Boolean @default(false)
+  source    ShortNameSource @default(MANUAL)
+  createdAt DateTime @default(now())
+
+  person Person @relation(fields: [personId], references: [id], onDelete: Cascade)
+
+  @@index([personId])
+  @@unique([personId, alias])
+}
+
+model Fact {
+  id              String   @id @default(cuid())
+  workspaceId     String
+  matterId        String
+  title           String?
+  statement       String
+  status          FactStatus @default(DRAFT)
+  evaluation      FactEvaluation @default(NEUTRAL)
+  citationStatus  CitationStatus @default(MISSING)
+  confidence      Float?
+  eventAt         DateTime?
+  eventAtText     String?
+  datePrecision   String? // e.g. YYYY, YYYY-MM, YYYY-MM-DD, UNKNOWN
+  createdByUserId String?
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  workspace Workspace @relation(fields: [workspaceId], references: [id], onDelete: Cascade)
+  matter    Matter   @relation(fields: [matterId], references: [id], onDelete: Cascade)
+  citations FactCitation[]
+  people    FactPerson[]
+  issues    IssueFact[]
+
+  @@index([workspaceId])
+  @@index([matterId])
+  @@index([citationStatus])
+  @@index([eventAt])
+}
+
+model Issue {
+  id              String   @id @default(cuid())
+  workspaceId     String
+  matterId        String
+  title           String
+  description     String?
+  status          IssueStatus @default(OPEN)
+  citationStatus  CitationStatus @default(MISSING)
+  createdByUserId String?
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  workspace Workspace @relation(fields: [workspaceId], references: [id], onDelete: Cascade)
+  matter    Matter   @relation(fields: [matterId], references: [id], onDelete: Cascade)
+  facts     IssueFact[]
+  people    IssuePerson[]
+  citations IssueCitation[]
+
+  @@index([workspaceId])
+  @@index([matterId])
+  @@index([citationStatus])
+}
+
+model Citation {
+  id                 String   @id @default(cuid())
+  workspaceId        String
+  exhibitId          String
+  anchorId           String?
+  chunkId            String?
+  transcriptSegmentId String?
+  mediaFrameId       String?
+  pageNumber         Int?
+  bboxJson           String?
+  quote              String?
+  status             CitationStatus @default(PENDING)
+  createdAt          DateTime @default(now())
+
+  workspace Workspace @relation(fields: [workspaceId], references: [id], onDelete: Cascade)
+  exhibit   Exhibit  @relation(fields: [exhibitId], references: [id], onDelete: Cascade)
+  anchor    Anchor?  @relation(fields: [anchorId], references: [id], onDelete: SetNull)
+  chunk     DocumentChunk? @relation(fields: [chunkId], references: [id], onDelete: SetNull)
+  transcript TranscriptSegment? @relation(fields: [transcriptSegmentId], references: [id], onDelete: SetNull)
+  frame     MediaFrame? @relation(fields: [mediaFrameId], references: [id], onDelete: SetNull)
+
+  facts     FactCitation[]
+  issues    IssueCitation[]
+
+  @@index([workspaceId, status])
+  @@index([exhibitId])
+  @@index([anchorId])
+  @@index([chunkId])
+}
+
+model FactCitation {
+  factId     String
+  citationId String
+
+  fact     Fact     @relation(fields: [factId], references: [id], onDelete: Cascade)
+  citation Citation @relation(fields: [citationId], references: [id], onDelete: Cascade)
+
+  @@id([factId, citationId])
+  @@index([citationId])
+}
+
+model IssueCitation {
+  issueId    String
+  citationId String
+
+  issue    Issue    @relation(fields: [issueId], references: [id], onDelete: Cascade)
+  citation Citation @relation(fields: [citationId], references: [id], onDelete: Cascade)
+
+  @@id([issueId, citationId])
+  @@index([citationId])
+}
+
+model FactPerson {
+  factId   String
+  personId String
+  role     String?
+
+  fact   Fact   @relation(fields: [factId], references: [id], onDelete: Cascade)
+  person Person @relation(fields: [personId], references: [id], onDelete: Cascade)
+
+  @@id([factId, personId])
+  @@index([personId])
+}
+
+model IssuePerson {
+  issueId  String
+  personId String
+  role     String?
+
+  issue  Issue  @relation(fields: [issueId], references: [id], onDelete: Cascade)
+  person Person @relation(fields: [personId], references: [id], onDelete: Cascade)
+
+  @@id([issueId, personId])
+  @@index([personId])
+}
+
+model IssueFact {
+  issueId String
+  factId  String
+
+  issue Issue @relation(fields: [issueId], references: [id], onDelete: Cascade)
+  fact  Fact  @relation(fields: [factId], references: [id], onDelete: Cascade)
+
+  @@id([issueId, factId])
+  @@index([factId])
+}
+
+model ShortName {
+  id          String   @id @default(cuid())
+  workspaceId String
+  entityType  ShortNameEntityType
+  entityId    String
+  shortName   String
+  source      ShortNameSource @default(MANUAL)
+  createdAt   DateTime @default(now())
+
+  workspace Workspace @relation(fields: [workspaceId], references: [id], onDelete: Cascade)
+
+  @@unique([workspaceId, entityType, entityId, shortName])
+  @@index([workspaceId, entityType])
+}
+
+model SearchHistory {
+  id          String   @id @default(cuid())
+  workspaceId String
+  userId      String
+  query       String
+  status      String
+  clientId    String?
+  scopesJson  String?
+  createdAt   DateTime @default(now())
+
+  workspace Workspace @relation(fields: [workspaceId], references: [id], onDelete: Cascade)
+  user      User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([workspaceId, createdAt])
+  @@index([userId, createdAt])
+}
+
+model SearchFilter {
+  id           String   @id @default(cuid())
+  workspaceId  String
+  userId       String
+  label        String
+  content      String
+  jurisdiction String
+  source       String
+  scope        String
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  workspace Workspace @relation(fields: [workspaceId], references: [id], onDelete: Cascade)
+  user      User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([workspaceId, createdAt])
+  @@index([userId, createdAt])
+}
+
+model ResearchFolder {
+  id          String   @id @default(cuid())
+  workspaceId String
+  userId      String
+  name        String
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  workspace Workspace @relation(fields: [workspaceId], references: [id], onDelete: Cascade)
+  user      User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  items     ResearchFolderItem[]
+
+  @@index([workspaceId, createdAt])
+  @@index([userId, createdAt])
+}
+
+model ResearchFolderItem {
+  id        String   @id @default(cuid())
+  folderId  String
+  label     String
+  payloadJson String?
+  createdAt DateTime @default(now())
+
+  folder ResearchFolder @relation(fields: [folderId], references: [id], onDelete: Cascade)
+
+  @@index([folderId, createdAt])
+}
+
+model SearchAlert {
+  id          String   @id @default(cuid())
+  workspaceId String
+  userId      String
+  query       String
+  active      Boolean  @default(true)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  workspace Workspace @relation(fields: [workspaceId], references: [id], onDelete: Cascade)
+  user      User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([workspaceId, createdAt])
+  @@index([userId, createdAt])
+}
+
+model DeliveryItem {
+  id          String   @id @default(cuid())
+  workspaceId String
+  userId      String
+  label       String
+  type        String
+  status      String
+  createdAt   DateTime @default(now())
+
+  workspace Workspace @relation(fields: [workspaceId], references: [id], onDelete: Cascade)
+  user      User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([workspaceId, createdAt])
+  @@index([userId, createdAt])
+}
+
+model AnchorSnapshot {
+  id            String   @id @default(cuid())
+  workspaceId   String
+  requestId     String
+  anchorId      String
+  exhibitId     String
+  pageNumber    Int?
+  lineNumber    Int?
+  integrityHash String?
+  createdAt     DateTime @default(now())
+
+  workspace Workspace @relation(fields: [workspaceId], references: [id], onDelete: Cascade)
+  exhibit   Exhibit   @relation(fields: [exhibitId], references: [id], onDelete: Cascade)
+
+  @@index([workspaceId, requestId])
+  @@index([workspaceId, anchorId])
+}
+
+model DocumentChunk {
+  id         String   @id @default(cuid())
+  workspaceId String
+  matterId   String
+  exhibitId  String
+  batesNumber String?
+  sourcePath String
+  pageNumber Int
+  chunkIndex Int
+  text       String
+  metadataJson String?
+  embedding  Json?
+  deletedAt  DateTime?
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+
+  workspace Workspace @relation(fields: [workspaceId], references: [id], onDelete: Cascade)
+  matter    Matter   @relation(fields: [matterId], references: [id], onDelete: Cascade)
+  exhibit   Exhibit  @relation(fields: [exhibitId], references: [id], onDelete: Cascade)
+  clauses   Clause[]
+  deadlines Deadline[]
+  citations Citation[]
+
+  @@index([workspaceId])
+  @@index([matterId])
+  @@index([exhibitId])
+  @@index([workspaceId, matterId])
+}
+
+model AuditEvent {
+  id          String   @id @default(cuid())
+  workspaceId String
+  actorId     String
+  eventType   String
+  action      String?
+  resourceId  String?
+  payloadJson String
+  detailsJson String?
+  query       String?
+  response    String?
+  prevHash    String
+  hash        String
+  createdAt   DateTime @default(now())
+
+  workspace Workspace @relation(fields: [workspaceId], references: [id], onDelete: Cascade)
+  actor     User      @relation("AuditActor", fields: [actorId], references: [id], onDelete: Cascade)
+
+  @@unique([workspaceId, prevHash])
+  @@index([workspaceId, createdAt])
+  @@index([actorId])
+}
+
+/// @Immutable - Enforced by DB Trigger
+model AuditLog {
+  id          String   @id @default(cuid())
+  workspaceId String
+  actorId     String
+  action      String
+  payloadJson String
+  createdAt   DateTime @default(now())
+
+  workspace Workspace @relation(fields: [workspaceId], references: [id], onDelete: Cascade)
+  actor     User      @relation("AuditLogActor", fields: [actorId], references: [id], onDelete: Cascade)
+
+  @@index([workspaceId, createdAt])
+  @@index([actorId])
+}
+
+model LlmAudit {
+  id          String   @id @default(cuid())
+  workspaceId String
+  userId      String
+  requestId   String?
+  promptKey   String?
+  provider    String
+  model       String
+  purpose     String
+  payloadHash String
+  payloadEnvelopeJson String
+  createdAt   DateTime @default(now())
+
+  workspace Workspace @relation(fields: [workspaceId], references: [id], onDelete: Cascade)
+  user      User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([workspaceId, createdAt])
+  @@index([userId, createdAt])
+  @@index([requestId])
+}
+
+model SystemAudit {
+  auditId               String            @id @default(cuid())
+  workspaceId           String
+  totalFilesScanned     Int
+  integrityFailuresCount Int
+  status                SystemAuditStatus
+  previousLogHash       String?           @map("previous_log_hash")
+  auditSignature        String            @default("") @map("audit_signature")
+  resourceIdsJson       String            @default("[]")
+  deletedAt             DateTime?
+  createdAt             DateTime          @default(now())
+
+  workspace Workspace @relation(fields: [workspaceId], references: [id], onDelete: Cascade)
+
+  @@index([workspaceId, createdAt])
+}
+
+model AuditLedgerProof {
+  id          String   @id @default(cuid())
+  workspaceId String
+  eventCount  Int
+  maxEventId  String
+  proofHash   String
+  tamperFlag  Boolean  @default(false)
+  createdAt   DateTime @default(now())
+
+  workspace Workspace @relation(fields: [workspaceId], references: [id], onDelete: Cascade)
+
+  @@index([workspaceId, createdAt])
+}
+
+model SigningKey {
+  id             String   @id @default(cuid())
+  workspaceId    String
+  keyFingerprint String
+  publicKeyPem   String?
+  algorithm      String
+  status         String   @default("ACTIVE")
+  activatedAt    DateTime @default(now())
+  deactivatedAt  DateTime?
+  reason         String?
+  createdAt      DateTime @default(now())
+
+  workspace Workspace @relation(fields: [workspaceId], references: [id], onDelete: Cascade)
+
+  @@index([workspaceId, keyFingerprint])
+  @@index([workspaceId, status])
+}
+
+model BatesReservation {
+  id          String   @id @default(cuid())
+  workspaceId String
+  prefix      String
+  number      Int
+  exhibitId   String?
+  reservedBy  String
+  certificate String
+  createdAt   DateTime @default(now())
+
+  workspace Workspace @relation(fields: [workspaceId], references: [id], onDelete: Cascade)
+  exhibit   Exhibit?  @relation(fields: [exhibitId], references: [id], onDelete: SetNull)
+  user      User      @relation(fields: [reservedBy], references: [id], onDelete: Cascade)
+
+  @@unique([prefix, number])
+  @@index([workspaceId, createdAt])
+  @@index([workspaceId, prefix, number])
+}
+
+model InferenceState {
+  id            String   @id @default(cuid())
+  workspaceId   String
+  userId        String
+  exhibitId     String?
+  caseId        String?
+  stepIndex     Int
+  heartbeatHash String
+  evidenceHash  String?
+  stateJson     String
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+
+  workspace Workspace @relation(fields: [workspaceId], references: [id], onDelete: Cascade)
+  user     User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  exhibit  Exhibit?  @relation(fields: [exhibitId], references: [id], onDelete: SetNull)
+
+  @@index([workspaceId, userId, exhibitId])
+  @@index([workspaceId, updatedAt])
+}
+
+model Playbook {
+  id          String   @id @default(cuid())
+  workspaceId String
+  name        String
+  rulesJson   String
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  workspace Workspace @relation(fields: [workspaceId], references: [id], onDelete: Cascade)
+  riskAssessments RiskAssessment[]
+
+  @@index([workspaceId])
+}
+
+model Clause {
+  id         String   @id @default(cuid())
+  workspaceId String
+  matterId   String
+  exhibitId  String
+  sourceChunkId String?
+  clauseType String
+  text       String
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+
+  workspace Workspace @relation(fields: [workspaceId], references: [id], onDelete: Cascade)
+  matter    Matter   @relation(fields: [matterId], references: [id], onDelete: Cascade)
+  exhibit   Exhibit  @relation(fields: [exhibitId], references: [id], onDelete: Cascade)
+  sourceChunk DocumentChunk? @relation(fields: [sourceChunkId], references: [id], onDelete: SetNull)
+  riskAssessments RiskAssessment[]
+
+  @@index([workspaceId])
+  @@index([matterId])
+  @@index([workspaceId, clauseType])
+  @@unique([workspaceId, exhibitId, clauseType, sourceChunkId])
+}
+
+model RiskAssessment {
+  id         String   @id @default(cuid())
+  workspaceId String
+  clauseId   String
+  playbookId String
+  severity   RiskLevel
+  redlineSuggestion String
+  triggerMatchesJson String @default("[]")
+  createdAt  DateTime @default(now())
+
+  workspace Workspace @relation(fields: [workspaceId], references: [id], onDelete: Cascade)
+  clause   Clause   @relation(fields: [clauseId], references: [id], onDelete: Cascade)
+  playbook Playbook @relation(fields: [playbookId], references: [id], onDelete: Cascade)
+
+  @@index([workspaceId])
+  @@index([clauseId])
+  @@index([playbookId])
+}
+
+model Deadline {
+  id          String   @id @default(cuid())
+  workspaceId String
+  matterId    String
+  exhibitId   String
+  title       String
+  dueDate     DateTime
+  sourceText  String
+  sourceChunkId String?
+  status      DeadlineStatus @default(DETECTED)
+  confidence  Float
+  createdAt   DateTime @default(now())
+
+  workspace Workspace @relation(fields: [workspaceId], references: [id], onDelete: Cascade)
+  matter    Matter    @relation(fields: [matterId], references: [id], onDelete: Cascade)
+  exhibit   Exhibit   @relation(fields: [exhibitId], references: [id], onDelete: Cascade)
+  sourceChunk DocumentChunk? @relation(fields: [sourceChunkId], references: [id], onDelete: SetNull)
+
+  @@index([workspaceId])
+  @@index([matterId])
+  @@index([exhibitId])
+  @@index([sourceChunkId])
+  @@index([status])
+  @@index([dueDate])
+}
+
+model TranscriptSegment {
+  id         String   @id @default(cuid())
+  exhibitId  String
+  startTime  Float
+  endTime    Float
+  text       String
+  speaker    String?
+  embedding  Json?
+  createdAt  DateTime @default(now())
+
+  exhibit Exhibit @relation(fields: [exhibitId], references: [id], onDelete: Cascade)
+  citations Citation[]
+
+  @@index([exhibitId])
+  @@index([startTime])
+}
+
+model MediaFrame {
+  id         String   @id @default(cuid())
+  exhibitId  String
+  timestamp  Float
+  frameHash  String
+  createdAt  DateTime @default(now())
+
+  exhibit Exhibit @relation(fields: [exhibitId], references: [id], onDelete: Cascade)
+  citations Citation[]
+
+  @@index([exhibitId])
+  @@index([timestamp])
+}
+
+model Integration {
+  id          String   @id @default(cuid())
+  workspaceId String
+  type        IntegrationType
+  credentials String
+  status      IntegrationStatus @default(ACTIVE)
+  lastSync    DateTime?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  workspace Workspace @relation(fields: [workspaceId], references: [id], onDelete: Cascade)
+  externalResources ExternalResource[]
+
+  @@index([workspaceId])
+  @@index([type])
+}
+
+model ExternalResource {
+  id            String   @id @default(cuid())
+  workspaceId   String
+  integrationId String
+  exhibitId     String
+  externalId    String
+  createdAt     DateTime @default(now())
+
+  workspace   Workspace   @relation(fields: [workspaceId], references: [id], onDelete: Cascade)
+  integration Integration @relation(fields: [integrationId], references: [id], onDelete: Cascade)
+  exhibit     Exhibit     @relation(fields: [exhibitId], references: [id], onDelete: Cascade)
+
+  @@unique([integrationId, externalId])
+  @@index([workspaceId])
+  @@index([exhibitId])
+}
+
+model IntegrityAlert {
+  id          String                 @id @default(cuid())
+  workspaceId String
+  exhibitId   String?
+  type        IntegrityAlertType
+  severity    IntegrityAlertSeverity @default(CRITICAL)
+  resolved    Boolean                @default(false)
+  deletedAt   DateTime?
+  createdAt   DateTime               @default(now())
+
+  workspace Workspace @relation(fields: [workspaceId], references: [id], onDelete: Cascade)
+  exhibit   Exhibit?  @relation(fields: [exhibitId], references: [id], onDelete: Cascade)
+
+  @@index([workspaceId, resolved])
+  @@index([workspaceId, createdAt])
+  @@index([workspaceId, exhibitId, resolved, deletedAt])
+}
+
+model Tombstone {
+  id                 String   @id @default(cuid())
+  exhibitId          String
+  reason             String
+  authorizedByUserId String
+  signature          String
+  createdAt          DateTime @default(now())
+
+  @@index([exhibitId])
+}
+
+enum ChronologyRunStatus {
+  RUNNING
+  DONE
+  FAILED
+}
+
+model ChronologyRun {
+  id              String              @id @default(cuid())
+  workspaceId     String
+  matterId        String
+  createdByUserId String
+  status          ChronologyRunStatus @default(RUNNING)
+  metricsJson     String              @default("{}")
+  createdAt       DateTime            @default(now())
+
+  workspace Workspace @relation(fields: [workspaceId], references: [id], onDelete: Cascade)
+  matter    Matter    @relation(fields: [matterId], references: [id], onDelete: Cascade)
+  createdBy User      @relation(fields: [createdByUserId], references: [id], onDelete: Cascade)
+  events    ChronologyEvent[]
+
+  @@index([workspaceId, createdAt])
+  @@index([workspaceId, matterId, createdAt])
+}
+
+model ChronologyEvent {
+  id            String   @id @default(cuid())
+  runId         String
+  workspaceId   String
+  matterId      String
+  eventAt       DateTime?
+  eventAtText   String
+  title         String
+  description   String
+  actorsJson    String   @default("[]")
+  exhibitIdsJson String  @default("[]")
+  anchorIdsJson String
+  createdAt     DateTime @default(now())
+
+  run       ChronologyRun @relation(fields: [runId], references: [id], onDelete: Cascade)
+  workspace Workspace     @relation(fields: [workspaceId], references: [id], onDelete: Cascade)
+  matter    Matter        @relation(fields: [matterId], references: [id], onDelete: Cascade)
+
+  @@index([workspaceId, matterId])
+  @@index([runId])
+  @@index([eventAt])
+}

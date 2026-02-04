@@ -1,0 +1,2 @@
+# npm --prefix server run start
+started backend process

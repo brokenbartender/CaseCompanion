@@ -1,0 +1,4 @@
+(function() {
+var toc =  [{"name":"Rule 2.001 Applicability","type":"item","url":"Court_Rules_Book_Ch_2/Court_Rules_Chapter_2/Court_Rules_Chapter_2.htm#1000899bc-3"},{"name":"Rule 2.002 Waiver of Fees for Indigent Persons","type":"item","url":"Court_Rules_Book_Ch_2/Court_Rules_Chapter_2/Court_Rules_Chapter_2.htm#1000905bc-4"},{"name":"Rule 2.003 Disqualification of Judge","type":"item","url":"Court_Rules_Book_Ch_2/Court_Rules_Chapter_2/Court_Rules_Chapter_2.htm#1000947bc-5"},{"name":"Rule 2.004 Incarcerated Parties","type":"item","url":"Court_Rules_Book_Ch_2/Court_Rules_Chapter_2/Court_Rules_Chapter_2.htm#1002067bc-6"}];
+window.rh.model.publish(rh.consts('KEY_TEMP_DATA'), toc, { sync:true });
+})();

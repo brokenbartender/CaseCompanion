@@ -1,0 +1,7 @@
+{
+  "name": "LexiPro Forensic OS",
+  "description": "Enterprise-grade legal forensic workspace with tamper-evident audit logs, PDF anchoring, and secure multi-tenant isolation.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}

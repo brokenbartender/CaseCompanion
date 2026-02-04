@@ -1,0 +1,42 @@
+﻿node_modules/
+dist/
+dist-embed/
+build/
+coverage/
+.env
+.env.*
+!.env.example
+.DS_Store
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+*.pem
+*.key
+*.sqlite
+.aider*
+scripts/ci-diagnose.txt
+server/uploads/
+uploads/
+server/tmp/
+server/witness_log/
+.tools/
+logs/
+scripts/cache/
+reports/*
+!reports/demo-evidence/
+!reports/demo-evidence/*.json
+!reports/mna/
+!reports/mna/**
+
+server/reports/
+
+test-results/
+
+codex-*.patch
+
+_line.txt
+server/server/
+release_artifacts/
+# Add to .gitignore
+`n# Private case files (do not commit)
+references/Assault Case/

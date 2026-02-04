@@ -1,0 +1,45 @@
+GLOBAL DIGEST
+=============
+Source files: 51
+
+Top keywords (approx):
+- mcr: 3493
+- court: 3355
+- mich: 2878
+- app: 1882
+- mcl: 1856
+- not: 1672
+- party: 1495
+- page: 1332
+- may: 1257
+- michigan: 1251
+- 600: 1242
+- trial: 1035
+- under: 974
+- must: 964
+- civil: 908
+- judicial: 882
+- proceedings: 854
+- order: 820
+- section: 793
+- action: 752
+- institute: 742
+- plaintiff: 732
+- motion: 682
+- second: 682
+- benchbook: 679
+- see: 669
+- case: 656
+- edition: 642
+- has: 625
+- defendant: 617
+- service: 617
+- any: 613
+- parties: 594
+- attorney: 560
+- other: 554
+- which: 546
+- judgment: 531
+- state: 504
+- when: 504
+- jurisdiction: 459

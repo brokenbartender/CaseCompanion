@@ -1,0 +1,28 @@
+{
+    "workspaceId":  "demo-workspace",
+    "exhibitId":  "demo-exhibit",
+    "signature":  {
+                      "rootHash":  "demo-root-hash",
+                      "signatureHex":  "demo-signature",
+                      "timestamp":  "2026-01-22T01:51:11.2144529-05:00",
+                      "timestamp_authority_signature":  "demo-timestamp-signature"
+                  },
+    "manifest":  {
+                     "chainOfCustody":  [
+
+                                        ],
+                     "file":  {
+                                  "mime":  "application/pdf",
+                                  "name":  "Sample_LOI_Draft_DEMO.pdf",
+                                  "integrityHash":  "demo-hash",
+                                  "createdAt":  "2026-01-22T01:51:11.2144529-05:00"
+                              },
+                     "evidenceHash":  "demo-hash",
+                     "auditEventCount":  0,
+                     "systemVersion":  "LexiPro v1.1.2 (Forensic Edition)",
+                     "exhibitId":  "demo-exhibit",
+                     "workspaceId":  "demo-workspace",
+                     "generatedAt":  "2026-01-22T01:51:11.2144529-05:00"
+                 },
+    "capturedAt":  "2026-01-22T01:51:11.2107173-05:00"
+}

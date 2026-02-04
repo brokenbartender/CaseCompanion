@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: lexipro-server
+    env: docker
+    rootDir: .
+    dockerfilePath: server/Dockerfile
+    autoDeploy: false
+    envVars:
+      - key: DEMO_MODE
+        value: "true"
+      - key: ISOLATED_ENV
+        value: "true"
+      - key: READ_ONLY_FS
+        value: "true"

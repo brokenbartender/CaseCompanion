@@ -1,0 +1,8 @@
+{
+  "generatedAt": "2026-01-23T07:18:07.841Z",
+  "files": {
+    "server/forensics/releaseGate.ts": "0f07e3c52d1f3de2379a1718ab354ae8016a4feb8cf56468f6c45ad605b4c7cc",
+    "server/anchorAlgebra.ts": "11dc7de8235d3b5b32ff940289049eee852c7acd1ea0b481a634da0b77bbddc7",
+    "server/services/VectorStorageService.ts": "830ee039ccbcfa79b45f483018214934e8485fbea1d98d48d739bc0fdf70a237"
+  }
+}

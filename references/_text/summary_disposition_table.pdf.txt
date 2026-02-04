@@ -1,0 +1,140 @@
+=== Page 1 ===
+Last Updated 9/1/22
+Summary Disposition Table
+See the Michigan Judicial Institute’s Civil Proceedings Benchbook, Chapter 4.
+Court Rule (Grounds) Timing Evidence Considered/Additional Factors
+Pleadings, affidavits, depositions, admissions, and
+MCR 2.116(C)(1)
+Must be raised in a party’s first motion under MCR documentary evidence (if admissible). See MCR
+(Court lacks
+2.116 or in the party’s responsive pleading, whichever is 2.116(G)(5)-(6). Plaintiff bears the burden of
+jurisdiction over
+filed first. See MCR 2.116(D)(1). establishing jurisdiction. See Lease Acceptance Corp v
+person or property)
+Adams, 272 Mich App 209, 218 (2006).
+Must be raised in a party’s first motion under MCR Pleadings, affidavits, depositions, admissions, and
+MCR 2.116(C)(2)
+2.116 or in the party’s responsive pleading, whichever is documentary evidence (to the extent admissible).See
+(Insufficient process)
+filed first. See MCR 2.116(D)(1). MCR 2.116(G)(5)-(6).
+Pleadings, affidavits, depositions, admissions, and
+Must be raised in a party’s first motion under MCR
+documentary evidence (if admissible). See MCR
+2.116 or in the party’s responsive pleading, whichever is
+2.116(G)(5)-(6). Receipt of service, even if improper, is
+MCR 2.116(C)(3) filed first. See MCR 2.116(D)(1). A general appearance
+not grounds for dismissal. See MCR 2.105(J)(3). The
+(Insufficient service) does not waive a party’s right to challenge the
+court may order immediate trial. See MCR 2.116(I)(3). A
+sufficiency of process. See Al-Shimmari v Detroit Med
+jury trial is not required. See Al-Shimmari, 477 Mich at
+Ctr, 477 Mich 280, 293 (2007).
+288-289.
+Pleadings, affidavits, depositions, admissions, and
+documentary evidence (if admissible). See MCR
+MCR 2.116(C)(4) May be raised any time, even if filed after the deadline
+2.116(G)(5)-(6). Motion may be granted if plaintiff has
+(Court lacks subject- that has been set in a scheduling order to file dispositive
+failed to exhaust all available remedies. See Citizens for
+matter jurisdiction) motions has expired. See MCR 2.116(D)(3).
+Common Sense in Gov’t v Attorney General, 243 Mich
+App 43, 50 (2000).
+Must be raised in a party’s responsive pleading, unless
+MCR 2.116(C)(5) Pleadings, affidavits, depositions, admissions, and
+the grounds are stated in a motion filed under MCR
+(Plaintiff lacks the documentary evidence (to the extent admissible).See
+2.116 before the party’s first responsive pleading. See
+legal capacity to sue) MCR 2.116(G)(5)-(6).
+MCR 2.116(D)(2).
+Michigan Judicial Institute Page 1
+=== Page 2 ===
+Last Updated 9/1/22 Summary Disposition Table
+Pleadings, affidavits, depositions, admissions, and
+documentary evidence (if admissible).See MCR
+2.116(G)(5) and MCR 2.116(G)(6). The other action does
+need to be filed within the Michigan courts or within
+MCR 2.116(C)(6) the federal courts located in Michigan. See Valeo
+(Another action Must be raised in a party’s responsive pleading, unless Switches & Detection Sys, Inc v EMCom, Inc, 272 Mich
+between the same the grounds are stated in a motion filed under MCR App 309, 319-320 (2006). The trial court must identify
+parties involving the 2.116 before the party’s first responsive pleading. See which claims are being dismissed and which claims are
+same claim has been MCR 2.116(D)(2). already pending in another action. See Planet Bingo, LLC
+initiated) v VKGS, LLC, 319 Mich App 308, 326-327 (2017). If the
+opposing party raises a question regarding whether the
+other action can and will continue, a stay pending
+resolution of the issue in the other action should be
+granted. Id. at 327.
+Pleadings, affidavits, depositions, admissions, and
+documentary evidence (if admissible). See MCR
+2.116(G)(5)-(6). However, a party is not required to
+submit any material in support of a (C)(7) motion; it can
+be evaluated on the pleadings alone. See Maiden v
+Must be raised in a party’s responsive pleading, unless Rozwood, 461 Mich 109, 119 (1999). The contents of
+MCR 2.116(C)(7) the grounds are stated in a motion filed under MCR the complaint are accepted as true, unless contradicted
+(Entry of judgment, 2.116 prior to the party’s first responsive pleading. See by documentation submitted by the moving party. Id. If
+dismissal of the MCR 2.116(D)(2). However, the ground of governmental the movant properly supports the motion by presenting
+action, or other relief immunity may be raised at any time, even if filed after facts that, if left unrebutted, would show that there is
+appropriate due to the deadline that has been set in a scheduling order to no genuine issue of material fact that the movant is
+certain conditions) file dispositive motions has expired. See MCR entitled to summary disposition, the burden shifts to
+2.116(D)(3). the nonmoving party to present evidence that
+establishes a question of fact. Kincaid v Cardwell, 300
+Mich App 513, 537 (2013). Summary disposition is not
+proper if the parties present evidence that establishes a
+question of fact concerning whether the moving party is
+entitled to (C)(7) relief. Id. at 523.
+Page 2 Michigan Judicial Institute
+=== Page 3 ===
+Last Updated 9/1/22
+Only pleadings: complaints, answers, and replies (not
+the motion for summary disposition itself). See MCR
+2.116(G)(5); Ingham Co v Mich Co Rd Comm Self-Ins
+MCR 2.116(C)(8) Pool, 321 Mich App 574, 579 (2017). All well-pleaded
+May be raised at any time, unless a period in which to
+(Opposing party has allegations should be accepted as true and construed
+file dispositive motions is established under a
+failed to state a claim most favorably to the non-moving party. Wade v Dep’t
+scheduling order entered pursuant to MCR 2.401. See
+for which relief can of Corr, 439 Mich 158, 162-162 (1992). A mere
+MCR 2.116(D)(4).
+be granted) statement of conclusions, unsupported by factual
+allegations is not sufficient to state a cause of action.
+ETT Ambulance Svc Corp v Rockford Ambulance, Inc, 204
+Mich App 392, 395 (1994).
+Only pleadings: complaints, answers, and replies (not
+the motion for summary disposition itself). See MCR
+2.116(G)(5); Ingham Co v Mich Co Rd Comm Self-Ins
+Pool, 321 Mich App 574, 579 (2017). Properly granted if
+MCR 2.116(C)(9) May be raised at any time, unless a period in which to defense is so clearly untenable that as a matter of law
+(Opposing party has file dispositive motions is established under a no factual development could possibly deny plaintiff’s
+failed to state a valid scheduling order entered pursuant to MCR 2.401. See rights to recovery. See Vayda v Lake Co, 321 Mich App
+defense to the claim) MCR 2.116(D)(4). 686, 693 (2017). Summary disposition should not be
+granted when a material allegation of the complaint is
+categorically denied and the nonmoving party has
+stated a legally cognizable defense. See Dimondale v
+Grable, 240 Mich App 553, 564-565 (2000).
+Michigan Judicial Institute Page 3
+=== Page 4 ===
+Last Updated 9/1/22 Summary Disposition Table
+Pleadings, affidavits, depositions, admissions, and
+documentary evidence (if admissible).See MCR
+2.116(G)(5) and MCR 2.116(G)(6). Evidence should be
+considered in the light most favorable to the nonmoving
+party. See Brown v Brown, 478 Mich 545, 551-552
+(2007). Where, except as to the amount of damages, the
+proffered evidence fails to establish a genuine issue of
+MCR 2.116(C)(10)
+May be raised at any time, unless a period in which to material fact, the moving party is entitled to judgment
+(There is no genuine
+file dispositive motions is established under a or partial judgment as a a matter of law. Id. at 552. If the
+issue as to any
+scheduling order entered pursuant to MCR 2.401. See motion is properly made and supported, the opposing
+material fact other
+MCR 2.116(D)(4). party must, by affidavit or otherwise, set forth specific
+than damages)
+facts demonstrating a genuine issue for trial. See MCR
+2.116(G)(4). (C)(10) motions are generally premature if
+filed before discovery is complete. See Colista v Thomas,
+241 Mich App 529, 537 (2000). However, the motion
+may be granted if there is no reasonable chance that
+additional discovery will result in factual support for the
+nonmoving party. Id. at 537-538.
+Page 4 Michigan Judicial Institute
