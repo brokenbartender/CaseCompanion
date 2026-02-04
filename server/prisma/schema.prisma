@@ -206,6 +206,9 @@ model User {
   researchFolders ResearchFolder[]
   searchAlerts    SearchAlert[]
   deliveryItems   DeliveryItem[]
+  privilegeLogApprovals Matter[] @relation("PrivilegeLogApprovedBy")
+  documentVersions DocumentVersion[]
+  redactionJobs    RedactionJob[]
 }
 
 model Workspace {
@@ -254,6 +257,11 @@ model Workspace {
   researchFolders  ResearchFolder[]
   searchAlerts     SearchAlert[]
   deliveryItems    DeliveryItem[]
+  ipAllowlistEntries IpAllowlistEntry[]
+  ssoProviders       SsoProvider[]
+  documentVersions   DocumentVersion[]
+  workProducts       WorkProduct[]
+  redactionJobs      RedactionJob[]
 }
 
 model WorkspacePreference {
@@ -392,7 +400,7 @@ model Matter {
   updatedAt   DateTime @updatedAt
 
   workspace Workspace @relation(fields: [workspaceId], references: [id], onDelete: Cascade)
-  privilegeLogApprovedBy User? @relation(fields: [privilegeLogApprovedByUserId], references: [id], onDelete: SetNull)
+  privilegeLogApprovedBy User? @relation("PrivilegeLogApprovedBy", fields: [privilegeLogApprovedByUserId], references: [id], onDelete: SetNull)
   exhibits  Exhibit[]
   deadlines Deadline[]
   documentChunks DocumentChunk[]
@@ -400,6 +408,8 @@ model Matter {
   facts     Fact[]
   issues    Issue[]
   people    Person[]
+  workProducts WorkProduct[]
+  redactionJobs RedactionJob[]
   
   // Back-relations for Auto-Chronology
   chronologyRuns    ChronologyRun[]
@@ -465,6 +475,8 @@ model Exhibit {
   externalResources ExternalResource[]
   transcriptSegments TranscriptSegment[]
   mediaFrames MediaFrame[]
+  documentVersions DocumentVersion[]
+  workProducts WorkProduct[]
 
   @@index([workspaceId])
   @@index([id, workspaceId])
@@ -908,6 +920,7 @@ model AuditEvent {
 
   workspace Workspace @relation(fields: [workspaceId], references: [id], onDelete: Cascade)
   actor     User      @relation("AuditActor", fields: [actorId], references: [id], onDelete: Cascade)
+  workProducts WorkProduct[]
 
   @@unique([workspaceId, prevHash])
   @@index([workspaceId, createdAt])
