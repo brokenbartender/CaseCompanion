@@ -19,13 +19,17 @@ import {
   Gavel,
   FileSignature,
   Users,
-  Scale
+  Scale,
+  Target,
+  Monitor
 } from "lucide-react";
 import { APP_NAME } from "../config/branding";
 
 const navItems = [
   { to: "/", label: "Dashboard", icon: LayoutDashboard },
   { to: "/assault-hub", label: "Assault Hub", icon: Shield },
+  { to: "/trial-mode", label: "Trial Mode", icon: Monitor },
+  { to: "/self-defense", label: "Self-Defense", icon: Target },
   { to: "/roadmap", label: "Procedural Roadmap", icon: Map },
   { to: "/checklist", label: "Checklist", icon: ListChecks },
   { to: "/timeline", label: "Timeline", icon: CalendarDays },
