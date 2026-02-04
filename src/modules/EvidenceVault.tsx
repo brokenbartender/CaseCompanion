@@ -52,6 +52,17 @@ export default function EvidenceVault() {
     }
   }
 
+  function exportPacket() {
+    const payload = { index: EVIDENCE_INDEX, meta };
+    const blob = new Blob([JSON.stringify(payload, null, 2)], { type: "application/json" });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = "case_companion_evidence_packet.json";
+    a.click();
+    URL.revokeObjectURL(url);
+  }
+
   return (
     <Page
       title="Evidence Vault"
@@ -72,6 +83,23 @@ export default function EvidenceVault() {
               />
               <span className="text-xs text-slate-500">{uploadStatus}</span>
             </div>
+          </CardBody>
+        </Card>
+
+        <Card>
+          <CardHeader>
+            <CardSubtitle>Export</CardSubtitle>
+            <CardTitle>Evidence Packet</CardTitle>
+          </CardHeader>
+          <CardBody>
+            <button
+              type="button"
+              onClick={exportPacket}
+              className="rounded-md bg-amber-500 px-3 py-2 text-sm font-semibold text-slate-900"
+            >
+              Export Evidence Packet
+            </button>
+            <div className="mt-2 text-xs text-slate-500">Exports local evidence index + tags/status.</div>
           </CardBody>
         </Card>
 

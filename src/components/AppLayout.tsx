@@ -10,6 +10,7 @@ import {
   Search,
   FileText,
   ClipboardList,
+  ClipboardCheck,
   Settings,
   Timer
 } from "lucide-react";
@@ -27,6 +28,7 @@ const navItems = [
   { to: "/summary-disposition", label: "Summary Disposition", icon: FileText },
   { to: "/rules", label: "Rules Library", icon: BookOpen },
   { to: "/rules-index", label: "Rules Index", icon: Search },
+  { to: "/audit", label: "Audit Log", icon: ClipboardCheck },
   { to: "/settings", label: "Case Settings", icon: Settings }
 ];
 

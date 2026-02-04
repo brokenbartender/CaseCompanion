@@ -14,6 +14,7 @@ import SummaryDispositionGuide from "./modules/SummaryDispositionGuide";
 import FilingChecklist from "./modules/FilingChecklist";
 import CaseSettingsView from "./modules/CaseSettings";
 import DeadlinesView from "./modules/Deadlines";
+import AuditLogView from "./modules/AuditLog";
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
           <Route path="filing" element={<FilingChecklist />} />
           <Route path="settings" element={<CaseSettingsView />} />
           <Route path="deadlines" element={<DeadlinesView />} />
+          <Route path="audit" element={<AuditLogView />} />
         </Route>
       </Routes>
     </Router>
