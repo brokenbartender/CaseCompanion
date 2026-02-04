@@ -1,46 +1,49 @@
-import React from "react";
-import ModuleLayout from "../components/ui/ModuleLayout";
-import { Card, CardBody, CardHeader, CardTitle } from "../components/ui/Card";
-import { Users } from "lucide-react";
+import React, { useState } from "react";
+import Page from "../components/ui/Page";
+import { Card, CardBody, CardHeader, CardSubtitle, CardTitle } from "../components/ui/Card";
 
 export default function JurorPredictor() {
+  const [questions, setQuestions] = useState<string[]>([]);
+  const [input, setInput] = useState("");
+
+  function add() {
+    if (!input.trim()) return;
+    setQuestions((prev) => [...prev, input]);
+    setInput("");
+  }
+
   return (
-    <ModuleLayout
-      title="Juror Predictor"
-      subtitle="Voir Dire strategy and bias analysis"
-      kpis={[
-        { label: "Panel", value: "24", tone: "neutral" },
-        { label: "High Bias", value: "3", tone: "warn" },
-        { label: "Safe", value: "11", tone: "good" }
-      ]}
-      lastUpdated="2026-02-03"
-    >
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-        <div className="lg:col-span-2">
-          <Card>
-            <CardHeader>
-              <CardTitle className="flex items-center gap-2">
-                <Users className="text-blue-400" size={20} /> Venire Analysis
-              </CardTitle>
-            </CardHeader>
-            <CardBody className="space-y-4">
-              <p className="text-sm text-slate-400">Enter juror demographic data to predict favorability.</p>
-              <div className="grid grid-cols-2 gap-4">
-                <div className="p-4 border border-slate-800 rounded bg-slate-900">
-                  <div className="text-lg font-semibold text-slate-200">Juror #4</div>
-                  <div className="text-xs text-slate-500">Engineer, 45, Married</div>
-                  <div className="mt-2 text-emerald-400 text-sm">Favorability: 85% (Logical appeals)</div>
+    <Page title="Voir Dire Designer" subtitle="Generate and collect juror questions (informational only).">
+      <div className="grid gap-6">
+        <Card>
+          <CardHeader>
+            <CardSubtitle>Question Bank</CardSubtitle>
+            <CardTitle>Bias Screening</CardTitle>
+          </CardHeader>
+          <CardBody>
+            <input
+              className="w-full rounded-md border border-white/10 bg-white/5 px-3 py-2 text-sm text-slate-100"
+              placeholder="Add a voir dire question"
+              value={input}
+              onChange={(e) => setInput(e.target.value)}
+            />
+            <button
+              type="button"
+              onClick={add}
+              className="mt-3 rounded-md bg-amber-500 px-3 py-2 text-sm font-semibold text-slate-900"
+            >
+              Add Question
+            </button>
+            <div className="mt-4 space-y-2 text-sm text-slate-300">
+              {questions.map((q, idx) => (
+                <div key={idx} className="rounded-md border border-white/5 bg-white/5 p-3">
+                  {q}
                 </div>
-                <div className="p-4 border border-slate-800 rounded bg-slate-900">
-                  <div className="text-lg font-semibold text-slate-200">Juror #9</div>
-                  <div className="text-xs text-slate-500">Teacher, 32, Single</div>
-                  <div className="mt-2 text-rose-400 text-sm">Favorability: 20% (High empathy for plaintiff)</div>
-                </div>
-              </div>
-            </CardBody>
-          </Card>
-        </div>
+              ))}
+            </div>
+          </CardBody>
+        </Card>
       </div>
-    </ModuleLayout>
+    </Page>
   );
 }

@@ -13,24 +13,38 @@ import {
   ClipboardCheck,
   Shield,
   Settings,
-  Timer
+  Timer,
+  Video,
+  MessageSquare,
+  Gavel,
+  FileSignature,
+  Users,
+  Scale
 } from "lucide-react";
 import { APP_NAME } from "../config/branding";
 
 const navItems = [
   { to: "/", label: "Dashboard", icon: LayoutDashboard },
+  { to: "/assault-hub", label: "Assault Hub", icon: Shield },
   { to: "/roadmap", label: "Procedural Roadmap", icon: Map },
   { to: "/checklist", label: "Checklist", icon: ListChecks },
   { to: "/timeline", label: "Timeline", icon: CalendarDays },
   { to: "/evidence", label: "Evidence Vault", icon: Archive },
+  { to: "/video-sync", label: "Video Sync", icon: Video },
+  { to: "/witness", label: "Witness Matrix", icon: Users },
   { to: "/deadlines", label: "Deadlines", icon: Timer },
   { to: "/filing", label: "Filing Checklist", icon: ClipboardList },
   { to: "/service", label: "Service of Process", icon: FileText },
   { to: "/summary-disposition", label: "Summary Disposition", icon: FileText },
+  { to: "/objections", label: "Objection Cards", icon: Gavel },
+  { to: "/deposition", label: "Deposition Simulator", icon: MessageSquare },
+  { to: "/voir-dire", label: "Voir Dire Designer", icon: Users },
+  { to: "/damages", label: "Damages Calculator", icon: Scale },
+  { to: "/demand", label: "Demand Generator", icon: FileSignature },
+  { to: "/leverage", label: "Consistency Check", icon: ClipboardCheck },
   { to: "/rules", label: "Rules Library", icon: BookOpen },
   { to: "/rules-index", label: "Rules Index", icon: Search },
   { to: "/audit", label: "Audit Log", icon: ClipboardCheck },
-  { to: "/assault-hub", label: "Assault Hub", icon: Shield },
   { to: "/settings", label: "Case Settings", icon: Settings }
 ];
 

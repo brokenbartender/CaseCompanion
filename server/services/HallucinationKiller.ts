@@ -1,3 +1,5 @@
+import fs from "fs";
+import path from "path";
 import { semanticAdversary } from "./SemanticAdversary.js";
 
 export type GroundingResult =
@@ -33,6 +35,8 @@ type CitedClaim = {
 type ClaimGroup = {
   claim: string;
   anchorIds: string[];
+  sourceDocument?: string;
+  pageNumber?: number;
 };
 
 function normalizeSentence(value: string) {
@@ -102,7 +106,9 @@ function extractClaimGroupsFromJson(response: string): ClaimGroup[] | null {
       const anchorIds = Array.isArray(entry?.anchorIds)
         ? entry.anchorIds.map((id: any) => String(id || "").trim()).filter(Boolean)
         : [];
-      out.push({ claim: claimText, anchorIds });
+      const sourceDocument = String(entry?.source_document || "").trim();
+      const pageNumber = Number(entry?.page_number);
+      out.push({ claim: claimText, anchorIds, sourceDocument, pageNumber });
     }
     return out.length ? out : null;
   } catch {
@@ -164,6 +170,55 @@ function extractCitedClaims(response: string): CitedClaim[] {
   return claims;
 }
 
+const DEFAULT_ENTITY_ALLOWLIST = new Set<string>([
+  "Michigan",
+  "Oakland County",
+  "Court",
+  "District Court",
+  "Circuit Court",
+  "Police",
+  "Report",
+  "Liberty Bar",
+  "Pontiac"
+]);
+
+function parseWhitelistEntities(paths: string[]): Set<string> {
+  const entities = new Set<string>(DEFAULT_ENTITY_ALLOWLIST);
+  for (const filePath of paths) {
+    try {
+      const text = fs.readFileSync(filePath, "utf-8");
+      const matches = text.match(/\b[A-Z][a-z]+(?:\s+[A-Z][a-z]+)+\b/g) || [];
+      for (const m of matches) {
+        entities.add(m.trim());
+      }
+    } catch {
+      continue;
+    }
+  }
+  return entities;
+}
+
+function loadEntityWhitelist(): Set<string> {
+  const env = String(process.env.HALLUCINATION_ENTITY_WHITELIST_PATHS || "").trim();
+  if (!env) return new Set(DEFAULT_ENTITY_ALLOWLIST);
+  const paths = env.split(";").map((p) => p.trim()).filter(Boolean).map((p) => path.resolve(p));
+  return parseWhitelistEntities(paths);
+}
+
+function extractEntitiesFromClaim(claim: string): string[] {
+  const matches = claim.match(/\b[A-Z][a-z]+(?:\s+[A-Z][a-z]+)+\b/g) || [];
+  return Array.from(new Set(matches.map((m) => m.trim())));
+}
+
+function enforceEntityWhitelist(claim: string, whitelist: Set<string>) {
+  const entities = extractEntitiesFromClaim(claim);
+  for (const entity of entities) {
+    if (!whitelist.has(entity)) {
+      throw new GroundingError(`Entity not in whitelist: ${entity}`, entity);
+    }
+  }
+}
+
 export async function verifyGrounding(
   response: string,
   availableAnchors: Array<string | AnchorEvidence>
@@ -185,15 +240,23 @@ export async function verifyGrounding(
   }
 
   const claimGroups = extractClaimGroupsFromJson(response) || [];
+  const strictEntities = String(process.env.HALLUCINATION_ENTITY_STRICT || "").toLowerCase() === "true";
+  const entityWhitelist = strictEntities ? loadEntityWhitelist() : new Set<string>();
   if (claimGroups.length > 0) {
     for (const group of claimGroups) {
       if (!group.claim || !group.anchorIds.length) {
+        return { approved: false, reason: "UNCITED_CLAIMS" };
+      }
+      if (!group.sourceDocument || !Number.isFinite(group.pageNumber)) {
         return { approved: false, reason: "UNCITED_CLAIMS" };
       }
       for (const anchorId of group.anchorIds) {
         if (!anchors.has(anchorId)) {
           return { approved: false, reason: "FABRICATED_CITATION", details: anchorId };
         }
+      }
+      if (strictEntities) {
+        enforceEntityWhitelist(group.claim, entityWhitelist);
       }
       let supportCount = 0;
       for (const anchorId of group.anchorIds) {
@@ -231,6 +294,9 @@ export async function verifyGrounding(
 
   const semanticClaims = jsonClaims.length ? jsonClaims : citeClaims;
   for (const { anchorId, claim } of semanticClaims) {
+    if (strictEntities) {
+      enforceEntityWhitelist(claim, entityWhitelist);
+    }
     const evidenceText = evidenceById.get(anchorId) || "";
     const supports = await semanticAdversary.verifyLogicalSupport(claim, evidenceText);
     if (!supports) {
