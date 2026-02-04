@@ -1,4 +1,3 @@
-
 {
   "forensic_synthesis": {
     "logic_chain": "Asset Ingestion -> OCR Text Extraction -> Geometric Coordinate Alignment -> Statutory Element Mapping -> Immutable Citation Output",
@@ -8,13 +7,19 @@
       "claims": [
         {
           "text": "string",
-          "anchorIds": ["string"]
+          "anchorIds": [
+            "string"
+          ],
+          "source_document": "string",
+          "page_number": "number"
         }
       ],
       "findings": [
         {
           "text": "string",
-          "anchorId": "string"
+          "anchorId": "string",
+          "source_document": "string",
+          "page_number": "number"
         }
       ]
     }

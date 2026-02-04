@@ -84,6 +84,27 @@ export async function verifyLogicalSupport(claim: string, evidenceText: string):
   return verdict === "TRUE";
 }
 
+export async function generateSelfDefenseScenario(prompt: string): Promise<string> {
+  const normalizedPrompt = normalize(prompt);
+  if (!normalizedPrompt) return "";
+  const mode = getMode();
+  const roleplayPrompt = [
+    "Roleplay as the defendant claiming self-defense.",
+    "Keep it short, factual, and avoid speculation.",
+    "Output 3-5 sentences only.",
+    `Prompt: ${normalizedPrompt}`
+  ].join("\n");
+  try {
+    if (mode === "LOCAL_OLLAMA") {
+      return callLocal(roleplayPrompt);
+    }
+    return callGemini(roleplayPrompt);
+  } catch {
+    return "";
+  }
+}
+
 export const semanticAdversary = {
-  verifyLogicalSupport
+  verifyLogicalSupport,
+  generateSelfDefenseScenario
 };

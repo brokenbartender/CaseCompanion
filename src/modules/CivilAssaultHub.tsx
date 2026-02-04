@@ -1,16 +1,27 @@
 import React, { useMemo, useState } from "react";
 import Page from "../components/ui/Page";
 import { Card, CardBody, CardHeader, CardSubtitle, CardTitle } from "../components/ui/Card";
-import { LIMITATIONS } from "../data/michiganAssaultCivil";
 import { readJson, writeJson } from "../utils/localStore";
+import { MCI_115 } from "../data/michiganAssaultCivil";
 
 const STORAGE_KEY = "case_companion_assault_hub_v1";
+const JI_KEY = "case_companion_ji_checklist_v1";
 
 type HubState = {
   incidentDate: string;
-  limitationKey: string;
+  limitationYears: number;
   incidentSummary: string;
 };
+
+type ChecklistState = Record<string, boolean>;
+
+const SOL_OPTIONS = [
+  { years: 2, label: "Assault/Battery (2 years)", cite: "MCL 600.5805(3)" },
+  { years: 3, label: "Injury to person (3 years)", cite: "MCL 600.5805(2)" },
+  { years: 5, label: "Assault/Battery - spouse/household (5 years)", cite: "MCL 600.5805(4)" },
+  { years: 5, label: "Assault/Battery - dating relationship (5 years)", cite: "MCL 600.5805(5)" },
+  { years: 10, label: "Criminal sexual conduct (10 years)", cite: "MCL 600.5805(6)" }
+];
 
 function addYears(dateStr: string, years: number) {
   if (!dateStr) return "";
@@ -22,8 +33,9 @@ function addYears(dateStr: string, years: number) {
 
 export default function CivilAssaultHub() {
   const [state, setState] = useState<HubState>(() =>
-    readJson(STORAGE_KEY, { incidentDate: "", limitationKey: "assault_battery", incidentSummary: "" })
+    readJson(STORAGE_KEY, { incidentDate: "", limitationYears: 2, incidentSummary: "" })
   );
+  const [checklist, setChecklist] = useState<ChecklistState>(() => readJson(JI_KEY, {}));
 
   function update(next: Partial<HubState>) {
     const updated = { ...state, ...next };
@@ -31,8 +43,15 @@ export default function CivilAssaultHub() {
     writeJson(STORAGE_KEY, updated);
   }
 
-  const limitation = LIMITATIONS.find((l) => l.key === state.limitationKey) || LIMITATIONS[0];
-  const deadline = useMemo(() => addYears(state.incidentDate, limitation.years), [state.incidentDate, limitation.years]);
+  function toggle(id: string) {
+    setChecklist((prev) => {
+      const next = { ...prev, [id]: !prev[id] };
+      writeJson(JI_KEY, next);
+      return next;
+    });
+  }
+
+  const deadline = useMemo(() => addYears(state.incidentDate, state.limitationYears), [state.incidentDate, state.limitationYears]);
 
   return (
     <Page title="Civil Assault & Battery Hub" subtitle="Michigan-focused civil case organization (informational only).">
@@ -68,11 +87,13 @@ export default function CivilAssaultHub() {
               />
               <select
                 className="w-full rounded-md border border-white/10 bg-white/5 px-3 py-2 text-sm text-slate-100"
-                value={state.limitationKey}
-                onChange={(e) => update({ limitationKey: e.target.value })}
+                value={state.limitationYears}
+                onChange={(e) => update({ limitationYears: Number(e.target.value) })}
               >
-                {LIMITATIONS.map((l) => (
-                  <option key={l.key} value={l.key}>{l.label}</option>
+                {SOL_OPTIONS.map((opt) => (
+                  <option key={`${opt.years}-${opt.label}`} value={opt.years}>
+                    {opt.label}
+                  </option>
                 ))}
               </select>
             </div>
@@ -80,20 +101,49 @@ export default function CivilAssaultHub() {
               Estimated deadline: {deadline || "Enter an incident date."}
             </div>
             <div className="mt-2 text-xs text-slate-500">
-              Sources: {limitation.source} (verify with the official statute).
+              Verify with current law (MCL 600.5805). These options are a guide only and may not apply to every case.
+              <div className="mt-1 space-y-1">
+                {SOL_OPTIONS.map((opt) => (
+                  <div key={`${opt.cite}-${opt.label}`}>
+                    {opt.label} — {opt.cite}
+                  </div>
+                ))}
+              </div>
             </div>
           </CardBody>
         </Card>
 
         <Card>
           <CardHeader>
-            <CardSubtitle>Claim Elements</CardSubtitle>
-            <CardTitle>Worksheet</CardTitle>
+            <CardSubtitle>Jury Instructions</CardSubtitle>
+            <CardTitle>Assault & Battery Elements (Checklist)</CardTitle>
           </CardHeader>
           <CardBody>
-            <div className="text-sm text-slate-300">
-              Use the Michigan Model Civil Jury Instructions (Chapter 115) and Michigan case law to enter precise elements
-              for assault/battery. This app does not provide legal advice.
+            <div className="text-sm text-slate-300 mb-4">
+              Use this checklist to link evidence to each element. This is informational, not legal advice.
+            </div>
+            <div className="space-y-3">
+              {MCI_115.map((item) => (
+                <div key={item.id} className="rounded-md border border-white/5 bg-white/5 p-3">
+                  <div className="flex items-start gap-3">
+                    <input
+                      type="checkbox"
+                      className="mt-1 h-4 w-4 accent-amber-400"
+                      checked={Boolean(checklist[item.id])}
+                      onChange={() => toggle(item.id)}
+                    />
+                    <div>
+                      <div className="text-sm text-slate-100 font-semibold">{item.title}</div>
+                      <ul className="mt-2 space-y-1 text-sm text-slate-300">
+                        {item.text.map((line) => (
+                          <li key={line}>{line}</li>
+                        ))}
+                      </ul>
+                      <div className="mt-2 text-xs text-slate-500">Source: {item.sourcePath}</div>
+                    </div>
+                  </div>
+                </div>
+              ))}
             </div>
           </CardBody>
         </Card>

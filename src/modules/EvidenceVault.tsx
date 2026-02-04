@@ -24,6 +24,7 @@ function defaultMeta(): EvidenceMeta {
 
 export default function EvidenceVault() {
   const [meta, setMeta] = useState<MetaState>(() => readJson(META_KEY, {}));
+  const [trialMode, setTrialMode] = useState(false);
   const [uploadStatus, setUploadStatus] = useState<string>("");
   const settings = readJson<CaseSettings>(SETTINGS_KEY, { apiBase: "", workspaceId: "", authToken: "" });
 
@@ -51,6 +52,8 @@ export default function EvidenceVault() {
       setUploadStatus(err?.message || "Upload failed.");
     }
   }
+
+  const trialPicks = EVIDENCE_INDEX.filter((item) => /police report|victim statement|video/i.test(item.name)).slice(0, 3);
 
   function exportPacket() {
     const payload = { index: EVIDENCE_INDEX, meta };
@@ -83,6 +86,37 @@ export default function EvidenceVault() {
               />
               <span className="text-xs text-slate-500">{uploadStatus}</span>
             </div>
+          </CardBody>
+        </Card>
+
+        <Card>
+          <CardHeader>
+            <CardSubtitle>Trial Mode</CardSubtitle>
+            <CardTitle>One-Tap Exhibits</CardTitle>
+          </CardHeader>
+          <CardBody>
+            <label className="flex items-center gap-2 text-sm text-slate-300">
+              <input
+                type="checkbox"
+                className="h-4 w-4 accent-amber-400"
+                checked={trialMode}
+                onChange={(e) => setTrialMode(e.target.checked)}
+              />
+              Enable Trial Mode view
+            </label>
+            {trialMode ? (
+              <div className="mt-3 grid gap-3">
+                {trialPicks.map((item) => (
+                  <button
+                    key={item.path}
+                    type="button"
+                    className="w-full rounded-lg bg-amber-500 px-4 py-3 text-left text-sm font-semibold text-slate-900"
+                  >
+                    {item.name}
+                  </button>
+                ))}
+              </div>
+            ) : null}
           </CardBody>
         </Card>
 

@@ -14,7 +14,16 @@ import SummaryDispositionGuide from "./modules/SummaryDispositionGuide";
 import FilingChecklist from "./modules/FilingChecklist";
 import CaseSettingsView from "./modules/CaseSettings";
 import DeadlinesView from "./modules/Deadlines";
-import AuditLogView from "./modules/AuditLog";\nimport CivilAssaultHub from "./modules/CivilAssaultHub";
+import AuditLogView from "./modules/AuditLog";
+import CivilAssaultHub from "./modules/CivilAssaultHub";
+import VideoToTextSync from "./modules/VideoToTextSync";
+import ObjectionBattleCards from "./modules/ObjectionBattleCards";
+import DepositionSimulator from "./modules/DepositionSimulator";
+import SettlementDemandGenerator from "./modules/SettlementDemandGenerator";
+import JurorPredictor from "./modules/JurorPredictor";
+import CivilLeverage from "./modules/CivilLeverage";
+import WitnessIntelligence from "./modules/WitnessIntelligence";
+import ForensicFinance from "./modules/ForensicFinance";
 
 function App() {
   return (
@@ -33,7 +42,16 @@ function App() {
           <Route path="filing" element={<FilingChecklist />} />
           <Route path="settings" element={<CaseSettingsView />} />
           <Route path="deadlines" element={<DeadlinesView />} />
-          <Route path="audit" element={<AuditLogView />} />\n          <Route path="assault-hub" element={<CivilAssaultHub />} />
+          <Route path="audit" element={<AuditLogView />} />
+          <Route path="assault-hub" element={<CivilAssaultHub />} />
+          <Route path="video-sync" element={<VideoToTextSync />} />
+          <Route path="objections" element={<ObjectionBattleCards />} />
+          <Route path="deposition" element={<DepositionSimulator />} />
+          <Route path="demand" element={<SettlementDemandGenerator />} />
+          <Route path="voir-dire" element={<JurorPredictor />} />
+          <Route path="leverage" element={<CivilLeverage />} />
+          <Route path="witness" element={<WitnessIntelligence />} />
+          <Route path="damages" element={<ForensicFinance />} />
         </Route>
       </Routes>
     </Router>
@@ -41,4 +59,3 @@ function App() {
 }
 
 export default App;
-
