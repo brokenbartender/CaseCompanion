@@ -52,6 +52,21 @@ export default function Dashboard() {
       subtitle="Your civil procedure hub with rule-linked guidance, tasks, and evidence."
     >
       <div className="grid grid-cols-1 gap-6 lg:grid-cols-3">
+        {(!settings.caseName || !settings.court) ? (
+          <Card className="lg:col-span-3">
+            <CardHeader>
+              <CardSubtitle>Setup</CardSubtitle>
+              <CardTitle>Complete setup</CardTitle>
+            </CardHeader>
+            <CardBody>
+              <div className="text-sm text-slate-300">
+                Add your case info in Case Settings to personalize the dashboard.
+              </div>
+              <a href="/settings" className="mt-3 inline-flex text-sm text-amber-300">Go to Case Settings</a>
+            </CardBody>
+          </Card>
+        ) : null}
+
         <Card className="lg:col-span-2">
           <CardHeader>
             <CardSubtitle>Current Stage</CardSubtitle>
