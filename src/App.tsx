@@ -24,6 +24,8 @@ import JurorPredictor from "./modules/JurorPredictor";
 import CivilLeverage from "./modules/CivilLeverage";
 import WitnessIntelligence from "./modules/WitnessIntelligence";
 import ForensicFinance from "./modules/ForensicFinance";
+import TrialMode from "./modules/TrialMode";
+import SelfDefenseDestroyer from "./modules/SelfDefenseDestroyer";
 
 function App() {
   return (
@@ -44,6 +46,8 @@ function App() {
           <Route path="deadlines" element={<DeadlinesView />} />
           <Route path="audit" element={<AuditLogView />} />
           <Route path="assault-hub" element={<CivilAssaultHub />} />
+          <Route path="trial-mode" element={<TrialMode />} />
+          <Route path="self-defense" element={<SelfDefenseDestroyer />} />
           <Route path="video-sync" element={<VideoToTextSync />} />
           <Route path="objections" element={<ObjectionBattleCards />} />
           <Route path="deposition" element={<DepositionSimulator />} />

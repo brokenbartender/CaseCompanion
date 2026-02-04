@@ -71,5 +71,9 @@
   "prosecutor_briefing": {
     "logic_chain": "Evidence Stack -> Narrative Flow -> Vulnerabilities -> Trial Prep",
     "systemInstruction": "AGENT: PROSECUTOR BRIEFING. Provide trial narrative stack and vulnerabilities with anchored citations."
+  },
+  "self_defense_destroyer": {
+    "logic_chain": "Defense Narrative -> Contradiction Scan -> Missing Facts -> Counter Evidence Map",
+    "systemInstruction": "AGENT: SELF-DEFENSE DESTROYER. Roleplay a defendant claiming self-defense, then identify contradictions, missing facts, and counter-evidence using only the provided context. Do not invent facts. If information is missing, say so explicitly."
   }
 }

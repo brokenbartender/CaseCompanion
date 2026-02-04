@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Page from "../components/ui/Page";
 import { Card, CardBody, CardHeader, CardSubtitle, CardTitle } from "../components/ui/Card";
 import { EVIDENCE_CATEGORIES, EVIDENCE_INDEX } from "../data/evidenceIndex";
+import { MICHIGAN_OBJECTION_CARDS } from "../data/michiganEvidenceObjections";
 import { readJson, writeJson } from "../utils/localStore";
 import { uploadExhibit } from "../services/apiClient";
 
@@ -66,6 +67,28 @@ export default function EvidenceVault() {
     URL.revokeObjectURL(url);
   }
 
+  function exportExhibitMap() {
+    const lines = [
+      "Case Companion Exhibit Map",
+      "",
+      ...EVIDENCE_CATEGORIES.flatMap((category) => {
+        const items = EVIDENCE_INDEX.filter((item) => item.category === category);
+        return [
+          `## ${category}`,
+          ...items.map((item) => `- ${item.name} (${item.path})`),
+          ""
+        ];
+      })
+    ];
+    const blob = new Blob([lines.join("\n")], { type: "text/plain" });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = "case_companion_exhibit_map.txt";
+    a.click();
+    URL.revokeObjectURL(url);
+  }
+
   return (
     <Page
       title="Evidence Vault"
@@ -105,16 +128,30 @@ export default function EvidenceVault() {
               Enable Trial Mode view
             </label>
             {trialMode ? (
-              <div className="mt-3 grid gap-3">
-                {trialPicks.map((item) => (
-                  <button
-                    key={item.path}
-                    type="button"
-                    className="w-full rounded-lg bg-amber-500 px-4 py-3 text-left text-sm font-semibold text-slate-900"
-                  >
-                    {item.name}
-                  </button>
-                ))}
+              <div className="mt-3 grid gap-4">
+                <div className="grid gap-3">
+                  {trialPicks.map((item) => (
+                    <button
+                      key={item.path}
+                      type="button"
+                      className="w-full rounded-lg bg-amber-500 px-4 py-3 text-left text-sm font-semibold text-slate-900"
+                    >
+                      {item.name}
+                    </button>
+                  ))}
+                </div>
+                <div className="rounded-md border border-white/10 bg-white/5 p-3">
+                  <div className="text-xs text-slate-400 mb-2">Objection Battle Cards</div>
+                  <div className="space-y-2 text-xs text-slate-300">
+                    {MICHIGAN_OBJECTION_CARDS.map((card) => (
+                      <div key={card.id} className="rounded-md border border-white/5 bg-white/5 p-2">
+                        <div className="text-amber-200">{card.rule}</div>
+                        <div className="text-slate-100">{card.title}</div>
+                        <div className="text-slate-400">{card.whenToUse[0]}</div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
               </div>
             ) : null}
           </CardBody>
@@ -126,13 +163,22 @@ export default function EvidenceVault() {
             <CardTitle>Evidence Packet</CardTitle>
           </CardHeader>
           <CardBody>
-            <button
-              type="button"
-              onClick={exportPacket}
-              className="rounded-md bg-amber-500 px-3 py-2 text-sm font-semibold text-slate-900"
-            >
-              Export Evidence Packet
-            </button>
+            <div className="flex flex-wrap gap-3">
+              <button
+                type="button"
+                onClick={exportPacket}
+                className="rounded-md bg-amber-500 px-3 py-2 text-sm font-semibold text-slate-900"
+              >
+                Export Evidence Packet
+              </button>
+              <button
+                type="button"
+                onClick={exportExhibitMap}
+                className="rounded-md border border-amber-400/60 px-3 py-2 text-sm font-semibold text-amber-200"
+              >
+                Export Exhibit Map
+              </button>
+            </div>
             <div className="mt-2 text-xs text-slate-500">Exports local evidence index + tags/status.</div>
           </CardBody>
         </Card>

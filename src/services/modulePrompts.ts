@@ -48,5 +48,10 @@ export const MODULE_PROMPTS = {
     key: "prosecutor_briefing",
     label: "Prosecutor Briefing",
     defaultPrompt: "Produce trial narrative stack and vulnerability checklist."
+  },
+  self_defense_destroyer: {
+    key: "self_defense_destroyer",
+    label: "Self-Defense Destroyer",
+    defaultPrompt: "Roleplay a self-defense claim and enumerate contradictions, missing facts, and counter-evidence."
   }
 };
