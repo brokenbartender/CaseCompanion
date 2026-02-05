@@ -27,12 +27,19 @@ type ExhibitStatus = {
   finishedAt?: string;
   error?: string;
   artifacts?: Artifact[];
+  pageCount?: number;
+  renderedPages?: number;
+};
+
+type CombinedStatus = {
+  video?: ExhibitStatus;
+  pdf?: ExhibitStatus;
 };
 
 export default function ExhibitDetail() {
   const settings = readJson<CaseSettings>(SETTINGS_KEY, { apiBase: "", workspaceId: "", authToken: "" });
   const [exhibitId, setExhibitId] = useState("");
-  const [status, setStatus] = useState<ExhibitStatus | null>(null);
+  const [status, setStatus] = useState<CombinedStatus | null>(null);
   const [artifacts, setArtifacts] = useState<Artifact[]>([]);
   const [metadata, setMetadata] = useState<Record<string, any>>({});
   const [error, setError] = useState<string>("");
@@ -40,8 +47,10 @@ export default function ExhibitDetail() {
   const apiBase = settings.apiBase || "http://localhost:8787";
 
   const frameArtifacts = useMemo(() => artifacts.filter((a) => a.type === "frame"), [artifacts]);
+  const pdfPageArtifacts = useMemo(() => artifacts.filter((a) => a.type === "pdf_page"), [artifacts]);
   const audioArtifact = useMemo(() => artifacts.find((a) => a.type === "audio"), [artifacts]);
   const manifestArtifact = useMemo(() => artifacts.find((a) => a.type === "manifest"), [artifacts]);
+  const textArtifact = useMemo(() => artifacts.find((a) => a.type === "text"), [artifacts]);
 
   async function fetchJson(url: string) {
     const res = await fetch(url);
@@ -49,13 +58,24 @@ export default function ExhibitDetail() {
     return res.json();
   }
 
+  async function fetchText(url: string) {
+    const res = await fetch(url);
+    if (!res.ok) throw new Error(await res.text());
+    return res.text();
+  }
+
   async function loadMetadata(items: Artifact[]) {
     const meta: Record<string, any> = {};
-    const targets = items.filter((a) => a.type === "metadata" && a.path.endsWith(".json"));
+    const targets = items.filter((a) => a.type === "metadata");
     for (const item of targets) {
       try {
-        const data = await fetchJson(`${apiBase}${item.downloadUrl}`);
-        meta[item.path] = data;
+        if (item.path.endsWith(".json")) {
+          const data = await fetchJson(`${apiBase}${item.downloadUrl}`);
+          meta[item.path] = data;
+        } else {
+          const text = await fetchText(`${apiBase}${item.downloadUrl}`);
+          meta[item.path] = text;
+        }
       } catch {
         meta[item.path] = { error: "Failed to load metadata." };
       }
@@ -117,11 +137,23 @@ export default function ExhibitDetail() {
           </CardHeader>
           <CardBody>
             {status ? (
-              <div className="text-sm text-slate-300 space-y-1">
-                <div>Status: {status.status}</div>
-                {status.startedAt ? <div>Started: {status.startedAt}</div> : null}
-                {status.finishedAt ? <div>Finished: {status.finishedAt}</div> : null}
-                {status.error ? <div className="text-red-300">Error: {status.error}</div> : null}
+              <div className="space-y-4 text-sm text-slate-300">
+                <div>
+                  <div className="text-amber-200">Video Forensics</div>
+                  <div>Status: {status.video?.status ?? "not_applicable"}</div>
+                  {status.video?.startedAt ? <div>Started: {status.video.startedAt}</div> : null}
+                  {status.video?.finishedAt ? <div>Finished: {status.video.finishedAt}</div> : null}
+                  {status.video?.error ? <div className="text-red-300">Error: {status.video.error}</div> : null}
+                </div>
+                <div>
+                  <div className="text-amber-200">PDF Forensics</div>
+                  <div>Status: {status.pdf?.status ?? "not_applicable"}</div>
+                  {status.pdf?.startedAt ? <div>Started: {status.pdf.startedAt}</div> : null}
+                  {status.pdf?.finishedAt ? <div>Finished: {status.pdf.finishedAt}</div> : null}
+                  {status.pdf?.pageCount ? <div>Pages: {status.pdf.pageCount}</div> : null}
+                  {status.pdf?.renderedPages ? <div>Rendered: {status.pdf.renderedPages}</div> : null}
+                  {status.pdf?.error ? <div className="text-red-300">Error: {status.pdf.error}</div> : null}
+                </div>
               </div>
             ) : (
               <div className="text-sm text-slate-400">No status loaded.</div>
@@ -153,7 +185,7 @@ export default function ExhibitDetail() {
         <Card>
           <CardHeader>
             <CardSubtitle>Metadata</CardSubtitle>
-            <CardTitle>ffprobe / mediainfo / exiftool</CardTitle>
+            <CardTitle>Forensics Metadata</CardTitle>
           </CardHeader>
           <CardBody>
             {Object.keys(metadata).length === 0 ? (
@@ -164,7 +196,7 @@ export default function ExhibitDetail() {
                   <details key={key} className="rounded-md border border-white/5 bg-white/5 p-3">
                     <summary className="cursor-pointer text-sm text-amber-200">{key}</summary>
                     <pre className="mt-2 whitespace-pre-wrap text-xs text-slate-200">
-                      {JSON.stringify(value, null, 2)}
+                      {typeof value === "string" ? value : JSON.stringify(value, null, 2)}
                     </pre>
                   </details>
                 ))}
@@ -194,12 +226,39 @@ export default function ExhibitDetail() {
               <CardTitle>Panel</CardTitle>
             </CardHeader>
             <CardBody>
-              <div className="text-sm text-slate-400">
-                Transcript generation not enabled yet. Upload a transcript file to attach it as an artifact.
-              </div>
+              {textArtifact ? (
+                <a className="text-amber-300" href={`${apiBase}${textArtifact.downloadUrl}`} target="_blank" rel="noreferrer">
+                  Download Extracted Text
+                </a>
+              ) : (
+                <div className="text-sm text-slate-400">
+                  Transcript or extracted text not available yet.
+                </div>
+              )}
             </CardBody>
           </Card>
         </div>
+
+        <Card>
+          <CardHeader>
+            <CardSubtitle>PDF Pages</CardSubtitle>
+            <CardTitle>Rendered Pages</CardTitle>
+          </CardHeader>
+          <CardBody>
+            {pdfPageArtifacts.length === 0 ? (
+              <div className="text-sm text-slate-400">No PDF pages available.</div>
+            ) : (
+              <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+                {pdfPageArtifacts.slice(0, 24).map((page) => (
+                  <div key={page.id} className="rounded-md border border-white/5 bg-white/5 p-2">
+                    <img src={`${apiBase}${page.downloadUrl}`} alt={page.id} className="w-full rounded" />
+                    <div className="mt-1 text-xs text-slate-400">{page.id}</div>
+                  </div>
+                ))}
+              </div>
+            )}
+          </CardBody>
+        </Card>
 
         <Card>
           <CardHeader>
