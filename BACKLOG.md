@@ -118,6 +118,8 @@ This backlog maps the Michigan civil case lifecycle (benchbook-driven) and legal
 - Steps: who can serve, personal service requirements, timer + warnings
 44. **E1** Proof of service upload flow
 - Steps: MC 01 proof section, MiFILE filing type selector
+45. **E2/E8** OpenContracts feature audit (inspiration, not reuse)
+- Steps: compare doc ingestion, annotation, schema extraction, AI search; note AGPL license constraints
 
 ## Roadmap Tracker
 
