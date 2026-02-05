@@ -3,6 +3,7 @@ import Page from "../components/ui/Page";
 import { Card, CardBody, CardHeader, CardSubtitle, CardTitle } from "../components/ui/Card";
 import Badge from "../components/ui/Badge";
 import { PROCEDURE_STEPS } from "../data/procedureSteps";
+import { BENCHBOOK_EXCERPTS } from "../data/benchbookExcerpts";
 
 export default function ProceduralRoadmap() {
   return (
@@ -35,7 +36,14 @@ export default function ProceduralRoadmap() {
                   <div className="text-xs text-slate-400 mb-2">Benchbook sections</div>
                   <ul className="space-y-1 text-sm text-slate-300">
                     {stage.benchbookSections.map((section) => (
-                      <li key={section}>{section}</li>
+                      <li key={section}>
+                        <div className="text-sm text-slate-100">{section}</div>
+                        {BENCHBOOK_EXCERPTS[section] ? (
+                          <div className="text-xs text-slate-400 mt-1">
+                            "{BENCHBOOK_EXCERPTS[section]}"
+                          </div>
+                        ) : null}
+                      </li>
                     ))}
                   </ul>
                 </div>
