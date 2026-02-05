@@ -2,11 +2,34 @@ import React from "react";
 import Page from "../components/ui/Page";
 import { Card, CardBody, CardHeader, CardSubtitle, CardTitle } from "../components/ui/Card";
 import { SERVICE_OF_PROCESS_GUIDE } from "../data/serviceOfProcess";
+import { useState } from "react";
 
 export default function ServiceOfProcessWizard() {
+  const [useEService, setUseEService] = useState(false);
+
   return (
     <Page title="Service of Process" subtitle="Rule-aligned guidance and checklist.">
       <div className="grid gap-6">
+        <Card>
+          <CardHeader>
+            <CardSubtitle>Service Mode</CardSubtitle>
+            <CardTitle>E‑Service vs Manual</CardTitle>
+          </CardHeader>
+          <CardBody>
+            <label className="flex items-center gap-2 text-sm text-slate-300">
+              <input
+                type="checkbox"
+                className="h-4 w-4 accent-amber-400"
+                checked={useEService}
+                onChange={(e) => setUseEService(e.target.checked)}
+              />
+              I used e‑service through MiFILE
+            </label>
+            <div className="mt-2 text-xs text-slate-400">
+              E‑service only works if the other party is registered in MiFILE. Otherwise you must serve manually.
+            </div>
+          </CardBody>
+        </Card>
         {SERVICE_OF_PROCESS_GUIDE.map((step) => (
           <Card key={step.title}>
             <CardHeader>
@@ -19,6 +42,19 @@ export default function ServiceOfProcessWizard() {
             </CardBody>
           </Card>
         ))}
+        {useEService ? (
+          <Card>
+            <CardHeader>
+              <CardSubtitle>E‑Service</CardSubtitle>
+              <CardTitle>Proof Notes</CardTitle>
+            </CardHeader>
+            <CardBody>
+              <div className="text-sm text-slate-300">
+                MiFILE can generate proof of service when e‑service is used. Save the confirmation.
+              </div>
+            </CardBody>
+          </Card>
+        ) : null}
       </div>
     </Page>
   );

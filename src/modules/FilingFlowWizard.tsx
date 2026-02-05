@@ -23,6 +23,8 @@ export default function FilingFlowWizard() {
   });
   const [court, setCourt] = useState(settings.court || "");
   const [claimAmount, setClaimAmount] = useState("");
+  const [caseType, setCaseType] = useState("");
+  const [rejectionReason, setRejectionReason] = useState("");
 
   function saveCourt(next: string) {
     setCourt(next);
@@ -66,6 +68,23 @@ export default function FilingFlowWizard() {
                 />
                 <span>6th Circuit Court (claims above $25,000)</span>
               </label>
+              <div className="text-xs text-slate-400 mt-2">Case type (for e‑file eligibility)</div>
+              <select
+                className="w-full rounded-md border border-white/10 bg-white/5 px-3 py-2 text-sm text-slate-100"
+                value={caseType}
+                onChange={(e) => setCaseType(e.target.value)}
+              >
+                <option value="">Select case type</option>
+                <option value="civil-tort">Civil tort / personal injury</option>
+                <option value="contract">Contract</option>
+                <option value="small-claims">Small claims</option>
+                <option value="other">Other</option>
+              </select>
+              {caseType === "small-claims" ? (
+                <div className="text-xs text-amber-200">
+                  Some case types are not eligible for e‑filing. Confirm with the clerk before filing.
+                </div>
+              ) : null}
               <div className="text-xs text-slate-400">
                 This app does not provide legal advice. Confirm limits with court rules.
               </div>
@@ -92,6 +111,40 @@ export default function FilingFlowWizard() {
             >
               Open Filing Checklist
             </a>
+          </CardBody>
+        </Card>
+
+        <Card className="lg:col-span-2">
+          <CardHeader>
+            <CardSubtitle>Rejected Filing</CardSubtitle>
+            <CardTitle>Fix Checklist</CardTitle>
+          </CardHeader>
+          <CardBody>
+            <div className="space-y-3">
+              <select
+                className="w-full rounded-md border border-white/10 bg-white/5 px-3 py-2 text-sm text-slate-100"
+                value={rejectionReason}
+                onChange={(e) => setRejectionReason(e.target.value)}
+              >
+                <option value="">Select rejection reason</option>
+                <option value="bundled">Bundled PDFs</option>
+                <option value="wrong-code">Wrong filing code</option>
+                <option value="missing-proof">Missing proof of service</option>
+                <option value="wrong-court">Wrong court selected</option>
+              </select>
+              {rejectionReason ? (
+                <div className="text-sm text-slate-300">
+                  Fix steps:
+                  <ul className="mt-2 space-y-1 text-xs text-slate-400">
+                    <li>Correct the issue and re‑export each PDF separately.</li>
+                    <li>Re‑submit in MiFILE with the correct labels.</li>
+                    <li>Confirm the court and filing code before submitting.</li>
+                  </ul>
+                </div>
+              ) : (
+                <div className="text-sm text-slate-400">Choose a reason to see fixes.</div>
+              )}
+            </div>
           </CardBody>
         </Card>
       </div>
