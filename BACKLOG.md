@@ -136,6 +136,8 @@ This backlog maps the Michigan civil case lifecycle (benchbook-driven) and legal
 - Steps: witness list, exhibit list, opening/closing prep, printable trial packet
 53. **E2/E5** Premises liability defense checklist (Michigan)
 - Steps: open-and-obvious, notice, duty analysis; anticipate defense arguments
+54. **E7** Victim immigration support resource (U Visa info)
+- Steps: eligibility checklist, resource links, safety disclaimer, non-legal advice prompts
 
 ## Roadmap Tracker
 
