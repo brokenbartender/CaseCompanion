@@ -1,0 +1,2528 @@
+Design(s) for Law
+
+Rossana Ducato, Alain Strowel,
+and Enguerrand Marique (eds)
+Design(s) for Law
+
+   Rossana Ducato, Alain Strowel,
+   and Enguerrand Marique (eds)
+
+                    Ledizioni
+Funded by the European Union. Views and opinions expressed are however
+those of the author(s) only and do not necessarily reflect those of the European
+Union or the European Education and Culture Executive Agency (EACEA).
+Neither the European Union nor EACEA can be held responsible for them.
+
+Unless otherwise stated, this work is released under a Attribution 4.0 International (CC
+BY 4.0 Deed), https://creativecommons.org/licenses/by/4.0/.
+
+Rossana Ducato, Alain Strowel, and Enguerrand Marique (eds), Design(s) for Law
+First edition: March 2024
+ISBN print: 9791256000845
+ISBN ePub: 9791256000852
+ISBN PDF Open Access: 9791256000869
+Catalogue and reprints information: www.ledipublishing.com, www.ledizioni.it
+TABLE OF CONTENTS
+
+List of Contributors                                             13
+
+Preface                                                          21
+
+The Editors
+
+                       Speculative Design
+
+Chapter 1. New Frontiers of Legal Knowledge: How Design
+
+Provotypes Can Contribute to Legal Change                        27
+
+Barbara Pasa and Gianni Sinni
+
+1. Legal Change: Setting the Scene and its Narratives            27
+
+2. Legal Change: The Good Practice of Interdisciplinary Research
+
+in Comparative Law                                               34
+
+3. Choice is Good, but Community Engagement is Better: Citizenship 37
+
+4. The Contestability of Decision-Making Processes and the
+
+Micro-Dimension of Persons as Agents of Legal Change             41
+
+5. The Transformative Power of Law and Design                    46
+
+6. Speculative Design for Legal Change in Public Services        48
+
+7. Storytelling and Design Fiction as Tools for Legal Change     52
+
+8. Working with Futures: Some Examples                           57
+
+8.1. Delete-me                                                   59
+
+8.2. OP!                                                         60
+
+8.3. Independent Theater                                         61
+
+8.4. Smart jail                                                  62
+
+8.5. Oright                                                      63
+
+8.6. Harmonia                                                    64
+
+9. Conclusions                                                   65
+
+Bibliography                                                     66
+
+Chapter 2. An Exercise in Speculative Legal Design               75
+
+Emily MacLoud
+
+1. Introduction                                                  75
+2. Solving Problems before They Become Problems                       77
+
+2.1. What Is Speculative Design?                                      77
+
+2.2. Speculative Design Broadens The Scope of Problems that Design Can Solve  78
+
+2.3. Speculative Design Provides a Way to Collectively Imagine        79
+
+2.4. Speculative Design Forges New Perspectives through Discussion and Debate 80
+
+2.5. Speculative Design Fosters Alignment towards Preferable Futures  81
+
+2.6. Speculative Design Catalyses Action                              82
+
+2.7. But Why Employ Speculative Design in Law?                        82
+
+2.8. Applying Speculative Design                                      85
+
+2.9. The Techniques and Tools of The Trade                            89
+
+2.10. New Frontiers                                                   93
+
+3. Experimenting with Speculative Design                              95
+
+3.1. Background                                                       95
+
+3.2. Preparation: What We Did                                         96
+
+3.3. Delivery: What Happened                                          99
+
+3.4. Discussion: What We Learnt About Speculative Design              100
+
+4. Let’s Speculate!                                                   104
+
+4.1. The Designer                                                     104
+
+4.2. The Problem                                                      106
+
+4.3. The Organisation                                                 107
+
+5. Conclusion                                                         108
+
+Bibliography                                                          109
+
+                    Narrative and storytelling
+
+Chapter 3. The Power of Stories to Unite, Inspire, and Collectively
+
+Imagine New Futures                                                   115
+
+Emily MacLoud
+
+1. Introduction                                                       115
+
+2. Systems Thinking in the Law                                        117
+
+2.1. Enhancing Legal Design with Systems Thinking                     117
+
+2.2. Systemic Sensibility: Introducing Systems Thinking Into a Designers’ Toolkit 118
+
+2.3. Systems Literacy: Recognising Different Types of Systems         119
+
+3. Storytelling in the Law                                            123
+3.1. How Legal Designers Use Stories                          123
+
+3.2. Using Stories for Systems Change                         125
+
+3.3. The Interplay Between Stories and Narratives             127
+
+4. Application to Real Life                                   130
+
+4.1. Learning from Other Sectors                              131
+
+4.2. How Might We Use Stories for Systems Change in the Law?  132
+
+4.3. What’s Next?                                             134
+
+5. Conclusion                                                 135
+
+Bibliography                                                  137
+
+Chapter 4. Solidarity by Design: Generating Counternarratives
+
+about People Power                                            141
+
+Hallie Jay Pope
+
+1. Introduction                                               141
+
+2. Why Ordinary-people Power Matters                          143
+
+2.1. Ordinary-people Power in Action                          145
+
+2.2. Believing in Ordinary-people Power                       148
+
+3. Why We Need Counternarratives about Ordinary-people Power 150
+
+4. Can We Unplay Elite Power?                                 154
+
+4.1. Learning and Unlearning                                  155
+
+4.2. Subversion of the Status Quo                             156
+
+4.3. Safety Space                                             156
+
+4.4. Player Agency                                            157
+
+4.5. Ideas for Moving Forward                                 158
+
+5. Conclusion                                                 161
+
+Bibliography                                                  162
+
+The ‘4Ps’: Proactive, Possibility-Driven, Participatory,
+     and Posthuman approaches for Legal Design
+
+Chapter 5. Comic Contracts 2.0 – Contracts that Have (and Give) a Voice  167
+Anne Ketola, Robert de Rooy and Helena Haapio
+
+1. Introduction                                               167
+
+2. Access to Justice and Comic Contracts                      169
+3. Composite Comic Contracts                                             171
+
+3.1. The Design of a Composite Comic Contract Template                   172
+
+3.2. The Presentation and Execution of a Composite Comic Contract        173
+
+3.3. The Business Rationale for the Composite Comic Contract             174
+
+4. Composite Comic Contracts from a Cognitive Accessibility Perspective  175
+
+4.1. Comic Illustrations from a Cognitive Perspective                    176
+
+4.2. Word–Image Combinations from a Cognitive Perspective                178
+
+4.3. Audio-Visual Contracts Format From a Cognitive Perspective          183
+
+5. Composite Comic Contracts as an Expression of Proactive Contracting  186
+
+6. Composite Comic Contracts from a Legal Perspective                    189
+
+6.1. Are Composite Comic Contracts Legally Binding?                      189
+
+6.2. Contracts Come in Many Shapes and Forms                             190
+
+6.3. Which Part of the Composite Comic Contract is ‘Legally Binding’?    191
+
+6.4. How Would Lawyers Interpret a Composite Comic Contract?             192
+
+7. Conclusion                                                            196
+
+Bibliography                                                             197
+
+Appendix 1                                                               202
+
+Chapter 6. Possibility-Driven Design and Responsible Use of AI for
+
+Sustainability                                                           205
+
+Marika Salo-Lahti and Helena Haapio
+
+1. Proactive Legal Thinking and Doing for Legal Design                   205
+
+1.1. Combining Possibility-Driven Design with a Proactive Approach to Law  205
+
+1.2. Towards Action: Merging Possibility-Driven Legal Design with AI     208
+
+1.3. Possibility-Driven Design for Better Contracts, Better Business and
+
+a Better Society                                                         210
+
+2. Sustainability and the Need for Tools to Help Navigate the Legal
+
+Landscape                                                                213
+
+2.1. Managing the Flood of New Legislation on Sustainability             213
+
+2.2. The Link between Better Business and Better Society                 216
+
+2.3. Sustainability Reporting and Investor Disclosures to Promote
+
+Sustainable Investment                                                   217
+
+2.4. Sustainable and Responsible Contracting                             220
+
+3. Strategies and Tools to Promote Sustainability                        222
+3.1. Possibility-Driven Design Solutions                           222
+
+3.2. Design Patterns                                               224
+
+3.3. Templates and Models                                          227
+
+3.4. Responsible Use of AI tools for Sustainability                229
+
+4. Conclusions                                                     242
+
+Bibliography                                                       243
+
+Chapter 7. Exploring the Dimensions of Participation in Legal Design 253
+Nina Toivonen and Santiago de Francisco Vela
+
+1. Introduction                                                    253
+
+2. The Paradox of Participation in Legal Design                    257
+
+2.1. Why Law Needs Participation                                   257
+
+2.2. …and Why It is a Particular Challenge for Legal Design        262
+
+3. From Human-Centric to Participatory Legal Design                266
+
+3.1. Five Critical Questions to Frame the Design Challenge         270
+
+3.2. The Matrix of Design to Understand your Approach to Users     273
+
+3.3. Ladder of Participation to Choose your Methods                276
+
+4. Discussion and Implications                                     279
+
+Bibliography                                                       282
+
+Chapter 8. Systemic Design of Justice: Transdisciplinary Approach
+
+to Access to Justice                                               287
+
+Santiago de Francisco Vela and Laura Guzmán-Abello
+
+1. Introduction                                                    287
+
+2. Transdisciplinary Dimension to Justice                          289
+
+2.1. Design + Law = Legal Design                                   291
+
+2.2. Design Thinking + Systems Thinking = Systemic Design          292
+
+2.3. Engineering + Law = Legal Systems                             293
+
+3. Design + Law + Engineering = Systemic Design of Justice         294
+
+4. Tools for Transdisciplinary Solutions                           297
+
+4.1. Tools for Understanding the Challenge                         297
+
+4.2. Tools for Designing Solutions                                 298
+
+4.3. Tools for Challenge Management                                300
+
+5. Case Study: How to Increase the Selection of Legal Cases at the
+ProBono Foundation?                                                  301
+
+5.1. Challenge                                                       301
+
+5.2. Understanding the Challenge                                     302
+
+5.3. Designing Solutions                                             304
+
+5.4. Implementation Results                                          304
+
+6. Discussion and Conclusions                                        305
+
+Bibliography                                                         308
+
+Chapter 9. Designing for Posthuman Legalities: Legal Design(ing)
+
+and the Ontological Turn                                             311
+
+Joaquin Santuber and Pablo Hermansen
+
+1. Introduction                                                      311
+
+2. Related Work                                                      316
+
+3. Posthuman Legalities: the Rights of Nature                        320
+
+4. Posthuman Legalities: the Rights of Machines                      323
+
+5. Ontological Clashes in Public Space: The Case of Climate Activism
+
+and the Case Techno-Judicial Entanglements                           327
+
+5.1. Climate Activism in Public Space                                327
+
+5.2. Technologies in Public Spaces                                   333
+
+5.3. Zoomification of the Judicial Scene                             334
+
+6. Methodological Propositions for Designing for Posthuman Legalities 337
+
+6.1. Prototyping as a Way of Disclosing Worlds                       337
+
+6.2. Posthuman Legalities as Trans-Ontological Liminality            339
+
+6.3. From Explanations to Describing, Performing, and Becoming       341
+
+6.4. Posthuman Solicitations, Affectivity, and Attunement            343
+
+6.5. Posthuman Co-Incidences, Resonances, and Frictions              345
+
+7. Discussion                                                        346
+
+8. Closing Remarks                                                   348
+
+Acknowledgements                                                     349
+
+Bibliography                                                         349
+Legal Design interventions against misleading design
+                 and misinformation online
+
+Chapter 10. Designing Public Services in the Age of Big Tech. Beyond
+Government-to-Citizen Service Design to Infrastructure Design 361
+Margaret Hagan
+
+1. A Different Kind of Misinformation Problem: Public Services           362
+
+2. A Design Effort to Improve Public Services Online                     366
+
+3. Taking the Traditional Public Service Design Approach,
+
+and Hitting a Wall                                                       368
+
+4. Tech Companies and Public Service Design                              372
+
+5. Design Research into Tech Platform Policymaking                       373
+
+6. Strategies to Engage Big Tech in Public Service Challenges            375
+
+7. Strategies to Tackle Misinformation in Voting & Elections Services 376
+
+8. Strategies to Tackle Misinformation in Medical Services               379
+
+9. Researching the Tech Platforms’ Policies on Authority & Importance 383
+
+10. Public Service Design Focus on Infrastructure                        386
+
+11. Directions for Improving the Impact of Public Service Design         390
+
+Bibliography                                                             391
+
+Chapter 11. A Critical Assessment of the Notion of Legal Design through
+
+the Case of “Les Surligneurs”, a Legal-Checking Media Outlet             397
+
+Vincent Couronne, Joachim Savin, Marie-Sophie de Clippele and
+
+Apolline Le Gall
+
+1. Introduction                                                          397
+
+2. Les Surligneurs: a Legal-Checking Media Outlet Designed
+
+for Public Debate                                                        398
+
+2.1. Genesis, Missions, and Design of Les Surligneurs                    398
+
+2.2. Beyond Design Thinking: Les Surligneurs as a Mix of “Meaning Driven
+
+Design” and “Projective Design”                                          402
+
+3. Legal Design Limitations                                              404
+
+3.1. Four Limitations to Legal Design                                    404
+
+4. Limitations in the Context of Design Thinking and of the French
+
+Environment                                                              411
+4.1. The Design Thinking Heritage                                    411
+
+4.2. Specificities in the French Context                             415
+
+5. Design of the Public Debate and the Fight Against Dis- and
+
+Misinformation Through Better Access to Information                  417
+
+5.1. Politics and the Law are More and More Complex                  417
+
+5.2. A Paradox: It’s Getting Harder to Find Reliable Sources         418
+
+5.3. Where Are the Law Teachers and the Legal Designers?             420
+
+5.4. Les Surligneurs as Public Debate Design                         420
+
+Conclusion                                                           424
+
+Bibliography                                                         425
+
+Chapter 12. From Dark to Fair Patterns?
+
+How Can Design-driven Innovation and Neurodesign Help Fighting
+
+against Deceptive Design                                             429
+
+Marie Potel-Saville
+
+1. Introduction                                                      429
+
+2. Multi-Disciplinary Evidence of the Prevalence of, and Harms
+
+Caused by, Dark Patterns                                             431
+
+2.1. Rich Literature Defining and Categorising Dark Patterns         431
+
+2.2. World-Wide Evidence of Prevalence, in Spite of Existing Legal Framework 435
+
+2.3. Multi-Disciplinary Evidence of Individual and Structural Harms  440
+
+3. Introducing the Concept of Fair Patterns, as a Combination of
+
+Design-Driven Innovation and Neurodesign                             443
+
+3.1. Building on Design-Driven Innovation, a Human-Centric Approach
+
+and ‘Light Patterns’                                                 443
+
+3.2. Building on Neurodesign and ‘Bright Patterns’                   447
+
+3.3. New Concept of Fair Patterns, and Examples of Design            449
+
+4. Discussion, Limitations and Next Steps                            455
+
+4.1. Discussion                                                      455
+
+4.2. Limitations                                                     457
+
+4.3. Next Steps                                                      458
+
+5. Conclusion                                                        460
+
+Bibliography                                                         461
+1. NEW FRONTIERS OF LEGAL KNOWLEDGE:
+HOW DESIGN PROVOTYPES CAN CONTRIBUTE TO
+LEGAL CHANGE
+
+Barbara Pasa and Gianni Sinni
+
+Abstract
+Legal change is a complex phenomenon. Transplants, imitations, borrowings, as-
+similations by chance or for prestige, adoptions and rejections, and cross-fertil-
+isation are all dynamic processes, which correspond to the past and the present
+of world legal systems—and they are not just a matter of the “sovereign will” of a
+state and its sovereign power. Beyond the state, supranational institutions of var-
+ious kinds are the global agents responsible for shaping legal order reform. Their
+actions are the preserve of a multitude of forces, including transnational epistemic
+communities across the globe. What is less explored is how legal change can be
+the outcome of individual and collective actions, in an age when, for the first time
+in human history, social organisations depend on the use of information and com-
+munication technologies (ICTs). This fact radically affects the legal sphere. How do
+these collectives and individuals exercise their rights and how are they reminded
+of their duties, thus playing a major role in delineating the boundaries of the re-
+lationship between themselves, legal institutions, and legal change? What legal
+change is implied by the empirical analysis of the social acts involved in what they
+do? While legal transplantation theory explicitly deals with how legal change is
+produced with reference to national and transnational legal institutions, the rec-
+ognition of speculative design practice in the legal domain can raise awareness
+of pressing societal issues and bolster individual and collective civic agency over
+transformation and legal change, through imagination and critical thinking.
+
+1. Legal Change: Setting the Scene and its Narratives
+
+Legal change can be described through the agents vested with the pow-
+er to change the law.
+
+  The following are the main (simplified) narratives aimed at recon-
+structing legal change from the modern era to the present day; they
+constitute a minimum common ground of shared knowledge between
+28  Barbara Pasa and Gianni Sinni
+
+jurists and designers, a starting point for contributing to a critical and
+speculative reflection on future scenarios about legal change.
+
+  In Western legal tradition, the agents of legal change are judges and
+lawmakers, with the former acting through case law, and the latter
+through government and parliamentary legislation. Legitimised from
+below, as institutions of the Rechtsstaat founded on the archetype of
+the will of the people, these agents decide whether to adopt or reject
+legal change, controlling it within state borders, with the aim of arriving
+at new and more efficient legal solutions for fairer legislative reform.
+The Western-style sovereign state therefore assumes that changes in
+legal rules are the result of a complex function that is entirely internal
+to its organs, in which an independent body of specialist-expert judges,
+together with good legislative practice by state officials, can be steered
+towards specific policy objectives, such as the recognition of human
+rights, democratic values, non-discrimination principles and justice, im-
+proved economic performance, greater investments and efficiency (but
+also towards diametrically opposed political goals, as was the case with
+the Nazi-fascist regimes in Europe). It later also assumed that good rules
+can be exported to countries transitioning to democracy and the market,
+because most legal rules can operate in very different societies from the
+one for which they were originally created through the almost surgical
+operation of “legal transplants,” to use the fortunate expression coined
+by Alan Watson (1974).
+
+  This first narrative of legal change characterised the modern era until
+the Second World War. It then came to overlap with a more complex
+transnational narrative, which ever since the Bretton Woods agreements
+has been guided by economic liberalism and legal functionalism. Private
+international financial institutions and corporations regarded the World
+Bank’s activities (granting of loans) as complementary to their interests:
+public works projects to improve the economic infrastructure could only
+be good for private foreign investors, too.
+
+  The fundamental idea is that policy choices and legal rules have a di-
+rect effect on the functioning of markets and economic growth, with
+spill-over effects on sectors not directly dependent on economic mech-
+anisms. In this transnational dimension,1 multiple agents steer legal
+
+1 Philip Jessup, Transnational Law (Yale Law University 1956) p 2: ‘transnational law,
+New Frontiers of Legal Knowledge  29
+
+change. On these premises, over the last fifty years, the dynamics of
+legal change have been based on specific alliances between states, form-
+ing more or less cooperative networks that act at different speeds. Such
+alliances range from the maximalist political and economic integration
+model of the European Union and its Member States, to the minimalist
+model of the Commonwealth of Independent States (CIS), created in the
+wake of the break-up of the Soviet Union to prevent the sudden disap-
+pearance of an alliance system that for seventy years had kept the So-
+viet Socialist Republics together; from purely economic cooperation for
+the elimination of tariff barriers –operating on a macro or mega-regional
+scale, where for macro-areas we have, for instance, the United States–
+Mexico–Canada Agreement (USMCA, formerly NAFTA) in North-Central
+America, the Canada-European Union Comprehensive Economic and
+Trade Agreement (CETA), the Gulf Cooperation Council (GCC) in the Per-
+sian Gulf, the ASEAN Free Trade Area Agreement in Southeast Asia, or
+the MERCOSUR in Latin America; and for mega-areas we have, for ex-
+ample, the World Trade Organization (WTO), which deals with the global
+rules of trade between nations, and the Comprehensive and Progressive
+Agreement for Trans-Pacific Partnership (CPTPP)– to cooperation that
+integrates economic aspects into a future framework of political inte-
+gration, such as the Andean Community, the Union of South American
+Nations (UNASUR), the African Union, the Arab League, and the Council
+of Europe, to name but a few. By accommodating these transnational
+dynamics, legal change is driven by a range of factors, which can be
+simplified in terms of military force, political influence, and economic
+power, even once colonialism had ceased. Of these three factors, im-
+proving economic performance is perhaps the most visible goal in terms
+of joint statements and declarations of intent; however, it is also the
+least relevant for the dynamics of legal change, as what usually matters
+most in these cases is not the effectiveness of legal reform, but the repu-
+tation-based legitimacy acquired by joining a prestigious “club of peers”
+or group of “reliable states.”
+
+in general terms, is the law that regulates actions or events that transcend national
+borders, including both public and private international law, as well as other rules
+that fall outside the national source system (post-Westphalian model)’.
+30  Barbara Pasa and Gianni Sinni
+
+  Regional or international financial organisations, such as the EBRD in
+Europe, the IMF, or the World Bank,2 often fund legal change processes,
+but they propose a “one size fits all” approach to be implemented as
+quickly as possible, with funding conditional on the adoption by recip-
+ient countries of the rule of law and democratic reforms. By proposing
+the adoption of economic theories and models that make the effec-
+tiveness of legal change dependent on the time needed to evaluate its
+effects on markets’ performances, legal systems become market-de-
+pendent variables. In this functionalist paradigm, legal rules become a
+tool of social engineering, a mere technique of utility in the service of
+better economic performance.
+
+  Endorsing this approach and its neo-liberalist version, other players
+have joined in the global dissemination of standardised, high-perfor-
+mance rules. They include not only public entities, but also private, or
+public-private, organizations, foundations, associations, corporations,
+professional firms, NGOs from all sectors, standardisation organisations–
+such as, for example, the International Organization for Standardization
+(ISO), and ICANN, a US-based non-profit corporation with global capi-
+tal, which manages the domain name system–, and even big law firms,
+that have an exceptional regulatory role and play an important part in
+processes of legal change through contractual instruments and property
+rights adjudication procedures.3
+
+2 For an empirical study of commercial law making within the United Nations, in-
+     cluding the UN itself, the World Bank, the IMF, and UNIDROIT, see Susan Block-
+     Lieb and Terence Halliday, Global Lawmakers: International Organizations in the
+     Crafting of World Markets (CUP 2017); Michael Likosky (ed), Transnational Legal
+     Processes Globalisation and Power Disparities (Butterworths 2002).
+
+3 The reinvention of the legal space by new agents and the resulting pluralism has
+     long been investigated by Italian scholars, including Maria Rosaria Ferrarese, Mau-
+     ro Bussani, Gianamaria Ajani, Michele Graziadei, Ugo Mattei, Pier Giuseppe Mon-
+     ateri and other younger scholars belonging to the Turin school of comparative law
+     founded by Rodolfo Sacco, in dialogue with other leading thinkers, from Norber-
+     to Bobbio and Sabino Cassese, not only in the field of law— to Duncan Kennedy,
+     David Trubek, Martin Shapiro, Gunther Teubner, Mireille Delmas-Marty, Alvaro
+     Santos, Pierre Legrand, Annelise Riles, Roger Cotterell, William Twining, Zygmunt
+     Bauman, Pierrick Le Golf, Ulrich Beck, Saskia Sassen, Robert Reich, Susan Strange,
+     Boaventura de Sousa Santos, etc.
+New Frontiers of Legal Knowledge  31
+
+  Non-state regulatory solutions are, de facto, extremely pervasive in
+the post-Westphalian environment. Tech giants, with their technologi-
+cal management of the Internet, show how technology can transform
+the way regulatory and legal functions are performed nowadays, in the
+space that Roger Brownsword called “the Law 3.0”.4 Technology is chang-
+ing both the idea of existing law as a coherent system of legal rules and
+standards, and the way that lawyers, judges, and legislators think about
+the law’s role, and about the national and international architecture of
+legal and regulatory institutions, including whether A.I. and algorithms
+could count as legitimate institutions as well.5
+
+  Our regulatory mind-set needs then to focus on the disruption of the
+fundamental assumptions on which traditional legal thinking is built, and
+to take up the challenge on the monopoly concentrations of the “atten-
+tion merchants”6 and their business models in terms of data access/data
+protection. This is our time, the time we live in, where “code” and “ar-
+chitecture” can be more important than formal laws, where IT program-
+mers, computer scientists and neuroscientist teams have a greater effect
+on a risk management approach to law than the legislators. It is, indeed,
+the “architecture” that Lawrence Lessig, in his seminal essay, called
+“code” 7 that plays the most important role today, in the digital ecosys-
+tem in which not only markets, but also our social relations have been
+moving for some time. The Internet is more subject to non-state forms
+of control than the offline world.8 And it could not be otherwise. The
+Internet is (for now) entirely human-made, and it is online that “code” is
+the most powerful lever for shaping and regulating our behaviours.
+
+4 Roger Brownsword, Rethinking Law, Regulation, and Technology (Edward Elgar
+     2022).
+
+5 Woodrow Barfield and Ugo Pagallo (eds), Research Handbook on the Law of Artifi-
+     cial Intelligence (Edward Elgar 2018).
+
+6 Tim Wu, The Attention Merchants: The Epic Scramble to Get Inside Our Heads (Al-
+     fred A Knopf 2016).
+
+7 Code is ‘the software and hardware that constitute(s) cyberspace as it is — the set
+     of protocols, the set of rules, implemented, or codified, in the software of cyber-
+     space itself, that determine how people interact, or exist, in this space’ at p 4, The
+     Laws of Cyberspace, draft 3, essay presented at the Taiwan Net ’98 conference, in
+     Taipei, March, 1998. Available online.
+
+8 Lawrence Lessig, Code: and other laws of cyberspace, Version 2.0 online (Basic
+     Books 2006).
+32  Barbara Pasa and Gianni Sinni
+
+  These continuous transformations of the normative dimension have
+led political and economic uncertainty to grow worldwide.
+
+  In such a complex framework, agents of legal change also seek to
+measure the effects of their reforms and understand whether time is
+still an essential factor for reforms to take root—as it was in the past,
+when the control and steering of legal change was firmly in the hands
+of the state, and local epistemic communities9 could be swayed to
+construct a consensus for a reform. But the quantitative analyses, and
+the Law and Finance theory as initiated by La Porta, Lopez-de Silanes,
+Shleifer, and Vishny10 appear to be backward-looking reference systems
+of knowledge, based on “historical evidence”–as they investigated the
+differences between legal origins and their impact on economic perfor-
+mance–especially when compared to new ways of understanding com-
+plex phenomena, as will be discussed in the following pages.
+
+  What has been said so far also applies to non-Western legal traditions,
+although the main drivers for legal change were, and are, other things:
+mainly the ideology of the group or party in power, tradition, religion,
+chance, and even personal factors. This can be seen in the legal systems
+of the Islamic world, the Indian subcontinent, Far East Asia and in sub-Sa-
+haran African traditions, where legal change has coincided with the his-
+tory of colonisation, coups d’état, and non-pacific revolutions, and with
+the international trade routes marked out by the pressures of interest
+groups and personal contacts.11 But when looking at non-Western con-
+texts, what matters above all is “the process” of legal change; a process
+that unfolds shaped by both the supply side of the reforms, which is
+generally indifferent to or unaware of the framework in which new legal
+rules will be received, and the demand side, which often does not un-
+derstand or is indifferent to the specific content of the new legal rules
+
+9 Against the premise that epistemic communities are constituted at the national
+     level and are dependent on privileges granted by the state see Brook Harrington
+     and Leonard Seabrooke, ‘Transnational Professionals’ (2020) 46 Annual Review
+     of Sociology 399. On ‘measuring the effects’ of legal rules see Antonio Gambaro,
+     ‘Misurare il diritto?’ (2012) Annuario di diritto comparato e di studi legislativi 17.
+
+10 For a summary: Mathias Siems, Comparative Law (3rd ed, CUP 2022).
+11 Li-Wen Lin, ‘Legal Transplants through Private Contracting: Codes of Vendor Con-
+
+     duct in Global Supply Chains as an Example’ (2009) 57 The American Journal of
+     Comparative Law 711; John Gillespie, ‘Globalisation and legal transplantation: Les-
+     sons from the past’ (2001) 286 Deakin Law Review 286.
+New Frontiers of Legal Knowledge  33
+
+(examples of content include redistributive effects, the degree of com-
+patibility with pre-existing legal rules in the system, the time required
+for adaptation to the local hermeneutic tradition, etc.). The supply/de-
+mand division reflects the tension between the legal change and the
+framework for its reception—a tension that is more significant where
+countries are less homogeneous than, for example, EU Member States
+following their European political and economic integration. Thus, at the
+root of legal change processes we find a lack of understanding, a net-
+work of informational asymmetries, and fallacious simplifications that
+are of little help in grasping the various facets of legal change, in particu-
+lar of legal transplants shaped by religious factors, personal interests,
+chance and prestige.12
+
+  In the wake of the coronavirus pandemic, and the fears and negative
+effects associated with the transnational dynamics of Covid-19, Western
+and Global North institutions are fully aware of how legal changes are
+complex and non-linear multifactor processes, with no clear boundaries
+between what is local (nationalism) and what is global (transnational-
+ism/supranationalism).13 Instead they are mutually constitutive dynam-
+ics, in which local and global construct each other, becoming “glocal”.
+Local customs, practices, and traditions are real elements of all legal sys-
+tems, not a cultural invention in response to the neoliberal international
+legal order. 14
+
+  What we are therefore experiencing today on a global level is the con-
+tradictory coexistence of very different regulatory systems: on the one
+hand, customary rules, practices, and traditions that are the effective
+components of all legal systems; and on the other, the architecture of
+the Internet, and coding techniques, which are equally real elements of
+
+12 Gianmaria Ajani, ‘By Chance and Prestige: Legal Transplants in Russia and Eastern
+     Europe’ (1995) 43 The American Journal of Comparative Law 93.
+
+13 Michele Graziadei, ‘What Does Globalisation Mean for the Comparative Study of
+     Law?’ (2021) 16 Journal of Comparative Law 511.
+
+14 Graziadei (n 13) 514; Michele Graziadei, ‘Legal Transplants and the Frontiers of
+     Legal Knowledge’ (2009) 10 Theoretical Inquiries in Law 723; Michele Graziadei,
+     ‘Comparative Law as the Study of Transplants and Receptions’ in Mathias Reimann
+     and Reinhard Zimmermann (eds) The Oxford Handbook of Comparative Law (OUP
+     2006) 441-476.
+34  Barbara Pasa and Gianni Sinni
+
+contemporary legal systems. As such, they raise issues of justice, respon-
+sibility, sustainability, and solidarity.
+
+2. Legal Change: The Good Practice of Interdisciplinary Research in
+Comparative Law
+
+Comparative law, like other domains of study, looks at legal knowledge
+from an interdisciplinary point of view. Legal knowledge has porous
+boundaries and fault lines. By displaying overarching patterns of differ-
+ence and similarity, comparative law has, for some time now, opened
+the “black box” of law, revealing its many dimensions and pushing for an
+examination of the actual and potential possibilities available when legal
+change is necessary or desired.
+
+  The consolidation of interdisciplinary approaches has led comparative
+law to tap into a composite and collective knowledge that is methodo-
+logically robust and, at the same time, flexible and not self-referential.
+After all, stateless issues such as global warming, environmental destruc-
+tion, social injustice, poverty, natural disasters, and pandemics are not
+inevitable events, or the result of historical determinism, and can only
+be addressed by bringing together different disciplines, practising in-
+terdisciplinarity, and pursuing wide-scale participatory action—without
+which the well-known goals of the UN 2030 Agenda, “a plan of action for
+people, planet and prosperity”, as it states in its preamble,15 will remain
+a dead letter.
+
+  Interdisciplinary inquiry, for instance, has brought to light the deep
+malaise in Western legal and political thought based on the values of civ-
+ilised nations.16 The dualistic tendency it shows of identifying bad local
+rules based on tradition, implying they are synonymous with backward-
+ness, and good global norms of a universal, cosmopolitan, and rational
+nature, based on the supposed existence of a natural law (for which one
+is against landmines/for the protection of dolphins, against racism/for
+equal gender rights, against genocide/for human rights, etc.) has been
+
+15 See <https://sdgs.un.org/2030agenda> accessed 12 January 2023.
+16 The charter of the International Court of Justice is also based on these principles:
+
+     see Marija Dordeska, General Principles of Law Recognized by Civilized Nations
+     (1922–2018) (Brill Nijhoff 2020).
+New Frontiers of Legal Knowledge  35
+
+widely commented on and criticised as a functionalist approach to legal
+change based on the so-called “Washington consensus,” leading to the
+“Americanisation” of the world17—although the same can be said today
+about Europe and the so-called “Brussels effect” beyond European bor-
+ders.18
+
+  Interdisciplinary inquiry, furthermore, has provided an alternative ex-
+planation in response to the observation that many rules that have been
+imitated or transplanted have remained on paper and have not always
+produced the legal uniformity hoped for in terms of promoting trade and
+better market performance. Scholars usually proceed with a historical
+analysis to explain that it is all the fault of the past which conditions the
+present, and that legal change is bound to events that happened in the
+past, as taught by the path dependency theory. Those past events have
+a solid impact on legal culture, which becomes the catch-all factor that is
+used to emphasise how and how much the past conditions the present.
+But this explanation only partially satisfies us.
+
+  In countries in transition and in the Global South, the ineffectiveness
+of legal change is usually associated with the antagonistic relationship
+that arises between local institutions and role-occupants (generally
+judges, public officials, and Western consultants) sent to carry out re-
+forms or provide local training, who treat legal data according to the
+principle of the indifference and technical neutrality of the law,19 for
+which societies that are different from each other can be governed by
+the same rules.20 That same mechanism, however, is also observed in
+
+17 Ex multis, Francis Snyder, ‘Economic Globalization and the Law in 21st Century’ in
+     Austin Sarat (ed), The Blackwell Companion to Law and Society (Blackwell Publish-
+     ers 2004) 2-17; Ugo Mattei, ‘A Theory of Imperial Law: A Study on U.S. Hegemony
+     and the Latin Resistance’ (2003) 10 Indiana Journal of Global Legal Studies 383;
+     Mathias Reimann, ‘Beyond National Systems: A Comparative Law for the Interna-
+     tional Age’ (2001) 75 Tulane Law Review 1103.
+
+18 Anu Bradford, The Brussels Effect: How the European Union rules the World (OUP
+     2020); Marise Cremona and Joanne Scott (eds) EU law beyond EU borders: the
+     extraterritorial reach of EU Law (OUP 2019).
+
+19 On neutrality, see among Italian scholars: Gianmaria Ajani, ‘Trapianto di norme
+     informato e globalizzazione alcune considerazioni’ in Gianmaria Ajani and others
+     (eds), Studi in onore di Aldo Frignani Nuovi orizzonti del diritto comparato europeo
+     e transnazionale (Jovene 2011) 3–15.
+
+20 On the “one size fits all” approach see Section 1.
+36  Barbara Pasa and Gianni Sinni
+
+the legal systems of the Global North, where the failure of legal reforms
+carried out according to the functionalist approach is associated with
+the dialectical tension between the autonomy of local constituencies
+and the central institutions that impose top-down legal reforms. Empiri-
+cal observation studies suggest that resistance to change is not linked to
+cultural differences, as an exoticising view of non-Western laws might in-
+itially seem to suggest.21 Reiterated conclusions as to the ineffectiveness
+of legal change when pursued according to the abstract model of legal
+transplants and the logic of “one size fits all” have recently prompted le-
+gal scholars to explore the deeper relationship between law, considered
+the main tool of legal change, and “societal forces”, “different vested
+interests,” and “political interests”.22 Thus, it turns out that legal change,
+in both the Global South and the Global North, depends on a number
+of additional variables, such as the effects of informal processes on the
+standardised discourse about the rule of law and democracy, political
+choices and ideology, the role of cryptotypes, and customary practices
+shaping implementational rules, as well as social practices that shape
+the law.23 This implicit dimension of normativity that silently rules the
+actions of individuals and communities may in fact be unveiled by ap-
+plying the normative variant of Paul Grice’s theory of conversation de-
+veloped by Marina Sbisa,24 and Rodolfo Sacco’s theory of cryptotypes:25
+the “underlying patterns” can be revealed, or made visible through mi-
+
+21 Franz and Keebet von Benda-Beckmann, ‘Why not Legal Culture’ (2010) Journal of
+     Comparative Law 104.
+
+22 Graziadei ‘What Does Globalisation Mean for the Comparative Study of Law?’ (n
+     13).
+
+23 On law and society see Lester Salomon, The Tools of Government: A Guide to the
+     New Governance (OUP 2022); see Antonina Bakardjieva Engelbrekt and Joakim
+     Nergelius (eds), New Directions in Comparative Law (Edward Elgar 2010).
+
+24 Herbert-Paul Grice, Logic and conversation, in Peter Cole and Jerry Morgan (eds),
+     Syntax and semantics, vol. 3: Speech acts (Academic Press 1975) 41–58; Marina
+     Sbisa, Detto non detto. Le forme della comunicazione implicita (Laterza 2007); Ma-
+     rina Sbisà, ‘Normativita e comunicazione’ in Lucia Morra and Barbara Pasa (eds),
+     Questioni di genere nei testi normativi: crittotipi e impliciti (Giappichelli 2015) 15–
+     38.
+
+25 In the seminal work by Rodolfo Sacco, Introduzione al diritto comparato (Giappi-
+     chelli 1980). See also Rodolfo Sacco, ‘Mute Law’ (1995) 43 The American Journal
+     of Comparative Law 455; a fresh reflection, by the same author, is contained in the
+     book Il diritto muto (Il Mulino 2015).
+New Frontiers of Legal Knowledge  37
+
+cro-comparisons of legal rules among different legal systems. The dis-
+covery of a cryptotype is facilitated when, as happens, a legal rule, a
+concept, or a principle implicit in one legal system is explicit in another
+one. By logical and non-logical inferences of textual information from an
+explicit rule, pragmatics tools unveil the connections between what lies
+outside the text and what is inside it, what can plausibly be considered
+as part of what a statute, a judgment, or a decree communicated when
+it was produced, and what can enrich a legal rule without affecting its
+truth value.26
+
+  In the background lies the idea that law is a socially valuable practice
+of regulation in a given time and place, a practice that reflects the vari-
+ability of socio-legal conditions and contexts.27 What thus counts in de-
+fining what is legal are particular social settings: law is not only what law
+officials do and say they are doing, it is also a reflection of social values,
+educational conditioning, ideology and economics.28
+
+  The law then can appear for what it is: an interpretative socially valu-
+able practice of formal regulations and customary rules in a given time
+and place, made up of embodied subjectivities that find protection un-
+der a wider notion of “citizenship” as part of the legal change itself; a
+procedural notion of citizenship, understood as the social process of be-
+ing engaged that facilitates cohesion, rather than a status, or a goal in
+itself (a reward for being integrated) is then needed.
+
+3. Choice is Good, but Community Engagement is Better: Citizenship
+
+The uglier face of globalisation is shown when the law and legal change
+processes admit their powerlessness in setting out the moral limits of
+markets. One remedy that is often proposed is to lower their level of
+complexity and then essentially solve the problem by reducing it to a
+matter of self-determination and freedom of choice—because “choice
+
+26 Barbara Pasa and Lucia Morra, ‘6. Implicit Legal Norms’ in Jacqueline Visconti (ed),
+     Handbook of Communication in the Legal Sphere (De Gruyter Mouton 2018) 141-
+     168.
+
+27 Roger Cotterrell, ‘Why jurisprudence is not legal philosophy’ (2014) Jurisprudence
+     41, 51.
+
+28 William Twining, Law in context: enlarging a discipline (OUP 1997); William Twin-
+     ing, ‘Social science and diffusion of law’ (2005) 32 Journal of Law and Society 203.
+38  Barbara Pasa and Gianni Sinni
+
+is good”.29 Such a solution, however, is not altogether convincing. We
+believe that the question—or rather, the questions—should be restated:
+how can states, markets, and other players involved in legal change—
+both in the Global South and in advanced post-industrial, multicultural
+countries—come to terms with deeply-rooted social structures that they
+cannot change? To what extent does public opinion impact public poli-
+cy? What difference does individual behaviour make? How do networks
+of higher civil service elites (public administration, public management,
+judiciary, etc.) shape legal change? In identifying the institutions that or-
+ganise social, economic, and political interaction, can we also say, draw-
+ing from cognitive science and ethnology, that the human mind “is the
+first institution”, one shared by all human societies? Might the unity of
+the human mind—because all humans share important common cogni-
+tive frameworks, both with each other and with other hominids30—be a
+crucial factor in social organisation and legal change?
+
+  It is at this point that a broad vision of citizenship comes into play.
+Based on active community engagement, it is citizenship understood as
+a social process in which the greatest possible number of people par-
+take;31 and not only humans,32 considering that the general principles of
+
+29 The topic of personal self-determination in private law is the subject of extensive
+     debate, for example in the area of surrogate motherhood agreements, contracts
+     promoting sex work, and marriage brokerage contracts, nuptial agreements, but
+     also usurious contracts as well as immoral suretyships, etc. See Aurelia Colombi
+     Ciacchi, Chantal Mak, Zeeshan Mansoor (eds), Immoral Contracts in Europe (In-
+     tersentia 2020).
+
+30 We have an innate ability for the “mental score-keeping of services,” that is, a
+     mechanism for social exchange based on reciprocity, as psychological, anthropo-
+     logical, and ethnological studies appear to show; see Raffaele Caterina, ‘Compar-
+     ative Law and the Cognitive Revolution’ (2003-2004) 78 Tul L Rev 1501 inspired
+     by Dan Sperber, Explaining Culture: A Naturalistic Approach (Blackwell 1996); see,
+     Dan Sperber and Deirdre Wilson, Relevance: Communication and Cognition (Black-
+     well 1986; 2nd ed 1995).
+
+31 The desire to make law “work better for people,” and to design legal systems “fit
+     for real humans” weaves through many of the interviews conducted by Henna
+     Tolvanen and Nina Toivonen for their Legal Design Podcast: see the episodes at
+     <https://legaldesignpodcast.com/> accessed 12 January 2023.
+
+32 On post-human, more-than-human agency in legal design see Joaquín Santuber
+     and Lina Krawietz, ‘The Sociomateriality of Justice: A Relational Ontology for Legal
+     Design’ (2021) Revista Chilena de Diseño 1.
+New Frontiers of Legal Knowledge  39
+
+perceptual organisation and the common framework of basic assump-
+tions of the world, built on our genetic system, are something we share
+with all species, or at least with all vertebrates.
+
+  The citizenship debate first originated from concerns about social co-
+hesion and the maintenance of public order in nation-states. It was a
+censorious citizenship33 that arose within certain territorial boundaries,
+based on a legitimisation of sovereignty of an ascending (from the peo-
+ple), and no longer descending (from the divine) kind, referring to the
+people, the nation, a singular identity.34 Today, the criteria for becoming
+a citizen contained in national legislations have in practice become ob-
+stacles to achieving citizenship itself, and to integration.35
+
+  One of the basic principles of liberal states is that all citizens are for-
+mally equal to each other and before the law. But as we all know, the
+equality of citizens is intersected by many inequalities (by ethnicity, gen-
+der, physical and mental disability, income, and so on) and compromised
+by the substantial exclusion to the enjoyment of rights for noncitizens
+(migrants, asylum seekers, refugees). For if there were no inequalities,
+there would indeed be no need for anti-discrimination laws and inclu-
+sion practices.
+
+  Today, moreover, there can be no citizenship without taking the digital
+dimension into account, just as there can be no “mature citizens” re-
+gardless of the digital dimension.36 The point is not only the recognition
+of a digital citizenship that has broken through the territorial bounda-
+ries of nation-states, expanding to coincide with the concept of “neti-
+
+33 Stefano Rodotà, ‘Antropologia dell’homo dignus’ (2010) Storia e memoria 107.
+34 On the process of forming nation-states and “authentic citizens”, in particular with
+
+     regard to the destruction of local crafts in favour of nationally integrated workers,
+     shaped by the technical requirements of their jobs and by their participation in na-
+     tional culture, by their speaking one common national language, by their reading
+     the same newspapers and going to the same coffee-houses and sharing the same
+     dress code etc. see Melissa Aronczyk and Craig Calhoun, ‘Nationalism’ in Richard
+     A Couto (ed), Political and Civil Leadership, A Reference Handbook (Sage 2010)
+     490–497 [the “violence” of the state, 494]. See also Bryan Roberts, The Making of
+     Citizens. Cities of Peasants Revisited (Routledge 1995).
+35 Steven Vertovec, ‘Super-Diversity and its Implications’ (2007) 30 Ethnic and Racial
+     Studies 1024.
+36 Alfonso Fuggetta, Cittadini ai tempi di Internet. Per una cittadinanza consapevole
+     nell’era digitale (Franco Angeli 2018) 62.
+40  Barbara Pasa and Gianni Sinni
+
+zenship”—from [Inter]net + [cit]izenship.37 Current research is outlining
+the figure of the “happy citizen”38 based on the principle of well-being,
+as intangible collective capital, which is expressed in the preservation
+and transmission of cultural heritage, collective memory, political par-
+ticipation, peace, environmentalism, social equity and the inclusion of
+minorities and vulnerable social groups. The idea of happy citizenship is
+already at the core of political and regulatory decisions aimed at increas-
+ing people’s well-being and life satisfaction, as witnessed by the OECD
+projects.39
+
+  The relationship between citizenship and the ideals of happiness
+and well-being, integration, and equality is complex. In particular, the
+goals of citizenship policies are not well defined, and generally at odds
+with those of immigration. Among other things, the differentiation be-
+tween citizens and noncitizens sharpens when migrants travel mainly
+in South-North and East-West directions.40 This makes it desirable to
+have a flexible notion of citizenship, based on solidarity-building mech-
+anisms, traceable to the idea of pan-citizenship, to help further active
+community engagement41 and greater tolerance of different lifestyles
+and values, a notion that embraces social responsibility and aims to re-
+duce the number of people with extremely limited rights. That means a
+broader definition of citizen to include migrants, refugees, and marginal-
+ised people in general, with stronger value placed on active community
+engagement. Here, public participation goes beyond the turnout of vot-
+
+37 In the pioneering definition given by Michael and Ronda Hauben, Netizens – On the
+     History and Impact of Usenet and the Internet (IEEE Operations Center 1997).
+
+38 Galit Wellner, Aharon Aviram, Yael Rozin, Alfredo Ronchi, ‘Well-Being in the Digital
+     Age’ in Alfredo Ronchi (ed) e-Citizens: Toward a New Model of (Inter) Active Citizen-
+     ry (Springer Nature 2019) 28; Michele Graziadei and Barbara Pasa, ‘Happiness Once
+     More’ (2019) Journal of Comparative Law 203; Sofia Axelsson and Stefan Dahlberg,
+     ‘Measuring Happiness and Life Satisfaction Amongst Swedish Citizens. An inquiry
+     into semantic equivalence in comparative survey research’ (2018) Working Paper
+     Series 2018:2, University of Bergen.
+
+39 See <https://www.oecdbetterlifeindex.org/topics/life-satisfaction/>; <https://
+     www.oecd.org/wise/measuring-well-being-and-progress.htm> accessed 12 Janu-
+     ary 2023.
+
+40 Stephen Shulman, ‘Challenging the Civic/Ethnic and West/East Dichotomies in the
+     Study of Nationalism’ (2002) 35 Comparative Political Studies 554.
+
+41 Russell Dalton, ‘Citizenship Norms and the Expansion of Political Participation’
+     (2008) 56 Political Studies 76.
+New Frontiers of Legal Knowledge  41
+
+ers at elections,42 entailing new forms of consultation and governance,43
+where the latter is understood as a process through which institutions,
+businesses, and community members articulate their interests, exercise
+their rights, and allocate choices and opportunities, while mediating
+their differences.44
+
+4. The Contestability of Decision-Making Processes and the Micro-Di-
+mension of Persons as Agents of Legal Change
+
+In thinking about legal change, the focus should therefore be shifted onto
+the dialectic between policy-making and the law. It can be observed how
+the domestic politics of states and major changes within the national
+political arena project outwards and reshape the legal structure of the
+global system.45 Law cannot act as a substitute for political choices, as
+witnessed by the adjudication process46—a privileged site of interaction
+between the legal and the political—and by widely documented policy
+transfers.47 While it is true that legal change is based on selective ad-
+
+42 Considering the record abstention rate of more than 40% of voters during the last
+     three years of political and administrative elections in many European member
+     states, such as Italy, France, Germany, Spain, Ireland, Latvia, Estonia, Lithuania,
+     Croatia and Bulgaria, but the same phenomenon is also noted in other countries:
+     see Pew Research Center, November 1, 2022 at <https://www.pewresearch.
+     org/fact-tank/2022/11/01/turnout-in-u-s-has-soared-in-recent-elections-but-by-
+     some-measures-still-trails-that-of-many-other-countries/> accessed 12 January
+     2023.
+
+43 Nico Krisch and Benedict Kingsbury, ‘Introduction: Global Governance and Global
+     Administrative Law in the International Legal Order’ (2006) 17 European Journal of
+     International Law 1. For connections between design and citizenship see Veronica
+     Dal Buono, Gianni Sinni and Michele Zannoni, ‘Design for Citizenship’ (2020) 10
+     MD Journal.
+
+44 This is the definition given by the Second Global Knowledge Conference GKII
+     (2000), see Second Global Knowledge Conference (GKII): building knowledge so-
+     cieties: access-empowerment-governance 7-10 March 2000, Kuala Lumpur: Global
+     Knowledge Partnership (2000).
+
+45 Charles B Roger, The Origins of Informality: Why the Legal Foundations of Global
+     Governance Are Shifting, and Why It Matters (OUP 2020).
+
+46 Duncan Kennedy, A critique of adjudication: fin de siècle (Harvard University Press
+     1997).
+
+47 Fabrizio Gilardi and Fabio Wasserfallen, ‘The Politics of Policy Diffusion’ (2019) 58
+42  Barbara Pasa and Gianni Sinni
+
+aptation under the pressure of specific political-economic interests,48 it
+is also true that legal change is centred on the “contestability” of deci-
+sion-making processes, where contestable means that there are no ma-
+jor barriers to change.49
+
+  In this changed epistemological horizon, the theory of legal change
+is called on to explore the subjective micro-dimension, on a dual level:
+on the one hand, individuals and, on the other, the collective. The key
+notion advanced to explore this micro-dimension, proposed by Michele
+Graziadei, inspired by psychological studies of the social formation of
+the mind,50 is that of “mediated action”. Mediated action denotes action
+performed by people through the instrumentality of material objects
+and other kinds of artifacts, such as mnemonic techniques, algebraic
+symbol systems, works of art, writing, schemes, diagrams, maps, me-
+chanical drawings, all sorts of conventional signs, and so on.51
+
+  This brings us to the question of languages, laws, and their design.
+Drawing on the intuition that languages are social tools, the approach
+we embrace provides the theoretical bases for understanding how le-
+gal change processes occur in “places of engagement”, where discourse
+
+     European Journal of Political Research 1245; Diane Stone, ‘Between Policy Failure
+     and Policy Success: Bricolage, Experimentalism, and Translation in Policy Transfer’
+     in Claire Dunlop (ed) Policy Learning and Policy Failure (Policy Press 2020) 71-92.
+48 Tobias Hofmann, ‘How Long to Compliance? Escalating Infringement Proceedings
+     and the Diminishing Power of Special Interests’ (2018) 40 Journal of European In-
+     tegration 785.
+49 Decision-making process is “contestable” if decision-makers are open to adopting
+     new methods, such as the “seven-generation rule” of indigenous peoples, when
+     making decisions. See Eliezer Yudkowsky, Inadequate Equilibria. Where and How
+     Civilizations Get Stuck (Machine Intelligence Research Institute 2017), who uses
+     the term “contendible”: “a contendible situation is one in an inadequate equilib-
+     rium, which is still an equilibrium (that is why it has not changed), but it is in-
+     adequate, so it might be possible to disrupt it with a reasonable effort”; see the
+     Sci-Fi Economics Lab, involved in the Long Termism Deep Demonstration (2020) at
+     <https://www.climate-kic.org/programmes/deep-demonstrations/long-termism/
+     publications/> accessed 12 January 2023.
+50 Graziadei ‘What Does Globalisation Mean for the Comparative Study of Law?’ (n
+     13) 518.
+51 Lev Seme ̈novich Vygotsky, ‘The Instrumental Method in Psychology’ in James
+     Wertsch (ed), The Concept of Activity in Soviet Psychology (ME Sharpe Inc 1981) at
+     134, 137.
+New Frontiers of Legal Knowledge  43
+
+turns into action,52 starting from schools and universities, where empha-
+sis can be placed on the importance of graphic communication design
+in creating not only visual communication, but also in changing people’s
+attitudes and capabilities.53
+
+  The reflection on words, terminologies, and “language” in general is
+a fruitful and common starting point for the dialogue between law and
+graphic communication design. In both areas, a tacit or mute dimen-
+sion54 is admitted and represents much of what lies beneath the sur-
+face. There are many silent rules, with people often knowing how to put
+them into practice, but without being able to formulate them. However,
+knowing “how to do” something is different from knowing “what to do”,
+just as “knowing that” is distinct from “knowing how”55—a fact and an
+awareness that are ultimately shared by both law and design. Knowing
+what is the law is not only about the content of detailed legal rules and
+the structures and concepts used by doctrine and legal actors, but also
+about implicit sources, foundational principles and values underpinning
+them; it is just as important as knowing how to go beyond written texts
+or spoken words in legal communication, including images, rituals, feel-
+ings and public performances as modes of human ruling and interpreta-
+tion, 56 since legal texts imply more than they say.
+
+  Continuing along this line of reasoning, it seems worth emphasising
+that law and graphic communication design studies share the reflection
+
+52 Sigrid Norris and Rodney H Jones (eds), Discourse in Action: Introducing Mediated
+     Discourse Analysis (Routledge 2005); see for example Yoram Shachar, who illus-
+     trates how mediated action works with respect to legal transplants in the drafting
+     of the Israeli Declaration of Independence: Yoram Shachar, ‘Jefferson Goes East:
+     The American Origins of the Israeli Declaration of Independence’ (2009) 10 Theo-
+     retical Inquiries in Law 589.
+
+53 Jorge Frascara, ‘Graphic Design: Fine Art or Social Science?’ (1998) Design Issues
+     18.
+
+54 Above, Section 2.
+55 Gilbert Ryle, The Concept of Mind (Barnes & Noble 1949).
+56 The reflection on law & language covers a vast spectrum, from the absence of
+
+     written forms to the multiplicity of representations forms: for instance, the perfor-
+     mance of an act, or of a duty, acquiescence, or exercise of a right can be implied
+     by silent, normative, rules: see Sacco 1995, 2015 (n 25); pictures and images have
+     a normativity in themselves: see Anne Wagner and Richard Sherwin (eds), Law,
+     Culture and Visual Studies (Springer 2014); Volker Boehme-Neßler, Pictorial Law.
+     Modern law and the power of pictures (Springer 2011).
+44  Barbara Pasa and Gianni Sinni
+
+on the relationship between alphabetical writing and visual codes in the
+formulation and communication of complex messages.57 While recog-
+nising the dominance of verbal language in human communication, at
+least in our cultural context, both law and graphic communication design
+specifically acknowledge that not all writing is alphabetical (such as in
+China) and that not all writing is verbally oriented (such as the graphic
+symbols used to represent numbers).
+
+  The fact that all writing is a set of conventional graphic signs used to
+represent, preserve, and transmit information by organising language in
+physical and digital space58 is another relevant aspect for a promising
+dialogue between law and design.
+
+  Furthermore, transformative processes are completed through ideol-
+ogies, which are tools that legitimise normativity.59 Ideologies are forms
+of action aimed at orienting social beliefs, responding to the need to
+build consensus, or resistance, towards legal change. It is in the nature
+of ideology, given that its adherents will act in largely the same way in
+similar situations, to facilitate the carrying out of joint tasks and contrib-
+ute to group cohesion. In this sense, an ideology is essentially an “inter-
+face” between individual practice and collective action,60 and interface
+is another key word that can unite jurists and designers in contempo-
+rary thinking, on which design studies can project their theoretical and
+practical knowledge. Ideology has primarily been studied as a tool of
+
+57 Emily Allbon, ‘Beyond text: exploiting the visual in law’ (2018) Australian Law Li-
+     brarian 54. On the production of user-friendly legal documents, using for example
+     graphic symbols and icons that are machine-interpretable and able to elicit infor-
+     mation effectively, see Arianna Rossi and Monica Palmirani, ‘From Words to Images
+     Through Legal Visualization’ in Ugo Pagallo, Monica Palmirani, Pompeu Casanovas,
+     Giovanni Sartor and Serena Villata (eds) AI Approaches to the Complexity of Legal
+     Systems. AICOL 2015 2016 2017. Revised selected papers, Lecture Notes in Com-
+     puter Science, vol 10791 (Springer 2018) 72–85. This area studies have been also
+     called “legal information design”: Arianna Rossi, Rossana Ducato, Helena Haap-
+     io, Stefania Passera and Monica Palmirani, ‘Legal Design Patterns: Towards a New
+     Language for Legal Information Design’ in Internet of Things. Proceedings of the
+     22nd International Legal Informatics Symposium IRIS (2019) 517-526.
+
+58 Giovanni Lussu, La grafica è scrittura, una lezione, A.A.M Architettura Arte Moder-
+     na e Istituto Europeo di Design di Roma (Stampa Graffiti Roma 1996).
+
+59 Ajani ‘By Chance and Prestige: Legal Transplants in Russia and Eastern Europe’ (n
+     12).
+
+60 Teun A van Dijk (ed), Discourse as Social Interaction (Sage 1997) 25.
+New Frontiers of Legal Knowledge  45
+
+domination, or as an expression of benevolent paternalism—and both,
+at certain times and under certain conditions, have been interpreted as
+the realisation of ideals of justice.61 However, ideologies are above all
+ambiguous and contradictory, and they have a finite temporal horizon.
+They change over time, adapt to the context, and tolerate multiple per-
+sonal affiliations and subtle variations in personal commitments; they
+are forced to make continuous adjustments to accommodate what lives
+on the margins, the singularities that animate the collective. As a circu-
+lar process, it is the behaviour of the individuals that determines that
+of the entire system, and obtaining the desired behaviour depends on
+individual incentives and the individual framing of information.62 At the
+same time, the behaviour of the system is deduced from that of the col-
+lective. Thus rebound and other second-order effects, which refer to be-
+havioural or other systemic responses after the implementation of new
+laws, are important as well for legal change.63 The expected effects are
+not equivalent to an engineering estimate, because of systemic and be-
+havioural adjustments; habits and lifestyles are also factors that lead to
+the mitigation or, more frequently, amplification of the rebound effect.
+If we accept the shortcomings of a positivistic research paradigm, then
+there is room to understand the indirect and society-wide rebound ef-
+fects from a qualitative and theoretical perspective.
+
+  Our micro-dimension starting point is therefore a stimulus for inves-
+tigating legal change from the perspective of the well-being of the fi-
+nal recipients of the normative message, of different subjectivities and
+their positions in respect to the collective. But that is not all. What drives
+
+61 See Christopher L Tomlins, ‘Transplants and Timing: Passages in the Creation of an
+     Anglo-American Law of Slavery’ (2009) 10 Theoretical Inquiries in Law 389 (for the
+     justification of slavery); Jane Dailey, ‘Race, Marriage and Sovereignty in the New
+     World Order’ (2009) 10 Theoretical Inquiries in Law 511 (for the justification of ra-
+     cial superiority). See also Joseph Berger and others, ‘The Legitimation and Delegiti-
+     mation of Power and Prestige Orders’ (1998) 63 American Sociological Review 379.
+
+62 On the nudge theory see Richard H Thaler and Cass R Sunstein, Nudge: Improving
+     Decisions About Health, Wealth, and Happiness (Yale University Press 2008).
+
+63 It is worth noting that the literature regarding the rebound effect does not dis-
+     tinguish between policy-driven rebound and “autonomous” rebound. It suggests
+     that rebound effects are plural because a number of mechanisms are involved:
+     see Hans Jakob Walnum, Carlo Aall, and Søren Løkke, ‘Can Rebound Effects Explain
+     Why Sustainable Mobility Has Not Been Achieved?’ (2014) 12 Sustainability 9510.
+46  Barbara Pasa and Gianni Sinni
+
+us to adopt this analytical and subjective perspective is the recognition
+that the so-called Fourth Revolution,64 based on information and com-
+munication technologies (ICT), has changed our understanding of the
+world in the Internet and social media age, highlighting our nature as
+“permanently interconnected informational organisms”.65 This nature of
+ours is shared with both other biological organisms and artificial agents
+(A.I.) within an ecosystem of information and message communication.66
+Breaking free from human exclusivity in law and approaching a post-an-
+thropocentric legality is an ontological turn that we can accomplish with
+legal design.67 The more the ICT-dependency of contemporary societies
+consolidates, the more important it becomes to delve into the issue of
+regulatory profiles of digital technologies and the more important the
+role played by post-human-centred design becomes in designing the ob-
+jects and environments in which we live, interact, and socialise,68 espe-
+cially considering the fact that we have all become “infomaniacs” and
+“phono sapiens”.69
+
+5. The Transformative Power of Law and Design
+
+With the aim of clarifying what we propose as a different approach to
+legal change from analyses based on backward-looking reference sys-
+tems,70 in the following Sections we will introduce possible scenarios of
+legal change led by collective practices and individual actions based on
+speculative design and storytelling as tools for legal and policy change:
+what we have named forward-looking reference systems.
+
+64 Luciano Floridi, The Fourth Revolution: How the Infosphere is Reshaping Human
+     Reality (OUP 2014).
+
+65 Ugo Pagallo, Il diritto nell’età dell’informazione (Giappichelli 2014).
+66 For McLuhan the medium is itself the message: Marshall McLuhan, Understanding
+
+     Media: The Extensions of Man (McGraw-Hill 1964).
+67 Arturo Escobar, Designs for the Pluriverse. Radical Interdependence, Autonomy,
+
+     and the Making of Worlds (Duke University Press 2017); Santuber and Krawietz (n
+     32).
+68 Marij Swinkels, ‘How ideas matter in public policy: a review of concepts, mecha-
+     nisms, and methods’ (2020) International Review of Public Policy 281.
+69 Byung-Chul Han, Undinge: Umbruche der Lebenswelt (Ullstein Verlag 2022) at 7
+     and 46.
+70 Those mentioned in Section 1.
+New Frontiers of Legal Knowledge  47
+
+  Engaging with design is only a recent topic of interest for jurists and
+lawyers,71 in which design is generally treated as a skill that can be picked
+up along the way, while the true experts in the room remain the jurists.
+This has much to do with the mythical “lawyers’ mindset”72 that would
+appear to be an insurmountable hurdle to the empathy that is central
+to design—a mindset in which a jurist’s value is determined by their as-
+sumed knowledge, made up of words and by the manipulation of words,
+where failure must be avoided at all costs, the group of experts must
+contain the least possible cognitive diversity, creating a situation of ho-
+mophily, and the problem-solver is the leading role they can play.73 Be-
+low, we will capture the opposite dynamic, when designers engage with
+law, and in which design is applied to a legal context, to achieve that
+“well-being of law as a practical idea”, a duty that we all have, as Roger
+Cotterrell suggests74—what we might call service design, or systemic de-
+sign (we will not linger here on the issues that certain taxonomies raise).
+By relating the story of some practices carried out at our university, we
+would like to stress the naivety of the assumption that a jurist or a law-
+yer can turn their hand to being a service designer, or a graphic commu-
+
+71 For a summary of the different positions on what legal design is see Rossana Ducato
+     and Alain Strowel (eds), Legal Design Perspectives (Ledizioni 2021); see also Dan
+     Jackson, Jules R Sievert, Miso Kim and Sankalp Bhatnagar ‘What legal design could
+     be: Towards an expanded practice of inquiry, critique, and action’ in Dan Lockton,
+     Sara Lenzi, Paul Hekkert, Arlene Oak, Juan Sádaba, and Peter Lloyd (eds) DRS2022:
+     Bilbao (Design Research Society 2022) <https://doi.org/10.21606/drs.2022.281>
+     accessed 12 January 2023. Initiated by Margaret Hagan with her work Law by De-
+     sign (2016), online at <https://lawbydesign.co/>, the discussion is ongoing. LeDA,
+     What is Legal Design? (2018), online at <https://www.legaldesignalliance.org/> and
+     the NuLawLab, the interdisciplinary innovation laboratory at Northeastern Univer-
+     sity School of Law at <https://www.nulawlab.org/> accessed 12 January 2023.
+
+72 Rae Morgan and Emily Allbon, ‘Is Law Really that Special?’ in Ducato and Strowel
+     (n 71) 139–158; Anne-Marie Slaughter, ‘On Thinking Like a Lawyer’ (2002) Harv L
+     Today <https://www.princeton.edu/~slaughtr/Commentary/On%20Thinking%20
+     Like%20a%20Lawyer.pdf> accessed 12 January 2023; Stefania Passera, Beyond the
+     wall of contract text - Visualizing contracts to foster understanding and collabora-
+     tion within and across organizations (Aalto University publication series Doctoral
+     Dissertations 134/2017).
+
+73 Lawrence Krieger, The Hidden Sources of Law School Stress: Avoiding the Mistakes
+     that Create Unhappy and Unprofessional Lawyers (Kindle 2014) 7–9.
+
+74 Roger Cotterrell, Sociological Jurisprudence Juristic Thought and Social Inquiry
+     (Routledge 2018).
+48  Barbara Pasa and Gianni Sinni
+
+nication, or information designer. The training, aptitude, and experience
+required to be skilled in design practices is relevant. The relationship
+between jurists and designers ought to be mutually constructive. De-
+sign methods draw on humanistic and technical knowledge and their
+experience can break through the legacy of formal thinking,75 opening
+up the legal setting to empathy, fictitious descriptions of users, visualis-
+ations, peripheral information, and the experiences of others, while the
+legal experience that designers require can be provided in co-design pro-
+cesses, through the participation of jurists and the community at large,
+and in speculative design practices. These practices76 do not run the risk
+of distraction or self-indulgence: on the contrary, the vision of multiple
+possible, or probable futures trains our serendipity, our ability to notice
+the unexpected and make it constructive for change, our ability to de-
+tect, interpret and connect accidental data or random phenomena from
+the existing. Thus, in planning legal change for the benefit of society as
+a whole, and for the individuals who interact under the law’s protection,
+we may be able to move from where we are now to where we would like
+to be.
+
+6. Speculative Design for Legal Change in Public Services
+
+Law and design are not knowledge for themselves, but knowledge for
+action. They are social practices and poietic disciplines that can build
+change in the future, starting from the observation of the present. By ex-
+ploring alternative hypotheses to the question about people’s real needs
+in a post-anthropocentric view that assumes a new relationship with na-
+ture and for nature, they enable us to see the future possibilities for
+what seems inadequate, ineffective, or unjust in the present (enabling
+capacity of speculative design).
+
+  Our hypothesis is that legal change can be successfully experimented
+within the interdisciplinary space where law and design meet. Our ex-
+
+75 See Amanda Perry-Kessaris, ‘Legal design could and should be more sociolegal’ in
+     Lockton, Lenzi, Hekkert, Oak, Sádaba, and Lloyd (n 71) [she also traces the histo-
+     ry of the idea that design can enhance cross-disciplinary thinking and practice];
+     Amanda Perry-Kessaris, ‘Making sociolegal research more social by design: An-
+     glo-German roots, rewards and risks’ (2020) 21 German Law Journal 1427.
+
+76 As we will see in Sections 7-8.
+New Frontiers of Legal Knowledge  49
+
+perimental work focuses, in particular, on design strategies that specu-
+late on the future and are implemented through participatory and social
+interaction practices in the public services sector.77
+
+  Public services are the sector that has attracted the most social in-
+novation, involving the direct engagement of citizens.78 An exemplary
+case is the UK Gov design team,79 which has had similar experiences in
+
+77 Mauricio Vico, Santiago de Francisco Vela, and Monica Pachón Buitrago, ‘Cuando
+     el pensamiento en Diseño y el mundo legal se encuentran: Innovación para me-
+     jorar la prestación de servicios públicos’ (2021) RChD: creación y pensamiento 1.
+     On public service design and some examples, such as the UNESCO Global Futures
+     Literacy Network, the UK Policy Lab, the OECD Directorate for Public Governance
+     and its Observatory of Public Sector Innovation, the Danish Design Center Future
+     Welfare, the EU Policy Lab The Future of Government 2030+ and others, a summa-
+     ry in Barbara Pasa and Gianni Sinni, ‘Democracy in Outer Space. Speculative Design
+     for Future Citizenship’ forthcoming (2024).
+
+78 On the relevance, for the designer, of reflecting on civic and political issues, and
+     in particular on public services, see the first debates in Italy with the 1984 First
+     Cattolica Graphics Biennial; among others, Giovanni Anceschi, Prima Biennale della
+     grafica: propaganda e cultura (Mondadori 1984).
+
+79 Louise Downe, Good Services: Decoding the Mystery of What Makes a Good Ser-
+     vice: How to Design Services that Work (Bis Publishers 2019).
+50  Barbara Pasa and Gianni Sinni
+
+France,80 Italy,81 Spain,82 Denmark,83 and Belgium,84 just to name but a
+few examples. In these cases, co-design activities focus on including user
+needs in the actual design process of digital services.85 The degree of
+community engagement varies from citizens as “co-implementers” of
+services and activities formerly carried out by the government, to citi-
+zens as “co-designers”, involved in designing the content and delivery
+process of the services, to citizens as “initiators” of the design of specific
+services.86 In general terms, some suggest using “co-production” “as an
+
+80 DINSIC (Direction interministérielle du numérique et du système d’information et
+     de communication de l’État) – now DINUM (Direction interministérielle du numéri-
+     que), for example, included the MonAvis button (I give my opinion) on public web-
+     sites to test the satisfaction of citizens with administrative processes. See <https://
+     www.plus.transformation.gouv.fr/engagement/7> accessed 12 May 2023.
+
+81 The Team per la Trasformazione Digitale has a large developer community (De-
+     velopers Italia) that creates new software and allows developers on other levels
+     of government to reuse developed tools: developers, suppliers, civil servants, and
+     citizens can collaborate to improve a common code base and customise public ser-
+     vices using open-source architecture.
+
+82 The Spanish Central Administration, via its Secretary General for Digital Transfor-
+     mation, since the program “2017 Digital Strategy for an Intelligent Spain”, has used
+     co-assessment ex-ante and ex-post evaluation for digital public services, where
+     stakeholders are essential to measure the economic and social impact. A success
+     case of co-assessment has been in the selection of the non-working days for noti-
+     fications at the Tax Agency, based on a massive evaluation feedback from all stake-
+     holders.
+
+83 The Danish Business Authority is part of the Ministry of Business and Finance and
+     includes stakeholders in order to define user needs as the basis for any kind of
+     co-creation activities. See <https://www.co-val.eu/case-studies/blog/project/
+     the-danish-business-authority-dba/> accessed 12 May 2023.
+
+84 BOSA’s DG Digital Transformation has set up the reporting website managed by
+     the Administrative Simplification Agency, where citizens can report feedback on
+     administrative experiences they have had, and signal issues and what can be im-
+     proved: <https://www.kafka.be/fr> accessed 12 May 2023.
+
+85 Ines Mergel, ‘Digital Service Teams in Government: An International Comparison
+     of New IT Governance Structures’ available at https://www.economie.gouv.fr/igp-
+     de-editions-publications/comparative-analysis_n6. See also the material gathered
+     by the “25th International Government Design Community Call,” where maturing
+     and scaling up design is discussed: <https://www.youtube.com/watch?v=apGPAT-
+     MrvKg> accessed 12 January 2023.
+
+86 William Voorberg, Victor Bekkers and Lars Tummers, ‘A Systematic Review of Co-Cre-
+     ation and Co-Production: Embarking on the social innovation journey’ (2015) 17
+     Public Management Review 1333, 1347; Ezio Manzini, Design, When Everybody
+New Frontiers of Legal Knowledge  51
+
+umbrella concept that captures a wide variety of activities that can occur
+in any phase of the public service cycle and in which state actors and
+lay actors work together to produce benefits”.87 With co-production, the
+commissioning of services—seen as a “core public sector task [to be] un-
+dertaken by politicians and top managers”88—is generally done by state
+institutions and lay actors working together. This practice of “co-commis-
+sioning”, used by digital government service teams in several European
+countries, is prospective in nature, in that it is oriented towards the fu-
+ture (a near future) and concerned with activities that may take place at
+a later (but not too far) date.
+
+  While this is the starting point for service design for public sector, in-
+volving designers at multiple levels—in user consultation, service design
+labs, customer journey mapping, neighbourhood and community regen-
+eration forums, ethnographic research, participatory research, and so
+on to redesign, for example, the websites for health care services, public
+education, and senior citizens creating opportunities for interdepend-
+ent living— our experimental practices draw more on speculative design
+and design fiction as disrupting, visionary, imaginative, and provocative
+methods89 that can fuel active participation by multiple actors with dif-
+ferent interests and have a strong impact on legal change.
+
+  The influence of future studies on design is not new; however, interest
+has been growing especially late in design schools, and it seems to ree-
+merge in times of crisis, when the need to think about alternative futures
+becomes pressing. Nevertheless, future-oriented research methods and
+interdisciplinary studies are currently only included in curricula at the in-
+itiative of individual lecturers. Interest in future studies in the field of law
+instead lags behind. Although in some cases the expression “future stud-
+ies and law” appears to indicate an interest in exploring critical issues in
+law, emerging technologies, and society, future studies have yet to be in-
+
+     Designs: An Introduction to Design for Social Innovation (MIT Press 2015).
+87 Tina Nabatchi, Alessandro Sancino and Mariafrancesca Sicilia, ‘Varieties of Partici-
+
+     pation in Public Services: The Who, When, and What of Coproduction’ (2017) Pub-
+     lic Administration Review 766, 769.
+88 Tony Bovaird and Elke Loeffler (eds), Public Management and Governance (Rout-
+     ledge 2015) 6.
+89 Hallie Jay Pope, ‘Liberatory legal design and radical imagination’ in Lockton, Lenzi,
+     Hekkert, Oak, Sádaba, and Lloyd (n 71).
+52  Barbara Pasa and Gianni Sinni
+
+corporated into regulatory processes and legal reforms—processes that
+continue to be non-speculative and non-participatory, failing to engage
+people and the community in the creation, planning, and organisation of
+services, which in some sectors are crucial for their well-being (such as
+environment, education, infrastructure, energy, and others).
+
+  The tertiary education system and public institutions have a respon-
+sibility to identify ways of engaging design students in the design of
+public services, in the knowledge that only the active engagement of
+designers in new interdisciplinary contexts can ensure the development
+of the public services sector. At the same time, universities have a similar
+responsibility towards law students, who are called upon to abandon
+their traditional isolation, uniqueness, and specialness, and participate
+in non-lawyer-dominated but rather interdisciplinary design activities.
+Collaboration as a mode of dialogue between jurists and designers and,
+indeed, as a wider template for social and political life, is the way for-
+ward:90 legal change is embedded in the collaborative framework.
+
+7. Storytelling and Design Fiction as Tools for Legal Change
+
+The speculative design approach does not begin with product design
+but “with laws, ethics, political systems, social beliefs, values, fears, and
+hopes, and how these can be translated into material expressions”.91
+That enables designers co-designing with legal experts and end-users,
+i.e., the people to whom the legal regulations are addressed, to antici-
+pate and imagine the future and concretely represent, through various
+artifacts, the implications of legal choices made in the present.92
+
+  Design fiction is the practice of creating artifacts that are not intended
+to meet market needs, but rather to stimulate public debate and re-
+flection through the construction of a narrative context. These artifacts
+are effectively “thinking objects”—sometimes provocative in nature, so
+
+90 Annelise Riles, ‘From Comparison to Collaboration: Experiments with a New Schol-
+     arly and Political Form’ (2015) 78 Law and Contemporary Problems 147.
+
+91 Anthony Dunne and Fiona Raby, Speculative Everything: Design, Fiction, and Social
+     Dreaming (MIT Press 2013) 70.
+
+92 Gianni Sinni, ‘Speculative Design for the Public Sector. Design Fiction as a Tool for
+     Better Understanding Public Services’ (2021) Design Culture(s). Cumulus Confer-
+     ence Proceedings Rome 2021.
+New Frontiers of Legal Knowledge  53
+
+called provotypes—that encourage critical discourse about changing the
+status quo.93 Narrative, on the other hand, is an effective tool for over-
+coming resistance to legal change by using empathetic language rather
+than solely informative language. As all research on human cognitive
+biases has widely shown,94 an abundance of information can lead to
+greater resistance, rather than to a better understanding of the context.95
+This is the so-called “backfire effect,” an expression coined to denote the
+apparent impossibility of rationally correcting deeply ingrained beliefs.96
+By raising public awareness of specific themes, narrative media, such as
+cinema and literature, have demonstrated their ability to exert a direct
+influence on the orientation of government policy in the United States,
+for example, in the reorganisation of the psychiatric system, in building
+consensus on massive investments in space exploration, in the overhaul
+and modification of the administrative-bureaucratic apparatus, and in
+the reorganisation of the health care system.97
+
+  Starting in the designer’s educational career, design fiction can com-
+bine law and politics, foresight and civic participation, within a conscious
+and ethical narrative framework.98 This is not a mere exercise in futur-
+
+93 Bruce M Tharp and Stephanie M Tharp, Discursive Design: Critical, Speculative, and
+     Alternative Things (MIT Press 2019).
+
+94 Daniel Kahneman, Olivier Sibony and Cass R Sunstein, Noise: A Flaw in Human
+     Judgment (Hachette Book Group 2021); Daniel Kahneman, Thinking, Fast and
+     Slow: Daniel Kahneman (Penguin Books 2011).
+
+95 Alberto Cairo, The Truthful Art: Data, Charts, and Maps for Communication (New
+     Riders Pub 2016) 84-85.
+
+96 Brenda Nyhan and Jason Reifler, ‘When Corrections Fail: The Persistence of Politi-
+     cal Misperceptions’ (2010) 32 Political Behavior 303.
+
+97 Howard McCurdy, ‘Fiction and Imagination: How They Affect Public Administration’
+     (1995) 55 Public Administration Review 499; Christian Sauvé, ‘The Public Service
+     in Science Fiction. Institutionalized Evil, Perfect Incompetence or Invisible Efficien-
+     cy’, presented at Science-Fiction and Long-Term Projections for the Public Service.
+     Public Service Commission of Canada (1998, June) <https://www.christian-sauve.
+     com/essays/the-public-service-in-science-fiction/>; Lyn Holley and Rebecca Lutte,
+     ‘Public Administration at the Movies’ (2017) 4-10 available at <https://www.re-
+     searchgate.net/publication/313034742_Public_Administration_at_the_Movies>
+     accessed 12 January 2023.
+
+98 In support of ethical design see Emily Allbon and Amanda Perry-Kessaris (eds),
+     Design in Legal Education (Routledge 2022) [a summary is available at <https://
+     designinlegaleducation.net/book-home.html>] accessed 12 January 2023.
+54  Barbara Pasa and Gianni Sinni
+
+ology. Rather, speculative design in general can help address the short-
+comings of our current understanding of how legal change takes place
+and broaden our understanding of key aspects of the law.99
+
+  One of the crucial aspects that design fiction can help clarify in the
+contemporary debate is the relationship between law and power, delving
+into the question of whether the law is a product of power, as Norberto
+Bobbio held.100 This assertion raises questions of justice, as power—be-
+ing a flexible concept, understood as the authority to act for personal
+or collective purposes, either through orders or through freedom—of-
+fers only to those who hold it “a large space for the self”.101 Conversely,
+the space for social participation is very limited. Whenever we lack the
+right to participate on an equal footing, justice is called into question.
+Including the needs of the individuals and collective through speculation
+on the future in the actual process of designing public services and in
+the regulations that govern them is a step towards an effective right to
+participate. Furthermore, speculative design helps to develop tools that
+are applicable to public policies and regulations, placing the necessary
+emphasis on ethical concerns, as it has a counterfactual dimension and
+provokes us to imagine a different reality from the one we are immersed
+in, exploring it with awareness using scientific, technological, political,
+and social knowledge to represent desirable futures.
+
+  As argued in the previous Sections, our reflections offer a particularly
+stimulating opportunity to critically engage in a discourse—in the spirit
+of speculative design and storytelling—on legal change from a perspec-
+tive of sustainability and equity.
+
+  The complexity of the implications of such speculation can be ad-
+dressed by drawing on interdisciplinary skills.
+
+99 Arianna Rossi, Regis Chatellier, Stefano Leucci, Rossana Ducato, Estelle Hary, ‘What
+     If Data Protection Embraced Foresight and Speculative Design?’ in Lockton, Lenzi,
+     Hekkert, Oak, Sádaba, and Lloyd (n 71).
+
+100 Norberto Bobbio, Diritto e Potere: Saggi su Kelsen (Giappichelli 2014). On the need
+     to develop counterstorytelling to contrast the actual experience of power see Hal-
+     lie Jay Pope, ‘Designing to Dismantle’, Chapter 13, in Allbon and Perry-Kessaris (n
+     98).
+
+101 Byung-Chul Han, Was ist Macht? (Reclam Philipp Jun 2005) at 15.
+New Frontiers of Legal Knowledge  55
+
+  Legal design is one such example,102 with the potential it has to change
+and improve the status quo in the legal domain by using critical discur-
+sive and fictional tools and exploring alternative regulatory approaches.
+
+  Policy design is another example, as the dynamics of legal change
+make it clear that the law is closely linked to politics. Hence, with the
+general term policy design, we describe the action of defining the goals
+of policies and the interdisciplinary design tools necessary to achieve
+them.103
+
+  Often the definition of a public policy constitutes a “wicked problem”,104
+one of those problems whose cause can derive from bureaucratic, nor-
+mative, technological, organisational constraints, or from political con-
+ditions or a combination of all of these. In such cases, the solution to a
+single problem, isolated from an overall vision, fatally risks exacerbating
+the criticalities, rather than contributing to their resolution.
+
+  The characteristics of a systemic design, which places relationships
+and their sustainability at the centre, can therefore be particularly useful
+in policy and legal design. The goals can be of various types: to modify
+the policy-making practices, to allow the necessary institutional change,
+
+102 Here we do not enter the discussion of whether legal design is or should be seen as
+     a distinct discipline within design and/or law, or a post-disciplinary movement, or a
+     nomadic practice, or a broad array of practices and studies: for a summary Ducato
+     and Strowel (n 71), Allbon and Perry-Kessaris (n 98), Jackson and others (n 71),
+     Santuber and Krawietz (n 32). See also Phoebe Walton, ‘James v Birnmann: The po-
+     tential of critical design for examining legal issues’ in Lockton, Lenzi, Hekkert, Oak,
+     Sádaba, and Lloyd (n 71); Marcelo Corrales Compagnucci, Helena Haapio, Marga-
+     ret Hagan and Michael Doherty (eds), Legal Design: Integrating Business, Design
+     and Legal Thinking with Technology (Edward Elgar 2021); Amanda Perry-Kessaris,
+     ‘Legal Design for Practice, Activism, Policy and Research’ (2019) 46 Journal of Law
+     and Society 185.
+
+103 Michael Howlett and Ishani Mukherjee (eds), Routledge Handbook of Policy Design
+     (Routledge 2018).
+
+104 According to the definition by Horts Rittel, a mathematician, designer, and former
+     teacher at the Hochschule fur Gestaltung (HfG) Ulm: “wicked problems are a class
+     of social system problems which are ill-formulated, where the information is con-
+     fusing, where there are many clients and decision makers with conflicting values,
+     and where the ramifications in the whole system are thoroughly confusing”. This
+     approach suggests that there is a fundamental indeterminacy (in the sense that
+     there are no definitive conditions or limits to design problem) in all but the most
+     trivial design problems. See Richard Buchanan, ‘Wicked Problems in Design Think-
+     ing’ (1992) 8 Design Issues 5, 15-16.
+56  Barbara Pasa and Gianni Sinni
+
+or to build the capacity to co-design and implement systemic strategies
+that can lead to potentially transformative policies and actions; and
+the methods can be of diverse inspiration too: for example, the Polak
+Game, where persons are asked to indicate their position with respect
+to the experience of change (things are getting better/worse) and their
+own contribution to change (I can do little/I can do a lot),105 the Futures
+Wheel, a visual representation in which future repercussions are hypoth-
+esised in various categories of thought—social, economic, philosophical,
+religious, health, legal, ethical, and environmental,106 the Futures Cone,
+with the representation of the alternatives of probable, plausible or pos-
+sible futures among which to identify, by untangling the contingencies
+represented by the wild cards, the preferable future,107 and the reverse
+archaeology of the game The Thing from the Future, where participants
+create a story from a set of random premises—temporal location, trend,
+reference context, object type, and state of mind.108
+
+  Instead of limiting ourselves to thinking about concrete answers and
+solutions in terms of legal change or transformative policies, what is
+even more interesting is that speculative design emphasises the impli-
+cations rather than the applications; this means that it entrusts design-
+ers—and their expertise drawing from different disciplines—with the
+task of asking the right questions and no longer providing only answers
+as problem-solvers. From this perspective, speculative design can make
+a significant contribution to the formation of aware, informed, and em-
+powered “citizens” (above Section 3) capable of rising to the challenges
+of our present (design as world making).109
+
+105 Peter Hayward and Stuart Candy, ‘The Polak Game’ in Richard Slaughter and Andy
+     Hines (eds), The Knowledge Base of Futures Studies (Association of Professional
+     Futurists, 2020) 326-340.
+
+106 Jerome C Glenn ‘The Futures Wheel’ in Jerome C Glenn and Theodore J Gordon
+     (eds), Futures Research Methodology (Version 3.0 [CD-ROM] (2009).
+
+107 Joseph Voros, ‘A Primer on Futures Studies, Foresight and the Use of Scenarios’
+     (2001) Prospect. The Foresight Bulletin 6 available at <https://thinkingfutures.net/
+     foresight-primer> accessed 12 January 2023.
+
+108 Stuart Candy and Jeff Watson, The Thing from the Future (Situation Lab 1st ed.,
+     2014, Print-and-Play ed., 2015, 2nd ed., 2018). Available at <https://situationlab.
+     org/wp-content/uploads/2015/10/FUTURETHING_Print-and-Play.pdf> accessed
+     12 May 2023.
+
+109 Gianni Sinni, ‘Designing Implications. Design Fiction as a Tool for Social Change’
+New Frontiers of Legal Knowledge  57
+
+  The use of narrative fiction does not compromise the concreteness of
+co-designing legal change. This is evident if one considers the extent to
+which imaginary scenarios are fundamental for the construction of the
+social system. Narrative is indeed at the core of our ability to organise
+extended and remote collaborative networks. The search for alternative
+and ethically sustainable futures cannot, therefore, avoid questioning
+the dominant narrative. Design fiction thus has the unique potential to
+tackle the structural problems of our society, creating narratives of pos-
+sible futures that help us question the reasons for the present. As said,
+the goal of design fiction is to focus on a plurality of futures—probable,
+plausible, and possible110—so as to steer reality towards those consid-
+ered preferable, but in the awareness that the future, like any chaotic
+system, contains all those forms of discontinuity and variability (“wild-
+cards”) that, far from the classical deterministic view, make it unpredict-
+able and not predetermined. Design fiction is also a tool for innovating
+social practices because it presupposes broad participation in those
+practices. Ultimately, this relationship between law, politics, and design
+is the essence of the “design hope” invoked by Tomás Maldonado: “Po-
+litically speaking, the revolutionary sense of dissent is really only attain-
+able through design. Dissent that rejects hope in design is nothing but a
+subtle form of consent.”111
+
+8. Working with Futures: Some Examples
+
+At a series of design communication workshops organised as of 2016 for
+masters’ students at the University of the Republic of San Marino and at
+the University Iuav of Venice,112 we experimented with the potential of
+storytelling and design fiction to bring students to reflect on the impli-
+cations of public service design and legal change—topics generally not
+present in traditional design (nor in legal) curricula. The experience led
+to the development of design communication workshops at the Univer-
+
+     in Alessandra Bosco and Silvia Gasparotto (eds), Updating Values. Perspectives on
+     Design Education (Quodlibet 2020); Sinni (n 92); Pasa and Sinni (n 77).
+110 Voros (n 107).
+111 Tomás Maldonado, La Speranza Progettuale (Einaudi 1970) at 60.
+112 Laura Badalucco and Luca Casarotto (eds), Design e formazione. Continuità e muta-
+     menti nella didattica per il design (Il Poligrafo 2018) 80-89.
+58  Barbara Pasa and Gianni Sinni
+
+sity Iuav of Venice in collaboration with different institutions and, for
+the last two years, with the Italian Government Department for Digital
+Transformation.113 In the workshops, students were encouraged to map
+the ecosystems, archetypes, and touchpoints of the main public admin-
+istration services such as land management, mobility, health, education,
+and culture, with the aim of tackling complex projects on the future of
+the public services sector, playing with heterogeneous and hybrid visual
+languages. 114
+
+  The results of the projects, some of which are illustrated below
+through the synopses developed by the students themselves, can help
+highlight the dual function inherent to this learning approach: on the
+one hand, building a common ground between future designers and
+public decision-makers; and, on the other hand, transporting the project
+into a critical and sometimes antagonistic dimension. Speculative design
+frees the mind from the constraints of dominant thinking and allows us
+to question even those socio-economic assumptions that, like cognitive
+biases, prevent us from fully grasping the real opportunities for change.
+Here, in the speculative narrative’s immersive space, it seems entirely
+reasonable to propose radical legal change, such as, to cite just some of
+the projects developed in the workshops: the end of the consumer sys-
+tem and private property through a widespread goods sharing service;
+demanding the disposal of one’s biometric data upon reaching legal age;
+using a highly connected IoT network to do away with the prison system
+through social control (utopia or dystopia? The choice is yours); or even
+the design of a direct democracy system for guiding human communities
+living in the hostile Martian environment.
+
+113 Gianni Sinni, ‘Un atlante per la collaborazione tra design e PA’ in Luca Casarotto,
+     Raffaella Fagnoni and Gianni Sinni (eds), Dialoghi oltre il visibile. Il design dei servizi
+     per il territorio e i cittadini (Ediz illustrata Ronzani 2021).
+
+114 The visual restitution of the investigations makes up the pages of an atlas for collab-
+     oration between design and public administration. The Projects are also available
+     at <https://sites.google.com/iuav.it/design/design-open-lab/202122-primo-seme-
+     stre/212-i-lm-design-comunicazione-1?authuser=0> accessed 12 May 2023.
+New Frontiers of Legal Knowledge  59
+
+8.1. Delete-me
+
+ Fig. 1. Delete-me. © Luca Barbieri, Elena Cavallin and Irene Trotta. Hybrid design
+ workshop, led by Gianni Sinni with Tommaso Bovo. Master’s degree program in
+ design, University of the Republic of San Marino, 2016/2017. Licensed under CC-
+
+                                            BY-SA 4.0
+
+Synopsis: By 2030, web platforms will all be connected to each other,
+becoming the place where people constantly share information and per-
+sonal data. The increasingly detailed info-trail they leave of themselves
+online, however, will also be increasingly difficult to erase. Simply de-
+leting one’s profile will not be enough, as the information entered over
+time remains recorded and available to everyone. As such, the govern-
+ment will provide a service that helps citizens understand the weight of
+their shared information, offering the possibility to reset the data as they
+feel is appropriate. That solution will be delete.me, an application that
+communicates with social networks. People will be able to manage their
+online image by deciding which content to obscure and, if necessary,
+restore later, or delete permanently. In addition, they will have the pos-
+sibility, through 3D scanning, facial recognition, and voice and text rec-
+ognition to track down content, uploaded by others, that depicts them.
+Such content will automatically come under a person’s control when
+60  Barbara Pasa and Gianni Sinni
+
+they reach the age of eighteen, as they contain their image and data.
+Finally, the app will provide a documentation section that explains the
+steps to take to eliminate one’s online presence.
+
+8.2. OP!
+
+Fig. 2. OP!. © Giorgia Perich, Violeta Tufonic and Simone Zorzetto. Communication
+ design lab 3, led by Gianni Sinni with Irene Sgarro. Bachelor’s degree program in
+
+     design, University Iuav of Venice, 2020/2021. Licensed under CC-BY-SA 4.0
+
+Synopsis: Year 2040. After decades of crisis, the country is finally recover-
+ing. The digitisation of services and public administration, initiated at the
+beginning of the 21st century, will now be a reality. OP! is an institutional
+monitoring and public participatory planning application. By accessing
+the service with their digital identity, people will be able to monitor pub-
+lic activities and view active projects in their residential area, as well as
+national projects of interest. They will be able to actively contribute to
+projects with appraisals, advice, and criticism. They will also be able to
+propose original projects and see them implemented with community
+New Frontiers of Legal Knowledge  61
+
+support. This service will involve citizens in collective interest projects
+and optimise public spending.
+
+8.3. Independent Theater
+
+   Fig. 3. Independent Theater. © Anna Bigaran, Rosa Corazza, Febe Corba and
+   Martina Valente. Communication design workshop 3, led by Gianni Sinni with
+   Irene Sgarro. Bachelor’s degree program in design, University Iuav of Venice,
+
+                         2020/2021. Licensed under CC-BY-SA 4.0
+
+Synopsis: In 2050, the world is in crisis. The environment, the economy,
+and the demographic crisis are pressing problems. Complexity, unpre-
+dictability, risk, and technologies have taken over, creating a digitalised
+society at the expense of analog-human society. The situation has cor-
+roded society to the point of its disintegration. As a result, individuals
+have adopted more and more anti-social and introverted behaviour, ne-
+glecting the need to establish human relationships. In response to the
+need to focus on human beings and protect the environment in which
+they live, a participatory system will be developed, which allows people
+to express their thoughts within an Independent Theater. The idea of a
+62  Barbara Pasa and Gianni Sinni
+
+social theatre service is based on the ideal of classical Greek theatre,
+which socialised citizens, and is therefore educational in its purpose,
+while seeking to gather people’s opinions to pursue concrete actions
+based on shared ideas. The social theatre service will be based on three
+values considered fundamental: concertation, as there can be no dia-
+logue without others; inclusiveness, as respect and personal opinions all
+deserve equal importance; and physical experience, as it is important to
+meet in person to fully understand what one does.
+
+8.4. Smart jail
+
+   Fig. 4. Smart Jail. © Matteo Boem, Miriam David, Giovanni Maraga and Erica
+ Penazzo. Communication design lab 3, led by Gianni Sinni with Irene Sgarro. Ba-
+chelor’s degree program in design, University Iuav of Venice, 2020/2021. Licensed
+
+                                      under CC-BY-SA 4.0
+
+Synopsis: In 2050, the world is made up of smart cities, real jungles of
+IoT systems where there is a constant exchange of information. In this
+ultra-technological environment, Smart Jail will be a new type of prison,
+developed using IoT systems to monitor all the movements of people
+New Frontiers of Legal Knowledge  63
+
+who have committed crimes. In 2050, the term “inmate” will no longer
+be used, because Smart Jail will be designed to do away with prisons as
+physical places and the concept of detention, for which people tracked
+through Smart Jail will simply be known as “offenders”. The idea is to
+replace prisons with a correctional environment that becomes a reha-
+bilitation experience. Alongside the use of IoT systems, offenders will
+be monitored through a localising wristband, equipped with hologram
+technology enabling them to interact and self-organise their daily tasks
+within a programme designed to stimulate socialisation and reeduca-
+tion, aimed at their reintegration into society.
+
+8.5. Oright
+
+    Fig. 5. Oright. © Lisa Bachmann, Sarah Maglio, Valentina Phung and Elettra
+ Pignatti. Communication design lab 3, led by Gianni Sinni with Irene Sgarro. Ba-
+chelor’s degree program in design, University Iuav of Venice, 2020/2021. Licensed
+
+                                      under CC-BY-SA 4.0
+
+Synopsis: Year 2060. Climate troubles and the scarcity of raw materials
+have led to a new awareness, enabling the sharing economy to take hold
+much more than in the past, to the point that private property no longer
+matters. Due to the unsustainability of the capitalist consumption mod-
+64  Barbara Pasa and Gianni Sinni
+
+el, people in 2060 will seek durable, high-quality products and services
+for all their needs and lifestyle choices like never before. Artificial intelli-
+gence will help people to be more aware of what is unnecessary, to know
+their needs and manage their lives more wisely. Since people will no
+longer have to perform and devote time to certain tasks, the time saved
+can be spent on leisure or educational activities, as well as on personal
+interests and hobbies. Oright will therefore operate in a post-capitalist
+scenario, where the quality and circularity of products and services pre-
+vails. Sharing high-quality products and services at affordable prices will
+help break down the social barriers raised by ownership, in favour of a
+different logic of collective utility. Oright will be designed for sharing any
+material or digital good and service. Not having to own what one needs
+can only be advantageous: guaranteed assistance and maintenance, sav-
+ings on objects of little use, technological updates without supplements,
+and flexible loans, etc.
+
+8.6. Harmonia
+
+Fig. 6. Harmonia. © Robert Cosmin Oanca, Anna Laura Pascon, Emiliano Rainis
+and Caterina Sartorello. Communication design lab 3, led by Gianni Sinni with
+ Irene Sgarro. Bachelor’s degree program in design, University Iuav of Venice,
+
+                       2020/2021. Licensed under CC-BY-SA 4.0
+New Frontiers of Legal Knowledge  65
+
+Synopsis: Year 2100, planet Mars. Harmonia is a human settlement of
+one million inhabitants on Martian territory. The planet is not yet ter-
+raformed, but daily life is possible thanks to a system of pressurised
+buildings and the local, self-sufficient production of resources. The gov-
+ernance of Harmonia is ethical, welcoming, and human-scale. Its inhabit-
+ants come from various countries on Earth, but on Mars they all become
+citizens of Harmonia (and use only English as the common language).
+Their motivations for joining the settlement vary—for scientific research,
+humanitarian reasons, artistic inspiration, or simply adventure, but as
+volunteers they are selected for their ability to contribute to the sus-
+tainability and development of human society on Mars. Harmonia is a
+direct democracy, in which all propose and vote on decisions collectively.
+Harmonia is also a welfare state, in which everyone is a public employee,
+essential goods are guaranteed for free and luxury goods can be enjoyed
+through credits earned by performing activities useful to the communi-
+ty. Public services in Harmonia are provided through a digital platform
+that people can access via the numerous public terminals available and
+via the personal devices they are each assigned. All political, economic,
+and administrative life is managed through the Harmonia portal.
+
+9. Conclusions
+
+The future scenarios depicted by our students in their “objects of the
+future” and provotypes projects can serve as inspiration for policy-mak-
+ers and legal change. The common themes addressed include sociali-
+sation, engagement, co-participation, training, education, and direct
+democracy. This shows that legal change can be supported by design
+fiction and speculative design, starting with the reform of public services
+co-designed with people, as individuals and as a collective, to enhance
+confidence and cooperation, and potentially reduce public spending. In-
+corporating the experiences, practices, and speculative imagination of
+individuals and communities into the design, planning, and implementa-
+tion of public services through an outside-in approach allows the agents
+of legal change to better understand how public services can be designed
+to be of greatest use and benefit for individuals and communities.
+
+  Our complex ecosystem—populated by states and markets, but also
+individuals who perform social acts and by collective actions that are
+66  Barbara Pasa and Gianni Sinni
+
+conceived and actuated through verbal and nonverbal behaviours—is
+constitutive of the ethical dimension of the law. The projects we have
+presented, based on speculative design, storytelling, and design fiction,
+focus on the ethical dimension of the law and regulatory processes.
+
+  As said, many pressing issues of justice in the contemporary world in-
+tertwine with legal change and its complex institutional and legal dimen-
+sions, which include multiple perspectives that often emerge through
+comparative law. The public space of the future and the common inter-
+ests of citizens and society need to be filled with inclusive and accessible
+services that aim to reduce social barriers through a logic of collective
+utility and well-being. We believe in the power of mistakes, provocation,
+speculation, and fiction in designing alternative legal changes, relying on
+inclusive, participatory forms of law-making and policy-making from the
+bottom up, driven by a collective civic agency that steers transformation.
+To further this goal, a pedagogical turn is necessary, which involves build-
+ing different educational tools for legal scholars and designers, including
+teaching legal basics in design schools and incorporating provotypes, de-
+sign fiction and co-design processes into legal training. This pedagogical
+shift requires a radical change in the legal process as well, incorporating
+co-design and speculative practices into the creation of legal rules, and
+ultimately leading to a quest for justice.
+
+Bibliography
+
+Ajani G, ‘Trapianto di norme informato e globalizzazione alcune considerazioni’
+   in Gianmaria Ajani and others (eds), Studi in onore di Aldo Frignani. Nuovi
+   orizzonti del diritto comparato europeo e transnazionale (Jovene 2011)
+
+―, ‘Legal Change and Institutional Reforms’ in Torstein Frantzen, Helge Johan
+   Thue, Giuditta Cordero Moss, Johan Giertsen (eds), Rett og toleranse.
+   Festkrift til Helge Johan Thue: 70 år (Glydendal Norsk Forlag 2007)
+
+―, ‘By Chance and Prestige: Legal Transplants in Russia and Eastern Europe’
+   (1995) 43 The American Journal of Comparative Law 93
+
+Allbon E, ‘Beyond text: exploiting the visual in law’ (2018) 26 Australian Law
+   Librarian 54
+
+― and Perry-Kessaris A, Design in legal education (Routledge 2022)
+New Frontiers of Legal Knowledge  67
+
+Anceschi G, Prima Biennale della grafica: propaganda e cultura (Mondadori
+   Milano 1984)
+
+Aronczyk M and C Calhoun, ‘Nationalism’ in Richard A Couto (ed), Political and
+   Civil Leadership, A Reference Handbook (Sage 2010)
+
+Axelsson S and Dahlberg S, ‘Measuring Happiness and Life Satisfaction Amongst
+   Swedish Citizens. An inquiry into semantic equivalence in comparative survey
+   research’ (2018) Working Paper Series 2, University of Bergen
+
+Badalucco L and Casarotto L (eds), Design e formazione. Continuità e mutamenti
+   nella didattica per il design (Il Poligrafo 2018)
+
+Bakardjieva Engelbrekt A and Nergelius J (eds), New Directions in Comparative
+   Law (Edward Elgar 2010)
+
+Barfield W and Pagallo U (eds), Research Handbook on the Law of Artificial
+   Intelligence (Edward Elgar 2018)
+
+Berger J and others, ‘The Legitimation and Delegitimation of Power and Prestige
+   Orders’ (1998) 63 American Sociological Review 379
+
+Block-Lieb S and Halliday T, Global Lawmakers: International Organizations in
+   the Crafting of World Markets (CUP 2017)
+
+Bobbio N, Diritto e Potere: Saggi su Kelsen (Giappichelli 2014)
+
+Boehme-Neßler V, Pictorial Law. Modern law and the power of pictures
+   (Springer 2011)
+
+Bovaird T and E Loeffler (eds), Public Management and Governance (Routledge
+   2015)
+
+Bradford A, The Brussels Effect: How the European Union rules the World (OUP
+   2020)
+
+Brownsword R, Rethinking Law, Regulation, and Technology (Edward Elgar
+   2022)
+
+Buchanan R, ‘Wicked Problems in Design Thinking’ (1992) 8 Design Issues 5
+
+Byung-Chul Han, Undinge: Umbruche der Lebenswelt (Ullstein Verlag 2022)
+
+―, Was ist Macht? (Reclam Philipp Jun 2005)
+
+Cairo A, The Truthful Art: Data, Charts, and Maps for Communication (New
+   Riders Pub 2016)
+
+Candy S and Watson F, The Thing from the Future (Situation Lab 1st ed, 2014,
+   Print-and-Play ed, 2015, 2nd ed, 2018)
+
+Caterina R, ‘Comparative Law and the Cognitive Revolution’ (2003-2004) 78 Tul
+   L Rev 1501
+68  Barbara Pasa and Gianni Sinni
+
+Colombi Ciacchi A, C Mak, Z. Mansoor (eds), Immoral Contracts in Europe
+   (Intersentia 2020)
+
+Compagnucci M C, Haapio H, Hagan M, Doherty M (eds) Legal Design:
+   Integrating Business, Design and Legal Thinking with Technology (Edward
+   Elgar 2021)
+
+Cotterrell R, ‘Why jurisprudence is not legal philosophy’ (2014) Jurisprudence
+   41
+
+Cremona M and Scott J (eds) EU law beyond EU borders: the extraterritorial
+   reach of EU Law (OUP 2019)
+
+Dailey J, ‘Race, Marriage and Sovereignty in the New World Order’ (2009) 10
+   Theoretical Inquiries in Law 511
+
+Dal Buono V, Sinni G and Zannoni M, ‘Design for Citizenship’ (2020) 10 MD
+   Journal
+
+Dordeska M, General Principles of Law Recognized by Civilized Nations (1922–
+   2018) (Brill Nijhoff 2020)
+
+Downe L, Good Services: Decoding the Mystery of What Makes a Good Service:
+   How to Design Services that Work (Bis Publishers 2019)
+
+Ducato R and A Strowel (eds), Legal Design Perspectives (Ledizioni 2021)
+
+Dunne A and Raby F, Speculative Everything: Design, Fiction, and Social
+   Dreaming (MIT Press 2013)
+
+Escobar A, Designs for the Pluriverse. Radical Interdependence, Autonomy, and
+   the Making of Worlds (Duke University Press 2017)
+
+Floridi L, The Fourth Revolution: How the Infosphere is Reshaping Human
+   Reality (OUP 2014)
+
+Frascara J, ‘Graphic Design: Fine Art or Social Science?’ (1988) Design Issues 18
+
+Fuggetta A, Cittadini ai tempi di Internet. Per una cittadinanza consapevole
+   nell’era digitale (Franco Angeli 2018)
+
+Gambaro A, ‘Misurare il diritto?’ (2012) Annuario di diritto comparato e di studi
+   legislativi 17
+
+Gilardi F and F Wasserfallen, ‘The Politics of Policy Diffusion’ (2019) 58 European
+   Journal of Political Research 1245
+
+Gillespie J, ‘Globalisation and legal transplantation: Lessons from the past’
+   (2001) 286 Deakin Law Review 286
+
+Glenn J C, ‘Futures Wheel’ in Jerome C Glenn and Theodore J Gordon (eds),
+   Futures Research Methodology (Version 3.0 [CD-ROM] 2009)
+New Frontiers of Legal Knowledge  69
+
+Graziadei M, ‘Comparative Law, Transplants, and Receptions’ in Mathias
+   Reimann and Reinhard Zimmermann (eds), The Oxford Handbook of
+   Comparative Law (1st edn, OUP 2006; 2nd edn, OUP 2019)
+
+―, ‘Legal Transplants and the Frontiers of Legal Knowledge’ (2009) Theoretical
+   Inquiries in Law 723
+
+―, ‘What Does Globalisation Mean for the Comparative Study of Law?’ (2021)
+   Journal of Comparative Law 511
+
+― and Pasa B, ‘Happiness Once More’ (2019) Journal of Comparative Law 203
+
+Grice H-P, ‘Logic and conversation’ in Peter Cole and Jerry Morgan (eds), Syntax
+   and semantics, vol. 3: Speech acts (Academic Press 1975)
+
+Hagan MD, Law by Design (2016) <https://lawbydesign.co/> accessed 12
+   January 2023
+
+Harrington B, Seabrooke L, ‘Transnational Professionals’ (2020) 46 Annual
+   Review of Sociology 399
+
+Hauben M and R, Netizens – On the History and Impact of Usenet and the
+   Internet (IEEE Operations Center 1997)
+
+Hayward P and Candy S, ‘The Polak Game’ in Richard Slaughter and Andy Hines
+   (eds), The Knowledge Base of Futures Studies (Association of Professional
+   Futurists 2020)
+
+Hofmann T, ‘How Long to Compliance? Escalating Infringement Proceedings and
+   the Diminishing Power of Special Interests’ (2018) 40 Journal of European
+   Integration 785
+
+Holley L and Lutte R, ‘Public Administration at the Movies’ (2017) 4 Public
+   Voices <https://www.researchgate.net/publication/313034742_Public_
+   Administration_at_the_Movies> accessed 12 January 2023
+
+Howlett M and Mukherjee I (eds), Routledge Handbook of Policy Design
+   (Routledge 2018)
+
+Jackson D, Sievert JR, Kim M, and Bhatnagar S, ‘What legal design could
+   be: Towards an expanded practice of inquiry, critique, and action’ in Dan
+   Lockton, Sara Lenzi, Paul Hekkert, Arlene Oak, Juan Sádaba, Peter Lloyd
+   (eds), DRS2022: Bilbao (Design Research Society 2022)
+
+Jessup P, Transnational Law (Yale Law University 1956)
+
+Kahneman D, Thinking, fast and slow (Penguin Books 2011)
+
+― and Sibony O, Sunstein CR, Noise: A Flaw in Human Judgment (Hachette
+   Book Group USA 2021)
+
+Kennedy D, A critique of adjudication: fin de siècle (Harvard University Press
+   1997)
+70  Barbara Pasa and Gianni Sinni
+
+Krieger L, The Hidden Sources of Law School Stress: Avoiding the Mistakes that
+   Create Unhappy and Unprofessional Lawyers (Kindle 2014)
+
+Krisch L and B Kingsbury, ‘Introduction: Global Governance and Global
+   Administrative Law in the International Legal Order’ (2006) 17 European
+   Journal of International Law 1
+
+LeDA, What is Legal Design? (2018) <https://www.legaldesignalliance.org/>
+   accessed 12 January 2023
+
+Lessig L, Code: and other laws of cyberspace, Version 2.0 online (Basic Books
+   2006)
+
+Li-Wen Lin, ‘Legal Transplants through Private Contracting: Codes of Vendor
+   Conduct in Global Supply Chains as an Example’ (2009) 57 The American
+   Journal of Comparative Law 711
+
+Likosky M (ed), Transnational Legal Processes Globalisation and Power
+   Disparities (Butterworths 2002)
+
+Lussu G, La grafica è scrittura, una lezione, A.A.M Architettura Arte Moderna e
+   Istituto Europeo di Design di Roma (Stampa Graffiti Roma 1996)
+
+Maldonado T, La Speranza Progettuale (Einaudi 1970)
+
+Manzini E, Design, When Everybody Designs: An Introduction to Design for
+   Social Innovation (MIT Press 2015)
+
+Mattei U, ‘A Theory of Imperial Law: A Study on U.S. Hegemony and the Latin
+   Resistance’ (2003) Indiana Journal of Global Legal Studies 383
+
+McCurdy H E, ‘Fiction and Imagination: How They Affect Public Administration’
+   (1995) 55 Public Administration Review 499
+
+McLuhan M, Understanding Media: The Extensions of Man (McGraw-Hill 1964)
+
+Mergel I, ‘Digital Service Teams in Government: An International Comparison
+   of New IT Governance Structures’ <https://www.economie.gouv.fr/igpde-
+   editions-publications/comparative-analysis_n6> accessed 12 January 2023
+
+Nabatchi T, A Sancino, M Sicilia, ‘Varieties of Participation in Public Services:
+   The Who, When, and What of Coproduction’ (2017) Public Administration
+   Review 766
+
+Nyhan B and Reifler J, ‘When Corrections Fail: The Persistence of Political
+   Misperceptions’ (2010) 32 Polit Behav 303
+
+Norris S and Jones R H (eds), Discourse in Action: Introducing Mediated
+   Discourse Analysis (Routledge 2005)
+
+Pagallo U, Il diritto nell’età dell’informazione (Giappichelli 2014)
+
+Pasa B and Sinni G, ‘Democracy in Outer Space. Speculative Design for Future
+   Citizenship’ forthcoming
+New Frontiers of Legal Knowledge  71
+
+Pasa B and Morra L, ‘Implicit legal norms’ in Jacqueline Visconti (eds) Handbook
+   of Communication in the Legal Sphere (De Gruyter Mouton 2018)
+
+Passera S, ‘Beyond the wall of contract text - Visualizing contracts to foster
+   understanding and collaboration within and across organizations’ (Aalto
+   University publication series Doctoral Dissertations 134/2017)
+
+Perry-Kessaris A, ‘Legal design could and should be more sociolegal’ in Lockton
+   D, Lenzi S, Hekkert P, Oak A, Sádaba J, Lloyd P (eds), DRS2022: Bilbao (Design
+   Research Society 2022)
+
+―, ‘Making sociolegal research more social by design: Anglo-German roots,
+   rewards and risks’ (2020) 21 German Law Journal 1427
+
+―, ‘Legal Design for Practice, Activism, Policy and Research’ (2019) 46 Journal
+   of Law and Society 185
+
+Pope HJ, ‘Liberatory legal design and radical imagination’ in Lockton D, Lenzi S,
+   Hekkert P, Oak A, Sádaba J, Lloyd P (eds), DRS2022: Bilbao (Design Research
+   Society 2022)
+
+Reimann M, ‘Beyond National Systems: A Comparative Law for the International
+   Age’ (2001) 75 Tulane Law Review 1103
+
+Riles A, ‘From Comparison to Collaboration: Experiments with a New Scholarly
+   and Political Form’ (2015) 78 Law and Contemporary Problems 147
+
+Roberts B, The Making of Citizens. Cities of Peasants Revisited (Routledge 1995)
+
+Rodotà S, ‘Antropologia dell’homo dignus’ (2010) Storia e memoria 107
+
+Roger CB, The Origins of Informality: Why the Legal Foundations of Global
+   Governance Are Shifting, and Why It Matters (OUP 2020)
+
+Rossi A, Chatellier R, Leucci S, Ducato R, and Hary E, ‘What if data protection
+   embraced foresight and speculative design?’ in Lockton D, Lenzi S, Hekkert
+   P, Oak A, Sádaba J, Lloyd P (eds), DRS2022: Bilbao (Design Research Society
+   2022)
+
+Ryle G, The Concept of Mind (Barnes & Noble 1949)
+
+Sacco R, Il diritto muto. Neuroscienze, conoscenza tacita, valori condivisi (Il
+   Mulino 2015)
+
+―, Antropologia giuridica. Contributo ad una macrostoria del diritto (Il Mulino
+   2007)
+
+―, ‘Mute Law’ (1995) 43 The American Journal of Comparative Law 455
+
+―, Introduzione al diritto comparato (Giappichelli 1980)
+
+Salomon L, The Tools of Government: A Guide to the New Governance (OUP
+   2022)
+72  Barbara Pasa and Gianni Sinni
+
+Santuber J and Krawietz L, ‘The Sociomateriality of Justice: A Relational
+   Ontology for Legal Design’ (2021) Revista Chilena de Diseño 1
+
+Sauvé C, ‘The Public Service in Science Fiction. Institutionalized Evil, Perfect
+   Incompetence or Invisible Efficiency’ (Science-Fiction and Long Term
+   Projections for the Public Service. Public Service Commission of Canada, 26
+   June 1998) <https://www.christian-sauve.com/essays/the-public-service-in-
+   science-fiction/> accessed 12 January 2023
+
+Sbisa M, Detto non detto. Le forme della comunicazione implicita (Laterza 2007)
+
+―, ‘Normativita e comunicazione’ in Lucia Morra and Barbara Pasa (eds),
+   Questioni di genere nei testi normativi: crittotipi e impliciti (Giappichelli 2015)
+
+Shachar Y, ‘Jefferson Goes East: The American Origins of the Israeli Declaration
+   of Independence’ (2009) 10 Theoretical Inquiries in Law 589
+
+Shulman S, ‘Challenging the Civic/Ethnic and West/East Dichotomies in the
+   Study of Nationalism’ (2002) 35 Comparative Political Studies 554
+
+Siems M, Comparative Law (3rd edn, CUP 2022)
+
+Sinni G, ‘Designing Implications. Design Fiction as a Tool for Social Change’ in
+   Bosco A and Gasparotto S (eds), Updating Values. Perspectives on Design
+   Education (Quodlibet 2020)
+
+―, ‘Speculative Design for the Public Sector. Design Fiction as a Tool for Better
+   Understanding Public Services’ in Design Culture(s). Cumulus Conference
+   Proceedings Roma 2021 (Cumulus 2021)
+
+―, ‘Un atlante per la collaborazione tra design e PA’ in Luca Casarotto, Raffaella
+   Fagnoni and Gianni Sinni (eds), Dialoghi oltre il visibile. Il design dei servizi
+   per il territorio e i cittadini (Ediz illustrata Ronzani 2021)
+
+Slaughter A-M, ‘On Thinking Like a Lawyer’ (2002) Harv L Today <https://www.
+   princeton.edu/~slaughtr/Commentary/On%20Thinking%20Like%20a%20
+   Lawyer.pdf> accessed 12 January 2023
+
+Snyder F, ‘Economic Globalization and the Law in 21st Century’ in Austin Sarat
+   (ed), The Blackwell Companion to Law and Society (Blackwell Publishers
+   2004)
+
+Sperber D, Explaining Culture: A Naturalistic Approach (Blackwell 1996)
+― and D Wilson, Relevance: Communication and Cognition (Blackwell 1986; 2nd
+
+   ed 1995)
+
+Stone D, ‘Between Policy Failure and Policy Success: Bricolage, Experimentalism,
+   and Translation in Policy Transfer’ in Claire Dunlop (ed), Policy Learning and
+   Policy Failure (Policy Press 2020)
+New Frontiers of Legal Knowledge  73
+
+Swinkels M, ‘How ideas matter in public policy: a review of concepts,
+   mechanisms, and methods’ (2020) International Review of Public Policy 281
+
+Thaler RH and Sunstein CR, Nudge: Improving Decisions About Health, Wealth,
+   and Happiness (Yale University Press 2008)
+
+Tharp BM and Tharp SM, Discursive Design: Critical, Speculative, and Alternative
+   Things (MIT Press 2019)
+
+Tomlins CL, ‘Transplants and Timing: Passages in the Creation of an Anglo-
+   American Law of Slavery’ (2009) 10 Theoretical Inquiries in Law 389
+
+Twining W, Law in context: enlarging a discipline (OUP 1997)
+
+―, ‘Social science and diffusion of law’ (2005) 32 Journal of Law and Society
+   203
+
+van Dijk TA (ed), Discourse as Social Interaction. Discourse Studies: A
+   Multidisciplinary Introduction (Sage 1997)
+
+Vertovec S, ‘Super-Diversity and its Implications’ (2007) 30 Ethnic and Racial
+   Studies 1024
+
+Vico M, de Francisco Vela S and Pachón M, ‘Cuando el pensamiento en Diseño
+   y el mundo legal se encuentran: Innovación para mejorar la prestación de
+   servicios públicos’ (2021) RChD: creación y pensamiento 1
+
+Voorberg W, Bekkers V and Tummers L, ‘A Systematic Review of Co-Creation
+   and Co-Production: Embarking on the social innovation journey’ (2015) 17
+   Public Management Review 1333
+
+von Benda-Beckmann F and K, ‘Why not Legal Culture’ (2010) 5 Journal of
+   Comparative Law 104
+
+Voros J, ‘A Primer on Futures Studies, Foresight, and the Use of Scenarios’
+   (2001) Prospect. The Foresight Bulletin 6 <https://thinkingfutures.net/
+   foresight-primer> accessed 12 January 2023
+
+Vygotsky L, ‘The Instrumental Method in Psychology’ in James Wertsch (ed),
+   The Concept of Activity in Soviet Psychology (M E Sharpe Inc 1981)
+
+Wagner A and Sherwin R (eds), Law, Culture and Visual Studies (Springer 2014)
+
+Walnum H J, All C, and Løkke S, ‘Can Rebound Effects Explain Why Sustainable
+   Mobility Has Not Been Achieved?’ (2014) 12 Sustainability 9510
+
+Walton P, ‘James v Birnmann: The potential of critical design for examining
+   legal issues’ in Lockton D, Lenzi S, Hekkert P, Oak A, Sádaba J, Lloyd P
+   (eds), DRS2022: Bilbao (Design Research Society 2022)
+
+Watson A, Legal Transplants: An Approach to Comparative Law
+   (Charlottesville 1974)
+74  Barbara Pasa and Gianni Sinni
+
+Weimann J, Knabe A, Schoeb R (eds) Measuring Happiness: The Economics of
+   Well-being (Gildan Media Corporation 2015)
+
+Wellner G, Aviram A, Rozin Y, Ronchi A, ‘Well-Being in the Digital Age’ in Alfredo
+   Ronchi (ed) e-Citizens: Toward a New Model of (Inter) Active Citizenry
+   (Springer Nature 2019)
+
+Wu T, The Attention Merchants: The Epic Scramble to Get Inside Our Heads
+   (Alfred A Knopf 2016)
+
+Yudkowsky E, Inadequate Equilibria. Where and How Civilizations Get Stuck
+   (Machine Intelligence Research Institute 2017)
+
