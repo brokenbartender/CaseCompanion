@@ -1,0 +1,184 @@
+   Michigan Bar Journal  October 2015
+
+50 Trial Practice
+
+Demonstrative Evidence
+
+By Thomas J. Tallerico and Jeffrey G. Raphelson
+
+D  emonstrative exhibits are rela-                  based on the laws of physics. The witness          States v Humphrey,9 the Sixth Circuit af-
+   tively easy to have admitted                     proffering the simulation likely would not         firmed the admission of 107 coin bags, 101
+   and they can take almost any                     have observed the accident and must offer          of which were filled with Styrofoam pea-
+   format so long as they illus-                    foundation for the simulation that assures         nuts, as demonstrative evidence to assist the
+                                                    the court of the scientific principles on          jury in picturing defendant stealing 214 bags
+trate or clarify a witness’s testimony. It is this  which it is based.1                                filled with coins from a bank. The court
+                                                                                                       found that admitting the bags was relevant
+flexibility that makes them powerful tools of           In Michigan, “[d]emonstrative evidence         and probative to demonstrate how many
+                                                    is admissible when it aids the fact-finder in      bags could fit in the bank vault and it was
+persuasion. By applying established design          reaching a conclusion on a matter that is          not unfairly prejudicial because it was only
+                                                    material to the case.”2 Further, “demonstra-       half the number allegedly stolen.10
+and presentation principles to the creation         tive evidence is admissible if it bears ‘sub-
+                                                    stantial similarity’ to an issue of fact involved      Foundational testimony to support the
+of demonstrative exhibits, trial counsel can        in a trial.”3 With respect to demonstrative        admission of a demonstrative exhibit will
+                                                    evidence used during expert testimony,             vary slightly depending on the type of ex-
+create exhibits that neatly illuminate the key      “when evidence is offered not in an effort         hibit. For example, to admit a photograph
+                                                    to recreate an event, but as an aid to illus-      or video of a scene at issue, the presenting
+points of a witness’s testimony and poten-          trate an expert’s testimony regarding issues       witness must persuade the court that:
+                                                    related to the event, there need not be an
+tially enhance the witness’s credibility.           exact replication of the circumstances of the      •	the photograph or video is relevant;
+                                                    event.”4 Beyond this, Michigan has not es-
+First, the basics                                   tablished specific criteria for reviewing the      •	the witness is familiar with the scene or
+                                                    propriety of a trial court’s decision to admit        events depicted in the photograph or video;
+    Demonstrative evidence is any form of           demonstrative evidence.5 Such evidence,
+evidence that illustrates or explains the tes-      and the testimony it illustrates, must satisfy     •	the witness is familiar with the scene or
+timony of a witness. It can be a diagram,           traditional requirements for relevance and            events as of a relevant date, time, etc.; and
+map, drawing, photograph, model, chart,             probative value.6
+presentation, or some other method of clar-                                                            •	the photograph or video fairly and accu-
+ifying testimony, and it may be used by an              In federal court, the standards are simi-         rately shows the scene as it appeared on
+expert or a lay witness. It differs from sub-       lar. Generally, “[d]emonstrative evidence is          the relevant date.11
+stantive evidence, such as an agreement or          admissible to assist jurors in understand-
+correspondence at issue in a case, in that it       ing basic principles.”7 To meet this stan-             Admitting a map or model requires sim-
+has no independent probative value. For             dard, courts in the Sixth Circuit determine        ilar testimony, but also verification that it is
+example, a computer animation could be              whether the demonstrative evidence is rele­        to scale. To admit a drawing, the witness
+used to show an eyewitness’s version of             vant and not unfairly prejudicial.8 In United      must testify that it is reasonably accurate
+what actually happened during an auto-                                                                 and not misleading.12 These foundational
+mobile accident. As discussed below, the
+foundation for such testimony need only as-         By applying established design and presentation
+sure the court that the animation will dem-
+onstrate the witness’s testimony. A com-
+puter simulation, on the other hand, would
+be used to show what must have happened,
+by extrapolating from certain data (such as
+the weight, location, and direction of travel
+of each vehicle involved in the accident)
+
+                                                    principles, trial counsel can create exhibits that
+
+    “Trial Practice” is designed to provide         neatly illuminate the key points of a witness’s
+advice and guidance on how to effectively           testimony and enhance the witness’s credibility.
+prepare for and conduct trials.
+                                                                                                                                                                                     October 2015  Michigan Bar Journal
+
+                                                                                                                                                                                                   Trial Practice 51
+
+0.40                                                                                               0.40                                                                              requirements are flexible enough to allow
+                                                                                                                                                                                     counsel latitude in creating persuasive de-
+0.35                                                                                                                                                                                 monstrative exhibits.
+
+0.30                                                                                         0.30                                                                                    Effective use of
+0.25                                                                                                                                                                                 demonstrative evidence
+                                                                                   0.25
+                                                                          0.23                                                                                                           Before devoting time to planning and
+                                                                                                                                                                                     creating demonstrative exhibits, counsel
+0.20                                                                0.18                                                                                                             must confirm that the court or fact finder
+                                                                                                                                                                                     will be receptive to them. Not all are. The
+0.15                                                   0.14                                                                                                                          authors are aware, for example, of a recent
+0.10                                                                                                                                                                                 U.K. arbitration in which a major U.S. law
+0.05                                           0.11                                                                                                                                  firm proffered models of various buildings
+                                                                                                                                                                                     that were at issue in the case only to learn
+                         0.07        0.08                                                                                                                                            that the arbitrators, who were British bar-
+                                                                                                                                                                                     risters, were not receptive. They preferred
+                  0.05                                                                                                                                                               to have extensive discussion of applicable
+                                                                                                                                                                                     authorities. As such, the exhibits turned out
+            0.03                                                                                                                                                                     to be counterproductive. The moral: con-
+                                                                                                                                                                                     sider your audience before preparing de-
+0.00                                                                                                                                                                                 monstrative exhibits.
+    Minimal EffectRelaSxlaigtihotnImpairmenStLieggnaifilcLaimntitLImospsaoirfmCeonnttrDoyl,soSpehnoserisa, NDaeufesenadaMnteʼsdiLceavleElmerUgnecnocnyCsocmioau,snPeossssible Death
+                                                                                                                                                                                         By contrast, in this age of expanding
+                                                                                                   0.30                                                                              media, U.S. juries are more likely to re-
+                                                                                                                                                                                     spond to well-conceived demonstrative ex-
+                                                                                 0.25                                                                                                hibits.13 Counsel’s challenge is to craft the
+                                                                                                                                                                                     most persuasive exhibit possible within the
+                                                             0.23                                                                                                                    strictures of admissible evidence. There
+                                                                                                                                                                                     are a number of authorities on effective
+                                               0.14                                                                                                                                  communication and presentations that can
+                                                                                                                                                                                     help.14 Enhancing the clarity of an exhibit
+                         0.08                                                                                                                                                        will increase its persuasiveness.
+
+0.05                                                                                                                                                                                     Design principles suggest that when cre-
+                                                                                                                                                                                     ating a demonstrative exhibit, the advocate
+Relaxation        Legal  Limit       Control,  Senses  Defendantʼs  Level        Emergency  Unconsciousness                                                                          must be conscious of the presentation space
+                           Loss                                         Medical                                                                                                      and arrange elements on that space with fo-
+                                 of                                                                                                                                                  cus. Thus, when preparing a diagram, avoid
+                                                                                                                                                                                     the temptation to load the space with too
+                                                                                                                                                                                     much information. At the top left of this
+                                                                                                                                                                                     page is a slide that might be used to illus-
+                                                                                                                                                                                     trate a defendant’s state of intoxication as a
+                                                                                                                                                                                     function of blood-alcohol level.15
+
+                                                                                                                                                                                         In this example, including too much data
+                                                                                                                                                                                     dilutes the impact of the important data, and
+                                                                                                                                                                                     overusing technical features, such as three-
+                                                                                                                                                                                     dimensional graphics and fill effects, dis-
+                                                                                                                                                                                     tracts from the message altogether. Now,
+                                                                                                                                                                                     consider a more direct approach in the
+                                                                                                                                                                                     graph below it. This example makes a more
+                                                                                                                                                                                     conscious use of the space and focuses the
+                                                                                                                                                                                     viewer on the central message: the defen-
+                                                                                                                                                                                     dant had a high level of intoxication. The
+                                                                                                                                                                                     reduced detail does not lessen the impact of
+                                                                                                                                                                                     the message; it enhances the impact.
+Michigan Bar Journal  October 2015
+
+52 Trial Practice
+
+    The degree of freedom that counsel has                                   Thomas J. Tallerico is a          2. People v Unger, 278 Mich App 210, 247; 749
+to apply these design principles will vary                                   member of Bodman PLC                  NW2d 272 (2008), quoting People v Bulmer, 256
+with the type of exhibit. For example, a                                     and co-chair of the firm’s            Mich App 33, 35; 662 NW2d 117 (2003).
+photograph of an accident scene has fewer                                    Litigation and ADR Prac-
+options. The presenter may crop it or use                                    tice Group. He represents         3. Lopez v Gen Motors Corp, 224 Mich App 618, 628;
+Photoshop to remove stray pedestrians or                                     clients nationally and in-            569 NW2d 861 (1997), quoting Smith v Grange
+vehicles (unless their presence is important                                 ternationally, particularly           Mut Fire Ins Co of Mich, 234 Mich 119, 126; 208
+to the witness’s testimony), but the arrange-                                in matters involving the              NW 145 (1926).
+ment of items in the scene is otherwise          automotive industry, professional liability, lender
+fixed. Other forms give the presenter free-      liability, securities, distribution relationships, and        4. Bulmer, 256 Mich App at 35.
+dom to select the critical elements and ar-      antitrust law. He has extensive experience repre-             5. People v Castillo, 230 Mich App 442, 444; 584
+range them so as to direct the viewer to the     senting major corporations including OEMs, banks,
+important aspects of the testimony.              automotive suppliers, accounting firms, and profes-               NW2d 606 (1998).
+                                                 sional associations.                                          6. Id.
+    Finally, counsel must remember that de-                                                                    7. United States v Martinez, 588 F3d 301, 311
+monstrative evidence should illustrate testi-                                Jeffrey G. Raphelson is a
+mony and not replace it. A PowerPoint slide                                  member of Bodman PLC.                 (CA 6, 2006).
+that presents a witness’s testimonial points                                 His practice is primarily         8. See Stryker Corp v XL Ins America, unpublished
+line by line distracts the fact finder from the                              focused on commercial lit-
+                                                                             igation, particularly auto-           opinion of the U.S. District Court for the WD of
+  Counsel must                                                               motive, banking, corpo-               Michigan, issued January 23, 2007 (No 4:01-cv-
+  remember that                                                              rate, and intellectual                157) (“As a demonstrative exhibit, the Court will
+  demonstrative                                                              property disputes through-            consider [defendant’s] objections that exhibit 33 is
+  evidence should                                out the U.S. His work also includes general com-                  irrelevant, cumulative and unfairly prejudicial.”).
+  illustrate testimony                           mercial cases such as contract disputes, corporate            9. United States v Humphrey, 279 F 3d 372
+  and not replace it.                            governance and dissolution, and dealer and fran-                  (CA 6, 2002)
+                                                 chise termination. He graduated from Kalamazoo               10. Id.
+witness and may be inadmissible as cumula-       College and the University of Michigan Law School.           11. Mauet, Trial Techniques (5th ed), p 183. In some
+tive. However, a slide that illuminates a sin-                                                                     instances, the witness may also have to testify that the
+gle point succinctly allows the fact finder to       The authors thank their colleague, Mi-                        evidence will assist in explaining his testimony.
+quickly return his or her attention to the       chael J. Serra, for providing some of the re-                12. Id. at 185, 187.
+witness and gives the witness more time to       search presented in this article.                            13. “A two-minute video, if well made, will make a
+establish credibility. By enhancing the wit-                                                                       greater impression on the minds and emotions of
+ness’s testimony on that point, it is additive   ENDNOTES                                                          jurors than the world’s best expert.” Panian, Truth,
+and admissible, barring other objections.                                                                          Lies, and Videotape: Are Current Federal Rules of
+                                                  1. Most jurisdictions that have addressed the                    Evidence Adequate?, 21 Sw U L R 1199, 1214
+Conclusion                                            admissibility of computer simulations as substantive         (1992), quoting Chernow, From the Bench: Video the
+                                                      proof or as the basis for expert testimony admit it          Courtroom—More than a Talking Head, ABA J
+    Well-conceived demonstrative evidence             subject to the same foundational requirements as             Litigation (1988), p 5.
+can enhance a witness’s testimony by illus-           scientific evidence, although several employ a          14. A particularly useful work on presentations generally
+trating his or her critical points. The most          standard that resembles the test in Frye v United            is Reynolds, Presentation Zen: Simple Ideas on
+persuasive demonstrative evidence focuses             States, 54 US App DC 46; 293 F 1013 (1923); i.e.,            Presentation Design and Delivery (2d ed) (Berkeley:
+the fact finder on a specific point without           admissibility is conditioned on a sufficient showing         New Riders Press, 2011).
+the distraction of extraneous elements. Prin-         that (1) the computer is functioning properly, (2) the  15. See McDonald Center for Student Well-Being,
+ciples of effective communication and de-             input and underlying equations are sufficiently              What Is Intoxication? <http://oade.nd.edu/
+sign can assist trial counsel in developing           complete and accurate (and disclosed to the                  educate-yourself-alcohol/what-is-intoxication>
+such exhibits and, when presented to a re-            opposing party so that they can be challenged),              (accessed September 25, 2015).
+ceptive fact finder, the effect of such exhib-        and (3) the program is generally accepted by the
+its can be dramatic. n                                appropriate community of scientists for use in the            $
+                                                      particular situation at hand. See Commercial Union
+                                                      Ins Co v Boston Edison Co, 412 Mass 545, 549;                 Get a Tax Break…
+                                                      591 NE2d 165 (1992); Bray v Bi-State Dev Corp,
+                                                      949 SW2d 93, 98 (Mo Ct App 1997); Kudlacek v                  Donate Your Vehicle!
+                                                      Fiat SpA, 244 Neb 822, 843; 509 NW2d 603                                Call
+                                                      (1994); State v Clark, 101 Ohio App 3d 389, 416;
+                                                      655 NE2d 795 (1995).                                            (800) 678-LUNG
+
+                                                                                                                             Help fight the
+                                                                                                                       #3 killer…lung disease
+
