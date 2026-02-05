@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { NavLink, Outlet } from "react-router-dom";
 import {
   LayoutDashboard,
@@ -25,28 +25,32 @@ import {
   Monitor
 } from "lucide-react";
 import { APP_NAME } from "../config/branding";
+import { readJson, writeJson } from "../utils/localStore";
 
-const navItems = [
-  { to: "/", label: "Guided Start", icon: LayoutDashboard },
-  { to: "/dashboard", label: "Dashboard", icon: LayoutDashboard },
-  { to: "/war-room", label: "War Room", icon: LayoutDashboard },
+const MODE_KEY = "case_companion_mode_v1";
+
+const coreNavItems = [
+  { to: "/war-room", label: "My Case", icon: LayoutDashboard },
+  { to: "/deadlines", label: "My Deadlines", icon: Timer },
+  { to: "/evidence", label: "My Evidence", icon: Archive },
+  { to: "/filing-flow", label: "My Filings", icon: ClipboardList },
+  { to: "/print-pack", label: "Generate Packet", icon: FileText }
+];
+
+const advancedNavItems = [
+  { to: "/guided-start", label: "Guided Start", icon: Map },
   { to: "/assault-hub", label: "Assault Hub", icon: Shield },
   { to: "/trial-mode", label: "Trial Mode", icon: Monitor },
   { to: "/self-defense", label: "Self-Defense", icon: Target },
   { to: "/self-defense-planner", label: "Self-Defense Planner", icon: Target },
   { to: "/roadmap", label: "Procedural Roadmap", icon: Map },
-  { to: "/guided-start", label: "Guided Start", icon: Map },
-  { to: "/filing-flow", label: "Filing Flow", icon: ClipboardList },
-  { to: "/case-type-library", label: "Case-Type Library", icon: ClipboardList },
   { to: "/doc-pack", label: "Document Pack", icon: FileText },
-  { to: "/print-pack", label: "Print Pack", icon: FileText },
   { to: "/mifile-reconnect", label: "MiFILE Reconnect", icon: FileText },
   { to: "/fee-waiver", label: "Fee Waiver", icon: FileText },
   { to: "/proof-review", label: "Proof Review", icon: FileText },
   { to: "/filing-rejections", label: "Filing Rejections", icon: FileText },
   { to: "/checklist", label: "Checklist", icon: ListChecks },
   { to: "/timeline", label: "Timeline", icon: CalendarDays },
-  { to: "/evidence", label: "Evidence Vault", icon: Archive },
   { to: "/evidence-elements", label: "Evidence Elements", icon: Archive },
   { to: "/ingest", label: "Ingest Center", icon: Archive },
   { to: "/video-analysis", label: "Video Analysis", icon: Video },
@@ -58,7 +62,6 @@ const navItems = [
   { to: "/video-sync", label: "Video Sync", icon: Video },
   { to: "/witness", label: "Witness Matrix", icon: Users },
   { to: "/witness-prep", label: "Witness Prep Packets", icon: Users },
-  { to: "/deadlines", label: "Deadlines", icon: Timer },
   { to: "/filing", label: "Filing Checklist", icon: ClipboardList },
   { to: "/service", label: "Service of Process", icon: FileText },
   { to: "/summary-disposition", label: "Summary Disposition", icon: FileText },
@@ -90,7 +93,6 @@ const navItems = [
   { to: "/verification-hub", label: "Verification Hub", icon: FileSearch },
   { to: "/redaction-suite", label: "Redaction Suite", icon: FileText },
   { to: "/privacy-vault", label: "Privacy Vault", icon: Shield },
-  { to: "/design-system", label: "UI + Accessibility", icon: LayoutDashboard },
   { to: "/audit", label: "Audit Log", icon: ClipboardCheck },
   { to: "/privacy-safety", label: "Privacy + Safety", icon: Shield },
   { to: "/resources", label: "Resources Hub", icon: BookOpen },
@@ -98,6 +100,13 @@ const navItems = [
 ];
 
 export default function AppLayout() {
+  const [advancedOpen, setAdvancedOpen] = useState<boolean>(() => readJson(MODE_KEY, { advanced: false }).advanced);
+
+  function toggleAdvanced(next: boolean) {
+    setAdvancedOpen(next);
+    writeJson(MODE_KEY, { advanced: next });
+  }
+
   return (
     <div className="min-h-screen bg-[#0B0F1A] text-slate-100">
       <div className="flex">
@@ -106,7 +115,7 @@ export default function AppLayout() {
           <div className="mt-1 text-xs text-slate-400">Self-representation civil companion</div>
 
           <nav className="mt-6 space-y-1">
-            {navItems.map((item) => (
+            {coreNavItems.map((item) => (
               <NavLink
                 key={item.to}
                 to={item.to}
@@ -123,6 +132,37 @@ export default function AppLayout() {
               </NavLink>
             ))}
           </nav>
+
+          <div className="mt-6 rounded-lg border border-white/10 bg-white/5 p-3">
+            <div className="text-xs text-slate-400 mb-2">Mode</div>
+            <button
+              type="button"
+              onClick={() => toggleAdvanced(!advancedOpen)}
+              className="w-full rounded-md border border-white/10 bg-white/5 px-3 py-2 text-xs text-slate-200"
+            >
+              {advancedOpen ? "Hide Advanced/Admin" : "Show Advanced/Admin"}
+            </button>
+          </div>
+
+          {advancedOpen ? (
+            <nav className="mt-6 space-y-1">
+              {advancedNavItems.map((item) => (
+                <NavLink
+                  key={item.to}
+                  to={item.to}
+                  className={({ isActive }) =>
+                    [
+                      "flex items-center gap-2 rounded-md px-3 py-2 text-sm",
+                      isActive ? "bg-white/10 text-white" : "text-slate-300 hover:bg-white/5"
+                    ].join(" ")
+                  }
+                >
+                  <item.icon size={16} />
+                  <span>{item.label}</span>
+                </NavLink>
+              ))}
+            </nav>
+          ) : null}
 
           <div className="mt-8 rounded-lg border border-amber-400/30 bg-amber-500/10 p-3 text-xs text-amber-200">
             This app provides information and organization help, not legal advice.

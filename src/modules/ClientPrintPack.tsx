@@ -3,11 +3,14 @@ import Page from "../components/ui/Page";
 import { Card, CardBody, CardHeader, CardSubtitle, CardTitle } from "../components/ui/Card";
 import { readJson } from "../utils/localStore";
 import { EVIDENCE_INDEX } from "../data/evidenceIndex";
+import { computeRuleDeadlines, CaseProfile } from "../services/workflowEngine";
 
 const SETTINGS_KEY = "case_companion_settings_v1";
 const TIMELINE_KEY = "case_companion_timeline_v1";
 const DAMAGES_KEY = "case_companion_damages_v1";
 const DYNAMIC_EVIDENCE_KEY = "case_companion_dynamic_evidence_v1";
+const PROFILE_KEY = "case_companion_case_profile_v1";
+const HOLIDAYS_KEY = "case_companion_holidays_v1";
 
 type CaseSettings = {
   caseName: string;
@@ -42,6 +45,16 @@ export default function ClientPrintPack() {
   const damages = readJson<DamageEntry[]>(DAMAGES_KEY, []);
   const dynamicEvidence = readJson<DynamicEvidenceItem[]>(DYNAMIC_EVIDENCE_KEY, []);
   const evidence = [...dynamicEvidence, ...EVIDENCE_INDEX];
+  const profile = readJson<CaseProfile>(PROFILE_KEY, {
+    jurisdictionId: "mi",
+    courtLevel: "district",
+    county: "Oakland",
+    filingDate: "",
+    serviceDate: "",
+    answerDate: ""
+  });
+  const holidays = readJson<string[]>(HOLIDAYS_KEY, []);
+  const ruleDeadlines = computeRuleDeadlines(profile, holidays);
 
   return (
     <Page title="Print Pack" subtitle="Client-facing summary for quick printing.">
@@ -106,6 +119,26 @@ export default function ClientPrintPack() {
                   <li key={`${entry.category}-${idx}`}>
                     {entry.category}: ${entry.amount || "0"}
                     {entry.evidence ? ` (Evidence: ${entry.evidence})` : ""}
+                  </li>
+                ))}
+              </ul>
+            )}
+          </CardBody>
+        </Card>
+
+        <Card>
+          <CardHeader>
+            <CardSubtitle>Rule Deadlines</CardSubtitle>
+            <CardTitle>Procedural Timeline</CardTitle>
+          </CardHeader>
+          <CardBody>
+            {ruleDeadlines.length === 0 ? (
+              <div className="text-sm text-slate-400">No rule-based deadlines yet.</div>
+            ) : (
+              <ul className="space-y-2 text-sm text-slate-300">
+                {ruleDeadlines.map((item) => (
+                  <li key={item.id}>
+                    {item.dueDate} - {item.label} ({item.rule.source.citation})
                   </li>
                 ))}
               </ul>
