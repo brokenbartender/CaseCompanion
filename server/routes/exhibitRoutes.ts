@@ -44,6 +44,9 @@ export function createExhibitRouter(deps: {
   getVideoForensicsStatus: (exhibitId: string) => Promise<any>;
   listVideoForensicsArtifacts: (exhibitId: string) => Promise<any[]>;
   streamVideoArtifact: (exhibitId: string, artifactId: string) => string;
+  getPdfForensicsStatus: (exhibitId: string) => Promise<any>;
+  listPdfForensicsArtifacts: (exhibitId: string) => Promise<any[]>;
+  streamPdfArtifact: (exhibitId: string, artifactId: string) => string;
 }) {
   const router = express.Router();
   const enforceIntegrityGate = async (req: any, res: any, context: string) => {
@@ -741,8 +744,9 @@ export function createExhibitRouter(deps: {
         }
       });
       if (!exhibit) return res.status(404).json({ error: 'Exhibit not found' });
-      const status = await deps.getVideoForensicsStatus(exhibitId);
-      res.json({ exhibit, status });
+      const videoStatus = await deps.getVideoForensicsStatus(exhibitId);
+      const pdfStatus = await deps.getPdfForensicsStatus(exhibitId);
+      res.json({ exhibit, status: { video: videoStatus, pdf: pdfStatus }, videoStatus, pdfStatus });
     }) as any
   );
 
@@ -755,13 +759,24 @@ export function createExhibitRouter(deps: {
       if (await enforceIntegrityGate(req, res, 'EXHIBIT_ARTIFACT_LIST')) return;
       const exhibitId = String(req.params.exhibitId || '').trim();
       if (!exhibitId) return res.status(400).json({ error: 'exhibitId required' });
-      const artifacts = await deps.listVideoForensicsArtifacts(exhibitId);
-      const status = await deps.getVideoForensicsStatus(exhibitId);
+      const videoArtifacts = await deps.listVideoForensicsArtifacts(exhibitId);
+      const pdfArtifacts = await deps.listPdfForensicsArtifacts(exhibitId);
+      const combined = [...pdfArtifacts, ...videoArtifacts];
+      const merged = new Map<string, any>();
+      for (const artifact of combined) {
+        if (!artifact?.path) continue;
+        if (!merged.has(artifact.path)) {
+          merged.set(artifact.path, artifact);
+        }
+      }
+      const artifacts = Array.from(merged.values()).sort((a, b) => String(a.path).localeCompare(String(b.path)));
+      const videoStatus = await deps.getVideoForensicsStatus(exhibitId);
+      const pdfStatus = await deps.getPdfForensicsStatus(exhibitId);
       const withUrls = artifacts.map((artifact: any) => ({
         ...artifact,
         downloadUrl: `/api/exhibits/${exhibitId}/artifacts/${encodeURIComponent(artifact.id)}`
       }));
-      res.json({ exhibitId, status, artifacts: withUrls });
+      res.json({ exhibitId, status: { video: videoStatus, pdf: pdfStatus }, videoStatus, pdfStatus, artifacts: withUrls });
     }) as any
   );
 
@@ -776,7 +791,12 @@ export function createExhibitRouter(deps: {
       const artifactId = decodeURIComponent(String(req.params.artifactId || ''));
       if (!exhibitId || !artifactId) return res.status(400).json({ error: 'exhibitId and artifactId required' });
       try {
-        const filePath = deps.streamVideoArtifact(exhibitId, artifactId);
+        let filePath = '';
+        try {
+          filePath = deps.streamPdfArtifact(exhibitId, artifactId);
+        } catch {
+          filePath = deps.streamVideoArtifact(exhibitId, artifactId);
+        }
         await deps.logAuditEvent(req.workspaceId, req.userId, 'EXHIBIT_ARTIFACT_DOWNLOAD', {
           exhibitId,
           artifactId

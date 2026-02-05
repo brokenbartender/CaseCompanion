@@ -75,6 +75,12 @@ import {
   listVideoForensicsArtifacts,
   streamVideoArtifact
 } from './services/videoForensics.js';
+import {
+  processPdfForensics,
+  getPdfForensicsStatus,
+  listPdfForensicsArtifacts,
+  streamPdfArtifact
+} from './services/pdfForensics.js';
 import { createTeleportRouter } from './routes/teleportRoutes.js';
 import { createResearchRouter } from './routes/researchRoutes.js';
 import { createComplianceRouter } from './routes/complianceRoutes.js';
@@ -1920,10 +1926,25 @@ async function ingestExhibit(opts: {
 
   const isVideo = file.mimetype?.startsWith('video/')
     || /\.(mp4|mov|avi|mkv|webm)$/i.test(file.originalname || '');
+  const isPdf = file.mimetype === 'application/pdf'
+    || /\.pdf$/i.test(file.originalname || '');
 
   if (isVideo) {
     setImmediate(() => {
       processVideoForensics({
+        exhibitId: exhibit.id,
+        workspaceId,
+        userId,
+        storageKey,
+        filename: file.originalname,
+        logAuditEvent
+      }).catch(() => null);
+    });
+  }
+
+  if (isPdf) {
+    setImmediate(() => {
+      processPdfForensics({
         exhibitId: exhibit.id,
         workspaceId,
         userId,
@@ -8002,7 +8023,10 @@ app.use(createExhibitRouter({
   convertBufferToDocx,
   getVideoForensicsStatus,
   listVideoForensicsArtifacts,
-  streamVideoArtifact
+  streamVideoArtifact,
+  getPdfForensicsStatus,
+  listPdfForensicsArtifacts,
+  streamPdfArtifact
 }));
 
 app.use(createTeleportRouter());
