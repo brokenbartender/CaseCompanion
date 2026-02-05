@@ -152,6 +152,8 @@ This backlog maps the Michigan civil case lifecycle (benchbook-driven) and legal
 - Steps: store instructions for reference only; ensure civil app displays criminal-side context accurately when needed
 61. **E1/E7** MCL 750.81 statutory reference (assault/battery)
 - Steps: surface statute summary, link to penalties and definitions in case context
+62. **E5** Demonstrative exhibit builder + admissibility checklist
+- Steps: create visual exhibits from frames, foundation prompts, relevance/prejudice check
 56. **E2** Layout-aware document parsing (RAGFlow DeepDoc)
 - Steps: evaluate OCR + layout + table structure extraction for PDFs/forms
 
