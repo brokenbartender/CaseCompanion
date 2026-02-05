@@ -1,0 +1,390 @@
+AI Tools for Lawyers – A Practical Guide
+
+     Publication of the Law Practice Management and
+                    Technology Committee
+
+                                                                                                      July 1, 2025
+Artificial intelligence (“AI”) is transforming the legal industry at a remarkable pace and
+now plays a practical, everyday role in law firms across the globe. Whether automating
+routine tasks, conducting advanced legal research, or enhancing client services, AI has
+the potential to reshape how legal professionals operate. However, with numerous AI
+platforms and tools available, selecting the right solution for your law firm can feel
+overwhelming. This guide aims to simplify that decision and provide a brief overview of
+popular GenAI tools used by attorneys.
+
+Benefits and Uses
+
+We will begin with looking at some of the benefits of AI in your practice:
+
+    • Increased Efficiency: AI tools can significantly enhance the efficiency of legal
+         practices by automating routine tasks and expediting otherwise complex
+         processes. For example, AI-powered document review systems can analyze
+         vast volumes of information in a fraction of the time it would take a human,
+         freeing up time to focus on other tasks.
+
+    • Improved Accuracy: The precision of AI tools in handling data and performing
+         analyses is unparalleled. AI systems can meticulously organize and manage
+         critical and voluminous documents (such a medical records or voluminous expert
+         reports).
+
+    • Cost Savings: By automating labor-intensive tasks, AI tools contribute to
+         significant cost savings for law firms. The reduction in "man hours" required for
+         tasks like document review and data analysis allows firms to allocate resources
+         more effectively.
+
+    • Enhanced Research Capabilities: AI-powered research tools, such as Westlaw
+         Co-Counsel and Filevine, provide attorneys with advanced capabilities to conduct
+         comprehensive legal research. These tools can quickly sift through extensive
+         legal databases to identify relevant case law, statutes, and legal precedents,
+         empowering attorneys with the information needed to build compelling
+         arguments. Additionally, AI systems can assist in generating helpful information
+         for aspects of cases such as demand letters, which are crucial in settlement
+         negotiations.
+
+    • Better Client Service: AI tools enhance client service by improving
+         communication and responsiveness. For example, AI systems can track
+         communications, ensuring that follow-ups and action items are noted for future
+         tasks. This proactive approach to case management can simplify tasks and
+         improve client relationships.
+
+    • Practical Applications: AI tools can be used to assist in the performance of
+         tasks common to most law practices. For instance, AI-powered systems can
+         assist in scheduling and managing deadlines, reducing the risk of missed
+         deadlines, and ensuring compliance with court requirements.
+
+The specific areas where AI appears to be making the largest impact in the legal field:
+
+                                                                                                                    2
+    • Legal Research: AI can swiftly scan extensive case law databases, statutes,
+         and regulations. These tools can pinpoint the most relevant results based on
+         context, thereby saving hours of manual effort. Advanced AI can even identify
+         patterns and suggest related issues that a manual search might miss.
+
+    • Document Review: Discovery is among the most time-consuming aspects of
+         litigation. AI tools can efficiently classify, tag, and extract key information from
+         thousands of documents. Predictive coding and Technology Assisted Review
+         (TAR) alleviate the burden on attorneys while enhancing accuracy. Some
+         platforms also offer sentiment analysis and redaction automation.
+
+    • Contract Review and Analysis: AI platforms can analyze contracts to highlight
+         missing clauses, pinpoint risks, and ensure regulatory compliance. These tools
+         assist attorneys in reducing review time from hours to minutes and support things
+         like version comparisons and clause libraries.
+
+    • Litigation Prediction: AI tools leverage data analytics to predict litigation
+         outcomes, judge behaviors, and opposing counsel strategies. This enhances
+         strategy development and client counseling by enabling firms to tailor arguments,
+         set settlement expectations, and determine venue decisions based on data-
+         driven insights.
+
+    • Client Communication and Intake: Chatbots and virtual assistants can handle
+         client inquiries, schedule appointments, and collect initial information. Several
+         tools are specifically designed for legal applications and can integrate with
+         systems to enhance client onboarding and ensure consistent engagement.
+
+    • Billing and Time Tracking: AI can automate time entry, suggest billing codes,
+         and identify billing inefficiencies. Several tools offer AI-driven timekeeping
+         features that automatically track time spent on calls, emails, and document
+         editing, ensuring more accurate and complete billing.
+
+Strategy for Use of AI
+
+A successful AI adoption strategy starts with clearly understanding your firm's unique
+needs. Some important factors you may consider:
+
+    • Practice Area: Different legal practices require different AI functionalities. For
+         example, personal injury attorneys may focus on client intake and case
+         management, while intellectual property firms may prioritize document search
+         and pattern recognition for prior art. Employment law firms might benefit from
+         compliance monitoring and real estate attorneys from automated deed and title
+         reviews.
+
+    • Firm Size and Structure: A solo attorney or small firm may prefer cloud-based,
+         low-cost solutions that require minimal IT support, while a large firm with an IT
+         department might invest in a robust on-premises AI platform with advanced
+         analytics, user permissions management, and multi-office integration.
+
+    • Case Volume and Complexity: High-volume firms will benefit more from
+         automation and document analysis tools that reduce manual labor and human
+         error. Complex litigation firms might prioritize advanced legal analytics and
+
+                                                                                                                    3
+         collaborative features to support multi-lawyer teams working on high-stakes
+         cases.
+    • Client Expectations: Are your clients demanding faster turnarounds or more
+         detailed analytics? Tech-savvy clients may expect online portals, real-time
+         updates, and transparency in billing, all of which AI-driven solutions can support
+         or enhance.
+    • Budget Constraints: Determine how much your firm can invest in financial
+         resources and personnel training. Account for the upfront costs of licenses or
+         subscriptions and long-term expenses related to maintenance, upgrades, and
+         user training.
+
+When comparing AI platforms, keep an eye on these key capabilities:
+
+    • Customizability: Your platform should adapt to your firm's workflows, not vice
+         versa.
+
+    • Data Security and Compliance: Ensure the platform meets strict data
+         protection standards. Features like role-based access, audit trails, and encryption
+         should be standard.
+
+    • User Experience: Choose platforms with an intuitive interface and clear user
+         documentation. Consider platforms that provide visual workflows, searchable
+         help centers, and embedded support tools to reduce training time.
+
+    • Scalability: Ensure the platform can grow as your firm expands. It should be
+         able to accommodate more users, larger data sets, and additional functionalities
+         without a performance drop.
+
+Additionally, key evaluation criteria should include:
+
+    • Industry Experience: Does the vendor specialize in legal tech? Have they
+         worked with firms like yours? Look for vendors who demonstrate domain-specific
+         knowledge and an understanding of legal workflows.
+
+    • Client Reviews and References: Look for third-party reviews, testimonials, and
+         case studies that address performance and customer satisfaction. Peer feedback
+         is often the most reliable predictor of vendor success.
+
+    • Customer Support: Evaluate training, onboarding resources, and technical
+         support availability. Live chat, helpdesk tickets, and dedicated account managers
+         can make a big difference during implementation and troubleshooting.
+
+    • Contract Terms: Avoid long-term lock-ins, automatic renewals, or unclear
+         pricing structures. Flexible, short-term contracts are often preferable during initial
+         deployment.
+
+    • Trial Period: Insist on a pilot program. Run the platform through real-world
+         scenarios to evaluate ease of use, output accuracy, and compatibility with firm
+         processes.
+
+AI solutions for law firms range widely in cost. Typical cost consideration models
+include:
+
+                                                                                                                    4
+    • Subscription-Based: Flat-rate pricing per user/month. Suitable for small to mid-
+         sized firms that need predictable budgeting. Often includes tiered features and
+         user access levels.
+
+    • Usage-Based: Fees are based on the volume of documents processed or hours
+         used. Suitable for litigation or project-based firms that require flexibility and
+         expect fluctuations in workload.
+
+    • Enterprise Licensing: Large firms may negotiate enterprise-wide agreements
+         with custom features, support, and implementation services. These often involve
+         significant upfront investment but lower per-user costs.
+
+    • “Freemium” Pricing: Some platforms offer free core features and charge for
+         advanced tools like analytics, automation, or premium integrations.
+
+When considering pricing, you should do a cost-benefit analysis and consider things like
+time saved, hourly wage savings and client satisfaction. Choosing the right AI platform
+for your law firm is more than a technology decision—it’s strategic. By understanding
+AI's capabilities, evaluating your firm’s needs, and comparing features and vendors, you
+can set your practice up for long-term success.
+
+Key Ethical Considerations
+
+In choosing to incorporate AI into a legal practice it is important to consider ethical
+obligations and platform security. Law firms using AI must prioritize ethical considerations
+and ensure AI is used responsibly. Because AI technology relies on algorithms to analyze
+vast amounts of data, depending on the type of data it draws from, the results can be
+biased. Relying on biased information can impact outcomes which can be especially
+detrimental for the legal community. Accuracy is another significant issue when using AI.
+It is often the top barrier preventing many lawyers from adopting AI into their practice.
+Accordingly, you want to be cautious. For example, confirm the accuracy of legal citations
+and fact check any sources of information before incorporating them into your documents.
+
+When using AI technology, lawyers need to ensure that AI systems adhere to strict data
+privacy regulations. Additionally, you would want to make sure that data is only used for
+the specific purpose for which it was collected. Lawyers must always consider
+professional obligations relating to privacy and information-sharing when using
+information with AI systems to ensure that are not in breach of confidentiality obligations
+or otherwise disclosing information improperly.
+
+Lawyers are ultimately responsible for information and any errors that may appear with
+the use of AI. As a result, lawyers must be proactive in establishing clear lines of
+responsibility and accountability when implementing AI in their firm. The best rule of
+thumb is to use AI technology as a complement to your work product, not a replacement.
+In so doing, lawyers will be able to enjoy AI’s transformative benefits while maintaining
+an ethical practice. While AI can streamline time-consuming tasks, it is under no
+circumstances a replacement for a lawyer’s training, wisdom and judgement. For more
+information regarding ethical duties and considerations of AI in for your law practice, see
+Ethics Opinion No. 267 of the Mississippi Bar.
+
+                                                                                                                    5
+AI Tools
+
+Virtually every tool or platform listed offers not only demonstrations, but free trials. This
+offers practitioners the ability to evaluate each of the tools for themselves without
+committing to a long-term obligation. We provide an overview of options below to get you
+started depending on your needs:
+
+1. Case Management Tools
+
+    • 2nd Chair.ai - 2nd Chair is a case management and legal research tool co-
+         founded by a graduate of the University of Mississippi School of Law. 2nd Chair
+         allows users to upload all its files to a system that can analyze the documents,
+         prepare summaries, and accelerate the identification of facts within those
+         documents. 2nd Chair also provides legal research help and allows users to see
+         the sources of its answers.
+
+    • Clio Duo – Clio’s cloud-based legal practice management platform centralizes
+         law firm operations and offers GenAI add-ons. Clio Duo embeds within Clio
+         Manage, allowing users to access GenAI and machine learning within their Clio
+         database. Powered by Microsoft Azure OpenAI GPT-4, Clio Duo summarizes
+         documents, drafting e-mails and letters, and helps prioritize workflows.
+
+    • Filevine - Filevine automates financial data extraction, labeling, and
+         categorization. It tracks billable hours and invoices, and analyzes lead data from
+         online forms, social media, and referrals. Filevine’s ImmigrationAI feature lets
+         attorneys quickly identify relevant forms, autofill them with client data, and
+         provide translations in over 170 languages. Filevine’s Demands AI creates
+         documents such as custom demand letters by analyzing case details and
+         relevant legal precedents. Filevine’s Sidebar AI uses a virtual AI legal assistant to
+         provide real-time support.
+
+    • LEAP - LEAP tracks and records billable hours. LEAP’s time analytics can help
+         identify areas to optimize time management. LEAP’s AI assistant, LawY,
+         addresses legal questions by analyzing case law. LEAP’s Document Generator
+         (LawY) uses historical cases and built-in templates to automate document
+         creation including correspondence and templates.
+
+    • MyCase - MyCase automates document generation, email drafting, and data
+         extraction. It also analyzes context and legal precedents to create affidavits,
+         contracts, and other documents. MyCase’s GenAI-enhanced search helps locate
+         and retrieve important case information. MyCase also seeks to improve workflow
+         by automatically creating tasks and events based on information extracted from
+         uploaded documents.
+
+    • Smokeball - Smokeball automates billable hours tracking to generate detailed
+         time entries. If given access, Smokeball can scan e-mail inboxes to save emails
+         and attachments to their related cases. Smokeball also provides detailed
+
+                                                                                                                    6
+         financial analytics for particular clients and matters. Smokeball can also help
+         automatize intake processes and legal form creation.
+
+    • CosmoLex - CosmoLex is cloud-based law practice management software that
+         integrates trust and business accounting, time tracking, billing, email & document
+         management, and tasks & calendaring, in a single application. CosmoLex offers
+         features like an interactive GenAI chatbot for real-time case questions,
+         automated document drafting, and searchable medical chronologies and case
+         timelines. However, CosmoLex is primarily a billing and accounting platform.
+
+2. Case Outcome Prediction Tool
+
+    • Lex Machina - Lex Machina uses AI technology to provide case predictions. Lex
+         Machina, offered by LexisNexis, pitches itself as providing predictions regarding
+         the outcome of cases based on the history of the court, judge(s), lawyers, and
+         parties involved in the matter. Lex Machina identifies the prior cases it relies on
+         and provides visualizations to help attorneys more easily understand the
+         information presented.
+
+3. Contract Analysis and Management Tools
+
+    • Diligen - Diligen is a machine learning contract analysis tool. Diligen can match
+         due diligence documents with contractual provisions, find specific provisions
+         across agreements and provide contract summaries. Diligen enables automated
+         contract drafting and clause identification. Diligen is compatible with Clio and can
+         run its analyses on documents in a Clio system.
+
+    • Ironclad - Ironclad is a contract management system. Ironclad allows companies
+         to manage their contracts throughout the entire contract cycle from drafting to
+         expiration. Ironclad uses AI to data tag contracts, suggest redlines, flag unallowed
+         clauses, and create a dashboard contract reporting. Ironclad offers a GenAI
+         assistant, Jurist, capable of drafting contracts, contract clauses, redlines, and
+         performing research on your contract database as well as legal and regulatory
+         resources. Ironclad also offers a prompt library to help users new to GenAI to
+         quickly become proficient.
+
+    • Kira Systems - Kira Systems is a machine learning contract analysis tool. Kira
+         Systems, offered by Litera, uses machine learning to identify, extract, and
+         analyze contractual clauses. Kira Systems can also compare data from
+         documents with contract provisions. Kira Systems’ marketing focuses largely on
+         analyzing contracts as part of the due diligence process.
+
+4. E-Discovery Tools
+
+    • Everlaw - Everlaw is an e-discovery platform that integrates AI into its research
+         and case preparation platform to identify documents through analytics and
+         counterarguments. Everlaw’s Storybuilder uses machine learning and GenAI to
+
+                                                                                                                    7
+         develop timelines and organize the story of the parties’ dispute. Everlaw can also
+         summarize key documents and create draft communications with verifiable
+         citations to documents.
+
+    • Relativity - Relativity uses generative AI for efficient document review during the
+         research process. Relativity uses machine learning to narrow the scope of
+         documents that need human review before production. It also can help identify
+         the most important documents that have been produced by opposing counsel.
+         Relativity is also a leader in providing analytics and visualizations of discovery
+         documents.
+
+5. Legal Research Tools
+
+    • Bloomberg Law – Bloomberg Law uses GenAI and machine learning to provide
+         immediate results for queries against both case documents and legal sources.
+         Using machine learning, Bloomberg’s Smart Code pulls case extracts interpreting
+         both federal and state law. Among its features, it ranks each case discussion as
+         strong, moderate, or weak to streamline research. Bloomberg also offers a Brief
+         Analyzer which automatically checks citations, searches cited case law, and can
+         suggest related authorities.
+
+    • Harvey AI - Harvey AI is a GenAI-powered legal research tool that operates as a
+         chatbot. HarveyAI is built on OpenAI technology. However, Harvey AI also uses
+         a separate legal database to improve its research answers. and a law firm’s own
+         work products and templates to specifically support legal work. Harvey AI also
+         allows users and firms to upload historical case documents which its service will
+         scan as part of its legal research and document analysis. Harvey AI is designed
+         to assist firms with contract analysis, due diligence, litigation, and regulatory
+         compliance.
+
+    • Lexis+ - Lexis+ uses GenAI to search its databases, improving its search
+         functionality. Lexis+ also offers a powerful document analysis tool that allows
+         users to upload briefs which are then analyzed for additional authority supporting
+         the arguments raised or authority that contradicts or may weaken those
+         arguments. Lexis+ also offers litigation analytics, showing prior results from your
+         particular jurisdiction and judge.
+
+    • vLex fastcase - Vincent AI’s vLex uses GenAI search against a database
+         containing case law, legislative information, law journals, and other secondary
+         sources. vLex will also summarize documents, including legal documents such
+         as contracts. For litigators, vLex uses GenAI to build timelines and suggest
+         arguments. vLex is powered by legal sources from all fifty states and seventeen
+         countries.
+
+    • Westlaw Edge - Westlaw Edge uses GenAI trained on Westlaw’s KeyCites to
+         help ensure attorneys collect the accurate sources during the research process.
+         Westlaw Edge analyzes briefs generating a report indicating authority that may
+
+                                                                                                                    8
+         have been missed in research or which contradicts the authority cited by
+         opposing counsel.
+
+6. Legal Specific LLMs
+
+    • CoCounsel – CoCounsel is a large language model powered by OpenAI. This
+         product is made available by Westlaw/Thomson Reuters but is compatible with
+         other legal service software platforms as well. This AI legal assistant tool is
+         knowledgeable, reliable, and secure enough to support the practice of law.
+         Cocounsel operates similarly to other LLMs but it was trained for the law.
+         Importantly, while Cocounsel is powered by OpenAI, it has a dedicated server
+         that does not (currently) allow OpenAI to train on the uploaded data.
+
+7. Virtual Receptionists
+
+    • Smith.ai - Smith.ai is a virtual receptionist. While AI technology is not able to
+         replace attorneys, it can replace or limit the burden on existing staff. Although the
+         “virtual receptionist” is an actual human, Smith.ai uses AI with its chatbot features
+         to decide how to log and route calls. Both the receptionist and chat features
+         integrate with Clio.
+
+This guide was prepared by members of the Law Practice Management and Technology Committee.
+Neither the Mississippi Bar Association nor the authors of this document endorse any of the specific tools
+identified herein. Instead, this guide is provided solely for informational purposes.
+
+                                                                                                                    9
+
