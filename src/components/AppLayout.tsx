@@ -52,6 +52,7 @@ const advancedNavItems = [
   { to: "/checklist", label: "Checklist", icon: ListChecks },
   { to: "/timeline", label: "Timeline", icon: CalendarDays },
   { to: "/evidence-elements", label: "Evidence Elements", icon: Archive },
+  { to: "/claim-tree", label: "Claim Tree", icon: Archive },
   { to: "/ingest", label: "Ingest Center", icon: Archive },
   { to: "/video-analysis", label: "Video Analysis", icon: Video },
   { to: "/layout-parser", label: "Layout Parser", icon: FileSearch },

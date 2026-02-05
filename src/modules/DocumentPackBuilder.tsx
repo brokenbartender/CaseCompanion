@@ -2,8 +2,10 @@ import React, { useState } from "react";
 import Page from "../components/ui/Page";
 import { Card, CardBody, CardHeader, CardSubtitle, CardTitle } from "../components/ui/Card";
 import { readJson, writeJson } from "../utils/localStore";
+import { CaseProfile } from "../services/workflowEngine";
 
 const STORAGE_KEY = "case_companion_doc_pack_v1";
+const PROFILE_KEY = "case_companion_case_profile_v1";
 
 type PackState = Record<string, boolean>;
 
@@ -19,6 +21,28 @@ const PACK_ITEMS = [
 export default function DocumentPackBuilder() {
   const [state, setState] = useState<PackState>(() => readJson(STORAGE_KEY, {}));
   const [notes, setNotes] = useState(() => readJson(`${STORAGE_KEY}_notes`, ""));
+  const profile = readJson<CaseProfile>(PROFILE_KEY, {
+    jurisdictionId: "mi",
+    courtLevel: "district",
+    county: "Oakland",
+    filingDate: "",
+    serviceDate: "",
+    answerDate: "",
+    discoveryServedDate: "",
+    motionServedDate: "",
+    pretrialDate: "",
+    claimAmount: undefined,
+    venueBasis: "",
+    venueCounty: "Oakland"
+  });
+
+  const amountKnown = typeof profile.claimAmount === "number" && profile.claimAmount > 0;
+  const amountSuggestsCircuit = amountKnown && profile.claimAmount > 25000;
+  const courtMismatch =
+    (amountSuggestsCircuit && profile.courtLevel === "district") ||
+    (!amountSuggestsCircuit && amountKnown && profile.courtLevel === "circuit");
+  const missingVenue = !profile.venueBasis || !profile.venueCounty;
+  const blockExport = courtMismatch || missingVenue;
 
   function toggle(id: string) {
     const next = { ...state, [id]: !state[id] };
@@ -69,10 +93,18 @@ export default function DocumentPackBuilder() {
             <button
               type="button"
               onClick={exportPacket}
-              className="mt-4 w-full rounded-md bg-amber-500 px-3 py-2 text-sm font-semibold text-slate-900"
+              disabled={blockExport}
+              className={`mt-4 w-full rounded-md px-3 py-2 text-sm font-semibold ${
+                blockExport ? "bg-slate-700 text-slate-400" : "bg-amber-500 text-slate-900"
+              }`}
             >
               Export Packet Checklist
             </button>
+            {blockExport ? (
+              <div className="mt-3 text-xs text-amber-200">
+                Complete venue and court checks in Filing Flow before exporting.
+              </div>
+            ) : null}
           </CardBody>
         </Card>
 
@@ -82,6 +114,14 @@ export default function DocumentPackBuilder() {
             <CardTitle>Document Pack Items</CardTitle>
           </CardHeader>
           <CardBody>
+            {courtMismatch || missingVenue ? (
+              <div className="mb-3 rounded-md border border-amber-400/30 bg-amber-500/10 p-3 text-xs text-amber-200">
+                Guardrail active: fix court level or venue basis in Filing Flow to proceed with complaint/service packet.
+                <div className="mt-2">
+                  <a href="/filing-flow" className="text-amber-200 underline">Open Filing Flow</a>
+                </div>
+              </div>
+            ) : null}
             <ul className="space-y-2 text-sm text-slate-300">
               {PACK_ITEMS.map((item) => (
                 <li key={item.id} className="flex items-start gap-3">

@@ -7,6 +7,12 @@ export type CaseProfile = {
   filingDate?: string;
   serviceDate?: string;
   answerDate?: string;
+  discoveryServedDate?: string;
+  motionServedDate?: string;
+  pretrialDate?: string;
+  claimAmount?: number;
+  venueBasis?: string;
+  venueCounty?: string;
 };
 
 export type RuleDeadline = {
@@ -46,12 +52,26 @@ export function computeRuleDeadlines(profile: CaseProfile, holidays: string[]): 
   const triggerMap: Record<string, string | undefined> = {
     filing_date: profile.filingDate,
     service_date: profile.serviceDate,
-    answer_date: profile.answerDate
+    answer_date: profile.answerDate,
+    discovery_served_date: profile.discoveryServedDate,
+    motion_served_date: profile.motionServedDate,
+    pretrial_date: profile.pretrialDate
   };
 
   ruleSet.stages.forEach((stage) => {
     stage.rules.forEach((rule) => {
       const triggerDate = triggerMap[rule.trigger];
+      if (rule.days == null) {
+        if (rule.trigger !== "custom" && !triggerDate) return;
+        deadlines.push({
+          id: `${stage.id}-${rule.id}`,
+          label: rule.label,
+          dueDate: "",
+          rule: { ...rule, manual: true },
+          triggerDate
+        });
+        return;
+      }
       if (!triggerDate) return;
       const start = new Date(triggerDate);
       if (Number.isNaN(start.getTime())) return;
@@ -66,5 +86,5 @@ export function computeRuleDeadlines(profile: CaseProfile, holidays: string[]): 
     });
   });
 
-  return deadlines.sort((a, b) => a.dueDate.localeCompare(b.dueDate));
+  return deadlines.sort((a, b) => (a.dueDate || "9999-12-31").localeCompare(b.dueDate || "9999-12-31"));
 }
