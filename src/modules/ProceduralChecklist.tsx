@@ -23,6 +23,25 @@ export default function ProceduralChecklist() {
     return { done, total };
   }, [state]);
 
+  function exportChecklist() {
+    const lines = [
+      "CaseCompanion Procedural Checklist",
+      "",
+      ...PROCEDURE_STEPS.flatMap((block) => [
+        `## ${block.title}`,
+        ...block.checklist.map((task) => `- [${state?.[block.id]?.[task] ? "x" : " "}] ${task}`),
+        ""
+      ])
+    ];
+    const blob = new Blob([lines.join("\n")], { type: "text/plain" });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = "procedural_checklist.txt";
+    a.click();
+    URL.revokeObjectURL(url);
+  }
+
   function toggle(stepId: string, task: string) {
     setState((prev) => {
       const next: ChecklistState = { ...prev };
@@ -37,6 +56,15 @@ export default function ProceduralChecklist() {
       title="Checklist"
       subtitle={`Rule-aligned tasks and deadlines. Completed ${totals.done}/${totals.total}.`}
     >
+      <div className="mb-4">
+        <button
+          type="button"
+          onClick={exportChecklist}
+          className="rounded-md bg-amber-500 px-3 py-2 text-xs font-semibold text-slate-900"
+        >
+          Export Checklist
+        </button>
+      </div>
       <div className="grid gap-6">
         {PROCEDURE_STEPS.map((block) => (
           <Card key={block.id}>

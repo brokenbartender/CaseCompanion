@@ -83,7 +83,7 @@ export default function FilingFlowWizard() {
               </select>
               {caseType === "small-claims" ? (
                 <div className="text-xs text-amber-200">
-                  Some case types are not eligible for e‑filing. Confirm with the clerk before filing.
+                  This case type may not be eligible for e‑filing. Do not proceed until confirmed with the clerk.
                 </div>
               ) : null}
               <div className="text-xs text-slate-400">
@@ -108,7 +108,11 @@ export default function FilingFlowWizard() {
             </ul>
             <a
               href="/filing"
-              className="mt-4 inline-flex rounded-md bg-amber-500 px-3 py-2 text-xs font-semibold text-slate-900"
+              className={`mt-4 inline-flex rounded-md px-3 py-2 text-xs font-semibold ${
+                caseType === "small-claims"
+                  ? "bg-slate-700 text-slate-400 pointer-events-none"
+                  : "bg-amber-500 text-slate-900"
+              }`}
             >
               Open Filing Checklist
             </a>

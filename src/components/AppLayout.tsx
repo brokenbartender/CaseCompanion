@@ -38,6 +38,8 @@ const navItems = [
   { to: "/doc-pack", label: "Document Pack", icon: FileText },
   { to: "/mifile-reconnect", label: "MiFILE Reconnect", icon: FileText },
   { to: "/fee-waiver", label: "Fee Waiver", icon: FileText },
+  { to: "/proof-review", label: "Proof Review", icon: FileText },
+  { to: "/filing-rejections", label: "Filing Rejections", icon: FileText },
   { to: "/checklist", label: "Checklist", icon: ListChecks },
   { to: "/timeline", label: "Timeline", icon: CalendarDays },
   { to: "/evidence", label: "Evidence Vault", icon: Archive },

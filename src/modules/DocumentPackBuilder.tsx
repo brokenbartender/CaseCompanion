@@ -32,6 +32,24 @@ export default function DocumentPackBuilder() {
   }
 
   const completed = PACK_ITEMS.filter((item) => state[item.id]).length;
+  const exportLines = [
+    "CaseCompanion Filing Packet Checklist",
+    "",
+    ...PACK_ITEMS.map((item) => `- [${state[item.id] ? "x" : " "}] ${item.label}`),
+    "",
+    "Notes:",
+    notes || ""
+  ];
+
+  function exportPacket() {
+    const blob = new Blob([exportLines.join("\n")], { type: "text/plain" });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = "filing_packet_checklist.txt";
+    a.click();
+    URL.revokeObjectURL(url);
+  }
 
   return (
     <Page title="A-to-Z Document Pack" subtitle="Build your filing packet step-by-step.">
@@ -48,6 +66,13 @@ export default function DocumentPackBuilder() {
             <div className="mt-3 text-xs text-slate-400">
               Use this checklist to keep documents separate and court-ready.
             </div>
+            <button
+              type="button"
+              onClick={exportPacket}
+              className="mt-4 w-full rounded-md bg-amber-500 px-3 py-2 text-sm font-semibold text-slate-900"
+            >
+              Export Packet Checklist
+            </button>
           </CardBody>
         </Card>
 

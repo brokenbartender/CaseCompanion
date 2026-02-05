@@ -10,6 +10,7 @@ export default function ServiceOfProcessWizard() {
   const [proofs, setProofs] = useState<string[]>(() => readJson("case_companion_proof_uploads_v1", []));
   const [uploadStatus, setUploadStatus] = useState("");
   const [defendantRegistered, setDefendantRegistered] = useState<"yes" | "no" | "unsure">("unsure");
+  const [defendantType, setDefendantType] = useState("individual");
 
   function handleProofUpload(file?: File | null) {
     if (!file) return;
@@ -79,6 +80,49 @@ export default function ServiceOfProcessWizard() {
                   Confirm with the clerk or MiFILE party list before relying on e‑service.
                 </div>
               ) : null}
+            </div>
+          </CardBody>
+        </Card>
+
+        <Card>
+          <CardHeader>
+            <CardSubtitle>Decision Helper</CardSubtitle>
+            <CardTitle>Service Method</CardTitle>
+          </CardHeader>
+          <CardBody>
+            <div className="space-y-3 text-sm text-slate-300">
+              <div className="text-xs text-slate-400">Defendant type</div>
+              <select
+                className="w-full rounded-md border border-white/10 bg-white/5 px-3 py-2 text-sm text-slate-100"
+                value={defendantType}
+                onChange={(e) => setDefendantType(e.target.value)}
+              >
+                <option value="individual">Individual</option>
+                <option value="company">Company / business</option>
+                <option value="government">Government entity</option>
+              </select>
+              <div className="text-xs text-amber-200">
+                Suggested method:{" "}
+                {defendantType === "individual"
+                  ? "Personal service or alternate service with court approval."
+                  : defendantType === "company"
+                    ? "Serve registered agent or officer."
+                    : "Serve the designated agent or clerk as required."}
+              </div>
+              <div className="text-[10px] text-slate-500">Verify rules under MCR 2.105.</div>
+            </div>
+          </CardBody>
+        </Card>
+
+        <Card>
+          <CardHeader>
+            <CardSubtitle>Rules</CardSubtitle>
+            <CardTitle>MCR 2.102 / 2.104 / 2.105</CardTitle>
+          </CardHeader>
+          <CardBody>
+            <div className="text-sm text-slate-300">
+              Summons issuance, service requirements, and proof of service rules apply here. Use official MCR text for
+              exact details.
             </div>
           </CardBody>
         </Card>

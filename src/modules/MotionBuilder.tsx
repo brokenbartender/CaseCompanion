@@ -23,6 +23,21 @@ export default function MotionBuilder() {
           </Card>
         ))}
       </div>
+      <div className="mt-6">
+        <Card>
+          <CardHeader>
+            <CardSubtitle>Praecipe</CardSubtitle>
+            <CardTitle>ePraecipe Quick Start</CardTitle>
+          </CardHeader>
+          <CardBody>
+            <ul className="space-y-2 text-sm text-slate-300">
+              <li>Confirm whether your motion requires a praecipe.</li>
+              <li>Use the county ePraecipe system if required.</li>
+              <li>Attach the praecipe confirmation to your filing notes.</li>
+            </ul>
+          </CardBody>
+        </Card>
+      </div>
     </Page>
   );
 }

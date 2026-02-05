@@ -2,6 +2,7 @@ import React, { useMemo, useState } from "react";
 import Page from "../components/ui/Page";
 import { Card, CardBody, CardHeader, CardSubtitle, CardTitle } from "../components/ui/Card";
 import { DAMAGES_CATEGORIES, DamagesEntry } from "../data/damagesTemplates";
+import { EVIDENCE_INDEX } from "../data/evidenceIndex";
 import { readJson, writeJson } from "../utils/localStore";
 
 const STORAGE_KEY = "case_companion_damages_v1";
@@ -72,12 +73,18 @@ export default function ForensicFinance() {
                 value={form.amount}
                 onChange={(e) => setForm({ ...form, amount: e.target.value })}
               />
-              <input
+              <select
                 className="w-full rounded-md border border-white/10 bg-white/5 px-3 py-2 text-sm text-slate-100"
-                placeholder="Evidence reference (Exhibit)"
                 value={form.evidence}
                 onChange={(e) => setForm({ ...form, evidence: e.target.value })}
-              />
+              >
+                <option value="">Select evidence (optional)</option>
+                {EVIDENCE_INDEX.map((item) => (
+                  <option key={item.path} value={item.name}>
+                    {item.name}
+                  </option>
+                ))}
+              </select>
               <button
                 type="button"
                 onClick={addEntry}

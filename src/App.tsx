@@ -46,6 +46,8 @@ import DesignSystem from "./modules/DesignSystem";
 import ClassifierHub from "./modules/ClassifierHub";
 import MiFileReconnect from "./modules/MiFileReconnect";
 import FeeWaiverGuide from "./modules/FeeWaiverGuide";
+import ProofReview from "./modules/ProofReview";
+import FilingRejectionLibrary from "./modules/FilingRejectionLibrary";
 
 function App() {
   return (
@@ -78,6 +80,8 @@ function App() {
           <Route path="classifier" element={<ClassifierHub />} />
           <Route path="mifile-reconnect" element={<MiFileReconnect />} />
           <Route path="fee-waiver" element={<FeeWaiverGuide />} />
+          <Route path="proof-review" element={<ProofReview />} />
+          <Route path="filing-rejections" element={<FilingRejectionLibrary />} />
           <Route path="rules" element={<RulesLibrary />} />
           <Route path="rules-index" element={<RulesIndex />} />
           <Route path="service" element={<ServiceOfProcessWizard />} />
