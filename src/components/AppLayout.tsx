@@ -71,6 +71,8 @@ const navItems = [
   { to: "/classifier", label: "Classifier Hub", icon: ClipboardCheck },
   { to: "/evidence-ops", label: "Evidence Ops", icon: Archive },
   { to: "/integrity-overview", label: "Integrity Overview", icon: ClipboardCheck },
+  { to: "/integrity-audit", label: "Integrity Audit", icon: ClipboardCheck },
+  { to: "/exhibit-manager", label: "Exhibit Manager", icon: Archive },
   { to: "/auto-chronology", label: "Auto Chronology", icon: CalendarDays },
   { to: "/case-assistant", label: "Case Assistant", icon: MessageSquare },
   { to: "/admissibility-audit", label: "Admissibility Audit", icon: FileText },

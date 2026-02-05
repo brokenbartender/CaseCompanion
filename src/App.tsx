@@ -56,6 +56,12 @@ import AdmissibilityAudit from "./modules/AdmissibilityAudit";
 import VerificationHubLite from "./modules/VerificationHubLite";
 import BatesRedactionSuiteLite from "./modules/BatesRedactionSuiteLite";
 import PrivacyVaultLite from "./modules/PrivacyVaultLite";
+import IntegrityOverviewPage from "./modules/IntegrityOverviewPage";
+import ExhibitManager from "./modules/ExhibitManager";
+import IntegrityAudit from "./modules/IntegrityAudit";
+import VerificationHub from "./modules/VerificationHub";
+import BatesRedactionSuite from "./modules/BatesRedactionSuite";
+import CaseAssistant from "./modules/CaseAssistant";
 
 function App() {
   return (
@@ -93,11 +99,14 @@ function App() {
           <Route path="evidence-ops" element={<EvidenceOps />} />
           <Route path="integrity-overview" element={<IntegrityOverviewLite />} />
           <Route path="auto-chronology" element={<AutoChronology />} />
-          <Route path="case-assistant" element={<CaseAssistantLite />} />
+          <Route path="case-assistant" element={<CaseAssistant />} />
           <Route path="admissibility-audit" element={<AdmissibilityAudit />} />
-          <Route path="verification-hub" element={<VerificationHubLite />} />
-          <Route path="redaction-suite" element={<BatesRedactionSuiteLite />} />
+          <Route path="verification-hub" element={<VerificationHub />} />
+          <Route path="redaction-suite" element={<BatesRedactionSuite />} />
           <Route path="privacy-vault" element={<PrivacyVaultLite />} />
+          <Route path="integrity-overview" element={<IntegrityOverviewPage />} />
+          <Route path="exhibit-manager" element={<ExhibitManager />} />
+          <Route path="integrity-audit" element={<IntegrityAudit />} />
           <Route path="rules" element={<RulesLibrary />} />
           <Route path="rules-index" element={<RulesIndex />} />
           <Route path="service" element={<ServiceOfProcessWizard />} />
