@@ -106,6 +106,18 @@ This backlog maps the Michigan civil case lifecycle (benchbook-driven) and legal
 - Steps: medical, wages, travel/parking, receipts upload
 38. **E1/E7** Deadline risk monitor (service + filing)
 - Steps: track 90-day service window, motion deadlines, alerts
+39. **E1** Oakland County court selector (52nd District vs 6th Circuit)
+- Steps: claim amount gate, division selector, venue guidance
+40. **E1** MiFILE registration helper (Pro Se submitter)
+- Steps: account flow, payment method checklist, fee waiver path
+41. **E1** A-to-Z document pack builder (separate PDFs)
+- Steps: summons MC 01, complaint MC 01a, fee waiver MC 20, file naming
+42. **E1** MiFILE initiation wizard
+- Steps: select court, initiate case, enter parties, upload filings, checkout
+43. **E1/E7** Service gap checklist (90-day rule)
+- Steps: who can serve, personal service requirements, timer + warnings
+44. **E1** Proof of service upload flow
+- Steps: MC 01 proof section, MiFILE filing type selector
 
 ## Roadmap Tracker
 
