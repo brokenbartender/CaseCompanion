@@ -38,7 +38,13 @@ export default function DeadlinesView() {
       county: "Oakland",
       filingDate: "",
       serviceDate: "",
-      answerDate: ""
+      answerDate: "",
+      discoveryServedDate: "",
+      motionServedDate: "",
+      pretrialDate: "",
+      claimAmount: undefined,
+      venueBasis: "",
+      venueCounty: "Oakland"
     })
   );
   const [templateId, setTemplateId] = useState(DEADLINE_TEMPLATES[0].id);
@@ -207,6 +213,45 @@ export default function DeadlinesView() {
                   }}
                 />
               </label>
+              <label className="space-y-1">
+                <span className="text-xs text-slate-400">Discovery Served Date</span>
+                <input
+                  className="w-full rounded-md border border-white/10 bg-white/5 px-3 py-2 text-sm text-slate-100"
+                  placeholder="YYYY-MM-DD"
+                  value={profile.discoveryServedDate || ""}
+                  onChange={(e) => {
+                    const next = { ...profile, discoveryServedDate: e.target.value };
+                    setProfile(next);
+                    writeJson(PROFILE_KEY, next);
+                  }}
+                />
+              </label>
+              <label className="space-y-1">
+                <span className="text-xs text-slate-400">Motion Served Date</span>
+                <input
+                  className="w-full rounded-md border border-white/10 bg-white/5 px-3 py-2 text-sm text-slate-100"
+                  placeholder="YYYY-MM-DD"
+                  value={profile.motionServedDate || ""}
+                  onChange={(e) => {
+                    const next = { ...profile, motionServedDate: e.target.value };
+                    setProfile(next);
+                    writeJson(PROFILE_KEY, next);
+                  }}
+                />
+              </label>
+              <label className="space-y-1">
+                <span className="text-xs text-slate-400">Pretrial Conference Date</span>
+                <input
+                  className="w-full rounded-md border border-white/10 bg-white/5 px-3 py-2 text-sm text-slate-100"
+                  placeholder="YYYY-MM-DD"
+                  value={profile.pretrialDate || ""}
+                  onChange={(e) => {
+                    const next = { ...profile, pretrialDate: e.target.value };
+                    setProfile(next);
+                    writeJson(PROFILE_KEY, next);
+                  }}
+                />
+              </label>
             </div>
             <div className="mt-4 text-xs text-slate-500">
               Rule set: {activeRuleSet?.id || "none"} - version {activeRuleSet?.version || "n/a"}
@@ -226,7 +271,9 @@ export default function DeadlinesView() {
               <div className="grid gap-3 md:grid-cols-2">
                 {ruleDeadlines.map((item) => (
                   <div key={item.id} className="rounded-lg border border-white/5 bg-white/5 p-4">
-                    <div className="text-xs text-slate-400">Due {item.dueDate}</div>
+                    <div className="text-xs text-slate-400">
+                      Due {item.dueDate || "Manual - set by rule"}
+                    </div>
                     <div className="text-sm font-semibold text-white">{item.label}</div>
                     <div className="text-xs text-slate-400 mt-1">
                       Trigger: {item.triggerDate} - {item.rule.source.citation}

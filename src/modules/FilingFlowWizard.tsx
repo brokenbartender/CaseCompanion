@@ -24,14 +24,22 @@ export default function FilingFlowWizard() {
     caseNumber: "",
     jurisdiction: "Oakland County, MI"
   });
-  const profile = readJson<CaseProfile>(PROFILE_KEY, {
-    jurisdictionId: "mi",
-    courtLevel: "district",
-    county: "Oakland",
-    filingDate: "",
-    serviceDate: "",
-    answerDate: ""
-  });
+  const [profile, setProfile] = useState<CaseProfile>(() =>
+    readJson(PROFILE_KEY, {
+      jurisdictionId: "mi",
+      courtLevel: "district",
+      county: "Oakland",
+      filingDate: "",
+      serviceDate: "",
+      answerDate: "",
+      discoveryServedDate: "",
+      motionServedDate: "",
+      pretrialDate: "",
+      claimAmount: undefined,
+      venueBasis: "",
+      venueCounty: "Oakland"
+    })
+  );
   const holidays = readJson<string[]>(HOLIDAYS_KEY, []);
   const ruleDeadlines = computeRuleDeadlines(profile, holidays);
   const [court, setCourt] = useState(settings.court || "");
@@ -39,10 +47,23 @@ export default function FilingFlowWizard() {
   const [caseType, setCaseType] = useState("");
   const [rejectionReason, setRejectionReason] = useState("");
   const [needsPraecipe, setNeedsPraecipe] = useState(false);
+  const [venueBasis, setVenueBasis] = useState(profile.venueBasis || "");
+  const [venueCounty, setVenueCounty] = useState(profile.venueCounty || profile.county || "Oakland");
+
+  const amountValue = Number((claimAmount || "").replace(/[^0-9.]/g, ""));
+  const amountKnown = Number.isFinite(amountValue) && amountValue > 0;
+  const amountSuggestsCircuit = amountKnown && amountValue > 25000;
+  const courtMismatch =
+    (amountSuggestsCircuit && profile.courtLevel === "district") ||
+    (!amountSuggestsCircuit && amountKnown && profile.courtLevel === "circuit");
 
   function saveCourt(next: string) {
     setCourt(next);
     writeJson(SETTINGS_KEY, { ...settings, court: next });
+    const level = next.includes("Circuit") ? "circuit" : "district";
+    const updated = { ...profile, courtLevel: level };
+    setProfile(updated);
+    writeJson(PROFILE_KEY, updated);
   }
 
   return (
@@ -82,8 +103,20 @@ export default function FilingFlowWizard() {
                 className="w-full rounded-md border border-white/10 bg-white/5 px-3 py-2 text-sm text-slate-100"
                 placeholder="$ Amount"
                 value={claimAmount}
-                onChange={(e) => setClaimAmount(e.target.value)}
+                onChange={(e) => {
+                  const value = e.target.value;
+                  setClaimAmount(value);
+                  const numeric = Number(value.replace(/[^0-9.]/g, ""));
+                  const updated = { ...profile, claimAmount: Number.isFinite(numeric) ? numeric : undefined };
+                  setProfile(updated);
+                  writeJson(PROFILE_KEY, updated);
+                }}
               />
+              {courtMismatch ? (
+                <div className="text-xs text-amber-200">
+                  Claim amount suggests {amountSuggestsCircuit ? "circuit" : "district"} court. Update court selection to match.
+                </div>
+              ) : null}
               <label className="flex items-start gap-2">
                 <input
                   type="radio"
@@ -123,6 +156,51 @@ export default function FilingFlowWizard() {
               ) : null}
               <div className="text-xs text-slate-400">
                 This app does not provide legal advice. Confirm limits with court rules.
+              </div>
+            </div>
+          </CardBody>
+        </Card>
+
+        <Card>
+          <CardHeader>
+            <CardSubtitle>Step 1.5</CardSubtitle>
+            <CardTitle>Venue Guardrails</CardTitle>
+          </CardHeader>
+          <CardBody>
+            <div className="space-y-3 text-sm text-slate-300">
+              <div className="text-xs text-slate-400">Venue county</div>
+              <input
+                className="w-full rounded-md border border-white/10 bg-white/5 px-3 py-2 text-sm text-slate-100"
+                placeholder="County (e.g., Oakland)"
+                value={venueCounty}
+                onChange={(e) => {
+                  const value = e.target.value;
+                  setVenueCounty(value);
+                  const updated = { ...profile, venueCounty: value };
+                  setProfile(updated);
+                  writeJson(PROFILE_KEY, updated);
+                }}
+              />
+              <div className="text-xs text-slate-400">Venue basis</div>
+              <select
+                className="w-full rounded-md border border-white/10 bg-white/5 px-3 py-2 text-sm text-slate-100"
+                value={venueBasis}
+                onChange={(e) => {
+                  const value = e.target.value;
+                  setVenueBasis(value);
+                  const updated = { ...profile, venueBasis: value };
+                  setProfile(updated);
+                  writeJson(PROFILE_KEY, updated);
+                }}
+              >
+                <option value="">Select basis</option>
+                <option value="incident-location">Incident occurred in county</option>
+                <option value="defendant-residence">Defendant resides in county</option>
+                <option value="business-location">Business location in county</option>
+                <option value="other">Other (confirm with clerk)</option>
+              </select>
+              <div className="text-xs text-slate-400">
+                If unsure, confirm venue with the clerk before filing.
               </div>
             </div>
           </CardBody>

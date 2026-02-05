@@ -69,6 +69,7 @@ const WarRoom = React.lazy(() => import("./modules/WarRoom"));
 const TrialExhibitOrder = React.lazy(() => import("./modules/TrialExhibitOrder"));
 const ClientPrintPack = React.lazy(() => import("./modules/ClientPrintPack"));
 const RulesQuickReference = React.lazy(() => import("./modules/RulesQuickReference"));
+const ClaimTreeBuilder = React.lazy(() => import("./modules/ClaimTreeBuilder"));
 
 function App() {
   return (
@@ -133,6 +134,7 @@ function App() {
             <Route path="exhibit-order" element={<TrialExhibitOrder />} />
             <Route path="print-pack" element={<ClientPrintPack />} />
             <Route path="rules-quick" element={<RulesQuickReference />} />
+            <Route path="claim-tree" element={<ClaimTreeBuilder />} />
             <Route path="rules" element={<RulesLibrary />} />
             <Route path="rules-index" element={<RulesIndex />} />
             <Route path="service" element={<ServiceOfProcessWizard />} />
