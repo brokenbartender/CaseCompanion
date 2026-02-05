@@ -30,6 +30,16 @@ export default function ProceduralRoadmap() {
                   <li key={task}>{task}</li>
                 ))}
               </ul>
+              {stage.benchbookSections && stage.benchbookSections.length ? (
+                <div className="mt-4 rounded-md border border-white/10 bg-white/5 p-3">
+                  <div className="text-xs text-slate-400 mb-2">Benchbook sections</div>
+                  <ul className="space-y-1 text-sm text-slate-300">
+                    {stage.benchbookSections.map((section) => (
+                      <li key={section}>{section}</li>
+                    ))}
+                  </ul>
+                </div>
+              ) : null}
             </CardBody>
           </Card>
         ))}
