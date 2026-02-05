@@ -134,6 +134,8 @@ This backlog maps the Michigan civil case lifecycle (benchbook-driven) and legal
 - Steps: summarize AI benefits/risks, define safe usage boundaries, add disclosure panel
 52. **E5** Trial notebook module (checklists + packets)
 - Steps: witness list, exhibit list, opening/closing prep, printable trial packet
+53. **E2/E5** Premises liability defense checklist (Michigan)
+- Steps: open-and-obvious, notice, duty analysis; anticipate defense arguments
 
 ## Roadmap Tracker
 
