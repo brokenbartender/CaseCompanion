@@ -98,6 +98,44 @@ async function runCommand(cmd: string, args: string[], cwd: string, logPath: str
   });
 }
 
+function resolveFractalVideoGuardScript() {
+  const script = String(process.env.FRACTALVIDEOGUARD_SCRIPT || "").trim();
+  if (script && fs.existsSync(script)) return script;
+  return "";
+}
+
+async function runFractalVideoGuard(exhibitId: string, videoPath: string) {
+  const script = resolveFractalVideoGuardScript();
+  if (!script) return { ok: false, reason: "script_not_configured" };
+  const preset = String(process.env.FRACTALVIDEOGUARD_PRESET || "fast").trim() || "fast";
+  const outputPath = getArtifactPath(exhibitId, "metadata/fractalvideoguard.json");
+  const logPath = getArtifactPath(exhibitId, "logs/fractalvideoguard.txt");
+  const python = String(process.env.FRACTALVIDEOGUARD_PY || "python").trim() || "python";
+
+  const result = await runCommand(
+    python,
+    [script, "--preset", preset, "--extract", videoPath],
+    getExhibitOutputDir(exhibitId),
+    logPath
+  );
+
+  if (result.code !== 0 || !result.stdout) {
+    return { ok: false, reason: "run_failed" };
+  }
+
+  try {
+    const parsed = JSON.parse(result.stdout);
+    await fs.promises.writeFile(outputPath, JSON.stringify({
+      preset,
+      createdAt: new Date().toISOString(),
+      result: parsed
+    }, null, 2));
+    return { ok: true };
+  } catch {
+    return { ok: false, reason: "invalid_json" };
+  }
+}
+
 async function collectArtifacts(exhibitId: string) {
   const dir = getExhibitOutputDir(exhibitId);
   const files: ArtifactEntry[] = [];
@@ -116,6 +154,7 @@ async function collectArtifacts(exhibitId: string) {
           : rel.startsWith("keyframes/") ? "keyframe"
           : rel.startsWith("audio/") ? "audio"
           : rel.startsWith("thumbnails/") ? "thumbnail"
+          : rel.endsWith("metadata/fractalvideoguard.json") ? "authenticity"
           : rel.startsWith("metadata/") ? "metadata"
           : rel.startsWith("source/") ? "original_copy"
           : rel === "manifest.json" ? "manifest"
@@ -262,6 +301,8 @@ export async function processVideoForensics(args: {
     outputDir,
     safeResolve(logDir, "ffmpeg_contact_sheet.txt")
   );
+
+  await runFractalVideoGuard(exhibitId, originalCopyPath);
 
   const artifacts = await collectArtifacts(exhibitId);
   await writeManifest(exhibitId, artifacts);

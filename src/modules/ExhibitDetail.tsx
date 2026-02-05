@@ -52,6 +52,7 @@ export default function ExhibitDetail() {
   const pdfPageArtifacts = useMemo(() => artifacts.filter((a) => a.type === "pdf_page"), [artifacts]);
   const audioArtifact = useMemo(() => artifacts.find((a) => a.type === "audio"), [artifacts]);
   const manifestArtifact = useMemo(() => artifacts.find((a) => a.type === "manifest"), [artifacts]);
+  const authenticityArtifact = useMemo(() => artifacts.find((a) => a.type === "authenticity"), [artifacts]);
   const textArtifact = useMemo(() => artifacts.find((a) => a.type === "text"), [artifacts]);
 
   async function fetchJson(url: string) {
@@ -202,6 +203,29 @@ export default function ExhibitDetail() {
                     </pre>
                   </details>
                 ))}
+              </div>
+            )}
+          </CardBody>
+        </Card>
+
+        <Card>
+          <CardHeader>
+            <CardSubtitle>Authenticity</CardSubtitle>
+            <CardTitle>Deepfake Check</CardTitle>
+          </CardHeader>
+          <CardBody>
+            {authenticityArtifact ? (
+              <a
+                className="text-amber-300"
+                href={`${apiBase}${authenticityArtifact.downloadUrl}`}
+                target="_blank"
+                rel="noreferrer"
+              >
+                Download Authenticity Report
+              </a>
+            ) : (
+              <div className="text-sm text-slate-400">
+                Authenticity report not available. Configure `FRACTALVIDEOGUARD_SCRIPT` to enable.
               </div>
             )}
           </CardBody>
