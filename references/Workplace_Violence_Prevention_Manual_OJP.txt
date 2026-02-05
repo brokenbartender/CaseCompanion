@@ -1,0 +1,1684 @@
+WORKPLACE VIOLENCE PREVENTION:
+                   A GUIDE
+
+                       JIM HOOD
+
+                         ATTORNEY GENERAL
+
+          OFFICE OF THE ATTORNEY GENERAL
+
+                       STATE OF MISSISSIPPI
+
+                       POST OFFICE BOX 220
+
+
+                    JACKSON, MS 39205-0220
+
+
+                                 601-359-3680
+
+                            www.agjimhood.com
+
+                                                            STATE OF MISSISSIPPI
+
+                                                        JIM HOOD
+
+
+                                                            ATTORNEY GENERAL
+
+
+DEAR MISSISSIPPIANS:
+
+This guide is designed to help prevent workplace violence by providing a profile of a potentially violent
+employee and establishing a protocol for employees and m anagem ent to report inform ation to a designated
+law enforcem ent officer. The guide also includes tips on how to respond during a violent event in the
+workplace and where to get help afterwards.
+
+W hile I was a district attorney, I had the unfortunate duty of having to prosecute a workplace murder and
+aggravated assault. I have learned that many acts of workplace violence can be prevented, if employees and
+m anagem ent know the tale-tale signs that are com m on in potentially violent em ployees and how to
+confidentially report these factors to a designated law enforcem ent officer trained to intervene.
+
+If any of the following profile factors are observed, it should be reported to a designated law enforcem ent
+officer: (1) threats of violence against others or suicide; (2) numerous conflicts with custom ers, co-workers,
+or supervisors; (3) intim idating or harassing behavior; (4) bringing weapons to the workplace; (5) statem ents
+of approval of workplace violence; (6) statem ents indicating extrem e desperation over m arital, fam ily, or
+relationship difficulties; (7) a fanatical fascination with knives, guns, explosives, or other weapons; (8) severe
+depression; (9) hatred of governm ent or other groups; (10) extrem e financial hardship; (11) alcohol or drug
+abuse com bined with other factors; and (12) extrem e changes in behavior.
+
+This guide is not intended as legal advice, but it can be a useful resource for tailoring a workplace violence
+prevention program to your organization. In developing your own program , you should contact a private
+attorney.
+I hope that we can prevent incidents of workplace violence by allowing law enforcem ent to intervene and get
+help for the potentially violent employee before the situation becom es a crisis and a danger to all.
+Mississippians deserve to work in an environment without fear of violence!
+Thank you for your interest and commitment in making our workplaces more secure. If my office can be of
+assistance, please feel free to contact us at 601-359-3680. To obtain an example of a workplace violence
+program, see our website at www:ago.state.m s.us.
+
+JIM HOOD
+ATTORNEY GENERAL
+
+                            CARROLL GARTIN JUSTICE BUILDING • POST OFFICE BOX 220 • JACKSON, MISSISSIPPI 39205-0220
+
+                                                              TELEPHONE (601) 359-3680 • TELEFAX (601) 359-2009
+
+ACKNOWLEDGMENTS
+
+
+              everal individuals have contributed their time and effort in the production of Workplace
+
+  SViolence Prevention: A Guide, and we would like to thank the following:
+
+                        Sara Harvey, Legal Intern, Office of the Attorney General
+
+                    Kathy Jenkins, Branch Director, Office of the Attorney General
+
+     Robert Laird, Director, Division of School Safety, Mississippi Department of Education
+
+
+                       Mary Miller, Librarian, Mississippi College School of Law
+
+                       Sid Moeller, Professor, Mississippi College School of Law
+
+                      Donna Thomas, Receptionist, Office of the Attorney General
+
+
+                             Jean Smith Vaughan, Assistant Attorney General
+
+                     Patti Marshall, Director, Crime Prevention & Victim Services
+
+
+                             Amy Walker, Director, Victim Services Division
+
+                   Sandra Morrison, Director, Crime Victim Compensation Division
+
+
+                           Drew Snyder, Intern, Office of the Attorney General
+
+             Tanya Rass, Director of Human Resources, Office of the Attorney General
+
+
+            This handbook is funded in part by the U.S. Department of Justice, Office for
+
+            Victims of Crime, Victims Assistance Grant, grant number 2001-VA-GX-0028
+
+TABLE OF CONTENTS  Fall 2004, First Edition
+
+WHAT IS WORKPLACE VIOLENCE? . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1
+
+
+         Definition and Types . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1
+
+         Examples of Workplace Violence . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1
+
+         An Epidemic . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1
+
+         Legal Liability . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2
+
+
+WHAT TRIGGERS WORKPLACE VIOLENCE? . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3
+
+
+         Organizational Factors . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3
+
+         Cultural Factors . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3
+
+         Personal Factors . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3
+
+
+PROFILE OF A POTENTIALLY VIOLENT EMPLOYEE . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 4
+
+
+         Warning Signs . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 5
+
+                   A Personality Traits and Behaviors Checklist . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 5
+
+
+RESPONSIBILITIES OF EMPLOYERS AND EMPLOYEES . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 7
+
+
+         Employer Responsibilities . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 7
+
+         Employee Responsibilities . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 8
+
+
+HOW TO PREVENT WORKPLACE VIOLENCE . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 9
+
+
+         Strategies to Create a Safer Work Evironment . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 9
+
+         Workplace Violence Prevention Policy . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 10
+
+         Awareness / Training . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 11
+
+         Pre-Employment Screening . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 12
+
+         Security . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 13
+
+         Alternative Dispute Resolution . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 13
+
+         Threat Assessment . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 14
+
+         Organizational Hierarchy for Reporting Workplace Violence . . . . . . . . . . . . . . . . . . . . . . . . . . 15
+
+         Employee Assistance Programs . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 16
+
+         Drug and Alcohol Testing . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 17
+
+         Termination and Dismissal . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 18
+
+
+RESPONDING TO VIOLENT INCIDENTS . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 18
+
+
+         The Emergency Response Team . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 19
+
+
+         Post Termination Protocol . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 20
+
+
+APPENDIX     Emergency Contacts Checklist . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 23
+
+             Telephone Checklist . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 24
+
+         A.  Sample Workplace Violence Policy . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 26
+
+         B.  Workplace Inspection Questionnaire . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 27
+
+         C.
+         D.
+
+ADDITIONAL INFORMATION, RESOURCES AND REFERENCES . . . . . . . . . . . . . . . . . . . . . . 30
+
+WORKPLACE VIOLENCE PREVENTION
+
+        OFFICE OF THE ATTORNEY GENERAL
+                    STATE OF MISSISSIPPI
+                    POST OFFICE BOX 220
+
+                 JACKSON, MS 39205-0220
+
+
+                              601-359-3680
+
+                         www.agjimhood.com
+
+WHAT IS WORKPLACE VIOLENCE?
+
+
+DEFINITION AND TYPES
+
+               he United States Department of Agriculture defines workplace violence as “any act of
+
+  Tviolence, against persons or property, threats, intimidation, harassment, or other
+               inappropriate, disruptive behavior that causes fear for personal safety at the worksite.”
+(7).
+
+         The California branch of the Occupational Safety and Health Administration has identified
+three distinct types of workplace violence:
+
+                                                         TYPE I involves a stranger committing a crime
+                                                         against the business. This is the most common
+                                                         cause of workplace homicide.
+
+                                                         TYPE II is committed on an employee by a client,
+                                                         customer, patient, or inmate. Most Type II violence
+                                                         involves nonfatal assaults or verbal threats.
+
+         TYPE III is employee-on-employee violence and is the most-common source of threats and
+         assaults. (4)
+
+EXAMPLES OF WORKPLACE VIOLENCE
+
+
+                  orkplace violence may range from murder to physical assaults to verbal threats.
+
+
+  WVerbal threats should never be taken lightly, because they often escalate to a physical
+
+                  confrontation.
+
+
+AN EPIDEMIC
+
+
+            n an average week, U.S. workplaces experience at least one homicide as a result of
+
+
+  Iviolence. (11)
+
+
+         1. In most cases, employee-killers demonstrated clear warning signs of their violent
+                  propensities. (11).
+
+                                                        -1­
+         2. Six hundred and nine workplace homicides were recorded in 2002, representing the
+                  lowest recorded by the U.S. Bureau of Labor Statistics in census history. The record
+                  high was in 1994 with a total of 1,080 deaths. (9).
+
+LEGAL LIABILITY
+
+               mployers have a legal responsibility to take precautions to prevent workplace violence.
+
+  EThis responsibility may arise within Mississippi under the federal Occupational Safety
+               and Health Act of 1970 (OSHA), Mississippi’s Unemployment Compensation Law, or
+theories of tort liability.
+
+         First, OSHA sets forth a “general duty” of employers to provide employees with a “safe and
+healthful workplace.” (14).
+
+         Second, under unemployment compensation law, a Mississippi employee will not be able to
+receive unemployment benefits where he or she has been “discharged for misconduct connected with
+his work.” (15). In Hux v. MS Employment Security Commission, the Mississippi Court of Appeals
+held that an episode of workplace violence amounted to “misconduct” within the meaning of the
+unemployment compensation law. (22).
+
+         Finally, tort liability claims which may arise following an incident of workplace violence
+include:
+
+         Negligent Hiring: 
+
+         Failing to properly screen employees, resulting in the hiring of someone with a history of
+
+         violent and criminal acts.
+
+
+         Negligent Retention:
+         Keeping an employee after the employer becomes aware of the employee’s unsuitability and
+         then fails to act on that knowledge.
+
+         Negligent Supervision:
+         Failing to provide the necessary monitoring to ensure that employees can perform their duties
+         properly.
+
+         Negligent Entrustment:
+         These principles apply in workplace violence situations where an employer is entrusting an
+         employee with a tangible piece of property.
+
+                                                        -2­
+         Failure to Train:
+         Failing to sufficiently create awareness of potential dangers in the workplace may be a basis
+         for liability where employers have not sufficiently created awareness of potential dangers in
+         the workplace.
+
+         OSHA’s general duty to provide a safe workplace has been the basis on which these suits
+have been filed, and such suits confirm the need for preventative training. Further, OSHA’s general
+duty has been enlarged to include an employer’s duty to “protect employees from feasibly
+preventable hazards” as seen within episodes of workplace violence. (18 at 532-33).
+
+WHAT TRIGGERS WORKPLACE VIOLENCE?
+
+               he workplace has become increasingly violent over the last several decades. Employees
+
+  Tare working longer hours, with increased responsibilities in their jobs.
+
+         This, in turn, increases employees’s stress levels. Other factors contributing to workplace
+violence include:
+
+    ORGANIZATIONAL FACTORS                      CULTURAL FACTORS
+
+. Change                            . Economic downturn in business
+. Job overload                      . Availability of weapons
+. Undefined job tasks               . Breakdown of family and/or community
+. Downsizing                        . Media glorification of violence (2).
+. Under-staffing
+. Inadequate security                           PERSONAL FACTORS
+. Poor hiring practices
+. Failure to respond to violent     . Loss of job, raise, or promotion
+                                    . Family / marital problems
+         incidents                  . Money problems
+. Lack of employee counseling (2).  . Drug and alcohol abuse
+                                    . Stress
+                                    . Domestic violence (2).
+
+                                    -3­
+PROFILE OF A POTENTIALLY VIOLENT EMPLOYEE
+
+
+      he following chart shows some indicators of potentially violent episodes as determined
+
+Tby the United States Department of Agriculture in 2001:
+
+         INDICATORS                                           REMEDIES
+
+Intimidating, harassing behavior and verbal Co-worker should notify employee’s supervisor
+
+threats                                      of observations
+
+Brings a weapon to the workplace             Notify human resource manager, supervisor, and
+                                             in the worst case, contact police
+
+Statements indicating approval of workplace  Begin by stating that violence is never an
+violence to resolve a problem                appropriate solution; the employee’s supervisor
+                                             should be notified
+
+Statements indicating desperation over       Statements should never be ignored, but they
+family or financial problems                 should be reported while minimizing, as much as
+                                             possible, the tendency to overact
+
+Direct threats of harm                       Co-worker should notify employee’s supervisor
+                                             of threats and supervisor should act accordingly
+                                             as stated in written policy
+
+Substance abuse                              Pro-active prevention through Drug/Alcohol
+                                             testing
+
+Extreme changes in normal behavior           Supervisor should evaluate situation and
+                                             determine the potential causes in change of
+                                             behavior
+
+Numerous conflicts with customers, co­       At the first sign of conflict, co-workers should
+workers, or supervisors                      report to supervisors, while a supervisor’s
+                                             conflict should be reported to management (6).
+
+                                        -4­
+WARNING SIGNS
+
+
+                  A PERSONALITY TRAITS AND BEHAVIORS CHECKLIST
+
+                    (adapted from The School Shooter: A Threat Assessment Perspective: FBI, 1999)1 (6).
+
+1) Communicates Intent to “Fix ” Things
+                  G A potentially violent person will often let others know of their “plans” to
+                           correct injustices through inappropriate comments, which the speaker quickly
+                           disavows as jokes. His humor may be inappropriate and biting.
+                  G Often a person who is thinking of destructive behaviors or who is conflicted
+                           and is seeking help, may alert others to his feelings of inadequacy and
+                           victimization, and may express his thoughts or fantasies of violent behavior
+                           through poems, stories, essays, songs, or drawings. He may post threats or
+                           warnings on the Internet as did the perpetrators of school violence in
+                           Columbine, Colorado. Teachers or employers should look for themes of
+                           violence in the communications.
+                  G The employee may have a fascination with guns or dangerous weapons and
+                           may have a possible military history.
+
+2) Exhibits a Low Tolerance for Frustration
+                  G The employee is easily offended, insulted or injured by real or perceived
+                           injustices and cannot tolerate the everyday frustrations of the workplace, e.g.,
+                           exaggerated frustration with computer problems, lack of promotions, or
+                           employer evaluations.
+
+3) Has Poor Coping Skills
+                  G The employee demonstrates a poor ability to cope with frustration,
+                           disappointment, criticism, rejection, and responds in an immature,
+                           exaggerated and inappropriate manner. The employee blames others for his
+                           own failures.
+
+4) Lacks Flexibility
+                  G The employee responds poorly to change and has difficulty in expressing his
+                           extreme feelings. The employee may be the “quiet” type who harbors
+                           resentments.
+
+         1The list of characteristics is not all inclusive, and a single factor in isolation may not be
+conclusive as to whether an employee may be violent. The list may be used as a checklist of
+warnings or a profile, when evaluating potentially violent acts of an employee.
+
+                                                        -5­
+5) Is Narcissistic, Alienates Others, and/or Acts Superior to Others
+                  G The employee thinks of himself as more intelligent, talented and creative than
+                           other employees.
+                  G The employee is self-centered and fails to understand the needs of others. He
+                           may act in a grandiose manner, touting his self importance in an effort to feel
+                           superior to others.
+                  G The employee may have an exaggerated sense of isolation and may fail to
+                           associate with others.
+                  G The employee may seek to manipulate others and win trust so that they will
+                           discount any signs of unusual behavior.
+
+6) Dehumanizes Others
+                  G The employee is intolerant of others.
+                  G The employee fails to see others as “persons” and has strong views against
+                           different genders or ethnic groups.
+                  G The employee may exhibit signs, tatoos, bumper stickers, or clothing which
+                           have symbols of intolerance and/or racial or religious prejudice.
+
+7) Has an Exaggerated Sense of Entitlement
+                  G The employee feels that he should get special treatment and should be an
+                           exception to the rules, which are for other persons. The employee may have
+                           a poor work attendance record.
+
+8) Displays a Need for Constant Attention
+                  G The employee may have a driving need for attention, positive or negative.
+                  G The employee may disrupt the workplace environment with distracting
+                           behaviors.
+
+9 ) Has Failed Relationships
+                  G The employee has recently had an increase in domestic problems.
+                  G The employee may have recently become separated, divorced or rejected.
+                  G The employee fails to recover from a love relationship and refuses to move
+                           on.
+
+10) Collects Injustices
+                  G The employee harbors resentment of others.
+                  G The employee may keep a list of persons who have wronged him.
+                  G The employee may talk of a plan to fix things.
+
+11) Shows a Decreased Attention to Personal Appearance
+                  G The employee may exhibit a decrease in attention to personal appearance and
+                           hygiene.
+
+                                                        -6­
+                  G A person may also wear clothing that indicates gang membership,
+                           rebelliousness, or a disregard for authority, e.g., black clothing, gothic dress,
+                           or gang insignia.
+
+12) Shows Signs of Depression
+                  G The employee may exhibit signs of lethargy, fatigue, malaise or loss of
+                           interest in things once enjoyed.
+                  G He may have irrational outbursts of anger or feelings of hopelessness.
+                  G His posture may be slumped and passive.
+                  G The employee may be hyperactive and distracting in the workplace.
+                  G The employee has a low self esteem.
+
+13) Has a History of Violence Toward Women, Children or Animals
+14) Has Difficulty in Managing Anger
+
+                  G Employee may throw temper tantrums or be dramatic.
+                  G Outbursts may be unpredictable.
+                  G In contrast, the employee may sulk or brood.
+15) Is Distrustful of Others
+                  G Employee is suspicious of others’ motives.
+                  G Employee is rigid and opinionated.
+16) Has a Substance Abuse Problem
+                  G Employee has changes in behavior which may be directly related to alcohol
+
+                           or controlled substances.
+17) Is Fascinated With Media or Technology
+
+                  G Employee spends an inordinate amount of time on Internet at the office.
+                  G Employee is unusually interested in media of a violent nature.
+
+RESPONSIBILITIES
+
+                ombating violence in the workplace is a team effort. While employers have a legal
+
+  Cresponsibility to promote a tranquil work environment, employees should assist their
+                managers in curbing possible violent incidents.
+
+         Employers must care about safety and provide as safe of a working environment as possible.
+Employers should have preventative measures in place and deal immediately with potentially violent
+situations.
+
+                                                        -7­
+BASIC EMPLOYER RESPONSIBILITIES INCLUDE:
+
+
+         1. Setting a policy statement that communicates to the staff that the organization will
+                  not tolerate violent behavior and that all reports of episodes will be taken seriously.
+                  An example of such a policy may be found in Appendix C.
+
+         2. Informing employees of workplace violence policies and procedures.
+
+         3. Notifying all employees of any procedures implemented for
+
+                  assessing workplace threats and emergencies.
+
+
+         4. Taking all threats seriously.
+
+         5. Responding to potential threats and escalating
+
+                  situations by utilizing proper resources from law
+
+                  enforcement.
+
+
+         6. Responding quickly and understanding that timely reaction is a measure that leads
+                  to success.
+
+         7. Having a designated person to whom employees should report all threats. Designated
+                  safety officers should be trained on workplace violence and know whom to contact
+                  at the local designated law enforcement office.
+
+         8. Involving management in the workplace violence policy creation process. (7).
+
+         Just as the employer must take an active role in the prevention of workplace violence, an
+employee’s awareness of the potential for workplace violence is essential to its deterrence.
+
+EMPLOYEE RESPONSIBILITIES INCLUDE:
+
+         1. Understanding the organization’s written policy prohibiting workplace violence.
+
+         2. Notifying supervisors about possible strangers in the workplace.
+
+         3. Taking any threat, physical or verbal, seriously and reporting threatening behavior
+                  directly to the designated threat assessment officer.
+
+         4. Allowing managers or supervisors to confront an employee who presents a potential
+                  threat to the organization. (7).
+                                                        -8­
+HOW TO PREVENT WORKPLACE VIOLENCE
+
+
+          he most important, and, in the long run, least costly portion of any agency’s workplace
+
+    Tviolence program, is a sound prevention plan. Your organization should have the
+          following preventative measures in place:
+
+    STRATEGIES TO CREATE A SAFER WORK ENVIRONMENT
+
+1.  Start at the top. CREATE A MANAGEMENT TEAM THAT INCLUDES MANAGEMENT AND
+
+    DESIGNATED WORKERS. Encourage employers, CEOs, to establish an environment that aids
+
+    victims in obtaining assistance and protections. Be involved. Management should
+
+    participate with employees in awareness training.
+
+2. CREATE A WORKPLACE VIOLENCE POLICY. The policy should be in an employee handbook
+         and should describe leave and benefits policies for victims.
+         . The policy should also outline emergency procedures, name key persons to supervise
+                  in case of emergencies and list contact numbers for law enforcement.
+         . The policy should also address employee assistance programs as well as procedures
+                  for employee termination.
+         . The Workplace Policy Handbook should also include facts on domestic violence and
+                  a workplace policy on domestic violence.
+         . The policy should inform workers about the Family and Medical Leave Act and the
+                  American with Disabilities Act, which may be applicable to the victims of workplace
+                  violence.
+
+3. ESTABLISH EMPLOYEE ASSISTANCE PROGRAMS. Make information available to workers
+         through a Workplace Policy Handbook. Hold annual training sessions for employees.
+
+4.  PROVIDE MANAGERS WITH ASSISTANCE AND TRAINING IN WORKPLACE VIOLENCE.
+
+    Establish a training program to provide supervisors with tools to recognize the profile of a
+
+    potentially violent employee and ways to respond when an employee is a perpetrator or a
+
+    victim of violence.
+
+5.  EDUCATE EMPLOYEES ON ALTERNATIVES TO VIOLENCE. Place updates on company
+
+    website or newsletter.
+
+6. COORDINATE WITH LAW ENFORCEMENT. Be sure that local authorities have a copy of your
+         emergency plans and a layout of the building showing entrances, exits, hallways, doors,
+         windows, elevators, etc.
+
+                                                        -9­
+               WORKPLACE VIOLENCE PREVENTION POLICY
+
+
+. Every organization should develop a workplace violence prevention policy.
+         A written policy “clearly informs employees that the policy will address
+         intimidation, harassment, and other inappropriate behavior that threatens or
+         frightens them; encourage[s] employees to report all incidents; inform[s]
+         employees whom to call; and demonstrates management commitment to deal
+         with reported incidents.” (18 at 553).
+
+. Through a collaborative effort between individuals from each branch of the
+         organization, the workplace violence prevention policy should be developed
+         to include the following:
+
+         1. Designation of a key person with whom to lodge a complaint
+                  and who has the authority to act immediately;
+
+         2. A provision addressing any activity that causes physical harm
+                  or destruction to property, or that makes an employee feel
+                  frightened, threatened, or worried about his or her personal
+                  safety;
+
+         3. A list or explanation of acts that would be considered as
+                  workplace violence;
+
+         4. Guidelines and protocol to follow, whether the dispute is
+                  between co-workers or outside individuals whose relationship
+                  with the co-worker which could cause workplace violence;
+
+         5. A provision describing the importance of the overall
+                  responsibility of employees to support the organization’s
+                  effort in discouraging workplace violence by reporting all
+                  incidents without fear of retaliation;
+
+         6. A statement that the organization as a whole will actively
+                  respond to any episode of potential violence;
+
+         7. A provision that the organization will actively work together
+                  to end harassing or threatening behavior within the
+                  workplace; and
+
+         8. A statement that the organization will provide assistance to
+                  and will encourage any employee to respond or report
+                  potentially destructive episodes. (8).
+
+                                              - 10 ­
+         Finally, it is important to note that although it is necessary for employees to understand that
+violence in the workplace is not permitted, the use of “zero tolerance” language within a written
+policy may result in legal liability. (5 at 29). Therefore, such terminology should be avoided if it is
+likely to deter an employee from disclosing known violent behavior. (18 at 553). Further, written
+policies should incorporate simple wording, rather than using complex definitions. (18 at 553).
+
+                                    AWARENESS/TRAINING
+
+         One of the most important aspects of any organization’s workplace violence program is
+                                         training of the staff. Training is necessary for everyone employed
+                                         by the organization because prevention of violence cannot be
+                                         accomplished by only select people within the organization. It is
+                                         a company-wide effort. Pro-active employees and supervisors are
+                                         needed to effectively rid the workplace of violence.
+
+                                                  An organization’s Employee Assistance Program,
+                                         security, and human resources staff will provide resources to
+                                         employees confronted with potentially violent episodes.
+
+Measures to be taken by Employers
+         All employees should have enough training and direction to recognize incidents of violent
+
+behavior. Further, employees should have a list of phone numbers for reference during an
+emergency. Each organization should provide employees with information on workplace violence
+similar to the following:
+
+         1. A copy of the organization’s workplace violence policy, giving notice to the
+                  employee and a written acknowledgment by the employee of the policy;
+
+         2. Procedures in reporting violent episodes;
+         3. Methods to minimize and prevent aggressive situations;
+         4. Methods to calm hostile or angry employees;
+         5. Skills to resolve conflict;
+         6. Guidelines as to security procedures, e.g., the location and operation of safety devices
+
+                  such as alarm system, evacuation procedures; and
+         7. Programs implemented within the organization that can help employees to manage
+
+                  conflict, such as Employee Assistance Programs (discussed in this guide). (3).
+
+                                                       - 11 ­
+         Also, special attention should be given to the set procedures regarding general employer
+training. These procedures that promote a productive workplace can also aid in the prevention of
+potential violence. General training should include basic leadership training for key employees.
+
+         All employees should be taught to address problems promptly, and managers should be given
+training on personnel management. Employers do not need to have any expertise in confronting
+violent behavior, but they do need to have access to professionals who will be willing to provide
+assistance to the organization.
+
+Additional Measures
+         Encourage employees to report incidents in which they feel threatened for any reason by
+
+anyone inside or outside the organization. This may be accomplished by establishing a system of
+reporting violent incidents. An example of creating awareness of violence in the workplace is found
+in The Louisiana Department of Justice’s Response to Domestic Violence Manual. Awareness may
+be enhanced by:
+
+         1. Placing articles about workplace violence in company newsletters; and
+         2. Participating in events created to facilitate awareness of violence committed in the
+
+                  workplace;
+         3. Showing compassion towards employees who report violence;
+         4. Practicing the discipline of employees without bias;
+         5. Developing a general knowledge of how to handle an emergency;
+         6. Providing pre-employment screening; and,
+         7. Understanding the skills required to effectively manage conflict. (3).
+
+                               PRE-EMPLOYMENT SCREENING
+
+         Pre-employment screening of employees is a useful method in the deterrence of violence
+from the workplace. If the employer is seeking to hire a person for a position responsible for “safety,
+security, client or patient care, fiscal integrity and other ‘critical’ functions, employers will likely
+want to inquire into the criminal history” of the prospective employee. (18 at 548).
+
+         Further, Mississippi statutory authority mandates pre-employment screening before an
+individual is hired as an employee of a particular organization. For example, under § 25-53-51,
+Miss. Code Ann. 1972, as amended, “The Mississippi Department of Information Technology
+Services is required to fingerprint and conduct criminal background checks on candidates who apply
+for positions of ‘information confidentiality’.” (18 at 548).
+
+                                                       - 12 ­
+         Prior to any inquiry into the person’s past history, obtain a written release form.
+
+         An employer’s screening program should focus on the following:
+
+         1. Look for “suspicious” intervals within employment history;
+         2. Inquire into the individual’s reason for leaving previous employment;
+         3. Obtain referrals to affirm the individual’s claim as to past employment and
+
+                  education;
+         4. Include in the referral “performance, disciplinary history, and always ask a former
+
+                  employer if he would consider the individual for rehire?" (18 at 548).
+
+                                   SECURITY
+
+                  aintaining a safe work place is part of any good prevention
+
+
+  Mprogram. There are a variety of ways to help ensure safety, such
+
+                  as employee photo identification badges, guard services, and
+
+individually coded key cards for access to buildings and grounds. Different
+measures may be appropriate for different locations and work settings. (7).
+Security identification should be confiscated by the organization upon the
+termination or voluntary resignation of an employee to ensure continuing safety
+of present employees.
+
+         Security may also be monitored by requiring employees to complete surveys periodically.
+Such assessment allows management to focus on particular areas of concern by identifying a
+potentially violent situation prior to the occurrence of a homicide within the workplace. (5).
+
+                       ALTERNATIVE DISPUTE RESOLUTION (ADR)
+
+                lternative Dispute Resolution is a form of conflict resolution that is completed between
+
+  Atwo parties with the assistance of a “neutral third party.” Disputes submitted for ADR
+                are not the subject of traditional litigation; therefore, ADR is by definition less
+confrontational. “ADR can help prevent the escalation of conflict into violent or potentially violent
+situations. The key is using ADR early, before emotions or conduct make discussion a non-option.”
+(7).
+
+                                                       - 13 ­
+                                     THREAT ASSESSMENT
+
+               hreat assessment is the process of determining the magnitude of a potentially violent
+
+  Tor stressful situation and providing a means of intervention to diffuse the situation. Due
+               to the uncertainty of whether a violent episode will take place, the organization should
+always treat threats in a serious manner and act as if the person is likely to carry out the threat.
+
+         First, assess the credibility of a threat, and, second, evaluate the disposition of the person
+making the threats. This process allows an informed judgment to be made as to whether the person
+articulating the threats is likely to carry out a violent act or homicide and whether the threat is
+immediate and the act is imminent. Threat assessment also helps the employer decide how to
+effectively handle the situation so that violence does not occur.
+
+Good threat assessment will analyze:
+         1. The exact nature and context of the threat and/or threatening behavior;
+         2. The identified target (general or specific);
+         3. The threatener’s apparent motivation intent to carry out threat;
+         4. The threatener’s ability to carry out the threat;
+         5. The appropriate intervention that will help the thretener and protect victims; and,
+         6. The threatener’s background, including work history, criminal record, mental health,
+                  history, military history, and past behavior on the job. (6).
+
+A secondary goal is to determine the credibility level of the threat.
+
+       LEVEL I: The threatener has the means, ability, and intent to carry through with
+
+         the issued threat. (Requires immediate law enforcement intervention)
+
+       LEVEL II: While the threatener subject may possess the means, he does not
+
+         possess the ability or intent to carry out the threat. (May require social services, and
+         workplace based intervention by designated employee the employer)
+
+       LEVEL III: The threatener does not possess the means, ability or intent to carry
+
+         out the threat. (Usually requires only employer based and possible social services
+         intervention or help of Employee Assistance Programs).
+
+                                                       - 14 ­
+         Organizations vary in type and size; therefore, each will need to develop its own plan and
+implementation procedures for threat assessment to meet its individual needs by the resources
+available to that particular organization. Nationally based companies may utilize the necessary
+expertise from their own security, medical, human resources, legal, and employee assistance
+departments. Local organizations may have to seek outside help from police or human services
+departments. Once threat assessment groups are established, they should be periodically maintained
+and updated so employers have accurate information if assistance is necessary.
+
+         Every workplace violence prevention program should designate the personnel who will be
+specifically responsible for overseeing the organization’s anti-violence policy, including threat
+assessment and crisis management. Teams should have the authority, training, and support needed
+to meet their responsibilities. Further, it is often helpful to provide employees with a hierarchy of
+people within the organization to whom they may confidentially report a violent incident, such as
+the following example:
+
+       ORGANIZATIONAL HIERARCHY FOR REPORTING WORKPLACE VIOLENCE
+
+Level One    Supervisor/Manager
+Level Two    Human Resources Staff
+Level Three  Employee Assistance Programs
+
+         Designation of a “coordinator” to oversee threat assessment teams is essential. This
+“coordinator” will have the responsibility of determining the proper response in an emergency
+situation. (6). The threat assessment teams will be responsible for referring all reports of violence,
+threats, and harassment, or conduct that may frighten any employee to the threat assessment
+coordinator. (6). Threat assessment team members do not have to conduct threat assessments alone,
+but may contact an outside threat assessment professional to support the team. (5).
+
+         These teams include, “experienced, knowledgeable [members] that could review threats,
+consult with outside experts, and provide recommendations and advice to the coordinator and other
+[employees].” (6 at 25). Some examples of people who make up a multi-disciplinary team include
+police officers, psychologists, social workers, and medical personnel. The teams should interview
+the treatener's peers, associates, and superiors regarding the threatener's character performance and
+personality.
+
+             - 15 ­
+         Once a threat has been assessed for its severity, the proper response may be taken. For
+example, in its workplace violence manual, the state of Hawaii has determined that if the risk is
+“high” and the danger level is also "high", the proper response should be “arrest or hospitalization.”
+(8). On the other hand, a “low” level of risk and danger may lead to supervision of the person making
+threats. (5).
+
+         Mississippians have the opportunity to form threat assessment skills through the Department
+of Education. This Department has established Threat Assessment Protocol Workshops that are
+presently available for enrollment across Mississippi. (13). These workshops are tailored to fit the
+safety needs of Mississippi’s grade schools, but the protocol for threat assessment taught may be
+implemented to address the needs of any organization.
+
+                                             EMPLOYEE ASSISTANCE PROGRAMS
+
+                                                        f your organization has the resources, consider an
+
+               IEmployee Assistance Program (EAP). This is an
+                                                        effective program that establishes a confidential
+                                                    support service with trained counselors who are enabled
+                                                     with the proper resources to work through work-place
+                                                     violence issues. These advisors may be used to assess
+                                                    whether a situation needs to be brought to the attention
+                                     of management. They may also be a useful means of generating
+positive ideas to handle issues of workplace violence. (7). Mississippi businesses have most often
+implemented EAP’s within “drug and alcohol prevention policies.” (18 at 552).
+
+         EAP’s give employees access to professionals who are available to discuss problems that can
+adversely affect job performance and conduct. (7). “Employee ‘life’ problems like alcoholism,
+emotional difficulties, family conflict, substance abuse, legal and financial difficulties and the like
+take a tremendous toll on the employee’s ability to function at work. As an employee loses a sense
+of control over his or her environment, workplace manifestations may follow.” (18 at 552).
+
+         In addition, employees who seek such program’s services are protected with “considerable
+privacy by laws, policies, and professional ethics maintained by EAP providers.” Normally, the
+coordinator of the EAP notifies employees in writing about the limits of confidentiality upon the
+employee’s interest in using the program. (7).
+
+                                                       - 16 ­
+   DRUG AND ALCOHOL TESTING
+
+
+S  ubstance abuse creates a host of problems for an individual both personally and
+
+   professionally. In the workplace, an employee who abuses alcohol and drugs
+
+   poses a greater risk to the organization; therefore, testing reduces such risk.
+
+   Prior to instituting a testing program employers should ensure that a
+
+   written policy is in place that satisfies state law; select a date for testing
+
+   (prior to hiring, once an employee gains a new title within the
+
+   organization, at random, or for “reasonable suspicion”); and, utilize a
+
+   proper testing facility in accordance with state law. (18 at 547).
+
+         Under § 71-7-5 of Miss. Code Ann. 1972, as amended, employers have the right to engage
+in testing for substance abuse in the following situations:
+
+1. An employer may require a person seeking employment to undergo a drug and
+         alcohol test prior to obtaining employment. If the individual refuses to take the test
+         or the results are positive indicating the presence of drugs or alcohol in an
+         individual’s system, a valid reason exists for refusing to employ the individual.(16).
+
+2. "An employer may require all employees to submit to reasonable suspicion drug and
+         alcohol testing.” If the individual tests positive for drugs or alcohol in a
+         “confirmatory” test, the law presumes that the employer had reasonable suspicion to
+         test for alcohol or drugs. (16).
+
+3. An employer may require all employees to undergo neutral selection drug and alcohol
+         testing provided the requirements of § 71-7-9 of Miss. Code Ann. 1972, as amended,
+         are followed. Under §71-7-9, tests must be handled safely and preserved, written
+         notice must be given to the employees of positive results, and the appropriate costs
+         must be assessed. (16)
+
+         Please note: this is a brief summary of the statutory requirements of § 71-7-9. Employers
+should refer to the statute specifically when implementing this method of testing.
+
+   - 17 ­
+                                TERMINATION AND DISMISSAL
+
+               ermination or dismissal from a position of employment creates an excessive amount of
+
+  Tstress on the dismissed employee; therefore, every effort should be taken to conduct the
+               termination in a non-offensive manner. Employers may provide counseling, employee
+assistance programs, or job counseling services to employees who are laid-off, dismissed, or
+terminated. Another method of decreasing stress for the employee is to provide out-placement
+assistance. Further, employers should consider utilizing special tactics in circumstances where a
+violent episode is likely to occur. Employers may consider the following:
+
+         • Timing should be given special attention where violence is at issue. Some dismissals
+                  may need to be handled immediately, while others may be better suited for a specific
+                  day of the week.
+
+         • Maintain the employee’s self-respect. If the employer thinks that the organization is
+                  susceptible to a threat, a different mode of termination should be considered
+                  depending upon the risk of threat.
+
+         • Dismissal should be a statement of fact, rather than subject to discussion with the
+                  employee.
+
+RESPONDING TO VIOLENT INCIDENTS
+
+                  ost organizations have procedures to follow in the event of an emergency. For
+
+  Mexample, an evacuation plan may exist to assist employees in the case of a fire.
+                  Similarly, some organizations may give their employees specific directions to follow
+if a tornado should approach the surrounding locale. While these plans are certainly beneficial for
+natural disasters, an emergency workplace violence plan should differ to some degree. The U.S.
+Department of Agriculture has determined the following provisions should be followed after an
+episode of workplace violence:
+
+         1. Notify workplace violence coordinator;
+         2. Notify medical personnel;
+         3. Notify the police and/or security;
+         4. Implement escape procedures;
+         5. Establish safe havens both internally and externally;
+         6. Secure the workplace where the violence occurred;
+         7. Ensure that all employees have safely evacuated;
+
+                                                       - 18 ­
+         8. Notify individuals who are able to perform medical/rescue assistance;
+         9. Instruct employees in workplace violence issues annually;
+         10. Consistently evaluate and revise the plan; and,
+         11. Provide employees with the necessary instruction/assistance after the violence ends.
+
+                  (7).
+
+         As an additional security measure, the organization should ensure that the emergency
+workplace violence plan is filed with local law enforcement prior to its implementation.
+
+         No matter how effective policies and plans are in detecting and preventing incidents, there
+are no guarantees against workplace violence. Even the most responsive employers face this issue.
+When a violent incident does occur, it is essential the response be timely, appropriate in situation,
+and carried out with the recognition that employees are traumatized, and the incident’s aftermath has
+just begun.
+
+         Every office should distribute to each employee an emergency plan outlining procedures to
+follow in the event of fire, bomb threats, and threats of violence both internal and external to the
+organization. Emergency numbers should be posted. Wallet cards can be distributed to employees.
+
+         In the event of an emergency, refer to the phone numbers of security, police, and medical
+service in your organization’s emergency plan.
+
+         For handy reference, you may wish to write down the numbers of emergency services in your
+area in the portion provided on the back page of this guide.
+
+                                EMERGENCY RESPONSE TEAM
+
+                n emergency response team begins its involvement in an episode of
+
+  Aworkplace violence once an occurrence has taken place. The
+                goal of the emergency response team is to confront the
+actual violent episode and its aftermath and to initiate
+preventative measures to ensure that further workplace violence
+does not continue to occur. (7). A representative of the response
+team should be ready to answer questions by the media and inform
+the public should the episode be of great magnitude.
+
+         The Emergency Response Team acts together to implement the organization’s workplace
+violence policy and to create a method of managing post-termination procedures. (7).
+
+                                                       - 19 ­
+                               POST TERMINATION PROTOCOL
+
+                fter an episode of violence has taken place, the organization must immediately begin
+
+  A“investigations, victim assistance, preventive and corrective actions, coordination with
+                the media, and address administrative issues.” (7). Further, managers, supervisors, or
+the emergency response team should carry out certain activities including the following:
+
+         G Report the violence to the police;
+         G Provide medical assistance to victims if necessary;
+         G Conduct a roll call of employees;
+         G Assess damage by using the organization’s workplace violence program;
+         G Check for safety hazards;
+         G Photograph and document damage;
+         G Initiate salvage operations;
+         G Carry out the crisis response plan in the organization’s workplace violence program;
+
+                  and,
+         G Provide psychological counseling to victims. (1).
+
+         Even if these steps are followed, employees usually are vulnerable to "crisis reactions" which
+include:
+
+         Stage One – “The employee experiences emotional reactions characterized by shock,
+         disbelief, numbness, and denial. Physically, the employee experiences shock or a fight-or­
+         flight survival reaction in which the heart rate increases, perceptual sense become heightened
+         or distorted, and adrenaline levels increase to meet a real or perceived threat.” (7 at 13).
+         Stage Two – Represents “the ‘impact’ stage where the employee may feel a variety of intense
+         emotion, including anger, rage, fear, terror, grief, sorrow, confusion, helplessness, guilt,
+         depression, or withdrawal. This stage may last a few days, a few weeks, or a few months.”
+         (7 at 13).
+         Stage Three – Represents “ the ‘reconciliation’ stage in which the employee tries to make
+         sense out of the event, understand its impact, and through trial and error, reach closure of the
+         event so it does not interfere with his or her ability to function and grow. This stage may be
+         a long-term process.” (7 at 13).
+
+         Within each of the three stages, employees may have different reactions. The depth of
+reaction is determined by the presence or absence of the following factors: “the duration of the
+event, the amount of terror or horror the victim experienced, the sense of personal control (or lack
+thereof) the employee had during the incident, and the amount of injury or loss the victim
+
+                                                       - 20 ­
+experienced.” (7 at 13).
+
+         To aid in recovery, employers should offer stress debriefing sessions and post-traumatic
+counseling services. Additionally, many state and non-profit agencies are willing to provide
+assistance to the families of the victim’s of workplace violence. In a handbook entitled,
+Mississippi...and Justice for All: A Victim’s Guide, Mississippi has compiled a listing of those
+agencies through the Office of the Attorney General's Crime Prevention & Victim Services. Topics
+include the following:
+
+G Children;                       G Survivors of Homicide;
+G Domestic Violence;              G Sexual Assault;
+G Elderly;                        G State Agencies; and
+G Mothers Against Drunk           G Victim Assistance
+
+         Driving;                          Coordinators
+
+         A copy of this handbook may be obtained by contacting the Office of the Attorney General
+at (601)-359-6766, toll free at (800)-829-6766 or visit our wesite www.ago.state.ms.us. (20)
+
+                          - 21 ­
+WORKPLACE VIOLENCE PREVENTION
+
+            APPENDIX
+APPENDIX A:
+
+
+              EMERGENCY CONTACTS CHECKLIST
+
+
+Police:  _________________________________________________________________
+
+
+Security: _________________________________________________________________
+
+
+Medical: _________________________________________________________________
+
+
+Human Services: ___________________________________________________________
+
+
+Alarm Company: ___________________________________________________________
+
+
+Media:   _________________________________________________________________
+
+
+MS Department of Education:  _______________________________________________
+
+
+MS Department of Highway Patrol: _______________________________________________
+
+
+SWAT:    _________________________________________________________________
+
+
+DESIGNATED RESPONSIBILITIES IN CASE OF EMERGENCY:
+
+G Copies of the response management plan G Legal representatives will be notified by
+
+         will be located at ____________________     ________________________________
+
+G Medical assistance will be called by G Media will be notified by ___________
+
+         __________________________________ G Press releases will be made by
+
+G Law enforcement will be notified by                ________________________________
+
+         __________________________________ G Trauma counseling will be handled by
+
+G Crisis Response Team will be called by             ________________________________
+
+         __________________________________ G Cleanup or repair to facilities will be
+
+G Crisis Response Team will be located at            handled by _______________________
+
+         (room or building) ___________________ G Employees’ return to the workplace will
+
+G Alternate site for response team                   be determined by _________________
+
+         __________________________________
+
+G        Meeting place for employees in case of AFTER THE CRISIS
+
+         evacuation of the building _____________ G Make certain that business can continue.
+
+G Alternative employees' meeting site G Make certain that only one person
+
+         __________________________________          represents the organization to the media.
+
+G Victims’ families will be notified by G Hire a clean-up crew.
+
+         __________________________________       G  Be accessible to employees.
+
+G Employees’ families will be briefed by
+
+         __________________________________
+
+G Employees will be briefed by __________
+
+                             - 23 ­
+APPENDIX B:
+
+
+               he following checklist is based on an example within Hawaii’s workplace violence
+
+  Thandbook. (8). The purpose of this checklist is to
+
+provide a means of obtaining accurate, first-hand
+information of the details of a threat as it is occurring.
+
+         Obviously, all callers will not intend to threaten your
+organization; therefore, it may be beneficial to state an apology prior to asking
+more intrusive questions in an effort to ease the mind of the incoming caller. It is also important to
+be respectful of the caller. Always address the caller as “Sir” or “M’aam” in a soft tone of voice.
+
+         After a checklist has been completed, please send it to the person designated to handle
+workplace violence matters within your organization.
+
+TELEPHONE CHECKLIST          SPECIFIC QUESTIONS TO BE ASKED OF THE CALLER
+G Date                       G May I ask your name?
+G Male or Female             G What kind of problem do you have? What can
+G Time (a.m. or p.m.)
+G Voice Characteristics               I do to help you?
+G Caller ID (if applicable)  G Please calm down, and let me explain to you
+G Caller’s Words
+G Surrounding Noises                  what you need to do.
+G Additional Information     G Is there anything else that we can help you
+G Name of Employee
+G Name of Supervisor                  with?
+                             G Could I please get your telephone number or
+
+                                      have someone return your call?
+                             G Do you have any other concerns?
+
+                             - 24 ­
+ADDITIONAL INFORMATION / TELEPHONE LOG
+
+
+ Comments:
+ Questions:
+ Concerns:
+ Name:
+ Date:
+ Comments:
+ Questions:
+ Concerns:
+ Name:
+ Date:
+
+                                                       - 25 ­
+APPENDIX C:
+
+
+SAMPLE WORKPLACE VIOLENCE POLICY (19)
+
+
+   To All Employees Of (name of organization):
+            This is a statement by (name of organization) written in an effort to diminish crime
+
+   within the workplace. Each of you should understand that (name of organization) is
+   committed to a safe and healthful workplace; therefore, workplace violence will not be
+   tolerated within (name of organization). Also, it is important for each employee to
+   understand that the threat of workplace violence is a reality; no organization is immune.
+
+            For your understanding, the United States Department of Agriculture defines
+   workplace violence as “any act of violence, against persons or property, threats,
+   intimidation, harassment, or other inappropriate, disruptive behavior that causes fear for
+   personal safety at the worksite.” Any report whatsoever of the above behavior will be
+   subject to assessment by (name of organization).The penalty for any form of workplace
+   violence may include, but is not limited to, the following: increased supervision, counseling,
+   removal from the premises of (name of the organization), termination, and/or criminal
+   liability.
+
+            In order to implement an effective workplace violence policy, we must all actively
+   work together. Our goal is to provide security for each employee within their work
+   environment. Therefore, if any of you witness behavior that fits the above description of
+   workplace violence, whether the act is done by a co-worker or a person with whom you are
+   not acquainted, please report such behavior to your immediate supervisor. Any reports
+   should then be forwarded to (the appropriate named agency).
+
+            Please review the contents of this workplace violence handbook for more specific
+   clarification, or you may contact your supervisor. Please note: if an individual is subject to
+   an immediate threat, contact security at xxx-xxxx or dial 91l for assistance. Thank you all
+   for your service to (name of organization).
+
+                                                         Sincerely,
+                                                         (CEO, President, Chief of Staff, etc.)
+
+                                                      - 26 ­
+APPENDIX D:
+
+
+WORKPLACE VIOLENCE INSPECTION QUESTIONNAIRE
+
+         This chart has been adapted from the American Federation of State, County, and Municipal
+Employees website. (12). It may be used as a method for assessing an organization’s present
+procedures on workplace violence. Also, answering these questions should indicate whether new
+policies should be implemented or old policies revised to provide greater protection of employees
+on a daily basis.
+
+         If, while completing the questionnaire, a question does not apply to the policies of (name
+of organization) respond by stating not applicable or “N/A.”
+
+         Additional space for specific comments, suggestions, or concerns is provided at the end of
+the questionnaire.
+
+PERSONNEL                                                                      YES  NO
+
+Does the organization conduct background checks prior to hiring new
+employees?
+
+If so, is a written policy or procedure implemented for this procedure?
+
+Does the organization require applicants to submit references prior to
+employment?
+
+Is an applicant required to list past instances of violence on his or her
+employment application?
+
+Does the organization conduct drug and alcohol testing of all its employees?
+
+Does the organization have a human resources department?
+
+Has the organization designated a key person who is authorized to act in case
+of an emergency?
+
+Are the organization’s employees involved primarily in administrative work?
+
+Are the organization's employees involved primarily in physical labor?
+
+Is the workplace policy consistently enforced by the organization to ensure
+compliance?
+
+           - 27 ­
+WORKPLACE TRAINING                                                             YES  NO
+
+Does the organization have a general evacuation policy in effect?
+
+If so, are the employees trained as to the escape procedures?
+
+Does the organization have any workplace training presently?
+
+Does the organization involve any other agency in its basic training
+procedures?
+
+Other than basic training, does the training include violence prevention?
+
+If so, does the violence prevention training address pro-active prevention of
+violence?
+
+Does the organization actively distribute information concerning workplace
+violence throughout the workplace?
+
+Does the organization have an effective system of reporting suspicious
+behavior to his or her supervisor?
+
+Does the organization remove ID and passwords from employees upon
+termination?
+
+Does the training address action to be taken during an actual episode of
+violence?
+
+Does the organization have medical and police personnel on standby?
+
+Is a building plan implemented and accessible to the employees?
+
+Have the building plan and emergency plan been filed with local law
+enforcement and emergency personnel?
+
+Are the managers and supervisors trained in stress management techniques?
+
+Does the organization have a multi-disciplinary threat assessment team?
+
+Does the organization have a protocol for threat assessment?
+
+Does the training address action to be taken after an actual episode of
+violence?
+
+Are de-briefing sessions held after a violent incident?
+
+Is medical assistance provided to those in need?
+
+Are new procedures considered for implementation after a violent episode has
+occurred?
+
+                                                  - 28 ­
+THREAT ASSESSMENT                                                              YES  NO
+
+Does the organization have a threat assessment team in place?
+
+If so, does the team periodically review with employees the common behavior
+of a person likely to commit workplace violence?
+
+Does the organization have each of its supervisors report potentially violent
+behavior to management?
+
+Does the organization notify employees of past violent behavior of their co­
+workers?
+
+Are Employee Assistance Programs provided by the organization?
+
+SECURITY                                                                       YES  NO
+
+Does the organization have an active alarm/security system implemented?
+
+Is the organization guarded by security daily?
+
+If so, are the guards on the workplace site 24 hours a day?
+
+If not, is workplace security provided 12 hours a day?
+
+Is proper lighting provided in the organization’s parking lot?
+
+Has the organization given each employee an emergency phone list for his or
+her use?
+
+Does the organization require all employees to wear ID badges while in the
+workplace?
+
+Does the organization have the proper number of emergency exits as mandated
+by their building plan?
+
+Does the organization consistently enforce security procedures?
+
+RISK FACTORS                                                                   YES  NO
+
+Historically, has the organization hired employees with substance abuse
+problems?
+
+Does the organization ever provide alcohol on the premises?
+
+Does the organization require its employees to come in frequent contact with
+customers or patrons?
+
+                                                - 29 ­
+ADDITIONAL RESOURCES
+
+
+          VICTIMS ASSISTANCE COORDINATORS AND DISTRICT ATTORNEYS
+
+
+1st Judicial District
+         Victim Assistance Coordinator: Marilyn Reed
+                  District Attorney John Young . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 662-844-5579
+                           Itawamba, Lee, Monroe, Pontotoc
+
+1st Judicial District
+         Victim Assistance Coordinator: Linda White
+                  District Attorney John Young . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 662-287-2486
+                           Alcorn, Prentiss, Tishomingo
+
+2nd Judicial District
+         Victim Assistance Coordinators: Franchelle Daniels & Angele Gardner
+                  District Attorney Cono Caranna . . . . . . . . . . . . . . . . . . . . . . . . . . . 228-865-4003
+                           Harrison, Hancock and Stone
+
+3rd Judicial District
+         Victim Assistance Coordinator: Dianne Dickerson
+                  District Attorney Benjamin Creekmore . . . . . . . . . . . . . . . . . . . . . . 662-234-3304
+                                    Benton, Lafayette, Marshall, Tippah and Union
+
+3rd Judicial District
+         Victim Assistance Coordinator: Jan Marsh
+                  District Attorney Benjamin Creekmore . . . . . . . . . . . . . . . . . . . . . . 662-234-3304
+                           Calhoun, Chickasaw, Lafayette and Union
+
+4th Judicial District
+         Victim Assistance Coordinator: Dora Ross
+                  District Attorney Joyce Childs . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 662-453-1089
+                           Leflore
+
+4th Judicial District
+         Victim Assistance Coordinator: Stacey Nance
+                  District Attorney Joyce Childs . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 662-332-3619
+                           Washington
+
+4th Judicial District
+         Victim Assistance Coordinator: DeeDee Pruitt
+                  District Attorney Joyce Childs . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 662-887-4306
+                           Sunflower
+
+5th Judicial District
+         Victim Assistance Coordinator: Margie Scruggs
+                  District Attorney Doug Evans . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 662-226-8545
+                           Attala, Carroll, Choctaw, Grenada, Montgomery, Webster and Winston
+
+6th Judicial District
+         Victim Assistance Coordinator: Linda Futrell
+                  District Attorney Ronnie Harper . . . . . . . . . . . . . . . . . . . . . . . . . . . 601-445-4099
+                           Adams, Amite and Franklin
+
+                                                       - 30 ­
+6th Judicial District
+
+Victim Assistance Coordinator: Sonette Tensley
+
+District Attorney Ronnie Harper . . . . . . . . . . . . . . . . . . . . . . . . . . . 601-445-4099
+
+                           Wilkinson
+7th Judicial District
+
+Victim Assistance Coordinator: Nancy Lee
+
+District Attorney Faye Peterson . . . . . . . . . . . . . . . . . . . . . . . . . . . . 601-968-6568
+
+                        Hinds
+
+8th Judicial District
+
+Victim Assistance Coordinator: Rhonda Thomas
+
+District Attorney Mark Duncan . . . . . . . . . . . . . . . . . . . . . . . . . . . . 601-656-1991
+
+                           Leake, Neshoba, Newton, Scott
+9th Judicial District
+
+Victim Assistance Coordinator: Georgia Lynn
+
+District Attorney Gilmore Martin . . . . . . . . . . . . . . . . . . . . . . . . . . 601-636-5754
+
+                           Issaquena, Sharkey, Warren
+10th Judicial District
+
+Victim Assistance Coordinators: Shirley Adams & Suzanne Youngblood
+
+District Attorney Ellis J. (Bilbo) Mitchell, III . . . . . . . . . . . . . . . . . 601-482-9758
+
+                           Clarke, Kemper, Lauderdale, Wayne
+11th Judicial District
+
+Victim Assistance Coordinator: Beverly Harris
+
+District Attorney Laurence Mellen . . . . . . . . . . . . . . . . . . . . . . . . . 662-843-8000
+
+                           Bolivar, Coahoma, Quitman, Tunica
+12th Judicial District
+
+Victim Assistance Coordinator: Gail Parkerson
+
+District Attorney Jon Mark Weathers . . . . . . . . . . . . . . . . . . . . . . . 601-545-1551
+
+                           Forrest, Perry
+13th Judicial District
+
+Simpson Co. Courthouse
+
+Victim Assistance Coordinator: Mary Carroll Prince
+
+                        District Attorney Ed Bowen . . . . . . . . . . . . . . . . . . . . . . . . . 601-847-1342
+
+                               Covington, Jasper, Simpson, Smith
+
+14th Judicial District
+
+Victim Assistance Coordinators: Jamie Murrell & Vanessa Washington
+
+District Attorney Dee Bates . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 601-930-2772
+
+                        Lincoln, Pike, Walthall
+
+15th Judicial District
+
+Victim Assistance Coordinator: Beth Barnes
+
+District Attorney Claiborne 'Buddy' McDonald . 601-731-1476 • 1-800-711-6960
+
+                           Lawrence, Marion, Jefferson Davis
+15th Judicial District
+
+Victim Assistance Coordinator: Jeff Caillouet
+
+District Attorney Claiborne 'Buddy' McDonald . 601-795-3064 • 1-800-711-6960
+
+                        Lamar, Pearl River
+
+                                                 - 31 ­
+16th Judicial District
+         Victim Assistance Coordinator: Greta Bryan
+                  District Attorney Forrest Allgood . . . . . . . . . . . . . . . . . . . . . . . . . . 662-329-5911
+                           Clay, Lowndes, Noxubee, Oktibbeha
+
+17th Judicial District
+         Victim Assistance Coordinator: Sherri Franks
+                  District Attorney John W. Champion . . . . . . . . . . . . . . . . . . . . . . . 662-429-1374
+                           Desoto, Tate
+
+17th Judicial District
+         Victim Assistance Coordinator: Ida Bryan
+                  District Attorney John W. Champion . . . . . . . . . . . . . . . . . . . . . . . 662-563-6636
+                           Panola, Tallahatchie, Yalobusha
+
+18th Judicial District
+         Victim Assistance Coordinator: Deborah Warren & Joy Berry
+                  District Attorney Anthony “Tony” Buckley . . . . . . . . . . . . . . . . . . . 601-649-4606
+                           Jones
+
+18th Judicial District
+         Victim Assistance Coordinator: Weda Cole
+                  District Attorney Anthony “Tony” Buckley . . . . . . . . . . . . . . . . . . . 601-649-4606
+                           Jones
+
+19th Judicial District
+         Victim Assistance Coordinator: Jennifer Garraway
+                  District Attorney Anthony “Tony” Lawrence . . . . . . . . . . . . . . . . . 228-769-3045
+                           George, Greene, Jackson
+
+20th Judicial District
+         Victim Assistance Coordinator: Beth Colbert
+                  District Attorney David Clark . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 601-825-1472
+                           Rankin
+
+20th Judicial District
+         Victim Assistance Coordinator: Julia Phelps
+                  District Attorney David Clark . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 601-859-7838
+                           Madison
+
+21st Judicial District
+         Victim Assistance Coordinator: Ethel Durham
+                  District Attorney James H. Powell . . . . . . . . . . . . . . . . . . . . . . . . . . 662-653-3191
+                           Yazoo, Holmes, Humphreys
+
+22nd Judicial District
+         Victim Assistance Coordinator:
+                  District Attorney Alexander Martin . . . . . . . . . . . . . . . . . . . . . . . . . 601-894-5040
+                           Claiborne, Copiah, Jefferson
+
+                                                       - 32 ­
+NOTES
+
+REFERENCES
+
+
+A. WEBSITES
+
+
+         1. "Workplace Violence: OSHA Fact Sheet."
+                  http://www.osha.gov
+
+         2. " Fa c t s You S ho ul d Know About Workpl ace Vi ol en ce. "
+                  http://www.case.edu/finadmin/humres/eddev/easeMay.pdf
+
+         3. The Office of Personnel Management
+                  http://www.opm.gov/ehs/workplac/workplace-violence-print-version.htm
+
+         4. California Guidelines For Workplace Security
+                  http://www.dir.ca.gov/dosh/dosh%5Fpublications/worksecurity.html
+
+         5. "Workplace Violence: Issues in Response." Critical Incident Response Group,
+                  National Center for the Analysis of Violent Crime.
+                  http://www.fbi.gov/publications/violence/.pdf
+
+         6. “The School Shooter: A Threat Assessment Perspective.” U.S. Department of
+                  Justice, Federal Bureau of Investigation.
+                  http://www.fbi.gov/publications/school/school2.pdf
+
+         7. The USDA Handbook of Workplace Violence Prevention and Response
+                  http://www.usda.gov/news/pubs/violence/wpv.htm
+
+         8. "Workplace Violence: Prevention, Intervention, and Recovery." Hawaii Workplace
+                  Violence Working Group Committee.
+                  ftp://ftp.cpja.ag.state.hi.us/users/crs/pub/workplaceviolence/WVfull.pdf
+
+         9. U.S. Department of Labor/Bureau of Labor Statistics
+                  http://www.bls.gov/iif/oshcfoi1.htm
+
+         10. CBSNEWS.com
+                  http://www.cbsnews.com/stories/2003/07/09/national/main562301.shtml
+
+         11. “Managers Not Prepared For Workplace Violence” USA TODAY
+                  http://www.usatoday.com/money/workplace/2004-07-15-workplace­
+                  violence2_x.htm
+
+         12. American Federation of State, County, and Municipal Employees
+                  http://www.afscme.org/health/violaa.htm
+
+         13. Mississippi Department of Education
+                  http://www.mde.k12.ms.us/lead/osos/Threat.htm
+B. STATUTES
+
+         14. Occupational Safety and Health Act of 1970 (OSHA), 29 U.S.C. § 651, et seq.
+         15. Mississippi’s Unemployment Compensation Law, Miss. Code Ann. § 71-5-513.
+         16. Mississippi’s Drug and Alcohol Testing of Employees, Miss. Code Ann. § 71-7-5,
+
+                  71-7-9.
+         17. Mississippi Department of Information Technology Provisions, Miss. Code Ann. §
+
+                  25-53-21.
+
+C. PUBLICATIONS
+
+         18. Amy D. Whitten and Deanne M. Mosley, Caught in the Crossfire: Employer’s
+                  Liability for Workplace Violence, 70 Miss.L.J. 505 (2000).
+
+         19. Jackson Medical Mall Foundation, Violence in the Workplace: Prevention Strategies,
+                  January 17, 2002.
+
+         20. Mississippi...and Justice for All: A Victim’s Guide, Mississippi Attorney General's
+                  Office Crime Prevention & Victim Services.
+
+D. CASES
+
+         21. Knight v. State of Mississippi, 854 So.2d 17, 19 (Miss. Ct. App. 2003).
+         22. Hux v. Mississippi Employment Security Commission, 749 So.2d 1225, 1226-27
+
+                  (Miss. Ct. App. 1999).
+         23. Tornes v. State of Mississippi, 691 So.2d 1035 (Miss. Ct. App. 1996).
+         24. Knott v. State of Mississippi, 731 So.2d 573 (Miss. 1999)
+
+                                                       - 35 ­
+              JIM HOOD
+
+             ATTORNEY GENERAL
+
+OFFICE OF THE ATTORNEY GENERAL
+
+            STATE OF MISSISSIPPI
+
+           POST OFFICE BOX 220
+
+
+         JACKSON, MS 39205-0220
+
+
+                    601-359-3680
+
+               www.agjimhood.com
+
+
