@@ -9,6 +9,7 @@ export default function ServiceOfProcessWizard() {
   const [useEService, setUseEService] = useState(false);
   const [proofs, setProofs] = useState<string[]>(() => readJson("case_companion_proof_uploads_v1", []));
   const [uploadStatus, setUploadStatus] = useState("");
+  const [defendantRegistered, setDefendantRegistered] = useState<"yes" | "no" | "unsure">("unsure");
 
   function handleProofUpload(file?: File | null) {
     if (!file) return;
@@ -38,6 +39,46 @@ export default function ServiceOfProcessWizard() {
             </label>
             <div className="mt-2 text-xs text-slate-400">
               E‑service only works if the other party is registered in MiFILE. Otherwise you must serve manually.
+            </div>
+            <div className="mt-4 space-y-2 text-sm text-slate-300">
+              <div className="text-xs text-slate-400">Is the defendant registered in MiFILE?</div>
+              <label className="flex items-start gap-2">
+                <input
+                  type="radio"
+                  className="mt-1 h-4 w-4 accent-amber-400"
+                  checked={defendantRegistered === "yes"}
+                  onChange={() => setDefendantRegistered("yes")}
+                />
+                <span>Yes — registered in MiFILE</span>
+              </label>
+              <label className="flex items-start gap-2">
+                <input
+                  type="radio"
+                  className="mt-1 h-4 w-4 accent-amber-400"
+                  checked={defendantRegistered === "no"}
+                  onChange={() => setDefendantRegistered("no")}
+                />
+                <span>No — not registered</span>
+              </label>
+              <label className="flex items-start gap-2">
+                <input
+                  type="radio"
+                  className="mt-1 h-4 w-4 accent-amber-400"
+                  checked={defendantRegistered === "unsure"}
+                  onChange={() => setDefendantRegistered("unsure")}
+                />
+                <span>Not sure</span>
+              </label>
+              {defendantRegistered === "no" ? (
+                <div className="text-xs text-amber-200">
+                  Use manual service. E‑service alone is not enough if they are not registered.
+                </div>
+              ) : null}
+              {defendantRegistered === "unsure" ? (
+                <div className="text-xs text-amber-200">
+                  Confirm with the clerk or MiFILE party list before relying on e‑service.
+                </div>
+              ) : null}
             </div>
           </CardBody>
         </Card>
