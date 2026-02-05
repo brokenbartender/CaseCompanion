@@ -5,6 +5,7 @@ import { readJson } from "../utils/localStore";
 import { EVIDENCE_INDEX } from "../data/evidenceIndex";
 import { MICHIGAN_OBJECTION_CARDS } from "../data/michiganEvidenceObjections";
 import { MCI_115 } from "../data/michiganAssaultCivil";
+import { useNavigate } from "react-router-dom";
 
 const TIMELINE_KEY = "case_companion_timeline_v1";
 const VIDEO_SYNC_KEY = "case_companion_video_sync_v1";
@@ -14,6 +15,7 @@ type TimelineEvent = { date: string; title: string; note: string; evidence: stri
 type SyncRow = { timecode: string; reportLine: string; note: string };
 
 export default function TrialMode() {
+  const navigate = useNavigate();
   const timeline = readJson<TimelineEvent[]>(TIMELINE_KEY, []);
   const syncRows = readJson<SyncRow[]>(VIDEO_SYNC_KEY, []);
   const checklist = readJson<Record<string, boolean>>(JI_KEY, {});
@@ -70,19 +72,20 @@ export default function TrialMode() {
             </CardHeader>
             <CardBody>
               <div className="grid gap-2">
-                {trialPicks.length === 0 ? (
-                  <div className="text-sm text-slate-400">No trial picks found.</div>
-                ) : (
-                  trialPicks.map((item) => (
-                    <button
-                      key={item.path}
-                      type="button"
-                      className="w-full rounded-lg bg-amber-500 px-4 py-3 text-left text-sm font-semibold text-slate-900"
-                    >
-                      {item.name}
-                    </button>
-                  ))
-                )}
+                    {trialPicks.length === 0 ? (
+                      <div className="text-sm text-slate-400">No trial picks found.</div>
+                    ) : (
+                      trialPicks.map((item) => (
+                        <button
+                          key={item.path}
+                          type="button"
+                          className="w-full rounded-lg bg-amber-500 px-4 py-3 text-left text-sm font-semibold text-slate-900"
+                          onClick={() => navigate(`/evidence?highlight=${encodeURIComponent(item.path)}`)}
+                        >
+                          {item.name}
+                        </button>
+                      ))
+                    )}
               </div>
             </CardBody>
           </Card>
@@ -108,7 +111,17 @@ export default function TrialMode() {
                           <ul className="mt-1 space-y-1 text-slate-300">
                             {event.evidence.map((path) => {
                               const match = EVIDENCE_INDEX.find((item) => item.path === path);
-                              return <li key={path}>{match?.name || path}</li>;
+                              return (
+                                <li key={path}>
+                                  <button
+                                    type="button"
+                                    className="text-left text-amber-200 hover:text-amber-100"
+                                    onClick={() => navigate(`/evidence?highlight=${encodeURIComponent(path)}`)}
+                                  >
+                                    {match?.name || path}
+                                  </button>
+                                </li>
+                              );
                             })}
                           </ul>
                         </div>
