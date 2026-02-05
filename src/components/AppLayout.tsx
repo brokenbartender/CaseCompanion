@@ -57,6 +57,8 @@ const navItems = [
   { to: "/rules", label: "Rules Library", icon: BookOpen },
   { to: "/rules-index", label: "Rules Index", icon: Search },
   { to: "/audit", label: "Audit Log", icon: ClipboardCheck },
+  { to: "/privacy-safety", label: "Privacy + Safety", icon: Shield },
+  { to: "/resources", label: "Resources Hub", icon: BookOpen },
   { to: "/settings", label: "Case Settings", icon: Settings }
 ];
 
