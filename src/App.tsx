@@ -44,6 +44,8 @@ import LayoutParser from "./modules/LayoutParser";
 import StatutoryContext from "./modules/StatutoryContext";
 import DesignSystem from "./modules/DesignSystem";
 import ClassifierHub from "./modules/ClassifierHub";
+import MiFileReconnect from "./modules/MiFileReconnect";
+import FeeWaiverGuide from "./modules/FeeWaiverGuide";
 
 function App() {
   return (
@@ -74,6 +76,8 @@ function App() {
           <Route path="statutory-context" element={<StatutoryContext />} />
           <Route path="design-system" element={<DesignSystem />} />
           <Route path="classifier" element={<ClassifierHub />} />
+          <Route path="mifile-reconnect" element={<MiFileReconnect />} />
+          <Route path="fee-waiver" element={<FeeWaiverGuide />} />
           <Route path="rules" element={<RulesLibrary />} />
           <Route path="rules-index" element={<RulesIndex />} />
           <Route path="service" element={<ServiceOfProcessWizard />} />

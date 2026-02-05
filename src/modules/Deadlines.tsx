@@ -30,6 +30,9 @@ export default function DeadlinesView() {
   const [form, setForm] = useState<Deadline>({ date: "", title: "", note: "" });
   const [templateId, setTemplateId] = useState(DEADLINE_TEMPLATES[0].id);
   const [templateDate, setTemplateDate] = useState("");
+  const [calcStart, setCalcStart] = useState("");
+  const [calcDays, setCalcDays] = useState("0");
+  const [calcBusiness, setCalcBusiness] = useState(true);
 
   const sorted = useMemo(() => [...deadlines].sort((a, b) => a.date.localeCompare(b.date)), [deadlines]);
 
@@ -50,9 +53,66 @@ export default function DeadlinesView() {
     setTemplateDate("");
   }
 
+  function calculateDeadline() {
+    if (!calcStart.trim()) return "";
+    const start = new Date(calcStart);
+    if (Number.isNaN(start.getTime())) return "";
+    const days = Math.max(0, Number(calcDays) || 0);
+    let count = 0;
+    let cursor = new Date(start);
+    while (count < days) {
+      cursor.setDate(cursor.getDate() + 1);
+      if (calcBusiness) {
+        const day = cursor.getDay();
+        if (day === 0 || day === 6) continue;
+      }
+      count += 1;
+    }
+    const due = cursor.toISOString().slice(0, 10);
+    return `${due} (11:59 PM local)`;
+  }
+
+  const computed = calculateDeadline();
+
   return (
     <Page title="Deadlines" subtitle="Track procedural deadlines and reminders.">
       <div className="grid gap-6 lg:grid-cols-3">
+        <Card className="lg:col-span-1">
+          <CardHeader>
+            <CardSubtitle>Calculator</CardSubtitle>
+            <CardTitle>Deadline Tool</CardTitle>
+          </CardHeader>
+          <CardBody>
+            <div className="space-y-3">
+              <input
+                className="w-full rounded-md border border-white/10 bg-white/5 px-3 py-2 text-sm text-slate-100"
+                placeholder="Start date (YYYY-MM-DD)"
+                value={calcStart}
+                onChange={(e) => setCalcStart(e.target.value)}
+              />
+              <input
+                className="w-full rounded-md border border-white/10 bg-white/5 px-3 py-2 text-sm text-slate-100"
+                placeholder="Number of days"
+                value={calcDays}
+                onChange={(e) => setCalcDays(e.target.value)}
+              />
+              <label className="flex items-center gap-2 text-xs text-slate-300">
+                <input
+                  type="checkbox"
+                  className="h-4 w-4 accent-amber-400"
+                  checked={calcBusiness}
+                  onChange={(e) => setCalcBusiness(e.target.checked)}
+                />
+                Business days only
+              </label>
+              <div className="text-xs text-amber-200">Due: {computed || "Enter inputs"}</div>
+              <div className="text-[10px] text-slate-500">
+                Filings submitted by 11:59 PM count that business day. Weekends roll to next business day.
+              </div>
+            </div>
+          </CardBody>
+        </Card>
+
         <Card className="lg:col-span-1">
           <CardHeader>
             <CardSubtitle>Presets</CardSubtitle>

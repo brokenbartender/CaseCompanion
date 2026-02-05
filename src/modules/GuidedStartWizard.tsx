@@ -19,12 +19,17 @@ const STEPS = [
     action: { label: "Open Filing Flow", href: "/filing-flow" }
   },
   {
-    title: "4) Serve the Defendant",
+    title: "4) If you stop getting notices",
+    description: "Reconnect your case to MiFILE to restore e‑service.",
+    action: { label: "Open MiFILE Reconnect", href: "/mifile-reconnect" }
+  },
+  {
+    title: "5) Serve the Defendant",
     description: "Use a qualified server and track the 90-day service window.",
     action: { label: "Open Service Guide", href: "/service" }
   },
   {
-    title: "5) Ingest Evidence",
+    title: "6) Ingest Evidence",
     description: "Upload PDFs or media for hashing, OCR, and indexing.",
     action: { label: "Open Ingest Center", href: "/ingest" }
   }
