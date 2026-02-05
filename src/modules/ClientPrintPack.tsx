@@ -138,7 +138,7 @@ export default function ClientPrintPack() {
               <ul className="space-y-2 text-sm text-slate-300">
                 {ruleDeadlines.map((item) => (
                   <li key={item.id}>
-                    {item.dueDate} - {item.label} ({item.rule.source.citation})
+                    {(item.dueDate || "Manual")} - {item.label} ({item.rule.source.citation})
                   </li>
                 ))}
               </ul>
