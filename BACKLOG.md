@@ -154,6 +154,8 @@ This backlog maps the Michigan civil case lifecycle (benchbook-driven) and legal
 - Steps: surface statute summary, link to penalties and definitions in case context
 62. **E5** Demonstrative exhibit builder + admissibility checklist
 - Steps: create visual exhibits from frames, foundation prompts, relevance/prejudice check
+63. **E2** Video content analysis (VCAT-style)
+- Steps: object detection, OCR on frames, speech-to-text with timestamps, prompt-based search
 56. **E2** Layout-aware document parsing (RAGFlow DeepDoc)
 - Steps: evaluate OCR + layout + table structure extraction for PDFs/forms
 
