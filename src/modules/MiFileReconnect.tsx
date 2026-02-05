@@ -24,6 +24,17 @@ const STEPS = [
   "Save confirmation and verify you receive future notices."
 ];
 
+const RESOURCES = [
+  {
+    label: "Oakland County Circuit Court eFiling page",
+    href: "https://www.oakgov.com/government/courts/circuit-court/programs/efiling"
+  },
+  {
+    label: "Oakland County Clerk eFiling page",
+    href: "https://www.oakgov.com/government/clerk-register-of-deeds/court-records/efiling"
+  }
+];
+
 export default function MiFileReconnect() {
   const settings = readJson<CaseSettings>(SETTINGS_KEY, {
     caseName: "",
@@ -94,6 +105,20 @@ export default function MiFileReconnect() {
                 </li>
               ))}
             </ul>
+            <div className="mt-4 text-xs text-slate-400">Official resources</div>
+            <div className="mt-2 flex flex-wrap gap-3">
+              {RESOURCES.map((resource) => (
+                <a
+                  key={resource.href}
+                  href={resource.href}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="rounded-md border border-amber-400/50 px-3 py-2 text-xs font-semibold text-amber-200"
+                >
+                  {resource.label}
+                </a>
+              ))}
+            </div>
           </CardBody>
         </Card>
       </div>
