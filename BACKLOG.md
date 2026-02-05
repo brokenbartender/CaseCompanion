@@ -66,6 +66,8 @@ This backlog maps the Michigan civil case lifecycle (benchbook-driven) and legal
 
 18. **E8** Accessibility pass (color contrast, large targets, keyboard nav)
 - Steps: audit + fixes
+19. **E1/E8** Dashboard design spec from court dashboard guide
+- Steps: KPI hierarchy, layout grid, chart types, accessibility + responsive standards
 
 ## Roadmap Tracker
 
