@@ -122,6 +122,8 @@ This backlog maps the Michigan civil case lifecycle (benchbook-driven) and legal
 - Steps: compare doc ingestion, annotation, schema extraction, AI search; note AGPL license constraints
 46. **E2/E8** OpenContracts module-by-module comparison (backlog-only)
 - Steps: map features to CaseCompanion modules, identify gaps, propose equivalent build tasks
+47. **E2** Evaluate HF legal-documents dataset (prototype-only)
+- Steps: review dataset card/license, assess sample quality, decide if safe for demo text only
 
 ## Roadmap Tracker
 
