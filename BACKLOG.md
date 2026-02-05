@@ -13,151 +13,77 @@ This backlog maps the Michigan civil case lifecycle (benchbook-driven) and legal
 - E8 Design System & Accessibility (legal-design-driven UX)
 
 ## Backlog Items
-1. **E1** Build Master Checklist view aligned to benchbook phases
-- Steps: Phase list, required docs, status tracking, next-action button
+1. **E1** Master Checklist + Case Journey Dashboard
+- Steps: phase list, required docs, status tracking, next-action button, timeline highlights
 
-2. **E1** Dashboard redesign to show Case Journey timeline
-- Steps: visual phase timeline, highlights, upcoming deadlines
+2. **E1** Oakland County filing flow (court selector + MiFILE)
+- Steps: 52nd vs 6th circuit selector, MiFILE registration, initiation wizard, fee waiver path
 
-3. **E3** Discovery Wizard: Interrogatories
-- Steps: template library, timing rules, send/export
+3. **E1** A-to-Z document pack builder
+- Steps: summons MC 01, complaint MC 01a, fee waiver MC 20, file naming rules
 
-4. **E3** Discovery Wizard: Requests for Production
-- Steps: exhibit requests, video request, subpoena helper
+4. **E1/E7** Service of process workflow
+- Steps: who can serve, 90-day timer, proof-of-service upload, reminders
 
-5. **E3** Discovery Wizard: Requests for Admission
-- Steps: admit/deny prompts, response deadlines
+5. **E1/E7** Deadline risk monitor
+- Steps: service + motion deadlines, alerts, calendar integration
 
-6. **E2** Evidence Vault tagging taxonomy
+6. **E1/E2** RAM evidence validator
+- Steps: evidence intake checklist, RAM scoring, integrity warnings
+
+7. **E2** Evidence Vault tagging + filters
 - Steps: Authority/Evidence/Damages, phase tags, filters
 
-7. **E2** Exhibit Detail: transcript attachment + timeline binding
-- Steps: upload transcript, map to timecodes
+8. **E2** Exhibit Detail expansion
+- Steps: transcript attachment + timeline binding, authenticity report download, keyframes/contact sheet
 
-8. **E4** Summary Disposition Planner
-- Steps: motion outline, element check, evidence links
+9. **E2** OSAC/SWGDE forensic workflow compliance
+- Steps: working-copy policy, hash verification pre/post, processing + discrepancy logs, intake form
 
-9. **E4** Motion Builder (general)
-- Steps: generate caption blocks, auto-cite exhibits
+10. **E2/E5** Video admissibility & demonstrative evidence
+- Steps: Silent Witness checklist, format/codec guidance, demonstrative exhibit builder
 
-10. **E5** Voir Dire Designer UI
-- Steps: bias checklists, question bank, print sheet
+11. **E2** Video content analysis (VCAT-style)
+- Steps: object detection, OCR, speech-to-text with timestamps, prompt-based search
 
-11. **E5** Objection Battle Cards + quick MRE citations
-- Steps: filters by context, one-tap objection
+12. **E2** Layout-aware document parsing (DeepDoc)
+- Steps: OCR + layout + table structure extraction for PDFs/forms
 
-12. **E5** Witness Exam Planner
-- Steps: direct/cross scripts, impeachment links
+13. **E3** Discovery Suite (Interrogatories/RFP/RFA)
+- Steps: template library, timing rules, send/export
 
-13. **E6** Damages Calculator v2
-- Steps: medical totals, collateral source notes, wage + business loss
+14. **E3/E4** Default + Mediation readiness
+- Steps: answer deadline tracker, default motion checklist, settlement/exhibit packet checklist
 
-14. **E6** Settlement Demand Generator
+15. **E4** Motion Builder + Summary Disposition Planner
+- Steps: motion outline, element checks, auto-citations
+
+16. **E5** Trial Prep Core
+- Steps: trial notebook, witness exam planner, objection helper, narrative testimony coach
+
+17. **E5** Voir Dire Designer
+- Steps: bias checklists, question bank, printable sheet
+
+18. **E6** Damages + Restitution
+- Steps: medical totals, collateral source notes, wage + business loss, out-of-pocket tracker
+
+19. **E6** Settlement Demand Generator
 - Steps: pull damages, exhibit citations, export PDF
 
-15. **E7** PII Guard + MC 97 workflow
-- Steps: redact fields, generate protected info form checklist
+20. **E7** Privacy + Victim Safety
+- Steps: PII guard (MC 97), confidentiality prompts, protective order prompts
 
-16. **E7** Fee Waiver Wizard (MC 20)
-- Steps: eligibility prompts, filing checklist
+21. **E7** Victim Rights + Self-Help Resources
+- Steps: rights compliance checklist, SCAO/Legal Help hub, reminders/search shortcuts
 
-17. **E8** Legal-design UI kit
-- Steps: readable typography, plain-language panels, iconography
+22. **E7** Statutory & Criminal Context References
+- Steps: MCL 750.81 summary + M Crim JI 13.1/13.2 reference panel
 
-18. **E8** Accessibility pass (color contrast, large targets, keyboard nav)
-- Steps: audit + fixes
-19. **E1/E8** Dashboard design spec from court dashboard guide
-- Steps: KPI hierarchy, layout grid, chart types, accessibility + responsive standards
-20. **E1/E8** Case management UI spec from Digital Lawyer Diary guide
-- Steps: cases list, case detail, hearings/status, mobile navigation, PWA install flow
-21. **E8** Dashboard widget library (Diary-style widgets)
-- Steps: today/tomorrow, case status, upcoming hearings, evidence alerts
-22. **E1** Case detail page redesign (Diary-style case file)
-- Steps: tabs for timeline, evidence, tasks, hearings, motions, discovery
-23. **E1/E7** Self-help resources hub (SCAO + Michigan Legal Help)
-- Steps: curated links, county-specific resources, safety/privacy notices
-24. **E1** MiFILE e-filing helper
-- Steps: e-filing guide, fee payment/waiver prompts, PDF prep checklist
-25. **E1/E7** Court reminders + case search shortcuts
-- Steps: reminder setup links, court search links, privacy guidance
-26. **E1/E7** Michigan court glossary integration (HOLT)
-- Steps: in-app glossary, hover definitions, plain-language explanations
-27. **E1/E7** HOLT glossary dataset + tooltip wiring
-- Steps: extract glossary terms into JSON, add tooltip component, wire to checklist and timeline
-28. **E1/E2** RAM evidence validator (Relevant, Authentic, Material)
-- Steps: evidence intake checklist, RAM scoring, integrity warnings
-29. **E1** Complaint drafting wizard (story + relief)
-- Steps: numbered paragraphs, jurisdiction/venue, relief builder, export
-30. **E1/E7** Service of process tracker + proof upload
-- Steps: process server workflow, proof-of-service checklist, deadline reminders
-31. **E3** Default judgment trigger
-- Steps: answer deadline tracker, default motion checklist, filing reminders
-32. **E3/E4** Mediation readiness module
-- Steps: settlement position, damages summary, exhibit packet checklist
-33. **E5** Narrative testimony coach
-- Steps: self-question script builder, story flow guardrails, practice mode
-34. **E5** Cross-exam leading question builder
-- Steps: yes/no question templates, impeachment links
-35. **E5** Objection helper (basic)
-- Steps: hearsay/speculation/non-responsive prompts + examples
-36. **E7** Victim safety & confidentiality workflow
-- Steps: address confidentiality prompts, safety checklist, protective order prompts
-37. **E6** Restitution + out-of-pocket expense tracker
-- Steps: medical, wages, travel/parking, receipts upload
-38. **E1/E7** Deadline risk monitor (service + filing)
-- Steps: track 90-day service window, motion deadlines, alerts
-39. **E1** Oakland County court selector (52nd District vs 6th Circuit)
-- Steps: claim amount gate, division selector, venue guidance
-40. **E1** MiFILE registration helper (Pro Se submitter)
-- Steps: account flow, payment method checklist, fee waiver path
-41. **E1** A-to-Z document pack builder (separate PDFs)
-- Steps: summons MC 01, complaint MC 01a, fee waiver MC 20, file naming
-42. **E1** MiFILE initiation wizard
-- Steps: select court, initiate case, enter parties, upload filings, checkout
-43. **E1/E7** Service gap checklist (90-day rule)
-- Steps: who can serve, personal service requirements, timer + warnings
-44. **E1** Proof of service upload flow
-- Steps: MC 01 proof section, MiFILE filing type selector
-45. **E2/E8** OpenContracts feature audit (inspiration, not reuse)
-- Steps: compare doc ingestion, annotation, schema extraction, AI search; note AGPL license constraints
-46. **E2/E8** OpenContracts module-by-module comparison (backlog-only)
-- Steps: map features to CaseCompanion modules, identify gaps, propose equivalent build tasks
-47. **E2** Evaluate HF legal-documents dataset (prototype-only)
-- Steps: review dataset card/license, assess sample quality, decide if safe for demo text only
-48. **E2/E8** OpenClaw feature audit (inspiration only)
-- Steps: review agent routing, tools/skills patterns, status UI for potential workflow integrations
-49. **E2/E7** AI-in-law research watchlist (Q4 2025 SSRN)
-- Steps: review top papers, extract safety/verification guidance, align AI guardrails
-50. **E2/E7** Legal AI reliability framework review (arXiv 2412.20468v2)
-- Steps: assess RAG/KG/MoE/RLHF guidance, map to CaseCompanion AI pipelines
-51. **E2/E7** AI usage policy + guardrail disclosure (MS Bar guide)
-- Steps: summarize AI benefits/risks, define safe usage boundaries, add disclosure panel
-52. **E5** Trial notebook module (checklists + packets)
-- Steps: witness list, exhibit list, opening/closing prep, printable trial packet
-53. **E2/E5** Premises liability defense checklist (Michigan)
-- Steps: open-and-obvious, notice, duty analysis; anticipate defense arguments
-54. **E7** Victim immigration support resource (U Visa info)
-- Steps: eligibility checklist, resource links, safety disclaimer, non-legal advice prompts
-55. **E1/E7** Workplace violence Type II definition + zero tolerance policy
-- Steps: add Type II violence definition, zero-tolerance policy template, employer liability prompts
-56. **E2** OSAC digital video examination workflow
-- Steps: working-copy policy, hash verification pre/post, processing log, discrepancy log
-57. **E2** SWGDE best practices intake + verification
-- Steps: intake/request form, output quality verification, archival checklist
-58. **E2/E5** Video evidence admissibility checklist (Silent Witness)
-- Steps: authentication theory checklist, format/codec guidance, courtroom playback prep
-59. **E7** Victim-rights compliance checklist template (MML model)
-- Steps: checklist format for rights notices, reporting deadlines, and documentation
-60. **E1/E7** Criminal-case context reference (M Crim JI 13.1/13.2)
-- Steps: store instructions for reference only; ensure civil app displays criminal-side context accurately when needed
-61. **E1/E7** MCL 750.81 statutory reference (assault/battery)
-- Steps: surface statute summary, link to penalties and definitions in case context
-62. **E5** Demonstrative exhibit builder + admissibility checklist
-- Steps: create visual exhibits from frames, foundation prompts, relevance/prejudice check
-63. **E2** Video content analysis (VCAT-style)
-- Steps: object detection, OCR on frames, speech-to-text with timestamps, prompt-based search
-56. **E2** Layout-aware document parsing (RAGFlow DeepDoc)
-- Steps: evaluate OCR + layout + table structure extraction for PDFs/forms
+23. **E8** UI/Accessibility System
+- Steps: legal-design UI kit, widget library, accessibility pass, dashboard specs
+
+24. **E8** Research/Reference Audits (non-blocking)
+- Steps: OpenContracts, OpenClaw, SSRN/AI research, AI usage policy references
 
 ## Roadmap Tracker
 
