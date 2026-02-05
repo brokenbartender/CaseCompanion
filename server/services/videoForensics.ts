@@ -237,6 +237,8 @@ export async function processVideoForensics(args: {
   const ffprobeJson = getArtifactPath(exhibitId, "metadata/ffprobe.json");
   const mediainfoJson = getArtifactPath(exhibitId, "metadata/mediainfo.json");
   const exiftoolJson = getArtifactPath(exhibitId, "metadata/exiftool.json");
+  const framemd5Path = getArtifactPath(exhibitId, "metadata/framemd5.txt");
+  const framemd5SummaryPath = getArtifactPath(exhibitId, "metadata/framemd5_summary.json");
   const audioPath = getArtifactPath(exhibitId, "audio/audio.wav");
   const framesDir = getArtifactPath(exhibitId, "frames");
   const keyframesDir = getArtifactPath(exhibitId, "keyframes");
@@ -272,6 +274,60 @@ export async function processVideoForensics(args: {
   }
   if (exiftool.code === 0) {
     await fs.promises.writeFile(exiftoolJson, exiftool.stdout).catch(() => null);
+  }
+
+  const framemd5 = await runCommand(
+    "ffmpeg",
+    ["-v", "error", "-i", originalCopyPath, "-an", "-f", "framemd5", "-"],
+    outputDir,
+    safeResolve(logDir, "ffmpeg_framemd5.txt")
+  );
+  if (framemd5.code === 0 && framemd5.stdout) {
+    await fs.promises.writeFile(framemd5Path, framemd5.stdout).catch(() => null);
+    try {
+      const lines = framemd5.stdout.split(/\r?\n/).filter((l) => l && !l.startsWith("#"));
+      let frameCount = 0;
+      let duplicateRuns = 0;
+      let nonMonotonic = 0;
+      let maxDelta = 0;
+      let sumDelta = 0;
+      let prevPts: number | null = null;
+      let prevHash: string | null = null;
+      const uniqueHashes = new Set<string>();
+
+      for (const line of lines) {
+        const parts = line.split(",").map((p) => p.trim());
+        if (parts.length < 6) continue;
+        const pts = Number(parts[2]);
+        const hash = parts[5];
+        if (!Number.isFinite(pts)) continue;
+        frameCount += 1;
+        uniqueHashes.add(hash);
+        if (prevHash && prevHash === hash) duplicateRuns += 1;
+        if (prevPts !== null) {
+          const delta = pts - prevPts;
+          if (delta < 0) nonMonotonic += 1;
+          if (delta > maxDelta) maxDelta = delta;
+          sumDelta += Math.max(delta, 0);
+        }
+        prevPts = pts;
+        prevHash = hash;
+      }
+
+      const avgDelta = frameCount > 1 ? sumDelta / (frameCount - 1) : 0;
+      const summary = {
+        frameCount,
+        uniqueHashCount: uniqueHashes.size,
+        duplicateAdjacentFrames: duplicateRuns,
+        nonMonotonicPtsCount: nonMonotonic,
+        avgPtsDelta: avgDelta,
+        maxPtsDelta: maxDelta,
+        generatedAt: new Date().toISOString()
+      };
+      await fs.promises.writeFile(framemd5SummaryPath, JSON.stringify(summary, null, 2)).catch(() => null);
+    } catch {
+      // ignore summary failures
+    }
   }
 
   await runCommand(
