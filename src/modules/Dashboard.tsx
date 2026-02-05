@@ -135,6 +135,12 @@ export default function Dashboard() {
                 <li key={task}>{task}</li>
               ))}
             </ul>
+            <a
+              href="/guided-start"
+              className="mt-4 inline-flex rounded-md bg-amber-500 px-3 py-2 text-xs font-semibold text-slate-900"
+            >
+              Open Guided Start
+            </a>
           </CardBody>
         </Card>
 

@@ -35,6 +35,8 @@ import MotionBuilder from "./modules/MotionBuilder";
 import TrialPrep from "./modules/TrialPrep";
 import PrivacySafety from "./modules/PrivacySafety";
 import ResourcesHub from "./modules/ResourcesHub";
+import GuidedStartWizard from "./modules/GuidedStartWizard";
+import IngestCenter from "./modules/IngestCenter";
 
 function App() {
   return (
@@ -55,6 +57,8 @@ function App() {
           <Route path="trial-prep" element={<TrialPrep />} />
           <Route path="privacy-safety" element={<PrivacySafety />} />
           <Route path="resources" element={<ResourcesHub />} />
+          <Route path="guided-start" element={<GuidedStartWizard />} />
+          <Route path="ingest" element={<IngestCenter />} />
           <Route path="rules" element={<RulesLibrary />} />
           <Route path="rules-index" element={<RulesIndex />} />
           <Route path="service" element={<ServiceOfProcessWizard />} />
