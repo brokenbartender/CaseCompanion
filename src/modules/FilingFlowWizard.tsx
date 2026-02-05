@@ -25,6 +25,7 @@ export default function FilingFlowWizard() {
   const [claimAmount, setClaimAmount] = useState("");
   const [caseType, setCaseType] = useState("");
   const [rejectionReason, setRejectionReason] = useState("");
+  const [needsPraecipe, setNeedsPraecipe] = useState(false);
 
   function saveCourt(next: string) {
     setCourt(next);
@@ -111,6 +112,41 @@ export default function FilingFlowWizard() {
             >
               Open Filing Checklist
             </a>
+          </CardBody>
+        </Card>
+
+        <Card className="lg:col-span-2">
+          <CardHeader>
+            <CardSubtitle>Praecipe Gate</CardSubtitle>
+            <CardTitle>Do You Need a Praecipe?</CardTitle>
+          </CardHeader>
+          <CardBody>
+            <label className="flex items-center gap-2 text-sm text-slate-300">
+              <input
+                type="checkbox"
+                className="h-4 w-4 accent-amber-400"
+                checked={needsPraecipe}
+                onChange={(e) => setNeedsPraecipe(e.target.checked)}
+              />
+              This filing requires a praecipe
+            </label>
+            {needsPraecipe ? (
+              <div className="mt-3 text-sm text-slate-300">
+                Use the county’s ePraecipe system when required. Confirm with the clerk if you’re unsure.
+                <div className="mt-3 flex flex-wrap gap-3">
+                  <a
+                    href="https://www.oakgov.com/government/clerk-register-of-deeds/court-records/efiling"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="rounded-md border border-amber-400/50 px-3 py-2 text-xs font-semibold text-amber-200"
+                  >
+                    Oakland County eFiling Info
+                  </a>
+                </div>
+              </div>
+            ) : (
+              <div className="mt-2 text-xs text-slate-400">If you’re not sure, ask the clerk before filing.</div>
+            )}
           </CardBody>
         </Card>
 

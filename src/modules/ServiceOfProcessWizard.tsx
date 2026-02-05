@@ -3,9 +3,20 @@ import Page from "../components/ui/Page";
 import { Card, CardBody, CardHeader, CardSubtitle, CardTitle } from "../components/ui/Card";
 import { SERVICE_OF_PROCESS_GUIDE } from "../data/serviceOfProcess";
 import { useState } from "react";
+import { readJson, writeJson } from "../utils/localStore";
 
 export default function ServiceOfProcessWizard() {
   const [useEService, setUseEService] = useState(false);
+  const [proofs, setProofs] = useState<string[]>(() => readJson("case_companion_proof_uploads_v1", []));
+  const [uploadStatus, setUploadStatus] = useState("");
+
+  function handleProofUpload(file?: File | null) {
+    if (!file) return;
+    const next = [file.name, ...proofs].slice(0, 6);
+    setProofs(next);
+    writeJson("case_companion_proof_uploads_v1", next);
+    setUploadStatus(`Saved: ${file.name}`);
+  }
 
   return (
     <Page title="Service of Process" subtitle="Rule-aligned guidance and checklist.">
@@ -55,6 +66,27 @@ export default function ServiceOfProcessWizard() {
             </CardBody>
           </Card>
         ) : null}
+        <Card>
+          <CardHeader>
+            <CardSubtitle>Proof of Service</CardSubtitle>
+            <CardTitle>Upload Slot</CardTitle>
+          </CardHeader>
+          <CardBody>
+            <input
+              type="file"
+              onChange={(e) => handleProofUpload(e.target.files?.[0])}
+              className="text-sm text-slate-300"
+            />
+            {uploadStatus ? <div className="mt-2 text-xs text-amber-200">{uploadStatus}</div> : null}
+            {proofs.length ? (
+              <div className="mt-3 text-xs text-slate-400">
+                Recent uploads: {proofs.join(", ")}
+              </div>
+            ) : (
+              <div className="mt-2 text-xs text-slate-500">No proof files saved yet.</div>
+            )}
+          </CardBody>
+        </Card>
       </div>
     </Page>
   );
