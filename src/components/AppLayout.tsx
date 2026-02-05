@@ -47,6 +47,7 @@ const navItems = [
   { to: "/discovery", label: "Discovery Suite", icon: ClipboardList },
   { to: "/default-mediation", label: "Default + Mediation", icon: FileText },
   { to: "/motion-builder", label: "Motion Builder", icon: FileSignature },
+  { to: "/trial-prep", label: "Trial Prep", icon: Gavel },
   { to: "/objections", label: "Objection Cards", icon: Gavel },
   { to: "/deposition", label: "Deposition Simulator", icon: MessageSquare },
   { to: "/voir-dire", label: "Voir Dire Designer", icon: Users },
