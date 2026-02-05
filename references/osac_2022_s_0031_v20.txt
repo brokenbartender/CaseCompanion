@@ -1,0 +1,398 @@
+     OSAC 2022‐S‐0031
+Standard Guide for Forensic
+ Digital Video Examination
+
+           Workflow
+
+      Video/Imaging Technology and Analysis Subcommittee (VITAL)
+             Digital/Multimedia Scientific Area Committee (SAC)
+
+ Organization of Scientific Area Committees (OSAC) for Forensic Science
+                                                                                               OSAC 2022‐S‐0031
+
+                                       OSAC Proposed Standard
+
+                           OSAC 2022‐S‐0031
+      Standard Guide for Forensic Digital
+
+             Video Examination Workflow
+
+                                                                                                       Prepared by
+                                                  Video/Imaging Technology and Analysis Subcommittee
+
+                                                                                                       Version: 2.0
+                                                                                                   JANUARY 2024
+
+Disclaimer:
+
+This OSAC Proposed Standard was written by the Video/Imaging Technology and Analysis (VITAL)
+Subcommittee of the Organization of Scientific Area Committees (OSAC) for Forensic Science
+following a process that includes an open comment period. This Proposed Standard will be
+submitted to a standard developing organization and is subject to change.
+There may be references in an OSAC Proposed Standard to other publications under
+development by OSAC. The information in the Proposed Standard, and underlying concepts and
+methodologies, may be used by the forensic science community before the completion of such
+companion publications.
+Any identification of commercial equipment, instruments, or materials in the Proposed Standard
+is not a recommendation or endorsement by the U.S. Government and does not imply that the
+equipment, instruments, or materials are necessarily the best available for the purpose.
+To be placed on the OSAC Registry, certain types of standards receive a Scientific and Technical
+Review (STR). The STR process is vital to OSAC’s mission of generating and recognizing
+scientifically sound standards for producing and interpreting forensic science results. The STR
+shall provide critical and knowledgeable reviews of draft standards to ensure that the published
+methods that practitioners employ are scientifically valid, and the resulting claims are
+trustworthy.
+The STR consists of an independent and diverse panel, which may include subject matter experts,
+human factors scientists, quality assurance personnel, and legal experts as applicable. The
+selected group is tasked with evaluating the proposed standard based on a defined list of
+scientific, administrative, and quality assurance‐based criteria.
+
+                                                          2
+                                                                                               OSAC 2022‐S‐0031
+For more information about this important process, please visit our website
+at: https://www.nist.gov/organization‐scientific‐area‐committees‐forensic‐science/scientific‐
+technical‐review‐str‐process
+
+                                                          3
+                                                                                               OSAC 2022‐S‐0031
+Table of Contents
+1 Scope .....................................................................................................................................5
+2 Referenced Documents ......................................................................................................... 5
+3 Terminology........................................................................................................................... 6
+4 Summary................................................................................................................................6
+5 Significance and Use .............................................................................................................. 7
+6 Assessment Domain of Forensic Digital Video Examination Workflow .................................. 7
+7 Processing Domain of Forensic Digital Video Examination Workflow.................................... 8
+8 Analysis Domain of Forensic Digital Video Examination Workflow ...................................... 11
+9 Keywords ............................................................................................................................. 12
+
+                                                          4
+                                                                                               OSAC 2022‐S‐0031
+
+                  Standard Guide for Forensic Digital Video Examination Workflow
+
+1 Scope
+
+1.1 This standard provides a generalized workflow suitable for digital video examinations
+performed to address forensic questions1.
+
+1.2 This workflow includes the assessment, processing, and analysis of video. Prior steps such
+as the retrieval and proper handling of the evidence are assumed. Refer to SWGDE Best Practices
+for Digital Forensic Video Analysis for additional information.
+
+1.3 This standard is intended for use by competent forensic science practitioners with the
+requisite formal education, discipline‐specific training (see Practice E2917), and demonstrated
+proficiency to perform forensic casework.
+
+1.4 This standard does not purport to address safety concerns. It is the responsibility of the
+user of this standard to establish appropriate safety and health practices and determine the
+applicability of regulatory limitations prior to use.
+
+1.5 No system units are required for this standard.
+
+2 Referenced Documents
+
+2.1 ASTM Standards
+
+2.1.1 E860, Standard Practice for Examining and Preparing Items That Are Or May Become
+Involved in Criminal or Civil Litigation, ASTM International, West Conshohocken, PA, 2013,
+www.astm.org
+
+2.1.2 E2825, Standard Guide for Forensic Digital Image Processing, ASTM International, West
+Conshohocken, PA, 2019, www.astm.org
+
+2.1.3 E2916, Standard Terminology for Digital and Multimedia Evidence Examination, ASTM
+International, West Conshohocken, PA, 2019, www.astm.org
+
+2.1.4 E2917, Standard Practice for Forensic Science Practitioner Training, Continuing Education,
+and Professional Development Programs, ASTM International, West Conshohocken, PA 2019,
+www.astm.org
+
+2.2 SWGDE Material:
+
+2.2.1 SWGDE Best Practices for Digital Forensic Video Analysis Version: 1.0 (November 20,
+2018, v1.0)
+
+1 OSAC Technical Series 0002R1 A Framework for Harmonizing Forensic Science Practices and Digital/Multimedia
+Evidence details these questions are addressed using a specific and finite number of core forensic processes labeled
+as 1) authentication, 2) identification, 3) classification, 4) reconstruction, and 5) evaluation.
+
+                                                          5
+                                                                                               OSAC 2022‐S‐0031
+
+2.2.2 SWGDE Technical Overview of Digital Video Files Version 1.0 (July 18, 2017)
+2.2.3 SWGDE Best Practices for Forensic Audio Version: 2.5 (June 9, 2022)
+2.2.4 SWGDE Core Competencies for Forensic Audio Version: 2.0 (July 18, 2017)
+2.2.5 SWGDE Best Practices for Image Content Analysis Version: 1.0 (February 21, 2017)
+2.2.6 SWGDE Fundamentals of H.264 Coded Video for Examiners Version: 1.0 (September 17,
+2020)
+2.2.7 SWGDE Best Practice for Photographic Comparison for All Disciplines Version: 1.1 (July
+18, 2017)
+2.2.8 SWGDE Minimum Requirements for Quality Assurance in the Processing of Digital and
+Multimedia Evidence Version: 1 (May 15, 2010)
+2.3 OSAC Material
+2.3.1 OSAC 2021‐S‐0031, Standard Guide for Photogrammetry
+2.3.2 OSAC 2021‐S‐0036, Standard Guide for Image Authentication
+2.3.3 OSAC 2022‐S‐0001, Standard Guide for Image Comparison Conclusions/Opinions
+2.3.4 OSAC Lexicon [https://www.nist.gov/glossary/osac‐lexicon]
+2.3.5 OSAC Preferred Terms
+3 Terminology
+3.1 Definitions:
+3.1.1 For definitions of terms used in this standard, refer to Terminology E2916, OSAC Preferred
+Terms or the OSAC Lexicon.
+4 Summary
+4.1 The digital video examination workflow includes the following three domains:
+assessment, processing, and analysis. The general workflow and procedures used in each domain
+may be the same regardless of the evidence submitted by the requestor.
+4.2 Assessment tasks involve the review of the submitted items for suitability for
+examination, determination of the region(s) of interest, and the preparation of a working copy.
+4.3 Processing tasks involve the production of deliverable output products or intermediate
+products.
+
+                                                          6
+                                                                                               OSAC 2022‐S‐0031
+
+4.4 Analysis tasks involve the interpretation of information extracted from the submitted
+items to answer the questions posed in the requested examination.
+
+5 Significance and Use
+
+5.1 The workflow and task domains presented in this standard create a consistent framework
+upon which forensic video service providers can structure their services, division of duties, and
+operating procedures.
+
+5.2 A given examination may not require the performance of tasks from all of the domains
+described.
+
+5.3 Depending on one's training, an individual forensic science practitioner could be
+authorized to perform tasks from one or more of these domains.
+
+6 Assessment Domain of Forensic Digital Video Examination Workflow
+
+6.1 Actions performed during the Assessment of video evidence are the foundational steps
+necessary before implementing the Processing or Analysis workflows, or both, which are listed
+later in this standard. The assessment workflow is as follows:
+
+6.1.1 Review the request to determine that it is technically feasible, that it can be accomplished
+by the forensic service provider, and that the required resources are available.
+
+6.1.2 A working copy of the evidence shall be created and verified through a hashing function.
+If hashing is not possible, the reason shall be documented. Once the working copy is verified, it
+shall be used in lieu of the submitted evidence throughout the assessment, processing, and
+analysis.
+
+6.1.3 An initial technical overview of the video file should be performed, and any issues should
+be documented.
+
+6.1.3.1 A technical overview of the video file(s) should be performed to determine display
+attributes relevant to processing and analysis such as display resolution, pixel aspect ratio, frame
+rate, and codec.
+
+6.1.3.2 It is recommended that multiple tools be used for the technical overview of file
+properties. Technical observations about the video and any discrepancies in the reported results
+should be documented and evaluated. It is recommended to evaluate discrepancies in reported
+results by manually parsing and decoding a file's binary data.
+
+6.1.4 In order to view the video, a proprietary video player, specific codec, or additional
+equipment may be required.
+
+6.1.5 If it becomes apparent during the assessment that an earlier generation of the recording
+may exist (e.g., through file metadata, indication of a conversion process), contact the requestor.
+
+                                                          7
+                                                                                               OSAC 2022‐S‐0031
+
+6.1.5.1 If the original or best quality recording is not provided, document that fact and inform the
+requestor of any known limitations imposed on the examination.
+
+6.1.6 Discrepancies between the observations of the submitted video and the details provided
+should be documented by the forensic science practitioner. Discrepancies preventing the
+fulfillment of the examination should be reviewed with the requestor.
+
+6.1.7 Additional details and documentation that may assist in the assessment of the video
+should be requested. For example, documentation on the initial recovery of digital video
+evidence may provide additional information such as the recording device’s time offset and
+device settings.
+
+6.1.8 Assessing areas or regions of interest can be based on both temporal and spatial
+information. When confirming the area or regions of interest for processing and analysis, the
+following should be considered:
+
+6.1.8.1 There may be relevant information contained within the video outside the requested
+events of interest (e.g., clocks, signs, potential witnesses, bystanders). If found, the relevance of
+such information can be determined by the requestor and the forensic science practitioner.
+
+6.1.9 Any audio present in the video should be handled properly and reviewed to obtain
+relevant additional details. See SWGDE Best Practices for Forensic Audio for recommendations
+on a forensic audio workflow.
+
+6.1.9.1 Handling and processing of audio may require specific audio training. See SWGDE Core
+Competencies for Forensic Audio.
+
+7 Processing Domain of Forensic Digital Video Examination Workflow
+
+7.1 Actions performed while processing video include procedures to transform input media
+to output media. For example, processing includes tasks to transcode, enhance, restore, carve
+video data, and perform timeline sequence reconstruction. These actions could lead to tasks
+performed in the Analysis Domain of this workflow.
+
+7.2 If the submitted video cannot be processed in its original format, it may be necessary to
+produce a converted file via transcoding or screen capturing. Steps to preserve the original video,
+particularly frame rate, resolution, pixel values, and detail, should be taken regardless of the
+technique used. If more than one option for transcoded export is available, all options should be
+evaluated to determine which best preserves the information relevant to the examination.
+
+7.2.1 See SWGDE’s Technical Overview of Digital Video Files for additional information on the
+foundation of knowledge of file formats, encoding standards, and compression algorithms used
+in digital video.
+
+7.3 Transcoding is the conversion of multimedia from one format or encoding method to
+another. This includes decoding, demultiplexing, exporting still images and video, and screen
+capturing of still images and video.
+
+                                                          8
+                                                                                               OSAC 2022‐S‐0031
+
+7.3.1 Transcoding is intended to change only the encoding form, not the content of the data.
+However, the results of certain processes, such as compression, can affect the content. Video
+resulting from transcoding should fairly and accurately represent the visual contents of the
+original video.
+
+7.3.1.1 The output of different transcoding types and the use of different playback systems may
+need to be compared to determine which will provide the best representation of the original
+video.
+
+7.3.2 Discrepancies between the input video and output video shall be documented.
+
+7.3.3 The preferred techniques for transcoding are lossless. These techniques include:
+
+7.3.3.1 Transferring original bitstream data into a new container. This technique, commonly
+known as re‐wrapping, preserves the video bitstream but might remove or alter some metadata
+contained in the original video container. For example, creation times or frame timing
+information may be changed as a result of the transcoding process. Containers might interact
+differently with various video data and not all containers will support all media codecs.
+
+7.3.3.2 Carving video bitstream data. Video data carving is the extraction of a video bitstream
+from a larger data structure. For additional details, See SWGDE Fundamentals of H.264 Coded
+Video for Examiners.
+
+7.3.3.3 Converting the video file. This technique would change the video stream into an
+uncompressed or lossless video format.
+
+7.3.4 Transcoding to lossy formats:
+
+7.3.4.1 Transcoding video to a lossy format must be avoided if the video is to be used for further
+analysis. If extenuating circumstances prevent this, clearly document reasoning, and ensure
+transcoded video is an accurate representation of the original content.
+
+7.3.4.2 Transcoded media used for review and not for analysis may use a lossy format as
+necessary. This may be due to video length or storage limitations. Ensure the transcoded media
+is an accurate representation of the original content.
+
+7.3.4.3 The reason for the use of a lossy format should be documented. For example, a lossy
+format would be acceptable if a proprietary player is the only option and will only export in a
+lossy format.
+
+7.3.5 Some proprietary video players may provide an option to save in a different format from
+the original video. If none of the preferred transcoding techniques are available, choose the
+transcoding option that best preserves the quality of the original video. For example, sequential
+still images in a lossless format may be exported and used to produce a video.
+
+7.3.5.1 Verify and document any visible differences or degradation from what was displayed in
+the proprietary video player.
+
+                                                          9
+                                                                                               OSAC 2022‐S‐0031
+
+7.3.6 Screen capturing may be used if it provides the best quality output.
+7.3.6.1 When screen capturing video, settings should be chosen to best maintain the
+characteristics of the original video (e.g. aspect ratio, resolution) and prevent dropped frames.
+7.4 Additional processing techniques such as Enhancement and Restoration, are used to
+improve the visibility of details in digital video or still images.
+7.4.1 Guide E2825 outlines common image enhancement techniques.
+7.5 Guide E2825 outlines image restoration techniques that can also be used for video, such
+as blur removal, color balancing, grayscale linearization, and geometric restoration.
+7.6 Additional techniques commonly used in video processing which are not included in
+Guide E2825 include:
+7.6.1 Adjusting the orientation of video content.
+7.6.2 Adjusting the frame rate of video.
+7.6.3 Stabilizing techniques to fix the position of an area of interest.
+7.6.4 Techniques to deinterlace frames of video.
+7.6.5 Deblocking techniques to reduce the artifacts caused by block‐based compression
+algorithms.
+7.6.6 Signal adjustments such as applying a spatial frequency‐based filter to reduce pattern
+noise.
+7.6.7 Techniques for adjusting scale and aspect ratio.
+7.7 Avoid the introduction of artifacts that can add misleading information to the file or the
+loss of detail such as clipped pixels or ringing artifacts.
+7.8 Timeline Sequence Reconstruction involves relating still images and video to each other
+and other relevant data to develop chronological and contextual relationships among events.
+7.8.1 Analysis as described in Section 8 may be required to determine the relevant information.
+7.9 Enhancement and restoration techniques shall be documented in a manner to permit a
+comparably trained forensic science practitioner to understand the steps taken, the techniques
+used, and to extract comparable information from the processed file.
+
+                                                         10
+                                                                                               OSAC 2022‐S‐0031
+
+8 Analysis Domain of Forensic Digital Video Examination Workflow
+
+8.1 The analysis domain includes the application of specific subject matter expertise to
+interpret data from video evidence and draw opinions2 regarding the question of interest.
+
+8.1.1 Refer to the OSAC 2022‐S‐0001, Standard Guide for Image Comparison
+Conclusions/Opinions, for additional details regarding opinion categories that may be reached by
+a forensic practitioner performing comparisons of people, objectives, or scenes captured in
+images (e.g., face, vehicle clothing, skin detail), regardless of the process by which opinions are
+reached.
+
+8.2 Categories of video analysis: Authentication, Photogrammetric Analysis, Content Analysis,
+and Comparative Analysis.
+
+8.2.1 Authentication: the process of substantiating that the data is an accurate representation
+of what they are purported to be. Refer to OSAC 2021‐S‐0036, Standard Guide for Image
+Authentication.
+
+8.2.2 Photogrammetric analysis: the process of obtaining dimensional information regarding
+objects and people depicted in video. Refer "SWGDE Best Practices for the Forensic Use of
+Photogrammetry" for specific methodologies.
+
+8.2.3 Content Analysis: forming results, interpretations, or both. Targets for content analysis
+include, but are not limited to, the subjects/objects within a video; the conditions under which,
+or the process by which, the video was captured or created; the physical aspects of the scene,
+such as lighting or composition, or the provenance of the video. Refer to SWGDE Best Practices
+for Image Content Analysis.
+
+8.2.4 Comparative Analysis: the assessment of the correspondence between features in still
+images and known objects or images for the purpose of rendering an opinion regarding
+identification, elimination, or a qualified conclusion. Refer to OSAC 2022‐S‐0001 Standard Guide
+for Image Comparison Conclusions/Opinion and SWGDE Best Practice for Photographic
+Comparison for All Disciplines.
+
+2 There is a movement in the forensic community to eliminate the word “conclusion” from the
+formal set of words that describe forensic processes. For example, ISO does not use the word
+“conclusion”. This is reflected by the Organization of Scientific Area Committees for Forensic
+Science (OSAC) preference to use the term “opinion” (defined as View, judgment, belief – takes
+into consideration other information in addition to observations, data, calculations, and
+interpretations).
+
+                                                         11
+                                           OSAC 2022‐S‐0031
+
+9 Keywords
+9.1 Video Analysis
+9.2 Video Examination
+9.3 Video Assessment
+9.4 Video Processing
+9.5 Video Transcoding
+9.6 Image Restoration
+9.7 Video Restoration
+9.8 Image Enhancement
+9.9 Video Enhancement
+9.10 Multimedia Evidence
+9.11 Forensic Video
+9.12 Forensic Science
+9.13 Timeline Sequence Reconstruction
+
+                                       12
+
