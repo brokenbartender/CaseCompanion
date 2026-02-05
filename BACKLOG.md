@@ -82,6 +82,8 @@ This backlog maps the Michigan civil case lifecycle (benchbook-driven) and legal
 - Steps: reminder setup links, court search links, privacy guidance
 26. **E1/E7** Michigan court glossary integration (HOLT)
 - Steps: in-app glossary, hover definitions, plain-language explanations
+27. **E1/E7** HOLT glossary dataset + tooltip wiring
+- Steps: extract glossary terms into JSON, add tooltip component, wire to checklist and timeline
 
 ## Roadmap Tracker
 
