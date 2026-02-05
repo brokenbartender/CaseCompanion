@@ -41,6 +41,9 @@ export function createExhibitRouter(deps: {
   convertBufferToTxt: (buffer: Buffer, mimeType: string, filename?: string) => Promise<Buffer>;
   convertBufferToPdf: (buffer: Buffer, mimeType: string, filename?: string) => Promise<Buffer>;
   convertBufferToDocx: (buffer: Buffer, mimeType: string, filename?: string) => Promise<Buffer>;
+  getVideoForensicsStatus: (exhibitId: string) => Promise<any>;
+  listVideoForensicsArtifacts: (exhibitId: string) => Promise<any[]>;
+  streamVideoArtifact: (exhibitId: string, artifactId: string) => string;
 }) {
   const router = express.Router();
   const enforceIntegrityGate = async (req: any, res: any, context: string) => {
@@ -715,6 +718,75 @@ export function createExhibitRouter(deps: {
   router.post('/api/workspaces/:workspaceId/exhibits/drive-import', deps.authenticate as any, deps.requireWorkspace as any, deps.requireRole('member') as any, (async (_req: any, res: any) => {
     res.status(501).json({ error: 'Drive import not enabled in Phase 1. Use Manual Ingest for now.' });
   }) as any);
+
+  router.get(
+    '/api/exhibits/:exhibitId',
+    deps.authenticate as any,
+    deps.requireWorkspace as any,
+    deps.validateResourceAccess('exhibit', 'exhibitId') as any,
+    (async (req: any, res: any) => {
+      if (await enforceIntegrityGate(req, res, 'EXHIBIT_STATUS')) return;
+      const exhibitId = String(req.params.exhibitId || '').trim();
+      if (!exhibitId) return res.status(400).json({ error: 'exhibitId required' });
+      const exhibit = await deps.prisma.exhibit.findFirst({
+        where: { id: exhibitId, workspaceId: req.workspaceId },
+        select: {
+          id: true,
+          filename: true,
+          mimeType: true,
+          storageKey: true,
+          integrityHash: true,
+          createdAt: true,
+          matterId: true
+        }
+      });
+      if (!exhibit) return res.status(404).json({ error: 'Exhibit not found' });
+      const status = await deps.getVideoForensicsStatus(exhibitId);
+      res.json({ exhibit, status });
+    }) as any
+  );
+
+  router.get(
+    '/api/exhibits/:exhibitId/artifacts',
+    deps.authenticate as any,
+    deps.requireWorkspace as any,
+    deps.validateResourceAccess('exhibit', 'exhibitId') as any,
+    (async (req: any, res: any) => {
+      if (await enforceIntegrityGate(req, res, 'EXHIBIT_ARTIFACT_LIST')) return;
+      const exhibitId = String(req.params.exhibitId || '').trim();
+      if (!exhibitId) return res.status(400).json({ error: 'exhibitId required' });
+      const artifacts = await deps.listVideoForensicsArtifacts(exhibitId);
+      const status = await deps.getVideoForensicsStatus(exhibitId);
+      const withUrls = artifacts.map((artifact: any) => ({
+        ...artifact,
+        downloadUrl: `/api/exhibits/${exhibitId}/artifacts/${encodeURIComponent(artifact.id)}`
+      }));
+      res.json({ exhibitId, status, artifacts: withUrls });
+    }) as any
+  );
+
+  router.get(
+    '/api/exhibits/:exhibitId/artifacts/:artifactId',
+    deps.authenticate as any,
+    deps.requireWorkspace as any,
+    deps.validateResourceAccess('exhibit', 'exhibitId') as any,
+    (async (req: any, res: any) => {
+      if (await enforceIntegrityGate(req, res, 'EXHIBIT_ARTIFACT_DOWNLOAD')) return;
+      const exhibitId = String(req.params.exhibitId || '').trim();
+      const artifactId = decodeURIComponent(String(req.params.artifactId || ''));
+      if (!exhibitId || !artifactId) return res.status(400).json({ error: 'exhibitId and artifactId required' });
+      try {
+        const filePath = deps.streamVideoArtifact(exhibitId, artifactId);
+        await deps.logAuditEvent(req.workspaceId, req.userId, 'EXHIBIT_ARTIFACT_DOWNLOAD', {
+          exhibitId,
+          artifactId
+        }).catch(() => null);
+        res.sendFile(filePath);
+      } catch (err: any) {
+        res.status(404).json({ error: err?.message || 'Artifact not found' });
+      }
+    }) as any
+  );
 
   router.get(
     '/api/workspaces/:workspaceId/matters/:matterId/exhibits/:exhibitId/anchors',

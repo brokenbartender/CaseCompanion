@@ -69,6 +69,12 @@ import { createMappingRouter } from './routes/mappingRoutes.js';
 import { createAuditRouter } from './routes/auditRoutes.js';
 import { createHealthRouter } from './routes/healthRoutes.js';
 import { createExhibitRouter } from './routes/exhibitRoutes.js';
+import {
+  processVideoForensics,
+  getVideoForensicsStatus,
+  listVideoForensicsArtifacts,
+  streamVideoArtifact
+} from './services/videoForensics.js';
 import { createTeleportRouter } from './routes/teleportRoutes.js';
 import { createResearchRouter } from './routes/researchRoutes.js';
 import { createComplianceRouter } from './routes/complianceRoutes.js';
@@ -1911,6 +1917,22 @@ async function ingestExhibit(opts: {
       ...(privilegePayload as any)
     }
   });
+
+  const isVideo = file.mimetype?.startsWith('video/')
+    || /\.(mp4|mov|avi|mkv|webm)$/i.test(file.originalname || '');
+
+  if (isVideo) {
+    setImmediate(() => {
+      processVideoForensics({
+        exhibitId: exhibit.id,
+        workspaceId,
+        userId,
+        storageKey,
+        filename: file.originalname,
+        logAuditEvent
+      }).catch(() => null);
+    });
+  }
 
   await prisma.documentVersion.create({
     data: {
@@ -7977,7 +7999,10 @@ app.use(createExhibitRouter({
   assessExhibitAgainstPlaybook,
   convertBufferToTxt,
   convertBufferToPdf,
-  convertBufferToDocx
+  convertBufferToDocx,
+  getVideoForensicsStatus,
+  listVideoForensicsArtifacts,
+  streamVideoArtifact
 }));
 
 app.use(createTeleportRouter());

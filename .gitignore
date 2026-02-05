@@ -17,6 +17,8 @@ yarn-error.log*
 scripts/ci-diagnose.txt
 server/uploads/
 uploads/
+server/outputs/
+outputs/
 server/tmp/
 server/witness_log/
 .tools/

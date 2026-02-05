@@ -32,6 +32,8 @@ export default function EvidenceVault() {
   const [trialMode, setTrialMode] = useState(false);
   const [uploadStatus, setUploadStatus] = useState<string>("");
   const [filter, setFilter] = useState<string>(highlight);
+  const [statusLookupId, setStatusLookupId] = useState("");
+  const [statusResult, setStatusResult] = useState<string>("");
   const settings = readJson<CaseSettings>(SETTINGS_KEY, { apiBase: "", workspaceId: "", authToken: "" });
 
   function updateMeta(path: string, next: Partial<EvidenceMeta>) {
@@ -65,6 +67,21 @@ export default function EvidenceVault() {
     const needle = filter.toLowerCase();
     return EVIDENCE_INDEX.filter((item) => item.name.toLowerCase().includes(needle) || item.path.toLowerCase().includes(needle));
   }, [filter]);
+
+  async function fetchStatus() {
+    if (!settings.apiBase || !statusLookupId.trim()) return;
+    try {
+      const res = await fetch(`${settings.apiBase}/api/exhibits/${encodeURIComponent(statusLookupId.trim())}`);
+      if (!res.ok) {
+        setStatusResult(await res.text());
+        return;
+      }
+      const json = await res.json();
+      setStatusResult(JSON.stringify(json.status, null, 2));
+    } catch (err: any) {
+      setStatusResult(err?.message || "Status lookup failed.");
+    }
+  }
 
   function exportPacket() {
     const payload = { index: EVIDENCE_INDEX, meta };
@@ -119,6 +136,35 @@ export default function EvidenceVault() {
               />
               <span className="text-xs text-slate-500">{uploadStatus}</span>
             </div>
+          </CardBody>
+        </Card>
+
+        <Card>
+          <CardHeader>
+            <CardSubtitle>Video Forensics</CardSubtitle>
+            <CardTitle>Status Lookup</CardTitle>
+          </CardHeader>
+          <CardBody>
+            <div className="flex flex-wrap gap-3">
+              <input
+                className="w-full rounded-md border border-white/10 bg-white/5 px-3 py-2 text-sm text-slate-100"
+                placeholder="Exhibit ID"
+                value={statusLookupId}
+                onChange={(e) => setStatusLookupId(e.target.value)}
+              />
+              <button
+                type="button"
+                onClick={fetchStatus}
+                className="rounded-md bg-amber-500 px-3 py-2 text-sm font-semibold text-slate-900"
+              >
+                Check Status
+              </button>
+            </div>
+            {statusResult ? (
+              <pre className="mt-3 whitespace-pre-wrap rounded-md border border-white/10 bg-white/5 p-3 text-xs text-slate-200">
+                {statusResult}
+              </pre>
+            ) : null}
           </CardBody>
         </Card>
 
