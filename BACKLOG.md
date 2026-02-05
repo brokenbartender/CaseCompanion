@@ -40,7 +40,65 @@ This backlog maps the Michigan civil case lifecycle (benchbook-driven) and legal
 25. **E8** Research/Benchmark consolidation (non-blocking)
 
 ## Backlog Items
-- None (all current items completed)
+1. **E1** MiFILE reconnect completion status
+- Steps: suppress banner after completion, show last completion date
+
+2. **E1** Service method wizard
+- Steps: branching steps for individual vs business vs government
+
+3. **E2** Proof-of-service to Evidence Vault
+- Steps: save uploaded proofs as exhibits, link to timeline
+
+4. **E2** Proof preview
+- Steps: PDF preview for proof uploads in Proof Review
+
+5. **E1** Filing checklist PDF export
+- Steps: export printable filing checklist PDF
+
+6. **E1** Case-type eligibility library
+- Steps: list eligible/blocked case types for Oakland County
+
+7. **E1** Deadline holiday editor
+- Steps: user-editable court holiday list
+
+8. **E5** Timeline-to-trial notebook export
+- Steps: export timeline + evidence links to text bundle
+
+9. **E2/E5** Evidence-to-element mapper
+- Steps: map evidence to assault/battery elements
+
+10. **E5** Witness prep packets
+- Steps: auto question list per witness
+
+11. **E5** Objection drill mode
+- Steps: quick quiz for objection timing
+
+12. **E5** Self-defense counter planner
+- Steps: list defense claims and rebuttal evidence
+
+13. **E6** Medical bill totalizer
+- Steps: sum from uploaded medical bills
+
+14. **E6** Lost income tracker
+- Steps: calendar day count + wage inputs
+
+15. **E6** Business loss worksheet
+- Steps: simple P&L inputs
+
+16. **E6** Settlement demand PDF generator
+- Steps: generate PDF demand letter
+
+17. **E5** Trial exhibit order list
+- Steps: drag-drop ordering with export
+
+18. **E2/E5** Video sync to timeline
+- Steps: link timestamp to timeline event
+
+19. **E8** Audit export
+- Steps: download audit log
+
+20. **E8** Client-facing print pack
+- Steps: clean PDF summary for court or mediator
 
 ## Roadmap Tracker
 
