@@ -6,10 +6,6 @@ import App from "./App";
 // Embeddable builds mount via <lexipro-app> inside a ShadowRoot.
 import "./index.css";
 
-// React-PDF layer styles (standalone build only).
-import "react-pdf/dist/Page/AnnotationLayer.css";
-import "react-pdf/dist/Page/TextLayer.css";
-
 const rootEl = document.getElementById("root");
 if (!rootEl) {
   throw new Error("LexiPro: #root element not found");
