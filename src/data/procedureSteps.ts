@@ -8,87 +8,98 @@ export type ProcedureStep = {
 
 export const PROCEDURE_STEPS: ProcedureStep[] = [
   {
-    id: "access-fees-pro-se",
-    title: "Access, fees, and pro se basics",
-    summary: "Understand access to proceedings/records and fee waiver basics.",
-    sources: ["MCR Chapter 2", "Benchbook Ch. 1"],
+    id: "pre-filing-evidence",
+    title: "Pre-filing and evidence readiness",
+    summary: "Clarify elements, preserve evidence, and organize damages.",
+    sources: ["MCR Chapter 2", "Civil Benchbook", "Evidence Guides"],
     checklist: [
-      "Review court access and record rules for your case type.",
-      "Determine if fee waiver applies and gather required documents.",
-      "Review pro se procedures for filings and appearances."
+      "Confirm assault/battery elements and what you must prove.",
+      "Collect police report, medical records, and witness info.",
+      "Preserve video and document authenticity (hash + chain of custody)."
     ]
   },
   {
-    id: "jurisdiction-venue-standing",
-    title: "Jurisdiction, venue, and standing",
-    summary: "Confirm the court's authority, proper venue, and standing/real party in interest.",
-    sources: ["MCR Chapter 2", "Benchbook Ch. 2"],
+    id: "court-selection",
+    title: "Court selection and case setup",
+    summary: "Choose the correct Oakland County court and prepare to file.",
+    sources: ["Civil Benchbook", "MCR Chapter 2"],
     checklist: [
-      "Identify court type and subject-matter jurisdiction.",
-      "Confirm venue is proper (or evaluate change of venue rules).",
-      "Confirm standing and real party in interest."
+      "Select 52nd District Court (<= $25,000) or 6th Circuit (> $25,000).",
+      "Confirm venue is Oakland County and defendant resides/acted there.",
+      "Gather party names, addresses, and service details."
     ]
   },
   {
-    id: "pleadings-process",
-    title: "Pleadings, summons, and service of process",
-    summary: "Prepare pleadings, obtain summons, and complete service under MCR 2.102 and 2.105.",
-    sources: ["MCR 2.102", "MCR 2.105", "Civil Process Handbook", "Service of Process Table"],
+    id: "filing-initiation",
+    title: "MiFILE initiation and pleadings",
+    summary: "Prepare the A-to-Z document pack and initiate the case.",
+    sources: ["MCR 2.101", "MCR 2.102", "Civil Benchbook"],
     checklist: [
-      "Confirm summons issuance date and expiration window.",
-      "Select a valid service method for the defendant type.",
-      "Complete proof of service and record method/date."
+      "Prepare complaint, summons, and required forms as separate PDFs.",
+      "Initiate the case in MiFILE and pay fee or submit fee waiver.",
+      "Track summons issuance date and expiration."
     ]
   },
   {
-    id: "responsive-pleadings-joinder",
-    title: "Responsive pleadings and joinder",
-    summary: "Track answers, counterclaims, and joinder rules.",
-    sources: ["MCR Chapter 2", "Benchbook Ch. 3"],
+    id: "service-of-process",
+    title: "Service of process",
+    summary: "Serve the defendant within the required window and file proof.",
+    sources: ["MCR 2.105", "Civil Process Handbook", "Service of Process Table"],
     checklist: [
-      "Track response deadlines after service.",
-      "Identify counterclaims/cross-claims if applicable.",
-      "Review joinder rules for parties/claims."
+      "Use a qualified server and complete personal service if possible.",
+      "Record service date and method.",
+      "File proof of service promptly."
+    ]
+  },
+  {
+    id: "responses-defaults",
+    title: "Answers and defaults",
+    summary: "Track response deadlines and default options if no answer is filed.",
+    sources: ["MCR Chapter 2", "Civil Benchbook"],
+    checklist: [
+      "Calendar the response deadline after service.",
+      "Track any counterclaims or affirmative defenses.",
+      "If no answer, prepare default request checklist."
     ]
   },
   {
     id: "discovery",
     title: "Discovery and case development",
-    summary: "Organize discovery, disclosures, and evidence preparation.",
-    sources: ["Benchbook discovery sections"],
+    summary: "Exchange evidence, interrogatories, and production requests.",
+    sources: ["Civil Benchbook", "MCR Chapter 2"],
     checklist: [
-      "Plan discovery requests and responses.",
-      "Organize evidence by issue and timeline.",
-      "Track deadlines for responses."
+      "Serve initial disclosures and discovery requests.",
+      "Track response deadlines and follow up on missing items.",
+      "Organize exhibits by element and timeline."
     ]
   },
   {
-    id: "motions-summary-disposition",
-    title: "Motions and summary disposition",
-    summary: "Track motion requirements, timing, and evidence standards for MCR 2.116.",
-    sources: ["MCR 2.116", "Summary Disposition Table"],
+    id: "motions-adr",
+    title: "Motions and ADR",
+    summary: "Prepare motions (including summary disposition) and mediation.",
+    sources: ["MCR 2.116", "Summary Disposition Table", "Civil Benchbook"],
     checklist: [
-      "Identify applicable MCR 2.116 grounds.",
-      "Collect admissible evidence for motion support/opposition.",
-      "Track filing and response deadlines."
+      "Assess summary disposition grounds and required evidence.",
+      "Prepare mediation packet with damages support.",
+      "Track motion response deadlines."
     ]
   },
   {
-    id: "pretrial-trial",
-    title: "Pretrial, trial, and judgment",
-    summary: "Prepare pretrial materials, witness lists, and exhibit packets.",
-    sources: ["Benchbook trial sequence"],
+    id: "trial-prep",
+    title: "Pretrial and trial",
+    summary: "Finalize witnesses, exhibits, and trial presentation.",
+    sources: ["Civil Benchbook", "Trial guides"],
     checklist: [
-      "Finalize exhibit list and witness list.",
-      "Prepare pretrial statement or trial brief if required.",
-      "Organize trial presentation materials."
+      "Finalize witness list, subpoenas, and exhibit list.",
+      "Prepare trial notebook, objections, and questions.",
+      "Ensure all exhibits are authenticated and ready."
     ]
   },
   {
     id: "post-judgment",
-    title: "Post-judgment and enforcement",
-    summary: "Track post-judgment motions, appeals, and enforcement steps.",
-    sources: ["MCR Chapter 2", "Benchbook post-judgment sections"],
+    title: "Judgment and enforcement",
+    summary: "Record judgment, deadlines, and enforcement steps.",
+    sources: ["MCR Chapter 2", "Civil Benchbook"],
     checklist: [
       "Record judgment date and any post-judgment deadlines.",
       "Track enforcement actions and compliance.",

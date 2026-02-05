@@ -239,6 +239,32 @@ export default function EvidenceVault() {
           </CardBody>
         </Card>
 
+        <Card>
+          <CardHeader>
+            <CardSubtitle>Standards</CardSubtitle>
+            <CardTitle>Evidence Quality</CardTitle>
+          </CardHeader>
+          <CardBody>
+            <div className="text-sm text-slate-300">
+              Use RAM validation and admissibility checklists before relying on exhibits.
+            </div>
+            <div className="mt-3 flex flex-wrap gap-3">
+              <a
+                href="/evidence-standards"
+                className="rounded-md bg-amber-500 px-3 py-2 text-sm font-semibold text-slate-900"
+              >
+                RAM Validator
+              </a>
+              <a
+                href="/video-admissibility"
+                className="rounded-md border border-amber-400/60 px-3 py-2 text-sm font-semibold text-amber-200"
+              >
+                Video Admissibility
+              </a>
+            </div>
+          </CardBody>
+        </Card>
+
         {EVIDENCE_CATEGORIES.map((category) => {
           const items = filteredIndex.filter((item) => item.category === category);
           return (

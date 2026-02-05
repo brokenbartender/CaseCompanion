@@ -34,9 +34,16 @@ function computeProgress(state: ChecklistState) {
 }
 
 export default function Dashboard() {
-  const focusIndex = 1;
-  const focusStep = PROCEDURE_STEPS[focusIndex];
-  const progress = computeProgress(readJson(CHECKLIST_KEY, {}));
+  const checklistState = readJson(CHECKLIST_KEY, {});
+  const progress = computeProgress(checklistState);
+  const focusIndex = Math.max(
+    0,
+    PROCEDURE_STEPS.findIndex((step) =>
+      step.checklist.some((task) => !checklistState?.[step.id]?.[task])
+    )
+  );
+  const focusStep = PROCEDURE_STEPS[focusIndex] || PROCEDURE_STEPS[0];
+  const nextTask = focusStep?.checklist.find((task) => !checklistState?.[focusStep.id]?.[task]);
   const settings = readJson<CaseSettings>(SETTINGS_KEY, {
     caseName: "",
     court: "",
@@ -81,6 +88,11 @@ export default function Dashboard() {
             <div className="mt-4 text-sm text-slate-300">
               Focus stage: {focusStep.title}. {focusStep.summary}
             </div>
+            {nextTask ? (
+              <div className="mt-2 text-xs text-amber-200">
+                Next action: {nextTask}
+              </div>
+            ) : null}
           </CardBody>
         </Card>
 

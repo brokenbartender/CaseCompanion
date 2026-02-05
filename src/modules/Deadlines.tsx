@@ -7,9 +7,29 @@ const STORAGE_KEY = "case_companion_deadlines_v1";
 
 type Deadline = { date: string; title: string; note: string };
 
+const DEADLINE_TEMPLATES = [
+  {
+    id: "service-90",
+    title: "Service deadline (90 days from filing)",
+    note: "Confirm the service window for your court."
+  },
+  {
+    id: "answer-21",
+    title: "Answer deadline (typically 21 days from service)",
+    note: "Confirm response time based on service method."
+  },
+  {
+    id: "discovery-response",
+    title: "Discovery response deadline",
+    note: "Set based on your discovery request date."
+  }
+];
+
 export default function DeadlinesView() {
   const [deadlines, setDeadlines] = useState<Deadline[]>(() => readJson(STORAGE_KEY, []));
   const [form, setForm] = useState<Deadline>({ date: "", title: "", note: "" });
+  const [templateId, setTemplateId] = useState(DEADLINE_TEMPLATES[0].id);
+  const [templateDate, setTemplateDate] = useState("");
 
   const sorted = useMemo(() => [...deadlines].sort((a, b) => a.date.localeCompare(b.date)), [deadlines]);
 
@@ -21,9 +41,56 @@ export default function DeadlinesView() {
     setForm({ date: "", title: "", note: "" });
   }
 
+  function addTemplate() {
+    const template = DEADLINE_TEMPLATES.find((item) => item.id === templateId);
+    if (!template || !templateDate.trim()) return;
+    const next = [...deadlines, { date: templateDate.trim(), title: template.title, note: template.note }];
+    setDeadlines(next);
+    writeJson(STORAGE_KEY, next);
+    setTemplateDate("");
+  }
+
   return (
     <Page title="Deadlines" subtitle="Track procedural deadlines and reminders.">
       <div className="grid gap-6 lg:grid-cols-3">
+        <Card className="lg:col-span-1">
+          <CardHeader>
+            <CardSubtitle>Presets</CardSubtitle>
+            <CardTitle>Quick Add</CardTitle>
+          </CardHeader>
+          <CardBody>
+            <div className="space-y-3">
+              <select
+                className="w-full rounded-md border border-white/10 bg-white/5 px-3 py-2 text-sm text-slate-100"
+                value={templateId}
+                onChange={(e) => setTemplateId(e.target.value)}
+              >
+                {DEADLINE_TEMPLATES.map((template) => (
+                  <option key={template.id} value={template.id}>
+                    {template.title}
+                  </option>
+                ))}
+              </select>
+              <input
+                className="w-full rounded-md border border-white/10 bg-white/5 px-3 py-2 text-sm text-slate-100"
+                placeholder="Date (YYYY-MM-DD)"
+                value={templateDate}
+                onChange={(e) => setTemplateDate(e.target.value)}
+              />
+              <button
+                type="button"
+                onClick={addTemplate}
+                className="w-full rounded-md bg-amber-500 px-3 py-2 text-sm font-semibold text-slate-900"
+              >
+                Add Template Deadline
+              </button>
+            </div>
+            <div className="mt-3 text-xs text-slate-500">
+              Templates are common defaults. Confirm exact timing with court rules.
+            </div>
+          </CardBody>
+        </Card>
+
         <Card className="lg:col-span-1">
           <CardHeader>
             <CardSubtitle>Add Deadline</CardSubtitle>
