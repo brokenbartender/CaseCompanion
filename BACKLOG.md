@@ -30,31 +30,17 @@ This backlog maps the Michigan civil case lifecycle (benchbook-driven) and legal
 15. **E6** Settlement Demand Generator
 16. **E7** Privacy + Victim Safety
 17. **E7** Victim Rights + Self-Help Resources
+18. **E1** A-to-Z document pack builder
+19. **E2** Exhibit Detail expansion
+20. **E2** Video content analysis (VCAT-style)
+21. **E2** Layout-aware document parsing (DeepDoc)
+22. **E7** Statutory & Criminal Context References
+23. **E8** UI/Accessibility System
+24. **E2/E8** Lawma classifier for auto-tagging
+25. **E8** Research/Benchmark consolidation (non-blocking)
 
 ## Backlog Items
-1. **E1** A-to-Z document pack builder
-- Steps: summons MC 01, complaint MC 01a, fee waiver MC 20, file naming rules
-
-2. **E2** Exhibit Detail expansion
-- Steps: transcript attachment + timeline binding, authenticity report download, keyframes/contact sheet
-
-3. **E2** Video content analysis (VCAT-style)
-- Steps: object detection, OCR, speech-to-text with timestamps, prompt-based search
-
-4. **E2** Layout-aware document parsing (DeepDoc)
-- Steps: OCR + layout + table structure extraction for PDFs/forms
-
-5. **E7** Statutory & Criminal Context References
-- Steps: MCL 750.81 summary + M Crim JI 13.1/13.2 reference panel
-
-6. **E8** UI/Accessibility System
-- Steps: legal-design UI kit, widget library, accessibility pass, dashboard specs
-
-7. **E2/E8** Lawma classifier for auto-tagging
-- Steps: add document type classifier for police/medical/witness/video, map tags to modules, test against labeled examples
-
-8. **E8** Research/Benchmark consolidation (non-blocking)
-- Steps: combine OpenContracts/OpenClaw/SSRN, LegalBench, OLAW, Legal Text Analytics, Awesome LegalAI, LegalNexus; shortlist US-relevant tools and QA guardrails
+- None (all current items completed)
 
 ## Roadmap Tracker
 

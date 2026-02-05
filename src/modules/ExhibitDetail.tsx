@@ -1,9 +1,11 @@
 import React, { useEffect, useMemo, useState } from "react";
 import Page from "../components/ui/Page";
 import { Card, CardBody, CardHeader, CardSubtitle, CardTitle } from "../components/ui/Card";
-import { readJson } from "../utils/localStore";
+import { readJson, writeJson } from "../utils/localStore";
 
 const SETTINGS_KEY = "case_companion_settings_v1";
+const TIMELINE_KEY = "case_companion_timeline_v1";
+const EXHIBIT_LINKS_KEY = "case_companion_exhibit_links_v1";
 
 type CaseSettings = {
   apiBase: string;
@@ -36,6 +38,10 @@ type CombinedStatus = {
   pdf?: ExhibitStatus;
 };
 
+type TimelineEvent = { date: string; title: string; note: string; evidence: string[] };
+
+type ExhibitLink = { exhibitId: string; timelineTitle: string; timelineDate: string };
+
 export default function ExhibitDetail() {
   const settings = readJson<CaseSettings>(SETTINGS_KEY, { apiBase: "", workspaceId: "", authToken: "" });
   const [exhibitId, setExhibitId] = useState("");
@@ -43,6 +49,9 @@ export default function ExhibitDetail() {
   const [artifacts, setArtifacts] = useState<Artifact[]>([]);
   const [metadata, setMetadata] = useState<Record<string, any>>({});
   const [error, setError] = useState<string>("");
+  const [selectedTimelineIndex, setSelectedTimelineIndex] = useState("0");
+  const timelineEvents = readJson<TimelineEvent[]>(TIMELINE_KEY, []);
+  const [links, setLinks] = useState<ExhibitLink[]>(() => readJson(EXHIBIT_LINKS_KEY, []));
 
   const apiBase = settings.apiBase || "http://localhost:8787";
 
@@ -98,6 +107,19 @@ export default function ExhibitDetail() {
     } catch (err: any) {
       setError(err?.message || "Failed to load exhibit.");
     }
+  }
+
+  function linkToTimeline() {
+    if (!exhibitId.trim() || timelineEvents.length === 0) return;
+    const index = Number(selectedTimelineIndex) || 0;
+    const target = timelineEvents[index];
+    if (!target) return;
+    const next = [
+      ...links.filter((link) => link.exhibitId !== exhibitId),
+      { exhibitId, timelineTitle: target.title, timelineDate: target.date }
+    ];
+    setLinks(next);
+    writeJson(EXHIBIT_LINKS_KEY, next);
   }
 
   useEffect(() => {
@@ -181,6 +203,45 @@ export default function ExhibitDetail() {
               </a>
             ) : (
               <div className="text-sm text-slate-400">Manifest not available.</div>
+            )}
+          </CardBody>
+        </Card>
+
+        <Card>
+          <CardHeader>
+            <CardSubtitle>Timeline</CardSubtitle>
+            <CardTitle>Link Exhibit to Event</CardTitle>
+          </CardHeader>
+          <CardBody>
+            {timelineEvents.length === 0 ? (
+              <div className="text-sm text-slate-400">No timeline events yet. Add one in the Timeline page.</div>
+            ) : (
+              <div className="space-y-3">
+                <select
+                  className="w-full rounded-md border border-white/10 bg-white/5 px-3 py-2 text-sm text-slate-100"
+                  value={selectedTimelineIndex}
+                  onChange={(e) => setSelectedTimelineIndex(e.target.value)}
+                >
+                  {timelineEvents.map((event, idx) => (
+                    <option key={`${event.title}-${idx}`} value={idx}>
+                      {event.date || "TBD"} — {event.title}
+                    </option>
+                  ))}
+                </select>
+                <button
+                  type="button"
+                  onClick={linkToTimeline}
+                  className="rounded-md bg-amber-500 px-3 py-2 text-sm font-semibold text-slate-900"
+                >
+                  Link Exhibit
+                </button>
+                {links.find((link) => link.exhibitId === exhibitId) ? (
+                  <div className="text-xs text-amber-200">
+                    Linked to: {links.find((link) => link.exhibitId === exhibitId)?.timelineDate} —{" "}
+                    {links.find((link) => link.exhibitId === exhibitId)?.timelineTitle}
+                  </div>
+                ) : null}
+              </div>
             )}
           </CardBody>
         </Card>

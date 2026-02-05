@@ -38,6 +38,12 @@ import ResourcesHub from "./modules/ResourcesHub";
 import GuidedStartWizard from "./modules/GuidedStartWizard";
 import IngestCenter from "./modules/IngestCenter";
 import FilingFlowWizard from "./modules/FilingFlowWizard";
+import DocumentPackBuilder from "./modules/DocumentPackBuilder";
+import VideoAnalysis from "./modules/VideoAnalysis";
+import LayoutParser from "./modules/LayoutParser";
+import StatutoryContext from "./modules/StatutoryContext";
+import DesignSystem from "./modules/DesignSystem";
+import ClassifierHub from "./modules/ClassifierHub";
 
 function App() {
   return (
@@ -62,6 +68,12 @@ function App() {
           <Route path="guided-start" element={<GuidedStartWizard />} />
           <Route path="ingest" element={<IngestCenter />} />
           <Route path="filing-flow" element={<FilingFlowWizard />} />
+          <Route path="doc-pack" element={<DocumentPackBuilder />} />
+          <Route path="video-analysis" element={<VideoAnalysis />} />
+          <Route path="layout-parser" element={<LayoutParser />} />
+          <Route path="statutory-context" element={<StatutoryContext />} />
+          <Route path="design-system" element={<DesignSystem />} />
+          <Route path="classifier" element={<ClassifierHub />} />
           <Route path="rules" element={<RulesLibrary />} />
           <Route path="rules-index" element={<RulesIndex />} />
           <Route path="service" element={<ServiceOfProcessWizard />} />
