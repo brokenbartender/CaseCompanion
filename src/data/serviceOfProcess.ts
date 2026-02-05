@@ -5,9 +5,19 @@ export const SERVICE_OF_PROCESS_GUIDE = [
     sources: ["MCR 2.105", "Civil Process Handbook"]
   },
   {
+    title: "90-day service window",
+    detail: "Track the service deadline from the filing date and act early to avoid dismissal risk.",
+    sources: ["MCR 2.102", "Civil Process Handbook"]
+  },
+  {
     title: "Summons validity",
     detail: "Summons is valid for a limited period; track issuance and expiration.",
     sources: ["MCR 2.102", "Civil Process Handbook"]
+  },
+  {
+    title: "Who can serve",
+    detail: "Service must be completed by a non-party adult, a process server, or a sheriff/deputy.",
+    sources: ["MCR 2.103", "Civil Process Handbook"]
   },
   {
     title: "Service methods",

@@ -22,6 +22,7 @@ outputs/
 server/tmp/
 server/witness_log/
 .tools/
+tools/FractalVideoGuard_*/
 logs/
 scripts/cache/
 reports/*
