@@ -34,6 +34,7 @@ const navItems = [
   { to: "/self-defense", label: "Self-Defense", icon: Target },
   { to: "/roadmap", label: "Procedural Roadmap", icon: Map },
   { to: "/guided-start", label: "Guided Start", icon: Map },
+  { to: "/filing-flow", label: "Filing Flow", icon: ClipboardList },
   { to: "/checklist", label: "Checklist", icon: ListChecks },
   { to: "/timeline", label: "Timeline", icon: CalendarDays },
   { to: "/evidence", label: "Evidence Vault", icon: Archive },

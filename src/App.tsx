@@ -37,6 +37,7 @@ import PrivacySafety from "./modules/PrivacySafety";
 import ResourcesHub from "./modules/ResourcesHub";
 import GuidedStartWizard from "./modules/GuidedStartWizard";
 import IngestCenter from "./modules/IngestCenter";
+import FilingFlowWizard from "./modules/FilingFlowWizard";
 
 function App() {
   return (
@@ -60,6 +61,7 @@ function App() {
           <Route path="resources" element={<ResourcesHub />} />
           <Route path="guided-start" element={<GuidedStartWizard />} />
           <Route path="ingest" element={<IngestCenter />} />
+          <Route path="filing-flow" element={<FilingFlowWizard />} />
           <Route path="rules" element={<RulesLibrary />} />
           <Route path="rules-index" element={<RulesIndex />} />
           <Route path="service" element={<ServiceOfProcessWizard />} />

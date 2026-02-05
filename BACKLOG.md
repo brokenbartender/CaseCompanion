@@ -12,96 +12,49 @@ This backlog maps the Michigan civil case lifecycle (benchbook-driven) and legal
 - E7 Privacy, PII, and Compliance (MC 97/MC 20 workflows)
 - E8 Design System & Accessibility (legal-design-driven UX)
 
-## Backlog Items
+## Completed
 1. **E1** Master Checklist + Case Journey Dashboard
-- Steps: phase list, required docs, status tracking, next-action button, timeline highlights
-
 2. **E1** Oakland County filing flow (court selector + MiFILE)
-- Steps: 52nd vs 6th circuit selector, MiFILE registration, initiation wizard, fee waiver path
+3. **E1/E7** Service of process workflow
+4. **E1/E7** Deadline risk monitor
+5. **E1/E2** RAM evidence validator
+6. **E2** Evidence Vault tagging + filters
+7. **E2** OSAC/SWGDE forensic workflow compliance
+8. **E2/E5** Video admissibility & demonstrative evidence
+9. **E3** Discovery Suite (Interrogatories/RFP/RFA)
+10. **E3/E4** Default + Mediation readiness
+11. **E4** Motion Builder + Summary Disposition Planner
+12. **E5** Trial Prep Core
+13. **E5** Voir Dire Designer
+14. **E6** Damages + Restitution
+15. **E6** Settlement Demand Generator
+16. **E7** Privacy + Victim Safety
+17. **E7** Victim Rights + Self-Help Resources
 
-3. **E1** A-to-Z document pack builder
+## Backlog Items
+1. **E1** A-to-Z document pack builder
 - Steps: summons MC 01, complaint MC 01a, fee waiver MC 20, file naming rules
 
-4. **E1/E7** Service of process workflow
-- Steps: who can serve, 90-day timer, proof-of-service upload, reminders
-
-5. **E1/E7** Deadline risk monitor
-- Steps: service + motion deadlines, alerts, calendar integration
-
-6. **E1/E2** RAM evidence validator
-- Steps: evidence intake checklist, RAM scoring, integrity warnings
-
-7. **E2** Evidence Vault tagging + filters
-- Steps: Authority/Evidence/Damages, phase tags, filters
-
-8. **E2** Exhibit Detail expansion
+2. **E2** Exhibit Detail expansion
 - Steps: transcript attachment + timeline binding, authenticity report download, keyframes/contact sheet
 
-9. **E2** OSAC/SWGDE forensic workflow compliance
-- Steps: working-copy policy, hash verification pre/post, processing + discrepancy logs, intake form
-
-10. **E2/E5** Video admissibility & demonstrative evidence
-- Steps: Silent Witness checklist, format/codec guidance, demonstrative exhibit builder
-
-11. **E2** Video content analysis (VCAT-style)
+3. **E2** Video content analysis (VCAT-style)
 - Steps: object detection, OCR, speech-to-text with timestamps, prompt-based search
 
-12. **E2** Layout-aware document parsing (DeepDoc)
+4. **E2** Layout-aware document parsing (DeepDoc)
 - Steps: OCR + layout + table structure extraction for PDFs/forms
 
-13. **E3** Discovery Suite (Interrogatories/RFP/RFA)
-- Steps: template library, timing rules, send/export
-
-14. **E3/E4** Default + Mediation readiness
-- Steps: answer deadline tracker, default motion checklist, settlement/exhibit packet checklist
-
-15. **E4** Motion Builder + Summary Disposition Planner
-- Steps: motion outline, element checks, auto-citations
-
-16. **E5** Trial Prep Core
-- Steps: trial notebook, witness exam planner, objection helper, narrative testimony coach
-
-17. **E5** Voir Dire Designer
-- Steps: bias checklists, question bank, printable sheet
-
-18. **E6** Damages + Restitution
-- Steps: medical totals, collateral source notes, wage + business loss, out-of-pocket tracker
-
-19. **E6** Settlement Demand Generator
-- Steps: pull damages, exhibit citations, export PDF
-
-20. **E7** Privacy + Victim Safety
-- Steps: PII guard (MC 97), confidentiality prompts, protective order prompts
-
-21. **E7** Victim Rights + Self-Help Resources
-- Steps: rights compliance checklist, SCAO/Legal Help hub, reminders/search shortcuts
-
-22. **E7** Statutory & Criminal Context References
+5. **E7** Statutory & Criminal Context References
 - Steps: MCL 750.81 summary + M Crim JI 13.1/13.2 reference panel
 
-23. **E8** UI/Accessibility System
+6. **E8** UI/Accessibility System
 - Steps: legal-design UI kit, widget library, accessibility pass, dashboard specs
 
-24. **E8** Research/Reference Audits (non-blocking)
-- Steps: OpenContracts, OpenClaw, SSRN/AI research, AI usage policy references
-
-25. **E2/E8** Lawma classifier for auto-tagging
+7. **E2/E8** Lawma classifier for auto-tagging
 - Steps: add document type classifier for police/medical/witness/video, map tags to modules, test against labeled examples
 
-26. **E8** LegalBench AI quality testing
-- Steps: run benchmark subset for legal reasoning, build model scorecard, tune prompts/guardrails
-
-27. **E8** Legal Text Analytics resource scan
-- Steps: review tool/dataset list, shortlist OCR/NER/citation extractors, note glossary/annotation tools
-
-28. **E2/E8** LegalNexus RAG architecture reference
-- Steps: review QA/hallucination checks, adopt case-workspace isolation patterns, evaluate retrieval routing
-
-29. **E8** OLAW research framework reference
-- Steps: review safety guardrails, retrieval experiments, and UI testing patterns for non-lawyers
-
-30. **E8** Awesome LegalAI Resources scan
-- Steps: review curated datasets/tools list, shortlist any US-relevant sources, avoid non-US legal data
+8. **E8** Research/Benchmark consolidation (non-blocking)
+- Steps: combine OpenContracts/OpenClaw/SSRN, LegalBench, OLAW, Legal Text Analytics, Awesome LegalAI, LegalNexus; shortlist US-relevant tools and QA guardrails
 
 ## Roadmap Tracker
 

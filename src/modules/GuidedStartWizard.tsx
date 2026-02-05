@@ -11,7 +11,7 @@ const STEPS = [
   {
     title: "2) Build Your Filing Pack",
     description: "Prepare summons, complaint, and fee waiver/PII forms as separate PDFs.",
-    action: { label: "Open Filing Checklist", href: "/filing" }
+    action: { label: "Open Filing Flow", href: "/filing-flow" }
   },
   {
     title: "3) File in MiFILE",
