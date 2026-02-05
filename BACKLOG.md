@@ -94,7 +94,7 @@ Status legend: `planned` `in_progress` `done`
 | Phase 1 | Core civil-case flow + evidence | E1, E2 | in_progress |
 | Phase 2 | Discovery + motions | E3, E4 | in_progress |
 | Phase 3 | Trial prep + damages + settlement | E5, E6 | in_progress |
-| Phase 4 | Privacy + UX system + accessibility | E7, E8 | planned |
+| Phase 4 | Privacy + UX system + accessibility | E7, E8 | in_progress |
 
 ## Dependencies
 - E1 depends on civil benchbook mapping completion.

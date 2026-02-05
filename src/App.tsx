@@ -33,6 +33,8 @@ import DiscoverySuite from "./modules/DiscoverySuite";
 import DefaultMediation from "./modules/DefaultMediation";
 import MotionBuilder from "./modules/MotionBuilder";
 import TrialPrep from "./modules/TrialPrep";
+import PrivacySafety from "./modules/PrivacySafety";
+import ResourcesHub from "./modules/ResourcesHub";
 
 function App() {
   return (
@@ -51,6 +53,8 @@ function App() {
           <Route path="default-mediation" element={<DefaultMediation />} />
           <Route path="motion-builder" element={<MotionBuilder />} />
           <Route path="trial-prep" element={<TrialPrep />} />
+          <Route path="privacy-safety" element={<PrivacySafety />} />
+          <Route path="resources" element={<ResourcesHub />} />
           <Route path="rules" element={<RulesLibrary />} />
           <Route path="rules-index" element={<RulesIndex />} />
           <Route path="service" element={<ServiceOfProcessWizard />} />
