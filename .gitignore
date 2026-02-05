@@ -42,3 +42,8 @@ release_artifacts/
 # Add to .gitignore
 `n# Private case files (do not commit)
 references/Assault Case/
+references/*.mov
+references/*.mp4
+references/*.mkv
+references/*.avi
+references/*.webm

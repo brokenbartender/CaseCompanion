@@ -113,7 +113,9 @@ async function collectArtifacts(exhibitId: string) {
         const stats = await fs.promises.stat(fullPath);
         const sha = await sha256File(fullPath);
         const type = rel.startsWith("frames/") ? "frame"
+          : rel.startsWith("keyframes/") ? "keyframe"
           : rel.startsWith("audio/") ? "audio"
+          : rel.startsWith("thumbnails/") ? "thumbnail"
           : rel.startsWith("metadata/") ? "metadata"
           : rel.startsWith("source/") ? "original_copy"
           : rel === "manifest.json" ? "manifest"
@@ -169,7 +171,9 @@ export async function processVideoForensics(args: {
   ensureDir(getArtifactPath(exhibitId, "source"));
   ensureDir(getArtifactPath(exhibitId, "metadata"));
   ensureDir(getArtifactPath(exhibitId, "frames"));
+  ensureDir(getArtifactPath(exhibitId, "keyframes"));
   ensureDir(getArtifactPath(exhibitId, "audio"));
+  ensureDir(getArtifactPath(exhibitId, "thumbnails"));
   ensureDir(getArtifactPath(exhibitId, "logs"));
 
   await writeStatus(exhibitId, { exhibitId, status: "queued" });
@@ -196,6 +200,8 @@ export async function processVideoForensics(args: {
   const exiftoolJson = getArtifactPath(exhibitId, "metadata/exiftool.json");
   const audioPath = getArtifactPath(exhibitId, "audio/audio.wav");
   const framesDir = getArtifactPath(exhibitId, "frames");
+  const keyframesDir = getArtifactPath(exhibitId, "keyframes");
+  const thumbsDir = getArtifactPath(exhibitId, "thumbnails");
   const logDir = getArtifactPath(exhibitId, "logs");
 
   const ffprobe = await runCommand(
@@ -241,6 +247,20 @@ export async function processVideoForensics(args: {
     ["-y", "-i", originalCopyPath, "-vf", "fps=1", "-frames:v", "60", path.join(framesDir, "frame_%04d.jpg")],
     outputDir,
     safeResolve(logDir, "ffmpeg_frames.txt")
+  );
+
+  await runCommand(
+    "ffmpeg",
+    ["-y", "-i", originalCopyPath, "-vf", "select='eq(pict_type,PICT_TYPE_I)'", "-vsync", "vfr", path.join(keyframesDir, "keyframe_%04d.jpg")],
+    outputDir,
+    safeResolve(logDir, "ffmpeg_keyframes.txt")
+  );
+
+  await runCommand(
+    "ffmpeg",
+    ["-y", "-i", originalCopyPath, "-vf", "fps=1,scale=320:-1,tile=5x5", "-frames:v", "1", path.join(thumbsDir, "contact_sheet.jpg")],
+    outputDir,
+    safeResolve(logDir, "ffmpeg_contact_sheet.txt")
   );
 
   const artifacts = await collectArtifacts(exhibitId);

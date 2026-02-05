@@ -47,6 +47,8 @@ export default function ExhibitDetail() {
   const apiBase = settings.apiBase || "http://localhost:8787";
 
   const frameArtifacts = useMemo(() => artifacts.filter((a) => a.type === "frame"), [artifacts]);
+  const keyframeArtifacts = useMemo(() => artifacts.filter((a) => a.type === "keyframe"), [artifacts]);
+  const thumbnailArtifacts = useMemo(() => artifacts.filter((a) => a.type === "thumbnail"), [artifacts]);
   const pdfPageArtifacts = useMemo(() => artifacts.filter((a) => a.type === "pdf_page"), [artifacts]);
   const audioArtifact = useMemo(() => artifacts.find((a) => a.type === "audio"), [artifacts]);
   const manifestArtifact = useMemo(() => artifacts.find((a) => a.type === "manifest"), [artifacts]);
@@ -276,6 +278,48 @@ export default function ExhibitDetail() {
                     <div className="mt-1 text-xs text-slate-400">{frame.id}</div>
                   </div>
                 ))}
+              </div>
+            )}
+          </CardBody>
+        </Card>
+
+        <Card>
+          <CardHeader>
+            <CardSubtitle>Keyframes</CardSubtitle>
+            <CardTitle>Scene Changes</CardTitle>
+          </CardHeader>
+          <CardBody>
+            {keyframeArtifacts.length === 0 ? (
+              <div className="text-sm text-slate-400">No keyframes available.</div>
+            ) : (
+              <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+                {keyframeArtifacts.slice(0, 24).map((frame) => (
+                  <div key={frame.id} className="rounded-md border border-white/5 bg-white/5 p-2">
+                    <img src={`${apiBase}${frame.downloadUrl}`} alt={frame.id} className="w-full rounded" />
+                    <div className="mt-1 text-xs text-slate-400">{frame.id}</div>
+                  </div>
+                ))}
+              </div>
+            )}
+          </CardBody>
+        </Card>
+
+        <Card>
+          <CardHeader>
+            <CardSubtitle>Thumbnail</CardSubtitle>
+            <CardTitle>Contact Sheet</CardTitle>
+          </CardHeader>
+          <CardBody>
+            {thumbnailArtifacts.length === 0 ? (
+              <div className="text-sm text-slate-400">No contact sheet available.</div>
+            ) : (
+              <div className="rounded-md border border-white/5 bg-white/5 p-2">
+                <img
+                  src={`${apiBase}${thumbnailArtifacts[0].downloadUrl}`}
+                  alt={thumbnailArtifacts[0].id}
+                  className="w-full rounded"
+                />
+                <div className="mt-1 text-xs text-slate-400">{thumbnailArtifacts[0].id}</div>
               </div>
             )}
           </CardBody>
