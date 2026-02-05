@@ -51,6 +51,8 @@ export default function Dashboard() {
     caseNumber: "",
     jurisdiction: "Oakland County, MI"
   });
+  const reconnectState = readJson<Record<string, boolean>>("case_companion_mifile_reconnect_v1", {});
+  const reconnectDone = Object.values(reconnectState).filter(Boolean).length >= 4;
   const deadlines = readJson<Deadline[]>(DEADLINES_KEY, []).slice(0, 3);
   const todayTask = nextTask || "Complete case setup in Case Settings.";
 
@@ -94,6 +96,26 @@ export default function Dashboard() {
                 Add your case info in Case Settings to personalize the dashboard.
               </div>
               <a href="/settings" className="mt-3 inline-flex text-sm text-amber-300">Go to Case Settings</a>
+            </CardBody>
+          </Card>
+        ) : null}
+
+        {!reconnectDone ? (
+          <Card className="lg:col-span-3 border border-amber-400/30 bg-amber-500/10">
+            <CardHeader>
+              <CardSubtitle>MiFILE Notice</CardSubtitle>
+              <CardTitle>Reconnect Reminder</CardTitle>
+            </CardHeader>
+            <CardBody>
+              <div className="text-sm text-slate-200">
+                If you stop receiving e‑service notices, run the MiFILE Reconnect checklist.
+              </div>
+              <a
+                href="/mifile-reconnect"
+                className="mt-3 inline-flex rounded-md bg-amber-500 px-3 py-2 text-xs font-semibold text-slate-900"
+              >
+                Open MiFILE Reconnect
+              </a>
             </CardBody>
           </Card>
         ) : null}

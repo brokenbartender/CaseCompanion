@@ -4,6 +4,10 @@ import { Card, CardBody, CardHeader, CardSubtitle, CardTitle } from "../componen
 import { MICHIGAN_OBJECTION_CARDS } from "../data/michiganEvidenceObjections";
 
 export default function ObjectionBattleCards() {
+  function copyText(text: string) {
+    navigator.clipboard?.writeText(text).catch(() => null);
+  }
+
   return (
     <Page title="Objection Battle Cards" subtitle="Quick reference for common objections (informational only).">
       <div className="grid gap-6 md:grid-cols-2">
@@ -20,6 +24,13 @@ export default function ObjectionBattleCards() {
                   <li key={line}>{line}</li>
                 ))}
               </ul>
+              <button
+                type="button"
+                onClick={() => copyText(`Objection, ${card.title}.`)}
+                className="mt-3 rounded-md border border-amber-400/50 px-3 py-2 text-xs font-semibold text-amber-200"
+              >
+                Copy quick objection
+              </button>
               <div className="mt-3 text-xs text-slate-400">
                 Sources:
                 <ul className="mt-1 space-y-1">

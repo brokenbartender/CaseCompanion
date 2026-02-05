@@ -32,6 +32,7 @@ export default function EvidenceVault() {
   const [trialMode, setTrialMode] = useState(false);
   const [uploadStatus, setUploadStatus] = useState<string>("");
   const [filter, setFilter] = useState<string>(highlight);
+  const [tagFilter, setTagFilter] = useState<string>("");
   const [statusLookupId, setStatusLookupId] = useState("");
   const [statusResult, setStatusResult] = useState<string>("");
   const settings = readJson<CaseSettings>(SETTINGS_KEY, { apiBase: "", workspaceId: "", authToken: "" });
@@ -67,6 +68,11 @@ export default function EvidenceVault() {
     const needle = filter.toLowerCase();
     return EVIDENCE_INDEX.filter((item) => item.name.toLowerCase().includes(needle) || item.path.toLowerCase().includes(needle));
   }, [filter]);
+
+  const tagFilteredIndex = useMemo(() => {
+    if (!tagFilter) return filteredIndex;
+    return filteredIndex.filter((item) => (meta[item.path]?.tags || []).includes(tagFilter));
+  }, [filteredIndex, meta, tagFilter]);
 
   async function fetchStatus() {
     if (!settings.apiBase || !statusLookupId.trim()) return;
@@ -265,8 +271,31 @@ export default function EvidenceVault() {
           </CardBody>
         </Card>
 
+        <Card>
+          <CardHeader>
+            <CardSubtitle>Filters</CardSubtitle>
+            <CardTitle>Tag Filter</CardTitle>
+          </CardHeader>
+          <CardBody>
+            <div className="flex flex-wrap gap-2">
+              {["", "police-report", "medical", "video", "witness"].map((tag) => (
+                <button
+                  key={tag || "all"}
+                  type="button"
+                  onClick={() => setTagFilter(tag)}
+                  className={`rounded-full px-3 py-1 text-xs ${
+                    tagFilter === tag ? "bg-amber-500 text-slate-900" : "border border-white/10 text-slate-300"
+                  }`}
+                >
+                  {tag || "All"}
+                </button>
+              ))}
+            </div>
+          </CardBody>
+        </Card>
+
         {EVIDENCE_CATEGORIES.map((category) => {
-          const items = filteredIndex.filter((item) => item.category === category);
+          const items = tagFilteredIndex.filter((item) => item.category === category);
           return (
             <Card key={category}>
               <CardHeader>

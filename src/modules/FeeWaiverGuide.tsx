@@ -55,6 +55,18 @@ export default function FeeWaiverGuide() {
             </div>
           </CardBody>
         </Card>
+        <Card className="lg:col-span-2">
+          <CardHeader>
+            <CardSubtitle>Rule</CardSubtitle>
+            <CardTitle>MCR 2.002 (Fee Waiver)</CardTitle>
+          </CardHeader>
+          <CardBody>
+            <div className="text-sm text-slate-300">
+              Fee waivers are governed by MCR 2.002. Use the official rule text to confirm eligibility and required
+              submissions.
+            </div>
+          </CardBody>
+        </Card>
       </div>
     </Page>
   );

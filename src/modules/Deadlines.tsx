@@ -53,6 +53,38 @@ export default function DeadlinesView() {
     setTemplateDate("");
   }
 
+  function addAutoDeadline(label: string, days: number) {
+    if (!calcStart.trim()) return;
+    const start = new Date(calcStart);
+    if (Number.isNaN(start.getTime())) return;
+    let count = 0;
+    let cursor = new Date(start);
+    while (count < days) {
+      cursor.setDate(cursor.getDate() + 1);
+      const day = cursor.getDay();
+      if (day === 0 || day === 6 || isHoliday(cursor)) continue;
+      count += 1;
+    }
+    const due = cursor.toISOString().slice(0, 10);
+    const next = [...deadlines, { date: due, title: label, note: `Auto from ${calcStart}` }];
+    setDeadlines(next);
+    writeJson(STORAGE_KEY, next);
+  }
+
+  const HOLIDAYS = [
+    "2026-01-01",
+    "2026-05-25",
+    "2026-07-03",
+    "2026-09-07",
+    "2026-11-26",
+    "2026-12-25"
+  ];
+
+  function isHoliday(date: Date) {
+    const key = date.toISOString().slice(0, 10);
+    return HOLIDAYS.includes(key);
+  }
+
   function calculateDeadline() {
     if (!calcStart.trim()) return "";
     const start = new Date(calcStart);
@@ -64,7 +96,7 @@ export default function DeadlinesView() {
       cursor.setDate(cursor.getDate() + 1);
       if (calcBusiness) {
         const day = cursor.getDay();
-        if (day === 0 || day === 6) continue;
+        if (day === 0 || day === 6 || isHoliday(cursor)) continue;
       }
       count += 1;
     }
@@ -108,6 +140,29 @@ export default function DeadlinesView() {
               <div className="text-xs text-amber-200">Due: {computed || "Enter inputs"}</div>
               <div className="text-[10px] text-slate-500">
                 Filings submitted by 11:59 PM count that business day. Weekends roll to next business day.
+              </div>
+              <div className="mt-3 grid gap-2">
+                <button
+                  type="button"
+                  onClick={() => addAutoDeadline("Service deadline (90 days)", 90)}
+                  className="rounded-md border border-white/10 bg-white/5 px-3 py-2 text-xs text-slate-100"
+                >
+                  Add Service Deadline (+90 days)
+                </button>
+                <button
+                  type="button"
+                  onClick={() => addAutoDeadline("Answer deadline (+21 days)", 21)}
+                  className="rounded-md border border-white/10 bg-white/5 px-3 py-2 text-xs text-slate-100"
+                >
+                  Add Answer Deadline (+21 days)
+                </button>
+                <button
+                  type="button"
+                  onClick={() => addAutoDeadline("Discovery response (+28 days)", 28)}
+                  className="rounded-md border border-white/10 bg-white/5 px-3 py-2 text-xs text-slate-100"
+                >
+                  Add Discovery Deadline (+28 days)
+                </button>
               </div>
             </div>
           </CardBody>

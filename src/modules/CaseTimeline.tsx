@@ -6,11 +6,11 @@ import { EVIDENCE_INDEX } from "../data/evidenceIndex";
 
 const STORAGE_KEY = "case_companion_timeline_v1";
 
-type TimelineEvent = { date: string; title: string; note: string; evidence: string[] };
+type TimelineEvent = { date: string; title: string; note: string; evidence: string[]; proof?: string };
 
 export default function CaseTimeline() {
   const [events, setEvents] = useState<TimelineEvent[]>(() => readJson(STORAGE_KEY, []));
-  const [form, setForm] = useState<TimelineEvent>({ date: "", title: "", note: "", evidence: [] });
+  const [form, setForm] = useState<TimelineEvent>({ date: "", title: "", note: "", evidence: [], proof: "" });
 
   const sorted = useMemo(() => {
     return [...events].sort((a, b) => a.date.localeCompare(b.date));
@@ -64,6 +64,12 @@ export default function CaseTimeline() {
                 value={form.note}
                 onChange={(e) => setForm({ ...form, note: e.target.value })}
               />
+              <input
+                className="w-full rounded-md border border-white/10 bg-white/5 px-3 py-2 text-sm text-slate-100"
+                placeholder="Proof of service filename (optional)"
+                value={form.proof || ""}
+                onChange={(e) => setForm({ ...form, proof: e.target.value })}
+              />
               <div className="rounded-md border border-white/10 bg-white/5 p-2">
                 <div className="text-xs text-slate-400 mb-2">Link evidence</div>
                 <div className="max-h-48 overflow-auto space-y-1">
@@ -106,11 +112,38 @@ export default function CaseTimeline() {
                     <div className="text-sm text-slate-400">{event.date || "TBD"}</div>
                     <div className="text-base text-white font-semibold">{event.title}</div>
                     {event.note ? <div className="text-sm text-slate-300 mt-1">{event.note}</div> : null}
+                    {event.proof ? (
+                      <div className="mt-2 text-xs text-amber-200">Proof: {event.proof}</div>
+                    ) : null}
                     {event.evidence?.length ? (
                       <div className="mt-2 text-xs text-slate-500">
                         Linked evidence: {event.evidence.length}
                       </div>
                     ) : null}
+                  </div>
+                ))}
+              </div>
+            )}
+          </CardBody>
+        </Card>
+
+        <Card className="lg:col-span-3">
+          <CardHeader>
+            <CardSubtitle>Evidence Cross‑Links</CardSubtitle>
+            <CardTitle>Evidence by Event</CardTitle>
+          </CardHeader>
+          <CardBody>
+            {sorted.length === 0 ? (
+              <div className="text-sm text-slate-400">No events yet.</div>
+            ) : (
+              <div className="space-y-3 text-sm text-slate-300">
+                {sorted.map((event, idx) => (
+                  <div key={`${event.title}-${idx}`} className="rounded-md border border-white/10 bg-white/5 p-3">
+                    <div className="text-xs text-slate-400">{event.date || "TBD"}</div>
+                    <div className="text-sm text-white">{event.title}</div>
+                    <div className="text-xs text-slate-400">
+                      Linked evidence: {event.evidence.length ? event.evidence.join(", ") : "None"}
+                    </div>
                   </div>
                 ))}
               </div>

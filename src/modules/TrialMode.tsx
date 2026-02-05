@@ -71,7 +71,7 @@ export default function TrialMode() {
               <CardTitle>Quick Access</CardTitle>
             </CardHeader>
             <CardBody>
-              <div className="grid gap-2">
+              <div className="grid gap-3">
                     {trialPicks.length === 0 ? (
                       <div className="text-sm text-slate-400">No trial picks found.</div>
                     ) : (
@@ -79,7 +79,7 @@ export default function TrialMode() {
                         <button
                           key={item.path}
                           type="button"
-                          className="w-full rounded-lg bg-amber-500 px-4 py-3 text-left text-sm font-semibold text-slate-900"
+                          className="w-full rounded-xl bg-amber-500 px-6 py-5 text-left text-base font-semibold text-slate-900"
                           onClick={() => navigate(`/evidence?highlight=${encodeURIComponent(item.path)}`)}
                         >
                           {item.name}

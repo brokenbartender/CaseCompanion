@@ -30,6 +30,24 @@ export default function SettlementDemandGenerator() {
     URL.revokeObjectURL(url);
   }
 
+  function exportPacket() {
+    const packet = {
+      to,
+      from,
+      date,
+      summary,
+      exhibits,
+      damagesTotal
+    };
+    const blob = new Blob([JSON.stringify(packet, null, 2)], { type: "application/json" });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = "settlement_packet.json";
+    a.click();
+    URL.revokeObjectURL(url);
+  }
+
   function printPdf() {
     const w = window.open("", "_blank");
     if (!w) return;
@@ -58,6 +76,7 @@ export default function SettlementDemandGenerator() {
             <div className="mt-4 flex flex-wrap gap-3">
               <button type="button" onClick={download} className="rounded-md bg-amber-500 px-3 py-2 text-sm font-semibold text-slate-900">Download Draft</button>
               <button type="button" onClick={printPdf} className="rounded-md border border-white/10 bg-white/5 px-3 py-2 text-sm text-slate-100">Print to PDF</button>
+              <button type="button" onClick={exportPacket} className="rounded-md border border-amber-400/50 px-3 py-2 text-sm font-semibold text-amber-200">Export Packet JSON</button>
             </div>
           </CardBody>
         </Card>
