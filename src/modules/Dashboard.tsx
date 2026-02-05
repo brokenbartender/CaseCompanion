@@ -53,6 +53,7 @@ export default function Dashboard() {
   });
   const reconnectState = readJson<Record<string, boolean>>("case_companion_mifile_reconnect_v1", {});
   const reconnectDone = Object.values(reconnectState).filter(Boolean).length >= 4;
+  const reconnectCompletedAt = readJson<string>("case_companion_mifile_reconnect_status_v1", "");
   const deadlines = readJson<Deadline[]>(DEADLINES_KEY, []).slice(0, 3);
   const todayTask = nextTask || "Complete case setup in Case Settings.";
 
@@ -100,7 +101,7 @@ export default function Dashboard() {
           </Card>
         ) : null}
 
-        {!reconnectDone ? (
+        {!reconnectDone && !reconnectCompletedAt ? (
           <Card className="lg:col-span-3 border border-amber-400/30 bg-amber-500/10">
             <CardHeader>
               <CardSubtitle>MiFILE Notice</CardSubtitle>
