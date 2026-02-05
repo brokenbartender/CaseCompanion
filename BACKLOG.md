@@ -144,6 +144,8 @@ This backlog maps the Michigan civil case lifecycle (benchbook-driven) and legal
 - Steps: working-copy policy, hash verification pre/post, processing log, discrepancy log
 57. **E2** SWGDE best practices intake + verification
 - Steps: intake/request form, output quality verification, archival checklist
+58. **E2/E5** Video evidence admissibility checklist (Silent Witness)
+- Steps: authentication theory checklist, format/codec guidance, courtroom playback prep
 56. **E2** Layout-aware document parsing (RAGFlow DeepDoc)
 - Steps: evaluate OCR + layout + table structure extraction for PDFs/forms
 
