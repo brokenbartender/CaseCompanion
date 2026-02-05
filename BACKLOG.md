@@ -140,6 +140,10 @@ This backlog maps the Michigan civil case lifecycle (benchbook-driven) and legal
 - Steps: eligibility checklist, resource links, safety disclaimer, non-legal advice prompts
 55. **E1/E7** Workplace violence Type II definition + zero tolerance policy
 - Steps: add Type II violence definition, zero-tolerance policy template, employer liability prompts
+56. **E2** OSAC digital video examination workflow
+- Steps: working-copy policy, hash verification pre/post, processing log, discrepancy log
+57. **E2** SWGDE best practices intake + verification
+- Steps: intake/request form, output quality verification, archival checklist
 56. **E2** Layout-aware document parsing (RAGFlow DeepDoc)
 - Steps: evaluate OCR + layout + table structure extraction for PDFs/forms
 
