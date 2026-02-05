@@ -26,6 +26,7 @@ import WitnessIntelligence from "./modules/WitnessIntelligence";
 import ForensicFinance from "./modules/ForensicFinance";
 import TrialMode from "./modules/TrialMode";
 import SelfDefenseDestroyer from "./modules/SelfDefenseDestroyer";
+import ExhibitDetail from "./modules/ExhibitDetail";
 
 function App() {
   return (
@@ -37,6 +38,7 @@ function App() {
           <Route path="checklist" element={<ProceduralChecklist />} />
           <Route path="timeline" element={<CaseTimeline />} />
           <Route path="evidence" element={<EvidenceVault />} />
+          <Route path="exhibit-detail" element={<ExhibitDetail />} />
           <Route path="rules" element={<RulesLibrary />} />
           <Route path="rules-index" element={<RulesIndex />} />
           <Route path="service" element={<ServiceOfProcessWizard />} />
