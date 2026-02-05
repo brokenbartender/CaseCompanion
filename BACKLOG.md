@@ -84,6 +84,28 @@ This backlog maps the Michigan civil case lifecycle (benchbook-driven) and legal
 - Steps: in-app glossary, hover definitions, plain-language explanations
 27. **E1/E7** HOLT glossary dataset + tooltip wiring
 - Steps: extract glossary terms into JSON, add tooltip component, wire to checklist and timeline
+28. **E1/E2** RAM evidence validator (Relevant, Authentic, Material)
+- Steps: evidence intake checklist, RAM scoring, integrity warnings
+29. **E1** Complaint drafting wizard (story + relief)
+- Steps: numbered paragraphs, jurisdiction/venue, relief builder, export
+30. **E1/E7** Service of process tracker + proof upload
+- Steps: process server workflow, proof-of-service checklist, deadline reminders
+31. **E3** Default judgment trigger
+- Steps: answer deadline tracker, default motion checklist, filing reminders
+32. **E3/E4** Mediation readiness module
+- Steps: settlement position, damages summary, exhibit packet checklist
+33. **E5** Narrative testimony coach
+- Steps: self-question script builder, story flow guardrails, practice mode
+34. **E5** Cross-exam leading question builder
+- Steps: yes/no question templates, impeachment links
+35. **E5** Objection helper (basic)
+- Steps: hearsay/speculation/non-responsive prompts + examples
+36. **E7** Victim safety & confidentiality workflow
+- Steps: address confidentiality prompts, safety checklist, protective order prompts
+37. **E6** Restitution + out-of-pocket expense tracker
+- Steps: medical, wages, travel/parking, receipts upload
+38. **E1/E7** Deadline risk monitor (service + filing)
+- Steps: track 90-day service window, motion deadlines, alerts
 
 ## Roadmap Tracker
 
