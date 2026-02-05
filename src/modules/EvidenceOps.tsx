@@ -3,10 +3,11 @@ import Page from "../components/ui/Page";
 import { Card, CardBody, CardHeader, CardSubtitle, CardTitle } from "../components/ui/Card";
 
 const LINKS = [
-  { label: "Ingest Center", href: "/ingest", note: "Upload evidence for hashing and extraction." },
+  { label: "Exhibit Manager", href: "/exhibit-manager", note: "Full ingest, OCR, redaction, and review." },
   { label: "Evidence Vault", href: "/evidence", note: "Tag, filter, and manage exhibits." },
   { label: "Exhibit Detail", href: "/exhibit-detail", note: "View forensics artifacts and verification." },
-  { label: "Video Admissibility", href: "/video-admissibility", note: "Checklist for video authentication." }
+  { label: "Admissibility Audit", href: "/integrity-audit", note: "Generate admissibility packets." },
+  { label: "Verification Hub", href: "/verification-hub", note: "Generate verification PDFs." }
 ];
 
 export default function EvidenceOps() {
