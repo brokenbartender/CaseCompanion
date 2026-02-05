@@ -132,6 +132,9 @@ export default function DeadlinesView() {
   const computed = calculateDeadline();
   const ruleDeadlines = computeRuleDeadlines(profile, holidayList);
   const activeRuleSet = MICHIGAN_CIVIL_RULESET.ruleSets.find((set) => set.courtLevel === profile.courtLevel);
+  const overlay = MICHIGAN_CIVIL_RULESET.localOverlays.find(
+    (item) => item.county.toLowerCase() === (profile.county || "").toLowerCase()
+  );
 
   return (
     <Page title="Deadlines" subtitle="Track procedural deadlines and reminders.">
@@ -283,6 +286,16 @@ export default function DeadlinesView() {
                 ))}
               </div>
             )}
+            {overlay ? (
+              <div className="mt-4 rounded-md border border-white/10 bg-white/5 p-3 text-xs text-slate-300">
+                <div className="text-[11px] uppercase text-slate-400">Local Overlay - {overlay.county} County</div>
+                <ul className="mt-2 space-y-1">
+                  {overlay.notes.map((note) => (
+                    <li key={note}>- {note}</li>
+                  ))}
+                </ul>
+              </div>
+            ) : null}
           </CardBody>
         </Card>
         <Card className="lg:col-span-1">

@@ -8,14 +8,14 @@ export type ProcedureStep = {
 
 export const PROCEDURE_STEPS: ProcedureStep[] = [
   {
-    id: "pre-filing-evidence",
-    title: "Pre-filing and evidence readiness",
-    summary: "Clarify elements, preserve evidence, and organize damages.",
-    sources: ["MCR Chapter 2", "Civil Benchbook", "Evidence Guides"],
+    id: "court-access-records",
+    title: "Court access, records, and PII",
+    summary: "Start with court access rules, PII protections, and file handling.",
+    sources: ["Civil Benchbook", "MCR Chapter 1-2"],
     checklist: [
-      "Confirm assault/battery elements and what you must prove.",
-      "Collect police report, medical records, and witness info.",
-      "Preserve video and document authenticity (hash + chain of custody)."
+      "Confirm PII handling and use MC 97 for protected information.",
+      "Track any sealing or confidentiality needs early.",
+      "Organize records with clear labels and dates."
     ]
   },
   {
@@ -30,14 +30,14 @@ export const PROCEDURE_STEPS: ProcedureStep[] = [
     ]
   },
   {
-    id: "filing-initiation",
-    title: "MiFILE initiation and pleadings",
-    summary: "Prepare the A-to-Z document pack and initiate the case.",
+    id: "pleadings",
+    title: "Pleadings and filing",
+    summary: "Complaint, summons, filing standards, and fee waiver rules.",
     sources: ["MCR 2.101", "MCR 2.102", "Civil Benchbook"],
     checklist: [
-      "Prepare complaint, summons, and required forms as separate PDFs.",
-      "Initiate the case in MiFILE and pay fee or submit fee waiver.",
-      "Track summons issuance date and expiration."
+      "Draft complaint with numbered paragraphs and relief requested.",
+      "Prepare summons and separate PDFs for each filing.",
+      "Initiate the case in MiFILE and save stamped copies."
     ]
   },
   {
@@ -64,11 +64,11 @@ export const PROCEDURE_STEPS: ProcedureStep[] = [
   },
   {
     id: "discovery",
-    title: "Discovery and case development",
-    summary: "Exchange evidence, interrogatories, and production requests.",
-    sources: ["Civil Benchbook", "MCR Chapter 2"],
+    title: "Discovery and disclosures",
+    summary: "Requests, responses, and enforcement under the court rules.",
+    sources: ["Civil Benchbook", "MCR Chapter 2 (Discovery)"],
     checklist: [
-      "Serve initial disclosures and discovery requests.",
+      "Serve discovery requests and track response due dates.",
       "Track response deadlines and follow up on missing items.",
       "Organize exhibits by element and timeline."
     ]
@@ -76,12 +76,12 @@ export const PROCEDURE_STEPS: ProcedureStep[] = [
   {
     id: "motions-adr",
     title: "Motions and ADR",
-    summary: "Prepare motions (including summary disposition) and mediation.",
+    summary: "Motion practice, summary disposition, and mediation requirements.",
     sources: ["MCR 2.116", "Summary Disposition Table", "Civil Benchbook"],
     checklist: [
-      "Assess summary disposition grounds and required evidence.",
+      "Assess summary disposition grounds and evidence support.",
       "Prepare mediation packet with damages support.",
-      "Track motion response deadlines."
+      "Track motion response and hearing deadlines."
     ]
   },
   {
