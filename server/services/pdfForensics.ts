@@ -102,8 +102,29 @@ async function runCommand(cmd: string, args: string[], cwd: string, logPath: str
 
 function resolveTool(name: string) {
   const envBin = String(process.env.POPPLER_BIN || "").trim();
+  const wingetBin = (() => {
+    const localApp = String(process.env.LOCALAPPDATA || "").trim();
+    if (!localApp) return null;
+    const base = path.join(localApp, "Microsoft", "WinGet", "Packages");
+    if (!fs.existsSync(base)) return null;
+    const entries = fs.readdirSync(base, { withFileTypes: true })
+      .filter((entry) => entry.isDirectory() && entry.name.startsWith("oschwartz10612.Poppler"))
+      .map((entry) => entry.name);
+    for (const entry of entries) {
+      const root = path.join(base, entry);
+      const children = fs.readdirSync(root, { withFileTypes: true })
+        .filter((child) => child.isDirectory() && child.name.startsWith("poppler-"))
+        .map((child) => child.name);
+      for (const child of children) {
+        const binPath = path.join(root, child, "Library", "bin");
+        if (fs.existsSync(binPath)) return binPath;
+      }
+    }
+    return null;
+  })();
   const candidates = [
     envBin ? path.join(envBin, `${name}.exe`) : null,
+    wingetBin ? path.join(wingetBin, `${name}.exe`) : null,
     `C:\\Program Files\\poppler\\Library\\bin\\${name}.exe`,
     `C:\\Program Files\\Poppler\\Library\\bin\\${name}.exe`,
     `C:\\Program Files\\poppler\\Library\\bin\\${name}`,
