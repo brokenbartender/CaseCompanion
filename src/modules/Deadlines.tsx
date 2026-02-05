@@ -71,18 +71,24 @@ export default function DeadlinesView() {
     writeJson(STORAGE_KEY, next);
   }
 
-  const HOLIDAYS = [
+  const [holidayList, setHolidayList] = useState<string[]>(() => readJson("case_companion_holidays_v1", [
     "2026-01-01",
     "2026-05-25",
     "2026-07-03",
     "2026-09-07",
     "2026-11-26",
     "2026-12-25"
-  ];
+  ]));
+  const [holidayInput, setHolidayInput] = useState("");
+
+  function saveHolidays(next: string[]) {
+    setHolidayList(next);
+    writeJson("case_companion_holidays_v1", next);
+  }
 
   function isHoliday(date: Date) {
     const key = date.toISOString().slice(0, 10);
-    return HOLIDAYS.includes(key);
+    return holidayList.includes(key);
   }
 
   function calculateDeadline() {
@@ -163,6 +169,49 @@ export default function DeadlinesView() {
                 >
                   Add Discovery Deadline (+28 days)
                 </button>
+              </div>
+            </div>
+          </CardBody>
+        </Card>
+
+        <Card className="lg:col-span-1">
+          <CardHeader>
+            <CardSubtitle>Holidays</CardSubtitle>
+            <CardTitle>Holiday Editor</CardTitle>
+          </CardHeader>
+          <CardBody>
+            <div className="space-y-3">
+              <input
+                className="w-full rounded-md border border-white/10 bg-white/5 px-3 py-2 text-sm text-slate-100"
+                placeholder="Add holiday (YYYY-MM-DD)"
+                value={holidayInput}
+                onChange={(e) => setHolidayInput(e.target.value)}
+              />
+              <button
+                type="button"
+                onClick={() => {
+                  if (!holidayInput.trim()) return;
+                  const next = Array.from(new Set([...holidayList, holidayInput.trim()])).sort();
+                  saveHolidays(next);
+                  setHolidayInput("");
+                }}
+                className="w-full rounded-md bg-amber-500 px-3 py-2 text-sm font-semibold text-slate-900"
+              >
+                Add Holiday
+              </button>
+              <div className="space-y-1 text-xs text-slate-300">
+                {holidayList.map((day) => (
+                  <div key={day} className="flex items-center justify-between">
+                    <span>{day}</span>
+                    <button
+                      type="button"
+                      onClick={() => saveHolidays(holidayList.filter((d) => d !== day))}
+                      className="text-rose-300"
+                    >
+                      Remove
+                    </button>
+                  </div>
+                ))}
               </div>
             </div>
           </CardBody>

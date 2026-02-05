@@ -4,12 +4,14 @@ import { Card, CardBody, CardHeader, CardSubtitle, CardTitle } from "../componen
 import { readJson, writeJson } from "../utils/localStore";
 
 const STORAGE_KEY = "case_companion_video_sync_v1";
+const TIMELINE_KEY = "case_companion_timeline_v1";
 
-type SyncRow = { timecode: string; reportLine: string; note: string };
+type SyncRow = { timecode: string; reportLine: string; note: string; timelineTitle?: string };
 
 export default function VideoToTextSync() {
   const [rows, setRows] = useState<SyncRow[]>(() => readJson(STORAGE_KEY, []));
-  const [form, setForm] = useState<SyncRow>({ timecode: "", reportLine: "", note: "" });
+  const [form, setForm] = useState<SyncRow>({ timecode: "", reportLine: "", note: "", timelineTitle: "" });
+  const timeline = readJson<any[]>(TIMELINE_KEY, []);
 
   function addRow() {
     if (!form.timecode.trim() || !form.reportLine.trim()) return;
@@ -47,6 +49,18 @@ export default function VideoToTextSync() {
               value={form.note}
               onChange={(e) => setForm({ ...form, note: e.target.value })}
             />
+            <select
+              className="mt-3 w-full rounded-md border border-white/10 bg-white/5 px-3 py-2 text-sm text-slate-100"
+              value={form.timelineTitle}
+              onChange={(e) => setForm({ ...form, timelineTitle: e.target.value })}
+            >
+              <option value="">Link to timeline event (optional)</option>
+              {timeline.map((event, idx) => (
+                <option key={`${event.title}-${idx}`} value={event.title}>
+                  {event.date || "TBD"} - {event.title}
+                </option>
+              ))}
+            </select>
             <button
               type="button"
               onClick={addRow}
@@ -72,6 +86,7 @@ export default function VideoToTextSync() {
                     <div className="text-xs text-slate-500">{row.timecode}</div>
                     <div className="text-sm text-slate-100">{row.reportLine}</div>
                     {row.note ? <div className="text-xs text-slate-400 mt-1">{row.note}</div> : null}
+                    {row.timelineTitle ? <div className="text-xs text-amber-200 mt-1">Timeline: {row.timelineTitle}</div> : null}
                   </div>
                 ))}
               </div>

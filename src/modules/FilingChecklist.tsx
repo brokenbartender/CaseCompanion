@@ -4,9 +4,38 @@ import { Card, CardBody, CardHeader, CardSubtitle, CardTitle } from "../componen
 import { FILING_CHECKLIST } from "../data/filingChecklist";
 
 export default function FilingChecklist() {
+  function printPdf() {
+    const w = window.open("", "_blank");
+    if (!w) return;
+    const html = `
+      <html>
+        <head><title>Filing Checklist</title></head>
+        <body style="font-family: Arial, sans-serif; padding: 24px;">
+          <h2>Filing Checklist</h2>
+          ${FILING_CHECKLIST.map((section) => `
+            <h3>${section.title}</h3>
+            <ul>
+              ${section.tasks.map((task) => `<li>${task}</li>`).join("")}
+            </ul>
+          `).join("")}
+        </body>
+      </html>
+    `;
+    w.document.write(html);
+    w.document.close();
+    w.print();
+  }
+
   return (
     <Page title="Filing Checklist" subtitle="Pleadings, summons, and service workflow.">
       <div className="grid gap-6">
+        <button
+          type="button"
+          onClick={printPdf}
+          className="w-full rounded-md bg-amber-500 px-3 py-2 text-sm font-semibold text-slate-900"
+        >
+          Print Checklist to PDF
+        </button>
         {FILING_CHECKLIST.map((section) => (
           <Card key={section.title}>
             <CardHeader>

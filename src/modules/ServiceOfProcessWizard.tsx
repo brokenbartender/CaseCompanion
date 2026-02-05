@@ -18,6 +18,12 @@ export default function ServiceOfProcessWizard() {
     setProofs(next);
     writeJson("case_companion_proof_uploads_v1", next);
     setUploadStatus(`Saved: ${file.name}`);
+    const evidence = readJson<any[]>("case_companion_dynamic_evidence_v1", []);
+    const updated = [
+      { name: file.name, path: file.name, ext: file.name.split(".").pop() || "file", category: "Proof of Service" },
+      ...evidence.filter((e) => e.name !== file.name)
+    ];
+    writeJson("case_companion_dynamic_evidence_v1", updated);
   }
 
   return (
@@ -26,7 +32,7 @@ export default function ServiceOfProcessWizard() {
         <Card>
           <CardHeader>
             <CardSubtitle>Service Mode</CardSubtitle>
-            <CardTitle>E‑Service vs Manual</CardTitle>
+            <CardTitle>E-Service vs Manual</CardTitle>
           </CardHeader>
           <CardBody>
             <label className="flex items-center gap-2 text-sm text-slate-300">
@@ -36,10 +42,10 @@ export default function ServiceOfProcessWizard() {
                 checked={useEService}
                 onChange={(e) => setUseEService(e.target.checked)}
               />
-              I used e‑service through MiFILE
+              I used e-service through MiFILE
             </label>
             <div className="mt-2 text-xs text-slate-400">
-              E‑service only works if the other party is registered in MiFILE. Otherwise you must serve manually.
+              E-service only works if the other party is registered in MiFILE. Otherwise you must serve manually.
             </div>
             <div className="mt-4 space-y-2 text-sm text-slate-300">
               <div className="text-xs text-slate-400">Is the defendant registered in MiFILE?</div>
@@ -50,7 +56,7 @@ export default function ServiceOfProcessWizard() {
                   checked={defendantRegistered === "yes"}
                   onChange={() => setDefendantRegistered("yes")}
                 />
-                <span>Yes — registered in MiFILE</span>
+                <span>Yes - registered in MiFILE</span>
               </label>
               <label className="flex items-start gap-2">
                 <input
@@ -59,7 +65,7 @@ export default function ServiceOfProcessWizard() {
                   checked={defendantRegistered === "no"}
                   onChange={() => setDefendantRegistered("no")}
                 />
-                <span>No — not registered</span>
+                <span>No - not registered</span>
               </label>
               <label className="flex items-start gap-2">
                 <input
@@ -72,12 +78,12 @@ export default function ServiceOfProcessWizard() {
               </label>
               {defendantRegistered === "no" ? (
                 <div className="text-xs text-amber-200">
-                  Use manual service. E‑service alone is not enough if they are not registered.
+                  Use manual service. E-service alone is not enough if they are not registered.
                 </div>
               ) : null}
               {defendantRegistered === "unsure" ? (
                 <div className="text-xs text-amber-200">
-                  Confirm with the clerk or MiFILE party list before relying on e‑service.
+                  Confirm with the clerk or MiFILE party list before relying on e-service.
                 </div>
               ) : null}
             </div>
@@ -141,12 +147,12 @@ export default function ServiceOfProcessWizard() {
         {useEService ? (
           <Card>
             <CardHeader>
-              <CardSubtitle>E‑Service</CardSubtitle>
+              <CardSubtitle>E-Service</CardSubtitle>
               <CardTitle>Proof Notes</CardTitle>
             </CardHeader>
             <CardBody>
               <div className="text-sm text-slate-300">
-                MiFILE can generate proof of service when e‑service is used. Save the confirmation.
+                MiFILE can generate proof of service when e-service is used. Save the confirmation.
               </div>
             </CardBody>
           </Card>

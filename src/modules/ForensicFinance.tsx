@@ -10,10 +10,19 @@ const STORAGE_KEY = "case_companion_damages_v1";
 export default function ForensicFinance() {
   const [entries, setEntries] = useState<DamagesEntry[]>(() => readJson(STORAGE_KEY, []));
   const [form, setForm] = useState({ category: "Medical expenses", description: "", amount: "", evidence: "" });
+  const [medicalItems, setMedicalItems] = useState<{ label: string; amount: string }[]>(
+    () => readJson("case_companion_medical_items_v1", [])
+  );
+  const [medicalLabel, setMedicalLabel] = useState("");
+  const [medicalAmount, setMedicalAmount] = useState("");
 
   const total = useMemo(
     () => entries.reduce((sum, entry) => sum + (Number(entry.amount) || 0), 0),
     [entries]
+  );
+  const medicalTotal = useMemo(
+    () => medicalItems.reduce((sum, item) => sum + (Number(item.amount) || 0), 0),
+    [medicalItems]
   );
 
   function addEntry() {
@@ -103,6 +112,7 @@ export default function ForensicFinance() {
           </CardHeader>
           <CardBody>
             <div className="text-3xl font-semibold text-white">${total.toFixed(2)}</div>
+            <div className="mt-2 text-xs text-slate-400">Medical bill totalizer: ${medicalTotal.toFixed(2)}</div>
             <div className="mt-2 text-sm text-slate-400">
               Use this as a working total for settlement demand planning.
             </div>
@@ -116,7 +126,7 @@ export default function ForensicFinance() {
                       <div>
                         <div className="text-sm text-white">{entry.description}</div>
                         <div className="text-xs text-slate-400">
-                          {entry.category} {entry.evidence ? `• Evidence: ${entry.evidence}` : ""}
+                          {entry.category} {entry.evidence ? `- Evidence: ${entry.evidence}` : ""}
                         </div>
                       </div>
                       <div className="text-sm font-semibold text-amber-200">${entry.amount.toFixed(2)}</div>
@@ -131,6 +141,53 @@ export default function ForensicFinance() {
                   </div>
                 ))
               )}
+            </div>
+          </CardBody>
+        </Card>
+      </div>
+
+      <div className="mt-6">
+        <Card>
+          <CardHeader>
+            <CardSubtitle>Medical Bills</CardSubtitle>
+            <CardTitle>Totalizer</CardTitle>
+          </CardHeader>
+          <CardBody>
+            <div className="grid gap-3 md:grid-cols-3">
+              <input
+                className="rounded-md border border-white/10 bg-white/5 px-3 py-2 text-sm text-slate-100"
+                placeholder="Bill label"
+                value={medicalLabel}
+                onChange={(e) => setMedicalLabel(e.target.value)}
+              />
+              <input
+                className="rounded-md border border-white/10 bg-white/5 px-3 py-2 text-sm text-slate-100"
+                placeholder="Amount"
+                value={medicalAmount}
+                onChange={(e) => setMedicalAmount(e.target.value)}
+              />
+              <button
+                type="button"
+                onClick={() => {
+                  if (!medicalLabel.trim()) return;
+                  const next = [...medicalItems, { label: medicalLabel, amount: medicalAmount }];
+                  setMedicalItems(next);
+                  writeJson("case_companion_medical_items_v1", next);
+                  setMedicalLabel("");
+                  setMedicalAmount("");
+                }}
+                className="rounded-md bg-amber-500 px-3 py-2 text-sm font-semibold text-slate-900"
+              >
+                Add Bill
+              </button>
+            </div>
+            <div className="mt-3 space-y-2 text-sm text-slate-300">
+              {medicalItems.map((item, idx) => (
+                <div key={`${item.label}-${idx}`} className="flex items-center justify-between">
+                  <span>{item.label}</span>
+                  <span>${Number(item.amount || 0).toFixed(2)}</span>
+                </div>
+              ))}
             </div>
           </CardBody>
         </Card>
