@@ -74,6 +74,12 @@ This backlog maps the Michigan civil case lifecycle (benchbook-driven) and legal
 - Steps: today/tomorrow, case status, upcoming hearings, evidence alerts
 22. **E1** Case detail page redesign (Diary-style case file)
 - Steps: tabs for timeline, evidence, tasks, hearings, motions, discovery
+23. **E1/E7** Self-help resources hub (SCAO + Michigan Legal Help)
+- Steps: curated links, county-specific resources, safety/privacy notices
+24. **E1** MiFILE e-filing helper
+- Steps: e-filing guide, fee payment/waiver prompts, PDF prep checklist
+25. **E1/E7** Court reminders + case search shortcuts
+- Steps: reminder setup links, court search links, privacy guidance
 
 ## Roadmap Tracker
 
