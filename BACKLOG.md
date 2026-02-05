@@ -124,6 +124,8 @@ This backlog maps the Michigan civil case lifecycle (benchbook-driven) and legal
 - Steps: map features to CaseCompanion modules, identify gaps, propose equivalent build tasks
 47. **E2** Evaluate HF legal-documents dataset (prototype-only)
 - Steps: review dataset card/license, assess sample quality, decide if safe for demo text only
+48. **E2/E8** OpenClaw feature audit (inspiration only)
+- Steps: review agent routing, tools/skills patterns, status UI for potential workflow integrations
 
 ## Roadmap Tracker
 
