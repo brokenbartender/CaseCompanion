@@ -146,6 +146,8 @@ This backlog maps the Michigan civil case lifecycle (benchbook-driven) and legal
 - Steps: intake/request form, output quality verification, archival checklist
 58. **E2/E5** Video evidence admissibility checklist (Silent Witness)
 - Steps: authentication theory checklist, format/codec guidance, courtroom playback prep
+59. **E7** Victim-rights compliance checklist template (MML model)
+- Steps: checklist format for rights notices, reporting deadlines, and documentation
 56. **E2** Layout-aware document parsing (RAGFlow DeepDoc)
 - Steps: evaluate OCR + layout + table structure extraction for PDFs/forms
 
