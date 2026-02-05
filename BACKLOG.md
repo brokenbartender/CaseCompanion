@@ -80,6 +80,8 @@ This backlog maps the Michigan civil case lifecycle (benchbook-driven) and legal
 - Steps: e-filing guide, fee payment/waiver prompts, PDF prep checklist
 25. **E1/E7** Court reminders + case search shortcuts
 - Steps: reminder setup links, court search links, privacy guidance
+26. **E1/E7** Michigan court glossary integration (HOLT)
+- Steps: in-app glossary, hover definitions, plain-language explanations
 
 ## Roadmap Tracker
 
