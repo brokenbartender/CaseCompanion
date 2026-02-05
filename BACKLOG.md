@@ -120,6 +120,8 @@ This backlog maps the Michigan civil case lifecycle (benchbook-driven) and legal
 - Steps: MC 01 proof section, MiFILE filing type selector
 45. **E2/E8** OpenContracts feature audit (inspiration, not reuse)
 - Steps: compare doc ingestion, annotation, schema extraction, AI search; note AGPL license constraints
+46. **E2/E8** OpenContracts module-by-module comparison (backlog-only)
+- Steps: map features to CaseCompanion modules, identify gaps, propose equivalent build tasks
 
 ## Roadmap Tracker
 
