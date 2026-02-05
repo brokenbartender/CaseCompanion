@@ -1,0 +1,620 @@
+Displaying State Court Data:
+
+A Guide to Data
+Dashboard Design
+
+September 2024
+
+                                                                               Heather Caspers
+                                                                               Court Research Associate
+                                                                               Sarah Gibson
+                                                                               Data Scientist
+                                                                               Breanne Harris
+                                                                               Data Visualization Manager
+                                                                               Morgan Moffett
+                                                                               Senior Court Research Analyst
+Table of Contents
+
+Introduction ........................................................................................................................................3
+Importance of Data Dashboard Design for Courts ...............................................................................3
+Understanding Data Dashboards .....................................................................................................3
+Data Dashboard Terminology................................................................................................................3
+Data Dashboard Design Principles ...................................................................................................5
+Chart Types ..........................................................................................................................................5
+Dashboard Layout ................................................................................................................................8
+Branding ...............................................................................................................................................9
+Color .....................................................................................................................................................9
+Typography ...........................................................................................................................................9
+Designing for User Experience (UX) ..............................................................................................10
+User-Centered Design Approach .......................................................................................................10
+Intuitive Navigation and Layout .........................................................................................................11
+Utilizing Interactive Elements .............................................................................................................12
+Responsive Design ...........................................................................................................................12
+Accessibility ........................................................................................................................................12
+Working with Data ............................................................................................................................14
+Underlying Data ..................................................................................................................................14
+Selecting the Right Tools ....................................................................................................................14
+Conclusion .......................................................................................................................................14
+
+                                                                                                              A Guide to Data Dashboard Design | 2
+Introduction
+
+As the use of data as a strategic asset within state courts has become more commonplace, the
+opportunity to use and communicate insights from data has continued to grow. Data dashboards
+are one tool that courts can use to meet the increasing expectations from both internal and external
+users for timely, accurate, and insightful data. However, not all dashboards are created equally;
+it’s imperative that dashboards are designed with a clear purpose and the audience in mind. Court
+dashboards are consumed by a range of audiences, from court staff, administrators, and judges,
+to the public, media, legislative bodies and other court partners. In addition to designing for the
+correct audience, using the following fundamental principles will allow the users to efficiently access
+important information in a meaningful way.
+
+Importance of Data Dashboard Design for Courts
+
+While the design of data dashboards is the main focus of this guide, what is shown within the
+dashboard is of equal importance for creating an effective tool for data consumers. For more
+information on what measures courts should consider using, please see CourTools and the
+supplemental resources provided.
+
+Understanding Data Dashboards
+
+Data Dashboard Terminology
+Data Visualization
+
+A single graphical representation, data table, or number presented on a dashboard that makes it
+easier to quickly extract information from the data.
+
+Data Dashboard
+
+A versatile, interactive tool containing multiple data visualizations that displays key data and helps
+users better understand the information.
+
+Data Storytelling
+
+A way to present data in a way that simplifies complex information and highlights key insights in
+an easy-to-digest manner, leading the end user to a conclusion. Data visualization enhances data
+storytelling.
+
+Data Source
+
+The location where information is stored and the foundation of visualizations.
+
+                                                                                                              A Guide to Data Dashboard Design | 3
+Quantitative Data
+
+Numerical or measurable information that can be calculated.
+
+Qualitative data
+
+Descriptive, non-numerical information such as words and survey findings.
+
+Key Performance Indicators (KPIs)
+
+The quantifiable metrics used to track progress towards a specific objective.
+
+Data Variable
+
+Any characteristic, number, or quantity that can be measured or counted. Data collected about a
+numeric variable will always be quantitative, and data collected about a categorical variable will
+always be qualitative.
+
+Measures
+
+Numerical values that can be calculated or aggregated. Measures are quantitative; you can perform
+calculations on them, such as sums and averages.
+
+Dimensions
+
+Referential pieces of information that characterize measurable data (the who, what, when, where,
+and why of data). Dimensions are qualitative, such as name, case type, date, or court location.
+
+Drill Down
+
+Vertical movement through data that allows the user to select a data visualization and see the
+underlying data within that graphic. This allows the user to navigate the hierarchical relationship of
+the data.
+
+Drill Through
+
+Horizontal movement through data that allows the user to move from one visualization to another
+while continuing to analyze the same data set.
+
+Filter
+
+The end user’s ability to include or exclude data represented in a data visualization based on a set of
+available variables. For example, a visualization showing the age of pending cases statewide may be
+filtered to limit the data visualization to one or more specific counties or case type(s).
+
+Tooltip
+
+A message that appears when a user hovers the cursor over part of a visualization. Tooltips are used
+to provide additional context for the chart or graph.
+
+                                                                                                              A Guide to Data Dashboard Design | 4
+Data Dashboard Design Principles
+
+Chart Types
+
+A chart shows data in the form of a graph, diagram, map, or table. Choosing the right way to
+visualize data is essential for effective data communication. The data, audience and dashboard
+purpose should all be kept in mind when choosing visualizations. Common types of visualizations
+are bar and column charts, pie charts, line charts, and maps.
+
+             Bar/Column Charts
+
+                        • Used to represent categorical data.
+                        • Though the names “bar chart” and “column chart” are often used
+
+                            interchangeably, bar charts have horizontal bars, and column charts have
+                            vertical bars.
+                        • Most data can be represented in a bar or column chart.
+                        • Bar charts are helpful if the labels are long because there is more room for text.
+
+             Pie Charts
+
+                        • Pie charts represent percentages of a whole, in other words, all slices of the
+                            pie combined need to equal 100.
+
+                        • Best for 2-5 categories and if one category is much larger than the other(s).
+                            Make sure “slices” of the pie are not too small.
+
+                        • Label the slices directly rather than using a legend.
+                        • Choose distinct colors for the segments.
+
+             Line Charts & Area Charts
+
+                        • Line charts work well for displaying trends or continuous data over time.
+                        • Area charts also indicate trends and data over time, but the space between
+
+                            each line and the X-axis is filled in.
+                        • Make sure the line is easy to see and that the data points are marked.
+
+             Maps
+
+                        • Interactive physical maps are useful for displaying data linked to specific
+                            locations, such as a county, zip code, state or region.
+
+                        • Hex/shape maps are useful to use as filters and when the geographic
+                            comparison is less important because hex/shape maps will have some inherent
+                            distortions from placing the shapes on a grid.
+
+                        • Choose colors that are easy to read.
+                        • Label directly on the map if possible.
+
+                                                                                                              A Guide to Data Dashboard Design | 5
+Additional types of graphs and charts found in data dashboards include scatter plots (for identifying
+trends or outliers within data), heat maps (for showing large amounts of data by representing values
+as colors), histograms (for identifying patterns like normal or skewed distributions), and box plots (for
+comparing distributions between different categories).
+
+Best Practices for Designing Charts
+
+     • Avoid redundant labeling.
+
+     • Adding individual mark labels and removing axis labels helps make the visualization easier to
+         understand. However, if there are a lot of data points or large numbers, labeling the axis may
+         be the best option so the visualization doesn’t look cluttered.
+
+     • Avoid conveying meaning with only color due to accessibility considerations. Using color is
+         okay as long as the information in conveyed in another way.
+
+     • Use colors consistently when using categorical measures. For example, if the same category
+         is shown in multiple places, try to maintain consistent color usage throughout the visualization.
+
+     • Round to whole numbers unless it’s necessary to use the exact number.
+
+     • For comparative data, it’s generally best to start the axis at 0 so it does not distort how the
+         data is displayed.
+
+     • Use two-dimensional charts (avoid 3-D charts).
+
+     • Simplify the charts where possible by removing grid lines, axis lines and borders.
+
+     • Use titles strategically to convey information and be descriptive. If there is a specific
+         question answered by the visualization, this can help the user quickly locate which
+         visualization contains the information they need. If there is a certain date range used,
+         include this in the title, too.
+
+Chart Dos and Don’ts
+
+                             Trial Court Cases in 2022                                                    Trial Court Caseloads Composition                Do:
+                                                                                                              Total Number of Cases, 2022
+                                                                                                                                                           • Use a more descriptive
+Juvenile                                                                                       Traffic                                         25,267,453     title.
+Criminal
+                                                                                                                                                           • Make all bars the same
+Domestic Relations                                                                             Civil             11,480,697                                   color since color does not
+                   Civil                                                                                                                                      add value here.
+                                                                                                Criminal                           10,788,706
+Traffic                                                                                                   3,232,695                                        • Add mark labels.
+                                                                                               Domestic                                                    • Remove gridlines.
+                                                                                               Relations                                                   • Sort the bars.
+
+                          0  5,000,000 10,000,000 15,000,000 20,000,000 25,000,000 30,000,000
+
+                             Traffic   Civil                                                   Juvenile 632,132
+                             Criminal  Domestic Relations
+                             Juvenile
+
+                                                                                                                                                           A Guide to Data Dashboard Design | 6
+                                  2022 Trial Court Caseloads                                                                                                          Trial Court Caseloads Composition                                                     Do:
+                                                                                                                                                                           % of Total Caseloads, 2022
+                                                                                                                                                                                                                                                            • Use a more descriptive title.
+                                                                                                                                                                      Traffic                             Civil               Domestic                      • Use a distinct color for each
+                                                                                                                                                                       49%                                22%                 Relations
+                                                                                                                                                                                                                                                               slice.
+                                                                                                                                                                                                        Criminal                  6%                        • Remove color key and label
+                                                                                                                                                                                                          21%
+                                                                                                                                                                                                                                                               slices directly.
+                                  Traffic: 25,267,453   Civil: 11,480,697                                                                                                                         Juvenile                                                  • Use percentages instead of
+                                  Criminal: 10,788,706  Domestic Relations: 3,232,695                                                                                                                1%
+                                  Juvenile: 632,132                                                                                                                                                                                                            exact numbers.
+                                                                                                                                                                                                                                                            • Increase font sizes.
+
+                                   IAC Salary                                                                                                                         Intermediate Appellate Court Judge Salary                                             Do:
+
+                                  Alabama                                                                                                                                  5-Year Trend, Alabama                                                            • Use a more descriptive title.
+                                                                                                                                                                                                                                                            • Remove redundant labels
+                                                                  $184,579
+                                                                                                                                                                                                                                                               and unnecessary gridlines.
+                                                        $177,990                       $188,271                                                                       $190,000                                                                              • Start axis at the initial salary.
+                                                                                                                                                                      $185,000
+                        $165,072  $165,072                                                                                                                            $180,000                                                                                  Note: The axis should be
+                                                                                                                                                                      $175,000                                                                                  started at 0 if the visualization is
+$150,000                                                                                                                                                              $170,000                                                                                  being compared to other data.
+                                                                                                                                                                      $165,000
+$100,000
+                                                                                                                                                                                        2020
+$50,000
+
+$0                                2021                  2022      2023      2024                                                                                                                  2021      2022        2023       2024
+         2020
+
+States with Court Resources                                                                                                                                                                                                                                       Do:
+
+                                  Participants                                                                                                                        State                                                                                       • Use a more descriptive title.
+                                                                                                                                                                           California
+                                                                                                                                                                                                                                                            Initiative Name
+                                                                                                                                                                        States Mississippi Participating in 2024 Court Survey                                    Null
+
+                                                                                                                                                                           South Carolina                                                                    • Convert to a hex map so Statewide Civil Legal Needs Assessment
+                                                                                                                                                                           Vermont
+                                                                                                                                                                           Virginia                                                                              Test Initiative Name1
+
+                                                                                                                                                                                                                               ME                            states are the same size. Test Initiative Name2
+
+                                                                                                                                                                                                                        VT NH                                    Test Initiative Name3
+                                                                                                                                                                                                                                                                 Test Initiative Name4
+                                                                                                                                                                      WA MT ND MN WI                        MI          NY MA RI
+                                                                                                                                                                                                                                                                  • Remove background layers.
+                                                                                                                                                                      ID WY SD IA IL IN OH PA NJ CT
+                                                                                                                                                                                                                                                                  • Add state abbreviations.
+                                                                                                                                                                      OR NV CO NE MO KY WV MD DE
+                                                                                                                                                                                                                                                                  • Use one color for states
+                                                                                                                                                                      CA AZ UT KS AR TN VA NC                                                                         because there is only one
+                                                                                                                                                                                                                                                                      category.
+                                                                                                                                                                                              NM OK LA MS AL SC
+
+                                                                                                                                                                                              TX                GA
+
+                                                                                                                                                                                                                    FL
+
+                                                                                                                                                                      Sum of Column vs. sum of Row. Color shows details about Initiative Name. The
+
+                                                                                                                                                                      marks are labeled by Abbreviation. Details are shown for State (Sheet1). The view is
+                                                                                                                                                                      filtered on State (Sheet1), which keeps 48 of 56 members.
+
+  © 2024 Mapbox © OpenStreetMap
+
+Map based on Longitude (generated) and Latitude (generated) and Latitude (generated). Details are shown for State (Sheet1). For pane Latitude (generated) (2): Color
+shows details about State. The view is filtered on State (Sheet1), which excludes Alaska, Hawaii and Puerto Rico.
+
+                                                                                                                                                                                                                                                            A Guide to Data Dashboard Design | 7
+Dashboard Layout
+
+Before starting on layout, always determine how the dashboard will be used and where it will be
+accessed. This will inform the dashboard dimensions (the length and width of the dashboard). If the
+dashboard will be embedded on the court website, work with your web team to find out what the
+best dimensions would be. Sometimes, dashboards will not be embedded, but rather shared via a
+link. The dimensions may not matter as much for this; however, there may be additional branding
+needed (see “Branding” below). It’s also possible the dashboard may only be used in a presentation,
+in which case, it should be laid out in a way that is easy to digest quickly with large, clear headings,
+and additional information should be kept to a minimum.
+
+Information Hierarchy                             White Space Balance 
+
+Information hierarchy determines how data         White space, or negative space, is the
+is grouped. All aspects of a dataset cannot       empty area between text, visualizations and
+be equally prioritized so before building the     images. Ensuring a reasonable amount of
+dashboard, determine what data is most            white space on the dashboard will help it look
+important and what is least important. The        less cluttered and can actually help users
+most important information generally should       with navigation. White space can be used to
+be placed in the upper left portion of the        help distinguish one section from the next.
+dashboard because this is naturally where the     However, too much white space may make
+user will start reading.                          the dashboard seem incomplete.
+
+Titles and Headings                               Dashboard Instructions
+
+Use clear and descriptive titles and headings     Depending on your audience, adding
+to help users understand the purpose of           instructions for use may be beneficial. Keep
+the dashboard. Where it makes sense, add          in mind creating a dashboard for frequent
+additional descriptive information to help users  dashboard users will require less instructions
+navigate and better understand the context.       than creating a dashboard for the general
+                                                  public who may interact less, or not at all, with
+Alignment                                         data dashboards.
+
+When it comes to laying out items, it’s usually   Version History
+a good idea to line things up. Not only does
+this help guide users through the dashboard in    Adding a publish date or data last updated
+a logical manner, but it makes the dashboard      to the data dashboard helps increase
+look cleaner and less cluttered.                  transparency and trust. This also can help
+                                                  court staff with making sure that the correct
+                                                  version is updated.
+
+                                                  A Guide to Data Dashboard Design | 8
+Branding
+
+Branding is a unique visual identity that encompasses an organization’s name, logo, colors, mission,
+values, and voice. Data visualization is an extension of an organization’s brand. Before creating a data
+dashboard for your court, make sure to find out if there are guidelines that need to be followed and if
+there are any brand elements that need to be included.
+
+Where the final dashboard will be displayed (embedded in a website, shown in a presentation, etc.)
+will dictate which brand elements should be included. If the dashboard will be embedded on your
+court website which already includes your state/jurisdiction’s logo or your court logo, it may not be
+necessary to include that on your dashboard.
+
+Color
+
+Using color in data dashboards is not just for aesthetics—it also conveys meaning. Applying color
+sparingly can help users understand the data better by highlighting important information and metrics.
+
+Use of Color                                        Accessibility Considerations
+
+When using color, less is more. Plan to choose      It is okay to use color in your dashboard, but keep
+3-5 colors (ideally from your court’s brand color   in mind some users may have disabilities related to
+palette), and stick with them. Adding too many      sight. Make sure that color is not the only indicator
+colors can be distracting for users.                for interactive elements.
+
+Applying colors consistently throughout your                 Accessibility will be explained in greater
+dashboard is important for understanding. For                detail in Designing for User Experience.
+example, if blue is used in one visualization for
+civil court cases, make sure that same blue is
+used to represent civil court cases in other parts
+of your dashboard, too.
+
+Typography
+
+Plan how you want to use headings and fonts before starting on your dashboard. Knowing what
+typeface, font styles and font sizes to use will help make the design process more efficient and will
+lead to a more professional product.
+
+Heading Hierarchy                                   Choose Readable Fonts
+
+Just like writing an outline for a research         Before choosing a typeface (a font family), refer
+paper, your dashboard should have a top-level       to your court’s brand standards for typography
+heading with subsequent levels of headings          guidance. There may be a certain font you
+below. Use the levels consistently throughout,      are required to use. Make sure to use fonts
+and make sure each level of heading has a           consistently and avoid decorative and script fonts
+unique font size or style. The top-level heading    on your dashboard.
+will be the largest font size and lower-level
+headings will be the smallest.                      Because data dashboards are accessed on
+                                                    screens, sans-serif fonts should be used
+
+                                                    A Guide to Data Dashboard Design | 9
+because they are easier to read at small sizes.      fonts within the same typeface (such as a
+Choose a typeface that comes in a variety of         bold or italic version) will help emphasize and
+weights and styles (such as bold, italic, and        differentiate text. Headings should always be
+condensed). Use fonts from the same typeface         larger than body text.
+throughout, but if using a second typeface,
+consider using the alternate font for headings. A    BANs – Use Text to Emphasize Key
+serif works well in this case. It’s usually best to  Information
+stick with one font throughout your dashboard,
+but you could use a different font from another      BANs, also known as “big aggregated
+typeface as headings. In this case, using a serif    numbers,” are numbers in a large font size
+font helps add visual contrast.                      used on a dashboard. Using BANs is a data
+                                                     dashboard technique used to give end users a
+Font Size                                            quick overview of top-level insights.
+
+Font sizes should always be maximized for
+readability. As a rule of thumb, do not use less
+than a 9-pt. font. Try to stick with only three
+sizes of the same typeface. Using different
+
+Designing for User Experience (UX)
+
+User-Centered Design Approach
+
+When creating a dashboard with user-centered design, the goal is to focus on the users’ needs in
+order to create usable and accessible products. In dashboard design especially, it is imperative to
+create dashboards with audience in mind. Knowing the audience helps guide dashboard design in
+several ways, including choosing the best data visualization platform. It’s important to ask questions
+about your audience prior to creating a dashboard, such as:
+
+Who is the audience? Designing a dashboard for court leadership will look and function differently than
+one created for the general public. Rarely do one-size-fits-all dashboards work for all audiences.
+
+What information is the audience interested in? Your audience may be interested in court-specific
+caseloads, court performance measures, judicial workloads, or other specific information. While it
+may seem obvious, continually comparing the dashboard with the users’ goals will help create a
+useful product.
+
+Does the audience have experience using dashboards? If not, providing instructions for use and using
+plain language throughout the dashboard will help users navigate the views.
+
+What functionality is needed, and will additional functionality be needed in the future? For example,
+does your audience need to be able to generate reports or be able to download the data? Knowing
+functionality needs will help choose the correct data visualization platform.
+
+Where and how will your audience access the dashboard? Will your dashboard be embedded on a web
+page, shared electronically, or used in a presentation? User-centered design is an iterative process
+
+                                                     A Guide to Data Dashboard Design | 10
+meaning that the dashboard should be continuously reviewed and tested, keeping the users’ needs in
+mind. With the nature of interactive dashboards and having the ability to make improvements, designers
+have an ongoing opportunity to continue to meet the needs of the user as they change or grow.
+
+ Understand      Specify user   Design       Evaluate
+    how the     requirements   solutions     based on
+                                          requirements
+dashboard will
+    be used
+
+Intuitive Navigation and Layout
+
+Using intuitive navigation helps users find what they are looking for quickly and easily in a logical way.
+When navigation is intuitive, it improves user satisfaction. However, difficult navigation can lead to
+frustration, causing users to stop using the dashboard and can even damage the court’s reputation.
+
+To avoid these issues, it is important to prioritize intuitive navigation while designing dashboards.
+This means focusing on user-centered design, and organizing content and navigation elements in a
+way that is logical and easy to understand.
+
+Best Practices for Developing Intuitive Navigation
+
+     • Organize content in a manner that is logical and intuitive. Similar visualizations should be
+         grouped together, important takeaways should be visually prioritized, and headings should
+         be easy-to-understand so that users can find what they are looking for. Most languages are
+         read from left to right, so keep that in mind when laying out content. Users generally look at
+         the top left portion of the screen first, so that’s a great spot for important information. As users
+         continue to read, they’ll continue down the page in a similar order.
+
+     • Use visual design elements to guide users through the dashboard. Elements like icons,
+         arrows, white space, headings, and borders may provide visual cues to help users
+         differentiate between sections. Keep accessibility (explained below) in mind when using visual
+         design elements, especially for when it comes to use of color.
+
+     • Use straight-forward, consistent and clear labels for navigation items. Add clear and
+         descriptive language anywhere it may help explain the content or communicate the
+         functionality of the dashboard.
+
+     • Test your navigation with users to ensure that it is easy to use and understand. This can
+         identify potential issues or confusion.
+
+                                          A Guide to Data Dashboard Design | 11
+Utilizing Interactive Elements
+
+Interactive elements help make data dashboards insightful and engaging. Adding filters and the
+ability to sort data allows users to dive deeper into the data and tailor the information to their needs,
+empowering them to find the information they need more efficiently. Because courts can direct the
+public, media and other interested parties to court dashboards for additional information, public
+access to court data helps lessen common information requests and relieves some staff burden.
+
+Interactive elements on data dashboards include filters, buttons and tooltips. Filters add a lot of value
+to dashboards because users can customize their view. Keep layout and usability in mind by placing
+filters at the top or sides of the dashboard. This allows users to easily view and access the filters
+while making sure the visualizations have the main focus.
+
+For all interactive features, make sure they are labeled properly, provide context where helpful, and
+include instructions for use. For example, if there is a drop-down menu containing case types, the
+title of the menu can be “Court Types” and written below it, “Click the drop-down menu to filter the
+chart below by court type.”
+
+Responsive Design
+
+Responsive design refers to how the dashboard is displayed on different devices (computer, cell
+phone, tablet, etc.). Make sure your dashboard adapts to different devices without compromising
+usability or readability. Most popular data visualization platforms contain a way to preview how your
+dashboard would be displayed on different devices. If available, use this feature, but also preform
+your own tests.
+
+Accessibility
+
+Accessibility is the practice of making information understandable, meaningful and usable for those
+with or without disabilities. Types of disabilities include visual, auditory, physical, speech, cognitive,
+language, learning and neurological.
+
+Laws Related to Accessibility                        Accessibility Guidelines
+
+Section 508 of the Rehabilitation Act of             While the laws above say that government
+1973 states anytime the federal government           entities need to be compliant, they don’t
+develops, procures, maintains, or uses               say how, which is where the Web Content
+information communications technology (ICT),         Accessibility Guidelines (WCAG) come
+solutions must provide the same or comparable        in. These standards help users ensure that
+access for all users.                                tools, products (such as data dashboards) and
+                                                     websites are accessible to all users.
+Title II of ADA states that state and local
+governments must ensure that people with
+disabilities can fully participate in all programs,
+activities, and services.
+
+                                                     A Guide to Data Dashboard Design | 12
+Best Practices for Accessibility
+
+Simplify
+     • Use easy-to-understand chart types.
+     • Avoid adding redundant or unnecessary visuals or text.
+     • For embedded visualizations, include as much information as possible on the web page rather
+         than within the embed.
+     • Aggregate data where possible.
+
+Explain with Text
+     • Add instructions for how to navigate.
+     • Use titles, captions and mark labels wherever possible.
+
+Ensure Keyboard Accessibility
+     • Ensure that all interactive elements can be accessed and operated using only a keyboard.
+         Depending on the data visualization platform, there may be specific combinations of
+         keystrokes required to utilize the dashboard.
+
+Use Alt Text
+     • Alt, or alternative, text is read aloud to users by screen reader software. It is descriptive text
+         that conveys the meaning and context of a visual item. Any images or graphics added to the
+         dashboard need to have alt text.
+
+Check Color Contrast
+     • Ensure appropriate text-background contrast ratios: 4.5:1 for standard text and 3:1 for large
+         text (14pt bold/18pt regular). Color alone should not be used to convey information.
+
+Use Descriptive Hyperlinks
+     • Use descriptive link text instead of generic phrases. For example, if linking to a document, use
+         the document name as the link text rather than “click here.” Always underline hyperlinks.
+
+Provide Access to Underlying Data
+     • If the visualization cannot be accessible, allow users to download the data if possible.
+
+                                                                                                             A Guide to Data Dashboard Design | 13
+Working with Data
+
+Underlying Data
+
+What data do you have? Do you know how to access it? What format is it in?
+Data quality should always be considered. See the Data Governance Policy Guide for more
+information on data quality.
+If there are common data files or data sources used across dashboards, make them available in a
+centralized location, where staff can access them to develop dashboards. For example, if hex maps
+are commonly used in your dashboards, create a file of coordinates that staff can use to construct
+the visualization. This will help keep the formatting consistent across all dashboards and will ensure
+updates are only needed in one location.
+
+Selecting the Right Tools
+
+There are many different tools available to courts to display data. Courts may use commercial
+dashboard platforms, open-source solutions, or custom development. Familiarize yourself with the
+capabilities and requirements for the platform you choose. You may need to transform the format of
+your underlying data to be compatible with the visualization tool you choose.
+
+Conclusion
+
+Data dashboards are useful tools, if designed properly. Externally, not only do data dashboards
+increase transparency, but they allow court users to access information that even just a few years
+ago was out of reach. Internally, courts can harness data to make policy and program decisions. Not
+all dashboards are created equal, however. Both quality data and the dashboard audience must be
+kept at the forefront of the design process in order to create a product that is functional, intuitive,
+and accessible. Design principles like layout, color, and typography tie the visualizations together,
+especially when incorporating an organization’s branding. Whether creating a dashboard to be used
+by court staff, justice partners and stakeholders, or the general public, following the best practices
+suggested in this guide will help create useful and professional data dashboards.
+
+      Recommendations for Further Reading
+
+        NCSC’s Data-Driven Decision Making
+        NCSC’s Data Governance Policy Guide
+        Tableau’s Visual Best Practices
+
+                                                                                                             A Guide to Data Dashboard Design | 14
+        National Center for State Courts
+300 Newport Ave. | Williamsburg, VA 23185
+
+           (800) 616-6164 | ncsc.org
+

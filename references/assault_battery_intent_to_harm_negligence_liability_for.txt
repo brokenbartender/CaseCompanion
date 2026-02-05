@@ -1,28 +1,30 @@
+Michigan Law Review
 
-=== Page 1 ===
-
-MMiicchhiiggaann LLaaww RReevviieeww
 Volume 38 Issue 2
 1939
-AASSSSAAUULLTT AANNDD BBAATTTTEERRYY -- IINNTTEENNTT TTOO HHAARRMM -- NNEEGGLLIIGGEENNCCEE --
-LLIIAABBIILLIITTYY FFOORR IINNJJUURRYY TTOO AANN AALLLLEERRGGIICC PPEERRSSOONN
+
+ASSAULT AND BATTERY - INTENT TO HARM - NEGLIGENCE -
+LIABILITY FOR INJURY TO AN ALLERGIC PERSON
+
 Michigan Law Review
+
 Follow this and additional works at: https://repository.law.umich.edu/mlr
-Part of the Criminal Law Commons, and the Torts Commons
-RReeccoommmmeennddeedd CCiittaattiioonn
+    Part of the Criminal Law Commons, and the Torts Commons
+
+Recommended Citation
 Michigan Law Review, ASSAULT AND BATTERY - INTENT TO HARM - NEGLIGENCE - LIABILITY FOR
 INJURY TO AN ALLERGIC PERSON, 38 MICH. L. REV. 233 (1939).
 Available at: https://repository.law.umich.edu/mlr/vol38/iss2/10
+
 This Regular Feature is brought to you for free and open access by the Michigan Law Review at University of
 Michigan Law School Scholarship Repository. It has been accepted for inclusion in Michigan Law Review by an
 authorized editor of University of Michigan Law School Scholarship Repository. For more information, please
 contact mlaw.repository@umich.edu.
+1939]  RECENT DECISIONS  2 33
 
-=== Page 2 ===
+                          RECENT DECISIONS
 
-1939] RECENT DECISIONS 233
-RECENT DECISIONS
-ASSAULT AND BATTERY - INTENT TO HARM - NEGLIGENCE - LIA
+     ASSAULT AND BATTERY - INTENT TO HARM - NEGLIGENCE - LIA-
 BILITY FOR INJURY TO AN ALLERGIC PERSON - Defendant's agent conducted
 in plaintiff's store a demonstration of a fly-spray, manufactured by another
 company, intending to interest plaintiff in retailing it. The spray was placed in
@@ -31,7 +33,8 @@ to defendant, was allergic to pyrethrum, an ingredient of the spray, and became
 violently ill upon coming in contact with the vapor. An action for assault and
 battery was brought. Held, defendant was not liable in the absence of an intent
 to do harm. Brabazon v. loannes Bros. Co., (Wis. 1939) 286 N. W. 21.
-An intent to do harm is not always a requisite in an action for assault and
+
+    An intent to do harm is not always a requisite in an action for assault and
 battery. There is even some authority to the effect that recovery may be had
 where defendant is merely acting negligently and plaintiff is injured thereby,1-
 but most courts refuse to extend the battery concept this far.2 On the other
@@ -48,64 +51,79 @@ to an old concept of the requirement for a simple assault,° although the better
 view today is that defendant need only intend to inflict a harmful or offensive
 touching, or to put plaintiff in apprehension of such a touching; 1 and ( 2) a
 confusion of this requirement for a simple assault with the requisite for a com-
-Lentine v. McAvoy, 105 Conn. 528, 136 A. 76 (1927); Fortier v. Stone,
-1
+
+      1 Lentine v. McAvoy, 105 Conn. 528, 136 A. 76 (1927); Fortier v. Stone,
 79 N. H. 235, 107 A. 342 (1919); Honeycutt v. Louis Pizitz Dry Goods Co.,
 235 Ala. 507, 180 So. 91 (1938), and cases there cited; Luttermann v. Romey, 143
 Iowa 233, 121 N. W. rn40 (1909).
-2 Baran v. Silverman, 34 R. I. 279, 83 A. 263 (1912); Biggins v. Gulf, C. S:
+
+      2 Baran v. Silverman, 34 R. I. 279, 83 A. 263 (1912); Biggins v. Gulf, C. S:
 S. F. Ry., rn2 Tex. 417, u8 S. W. 125 (1909); Raefeldt v. Koenig, 152 Wis. 459,
 140 N. W. 56 (1913).
-8 Mercer v. Corbin, II7 Ind. 450, 20 N. E. 132 (1889); Welch v. Durand,
+
+      8 Mercer v. Corbin, II7 Ind. 450, 20 N. E. 132 (1889); Welch v. Durand,
 36 Conn. 182 (1869); Peterson v. Haffner, 59 Ind. 130 (1877); Johnson v. Mack,
 141 Mich. 99, 104 N. W. 395 (1905); Singer Sewing Machine Co. v. Phipps,
 19 Ind. App. n6, 94 N. E. 793 (19n).
-~ Vosburg v. Putney, So Wis. 523, 50 N. W. 403 (1891); Nichols v. Colwell,
+
+      ~ Vosburg v. Putney, So Wis. 523, 50 N. W. 403 (1891); Nichols v. Colwell,
 n3 Ill. App. 219 (1903); Mohr v. Williams, 95 Minn. 261, 104 N. W. 12 (1905);
 Carmichael v. Dolen, 25 Neb. 335, 41 N. W. 178 (1889).
-5 Plaintiff's action for trespass to the premises, based on an alleged revocation of
+
+      5 Plaintiff's action for trespass to the premises, based on an alleged revocation of
 the implied license to make the demonstration, was sent back for a new trial.
-6 2 GREENLEAF, EvmENCE, 14th ed., § 83 (1883), relied on in Degenhardt
+
+      6 2 GREENLEAF, EvmENCE, 14th ed., § 83 (1883), relied on in Degenhardt
 v. Heller, 93 Wis. 662, 68 N. W. 4u (1896).
-7 HARPER, ToRTS, § 19 (1933), and cases there cited; I ToRTS RESTATEMENT,
+
+      7 HARPER, ToRTS, § 19 (1933), and cases there cited; I ToRTS RESTATEMENT,
 § 43 (1934).
+2 34  MICHIGAN LAW REVIEW  [ Vol. 38
 
-=== Page 3 ===
-
-234 MICHIGAN LAW REVIEW [ Vol. 38
 pleted battery.8 The diversity of authority and resultant uncertainty which
 pi'rvades the whole battery field could be eliminated by confining the term
 "battery" to instances where defendant has intentionally invaded plaintiff's
-right to freedom from harmful and offensive touchings, thereby leaving unin
+right to freedom from harmful and offensive touchings, thereby leaving unin-
 tentional invasions of that right to the negligence field.9 "Intentional invasions"
 should, however, be construed to comprehend not only cases where defendant
 actually intends a harmful or offensive touching, but also instances where he
 acts "in reckless disregard of consequences" or merely intends an unlawful act
 which is likely to result in bodily harm. In such cases, the required touching is
+
 sufficiently probable for the law to imply an intent for its infliction. In the light
+
 of these principles, the court in the principal case rightly rejected the battery
 claim, but its summary requirement of an intent to do harm was too narrow.
 Nor could plaintiff have recovered in a negligence action.10 It is generally held
 that where defendant is using or selling an ordinarily non-injurious article, such
 as fly-spray, hair dye, dyed furs, or eyeglass frames, there is no duty owed by
+
 him to use due care to avoid harming plaintiff unless (I) he knew that persons
 had previously been adversely affected by the use of such an article,11 or ( 2) he
+
 could have inferred from the surrounding facts that plaintiff was peculiarly
 sensitive to an ingredient of his article.12 There was no evidence in the principal
 case to support either of these possibilities. An injury suffered by an allergic
 person due to his peculiar sensitiveness, therefore, unless shown to have been
 incurred under one of these circumstances, is damnum absque injuria.
-8Donner v. Graap, 134 Wis. 523, u5 N. W. 125 (1908). That a distinction
+
+      8 Donner v. Graap, 134 Wis. 523, u5 N. W. 125 (1908). That a distinction
 should be made is pointed out in Hoffman v. Eppers, 41 Wis. 251 (1876); Vosburg
 v. Putney, 80 Wis. 523, 50 N. W. 403 (1891).
-9 HARPER, ToRTS, § 16 (1933); Carpenter, "Intentional Invasion of Interest in
+
+      9 HARPER, ToRTS, § 16 (1933); Carpenter, "Intentional Invasion of Interest in
 Personality," 13 ORE. L. REv. 227 (1934); l ToRTS RESTATEMENT, § 13 (1934).
-10 This possibility was not alleged by plaintiff and therefore did not have to be
+
+      10 This possibility was not alleged by plaintiff and therefore did not have to be
 discussed by the court, but it is of sufficient interest and importance to merit attention
 herein.
-11Gould v. Slater Woolen Co., 147 Mass. 315, 17 N. E. 531 (1888); Gerkin
+
+      11 Gould v. Slater Woolen Co., 147 Mass. 315, 17 N. E. 531 (1888); Gerkin
 v. Brown & Sehler Co., 177 Mich. 45, 143 N. W. 48 (1913).
-12 Walstrom Optical Co. v. Miller, (Tex. Civ. App. 1933) 59 S. W. (2d) 895;
+
+      12 Walstrom Optical Co. v. Miller, (Tex. Civ. App. 1933) 59 S. W. (2d) 895;
 Stemons v. Turner, 274 Pa. 228, II7 A. 922 (1922); Arnold v. May Dept. Stores
 Co., 337 Mo. 727, 85 S. W. (2d) 748 (1935); and see cases collected in 121 A. L. R.
+
 464 (1939).
+

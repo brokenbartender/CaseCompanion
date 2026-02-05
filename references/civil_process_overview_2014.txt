@@ -1,73 +1,85 @@
-
-=== Page 1 ===
-
 MICHIGAN COURT OFFICERS’
-CIVIL PROCESS HANDBOOK
-Fifth Edition — March 24, 2014
-Jeff Kirkpatrick
-Tel: (517) 788-8898
-jeff@jxn.com
+ CIVIL PROCESS HANDBOOK
 
-=== Page 2 ===
+                  Fifth Edition — March 24, 2014
 
-Michigan Court Officers’ Civil Process Handbook
+                                     Jeff Kirkpatrick
+                                  Tel: (517) 788-8898
+
+                                      jeff@jxn.com
+                               Michigan Court Officers’ Civil Process Handbook
+                                                                        A. OVERVIEW OF CIVIL PROCESS LAW
+                                                                                               1. Serving the Complaint
+
+                                 SERVICE OF PROCESS
+
+                                      by Jeff Kirkpatrick
+
 A. OVERVIEW OF CIVIL PROCESS LAW
-1. Serving the Complaint
-SERVICE OF PROCESS
-by Jeff Kirkpatrick
-A. OVERVIEW OF CIVIL PROCESS LAW
-1. Serving the Complaint
-a. In General
-Service of process—service of a summons and a copy of the complaint—is the
+
+      1. Serving the Complaint
+
+             a. In General
+
+             Service of process—service of a summons and a copy of the complaint—is the
 method for notifying a defendant that he or she has been sued. See MCR 2.105.
-Everyone whose rights might be affected by litigation is entitled to notice and a
+
+             Everyone whose rights might be affected by litigation is entitled to notice and a
 reasonable opportunity to appear and defend his or her interests—in other words, he or she is
 entitled to due process of law. US Const amends V, XIV, §1; Const 1963, art 1, §17; see
 Michigan License Beverage Ass'n v Behnan Hall, Inc, 82 Mich App 319, 266 NW2d 808 (1978).
 The purpose of service of process is to acquire jurisdiction over the defendant so that he or she
 may properly be brought into court. See De Kuyper v De Kuyper, 365 Mich 487, 113 NW2d 804
 (1962); Grenawalt v Nyhuis, 335 Mich 76, 55 NW2d 736 (1952).
-Service of a summons and a copy of a complaint as provided by MCR 2.105(A)–(J)
+
+             Service of a summons and a copy of a complaint as provided by MCR 2.105(A)–(J)
 confers personal jurisdiction over a defendant having any of the contacts, ties, or relations with
 the state specified in MCL 600.701–.775 (chapter 7 of the RJA). The rules for service of process
 cover only how process is served; they do not define which persons are subject to process and
 to the jurisdiction of the courts. Those subjects are covered by RJA chapter 7 and MCR
 2.105(J).
-The rules regarding service of process are intended to satisfy the due process
+
+             The rules regarding service of process are intended to satisfy the due process
 requirement of notice, and as long as service provides notice, even if service was improper
 under the rules, the action will not be dismissed. MCR 2.105(J)(1), (3); Bunner v Blow-Rite
 Insulation Co, 162 Mich App 669, 413 NW2d 474 (1987); Hill v Frawley, 155 Mich App 611, 400
 NW2d 328 (1986).
-There are no territorial limits on the service of the notice. MCR 2.105(J)(2). If service
+
+             There are no territorial limits on the service of the notice. MCR 2.105(J)(2). If service
 of the summons and a copy of the complaint are made outside Michigan, the court rules permit
 an additional 7 days (28 instead of 21) after service for the defendant to answer or take other
 action permitted by law or by the court rules. MCR 2.108(A)(2). The proper time must be
 specified in the body of the summons. MCR 2.102(B)(10).
-Process issued in lawsuits started in courts outside Michigan may be served in
+
+             Process issued in lawsuits started in courts outside Michigan may be served in
 Michigan with or without an order from a Michigan court. MCL 600.1852.
-March 2014 – 1 – Jeff Kirkpatrick – (517) 788-8898
 
-=== Page 3 ===
+March 2014  –1–  Jeff Kirkpatrick – (517) 788-8898
+                               Michigan Court Officers’ Civil Process Handbook
+                                                                        A. OVERVIEW OF CIVIL PROCESS LAW
+                                                                                               1. Serving the Complaint
 
-Michigan Court Officers’ Civil Process Handbook
-A. OVERVIEW OF CIVIL PROCESS LAW
-1. Serving the Complaint
-After an amendment of pleadings or other proceedings, a new party may not be
+             After an amendment of pleadings or other proceedings, a new party may not be
 added by simply serving the complaint on the new party without service of process. People ex
 rel Attorney Gen v Detroit Mortgage Corp, 228 Mich 91, 199 NW 677 (1924);see De Kuyper.
-b. The Summons
-i. Issuance
-When a complaint is filed, the clerk must issue a summons. MCL 600.1905(1); MCR
+
+             b. The Summons
+
+                   i. Issuance
+
+             When a complaint is filed, the clerk must issue a summons. MCL 600.1905(1); MCR
 2.102(A). In certain cases, a summons is not necessary because an order to show cause or an
 extraordinary writ will issue instead. See MCR 3.301(C).
-The summons is valid for 91 days from the date the complaint is filed. Filing an
+
+             The summons is valid for 91 days from the date the complaint is filed. Filing an
 amended complaint does not extend the time a summons is valid. The summons issued with the
 amended complaint must have the same expiration date as the original summons. Durfy v
 Kellogg, 193 Mich App 141, 483 NW2d 664 (1992). However, on good cause shown, and within
 those 91 days, the court may order a second summons to be issued for a definite period not
 exceeding one year from the date the complaint is filed. MCR 2.102(D). The SCAO has issued
 an approved summons form (MC 01) for use in courts throughout the state.
-The summons, which is directed to the defendant, includes essential information
+
+             The summons, which is directed to the defendant, includes essential information
 about the lawsuit such as the names of parties, the name and address of the court, the file
 number, the name of the court clerk, and the name and address of the plaintiff's attorney. It also
 includes information about the date of issuance of the summons and the time period for which
@@ -75,257 +87,316 @@ the summons is valid. The summons must indicate how long the defendant has to an
 complaint or to take other action. It must warn that if the defendant fails to respond in the time
 allowed, judgment may be entered against the defendant for the relief demanded in the
 complaint. See MCL 600.1905(2); MCR 2.102(B).
-The clerk may issue a separate summons directed to a particular defendant or group
+
+             The clerk may issue a separate summons directed to a particular defendant or group
 of defendants. A duplicate summons may also be issued at any time at the plaintiff's request.
 MCR 2.102(A). It is not necessary to have a return of no service upon the first summons before
 issuing an additional one. However, duplicate summonses do not have the effect of extending
 the expiration date of the original summons. MCR 2.102(D).
-ii. Expiration, Extension, and Automatic Dismissal
-As noted, a summons is valid for 91 days from the date the complaint is filed. The
+
+                   ii. Expiration, Extension, and Automatic Dismissal
+
+             As noted, a summons is valid for 91 days from the date the complaint is filed. The
 expiration date can be extended if the plaintiff files an ex parte motion for an extension before
 the expiration date. In granting such an extension, the judge orders a second summons to issue
 for a definite period not exceeding one year from the date the complaint was filed. The judge
 may impose just conditions on the issuance of the second summons. The running of the 91-day
 period is tolled during the pendency of a motion challenging the sufficiency of the summons or
 of the service of the summons. MCR 2.102(D).
-March 2014 – 2 – Jeff Kirkpatrick – (517) 788-8898
 
-=== Page 4 ===
+March 2014  –2–  Jeff Kirkpatrick – (517) 788-8898
+                               Michigan Court Officers’ Civil Process Handbook
+                                                                        A. OVERVIEW OF CIVIL PROCESS LAW
+                                                                                               1. Serving the Complaint
 
-Michigan Court Officers’ Civil Process Handbook
-A. OVERVIEW OF CIVIL PROCESS LAW
-1. Serving the Complaint
-After the summons expires, the action is deemed automatically dismissed without
+             After the summons expires, the action is deemed automatically dismissed without
 prejudice as to any defendant who has not been served unless the defendant has submitted to
 the court's jurisdiction. MCR 2.102(E)(1). The court clerk must enter an order dismissing the
 action and give notice of the dismissal. However, failure of the clerk either to enter or give notice
 of the dismissal does not affect the dismissal. MCR 2.102(E)(2), (3).
-A plaintiff can have the dismissal set aside only on stipulation of the parties or when
+
+             A plaintiff can have the dismissal set aside only on stipulation of the parties or when
 three conditions are met:
-1. service of process was in fact properly made or the defendant submitted to the
-court's jurisdiction before the summons expired;
-2. proof of service of process was filed or the failure to file is excused for good
-cause; and
-3. motion to set aside dismissal was filed within 28 days after the notice of dismissal
-was given, or after the plaintiff learned of the dismissal if the notice was not
-properly given.MCR 2.102(F).
-The court rules regarding expiration of the summons, MCR 2.102(D), automatic
+
+             1. service of process was in fact properly made or the defendant submitted to the
+                   court's jurisdiction before the summons expired;
+
+             2. proof of service of process was filed or the failure to file is excused for good
+                   cause; and
+
+             3. motion to set aside dismissal was filed within 28 days after the notice of dismissal
+                   was given, or after the plaintiff learned of the dismissal if the notice was not
+                   properly given.MCR 2.102(F).
+
+             The court rules regarding expiration of the summons, MCR 2.102(D), automatic
 dismissal without prejudice on expiration of the summons, MCR 2.102(E), and the setting aside
 of automatic dismissals, MCR 2.102(F), do not apply to summary proceedings to recover
 possession of premises that are governed by MCL 600.5701–.5759 and MCR 4.200 et seq.
 MCR 2.102(G).
-iii. Amendment
-Liberal amendment of any process or proof of service is allowed in the discretion of
+
+                   iii. Amendment
+
+             Liberal amendment of any process or proof of service is allowed in the discretion of
 the court. An amendment relates back to the date of the original issuance or service of process
 unless relation back would unfairly prejudice the party against whom the process issued. MCR
 2.102(C); see also MCL 600.1905(3).
-Minor errors and mistakes are regarded as irregularities only and may be corrected by
+
+             Minor errors and mistakes are regarded as irregularities only and may be corrected by
 amendment. Amendment should be denied only where it clearly appears that to permit the
 amendment would result in material prejudice to the substantial rights of the other party. Barber
 v Tuohy, 33 Mich App 169, 189 NW2d 722 (1971). Examples of rulings on requests for
 amendment include the following:
- Wells v Detroit News, Inc, 360 Mich 634, 104 NW2d 767 (1960) (misnomer of
-defendant corporation that was properly served).
- Parke, Davis & Co v Grand Trunk Ry Sys, 207 Mich 388, 174 NW 145 (1919)
-(amendment on grounds of misnomer not allowed where right party not served).
- Barber (amendment allowed to correct failure to notify defendant that secretary of
-state had been served pursuant to nonresident motorist statute).
-March 2014 – 3 – Jeff Kirkpatrick – (517) 788-8898
 
-=== Page 5 ===
+              Wells v Detroit News, Inc, 360 Mich 634, 104 NW2d 767 (1960) (misnomer of
+                   defendant corporation that was properly served).
 
-Michigan Court Officers’ Civil Process Handbook
-A. OVERVIEW OF CIVIL PROCESS LAW
-1. Serving the Complaint
- Detroit Indep Sprinkler Co v Plywood Prods Corp, 311 Mich 226, 18 NW2d 387
-(1945) (amendment permitted to describe plaintiff as copartnership instead of
-corporation).
- Rudell v Union Guardian Trust Co, 295 Mich 157, 294 NW 132 (1940)
-(amendment allowed to correct failure to designate return day in summons).
- Fildew v Stockard, 256 Mich 494, 239 NW 868 (1932) (amendment permitted to
-correct name of state in which defendant was incorporated).
- Neidhold v Henry, 210 Mich 598, 178 NW 30 (1920) (amendment allowed to
-correct errors in dates of issuance and return day of subpoena).
-The court rule permitting liberal amendment of the summons reiterates and
+              Parke, Davis & Co v Grand Trunk Ry Sys, 207 Mich 388, 174 NW 145 (1919)
+                   (amendment on grounds of misnomer not allowed where right party not served).
+
+              Barber (amendment allowed to correct failure to notify defendant that secretary of
+                   state had been served pursuant to nonresident motorist statute).
+
+March 2014  –3–  Jeff Kirkpatrick – (517) 788-8898
+                               Michigan Court Officers’ Civil Process Handbook
+                                                                        A. OVERVIEW OF CIVIL PROCESS LAW
+                                                                                               1. Serving the Complaint
+
+              Detroit Indep Sprinkler Co v Plywood Prods Corp, 311 Mich 226, 18 NW2d 387
+                   (1945) (amendment permitted to describe plaintiff as copartnership instead of
+                   corporation).
+
+              Rudell v Union Guardian Trust Co, 295 Mich 157, 294 NW 132 (1940)
+                   (amendment allowed to correct failure to designate return day in summons).
+
+              Fildew v Stockard, 256 Mich 494, 239 NW 868 (1932) (amendment permitted to
+                   correct name of state in which defendant was incorporated).
+
+              Neidhold v Henry, 210 Mich 598, 178 NW 30 (1920) (amendment allowed to
+                   correct errors in dates of issuance and return day of subpoena).
+
+             The court rule permitting liberal amendment of the summons reiterates and
 strengthens the philosophy contained in the various RJA provisions relating to amendments:
 Unless a person has been so misled regarding the nature of the proceedings against that
 person or that person's obligation to respond, so as to materially prejudice the person's chances
 of maintaining his or her position on the merits, the court should permit an amendment of the
 process or return of service to overcome any formal deficiency.
-The provisions of RJA chapter 23 regarding amendments to correct technical and
+
+             The provisions of RJA chapter 23 regarding amendments to correct technical and
 harmless defects in process and proof of service provide more detail than the court rule:
- MCL 600.2301 allows amendment of process and of pleadings before judgment
-in the furtherance of justice.
- MCL 600.2311 allows amendment of process and of pleadings after judgment in
-the furtherance of justice.
- MCL 600.2315, .2321 provide that judgment must not be stayed or reversed for
-immaterial defects and that amendment of immaterial defects should be liberally
-allowed.
- MCL 600.1809 provides that all returns of process made by any sheriff or other
-officer or by any court or subordinate tribunal may be amended as to form by the
-court to which the returns are made, both before and after judgment.
-Amendments can be made only by motion to the court. MCL 600.2325 provides that
+
+              MCL 600.2301 allows amendment of process and of pleadings before judgment
+                   in the furtherance of justice.
+
+              MCL 600.2311 allows amendment of process and of pleadings after judgment in
+                   the furtherance of justice.
+
+              MCL 600.2315, .2321 provide that judgment must not be stayed or reversed for
+                   immaterial defects and that amendment of immaterial defects should be liberally
+                   allowed.
+
+              MCL 600.1809 provides that all returns of process made by any sheriff or other
+                   officer or by any court or subordinate tribunal may be amended as to form by the
+                   court to which the returns are made, both before and after judgment.
+
+             Amendments can be made only by motion to the court. MCL 600.2325 provides that
 no process, pleading, or record will be amended by the clerk or other officer of the court or any
 other person without the order of the court.
-c. Who May Serve Process
-i. In General
-The same rules govern service of process in both circuit court and district court. As a
+
+             c. Who May Serve Process
+
+                   i. In General
+
+             The same rules govern service of process in both circuit court and district court. As a
 general rule, any legally competent adult who is not a party or an officer of a corporate party
 may serve process in civil actions. MCR 2.103(A); see also MCL 600.1908. See also. There are
 several exceptions to this rule:
-March 2014 – 4 – Jeff Kirkpatrick – (517) 788-8898
 
-=== Page 6 ===
+March 2014  –4–  Jeff Kirkpatrick – (517) 788-8898
+                               Michigan Court Officers’ Civil Process Handbook
+                                                                        A. OVERVIEW OF CIVIL PROCESS LAW
+                                                                                               1. Serving the Complaint
 
-Michigan Court Officers’ Civil Process Handbook
-A. OVERVIEW OF CIVIL PROCESS LAW
-1. Serving the Complaint
- A sheriff or certain other officers must serve process requiring seizure or
-attachment of property. MCR 2.103(B). See.
- Only a sheriff, deputy, police officer, or specially appointed court officer may
-serve process in civil proceedings requiring the arrest of a person. MCR
-2.103(D), MCR 3.106.
- The person in charge of an institution or someone designated by that person
-must serve defendants in governmental institutions, hospitals, or group homes.
-MCR 2.103(C). To effect service under those conditions, the plaintiff must have
-the summons and complaint, along with the form for proof of service, delivered to
-the head of the institution for service by that individual or by someone the
-individual designates.
-For a case filed in the court of claims, process may be served by a Michigan State
+              A sheriff or certain other officers must serve process requiring seizure or
+                   attachment of property. MCR 2.103(B). See.
+
+              Only a sheriff, deputy, police officer, or specially appointed court officer may
+                   serve process in civil proceedings requiring the arrest of a person. MCR
+                   2.103(D), MCR 3.106.
+
+              The person in charge of an institution or someone designated by that person
+                   must serve defendants in governmental institutions, hospitals, or group homes.
+                   MCR 2.103(C). To effect service under those conditions, the plaintiff must have
+                   the summons and complaint, along with the form for proof of service, delivered to
+                   the head of the institution for service by that individual or by someone the
+                   individual designates.
+
+             For a case filed in the court of claims, process may be served by a Michigan State
 Police officer or by any other officer or person who is authorized to serve process in circuit court
 actions. MCL 600.6410(3).
-ii. Service by Private Persons
-A party to the lawsuit (and officers of a corporate party) cannot serve the summons
+
+                   ii. Service by Private Persons
+
+             A party to the lawsuit (and officers of a corporate party) cannot serve the summons
 and complaint on the defendant, but any other adult can serve process not involving seizure of
 persons or property. MCR 2.103(A). No court order permitting service by private parties is
 required. Similarly, private individuals may serve writs of garnishment. MCR 2.103(B).
-MCR 2.103(A) does not bar the plaintiff's attorney from serving the summons and
+
+             MCR 2.103(A) does not bar the plaintiff's attorney from serving the summons and
 complaint. However, in view of the fact that the process server might be called as a witness if
 service is challenged, it is a better practice to turn the process over to a process server.
 Attorneys who serve process may prove service by filing a certificate of service rather than an
 affidavit of service, which other private process servers must file. MCR 2.104(A)(2)(d).
-Note that only certain individuals may serve persons in governmental institutions,
+
+             Note that only certain individuals may serve persons in governmental institutions,
 hospitals, or group homes. See.
-iii. Service by Officers
-A sheriff or other officer must serve process involving arrest or seizure of property:
-A writ of restitution or process requiring the seizure or attachment of property may only be
-served by:
-(1) a sheriff or deputy sheriff, or a bailiff or court officer appointed by the court for
-that purpose,
-(2) an officer of the Department of State Police in an action in which the state is a
-party, or
-(3) a police officer of an incorporated city or village in an action in which the city or
-village is a party.
-March 2014 – 5 – Jeff Kirkpatrick – (517) 788-8898
 
-=== Page 7 ===
+                   iii. Service by Officers
 
-Michigan Court Officers’ Civil Process Handbook
-A. OVERVIEW OF CIVIL PROCESS LAW
-1. Serving the Complaint
-A writ of garnishment may be served by any person authorized by subrule (A). MCR
-2.103(B). “Process in civil proceedings requiring the arrest of a person may be served only
-by a sheriff, deputy sheriff, or police officer, or by a court officer appointed by the court for
-that purpose.” MCR 2.103(D); see also MCL 600.1801, .1811. A sheriff or officer must also
-serve the following types of process:
- Civil arrest. MCR 2.103(D).
- Execution (order to seize property) to collect judgment. MCL 600.6001.
- Claims for delivery of personal property. MCR 3.105(E)(4)(c).
- Arrest by bench warrant for contempt of court. MCL 600.1711, .1735; see MCL
-600.6075; MCR 3.606.
- Writ of possession or restitution in connection with action to quiet title. MCL
-600.2932(3).
- Writ of attachment. MCR 3.103(E).
-Generally, a sheriff or an officer only has authority to serve civil process within the
+             A sheriff or other officer must serve process involving arrest or seizure of property:
+
+      A writ of restitution or process requiring the seizure or attachment of property may only be
+      served by:
+
+             (1) a sheriff or deputy sheriff, or a bailiff or court officer appointed by the court for
+                   that purpose,
+
+             (2) an officer of the Department of State Police in an action in which the state is a
+                   party, or
+
+             (3) a police officer of an incorporated city or village in an action in which the city or
+                   village is a party.
+
+March 2014  –5–  Jeff Kirkpatrick – (517) 788-8898
+                               Michigan Court Officers’ Civil Process Handbook
+                                                                        A. OVERVIEW OF CIVIL PROCESS LAW
+                                                                                               1. Serving the Complaint
+
+      A writ of garnishment may be served by any person authorized by subrule (A). MCR
+      2.103(B). “Process in civil proceedings requiring the arrest of a person may be served only
+      by a sheriff, deputy sheriff, or police officer, or by a court officer appointed by the court for
+      that purpose.” MCR 2.103(D); see also MCL 600.1801, .1811. A sheriff or officer must also
+      serve the following types of process:
+
+              Civil arrest. MCR 2.103(D).
+
+              Execution (order to seize property) to collect judgment. MCL 600.6001.
+
+              Claims for delivery of personal property. MCR 3.105(E)(4)(c).
+
+              Arrest by bench warrant for contempt of court. MCL 600.1711, .1735; see MCL
+                   600.6075; MCR 3.606.
+
+              Writ of possession or restitution in connection with action to quiet title. MCL
+                   600.2932(3).
+
+              Writ of attachment. MCR 3.103(E).
+
+             Generally, a sheriff or an officer only has authority to serve civil process within the
 territorial boundaries of the governmental body of which he or she is employed or appointed. In
 making service beyond such boundaries, the officer acts only as a private person. Coleman v
 Bolton, 24 Mich App 547, 180 NW2d 319 (1970). Note that the special tolling provision that
 applies where the summons and complaint are placed in the sheriff's hands in good faith, MCL
 600.5856(c), does not apply when the sheriff must serve process outside his or her territorial
 boundaries.
-If the county sheriff and coroners are parties, are interested, or are incapacitated to
+
+             If the county sheriff and coroners are parties, are interested, or are incapacitated to
 act, a circuit court judge may appoint a disinterested person to serve process or do any other
 act that the county sheriff is authorized to do in an action. MCL 600.1811. A party may invoke
 this provision only when service by an officer is required, such as for process involving arrest, or
 when service by an officer is desired to toll the statute of limitations under MCL
 600.5856(c).Coleman.
-A sheriff or other officer is entitled to fees, which are listed in MCL 600.2559, for
+
+             A sheriff or other officer is entitled to fees, which are listed in MCL 600.2559, for
 serving process.
-d. Persons Exempt from Service of Process
-Service of process may not be made on the following:
-1. Any persons going to, attending, or returning from any court proceedings in any
-action in which their presence is needed, if service could not have been made on
-them had they not attended the proceedings. MCL 600.1835(1). Judges,
-attorneys, parties, and witnesses are all included in this category. See, e.g., Gist
-v Romey, 321 Mich 357, 32 NW2d 481 (1948) (party); Lindow v Mudge, 266 Mich
-11, 253 NW 196 (1934) (attorney); Connelly v Lamb, 227 Mich 139, 198 NW 585
-(1924) (witness). The privilege also extends to corporate officers or agents who
-March 2014 – 6 – Jeff Kirkpatrick – (517) 788-8898
 
-=== Page 8 ===
+             d. Persons Exempt from Service of Process
 
-Michigan Court Officers’ Civil Process Handbook
-A. OVERVIEW OF CIVIL PROCESS LAW
-1. Serving the Complaint
-are acting as representatives of a corporate party. See Flewelling v Prima Oil Co,
-291 Mich 281, 289 NW 160 (1939).
-2. Any person brought into the state by or after waiver of extradition, in a civil action
-based on the same facts as the criminal proceedings giving rise to the
-extradition. However, process may be served after conviction in the criminal
-proceeding or after an acquitted person has had a reasonable opportunity to
-return to the state from which the person came. MCL 600.1835(2).
-3. A member of the legislature on a day on which there is a scheduled meeting of
-the house of which the legislator is a member. However, process may be
-executed on such a day by certified mail, return receipt requested. MCL
-600.1835(3).
-4. An elector entitled to vote, on an election day. However, a judge may authorize
-service of any writ on an election day. MCL 600.1831(1).
-5. A Sunday. However, a circuit judge may authorize service of a writ on a Sunday.
-MCL 600.1831(2).
-Individuals in the first three categories listed above have only a privilege, which must
+             Service of process may not be made on the following:
+
+             1. Any persons going to, attending, or returning from any court proceedings in any
+                   action in which their presence is needed, if service could not have been made on
+                   them had they not attended the proceedings. MCL 600.1835(1). Judges,
+                   attorneys, parties, and witnesses are all included in this category. See, e.g., Gist
+                   v Romey, 321 Mich 357, 32 NW2d 481 (1948) (party); Lindow v Mudge, 266 Mich
+                   11, 253 NW 196 (1934) (attorney); Connelly v Lamb, 227 Mich 139, 198 NW 585
+                   (1924) (witness). The privilege also extends to corporate officers or agents who
+
+March 2014  –6–  Jeff Kirkpatrick – (517) 788-8898
+                               Michigan Court Officers’ Civil Process Handbook
+                                                                        A. OVERVIEW OF CIVIL PROCESS LAW
+                                                                                               1. Serving the Complaint
+
+                   are acting as representatives of a corporate party. See Flewelling v Prima Oil Co,
+                   291 Mich 281, 289 NW 160 (1939).
+             2. Any person brought into the state by or after waiver of extradition, in a civil action
+                   based on the same facts as the criminal proceedings giving rise to the
+                   extradition. However, process may be served after conviction in the criminal
+                   proceeding or after an acquitted person has had a reasonable opportunity to
+                   return to the state from which the person came. MCL 600.1835(2).
+             3. A member of the legislature on a day on which there is a scheduled meeting of
+                   the house of which the legislator is a member. However, process may be
+                   executed on such a day by certified mail, return receipt requested. MCL
+                   600.1835(3).
+             4. An elector entitled to vote, on an election day. However, a judge may authorize
+                   service of any writ on an election day. MCL 600.1831(1).
+             5. A Sunday. However, a circuit judge may authorize service of a writ on a Sunday.
+                   MCL 600.1831(2).
+
+             Individuals in the first three categories listed above have only a privilege, which must
 be timely exercised or it is waived. MCL 600.1835; see, e.g., Thompson v Michigan Mut Benefit
 Ass'n, 52 Mich 522, 18 NW 247 (1884). The statute precluding service of process in the last two
 categories provides an exemption rather than a privilege from service of process.
-Individuals who are imprisoned are not exempt from service of process. See Stuart v
+
+             Individuals who are imprisoned are not exempt from service of process. See Stuart v
 Wayne Circuit Judge, 252 Mich 522, 233 NW 402 (1930); Steindler Paper Co v Charlevoix
 Circuit Judge, 234 Mich 288, 207 NW 896 (1926).
-Note that exemptions do not apply to persons served with citations for motor vehicle
+
+             Note that exemptions do not apply to persons served with citations for motor vehicle
 code violations. MCL 600.1865.
-e. Manner of Service—Personal and Substituted Service Authorized by Court
-Rules
-i. Service on Individuals
-I. Personal Service
-The court rules specify two ways of serving individuals personally:
-Process may be served on a resident or nonresident individual by,
-(1) delivering a summons and a copy of the complaint to the defendant personally;
-or
-(2) sending a summons and a copy of the complaint by registered or certified mail,
-return receipt requested, and delivery restricted to the addressee.
-March 2014 – 7 – Jeff Kirkpatrick – (517) 788-8898
 
-=== Page 9 ===
+             e. Manner of Service—Personal and Substituted Service Authorized by Court
+                   Rules
 
-Michigan Court Officers’ Civil Process Handbook
-A. OVERVIEW OF CIVIL PROCESS LAW
-1. Serving the Complaint
-Service is made when the defendant acknowledges receipt of the mail. A copy of the return
-receipt signed by the defendant must be attached to proof showing service under subrule
-(A)(2).MCR 2.105(A). See also MCL 600.1912, which is substantially the same as MCR
-2.105(A)(1).
-Permitting personal service to be made on an individual by registered mail is a significant
-change in Michigan law that occurred when the General Court Rules were replaced by the
-Michigan Court Rules, effective March 1, 1985. Under MCR 2.105(A)(2), personal service
-on individuals may be made by sending a summons and a copy of the complaint to the
-defendant by registered or certified mail with delivery restricted to the addressee and a
-return receipt requested. Service is complete only when the defendant acknowledges
-receipt of the mailing by signing the return receipt. A copy of the return receipt, signed by
-the defendant, must be attached to the proof of service. Id. This manner of service applies
-whenever an individual must be served.
-When a corporation is served by serving the resident agent or a partnership is served
+                   i. Service on Individuals
+
+                          I. Personal Service
+
+             The court rules specify two ways of serving individuals personally:
+      Process may be served on a resident or nonresident individual by,
+
+             (1) delivering a summons and a copy of the complaint to the defendant personally;
+                   or
+
+             (2) sending a summons and a copy of the complaint by registered or certified mail,
+                   return receipt requested, and delivery restricted to the addressee.
+
+March 2014  –7–  Jeff Kirkpatrick – (517) 788-8898
+                               Michigan Court Officers’ Civil Process Handbook
+
+                                                                        A. OVERVIEW OF CIVIL PROCESS LAW
+                                                                                               1. Serving the Complaint
+
+      Service is made when the defendant acknowledges receipt of the mail. A copy of the return
+      receipt signed by the defendant must be attached to proof showing service under subrule
+      (A)(2).MCR 2.105(A). See also MCL 600.1912, which is substantially the same as MCR
+      2.105(A)(1).
+
+      Permitting personal service to be made on an individual by registered mail is a significant
+      change in Michigan law that occurred when the General Court Rules were replaced by the
+      Michigan Court Rules, effective March 1, 1985. Under MCR 2.105(A)(2), personal service
+      on individuals may be made by sending a summons and a copy of the complaint to the
+      defendant by registered or certified mail with delivery restricted to the addressee and a
+      return receipt requested. Service is complete only when the defendant acknowledges
+      receipt of the mailing by signing the return receipt. A copy of the return receipt, signed by
+      the defendant, must be attached to the proof of service. Id. This manner of service applies
+      whenever an individual must be served.
+
+             When a corporation is served by serving the resident agent or a partnership is served
 by serving a general partner, it is done in the manner described for individuals. Either registered
 mail or certified mail may be used where service is allowed by one of those methods. See MCR
 2.105(C)–(E), (K).
-Service by registered mail under this provision is not accomplished unless the return
+
+             Service by registered mail under this provision is not accomplished unless the return
 receipt, with the defendant's signature, is returned. Cf. Tomkiw v Sauceda, 374 Mich 381, 132
 NW2d 125 (1965) (decision under nonresident motorist statute, which has similar requirement
 that return receipt be filed with proof of service). This is presumably true even if the defendant
@@ -336,40 +407,45 @@ serve as grounds for the court to exercise discretion and order an alternative m
 Note that MCR 2.105(J)(3) may affect the application of this rule because it states that an action
 may not be dismissed because of improper service of process unless the service failed to inform
 the defendant of the action within the time provided for service.
-MCR 2.105(A)(1) provides for the traditional method of personal service—leaving the
+
+             MCR 2.105(A)(1) provides for the traditional method of personal service—leaving the
 summons and a copy of the complaint with the defendant personally. The rule does not attempt
 to define what constitutes delivering the papers to the defendant personally. Whether this has
 been accomplished will have to be determined case by case. Circumstances such as a
 defendant who deliberately avoids service or is unconscious or otherwise incapacitated must be
 considered in determining whether process has been delivered to the defendant personally.
-The requirement to deliver papers to the defendant personally should be interpreted in
+
+             The requirement to deliver papers to the defendant personally should be interpreted in
 the context of the essential function of service, which is to give actual notice of the institution of
 an action. Physically leaving the summons and a copy of the complaint with the defendant in
 person is the generally contemplated method of personal service of process. (Earlier decisions
 on this subject should be read with caution because the law has changed materially. The
 defendant is no longer required to be shown the original papers with the seal of the court.)
 However, merely laying the documents on the body of a man too sick to understand their
-March 2014 – 8 – Jeff Kirkpatrick – (517) 788-8898
 
-=== Page 10 ===
+March 2014  –8–  Jeff Kirkpatrick – (517) 788-8898
+                               Michigan Court Officers’ Civil Process Handbook
 
-Michigan Court Officers’ Civil Process Handbook
-A. OVERVIEW OF CIVIL PROCESS LAW
-1. Serving the Complaint
+                                                                        A. OVERVIEW OF CIVIL PROCESS LAW
+                                                                                               1. Serving the Complaint
+
 meaning is not valid service. People ex rel Midler v Judge of Superior Court, 38 Mich 310
 (1878). Sliding the documents under the door of the person's home is not sufficient for personal
 service. See People v Featherstone, 93 Mich App 541, 286 NW2d 907 (1979) (service of
 subpoena).
-Michigan courts have not decided whether a defendant can avoid service by refusing
+
+             Michigan courts have not decided whether a defendant can avoid service by refusing
 to accept the proffered papers from a process server after being told of their significance or
 whether service is complete if the documents in some way touch the defendant who has refused
 to accept them.
-Process servers may not use force to enter an outer door of a home. However, if the
+
+             Process servers may not use force to enter an outer door of a home. However, if the
 process server gains entrance through the outer door without force or fraud, the privilege is
 gone, and the process server may force open any other door necessary to make complete
 service of process. Remes v Duby, 69 Mich App 265, 244 NW2d 440 (1976) (citing Vanden
 Bogert v May, 334 Mich 606, 611, 55 NW2d 115 (1952)).
-Trespass by process server. Generally, a person in Michigan is not permitted to enter
+
+             Trespass by process server. Generally, a person in Michigan is not permitted to enter
 or remain on the lands or premises of another without lawful authority after having been
 forbidden to do so by the owner or occupant or the agent of the owner or occupant. A request to
 leave the premises is not necessary to be in violation trespass. However, this does not apply to
@@ -379,249 +455,310 @@ by the most direct route, to serve process on (a) an owner or occupant of the la
 premises. Process server" means a person authorized under the revised judicature act of 1961,
 1961 PA 236, MCL 600.101 to 600.9947, or supreme court rule to serve process. MCL §
 750.552
-In the case of joint defendants, service on any of the defendants is sufficient to obtain
+
+             In the case of joint defendants, service on any of the defendants is sufficient to obtain
 jurisdiction to enter a judgment in the cause. See Sheldon Axle Co v Landman, 186 Mich 61,
 152 NW 914 (1915). However, in a suit where defendants held disputed land as tenants by the
 entireties, service on both defendants was required. Reinecke v Sheehy, 47 Mich App 250, 209
 NW2d 460 (1973).
-Nonresidents may be served personally anywhere they can be found, assuming that
+
+             Nonresidents may be served personally anywhere they can be found, assuming that
 they have the contacts, ties, or relations with the state of Michigan which, under the provisions
 of MCL 600.701 et seq., enable Michigan to exercise general or limited personal jurisdiction
 over them. Statutes that provide bases for exercising personal jurisdiction also provide bases for
 serving process on a nonresident to effect jurisdiction.
-Minors may be served personally or by substituted service on their caretakers.
-Persons in government institutions may only be served by the person in charge of the
+
+             Minors may be served personally or by substituted service on their caretakers.
+
+             Persons in government institutions may only be served by the person in charge of the
 institution or by someone designated by that person. MCR 2.103(C).
-Parties may expressly consent to methods of process other than those provided by
+
+             Parties may expressly consent to methods of process other than those provided by
 the court rules. National Equip Rental, Ltd v Miller, 73 Mich App 421, 251 NW2d 611 (1977).
-March 2014 – 9 – Jeff Kirkpatrick – (517) 788-8898
 
-=== Page 11 ===
+March 2014  –9–  Jeff Kirkpatrick – (517) 788-8898
+                               Michigan Court Officers’ Civil Process Handbook
+                                                                        A. OVERVIEW OF CIVIL PROCESS LAW
+                                                                                               1. Serving the Complaint
 
-Michigan Court Officers’ Civil Process Handbook
-A. OVERVIEW OF CIVIL PROCESS LAW
-1. Serving the Complaint
-ii. Substituted Service
-I. In general
-The term substituted service is commonly used to mean service by any means other
+                   ii. Substituted Service
+
+                          I. In general
+
+             The term substituted service is commonly used to mean service by any means other
 than delivery personally to the defendant. It includes delivery to another person in lieu of
 delivery to the defendant and service by publication. There are two types of substituted service
 under the Michigan Court Rules—one that can be used without court order and one that
 requires a court order after a showing that the defendant could not be served by a method
 provided by the court rules. This section covers the first type of substituted service.
-Substituted service that does not require a court order is governed by MCR 2.105(B).
+
+             Substituted service that does not require a court order is governed by MCR 2.105(B).
 It explicitly provides for substituted service on certain categories of individuals: nonresidents,
 minors, defendants for whom a guardian or conservator has been appointed, and individuals
 doing business under an assumed name.
-II. Who may be served
-Service of process may be made
-(1) on a nonresident individual, by
-(a) serving a summons and a copy of the complaint in Michigan on an agent,
-employee, representative, sales representative, or servant of the defendant,
-and
-(b) sending a summons and a copy of the complaint by registered mail
-addressed to the defendant at his or her last known address;
-(2) on a minor, by serving a summons and a copy of the complaint on a person
-having care and control of the minor and with whom he or she resides;
-(3) on a defendant for whom a guardian or conservator has been appointed and is
-acting, by serving a summons and a copy of the complaint on the guardian or
-conservator;(4)on an individual doing business under an assumed name, by
-(a) serving a summons and copy of the complaint on the person in charge of an
-office or business establishment of the individual, and
-(b) sending a summons and a copy of the complaint by registered mail
-addressed to the individual at his or her usual residence or last known
-address.MCR 2.105(B).
-Service can be made on individual nonresidents by serving a summons and a copy of
+
+                          II. Who may be served
+
+             Service of process may be made
+
+             (1) on a nonresident individual, by
+
+                   (a) serving a summons and a copy of the complaint in Michigan on an agent,
+                          employee, representative, sales representative, or servant of the defendant,
+                          and
+
+                   (b) sending a summons and a copy of the complaint by registered mail
+                          addressed to the defendant at his or her last known address;
+
+             (2) on a minor, by serving a summons and a copy of the complaint on a person
+                   having care and control of the minor and with whom he or she resides;
+
+             (3) on a defendant for whom a guardian or conservator has been appointed and is
+                   acting, by serving a summons and a copy of the complaint on the guardian or
+                   conservator;(4)on an individual doing business under an assumed name, by
+
+                   (a) serving a summons and copy of the complaint on the person in charge of an
+                          office or business establishment of the individual, and
+
+                   (b) sending a summons and a copy of the complaint by registered mail
+                          addressed to the individual at his or her usual residence or last known
+                          address.MCR 2.105(B).
+
+             Service can be made on individual nonresidents by serving a summons and a copy of
 the complaint in Michigan on an agent, employee, representative, salesperson, or servant of the
 defendant, and by sending a summons and a copy of the complaint by registered mail to the
 defendant at his or her last known address. MCR 2.105(B)(1). Of course, registered mail alone
 is sufficient service under MCR 2.105(A)(2). See also McGee v International Life Ins Co, 355
 US 220 (1957). However, service under MCR 2.105(A)(2) is effective only if the defendant
-March 2014 – 10 – Jeff Kirkpatrick – (517) 788-8898
 
-=== Page 12 ===
+March 2014  – 10 –  Jeff Kirkpatrick – (517) 788-8898
+                               Michigan Court Officers’ Civil Process Handbook
 
-Michigan Court Officers’ Civil Process Handbook
-A. OVERVIEW OF CIVIL PROCESS LAW
-1. Serving the Complaint
+                                                                        A. OVERVIEW OF CIVIL PROCESS LAW
+                                                                                               1. Serving the Complaint
+
 acknowledges receipt of the process by signing the return receipt form. In contrast, MCR
 2.105(B)(1) apparently does not require that the defendant actually receive the summons and
 the copy of the complaint. But cf. Tomkiw v Sauceda, 374 Mich 381, 132 NW2d 125 (1965). For
 a discussion of whether a defendant must actually receive registered mail, see and. However,
 even if such service is valid, a defendant who did not in fact have knowledge of the pendency of
 the action has one year after final judgment to seek relief from the judgment. MCR 2.612(B).
-The provision for substituted service on nonresidents does not in any way confer
+
+             The provision for substituted service on nonresidents does not in any way confer
 jurisdiction over nonresidents. It merely states how service is to be made on those over whom
 the court may exercise jurisdiction arising out of the jurisdictional relationships set up in the
 statutes. MCL 600.705, .715, .725, .7355. See– for a discussion of the right to exercise
 jurisdiction over nonresidents.
-Substituted service may be made on a minor defendant by leaving a summons and a
+
+             Substituted service may be made on a minor defendant by leaving a summons and a
 copy of the complaint with the person having care and control of the minor and with whom the
 minor resides. MCR 2.105(B)(2). However, minors do not have to be served this way; they may
 also be served personally. Pioneer State Mut. Ins Co v Wood, 126 Mich App 165, 336 NW2d
 887 (1983) (personal service on 17-year-old minor in juvenile detention center held to be
 adequate service because it gave defendant actual notice of proceedings).
-Substituted service may be made on a defendant for whom a guardian or conservator
+
+             Substituted service may be made on a defendant for whom a guardian or conservator
 has been appointed and is acting by serving a summons and a copy of the complaint on the
 guardian or conservator. MCR 2.105(B)(3).
-Substituted service may be made on an individual doing business under an assumed
+
+             Substituted service may be made on an individual doing business under an assumed
 name by serving a summons and a copy of the complaint on the person in charge of the
 individual's business establishment or office and sending a summons and a copy of the
 complaint by registered mail to the individual at his or her usual residence or last known
 address. MCR 2.105(B)(4). Under MCL 445.3, the plaintiff has yet another alternative for
 substituted service on a nonresident doing business under an assumed name. County clerks
 can be appointed as agents to receive service. See MCR 2.105(H)(1).
-Substituted service of process is permitted in small claims court actions. MCL
+
+             Substituted service of process is permitted in small claims court actions. MCL
 600.8405.
-III. Process of substituted service
-Service of process may be made:
-(a) upon an individual nonresident defendant having any of the contacts, ties or
-relations with this state as specified in chapter 7 of this act [MCL 600.701 et seq.]
-by service of a summons and a copy of the complaint upon such agent,
-employee, representative, salesman or servant of the defendant as may be found
-within the state, and by sending a summons and a copy of the complaint by
-registered mail addressed to the defendant at his last known address;
-March 2014 – 11 – Jeff Kirkpatrick – (517) 788-8898
 
-=== Page 13 ===
+                          III. Process of substituted service
 
-Michigan Court Officers’ Civil Process Handbook
-A. OVERVIEW OF CIVIL PROCESS LAW
-1. Serving the Complaint
-(b) upon an infant defendant, by leaving a summons and a copy of the complaint
-with a person having the care and control of him with whom he resides, or with
-his legal guardian; or
-(c) upon a defendant who has been judicially declared incompetent and for whom a
-guardian has been appointed and is acting, by leaving a summons and a copy of
-the complaint with the guardian. MCL 600.1913(1).
-If the individual defendant is in a state institution a copy of the complaint is to be
+             Service of process may be made:
+
+             (a) upon an individual nonresident defendant having any of the contacts, ties or
+                   relations with this state as specified in chapter 7 of this act [MCL 600.701 et seq.]
+                   by service of a summons and a copy of the complaint upon such agent,
+                   employee, representative, salesman or servant of the defendant as may be found
+                   within the state, and by sending a summons and a copy of the complaint by
+                   registered mail addressed to the defendant at his last known address;
+
+March 2014  – 11 –  Jeff Kirkpatrick – (517) 788-8898
+                               Michigan Court Officers’ Civil Process Handbook
+                                                                        A. OVERVIEW OF CIVIL PROCESS LAW
+                                                                                               1. Serving the Complaint
+
+             (b) upon an infant defendant, by leaving a summons and a copy of the complaint
+                   with a person having the care and control of him with whom he resides, or with
+                   his legal guardian; or
+
+             (c) upon a defendant who has been judicially declared incompetent and for whom a
+                   guardian has been appointed and is acting, by leaving a summons and a copy of
+                   the complaint with the guardian. MCL 600.1913(1).
+
+             If the individual defendant is in a state institution a copy of the complaint is to be
 mailed to the attorney general. MCL 600.1913(2).
-IV. Proof of substituted service
-Service of process made pursuant to MCL 600.1940 to 600.1960 must be proved as
+
+                          IV. Proof of substituted service
+
+             Service of process made pursuant to MCL 600.1940 to 600.1960 must be proved as
 follows:
-Service made by publication, by an affidavit of the publisher or his agent:
-(a) stating facts establishing the qualification of the newspaper in which the order
-was published;
-(b) setting out a copy of the published order; or
-(c) stating the dates on which it was published.
-Service made by mailing, by an affidavit of one or more persons who are not parties to the
-litigation:
-(a) setting out a copy of the order mailed;
-(b) stating facts to establish that such order was sealed in an envelope addressed to
-the defendant, setting out the name of the defendant and the address to which it
-was sent;
-(c) stating facts to establish where and when the envelope was deposited in the
-United States government mail;
-(d) stating the amount of postage placed on the envelope and that this was sufficient
-as required by postal regulations to permit first class passage of the envelope; or
-(e) stating the facts to establish the return address on the envelope.
-Whenever mailing is not required under MCL 600.1947 an affidavit by the plaintiff or
+
+      Service made by publication, by an affidavit of the publisher or his agent:
+
+             (a) stating facts establishing the qualification of the newspaper in which the order
+                   was published;
+
+             (b) setting out a copy of the published order; or
+
+             (c) stating the dates on which it was published.
+
+      Service made by mailing, by an affidavit of one or more persons who are not parties to the
+      litigation:
+
+             (a) setting out a copy of the order mailed;
+
+             (b) stating facts to establish that such order was sealed in an envelope addressed to
+                   the defendant, setting out the name of the defendant and the address to which it
+                   was sent;
+
+             (c) stating facts to establish where and when the envelope was deposited in the
+                   United States government mail;
+
+             (d) stating the amount of postage placed on the envelope and that this was sufficient
+                   as required by postal regulations to permit first class passage of the envelope; or
+
+             (e) stating the facts to establish the return address on the envelope.
+
+             Whenever mailing is not required under MCL 600.1947 an affidavit by the plaintiff or
 his attorney or the agent of either having knowledge of the facts shall be filed within 10 days
 after the date of the second publication of a copy of the order. The affidavit shall set forth facts
 justifying the failure to mail and shall include a showing of diligent inquiry. The person to whom
 an envelope, mailed under section 600.1947, is returned shall report to the court by affidavit the
 fact of the return together with the returned envelope. MCL 600.1955.
-March 2014 – 12 – Jeff Kirkpatrick – (517) 788-8898
 
-=== Page 14 ===
+March 2014  – 12 –  Jeff Kirkpatrick – (517) 788-8898
+                               Michigan Court Officers’ Civil Process Handbook
 
-Michigan Court Officers’ Civil Process Handbook
-A. OVERVIEW OF CIVIL PROCESS LAW
-1. Serving the Complaint
-iii. Service on Partnerships
-Partnerships are separate entities for purposes of litigation. Yenglin v Mazur, 121
+                                                                        A. OVERVIEW OF CIVIL PROCESS LAW
+                                                                                               1. Serving the Complaint
+
+                   iii. Service on Partnerships
+
+             Partnerships are separate entities for purposes of litigation. Yenglin v Mazur, 121
 Mich App 218, 328 NW2d 624 (1982). Partnerships may be sued in the partnership name or in
 the names of any of the partners. MCL 600.2051(2). See also MCR 2.201(C)(3) to the same
 effect. For individual partners to sue or be sued on behalf of the partnership, the partners must
 be designated as partners in the original pleadings. George Morris Cruises v Irwin Yacht &
 Marine Corp, 191 Mich App 409, 478 NW2d 693 (1991). A partnership would not necessarily be
 doing business under an assumed name. See MCL 445.1 et seq.
-Service of process on a partnership or limited partnership may be made by
-(1) serving a summons and a copy of the complaint on any general partner; or
-(2) serving a summons and a copy of the complaint on the person in charge of a
-partnership office or business establishment and sending a summons and a copy
-of the complaint by registered mail, addressed to a general partner at his or her
-usual residence or last known address.MCR 2.105(C); see also MCL 600.1917.
-The rule makes available both personal service and substituted service on
+
+             Service of process on a partnership or limited partnership may be made by
+
+             (1) serving a summons and a copy of the complaint on any general partner; or
+
+             (2) serving a summons and a copy of the complaint on the person in charge of a
+                   partnership office or business establishment and sending a summons and a copy
+                   of the complaint by registered mail, addressed to a general partner at his or her
+                   usual residence or last known address.MCR 2.105(C); see also MCL 600.1917.
+
+             The rule makes available both personal service and substituted service on
 partnerships. Personal assets of individual partners are not subject to the jurisdiction of the
 court unless a partner is made a party in his or her own name and served with process. Elliotte
 v Lavier, 299 Mich 353, 300 NW 116 (1941).
-The provisions for service on a partnership, including substituted service, apply to
+
+             The provisions for service on a partnership, including substituted service, apply to
 both residents and nonresidents, as long as the defendant has the necessary jurisdictional
 contacts as provided by MCL 600.701 et seq.
-iv. Service on Partnership Associations and Unincorporated Voluntary
-Associations
-Service on partnership or unincorporated voluntary associations must be made by
+
+                   iv. Service on Partnership Associations and Unincorporated Voluntary
+                          Associations
+
+             Service on partnership or unincorporated voluntary associations must be made by
 performing both of the following:
-(1) serving a summons and a copy of the complaint on an officer, director, trustee,
-agent, or person in charge of an office or business establishment of the
-association, and
-(2) sending a summons and a copy of the complaint by registered mail, addressed to
-an office of the association. If an office cannot be located, a summons and a
-copy of the complaint may be sent by registered mail to a member of the
-association other than the person on whom the summons and complaint was
-served.MCR 2.105(E) (emphasis added); see also MCL 600.1923. Service
-pursuant to MCR 2.105(E)(1) on an officer, director, trustee, agent, or person in
-charge of an office of the association can now be made either by personal
-service or by registered mail, return receipt requested, and delivery restricted to
-the addressee. MCR 2.105(A)(2).
-March 2014 – 13 – Jeff Kirkpatrick – (517) 788-8898
 
-=== Page 15 ===
+             (1) serving a summons and a copy of the complaint on an officer, director, trustee,
+                   agent, or person in charge of an office or business establishment of the
+                   association, and
 
-Michigan Court Officers’ Civil Process Handbook
-A. OVERVIEW OF CIVIL PROCESS LAW
-1. Serving the Complaint
-See also MCL 600.2051(2) and MCR 2.201(C)(3), which provide that a partnership,
+             (2) sending a summons and a copy of the complaint by registered mail, addressed to
+                   an office of the association. If an office cannot be located, a summons and a
+                   copy of the complaint may be sent by registered mail to a member of the
+                   association other than the person on whom the summons and complaint was
+                   served.MCR 2.105(E) (emphasis added); see also MCL 600.1923. Service
+                   pursuant to MCR 2.105(E)(1) on an officer, director, trustee, agent, or person in
+                   charge of an office of the association can now be made either by personal
+                   service or by registered mail, return receipt requested, and delivery restricted to
+                   the addressee. MCR 2.105(A)(2).
+
+March 2014  – 13 –  Jeff Kirkpatrick – (517) 788-8898
+                               Michigan Court Officers’ Civil Process Handbook
+                                                                        A. OVERVIEW OF CIVIL PROCESS LAW
+                                                                                               1. Serving the Complaint
+
+             See also MCL 600.2051(2) and MCR 2.201(C)(3), which provide that a partnership,
 partnership association, or any unincorporated voluntary association having a distinguishing
 name may sue or be sued in its partnership or association name or the names of any of its
 members designated as such or both. See George Morris Cruises v Irwin Yacht & Marine Corp,
 191 Mich App 409, 478 NW2d 693 (1991).
-v. Service on Corporations
-Service of process on a private corporation, whether domestic or foreign, is covered
+
+                   v. Service on Corporations
+
+             Service of process on a private corporation, whether domestic or foreign, is covered
 by MCR 2.105(D):
-(1) serving a summons and a copy of the complaint on an officer or the resident
-agent;
-(2) serving a summons and a copy of the complaint on a director, trustee, or person
-in charge of an office or business establishment of the corporation and sending a
-summons and a copy of the complaint by registered mail, addressed to the
-principal office of the corporation;
-(3) serving a summons and a copy of the complaint on the last presiding officer,
-president, cashier, secretary, or treasurer of a corporation that has ceased to do
-business by failing to keep up its organization by the appointment of officers or
-otherwise, or whose term of existence has expired;
-(4) sending a summons and a copy of the complaint by registered mail to the
-corporation or an appropriate corporation officer and to the Michigan Corporation
-and Securities Bureau if
-(a) the corporation has failed to appoint and maintain a resident agent or to file
-a certificate of that appointment as required by law;
-(b) the corporation has failed to keep up its organization by the appointment of
-officers or otherwise; or
-(c) the corporation's term of existence has expired.MCR 2.105(D); see also
-MCL 600.1920.
-Neither the court rule nor the statute makes a distinction between domestic and
+
+             (1) serving a summons and a copy of the complaint on an officer or the resident
+                   agent;
+
+             (2) serving a summons and a copy of the complaint on a director, trustee, or person
+                   in charge of an office or business establishment of the corporation and sending a
+                   summons and a copy of the complaint by registered mail, addressed to the
+                   principal office of the corporation;
+
+             (3) serving a summons and a copy of the complaint on the last presiding officer,
+                   president, cashier, secretary, or treasurer of a corporation that has ceased to do
+                   business by failing to keep up its organization by the appointment of officers or
+                   otherwise, or whose term of existence has expired;
+
+             (4) sending a summons and a copy of the complaint by registered mail to the
+                   corporation or an appropriate corporation officer and to the Michigan Corporation
+                   and Securities Bureau if
+
+                   (a) the corporation has failed to appoint and maintain a resident agent or to file
+                          a certificate of that appointment as required by law;
+
+                   (b) the corporation has failed to keep up its organization by the appointment of
+                          officers or otherwise; or
+
+                   (c) the corporation's term of existence has expired.MCR 2.105(D); see also
+                          MCL 600.1920.
+
+             Neither the court rule nor the statute makes a distinction between domestic and
 foreign corporations. The question of whether a corporation has the requisite relations with the
 state to give the court jurisdiction is determined by MCL 600.701 et seq. See– and–. This rule
 merely sets forth the manner in which service may be effected if jurisdiction is acquired over the
 corporation.
-Service on any officer or the resident agent is the traditional way of acquiring personal
+
+             Service on any officer or the resident agent is the traditional way of acquiring personal
 jurisdiction over a corporation. “Service” includes either personal service or service by
 registered mail, as provided in MCR 2.105(A).
-Defective service that gives actual notice may be adequate if it satisfies due process
+
+             Defective service that gives actual notice may be adequate if it satisfies due process
 requirements. See Miszewski v Knauf Constr, Inc, 183 Mich App 312, 454 NW2d 253 (1990)
-March 2014 – 14 – Jeff Kirkpatrick – (517) 788-8898
 
-=== Page 16 ===
+March 2014  – 14 –  Jeff Kirkpatrick – (517) 788-8898
+                               Michigan Court Officers’ Civil Process Handbook
 
-Michigan Court Officers’ Civil Process Handbook
-A. OVERVIEW OF CIVIL PROCESS LAW
-1. Serving the Complaint
+                                                                        A. OVERVIEW OF CIVIL PROCESS LAW
+                                                                                               1. Serving the Complaint
+
 (service of process against person individually would serve to put person's corporation on notice
 of plaintiff's claims); Alycekay Co v Hasko Constr Co, 180 Mich App 502, 448 NW2d 43 (1989)
 (failure to mail complaint to corporate office of bankrupt defendant corporation did not deprive
 court of personal jurisdiction over defendant because (1) there were indications that no
 corporate office existed and (2) trustee received actual notice of claim).
-Substituted service as provided for in MCR 2.105(D)(2)–(4) may be made without
+
+             Substituted service as provided for in MCR 2.105(D)(2)–(4) may be made without
 court order, at the discretion of the party making service. MCR 2.105(D)(2) is an alternative to
 the traditional method of service on corporations, while MCR 2.105(D)(3) and (4) provide for
 substituted service on corporations under special circumstances, such as defunct corporations,
@@ -635,38 +772,42 @@ on trustee plus service by registered mail at principal place of business). MCR 
 (4) are not the exclusive means of serving a bankrupt or defunct corporation. They are
 alternatives to the means of service prescribed by the other subrules of MCR 2.105(D). See
 also Bunner v Blow-Rite Insulation Co, 162 Mich App 669, 413 NW2d 474 (1987); Clayton.
-Service of process under MCR 2.105(D)(4) (i.e., by sending the summons and
+
+             Service of process under MCR 2.105(D)(4) (i.e., by sending the summons and
 complaint by registered mail to the corporation or a corporation officer and to the Michigan
 Corporation and Securities Bureau when the corporation has not appointed a resident agent) is
 proper even if the corporation is not required to appoint a resident agent. Woods v Edgewater
 Amusement Park, 381 Mich 559, 165 NW2d 12 (1969); see also McGee v International Life Ins
 Co, 355 US 220 (1957) (service by registered mail satisfies due process requirements of notice
 if nonresident corporation has sufficient jurisdictional contacts with state).
-Service by registered mail under MCR 2.105(D) is effective regardless of whether it is
+
+             Service by registered mail under MCR 2.105(D) is effective regardless of whether it is
 received by the defendant. There is no requirement that the service by registered mail actually
 be received by the corporation or that the return receipt be attached to the proof of service. In
 Clayton, the court of appeals held that actual receipt of process by the corporation was not
 required under the circumstances of that case, where personal service was made on the trustee
 in bankruptcy and process was delivered (in lieu of registered mail) to the principal place of
 business (the address for which was false).Id.
-In contrast, the nonresident motorist statute specifically requires that the return receipt
+
+             In contrast, the nonresident motorist statute specifically requires that the return receipt
 be made a part of the proof of service. MCL 257.403; see Tomkiw v Sauceda, 374 Mich 381,
 132 NW2d 125 (1965) (service made pursuant to nonresident motorist statute was not complete
 unless plaintiff could prove that registered mail had been received by nonresident motorist).
-Service of process on a defendant insurance company is governed by MCR 2.105(F).
+
+             Service of process on a defendant insurance company is governed by MCR 2.105(F).
 That rule specifies the procedure for serving the commissioner of insurance, where such service
 is permitted by statute (the Insurance Code). See, e.g., MCL 500.456. See also MCL 600.1861,
-March 2014 – 15 – Jeff Kirkpatrick – (517) 788-8898
 
-=== Page 17 ===
+March 2014  – 15 –  Jeff Kirkpatrick – (517) 788-8898
+                               Michigan Court Officers’ Civil Process Handbook
+                                                                        A. OVERVIEW OF CIVIL PROCESS LAW
+                                                                                               1. Serving the Complaint
 
-Michigan Court Officers’ Civil Process Handbook
-A. OVERVIEW OF CIVIL PROCESS LAW
-1. Serving the Complaint
 which provides that when service is made on a nongovernmental defendant by serving a public
 officer, such as the commissioner of insurance, that officer must forward a copy of the summons
 and complaint to the defendant by registered mail.
-Although the restriction that precluded service on resident agents of defendant
+
+             Although the restriction that precluded service on resident agents of defendant
 insurance companies still exists in the related statute (MCL 600.1920, MCR 2.105(F) should
 govern over the statute on matters of procedure. Perin v Peuler, 373 Mich 531, 130 NW2d 4
 (1964), overruled on other grounds, McDougall v. Schanz, 461 Mich. 15, 597 N.W.2d 148 (Mich.
@@ -674,56 +815,73 @@ govern over the statute on matters of procedure. Perin v Peuler, 373 Mich 531, 1
 defendant insurance company may be made by any method permitted by the court rules,
 usually MCR 2.105(D), and by service on the commissioner of insurance where permitted by
 statute.
-MCR 2.105(F) applies only where the insurance company itself is a defendant, not
+
+             MCR 2.105(F) applies only where the insurance company itself is a defendant, not
 where an insurance company is served as a means of substituted service on an individual
 defendant who is an insured of the insurance company. See for a discussion of service on
 insurance companies in lieu of service on insured alleged tortfeasors.
-vi. Service on Limited Liability Companies
-The resident agent appointed by a limited liability company is an agent of the
+
+                   vi. Service on Limited Liability Companies
+
+             The resident agent appointed by a limited liability company is an agent of the
 company upon whom any process, notice, or demand required or permitted by law to be served
 upon the company may be served. MCL § 450.4207(2). Whitaker v. Bontekoe, 2013 WL
 1442217, *7+ (Mich.App. Apr 09, 2013) (NO. 304617, 304618, 305241); Bullington v. Corbell,
 293 Mich.App. 549, 809 N.W.2d 657 (Mich.App. 2011).
-vii. Service on Governmental Bodies
-Public corporations and governmental units have long had the capacity to sue and be
+
+                   vii. Service on Governmental Bodies
+
+             Public corporations and governmental units have long had the capacity to sue and be
 sued in their own names. See MCL 600.2051(4).
-Service of process on a public, municipal, quasimunicipal, or governmental
+
+             Service of process on a public, municipal, quasimunicipal, or governmental
 corporation, unincorporated board, or public body may be made by serving a summons and a
 copy of the complaint on:
-(1) the chairperson of the board of commissioners or the county clerk of a county;
-(2) the mayor, the city clerk, or the city attorney of a city;
-(3) the president, the clerk, or a trustee of a village;
-(4) the supervisor or the township clerk of a township;
-(5) the president, the secretary, or the treasurer of a school district;
-(6) the president or the secretary of the Michigan State Board of Education;
-(7) the president, the secretary, or other member of the governing body of a
-corporate body or an unincorporated board having control of a state institution;
-March 2014 – 16 – Jeff Kirkpatrick – (517) 788-8898
 
-=== Page 18 ===
+             (1) the chairperson of the board of commissioners or the county clerk of a county;
 
-Michigan Court Officers’ Civil Process Handbook
-A. OVERVIEW OF CIVIL PROCESS LAW
-1. Serving the Complaint
-(8) the president, the chairperson, the secretary, the manager, or the clerk of any
-other public body organized or existing under the constitution or laws of
-Michigan, when no other method of service is specially provided by statute.
-The service of process may be made on an officer having substantially the same
+             (2) the mayor, the city clerk, or the city attorney of a city;
+
+             (3) the president, the clerk, or a trustee of a village;
+
+             (4) the supervisor or the township clerk of a township;
+
+             (5) the president, the secretary, or the treasurer of a school district;
+
+             (6) the president or the secretary of the Michigan State Board of Education;
+
+             (7) the president, the secretary, or other member of the governing body of a
+                   corporate body or an unincorporated board having control of a state institution;
+
+March 2014  – 16 –  Jeff Kirkpatrick – (517) 788-8898
+                               Michigan Court Officers’ Civil Process Handbook
+
+                                                                        A. OVERVIEW OF CIVIL PROCESS LAW
+                                                                                               1. Serving the Complaint
+
+             (8) the president, the chairperson, the secretary, the manager, or the clerk of any
+                   other public body organized or existing under the constitution or laws of
+                   Michigan, when no other method of service is specially provided by statute.
+
+             The service of process may be made on an officer having substantially the same
 duties as those named or described above, irrespective of title. In any case, service may be
 made by serving a summons and a copy of the complaint on a person in charge of the office of
 an officer on whom service may be made and sending a summons and a copy of the complaint
 by registered mail addressed to the officer at his or her office. MCR 2.105(G); see also MCL
 600.1925.
-Personal service on one of the officers listed in the court rule may be made pursuant
+
+             Personal service on one of the officers listed in the court rule may be made pursuant
 to MCR 2.105(A) by personal delivery or by sending a summons and a copy of the complaint by
 registered or certified mail, return receipt requested, and delivery restricted to the addressee.
-Substituted service may be used as an alternative to personal service by serving a
+
+             Substituted service may be used as an alternative to personal service by serving a
 person in charge of the office of one of the designated officials and sending a copy of the
 process by registered mail to the official at his or her office. MCR 2.105(G). Although the law is
 not settled, it appears that actual receipt of the registered mail by the officer is not required
 when served under this alternate provision. See and for a discussion of the issue of receipt of
 registered mail.
-It is important to follow the procedure for alternative service of process prescribed in
+
+             It is important to follow the procedure for alternative service of process prescribed in
 MCR 2.105(G) rather than following an alternative method that the defendant has established
 for accepting process. In Tucker v Eaton, 426 Mich 179, 393 NW2d 827 (1986), plaintiff brought
 an action against Detroit General Hospital and served a summons and complaint on a secretary
@@ -732,7 +890,8 @@ process established by the hospital. The case was decided under a prior court ru
 substantially similar to MCR 2.105(G). Accelerated judgment was proper because defendant
 was not estopped from asserting a defect in the service, and there was no evidence that a
 proper official received actual notice within the limitations period.
-In a court of claims action, service on the appropriate department, agency, or other
+
+             In a court of claims action, service on the appropriate department, agency, or other
 arm of the state must be made in the same manner as for a complaint filed in circuit court. MCL
 600.6434. An extra copy of all papers, including the original complaint, must be provided to the
 clerk of the court of claims who must immediately transmit it to the attorney general. Id.
@@ -740,48 +899,57 @@ However, to be certain that the attorney general receives a copy of the complain
 consider having the Michigan State Police or other process server (see) serve the attorney
 general as well as the relevant state department or agency. Even if this approach is taken, the
 extra copy of the papers served must be provided to the court of claims clerk.
-viii. Service on an Agent of the Defendant
-MCR 2.105(H) permits service on an agent of the defendant authorized by
+
+                   viii. Service on an Agent of the Defendant
+
+             MCR 2.105(H) permits service on an agent of the defendant authorized by
 appointment or by law to receive service of process. Agents must be appointed in writing.
-March 2014 – 17 – Jeff Kirkpatrick – (517) 788-8898
 
-=== Page 19 ===
+March 2014  – 17 –  Jeff Kirkpatrick – (517) 788-8898
+                               Michigan Court Officers’ Civil Process Handbook
 
-Michigan Court Officers’ Civil Process Handbook
-A. OVERVIEW OF CIVIL PROCESS LAW
-1. Serving the Complaint
-(1) Service of process on a defendant may be made by serving a summons and a
-copy of the complaint on an agent authorized by written appointment or by law to
-receive service of process.
-(2) Whenever, pursuant to statute or court rule, service of process is to be made on
-a nongovernmental defendant by service on a public officer, service on the public
-officer may be made by registered mail addressed to his or her office. MCR
-2.105(H).
-Serving the summons and a copy of the complaint on the agent can be effected by
+                                                                        A. OVERVIEW OF CIVIL PROCESS LAW
+                                                                                               1. Serving the Complaint
+
+             (1) Service of process on a defendant may be made by serving a summons and a
+                   copy of the complaint on an agent authorized by written appointment or by law to
+                   receive service of process.
+
+             (2) Whenever, pursuant to statute or court rule, service of process is to be made on
+                   a nongovernmental defendant by service on a public officer, service on the public
+                   officer may be made by registered mail addressed to his or her office. MCR
+                   2.105(H).
+
+             Serving the summons and a copy of the complaint on the agent can be effected by
 either of the methods permitted by MCR 2.105(A): personally serving the agent or sending the
 process to the agent by registered mail, return receipt requested, and delivery restricted to the
 addressee.
-Numerous statutes require or impute appointment of resident agents to receive
+
+             Numerous statutes require or impute appointment of resident agents to receive
 service of process for certain nonresident defendants. MCL 600.701 et seq. give the state
 jurisdiction over nonresident defendants based on the defendant's contacts or relations with the
 state, regardless of the state's power to require the nonresident to appoint a resident agent.
-Corporations and other bodies often appoint resident agents to receive service of
+
+             Corporations and other bodies often appoint resident agents to receive service of
 process. The Michigan Department of Industry and Consumer Services will provide the name of
 a Michigan corporation's resident agent. Contact the department by telephone at (900)
 555-0031 (toll call) or by mail at the Records Information Unit, Corporation, Securities, and Land
 Development Bureau, P.O. Box 30054, Lansing, MI 48909-7554. There is also a Web site
 available at http://www.commerce.state.mi.us/corp.
-Individuals may also appoint agents to receive process. Such appointment must be in
+
+             Individuals may also appoint agents to receive process. Such appointment must be in
 writing for service on the agent to be effective. MCR 2.105(H)(1); see MCL 600.1930. This may
 occur, for example, in a contract in which the parties each appoint an agent for service of
 process for lawsuits involving that contract.
-Exercise caution when relying on such an appointment. There may be serious
+
+             Exercise caution when relying on such an appointment. There may be serious
 problems concerning its adequacy and propriety. For example, if the agent has an interest
 antagonistic to that of the principal with respect to the particular cause of action, service on the
 agent as agent will not bind the principal or employer. See John W Masury & Son v Lowther,
 299 Mich 516, 300 NW 866 (1941) (insufficient to serve agent whose relations to plaintiff or
 claim are such as to make it in agent's interest to suppress fact of service).
-In National Equip Rental, Ltd v Szukhent, 375 US 311 (1964), decided under Fed R
+
+             In National Equip Rental, Ltd v Szukhent, 375 US 311 (1964), decided under Fed R
 Civ P 4(d)(1), the source of MCR 2.105(H), an equipment lease (a form contract) signed by
 Michigan defendants appointed a New York resident as defendants' agent for the purpose of
 accepting service of process in New York. Defendants did not know the agent, who may have
@@ -789,58 +957,70 @@ been related to an officer of the New York plaintiff. Service was made on the Ne
 who gave prompt notice of service to Michigan defendants even though not required by the
 contract to do so. The Supreme Court upheld the service on the agent, explicitly noting that the
 holding was based on the fact that the agent gave prompt notice to defendants. Cf. Wuchter v
-March 2014 – 18 – Jeff Kirkpatrick – (517) 788-8898
 
-=== Page 20 ===
+March 2014  – 18 –  Jeff Kirkpatrick – (517) 788-8898
+                               Michigan Court Officers’ Civil Process Handbook
 
-Michigan Court Officers’ Civil Process Handbook
-A. OVERVIEW OF CIVIL PROCESS LAW
-1. Serving the Complaint
+                                                                        A. OVERVIEW OF CIVIL PROCESS LAW
+                                                                                               1. Serving the Complaint
+
 Pizzutti, 276 US 13 (1928) (express provision for notice to defendant must be part of any
 statutory scheme for substituted service on agent authorized by law).
-In certain cases, statutes authorize agents to receive service of process for persons
+
+             In certain cases, statutes authorize agents to receive service of process for persons
 and entities engaged in certain activities. Below is a list of such statutes. Before attempting to
 serve process under any of these statutes, read the statute to determine its specific
 requirements for service of process. See also MCL 600.1930, which provides that service may
 be made by registered mail on a governmental agent appointed by law as agent.
- Assumed name, nonresident using. MCL 445.3. The court clerk in whose office
-the assumed name certificate is filed may receive process.
- Corporate surety, nonresident. To qualify to do business in Michigan, a
-nonresident corporate surety must appoint an attorney in Michigan to receive
-process. See MCR 3.604(B) (surety on bond given pursuant to court rules or RJA
-submits to jurisdiction of court).
- Corporations, foreign. MCL 450.2015. Foreign corporations must provide the
-name of the resident agent and a statement that the agent is authorized to
-accept service of process.
- Corporations, Michigan. MCL 450.701. Directors, managers, trustees, and other
-officers of Michigan corporations deemed to have appointed the resident agent of
-the corporation as their agent to accept service of process for actions arising out
-of their position as officer, etc., of the corporation.
- Insurance companies, foreign. MCL 500.456. Provides for service of process on
-the commissioner of insurance.
- Insurers, unauthorized. MCL 500.1921. Appoints the commissioner of insurance
-as agent for service of process.
- Motorist, nonresident. MCL 257.403. Nonresident owners or operators of motor
-vehicles may be served by service on the secretary of state. See Tomkiw v
-Sauceda, 374 Mich 381, 132 NW2d 125 (1965) (service pursuant to statute valid
-only if nonresident actually receives summons and notice of service).
- Real estate agents, nonresident. MCL 339.2514. Provides for service on
-Department of Licensing and Regulation. See MCL 339.104.
- Savings and loan associations, foreign. MCL 491.1116. Provides for service on
-commissioner of the Financial Institutions Bureau of the Michigan Department of
-Commerce, or other officer designated by law to administer the Savings and
-Loan Act of 1980, MCL 491.102 et seq.
- Vessel, nonresident owner or operator. MCL 324.80175. Appoints secretary of
-state to receive process.
-March 2014 – 19 – Jeff Kirkpatrick – (517) 788-8898
 
-=== Page 21 ===
+              Assumed name, nonresident using. MCL 445.3. The court clerk in whose office
+                   the assumed name certificate is filed may receive process.
 
-Michigan Court Officers’ Civil Process Handbook
-A. OVERVIEW OF CIVIL PROCESS LAW
-1. Serving the Complaint
-ix. Service of process on violator of an act.
-When a person, including a nonresident of this state, engages in conduct prohibited or
+              Corporate surety, nonresident. To qualify to do business in Michigan, a
+                   nonresident corporate surety must appoint an attorney in Michigan to receive
+                   process. See MCR 3.604(B) (surety on bond given pursuant to court rules or RJA
+                   submits to jurisdiction of court).
+
+              Corporations, foreign. MCL 450.2015. Foreign corporations must provide the
+                   name of the resident agent and a statement that the agent is authorized to
+                   accept service of process.
+
+              Corporations, Michigan. MCL 450.701. Directors, managers, trustees, and other
+                   officers of Michigan corporations deemed to have appointed the resident agent of
+                   the corporation as their agent to accept service of process for actions arising out
+                   of their position as officer, etc., of the corporation.
+
+              Insurance companies, foreign. MCL 500.456. Provides for service of process on
+                   the commissioner of insurance.
+
+              Insurers, unauthorized. MCL 500.1921. Appoints the commissioner of insurance
+                   as agent for service of process.
+
+              Motorist, nonresident. MCL 257.403. Nonresident owners or operators of motor
+                   vehicles may be served by service on the secretary of state. See Tomkiw v
+                   Sauceda, 374 Mich 381, 132 NW2d 125 (1965) (service pursuant to statute valid
+                   only if nonresident actually receives summons and notice of service).
+
+              Real estate agents, nonresident. MCL 339.2514. Provides for service on
+                   Department of Licensing and Regulation. See MCL 339.104.
+
+              Savings and loan associations, foreign. MCL 491.1116. Provides for service on
+                   commissioner of the Financial Institutions Bureau of the Michigan Department of
+                   Commerce, or other officer designated by law to administer the Savings and
+                   Loan Act of 1980, MCL 491.102 et seq.
+
+              Vessel, nonresident owner or operator. MCL 324.80175. Appoints secretary of
+                   state to receive process.
+
+March 2014  – 19 –  Jeff Kirkpatrick – (517) 788-8898
+                               Michigan Court Officers’ Civil Process Handbook
+
+                                                                        A. OVERVIEW OF CIVIL PROCESS LAW
+                                                                                               1. Serving the Complaint
+
+                   ix. Service of process on violator of an act.
+
+             When a person, including a nonresident of this state, engages in conduct prohibited or
 made actionable by this act or a rule or order hereunder, whether or not the person has filed a
 consent to service of process, and personal jurisdiction over the person cannot otherwise be
 obtained in this state, that conduct shall be considered equivalent to an appointment of the
@@ -849,7 +1029,8 @@ receive service of a lawful process in any noncriminal action or proceeding agai
 or a successor, executor, or administrator which grows out of that conduct and which is brought
 under this act or any rule or order hereunder, with the same force and validity as if served on
 the person personally.
-Service may be made by leaving a copy of the process in the office of the
+
+             Service may be made by leaving a copy of the process in the office of the
 corporations and securities bureau of the department of commerce, but it is not effective unless
 the plaintiff, which may be the department in an action or proceeding instituted by it, forthwith
 sends notice of the service and a copy of the process by certified mail to the defendant or
@@ -857,40 +1038,49 @@ respondent at his or her last known address or takes other steps which are reaso
 calculated to give actual notice and the plaintiff's affidavit of compliance with this section is filed
 in the case on or before the return day of the process, if any or within such further time as the
 court allows. MCL 445.1539.
-Other Acts such as the Living Care Disclosure Act, the Condominium Act, and the
+
+             Other Acts such as the Living Care Disclosure Act, the Condominium Act, and the
 Mobile Home Commission Act have similar language.
-For a discussion of whether a defendant must actually receive registered mail where a
+
+             For a discussion of whether a defendant must actually receive registered mail where a
 statute authorizes substituted service by service on an agent, coupled with service by registered
 mail.
-f. Manner of Service—Service in the Discretion of the Court
-i. In General
-In addition to the basic methods for effecting service of process prescribed in MCR
+
+             f. Manner of Service—Service in the Discretion of the Court
+
+                   i. In General
+
+             In addition to the basic methods for effecting service of process prescribed in MCR
 2.105(A)–(H) (see–), service may be made in any other manner reasonably calculated to give
 the defendant actual notice of the proceedings and an opportunity to be heard. MCR 2.105(I).
 However, service may be made under this subrule only when the normal methods have not
 been effective, and only after the court has issued an order specifically allowing an alternate
 method of service.
-(1) On a showing that service of process cannot reasonably be made as provided by
-this rule, the court may by order permit service of process to be made in any
-other manner reasonably calculated to give the defendant actual notice of the
-proceedings and an opportunity to be heard.
-(2) A request for an order under the rule must be made in a verified motion dated not
-more than 14 days before it is filed. The motion must set forth sufficient facts to
-March 2014 – 20 – Jeff Kirkpatrick – (517) 788-8898
 
-=== Page 22 ===
+             (1) On a showing that service of process cannot reasonably be made as provided by
+                   this rule, the court may by order permit service of process to be made in any
+                   other manner reasonably calculated to give the defendant actual notice of the
+                   proceedings and an opportunity to be heard.
 
-Michigan Court Officers’ Civil Process Handbook
-A. OVERVIEW OF CIVIL PROCESS LAW
-1. Serving the Complaint
-show that process cannot be served under this rule and must state the
-defendant's address or last known address, or that no address of the defendant
-is known. If the name or present address of the defendant is unknown, the
-moving party must set forth facts showing diligent inquiry to ascertain it. A
-hearing on the motion is not required unless the court so directs.
-(3) Service of process may not be made under this subrule before entry of the
-court's order permitting it. Id.
-For service under this subrule to be valid, the plaintiff must show that service cannot
+             (2) A request for an order under the rule must be made in a verified motion dated not
+                   more than 14 days before it is filed. The motion must set forth sufficient facts to
+
+March 2014  – 20 –  Jeff Kirkpatrick – (517) 788-8898
+                               Michigan Court Officers’ Civil Process Handbook
+
+                                                                        A. OVERVIEW OF CIVIL PROCESS LAW
+                                                                                               1. Serving the Complaint
+
+                   show that process cannot be served under this rule and must state the
+                   defendant's address or last known address, or that no address of the defendant
+                   is known. If the name or present address of the defendant is unknown, the
+                   moving party must set forth facts showing diligent inquiry to ascertain it. A
+                   hearing on the motion is not required unless the court so directs.
+
+             (3) Service of process may not be made under this subrule before entry of the
+                   court's order permitting it. Id.
+
+             For service under this subrule to be valid, the plaintiff must show that service cannot
 reasonably be made under the other rules for service of process and that the proposed method
 of service is the best available method reasonably calculated to give actual notice. See Sechler
 v Vanhoey, 83 Mich App 252, 268 NW2d 364 (1978); Felix v Felix, 47 Mich App 744, 209 NW2d
@@ -898,38 +1088,47 @@ v Vanhoey, 83 Mich App 252, 268 NW2d 364 (1978); Felix v Felix, 47 Mich App 744,
 be permitted). The use of even ordinarily futile means of notice, like publication and posting, are
 constitutionally acceptable if no other available alternative is more likely to be effective. Krueger
 v Williams, 410 Mich 144, 300 NW2d 910 (1981).
-A common reason for using MCR 2.105(I) is that the defendant is intentionally
+
+             A common reason for using MCR 2.105(I) is that the defendant is intentionally
 evading service of process. See, e.g., Fowler v Anderson, 25 Mich App 404, 181 NW2d 671
 (1970). Service under this subrule is also appropriate where a defendant who gave identifying
 information (including the name of his or her insurance company) at the time of an automobile
 accident cannot be found at the time the action is started. Krueger; Silvas v Kelly, 136 Mich App
 790, 357 NW2d 772 (1984).
-Substituted service under MCR 2.105(I) is usually made in one of four ways:
-1. On an adult member of the defendant's family at the defendant's usual residence;
-2. On the defendant's insurance carrier, Krueger; Hayden v Gokenbach, 179 Mich
-App 594, 446 NW2d 332 (1989),amended on other grounds, 435 Mich 856, 456
-NW2d 714 (1990), after remand, 190 Mich App 489, 476 NW2d 446 (1991);
-3. By publication (used in extreme cases);
-4. By posting (used in extreme cases).The method chosen must be the method
-most likely to afford notice under the circumstances. To use a method that is
-unlikely to give notice, such as publication, the plaintiff must make a strong,
-specific factual showing that no other methods of service are more likely to give
-notice. Krueger.
-Service by publication and posting are available in all types of actions, not just those
+
+             Substituted service under MCR 2.105(I) is usually made in one of four ways:
+
+             1. On an adult member of the defendant's family at the defendant's usual residence;
+
+             2. On the defendant's insurance carrier, Krueger; Hayden v Gokenbach, 179 Mich
+                   App 594, 446 NW2d 332 (1989),amended on other grounds, 435 Mich 856, 456
+                   NW2d 714 (1990), after remand, 190 Mich App 489, 476 NW2d 446 (1991);
+
+             3. By publication (used in extreme cases);
+
+             4. By posting (used in extreme cases).The method chosen must be the method
+                   most likely to afford notice under the circumstances. To use a method that is
+                   unlikely to give notice, such as publication, the plaintiff must make a strong,
+                   specific factual showing that no other methods of service are more likely to give
+                   notice. Krueger.
+
+             Service by publication and posting are available in all types of actions, not just those
 that may be characterized as in rem. See id.
-MCR 2.106 specifies the requirements for making service by publication as well as for
+
+             MCR 2.106 specifies the requirements for making service by publication as well as for
 making all methods of alternative service in the discretion of the court. For a discussion of the
 additional requirements for service of process by publication and posting see. Service by
-March 2014 – 21 – Jeff Kirkpatrick – (517) 788-8898
 
-=== Page 23 ===
+March 2014  – 21 –  Jeff Kirkpatrick – (517) 788-8898
+                               Michigan Court Officers’ Civil Process Handbook
 
-Michigan Court Officers’ Civil Process Handbook
-A. OVERVIEW OF CIVIL PROCESS LAW
-1. Serving the Complaint
+                                                                        A. OVERVIEW OF CIVIL PROCESS LAW
+                                                                                               1. Serving the Complaint
+
 posting is no more or less likely to inform an absent defendant of the proceedings than is notice
 by publication, but it is usually less expensive.
-Service on an insurer of an alleged tortfeasor has been allowed where the defendant
+
+             Service on an insurer of an alleged tortfeasor has been allowed where the defendant
 is unavailable for service. Krueger. Prior negotiations between the plaintiff and the defendant's
 liability carrier are not necessary to obtain substituted service on the liability insurer when the
 defendant cannot be located. Hayden (reversed and remanded to determine whether alleged
@@ -937,20 +1136,24 @@ insured covered under policy; if covered, service on insurer proper; if not cove
 quashing service proper); Silvas. Note that MCR 2.105(F) does not apply to this situation. That
 court rule applies to service on an insurer when the insurer itself is the defendant in an action.
 See for further discussion.
-ii. Procedure for Obtaining an Order for Service in the Discretion of the
-Court
-Under MCR 2.105(I)(2), an order for substituted service is issued after a plaintiff files
+
+                   ii. Procedure for Obtaining an Order for Service in the Discretion of the
+                          Court
+
+             Under MCR 2.105(I)(2), an order for substituted service is issued after a plaintiff files
 an ex parte motion (or affidavit) that states facts showing that process cannot be served under
 the provisions of MCR 2.105(A)–(H). The motion must be verified not more than 14 days before
 it is filed. Presumably, a plaintiff could file a nonverified motion with an affidavit attached. If the
 defendant's name or present address is unknown, the motion must state facts showing diligent
 inquiry to ascertain it. The motion must indicate the defendant's last known address if available.
-MCR 2.119(B) governs the contents of affidavits. See for further discussion.
+
+             MCR 2.119(B) governs the contents of affidavits. See for further discussion.
 Verification of pleadings is governed by MCR 2.114(A). This rule also applies to other papers,
 including motions, signed by parties and attorneys. MCR 2.113(A). See for further discussion.
 The attorney's signature on the motion, as required by MCR 2.119(A)(1)(d), is subject to the
 requirements and sanctions of MCR 2.114(E).
-The facts supporting the application for service in the discretion of the court must be
+
+             The facts supporting the application for service in the discretion of the court must be
 sufficiently detailed. In Krueger v Williams, 410 Mich 144, 300 NW2d 910 (1981), the supreme
 court stated that the verified motion or its supporting affidavits must show two things: that
 service of process could not reasonably have been made according to the methods prescribed
@@ -959,26 +1162,31 @@ publication or another method requested by the plaintiff. See also Hamilton v Go
 App 289, 354 NW2d 323 (1984) (seven attempts at personal service in four months sufficient
 grounds to seek service in court's discretion); Prosoli v Mullins, 111 Mich App 8, 314 NW2d 508
 (1981) (specificity required in affidavit in support of motion for service in court's discretion).
-No hearing is held on the motion unless the court requires one. Proof of service made
+
+             No hearing is held on the motion unless the court requires one. Proof of service made
 under this court rule is governed by MCR 2.104. See for further discussion. Proof of service by
 publication or posting is governed by MCR 2.106(G).
-See for an ex parte verified motion for service of process in the discretion of the court
+
+             See for an ex parte verified motion for service of process in the discretion of the court
 and for an affidavit in support of motion for service of process on defendant's insurance carrier.
-March 2014 – 22 – Jeff Kirkpatrick – (517) 788-8898
 
-=== Page 24 ===
+March 2014  – 22 –  Jeff Kirkpatrick – (517) 788-8898
+                               Michigan Court Officers’ Civil Process Handbook
 
-Michigan Court Officers’ Civil Process Handbook
-A. OVERVIEW OF CIVIL PROCESS LAW
-1. Serving the Complaint
+                                                                        A. OVERVIEW OF CIVIL PROCESS LAW
+                                                                                               1. Serving the Complaint
+
 See for an order for service at defendant's usual place of residence or on the insurance carrier.
 See SCAO form MC 304, Order for Alternative Service.
-iii. Service of Process by Publication or Posting
-The procedures for obtaining an order for service by publication and by posting are
+
+                   iii. Service of Process by Publication or Posting
+
+             The procedures for obtaining an order for service by publication and by posting are
 prescribed in MCR 2.105(I). MCR 2.106(B). See for further discussion. MCR 2.106 specifies
 additional requirements for orders and for proof of service when service by publication or
 posting is allowed.
-A plaintiff seeking authorization for substituted service by publication or posting must
+
+             A plaintiff seeking authorization for substituted service by publication or posting must
 request that the court determine whether service of the order for publication must also be made
 by registered mail. Under MCR 2.106(D)(2), (E)(2), a plaintiff who makes service by publication
 and posting must also send the defendant a copy of the order allowing such service, by
@@ -987,7 +1195,8 @@ of the defendant. The court will decide whether mailing is required in its rulin
 service by publication or posting. If service by registered mail is required by the court, such
 service must be made before the date of the last publication or before the last week of posting.
 MCR 2.106(B).
-The court rules specify the contents of an order for publication or posting: (1)The
+
+             The court rules specify the contents of an order for publication or posting: (1)The
 order directing that notice be given to a defendant under this rule must include (a) the name of
 the court,(b) the names of the parties,(c) a statement describing the nature of the
 proceedings,(d) directions about where and when to answer or take other action permitted by
@@ -997,25 +1206,27 @@ the unknown defendants to the matter to be litigated in the best way possible, a
 unknown claimants, unknown owners, or unknown heirs, devisees, or assignees of a named
 person. MCR 2.106(C). See for an order for service of process by publication. See also SCAO
 MC 307, Order for Service by Publication/Posting and Notice of Action.
-Service by publication is made by publishing a copy of the order allowing such service
+
+             Service by publication is made by publishing a copy of the order allowing such service
 once each week for three consecutive weeks (or longer if the court requires), in a newspaper in
 the county where the defendant resides, if known, or in the county where the action is pending.
 MCR 2.106(D)(1). The term newspaper is defined in MCR 2.106(F).
-Service by posting is made by posting a copy of the order in the courthouse and in
+
+             Service by posting is made by posting a copy of the order in the courthouse and in
 two or more other public places as the court may direct for three continuous weeks, or longer if
 the court so orders. MCR 2.106(E)(1). The order must designate who is to post the notice and
 file proof of posting. Persons who may be designated to post the notice are listed in MCR
 2.103(B): a sheriff or deputy sheriff, a bailiff, a court officer appointed by the court for the
 purpose of service, a Michigan State Police officer in an action in which the state is a party, or a
 police officer in an action in which the police officer's city or village is a party. MCR 2.106(E).
-March 2014 – 23 – Jeff Kirkpatrick – (517) 788-8898
 
-=== Page 25 ===
+March 2014  – 23 –  Jeff Kirkpatrick – (517) 788-8898
+                               Michigan Court Officers’ Civil Process Handbook
 
-Michigan Court Officers’ Civil Process Handbook
-A. OVERVIEW OF CIVIL PROCESS LAW
-1. Serving the Complaint
-Proof of service for service of process made by publication or posting is controlled by
+                                                                        A. OVERVIEW OF CIVIL PROCESS LAW
+                                                                                               1. Serving the Complaint
+
+             Proof of service for service of process made by publication or posting is controlled by
 the court rules: (1)Publication must be proven by an affidavit of the publisher or the publisher's
 agent (a) stating facts establishing the qualification of the newspaper in which the order was
 published,(b) setting out a copy of the published order, and(c) stating the dates on which it was
@@ -1025,22 +1236,28 @@ in a conspicuous place open to the public and in the other places as ordered by 
 court.(3)Mailing must be proven by affidavit. The affiant must attach a copy of the order as
 mailed, and a return receipt.MCR 2.106(G). See also MCR 2.106(D)(2) and (E)(2), which
 provide that the moving party is responsible for mailing and proof of mailing.
-g. Service Outside the State
-The limits to which Michigan courts may exercise jurisdiction over defendants is
+
+             g. Service Outside the State
+
+             The limits to which Michigan courts may exercise jurisdiction over defendants is
 governed by the U.S. Constitution and the Michigan Constitution, as defined in RJA chapter 7.
-(1) Provisions for service of process contained in these rules are intended to satisfy
-the due process requirement that a defendant be informed of an action by the
-best means available under the circumstances. These rules are not intended to
-limit or expand the jurisdiction given the Michigan courts over a defendant. The
-jurisdiction of a court over a defendant is governed by the United States
-Constitution and the constitution and laws of the State of Michigan. See MCL
-600.701 et seq.
-(2) There is no territorial limitation on the range of process issued by a Michigan
-court.
-(3) An action shall not be dismissed for improper service of process unless the
-service failed to inform the defendant of the action within the time provided in
-these rules for service. MCR 2.105(J).
-The issue of when Michigan courts may exercise personal jurisdiction over
+
+             (1) Provisions for service of process contained in these rules are intended to satisfy
+                   the due process requirement that a defendant be informed of an action by the
+                   best means available under the circumstances. These rules are not intended to
+                   limit or expand the jurisdiction given the Michigan courts over a defendant. The
+                   jurisdiction of a court over a defendant is governed by the United States
+                   Constitution and the constitution and laws of the State of Michigan. See MCL
+                   600.701 et seq.
+
+             (2) There is no territorial limitation on the range of process issued by a Michigan
+                   court.
+
+             (3) An action shall not be dismissed for improper service of process unless the
+                   service failed to inform the defendant of the action within the time provided in
+                   these rules for service. MCR 2.105(J).
+
+             The issue of when Michigan courts may exercise personal jurisdiction over
 nonresidents is discussed in–. Essentially, service of process can be made once the
 nonresident is determined to have any of the contacts, ties, or relations with the state of
 Michigan which, under the RJA, enable Michigan courts to exercise general or limited personal
@@ -1049,265 +1266,324 @@ personal jurisdiction in effect provide bases for service of process on a nonres
 such jurisdiction. Once those jurisdictional requirements have been met, service of process may
 be made in any manner provided by the court rules. See– for a discussion of the methods of
 service of process permitted by the court rules.
-h. Proof of Service of Process
-MCR 2.104 authorizes three alternative methods of acceptable proof of service of
+
+             h. Proof of Service of Process
+
+             MCR 2.104 authorizes three alternative methods of acceptable proof of service of
 process:
-1. written acknowledgment by the person served;
-March 2014 – 24 – Jeff Kirkpatrick – (517) 788-8898
 
-=== Page 26 ===
+             1. written acknowledgment by the person served;
 
-Michigan Court Officers’ Civil Process Handbook
-A. OVERVIEW OF CIVIL PROCESS LAW
-1. Serving the Complaint
-2. certificate of a sheriff, an officer, an appointed court officer, or an attorney for a
-party if service is made within Michigan; or
-3. an affidavit of any other person making service, or of a person making service
-outside Michigan. The party requesting that the summons be issued is
-responsible for filing proof of service. See MCR 2.104(C); see also MCL
-600.1910.
-A certificate of service can be used only if the service was made in Michigan. A sheriff
+March 2014  – 24 –  Jeff Kirkpatrick – (517) 788-8898
+                               Michigan Court Officers’ Civil Process Handbook
+
+                                                                        A. OVERVIEW OF CIVIL PROCESS LAW
+                                                                                               1. Serving the Complaint
+
+             2. certificate of a sheriff, an officer, an appointed court officer, or an attorney for a
+                   party if service is made within Michigan; or
+
+             3. an affidavit of any other person making service, or of a person making service
+                   outside Michigan. The party requesting that the summons be issued is
+                   responsible for filing proof of service. See MCR 2.104(C); see also MCL
+                   600.1910.
+
+             A certificate of service can be used only if the service was made in Michigan. A sheriff
 or officer can file a certificate of service only if he or she served process in the county or other
 jurisdiction in which the officer has authority. In other situations, an affidavit of service must be
 filed.
-An acknowledgment of service must be dated and signed by the person to whom the
+
+             An acknowledgment of service must be dated and signed by the person to whom the
 service is directed or by a person authorized under the rules to receive the service of process.
 MCR 2.104(A)(1). See for an acknowledgment of service.
-An affidavit of service made in another state must comply with MCL 600.2102.
-MCR 2.104 requires that the method of service be stated specifically, including the
+
+             An affidavit of service made in another state must comply with MCL 600.2102.
+
+             MCR 2.104 requires that the method of service be stated specifically, including the
 manner, time, date, and place of service. The place of service must be described by giving the
 address where the service was made or by giving another description of the location where an
 address is not available. An affidavit of service must state the process server's official capacity,
 if any. MCR 2.104(A)(3).
-Forms for proof of service and acknowledgment of service are on the back of SCAO
+
+             Forms for proof of service and acknowledgment of service are on the back of SCAO
 form MC 01. Separate forms or documents prepared by plaintiff's counsel or the person making
 service will be required when proving service of process that was made by two different
 methods. For example, MCR 2.105(C)(2), governing service on a partnership, requires personal
 service on a person in charge of a business establishment and registered mail to the
 partnership's principal office.
-Failure to make proof of service does not affect the validity of the service. MCR
+
+             Failure to make proof of service does not affect the validity of the service. MCR
 2.104(B). However, if proof of service is not filed and the defendant does not file any pleadings
 or other documents within 91 days after the complaint was filed, the action will be dismissed
 automatically regarding any defendant for whom the file does not indicate that service of
 process has been made. MCR 2.102(E)(1), (2). The dismissal can be set aside only on
 stipulation of the parties or if all three of the following are true:
-1. service of process was in fact timely made,
-2. proof of service was filed or the failure to file is excused for good cause shown,
-and
-3. the motion to set aside the dismissal was filed within 28 days after "notice of the
-order of dismissal was given, or, if notice of dismissal was not given,” 28 days
-after plaintiff learned of the dismissal. MCR 2.102(F).
-March 2014 – 25 – Jeff Kirkpatrick – (517) 788-8898
 
-=== Page 27 ===
+             1. service of process was in fact timely made,
 
-Michigan Court Officers’ Civil Process Handbook
-A. OVERVIEW OF CIVIL PROCESS LAW
-2. Service of Papers After Action Commenced
-Defects in the return of service may be corrected by amendment, which is liberally
+             2. proof of service was filed or the failure to file is excused for good cause shown,
+                   and
+
+             3. the motion to set aside the dismissal was filed within 28 days after "notice of the
+                   order of dismissal was given, or, if notice of dismissal was not given,” 28 days
+                   after plaintiff learned of the dismissal. MCR 2.102(F).
+
+March 2014  – 25 –  Jeff Kirkpatrick – (517) 788-8898
+                               Michigan Court Officers’ Civil Process Handbook
+                                                                        A. OVERVIEW OF CIVIL PROCESS LAW
+
+                                                                  2. Service of Papers After Action Commenced
+
+             Defects in the return of service may be corrected by amendment, which is liberally
 allowed.
-See regarding proof of service for service of process made by publication or posting.
-2. Service of Papers After Action Commenced
-a. In General
-MCR 2.107 contains the requirements for the service of written papers after an action
+
+             See regarding proof of service for service of process made by publication or posting.
+
+      2. Service of Papers After Action Commenced
+
+             a. In General
+
+             MCR 2.107 contains the requirements for the service of written papers after an action
 is commenced. See also MCL 600.1965. Unless there is a different provision in the rules for a
 specific situation, any party who has filed a pleading, an appearance, or a motion is entitled to
 be served with every written paper filed thereafter. A nonparty who has filed a motion or
 appeared in response to a motion must be served with all papers that relate to that motion.
 MCR 2.107(A)(1), (4). This might occur, for example, when a nonparty files a motion to quash a
 subpoena or to prevent discovery.
-After a default has been entered against a party, further service of papers need not be
+
+             After a default has been entered against a party, further service of papers need not be
 made on that party except in three instances:
-1. The defaulted party must be served with documents relating to the default,
-including notice of the default pursuant to MCR 2.603(A)(2), and notice of the
-request for default judgment when required by MCR 2.603(B)(1)(a), as modified
-by subrule (B)(1)(d).
-2. The defaulted party is entitled to service of all subsequent papers if the defaulted
-party has entered an appearance or a written demand for service of papers.
-MCR 2.107(A)(2).
-3. Any pleading that states a new claim for relief against the defaulted party must
-be served on the defaulted party in the same manner provided for service of the
-summons and complaint, by personal service or by another method of service
-permitted under MCR 2.105. MCR 2.107(A)(2).
-b. Manner of Service
-Because there is no separate provision in the court rules governing service of
+
+             1. The defaulted party must be served with documents relating to the default,
+                   including notice of the default pursuant to MCR 2.603(A)(2), and notice of the
+                   request for default judgment when required by MCR 2.603(B)(1)(a), as modified
+                   by subrule (B)(1)(d).
+
+             2. The defaulted party is entitled to service of all subsequent papers if the defaulted
+                   party has entered an appearance or a written demand for service of papers.
+                   MCR 2.107(A)(2).
+
+             3. Any pleading that states a new claim for relief against the defaulted party must
+                   be served on the defaulted party in the same manner provided for service of the
+                   summons and complaint, by personal service or by another method of service
+                   permitted under MCR 2.105. MCR 2.107(A)(2).
+
+             b. Manner of Service
+
+             Because there is no separate provision in the court rules governing service of
 pleadings asserting new and additional claims, except those asserted against defaulted parties
 (see), it would appear that such documents may be served in the same manner provided for all
 other subsequent papers. However, it is wise to serve all pleadings asserting new or additional
 claims in the same manner the original summons and complaint were served, to preclude the
 possibility of attack by a motion for summary disposition.
-The rules for serving papers after the original service of the complaint and summons
+
+             The rules for serving papers after the original service of the complaint and summons
 are specified in MCR 2.107(B)–(D). If an attorney has appeared for a party, subsequent papers
 must be served on the attorney. MCR 2.107(B)(1). There are three exceptions to that rule:
-March 2014 – 26 – Jeff Kirkpatrick – (517) 788-8898
 
-=== Page 28 ===
+March 2014  – 26 –  Jeff Kirkpatrick – (517) 788-8898
+                               Michigan Court Officers’ Civil Process Handbook
+                                                                        A. OVERVIEW OF CIVIL PROCESS LAW
 
-Michigan Court Officers’ Civil Process Handbook
-A. OVERVIEW OF CIVIL PROCESS LAW
-2. Service of Papers After Action Commenced
-1. A notice of contempt proceedings must be personally delivered to the party
-unless the court orders otherwise. MCR 2.107(B)(1)(b).
-2. After final judgment and after the time for appeal of right has passed, papers
-must be served on the party unless the rule governing the particular
-postjudgment procedure specifically allows service on an attorney. MCR
-2.107(B)(1)(c).
-3. The court may order service on the party. MCR 2.107(B)(1)(d).
-Where two or more attorneys represent one party, service on one of the attorneys is
+                                                                  2. Service of Papers After Action Commenced
+
+             1. A notice of contempt proceedings must be personally delivered to the party
+                   unless the court orders otherwise. MCR 2.107(B)(1)(b).
+
+             2. After final judgment and after the time for appeal of right has passed, papers
+                   must be served on the party unless the rule governing the particular
+                   postjudgment procedure specifically allows service on an attorney. MCR
+                   2.107(B)(1)(c).
+
+             3. The court may order service on the party. MCR 2.107(B)(1)(d).
+
+             Where two or more attorneys represent one party, service on one of the attorneys is
 sufficient. An attorney who represents more than one party is entitled to service of only one
 copy of a paper. MCR 2.107(B)(2).
-Service on an attorney is made by delivery or by mailing to the attorney's last known
+
+             Service on an attorney is made by delivery or by mailing to the attorney's last known
 business address or, if none, to his or her last known residence address. MCR 2.107(C).
 First-class mail is sufficient, and service is complete upon mailing. MCR 2.107(C)(3); Wilson v
 General Motors Corp, 183 Mich App 21, 454 NW2d 405 (1990).
-When a party has no attorney, service may be made by delivering or mailing a copy of
+
+             When a party has no attorney, service may be made by delivering or mailing a copy of
 subsequent pleadings to the party. MCR 2.107(C). Delivery to a party means handing it to the
 party personally or leaving it at the party's usual residence with some person of suitable age
 and discretion residing there. MCR 2.107(C)(2). Mailing is by first-class mail. MCR 2.107(C)(3).
-In circumstances where service cannot be made on the party or the party's attorney, a
+
+             In circumstances where service cannot be made on the party or the party's attorney, a
 party may file an ex parte motion seeking an alternate method of service. MCR 2.107(E); see
 also MCL 600.1972.
-Time for service of papers varies with the nature of the paper served and the type of
+
+             Time for service of papers varies with the nature of the paper served and the type of
 service used (personal or mail). See for a table of times when pleadings and motions must be
 filed. See MCR 2.108 (time for service and filing of various pleadings and other papers); MCR
 2.119(C) (motions); MCR 2.602(B), (D) (orders and judgments).
-c. Numerous Parties
-MCR 2.107(F) establishes a procedure to relax the service requirement in cases
+
+             c. Numerous Parties
+
+             MCR 2.107(F) establishes a procedure to relax the service requirement in cases
 where there are multiple parties on whom papers must be served. It authorizes the court to
 dispense with service of papers between parties on the same side and to permit responses to
 pleadings to be served only on the pleading party and indicates the effect of such an order on
 specific documents. The court on its own initiative, or a party by motion, may invoke the rule.
 See also MCL 600.1973.
-In an action in which there is an unusually large number of parties on the same side,
+
+             In an action in which there is an unusually large number of parties on the same side,
 the court on motion or on its own initiative may order that
-(1) they need not serve their papers on each other;
-March 2014 – 27 – Jeff Kirkpatrick – (517) 788-8898
 
-=== Page 29 ===
+             (1) they need not serve their papers on each other;
 
-Michigan Court Officers’ Civil Process Handbook
-A. OVERVIEW OF CIVIL PROCESS LAW
-2. Service of Papers After Action Commenced
-(2) responses to their pleadings need only be served on the party to whose pleading
-the response is made;
-(3) a cross-claim, counterclaim, or allegation in an answer demanding a reply is
-deemed denied by the parties not served; and
-(4) the filing of a pleading and service on an adverse party constitutes notice of it to
-all parties.
-A copy of the order must be served on all parties in the manner the court directs. MCR
+March 2014  – 27 –  Jeff Kirkpatrick – (517) 788-8898
+                               Michigan Court Officers’ Civil Process Handbook
+                                                                        A. OVERVIEW OF CIVIL PROCESS LAW
+
+                                                                  2. Service of Papers After Action Commenced
+
+             (2) responses to their pleadings need only be served on the party to whose pleading
+                   the response is made;
+
+             (3) a cross-claim, counterclaim, or allegation in an answer demanding a reply is
+                   deemed denied by the parties not served; and
+
+             (4) the filing of a pleading and service on an adverse party constitutes notice of it to
+                   all parties.
+
+             A copy of the order must be served on all parties in the manner the court directs. MCR
 2.107(F). See for a motion to alter service of papers between defendants and for an order
 altering requirements of service of papers.
-d. Proof of Service
-Proof of service of papers subsequent to the initial pleadings may be by a written
+
+             d. Proof of Service
+
+             Proof of service of papers subsequent to the initial pleadings may be by a written
 acknowledgment of service, an affidavit of the person making the service, a statement regarding
 the service verified under MCR 2.114(A), or other proof satisfactory to the court. MCR 2.107(D).
 Such proof may be included at the end of the document served rather than in a separate
 document. Proof of service must be filed promptly, at least at or before a related hearing. Id.
-e. Effect of Failure to Serve
-Failure to serve papers on a party entitled to service may adversely affect the finality
+
+             e. Effect of Failure to Serve
+
+             Failure to serve papers on a party entitled to service may adversely affect the finality
 of an order or judgment. In Petrosian v Frizell, 25 Mich App 141, 181 NW2d 10 (1970), the court
 held that in spite of settlements and stipulations between original parties to the litigation,
 including the employer of the injured employee and the third party, the worker's compensation
 insurer retained its cause of action where the insurer had intervened in the litigation between the
 original parties but had never been given notice of the settlement and stipulations.
-Additionally, sanctions exist for filing improper documents, such as proof of service
+
+             Additionally, sanctions exist for filing improper documents, such as proof of service
 that was not in fact made. See MCR 2.114(E) (sanctions for signing pleading in violation of court
 rule that indicates import of attorney's signature on papers filed in actions).
-March 2014 – 28 – Jeff Kirkpatrick – (517) 788-8898
 
-=== Page 30 ===
+March 2014  – 28 –  Jeff Kirkpatrick – (517) 788-8898
+                               Michigan Court Officers’ Civil Process Handbook
 
-Michigan Court Officers’ Civil Process Handbook
-B. MISCELLANEOUS TIPS AND CASE LAW
+                                                                   B. MISCELLANEOUS TIPS AND CASE LAW
+
 B. MISCELLANEOUS TIPS AND CASE LAW
 1. If you are lawfully invited into the defendant’s dwelling, you may search room to room for
-assets to satisfy your execution. Once you are lawfully in the home, you may use
-reasonable force, if necessary, to accomplish this. Vanden Bogert v. May 55 NW2d 115;
-334 Mich 606 (1952) and Silverman v. Stein, 242 Mich 64 (1928) and Reams v. Duby 244
-NW2d 440; 69 Mich App. 265 (1976).
+
+      assets to satisfy your execution. Once you are lawfully in the home, you may use
+      reasonable force, if necessary, to accomplish this. Vanden Bogert v. May 55 NW2d 115;
+      334 Mich 606 (1952) and Silverman v. Stein, 242 Mich 64 (1928) and Reams v. Duby 244
+      NW2d 440; 69 Mich App. 265 (1976).
 2. You may break and enter any building on the defendant’s premises that is not attached to
-the dwelling for the purpose of executing the execution. Silverman v. Stein 217 NW 785;
-242 Mich 64 (1928). As an example, you may break and enter into a detached garage.
+      the dwelling for the purpose of executing the execution. Silverman v. Stein 217 NW 785;
+      242 Mich 64 (1928). As an example, you may break and enter into a detached garage.
 3. If the building is a combination of a store and a dwelling, the serving officer may break
-down the common outer entrance to the store but may not break down the dwelling
-entrance. Stearnes v. Vincent, 50 Mich 209 (1883).
+      down the common outer entrance to the store but may not break down the dwelling
+      entrance. Stearnes v. Vincent, 50 Mich 209 (1883).
 4. If goods that were available for levy are lost because the officer fails to levy the execution,
-the officer is liable to the judgment creditor for damages. Beard v Clippert 63 Mich 716, 30
-NW 323 (1886).
+      the officer is liable to the judgment creditor for damages. Beard v Clippert 63 Mich 716, 30
+      NW 323 (1886).
 5. Installment payment orders do not apply to businesses, including proprietorships,
-partnerships, or corporations. Installment payment orders only stop garnishments against
-wages. A execution can still issue even if there is an installment payment order on file.
-Installment payment orders do not apply to self-employed individuals etc...
+      partnerships, or corporations. Installment payment orders only stop garnishments against
+      wages. A execution can still issue even if there is an installment payment order on file.
+      Installment payment orders do not apply to self-employed individuals etc...
 6. If a garnishee defendant fails to disclose, you may obtain a judgment against that company
-etc...
+      etc...
+
 C. USING EXECUTIONS TO COLLECT DIVORCE JUDGMENT OR CHILD SUPPORT
-A divorce judgment containing a money judgment need not state specifically that
+
+             A divorce judgment containing a money judgment need not state specifically that
 money judgment may be enforced by execution since the right to execute is implicit in any
 judgment for money. Landy v. Landy (1984) 345 N.W.2d 720, 131 Mich.App. 519.
-A trial court's order may merely states that the judgment is “subject” to various
+
+             A trial court's order may merely states that the judgment is “subject” to various
 proceeds of the divorce. The trial court does possess the power to order that the fees and costs
 due for services be secured out of the judgment or recovery in a particular suit. Souden v.
 Souden, — N.W.2d —, 2013 WL 6670572 (Mich.App. December 13, 2013); George v. Sandor
 M. Gelman, P.C., 201 Mich.App. 474, 506 N.W.2d 583 (Mich.App. 1993).
+
 D. DEPUTY OR COURT OFFICER CAN TRESPASS TO SERVE EXECUTION
-A sheriff's process protects him from liability for the mere entry of premises to seize
+
+             A sheriff's process protects him from liability for the mere entry of premises to seize
 property, where there is no other act to make it wrongful. Finn v. Peck, 47 Mich 208.
-March 2014 – 29 – Jeff Kirkpatrick – (517) 788-8898
 
-=== Page 31 ===
+March 2014  – 29 –  Jeff Kirkpatrick – (517) 788-8898
+                               Michigan Court Officers’ Civil Process Handbook
 
-Michigan Court Officers’ Civil Process Handbook
-E. MOTOR VEHICLES—TITLE JOINTLY HELD
-A deputy sheriff does not render himself liable in trespass for proceeding in good faith
+                                                                E. MOTOR VEHICLES—TITLE JOINTLY HELD
+
+             A deputy sheriff does not render himself liable in trespass for proceeding in good faith
 to serve a justice's execution after he has been told by defendant that an appeal has been
 taken, where the justice insisted that the appeal had not been perfected; he has a right to rely
 upon his process until he is officially notified of its having been superseded. Foster v. Wiley, 27
 Mich 244.
-A sheriff will be protected in the service of an attachment fair on its face and
+
+             A sheriff will be protected in the service of an attachment fair on its face and
 appearing to have been issued by a magistrate having jurisdiction of the subject matter. People
 v. Rix, 6 Mich 144; Michels v. Stork, 44 Mich 2.
-Generally, a judgment or order of court having apparent jurisdiction, if valid on its face,
+
+             Generally, a judgment or order of court having apparent jurisdiction, if valid on its face,
 completely protects a sheriff or constable from liability or any proper or necessary act done in its
 execution, even though judgment or order is otherwise void. Reinecke v. Sheehy, 47 Mich App
 250.
-In tort action against court officer grounded on officer's execution of writ of restitution
+
+             In tort action against court officer grounded on officer's execution of writ of restitution
 which was valid on its face but based on void judgment, allegation that officer had personal
 knowledge of void judgment precluded grant of summary judgment for failure to state claim
 upon which relief could be granted. Reinecke v. Sheehy, 47 Mich App 250.
-The rule that a ministerial officer is protected in the execution of process, issued by a
+
+             The rule that a ministerial officer is protected in the execution of process, issued by a
 court officer having jurisdiction of the subject matter, and of the process, if it is regular on its
 face and does not disclose a want of jurisdiction, merely protects him from personal
 responsibility as a trespasser or wrongdoer; it does not confer upon him any right of or to
 property, and he may be sued in replevin for goods wrongfully taken. Beach v. Botsford, 1
 Doug 199; Le Roy v. East Saginaw City Ry., 18 Mich 233; Adams v. Hubbard, 30 Mich 104;
 Gidday v. Witherspoon, 35 Mich 368.
+
 E. MOTOR VEHICLES—TITLE JOINTLY HELD
-I have had several people ask me about levying on motor vehicles held by husband
+
+             I have had several people ask me about levying on motor vehicles held by husband
 and wife with full rights to survivor. In my office, this is what I tell my court officers:
-Many people believe that this property is not subject to execution (i.e. it is exempt).
+
+             Many people believe that this property is not subject to execution (i.e. it is exempt).
 My research does not disclose any particular case on point involving these specific facts but I
 believe that the argument that the property is exempt is incorrect and that accordingly, you
 should be entitled, or I should say the judgment creditor should be entitled to, at a minimum, ½
 of the interest of the vehicle or at least a trial on the issue as to the extent of the judgment
 debtor's interest in the subject vehicle.
-An estate held by husband and wife is nothing more than a joint tenancy by husband
+
+             An estate held by husband and wife is nothing more than a joint tenancy by husband
 and wife commonly known in Michigan as a tenancy by the entireties. The real question here is
 not one of whether you can hold personal property jointly or as husband and wife, but whether
 or not if you hold such property in this form, is it exempt from execution.
-March 2014 – 30 – Jeff Kirkpatrick – (517) 788-8898
 
-=== Page 32 ===
+March 2014  – 30 –  Jeff Kirkpatrick – (517) 788-8898
+                               Michigan Court Officers’ Civil Process Handbook
 
-Michigan Court Officers’ Civil Process Handbook
-E. MOTOR VEHICLES—TITLE JOINTLY HELD
-As you know, exemptions from execution are statutory and there is no recognized
+                                                                E. MOTOR VEHICLES—TITLE JOINTLY HELD
+
+             As you know, exemptions from execution are statutory and there is no recognized
 common law exemption to execution.
-The first time that we see an exemption for property held by tenants by the entireties
+
+             The first time that we see an exemption for property held by tenants by the entireties
 is under real estate which simply states that property held by husband and wife is not subject to
 satisfaction of a judgment incurred by only one of the joint owners. In other words, you have to
 have a judgment against both husband and wife in order to proceed to satisfy a judgment
 against that real estate.
-Nowhere in any statute can you find a similar exemption in personal property of the
+
+             Nowhere in any statute can you find a similar exemption in personal property of the
 subject matter that we are talking about (i.e. a motor vehicle). There are specific instances
 however where statutes recognize property held by husband and wife. Chapter 557 of the
 Michigan Compiled Laws deals with property of husband and wife and specifically MCL 557.151
@@ -1317,42 +1593,50 @@ indebtedness. That statute specifically says that if we are dealing with this ki
 that property is subject to the same restrictions, consequences and conditions as are incident to
 the ownership of real estate held jointly by husband and wife. In other words, the same
 exemption that would apply to real estate would apply to bonds, certificates, etc.
-It is interesting to note that the preamble to this statute states:
-An act to provide for the joint ownership by husband and wife in joint tenancy of certain
-classes of personal property with rights of survivorship.
-It is clear that the legislature's intent here was to create a special class of personal
+
+             It is interesting to note that the preamble to this statute states:
+
+      An act to provide for the joint ownership by husband and wife in joint tenancy of certain
+      classes of personal property with rights of survivorship.
+
+             It is clear that the legislature's intent here was to create a special class of personal
 property in which they recognized the joint tenancy by husband and wife which would thereby
 render the property exempt in the case where you have a judgment creditor of only one of the
 joint owners. Again, there exists no similar statute for motor vehicles.
-It is also interesting to note MCL 487.711 et seq. which is commonly referred to as the
+
+             It is also interesting to note MCL 487.711 et seq. which is commonly referred to as the
 statutory joint account. In that statute, it specifically outlines the rights and responsibilities of
 each party to a statutory joint account which is typically a joint tenancy with rights of
 survivorship. Essentially, what the statute says is that to the extent that ownership can be
 shown, a creditor of only one of the joint tenants can prevail against the account to the extent of
 the judgment debtor's interest.
-I can give you several cases; some of which are for and some of which are against
+
+             I can give you several cases; some of which are for and some of which are against
 you the court officer, but again, none of them deal with the specific issue at hand. Some of the
 cases deal with garnishments of joint bank accounts, and some of them deal with garnishments
 of proceeds from real property which invoke the real property rule of exemption.
-In a bankruptcy case, under the statutory joint account which I cited above, the court
+
+             In a bankruptcy case, under the statutory joint account which I cited above, the court
 essentially said while there is not a hard and fast rule that creditors are always entitled to one-
 half a joint account, they are allowed to proceed to trial in order to investigate or determine what
 the interest of the judgment debtor is in order to reach that portion. It could be zero; it could be
-March 2014 – 31 – Jeff Kirkpatrick – (517) 788-8898
 
-=== Page 33 ===
+March 2014  – 31 –  Jeff Kirkpatrick – (517) 788-8898
+                               Michigan Court Officers’ Civil Process Handbook
 
-Michigan Court Officers’ Civil Process Handbook
-E. MOTOR VEHICLES—TITLE JOINTLY HELD
+                                                                E. MOTOR VEHICLES—TITLE JOINTLY HELD
+
 100 %. See Danielson v. Lazoski 531 N.W. 2d 799, 209 Mich. App. 623 (1995); In re Olsen, Not
 Reported in F.Supp.2d, 2010 WL 4386543 (E.D.Mich. 2010)(Rule in Danileson not extended to
 annuity).
-The remaining cases all deal with proceeds from real estate and therefore, while they
+
+             The remaining cases all deal with proceeds from real estate and therefore, while they
 stand for the proposition that a judgment creditor could not reach the proceeds, I think it only
 goes to reinforce the idea that it involves real estate and not personal property. S & B Bank &
 Trust v. Kensey 145 Mich. App. 765 (1985); Sanford v. Bertrau 204 Mich. 244 (1918); and
 Liberty v State Bank & Trust v. Grosslight 757 F.2d 773 (1995).
-As I see the issue, you should not be put on the defensive to prove that you can levy
+
+             As I see the issue, you should not be put on the defensive to prove that you can levy
 upon this property, but the burden should be shifted to the defendant to show that this property
 is exempt. You cannot simply sit there and waive the certificate of title claiming joint ownership;
 therefore, it is exempt. I would challenge the defendant to show you a statute or a case which
@@ -1363,4 +1647,6 @@ of survivorship merely effects a smooth title transition in the event of death o
 I think the strongest argument is that in view of the fact that the legislature has expressed its
 intent in creating certain classes of personal property as being exempt as joint tenancies and
 motor vehicles not being one of those classes; therefore, it is simply not so.
-March 2014 – 32 – Jeff Kirkpatrick – (517) 788-8898
+
+March 2014  – 32 –  Jeff Kirkpatrick – (517) 788-8898
+

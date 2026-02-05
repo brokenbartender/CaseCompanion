@@ -1,0 +1,1282 @@
+Ì†ΩÌ≥ë Table of Contents
+
+Ô∏è Desktop Guide
+
+       Welcome
+       1. The Dashboard: Your Command Center
+       2. Personalizing Your Workspace: Customizing the Dashboard
+       3. Quick Navigation: Accessing Case Details
+       4. Case Management: The Heart of Your Practice
+
+               4.1 The Cases List View
+               4.2 Creating a New Case
+               4.3 The Case View Page: Your Digital Case File
+
+       5. Invoice Management: From Billing to Paid
+               5.1 The Invoice Dashboard
+               5.2 Setting Up Your Invoices (First-Time Setup)
+               5.3 Creating a New Invoice
+               5.4 The Invoice View Page: Managing Payments and Actions
+               5.5 Printing and Sharing Your Invoice
+
+       6. Managing Your Team: The Associates Module
+               6.1 The Associates Dashboard
+               6.2 Inviting a New Associate
+               6.3 Managing Pending Invitations
+               6.4 What the Invitee Sees: Accepting the Invitation
+               6.5 Managing Active Team Members
+               6.6 Assigning and Reviewing Cases
+
+       7. Project Management: Organizing Your Legal Work
+               7.1 Creating a New Project
+               7.2 The Project Dashboard: Your Mission Control
+               7.3 Managing Project Tasks
+               7.4 Personalizing Your Workflow: Project-Specific Stages
+               7.5 Collaboration: Adding Members and Linking Cases
+
+Ì†ΩÌ≥± Mobile Guide
+
+       M1. The Dashboard: Your Command Center
+       M2. Personalizing Your Workspace: Customizing the Dashboard
+       M3. Mobile Navigation: Quick Access on the Go
+
+               M3.1 Accessing the Sidebar Menu
+               M3.2 Quick Navigation from Dashboard Widgets
+
+       M4. Case Management: The Heart of Your Practice
+               M4.1 The Cases List View
+               M4.2 Creating a New Case
+               M4.3 The Case View Page: Your Digital Case File
+
+       M5. Invoice Management: From Billing to Paid
+               M5.1 The Invoice Dashboard
+               M5.2 Setting Up Your Invoices (First-Time Setup)
+               M5.3 Creating a New Invoice
+               M5.4 The Invoice View Page: Managing Payments and Actions
+               M5.5 Printing and Sharing Your Invoice
+
+       M6. Managing Your Team: The Associates Module
+               M6.1 The Associates Dashboard
+               M6.2 Inviting a New Associate
+               M6.3 Managing Pending Invitations
+               M6.4 What the Invitee Sees: Accepting the Invitation
+               M6.5 Managing Active Team Members
+               M6.6 Assigning and Reviewing Cases
+
+                                                                                          Page 1 of 87
+       M7. Project Management: Organizing Your Legal Work
+               M7.1 Creating a New Project
+               M7.2 The Project Dashboard: Your Mission Control
+               M7.3 Managing Project Tasks
+               M7.4 Personalizing Your Workflow: Project-Specific Stages
+               M7.5 Collaboration: Adding Members and Linking Cases
+
+       M8. Install as Mobile App (PWA)
+               M8.1 Install on Android (Chrome)
+               M8.2 Install on iOS (Safari)
+               M8.3 Manage the App Experience
+
+Welcome to Your Digital Lawyer Diary Guide!
+
+This guide will walk you through the powerful features of the Digital Lawyer Diary, helping you manage your cases, tasks, and practice with
+efficiency. Let's start with the first screen you see when you log in: the Dashboard.
+
+1. The Dashboard: Your Command Center
+
+Your dashboard is your mission control. It gives you a high-level, at-a-glance overview of your most critical information, from upcoming case dates
+to your overall case load.
+
+By default, your dashboard includes several informative widgets:
+       Today & Tomorrow: Shows the number of cases scheduled for today and the next day.
+       Status: A summary of your active and pending cases.
+       Cases: A count of new cases added this week and this month.
+       Archive & Summary: An overview of archived, decided, and total cases.
+       Recent Cases: A list of your most recently updated cases for quick access.
+       Your Tasks: A list of pending tasks and their deadlines.
+
+The true power of the dashboard is its flexibility. You can completely personalize it to fit your workflow.
+
+2. Personalizing Your Workspace: Customizing the Dashboard
+
+Think of your dashboard as a set of building blocks (widgets). You can move, resize, add, or remove them to prioritize what's most important to you.
+
+Step 1: Enter Customization Mode
+To begin personalizing your layout, click the gear icon (‚öôÔ∏è) located at the top right of the dashboard.
+
+                                                                                          Page 2 of 87
+You'll know you're in customization mode when a blue banner appears and your widgets have a dashed border.
+
+Step 2: Rearrange and Resize Widgets
+
+Once in customization mode, you can organize your workspace.
+       To Move a Widget: Click and hold the widget, drag it to your desired location, and release.
+       To Resize a Widget: Hover over the bottom-right corner of a widget until your cursor changes, then click and drag to make it larger or
+       smaller.
+
+                                                                                          Page 3 of 87
+Step 3: Add and Remove Widgets
+
+Tailor the dashboard to show only the information you need.
+       To Remove a Widget: Click the red 'X' icon that appears at the top-right corner of any widget.
+
+       To Add a Widget: Click the blue "+ Add Widget" button at the top of the screen. A dropdown menu will appear with a list of available
+       widgets you can add back to your dashboard. Simply click on one to add it.
+
+                                                                                          Page 4 of 87
+Step 4: Save or Reset Your Layout
+
+       Save: Once you are happy with your new layout, click the green "Done Customizing" button. Your personalized view is now saved!
+       Reset: If you want to return to the original layout at any time, enter Customization Mode and click the "Reset to Default" link.
+
+3. Quick Navigation: Accessing Case Details
+
+Your dashboard widgets are not just for display; they are interactive. Clicking on a case title within the "Recent Cases" widget or any other case list
+will take you directly to the detailed Case View page for that specific case.
+
+This allows you to quickly jump from a high-level overview to in-depth case information without navigating through multiple menus.
+
+4. Case Management: The Heart of Your Practice
+
+The Cases module is your central repository for all case-related information, from court dates and case numbers to client details and attached
+documents.
+To get started, click on Cases in the main navigation menu on the left.
+
+                                                                                          Page 5 of 87
+4.1 The Cases List View
+
+This is your main dashboard for all cases. It provides a comprehensive, sortable table of your entire caseload.
+
+Here, you have several powerful tools at your disposal:
+       Search Cases: Use the search bar at the top to instantly find a case by its title, case number, court name, or any other detail.
+       Filter & Sort: Use the Filter by and Sort By buttons to narrow down and organize your case list precisely.
+       Print Cause List: Click the Print button to generate a professional, printable PDF of your current case list. Before printing, you can filter the
+       list (e.g., by date) to create a perfect cause list for a specific day or court.
+
+       Customize: Click the Customize button to choose which columns are visible in your table, allowing you to see only the information that
+       matters most.
+       Calendar View: Click the Calendar View icon to see your cases plotted on a monthly calendar based on their "Next Date."
+
+                                                                                          Page 6 of 87
+4.2 Creating a New Case
+
+Adding a new case is simple. From the Cases list view, click the "+ Create Case" button and fill out the comprehensive form, which includes sections
+for Case Details, Contact Information, Additional Information (for fees and timesheets), and Attachments.
+Step 1: From the Cases list view, click the "+ Create Case" button.
+
+Step 2: Fill out the Create Case form. The form is divided into clear, collapsible sections.
+
+                                                                                          Page 7 of 87
+Case Details: Enter the core information like Office File Number, Court Case Number, Case Title, Type, Stage, Court Name, Judge Name,
+and Next Date.
+Contact Information: Link the case to existing contacts for your Client, the Opponent, and the Opponent's Lawyer.
+
+                                                                                   Page 8 of 87
+    Additional Information: This section is for financial tracking and time management. You can add Timesheet Entries, set the Case Fee and
+    Charges, and log Payments received. The system will automatically calculate the Total and Remaining Fee.
+
+         1760179185954
+    Attachments: Drag and drop files directly into the upload area or click to select them from your computer. This is perfect for storing
+    petitions, orders, and other relevant documents. (50 MB Limit Per Account) with more option for Enterprise accounts
+
+‚ú® Pro Tip: On-the-Fly Entries For fields like Case Type, Stage, Judge, etc., you don't need to have everything pre-configured. Simply start typing a
+
+new entry (e.g., a new Judge's name). If it doesn't exist, an "+ Add entry" option will appear. Click it to add the new option to your list permanently
+without leaving the form!
+
+                                                                                        Page 9 of 87
+Step 3: Once all the information is entered, click the blue "Create Case" button at the bottom. You will be taken directly to the new case's "Case
+View" page.
+
+Customizing the "Create Case" Form
+Your practice is unique, and so are your data needs. You can customize the Create Case form to hide fields you don't use.
+
+       While on the "Create Case" page, click the Customize icon in the top-right corner.
+       A "Customize Form" modal will appear. Uncheck any fields you don't need.
+       Click "Save changes". The form will now be streamlined to your preference.
+
+                                                                                          Page 10 of 87
+---
+
+4.3 The Case View Page: Your Digital Case File
+
+After creating or clicking on an existing case, you'll land on the Case View page. This is the detailed file for a single case, containing all its
+information in one place.
+
+                                                                                          Page 11 of 87
+Managing Hearing Dates
+Keeping track of hearing dates is critical. Your Digital Diary makes this effortless.
+
+       Viewing Dates: All upcoming and previous hearing dates are clearly listed in the Case Details tab.
+       Adding the Next Date (Quick Add): The fastest way to schedule the next hearing is by using the Quick add button, located directly next
+       to the "Next date" display. Clicking this opens a mini-calendar, allowing you to select the next date and add it instantly without needing to
+       enter the full edit mode.
+
+                                                                                          Page 12 of 87
+The Case Actions Bar
+At the top of the Case View page is a powerful action bar that lets you manage every aspect of the case.
+
+       Edit: Click this to enter Edit Mode and update any case information.
+       Status Dropdown (Active/Archived/Decided): Quickly update the case's current status.
+       Copy, Delete, Privacy, Assign: Tools to duplicate, remove, set permissions for, or assign the case.
+       Export: Generate a PDF of the case details, fees, or all information combined.
+       History (Audit Trail): This is one of the most powerful features for accountability and tracking. Clicking History opens a window with a
+       complete, timestamped log of every change ever made to the case.
+
+               It shows when the change was made.
+               It shows who made the change (by username).
+               It shows exactly what was changed (e.g., "Case Name changed from '123' to '1234'").
+               Download History: Inside the Case History window, click the download icon to export this complete log as a file for your records
+               or for reporting purposes.
+  Note: The Assign action draws from the Team Members you have already invited through the Associates module. If you don't see a colleague listed,
+  invite them as an associate first and then return to assign the case.
+
+                                                                                          Page 13 of 87
+5. Invoice Management: From Billing to Paid
+
+The Invoice module streamlines your entire billing process, allowing you to create professional invoices, track payments, and monitor your firm's
+financial health at a glance.
+To begin, click on Invoice in the main navigation menu.
+
+5.1 The Invoice Dashboard
+
+The main invoice page gives you a high-level financial overview and a detailed list of all your invoices.
+
+                                                                                          Page 14 of 87
+       Financial Summary: At the top, you'll find key metrics:
+               Total Invoices: A count of all invoices ever created.
+               Total Revenue: The total value of all invoices.
+               Outstanding: The total amount of money that is yet to be paid across all unpaid invoices.
+               Paid Invoices: The total number of fully paid invoices.
+
+       Invoice List: A searchable and sortable table of every invoice. You can quickly see the Client Name, Issue Date, Due Date, Amount, and
+       current Status (e.g., Draft, Paid, Partial).
+
+5.2 Setting Up Your Invoices (First-Time Setup)
+
+Before creating your first invoice, it's a great idea to customize it with your firm's branding.
+Step 1: From the Invoice Dashboard, click the Settings button in the top-right corner.
+
+                                                                                          Page 15 of 87
+Step 2: Customize your invoice settings:
+       Logo: Upload your law firm's logo. This will appear on every PDF invoice you generate.
+       Currency: Select your primary currency (e.g., Rs (PKR)).
+       Template: Choose a look and feel for your invoices. "Detailed" is a great professional option.
+       Invoice Numbering:
+               Enable Automatic Numbering to let the system generate sequential invoice numbers for you.
+               Set an Invoice Prefix (e.g., INV ). The system will automatically add the year.
+               Set the Next Invoice Number to start your sequence from a specific number (e.g., 1 or 101 ).
+
+Step 3: Click Save Changes. Your invoices are now ready to be created with a professional, branded look.
+
+5.3 Creating a New Invoice
+
+Step 1: From the Invoice Dashboard, click the "+ Create Invoice" button.
+
+                                                                                          Page 16 of 87
+Step 2: Fill in the Core Details
+       Client/Paralegal: Select the client you are billing from your contacts list.
+       Associated Case (Optional but Powerful): Select the specific case this invoice is for. This will automatically link the invoice to the case file
+       and can pre-fill other fields like Case Reference and Matter Type.
+       Invoice & Due Date: Set the issue date and the date the payment is due.
+
+Step 3: Add Line Items (Services and Charges) This is where you detail the services you are billing for.
+
+                                                                                          Page 17 of 87
+       In the Product Name field, select a service from your saved list (e.g., "Legal services") or type a new one and click **"+ Add entry 'New
+       Service'" to save it for future use.
+       Enter the Quantity (e.g., hours) and the Rate. The system automatically calculates the Amount.
+       Add applicable Tax (%) if needed.
+       Click the green checkmark to add the item to the invoice.
+       You can add multiple line items (e.g., "Legal Services," "Stamp duty," "Photocopying Charges"). The system will keep a running Total.
+Step 4: Add Notes and Finalize
+       Add any payment instructions or notes for your client in the Notes text box.
+       Review the final total and click the "Create Invoice" button.
+
+                                                                                          Page 18 of 87
+5.4 The Invoice View Page: Managing Payments and Actions
+
+After creating an invoice, you are taken to its detailed view. Here you can track its status, record payments, and perform other actions.
+
+Key Features:
+       Status Banner: A prominent banner at the top shows the Amount Due and the due date. Its color indicates if it's current, due soon, or
+       overdue.
+                                                                                          Page 19 of 87
+       Payment History: A table that logs every payment made against this invoice.
+       Action Bar: At the top, you have several options:
+
+               Print: Generate a professional PDF of the invoice.
+               Duplicate: Create a new, identical invoice.
+               Edit: Modify the invoice details.
+               Delete: Remove the invoice.
+Recording a Payment
+Step 1: From the Invoice View page, click the blue "Make Payment" button.
+
+Step 2: In the "Record Payment" pop-up:
+       Enter the Payment Amount. You can enter a partial amount or the full amount.
+       Select the Payment Date and Payment Method (e.g., Cash, Bank Transfer).
+       Add an optional Reference number (like a check number or transaction ID).
+       Click "Record Payment".
+
+The invoice will instantly update:
+       The Payment History will show the new payment.
+       The Amount Due in the status banner will decrease.
+       The invoice status will change from Draft to Partial (if partially paid) or Paid (if fully paid).
+                                                                                          Page 20 of 87
+5.5 Printing and Sharing Your Invoice
+
+Step 1: From the Invoice View page, click the Print button.
+Step 2: A professional, multi-page PDF will be generated and downloaded. This document is ready to be emailed or printed for your client. It
+includes:
+
+       Your firm's logo and contact details.
+       The client's information.
+       A clear breakdown of services and charges.
+       A summary of the total amount, amount paid, and the final Balance Due.
+       A detailed history of all payments made.
+
+                                                                                          Page 21 of 87
+6. Managing Your Team: The Associates Module
+
+Collaboration is at the core of a successful law firm. The Associates module allows you to securely invite your partners, junior lawyers, paralegals,
+and other staff to your Digital Lawyer Diary workspace.
+To get started, click on Associates in the main navigation menu.
+
+6.1 The Associates Dashboard
+
+This page is your central hub for managing everyone connected to your firm. It's divided into two main sections:
+
+                                                                                          Page 22 of 87
+       Active Team Members: This is a list of all associates who have accepted your invitation and are currently part of your firm. Each member is
+       displayed on a card showing their name, role, and the number of cases they are assigned to.
+       Pending Invitations You Sent: This section appears whenever you have an outstanding invitation. It helps you keep track of who has been
+       invited but has not yet responded.
+Keeping this list current ensures every Team Member picker throughout the app‚Äîincluding case assignments, invoicing, and project dashboards‚Äî
+has the right people available.
+
+6.2 Inviting a New Associate
+
+Adding a new member to your firm is a simple, secure invitation-based process.
+Step 1: From the Associates Dashboard, click the "+ Invite Associate" button in the top-right corner.
+Step 2: The Invite Associate window will appear. Fill in the required details:
+
+       Email Address: Enter the email address of the person you want to invite. They must have or create a Digital Lawyer Diary account with this
+       email.
+       Role: Specify their role within your firm (e.g., "Partner," "Senior Associate," "Paralegal"). This is for your organizational reference.
+
+  What happens next? The system clearly explains the process: The person you invite will receive an email and a notification within their own Digital
+  Lawyer Diary account. They will appear in your "Pending" list until they accept.
+
+                                                                                          Page 23 of 87
+Step 3: Click the "Send Invitation" button.
+
+6.3 Managing Pending Invitations
+
+Once the invitation is sent, a new card will appear under the "Pending Invitations You Sent" section.
+
+This card shows the invitee's email, their assigned role, and a "Pending" status. You have two options here:
+       Resend: If your associate hasn't seen the invitation, click this to send the invitation email again.
+       Cancel Invitation: If you sent the invitation by mistake or no longer wish for them to join, click this to revoke the invitation.
+
+6.4 What the Invitee Sees: Accepting the Invitation
+
+Your team member will receive the invitation inside their own Digital Lawyer Diary account.
+When they log in and navigate to their "Associates" page, they will see a pending invitation from your firm.
+
+They have two choices:
+       Accept: By clicking "Accept," they officially join your firm's workspace. They will then appear in your "Active Team Members" list, and the
+       pending invitation will be removed.
+       Decline: If they click "Decline," the invitation is rejected and removed.
+                                                                                          Page 24 of 87
+6.5 Managing Active Team Members
+
+Once an associate has accepted your invitation, their card moves to the "Active Team Members" list.
+
+From here, you can:
+       Assign them to cases (as shown in the Case Management section).
+       Manage their permissions by clicking the three-dot menu icon on their card. This allows you to edit their role or remove them from the
+       firm if they leave your practice.
+
+6.6 Assigning and Reviewing Cases
+
+Each associate card includes a three-dot menu in the top-right corner. Use it to keep case assignments synchronized:
+    1. Click Assign Cases to open the selection dialog.
+    2. Search, filter, or scroll through the list, then select one or more matters to share with the associate.
+    3. Choose Select Cases to Assign to confirm. The associate gains immediate access to those files.
+
+Need to audit workloads later? Choose View Assigned Cases from the same menu to see everything currently shared with that team member‚Äî
+including status and court details‚Äîwithout leaving the Associates module.
+
+                                                                                          Page 25 of 87
+Tip: Use Select All or Clear All inside the dialog to handle bulk reassignment when someone joins or leaves a matter.
+
+7. Project Management: Organizing Your Legal Work
+
+While the "Cases" module is perfect for litigation and court-related matters, the Projects module offers a flexible and powerful way to manage any
+set of tasks with a defined workflow. This is ideal for internal firm initiatives, complex client matters that aren't in litigation (like a large merger or
+contract review), or any work that benefits from visual task tracking.
+
+To begin, click on Projects in the main navigation menu.
+
+7.1 Creating a New Project
+
+Step 1: From the main Projects page, click the "+ Create Project" button in the top-right corner.
+
+Step 2: Fill out the New Project form.
+
+                                        Page 26 of 87
+       Project Details:
+               Project Name: Give your project a clear, descriptive name (e.g., "ACME Corp Merger Due Diligence").
+               Description: Use the rich text editor to provide a detailed overview of the project's goals, scope, and key information. You can use
+               formatting like bold, lists, and links.
+
+       Team Members: (Optional) You can add existing team members to the project right from the start. We'll cover adding members to an
+       existing project later.
+       Case Reference: (Optional) If this project is directly related to a formal case in your system, you can link them here for easy cross-
+       referencing.
+Step 3: Click the "Create Project" button.
+
+7.2 The Project Dashboard: Your Mission Control
+
+After creating your project, you'll be taken to its main dashboard. This is the central hub for everything related to this specific project.
+
+                                                                                          Page 27 of 87
+The dashboard is divided into two main areas:
+       Left Panel (Project Overview): This gives you an at-a-glance summary of the project's health, including its status, task breakdown
+       (Pending, Completed, Blocked), and a list of team members.
+       Right Panel (Task Management): This is where you'll create, view, and manage all the individual tasks for the project.
+
+7.3 Managing Project Tasks
+
+A project is made up of tasks. Your Digital Diary gives you a flexible system to manage them.
+Creating a Task
+
+    1. From the Project Dashboard, click the "+ Add Task" button.
+    2. Fill out the New Task form:
+
+               Title & Description: Give the task a clear name and add details.
+               Stage & Status: Define where the task is in your workflow (e.g., Stage: Strategy Planning , Status: Pending ).
+               Due Date: Assign a deadline.
+       Milestones: Break down a large task into smaller, trackable sub-tasks.
+       Team Assignment: Assign the task to a specific team member.
+  Note: Project assignees come from your Associates list. Make sure the colleague is added in the Associates module so they appear here.
+    3. Click "Create Task".
+
+Visualizing Your Tasks: The Kanban Board
+The most powerful way to view your tasks is with the Kanban Board.
+
+    1. Click the Kanban icon in the top-right of the task area.
+    2. Your tasks will now be displayed as cards in columns. Each column represents a Stage in your project workflow.
+    3. To update a task's stage, simply drag and drop the card from one column to another.
+
+ ‚ú® Pro Tip: Need more room? Click Hide Details to collapse the left panel and maximize your Kanban workspace.
+
+                                                                                          Page 28 of 87
+You can also change how the Kanban board is grouped by using the "Group by" filter to organize columns by Status, Assignee, or Due Date.
+
+7.4 Personalizing Your Workflow: Project-Specific Stages
+
+Every project is different. A contract review has a different workflow than a property acquisition. Your Digital Diary allows you to customize the
+workflow stages for each project individually without affecting any other project.
+Step 1: On your Project Dashboard, find the "Team Members" widget on the left panel and click the "Edit Stages" button.
+
+                                                                                          Page 29 of 87
+Step 2: In the "Edit Project Stages" window, you can fully customize your workflow:
+       Reorder Stages: Drag and drop the stages to match your real-world process.
+       Edit a Stage: Click the pencil icon to rename a stage or change its color.
+       Delete a Stage: Click the trash icon to remove a stage you don't need.
+       Add a New Stage:
+            1. Click "+ Add new stage".
+            2. In the "Create New Status" pop-up, give your new stage a Name and select a Color.
+            3. Click "Create Stage".
+
+                                                                                          Page 30 of 87
+Step 3: After making your changes, click "Save Stages".
+Your Kanban board and the "Stage" dropdown in your tasks will now instantly update to reflect this new, custom workflow, for this project only.
+
+7.5 Collaboration: Adding Members and Linking Cases
+
+As the project evolves, you can easily manage your team and references.
+       To Add Team Members: In the left panel, click the "+ Add Members" button in the Team Members widget to add more collaborators.
+       To Link to a Case: If you didn't link a case during creation, you can do so at any time using the "Link to Case" widget in the left panel.
+
+                                                                                          Page 31 of 87
+Ì†ΩÌ≥± Mobile Guide
+
+M1. The Dashboard: Your Command Center
+
+Your dashboard is your mission control. It gives you a high-level, at-a-glance overview of your most critical information, from upcoming case dates
+to your overall case load.
+
+By default, your dashboard includes several informative widgets:
+       Today & Tomorrow: Shows the number of cases scheduled for today and the next day.
+       Status: A summary of your active and pending cases.
+       Cases: A count of new cases added this week and this month.
+                                                                                          Page 32 of 87
+       Archive & Summary: An overview of archived, decided, and total cases.
+       Recent Cases: A list of your most recently updated cases for quick access.
+       Your Tasks: A list of pending tasks and their deadlines.
+The true power of the dashboard is its flexibility. You can completely personalize it to fit your workflow.
+
+M2. Personalizing Your Workspace: Customizing the Dashboard
+
+Think of your dashboard as a set of building blocks (widgets). You can move, resize, add, or remove them to prioritize what's most important to you.
+
+Step 1: Enter Customization Mode
+To begin personalizing your layout, click the gear icon (‚öôÔ∏è) located at the top right of the dashboard.
+
+                                                                                          Page 33 of 87
+    Mobile Customization Icon Placeholder
+You'll know you're in customization mode when a popup appear
+
+Step 2: Rearrange and Resize Widgets
+
+Once in customization mode, you can organize your workspace.
+       To Move a Widget: Click and hold the widget, drag it to your desired location, and release.
+       To Resize a Widget: Hover over the bottom-right corner of a widget until your cursor changes, then click and drag to make it larger or
+       smaller.
+
+                                                                                          Page 34 of 87
+Step 3: Add and Remove Widgets
+
+Tailor the dashboard to show only the information you need.
+       To Remove a Widget: Click the red 'X' icon that appears at the top-right corner of any widget.
+
+                                                                                          Page 35 of 87
+To Add a Widget: Click the blue "+ Add Widget" button at the top of the screen. A dropdown menu will appear with a list of available
+widgets you can add back to your dashboard. Simply click on one to add it.
+
+                                                                                  Page 36 of 87
+Step 4: Save or Reset Your Layout
+
+Once you've finished customizing your dashboard, you have two options:
+       Save Your Changes: Click the "X" button in the top-right corner of the Customize Dashboard modal to close it and save your personalized
+       layout. Your dashboard will now display exactly as you configured it.
+
+     Reset to Default: If you want to start fresh and return to the original layout, click the reset icon (Ì†ΩÌ¥Ñ) located next to the "+ Add Widget"
+
+       button at the top of the Customize Dashboard modal. This will restore all widgets to their default positions and sizes.
+
+ Ì†ΩÌ≤° Tip: You can return to customization mode anytime by clicking the gear icon (‚öôÔ∏è) again to make further adjustments.
+
+                                                                                          Page 37 of 87
+M3. Mobile Navigation: Quick Access on the Go
+
+The mobile interface is designed for efficiency, giving you instant access to all your practice management tools from anywhere. Let's explore how to
+navigate effectively on your mobile device.
+
+M3.1 Accessing the Sidebar Menu
+
+The main navigation on mobile is accessed through a convenient sidebar menu. To open it:
+    1. Tap the menu icon (‚ò∞) located at the top-left corner of your screen, or
+    2. Swipe from the left edge of your screen to reveal the sidebar
+
+The sidebar displays:
+
+                       Page 38 of 87
+       Your Profile: At the top, you'll see your firm name and email address with a profile icon
+       Main Navigation Menu: All key modules are accessible here:
+
+           Ì†ºÌø† Dashboard - Your command center
+           Ì†ΩÌ≥Å Cases - Manage all your legal cases
+           Ì†ΩÌ≥Ñ Invoices - Handle billing and payments
+           Ì†ΩÌ≥ä Projects - Organize tasks and workflows
+           Ì†ΩÌ±• Contacts - Client and opponent information
+           Ì†ΩÌ±®‚ÄçÌ†ΩÌ≤º Associates - Team management
+           Ì†ΩÌ≥ö Acts/Law Books - Legal reference library
+           Ì†ΩÌ¥ó Court Links - Quick access to court websites
+
+       Settings & Tools: At the bottom of the sidebar:
+
+           ‚öôÔ∏è Settings - Configure your preferences
+           Ì†ΩÌ¥ó Share App - Invite colleagues
+           Ì†ΩÌ∫™ Logout - Securely sign out
+M3.2 Quick Navigation from Dashboard Widgets
+
+Your dashboard widgets are not just for display; they are interactive and provide quick shortcuts:
+       Tap any case in the "Recent Cases" widget to jump directly to its detailed Case View page
+       Tap case numbers in the Today/Tomorrow widgets to see scheduled cases
+       Tap task items to view or update task details
+
+This allows you to quickly jump from a high-level overview to in-depth information without navigating through multiple menus, making your mobile
+workflow seamless and efficient.
+
+M4. Case Management: The Heart of Your Practice
+
+The Cases module is your central repository for all case-related information, from court dates and case numbers to client details and attached
+documents.
+To get started, click on Cases in the main navigation menu on the left.
+
+M4.1 The Cases List View
+
+This is your main dashboard for all cases. It provides a comprehensive, sortable table of your entire caseload.
+
+                                                                                          Page 39 of 87
+Here, you have several powerful tools at your disposal:
+       Search Cases: Use the search bar at the top to instantly find a case by its title, case number, court name, or any other detail.
+       Filter & Sort: Use the Filter by and Sort By buttons to narrow down and organize your case list precisely.
+       Print Cause List: Click the Print button to generate a professional, printable PDF of your current case list. Before printing, you can filter the
+       list (e.g., by date) to create a perfect cause list for a specific day or court.
+
+                                                                                          Page 40 of 87
+Customize: Click the Customize button to choose which columns are visible in your table, allowing you to see only the information that
+matters most.
+Calendar View: Click the Calendar View icon to see your cases plotted on a monthly calendar based on their "Next Date."
+
+                                                                                  Page 41 of 87
+M4.2 Creating a New Case
+
+Adding a new case is simple. From the Cases list view, click the "+ Create Case" button and fill out the comprehensive form, which includes sections
+for Case Details, Contact Information, Additional Information (for fees and timesheets), and Attachments.
+Step 1: From the Cases list view, click the "+ Create Case" button.
+
+                                                                                          Page 42 of 87
+Step 2: Fill out the Create Case form. The form is divided into clear, collapsible sections.
+                                                                                          Page 43 of 87
+Case Details: Enter the core information like Office File Number, Court Case Number, Case Title, Type, Stage, Court Name, Judge Name,
+and Next Date.
+Contact Information: Link the case to existing contacts for your Client, the Opponent, and the Opponent's Lawyer.
+
+                                                                                  Page 44 of 87
+Additional Information: This section is for financial tracking and time management. You can add Timesheet Entries, set the Case Fee and
+Charges, and log Payments received. The system will automatically calculate the Total and Remaining Fee.
+
+Attachments: Drag and drop files directly into the upload area or click to select them from your computer. This is perfect for storing
+petitions, orders, and other relevant documents. (50 MB Limit Per Account) with more option for Enterprise accounts
+
+                                                                                  Page 45 of 87
+ ‚ú® Pro Tip: On-the-Fly Entries For fields like Case Type, Stage, Judge, etc., you don't need to have everything pre-configured. Simply start typing a
+
+  new entry (e.g., a new Judge's name). If it doesn't exist, an "+ Add entry" option will appear. Click it to add the new option to your list permanently
+  without leaving the form!
+
+Step 3: Once all the information is entered, click the blue "Create Case" button at the bottom. You will be taken directly to the new case's "Case
+View" page.
+
+                                                                                          Page 46 of 87
+Customizing the "Create Case" Form
+Your practice is unique, and so are your data needs. You can customize the Create Case form to hide fields you don't use.
+
+       While on the "Create Case" page, click the Add Custom Field icon in the top-right corner.
+       A "Customize Form" modal will appear. Add any fields you need.
+       Click "Save changes". The form will now be streamlined to your preference.
+
+                                                                                          Page 47 of 87
+M4.3 The Case View Page: Your Digital Case File
+
+After creating or clicking on an existing case, you'll land on the Case View page. This is the detailed file for a single case, containing all its
+information in one place.
+
+                                                                                          Page 48 of 87
+Managing Hearing Dates
+Keeping track of hearing dates is critical. Your Digital Diary makes this effortless.
+
+       Viewing Dates: All upcoming and previous hearing dates are clearly listed in the Case Details tab.
+       Adding the Next Date (Quick Add): The fastest way to schedule the next hearing is by using the Quick add button, located directly next
+       to the "Next date" display. Clicking this opens a mini-calendar, allowing you to select the next date and add it instantly without needing to
+       enter the full edit mode.
+
+                                                                                          Page 49 of 87
+Page 50 of 87
+The Case Actions Menu
+On mobile, case actions are accessible through a convenient three-dot menu (‚ãÆ) located in the top-right corner of the Case View page. Tap it to
+reveal all available case management options.
+
+                                                                                          Page 51 of 87
+The actions menu includes:
+
+       Edit: Opens the edit mode, allowing you to update any case information including case details, contacts, fees, and attachments.
+
+       Duplicate: Creates an exact copy of the current case, perfect for similar cases with the same client or court. You can then modify the
+       duplicated case as needed.
+
+       Download: Generates and downloads a comprehensive PDF report of the case, including all case details, hearing dates, fees, and payment
+       history. This is ideal for offline reference or sharing with clients.
+
+       Share: Opens your device's native share menu, allowing you to quickly share case information via email, messaging apps, or other installed
+       applications.
+
+       History (Audit Trail): This is one of the most powerful features for accountability and tracking. Tapping History opens a window with a
+       complete, timestamped log of every change ever made to the case.
+
+                                                                                          Page 52 of 87
+               It shows when the change was made
+               It shows who made the change (by username)
+               It shows exactly what was changed (e.g., "Case Name changed from '123' to '1234'")
+               You can download the complete history log for your records or reporting purposes
+       Assign To: Allows you to assign the case to team members within your firm. This enables collaborative case management where multiple
+       lawyers or paralegals can access and update the same case file.
+       Delete: Permanently removes the case from your system. Use this option with caution, as deleted cases cannot be recovered. A
+       confirmation prompt will appear before deletion.
+
+ Ì†ΩÌ≤° Tip: The Assign To option draws from the Team Members you have already invited through the Associates module. If you don't see a colleague
+
+  listed, invite them as an associate first and then return to assign the case.
+Managing Case Status
+The case status is one of the most visible elements on the Case View page, displayed as a colored badge just below the case title. Keeping your case
+status up-to-date helps you organize your practice and quickly identify which cases need attention.
+
+                                                                                          Page 53 of 87
+To Change the Case Status:
+
+    1. Tap the Status Badge - Look for the status badge displaying the current status (e.g., "Active" with a green background) located below the
+       case title
+
+    2. Select New Status - A dropdown menu will appear with three status options:
+
+       ‚úì Active - The case is currently ongoing and requires regular attention. This is the default status for new cases.
+
+               Archived - The case is completed or inactive, but you want to keep it in your system for reference. Archived cases can be easily
+               filtered out from your active caseload.
+               Decided - The case has received a final judgment or decision from the court. Use this status for closed cases with final outcomes.
+
+    3. Status Updates Instantly - As soon as you select a new status, the badge color will change to reflect the update, and the change will be
+       saved automatically.
+
+                                                                                          Page 54 of 87
+Status Color Guide:
+
+     Ì†ΩÌø¢ Active - Green background (ready for action)
+     Ì†ΩÌ¥µ Archived - Blue/Gray background (stored for reference)
+     Ì†ΩÌø£ Decided - Purple background (finalized)
+ Ì†ΩÌ≤° Pro Tip: Use the status filter in the Cases List View (M4.1) to quickly view only active cases, archived cases, or decided cases. This helps you focus
+
+  on what matters most at any given time.
+
+M5. Invoice Management: From Billing to Paid
+
+The Invoice module streamlines your entire billing process, allowing you to create professional invoices, track payments, and monitor your firm's
+financial health at a glance.
+To begin, tap on Invoices in the main navigation menu.
+
+M5.1 The Invoice Dashboard
+
+The mobile invoice dashboard provides a comprehensive overview of your billing status and all your invoices in an easy-to-scan format.
+
+                                                                                          Page 55 of 87
+Financial Summary Cards:
+
+At the top of the dashboard, you'll find four key metric cards that give you instant insight into your firm's financial health:
+
+Total Invoices: Shows the total count of all invoices ever created
+
+       Displays "All time" to indicate this is a cumulative count
+       Example: "6" invoices
+
+Total Revenue: The complete value of all invoices combined
+
+Shows the total amount billed across all invoices
+Breaks down into "collected" (paid) amounts with a green indicator
+Example: "Rs 24,600.00" with "Rs 18,900.00 collected"
+
+Outstanding: The most critical metric for cash flow
+
+                                                                   Page 56 of 87
+               Shows the total amount that is yet to be paid across all unpaid/partial invoices
+               Displays the number of unpaid invoices with an orange indicator
+               Example: "Rs 5,700.00" with "3 unpaid"
+       Paid Invoices: Your success metric
+               Shows the total number of fully paid invoices
+               Displays the amount received with a green indicator
+               Example: "2" with "Rs 18,900.00 received"
+Quick Actions:
+
+     Settings Icon (‚öôÔ∏è): Located in the top-right corner, tap this to access invoice configuration settings
+
+       Create Button (+): The blue floating action button in the bottom-right corner for creating new invoices
+       Filter Icon: Tap to filter invoices by status (Draft, Paid, Partial, Overdue)
+       Sort Icon: Tap to sort your invoice list by date, amount, or client name
+Invoice List:
+Below the summary cards, you'll see a searchable list of all your invoices. Each invoice card displays:
+       Invoice Number: (e.g., INV-2025-003)
+       Client Name: Who the invoice is for
+       Status Badge: Draft, Partial, or Paid
+       Amount: The total invoice amount
+       Dates: Created date and Due date
+Search Functionality:
+Use the search bar to quickly find invoices by:
+       Invoice number
+       Client name
+       Amount
+       Date range
+
+M5.2 Setting Up Your Invoices (First-Time Setup)
+
+Before creating your first invoice, it's essential to customize it with your firm's branding and preferences. This ensures every invoice you generate
+looks professional and reflects your practice.
+
+Step 1: From the Invoice Dashboard, tap the Settings icon (‚öôÔ∏è) in the top-right corner.
+
+                                                                                          Page 57 of 87
+Step 2: You'll be taken to the Settings page. Tap on the "Invoices" tab to access invoice-specific settings.
+                                                                                          Page 58 of 87
+Step 3: Customize your invoice settings:
+
+Logo Section:
+
+       Tap the logo upload area (shown with a dashed border)
+       Upload your law firm's logo from your device
+       The logo will appear on every PDF invoice you generate
+       Tap the X icon if you need to remove or replace the logo
+Currency:
+
+       Tap the currency dropdown to select your primary currency
+       Options include Rs (PKR), USD, EUR, and many others
+       A sample amount shows how numbers will be formatted (e.g., "Rs 1,234.56")
+
+                                                                                          Page 59 of 87
+Template:
+       Choose the visual style for your invoices
+       Three template options are available:
+               ‚óã Classic - Traditional invoice layout
+               ‚óã Modern - Contemporary design with clean lines
+               ‚óè Detailed - Comprehensive layout with all information (recommended for legal practices)
+       Tap the radio button next to your preferred template
+
+Invoice Numbering:
+       Configure how invoice numbers are automatically generated
+       Automatic Numbering: Toggle this on to let the system generate sequential invoice numbers
+       Invoice Prefix: Set a prefix that appears before the number (e.g., INV )
+               The system automatically adds the year (e.g., INV-2025-001)
+       Next Invoice Number: Set the starting number for your invoice sequence
+               Useful if you're migrating from another system or want to start from a specific number
+
+Step 4: Scroll down and tap "Save Changes" to apply your settings.
+Your invoices are now configured with professional branding and will automatically follow your numbering scheme!
+
+M5.3 Creating a New Invoice
+
+Creating an invoice on mobile is straightforward and optimized for touch input. The system guides you through each step to ensure all necessary
+information is captured.
+Step 1: From the Invoice Dashboard, tap the blue "+" (Plus) button in the bottom-right corner.
+
+                                                                                          Page 60 of 87
+This floating action button is always accessible, allowing you to quickly create a new invoice from anywhere on the invoices page.
+Step 2: Fill in the Invoice Details
+The Create Invoice form is organized into logical sections. Fill out each field:
+
+                                                                                          Page 61 of 87
+Required Fields:
+
+       Client/Paralegal (Required - marked with red *):
+
+               Tap to open your contacts list
+               Select the client you're billing
+               Example: "Muzamil"
+       Invoice Number (Required):
+
+               Auto-generated if you enabled automatic numbering
+               Format: INV-2025-004 (prefix-year-number)
+               Manually editable if needed
+       Invoice Date (Required):
+
+                                                                                          Page 62 of 87
+               Tap the calendar icon to select the issue date
+               Defaults to today's date
+               Example: October 15th, 2025
+       Due Date (Required):
+               Tap the calendar icon to select the payment due date
+               Calculates automatically based on your payment terms
+               Example: November 14th, 2025
+Optional Fields:
+       Associated Case (Optional):
+               Tap the dropdown to select a case from your cases list
+               Links the invoice to a specific case file
+               When selected, can auto-fill Case Reference and Matter Type
+               Placeholder: "Select a case to associate with this invoice"
+       Case Reference (Optional):
+               Enter a reference number or identifier
+               Useful for internal tracking or court references
+               Placeholder: "Enter case reference"
+       Case Matter Type (Optional):
+               Specify the type of legal matter
+               Examples: "Civil Litigation," "Criminal Defense," "Contract Review"
+               Placeholder: "Enter case matter type"
+Step 3: Add Line Items (Services and Charges)
+This is the core of your invoice where you detail the billable services.
+
+                                                                                          Page 63 of 87
+Adding Items:
+
+    1. Tap the "+ Add new invoice item" button
+    2. A modal titled "Add New Item" will appear with the following fields:
+Item Details:
+
+       Product Name (Required):
+
+               Tap the field to search existing services or create a new one
+               Type to search (e.g., "Legal services," "Consultation," "Court appearance")
+               If the service doesn't exist, an option to create it will appear
+               Saves to your product library for future use
+       Quantity (Required):
+
+                                                                                          Page 64 of 87
+               Use the - and + buttons to adjust the quantity
+               Or tap the number field to type directly
+               Represents hours, units, or sessions
+               Default: 1
+       Rate (Required):
+               Enter your hourly rate or fixed price
+               Use the up/down arrows or type directly
+               Example: Rs 5,000 per hour
+               Currency matches your settings
+       Tax (Optional):
+               Enter the tax percentage if applicable
+               Use the up/down arrows or type directly
+               Displays as percentage (%)
+               Default: 0
+       Amount (including tax):
+               Automatically calculated field (read-only)
+               Formula: (Quantity √ó Rate) + Tax
+               Updates in real-time as you adjust values
+               Example: Rs 0.00 (updates after entering values)
+Action Buttons:
+       "Add & New" (Blue button): Adds the current item to the invoice and keeps the modal open to add another item immediately. Perfect for
+       multi-item invoices.
+       "Add" (Blue button): Adds the item and closes the modal, returning you to the main invoice form.
+Step 4: Review Totals and Add Notes
+After adding items, the invoice automatically calculates:
+
+                                                                                          Page 65 of 87
+Subtotal: Sum of all line items (before discounts and tax)
+       Example: Rs 0.00 (updates after adding items)
+
+Discount Type & Discount (%):
+       Choose between "Percentage (%)" or "Fixed Amount"
+       Enter the discount value
+       Useful for early payment discounts or negotiated rates
+
+Tax: Calculated total tax amount across all items
+       Example: Rs 0.00
+
+Total: The final invoice amount (Subtotal - Discount + Tax)
+
+                                                                                  Page 66 of 87
+               This is the amount your client needs to pay
+               Displayed prominently in bold
+               Example: Rs 0.00
+Notes Section:
+       Tap the notes field to add payment instructions or additional information
+       Common uses:
+               Payment methods accepted
+               Bank transfer details
+               Payment terms and conditions
+               Thank you message
+       Placeholder: "Add notes or payment instructions..."
+Step 5: Create the Invoice
+Once you've reviewed all information:
+    1. Scroll to the bottom of the form
+    2. Tap the blue "Create Invoice" button
+    3. The invoice is saved and you'll be taken to the Invoice View page
+
+ Ì†ΩÌ≤° Pro Tip: You can save time by creating template items in your product library. Tap "Add new invoice item" and create commonly used services
+
+  like "Legal Consultation - 1 Hour," "Court Appearance," or "Document Review." These will appear as quick-select options in future invoices!
+
+ Ì†ΩÌ≥ã Note: If you don't see any items added yet, the message "No items added yet. Click 'Add Item' to add your first invoice item" will be displayed to
+
+  guide you.
+
+M5.4 The Invoice View Page: Managing Payments and Actions
+
+After creating an invoice, you are taken to its detailed view. Here you can track its status, record payments, and perform other actions.
+
+                                                                                          Page 67 of 87
+Key Features:
+       Status Banner: A prominent banner at the top shows the Amount Due and the due date. Its color indicates if it's current, due soon, or
+       overdue.
+       Payment History: A table that logs every payment made against this invoice.
+       Action Bar: At the top, you have several options:
+               Print: Generate a professional PDF of the invoice.
+               Duplicate: Create a new, identical invoice.
+               Edit: Modify the invoice details.
+               Delete: Remove the invoice.
+
+Recording a Payment
+Step 1: From the Invoice View page, click the blue "Make Payment" button.
+
+                                                                                          Page 68 of 87
+Page 69 of 87
+Step 2: In the "Record Payment" pop-up:
+       Enter the Payment Amount. You can enter a partial amount or the full amount.
+       Select the Payment Date and Payment Method (e.g., Cash, Bank Transfer).
+       Add an optional Reference number (like a check number or transaction ID).
+       Click "Record Payment".
+
+The invoice will instantly update:
+       The Payment History will show the new payment.
+       The Amount Due in the status banner will decrease.
+       The invoice status will change from Draft to Partial (if partially paid) or Paid (if fully paid).
+
+                                                                                          Page 70 of 87
+M5.5 Printing and Sharing Your Invoice
+
+Step 1: From the Invoice View page, click the Print button.
+
+Step 2: A professional, multi-page PDF will be generated and downloaded. This document is ready to be emailed or printed for your client. It
+includes:
+
+       Your firm's logo and contact details.
+       The client's information.
+       A clear breakdown of services and charges.
+       A summary of the total amount, amount paid, and the final Balance Due.
+       A detailed history of all payments made.
+
+                                                                                          Page 71 of 87
+M6. Managing Your Team: The Associates Module
+
+Collaboration is at the core of a successful law firm. The Associates module allows you to securely invite your partners, junior lawyers, paralegals,
+and other staff to your Digital Lawyer Diary workspace.
+To get started, click on Associates in the main navigation menu.
+
+M6.1 The Associates Dashboard
+
+This page is your central hub for managing everyone connected to your firm. It's divided into two main sections:
+
+                                                                                          Page 72 of 87
+       Active Team Members: This is a list of all associates who have accepted your invitation and are currently part of your firm. Each member is
+       displayed on a card showing their name, role, and the number of cases they are assigned to.
+       Pending Invitations You Sent: This section appears whenever you have an outstanding invitation. It helps you keep track of who has been
+       invited but has not yet responded.
+Keeping this list current ensures every Team Member picker throughout the app‚Äîincluding case assignments, invoicing, and project dashboards‚Äî
+has the right people available.
+
+M6.2 Inviting a New Associate
+
+Adding a new member to your firm is a simple, secure invitation-based process.
+
+Step 1: From the Associates Dashboard, click the "+ Invite Associate" button in the top-right corner.
+
+Step 2: The Invite Associate window will appear. Fill in the required details:
+                                                                                          Page 73 of 87
+       Email Address: Enter the email address of the person you want to invite. They must have or create a Digital Lawyer Diary account with this
+       email.
+       Role: Specify their role within your firm (e.g., "Partner," "Senior Associate," "Paralegal"). This is for your organizational reference.
+
+  What happens next? The system clearly explains the process: The person you invite will receive an email and a notification within their own Digital
+  Lawyer Diary account. They will appear in your "Pending" list until they accept.
+Step 3: Click the "Send Invitation" button.
+
+M6.3 Managing Pending Invitations
+
+Once the invitation is sent, a new card will appear under the "Pending Invitations You Sent" section.
+                                                                                          Page 74 of 87
+This card shows the invitee's email, their assigned role, and a "Pending" status. You have two options here:
+       Resend: If your associate hasn't seen the invitation, click this to send the invitation email again.
+       Cancel Invitation: If you sent the invitation by mistake or no longer wish for them to join, click this to revoke the invitation.
+
+M6.4 What the Invitee Sees: Accepting the Invitation
+
+Your team member will receive the invitation inside their own Digital Lawyer Diary account.
+When they log in and navigate to their "Associates" page, they will see a pending invitation from your firm.
+
+                                                                                          Page 75 of 87
+They have two choices:
+       Accept: By clicking "Accept," they officially join your firm's workspace. They will then appear in your "Active Team Members" list, and the
+       pending invitation will be removed.
+       Decline: If they click "Decline," the invitation is rejected and removed.
+
+M6.5 Managing Active Team Members
+
+Once an associate has accepted your invitation, their card moves to the "Active Team Members" list.
+
+                                                                                          Page 76 of 87
+From here, you can:
+
+       Assign them to cases (as shown in the Case Management section).
+       Manage their permissions by clicking the three-dot menu icon on their card. This allows you to edit their role or remove them from the
+       firm if they leave your practice.
+
+M6.6 Assigning and Reviewing Cases
+
+Each associate card includes a three-dot menu in the top-right corner. Use it to keep case assignments synchronized:
+
+    1. Click Assign Cases to open the selection dialog.
+    2. Search, filter, or scroll through the list, then select one or more matters to share with the associate.
+    3. Choose Select Cases to Assign to confirm. The associate gains immediate access to those files.
+Need to audit workloads later? Choose View Assigned Cases from the same menu to see everything currently shared with that team member‚Äî
+
+                                                                                          Page 77 of 87
+including status and court details‚Äîwithout leaving the Associates module.
+
+  Tip: Use Select All or Clear All inside the dialog to handle bulk reassignment when someone joins or leaves a matter.
+
+M7. Project Management: Organizing Your Legal Work
+
+While the "Cases" module is perfect for litigation and court-related matters, the Projects module offers a flexible and powerful way to manage any
+set of tasks with a defined workflow. This is ideal for internal firm initiatives, complex client matters that aren't in litigation (like a large merger or
+contract review), or any work that benefits from visual task tracking.
+To begin, click on Projects in the main navigation menu.
+
+                                                                                          Page 78 of 87
+M7.1 Creating a New Project
+
+Step 1: From the main Projects page, click the "+ Create Project" button in the top-right corner.
+Step 2: Fill out the New Project form.
+
+       Project Details:
+               Project Name: (Required) Give your project a clear, descriptive name (e.g., "ACME Corp Merger Due Diligence" or "Q4 Marketing
+               Campaign").
+               Description: (Optional) Use the rich text editor to provide a detailed overview of the project's goals, scope, and key information.
+               Toggle between Edit and Preview modes. You can use formatting options like:
+                      Bold (B) and Italic (I)
+                      Headings (H)
+                      Bullet lists and numbered lists
+                                                                                          Page 79 of 87
+                      Links and quotes
+                      Horizontal separators
+       Case Reference:
+               Link to Case: (Optional) If this project is directly related to a formal case in your system, you can select it from the dropdown to
+               link them for easy cross-referencing. If you don't have any cases yet, you'll see "No cases available."
+       Team Members:
+               Search team members... Use the search box to find and add team members from your associates.
+               Available Team Members: Select team members by clicking the checkbox next to their name. You can select individual members
+               or use "Select All" to add everyone.
+               Clear All: Remove all selections if needed.
+               Team members must be added to your Associates module before they'll appear in this list.
+Step 3: Review your entries and click the "Create Project" button at the bottom of the form.
+Once created, you'll be taken directly to your new project's dashboard where you can begin adding tasks and managing the workflow.
+
+M7.2 The Project Dashboard: Your Mission Control
+
+After creating your project, you'll be taken to its main dashboard. This is the central hub for everything related to this specific project.
+
+                                                                                          Page 80 of 87
+The dashboard is divided into two main areas:
+
+Left Panel (Project Overview): This gives you an at-a-glance summary of the project's health and configuration:
+
+       Project Status: Shows whether the project is Active, On Hold, or Completed. Click to change status.
+       Total Tasks: Quick count of all tasks in this project.
+       Task Status Breakdown:
+
+               PENDING - Tasks not yet started (shown in blue)
+               COMPLETED - Finished tasks (shown in green)
+               BLOCKED - Tasks waiting on dependencies (shown in red)
+       Last Updated: Timestamp showing when the project was last modified.
+       Link to Case: Connect this project to an existing case for coordination. If no cases are available, you'll see "No cases available to link yet."
+       Team Members: View all collaborators on this project. Use the "+0" button to add new members or the "Edit Stages" button to
+
+                                                                                          Page 81 of 87
+       customize the workflow stages.
+Right Panel (Task Management): This is where you'll create, view, and manage all the individual tasks for the project:
+
+       Use "+ Add Task" to create new tasks
+       Search tasks... bar to quickly find specific tasks
+       Sort dropdown to organize tasks by different criteria
+       Filter by Status or Assignee to focus on specific task subsets
+       The main area displays all your tasks with their details, including stage indicators, descriptions, milestone progress, and assignment status.
+
+M7.3 Managing Project Tasks
+
+A project is made up of tasks. Your Digital Diary gives you a flexible system to manage them.
+Creating a Task
+
+    1. From the Project Dashboard, click the "+ Add Task" button in the Tasks section.
+    2. Fill out the New Task form with the following information:
+
+                                                                                          Page 82 of 87
+Task Information:
+
+       Title: Give the task a clear, descriptive name (required).
+       Description: (Optional) Add detailed context, notes, or instructions. Supports both Edit and Preview modes for formatted text.
+       Stage: Select the workflow stage for this task (e.g., Intake & Assessment , Documentation & Filing ). The available stages
+       are specific to this project and can be customized.
+       Status: Set the current status (e.g., Pending , In Progress , Completed , Blocked ).
+       Due Date: (Optional) Assign a deadline to keep the task on track.
+
+Team Assignment:
+
+       Assign To: (Optional) Assign the task to a specific team member. The dropdown will show "No team members available" if you
+       haven't added any associates to your firm yet.
+
+  Note: Project assignees come from your Associates list. Make sure the colleague is added in the Associates module before they can appear
+                                                                                  Page 83 of 87
+          here.
+       Milestones:
+
+               Break down large tasks into smaller, trackable sub-tasks or milestones.
+               Click "+ Add" to create new milestones.
+               Check off milestones as they're completed to track progress.
+    3. Click "Create Task" to add the task to your project.
+The new task will appear in your Tasks list and can be filtered, sorted, and organized by Status or Assignee.
+
+M7.4 Personalizing Your Workflow: Project-Specific Stages
+
+Every project is different. A contract review has a different workflow than a property acquisition. Your Digital Diary allows you to customize the
+workflow stages for each project individually without affecting any other project.
+By default, each new project comes with a standard legal matter workflow that includes the following stages:
+
+       Intake & Assessment - Initial client consultation and case evaluation
+       Documentation & Filing - Preparing and filing necessary documents
+       Hearings & Negotiations - Court proceedings and settlement discussions
+       Resolution & Follow-up - Final resolution and post-case activities
+However, you can fully customize these stages to match your specific project needs.
+Step 1: On your Project Dashboard, find the "Team Members" widget on the left panel and click the "Edit Stages" button.
+
+                                                                                          Page 84 of 87
+Step 2: In the "Edit Project Stages" window, you can fully customize your workflow:
+                                                                                          Page 85 of 87
+Reorder Stages: Drag and drop the stages using the handle (‚ãÆ‚ãÆ) icon to match your real-world process. The first stage in the list becomes
+the default column on the Kanban board.
+
+Edit a Stage: Click the pencil icon (‚úèÔ∏è) to rename a stage or change its color. Each stage can have a distinct color for easy visual
+
+identification:
+       Yellow - typically for initial/preparation phases
+       Orange - for active work phases
+       Green - for completion/resolution phases
+
+Delete a Stage: Click the trash icon (Ô∏è) to remove a stage you don't need.
+
+Add a New Stage:
+    1. Click "+ Add new stage" at the bottom of the stage list.
+    2. In the "Create New Status" pop-up, give your new stage a Name and select a Color.
+    3. Click "Create Stage".
+
+                                                                                  Page 86 of 87
+Step 3: After making your changes, click "Save Stages".
+  Important Notes:
+          Changes apply only to this project and won't affect other projects.
+          Renaming or reordering stages refreshes the workflow on the next load.
+          Removed stages will move their tasks to the default stage (the first stage in your list) when the board reloads.
+
+Your Kanban board and the "Stage" dropdown in your tasks will now instantly update to reflect this new, custom workflow, for this project only.
+
+M7.5 Collaboration: Adding Members and Linking Cases
+
+As the project evolves, you can easily manage your team and references.
+       To Add Team Members: In the left panel, click the "+ Add Members" button in the Team Members widget to add more collaborators.
+       To Link to a Case: If you didn't link a case during creation, you can do so at any time using the "Link to Case" widget in the left panel.
+
+M8. Install as Mobile App (PWA)
+
+Install the Digital Lawyer Diary as a Progressive Web App so it behaves like a native mobile app, launches full-screen, and stays one tap away from
+your homescreen.
+
+M8.1 Install on Android (Chrome)
+
+    1. Open the Digital Lawyer Diary in Chrome and verify you are signed in.
+    2. Tap the three dots menu in the upper-right corner of Chrome.
+    3. Choose Add to Home screen (or Install app on newer Android versions).
+    4. Confirm the suggested name, then tap Add. Chrome will place the icon on your home screen or let you drag it where you want it.
+    5. Launch the new icon once so Android records the app in your recent apps list.
+
+M8.2 Install on iOS (Safari)
+
+    1. Open Safari and navigate to the Digital Lawyer Diary while logged in.
+    2. Tap the Share icon (square with an upward arrow) at the bottom of the screen.
+    3. Scroll the sheet and tap Add to Home Screen.
+    4. Edit the shortcut name if desired, then tap Add in the top-right corner.
+    5. Return to your home screen and launch the new icon to use the diary in a standalone window.
+
+M8.3 Manage the App Experience
+
+       Keep at least one login active so the PWA opens directly without re-entering credentials; the standard session timeout rules still apply.
+       Allow notifications when prompted to receive reminders for hearings, invoices, and task updates just like in the browser.
+       If the interface looks outdated, open the menu and select Reload (Android) or pull down to refresh (iOS) to fetch the latest version.
+       To uninstall, remove the homescreen icon; Android will also prompt you to clear the stored data.
+Congratulations! You now have access to all the power of your Digital Lawyer Diary, both on desktop and mobile. Whether you're in court, at the
+office, or on the move, your entire practice is at your fingertips.
+
+                                                                                          Page 87 of 87
+

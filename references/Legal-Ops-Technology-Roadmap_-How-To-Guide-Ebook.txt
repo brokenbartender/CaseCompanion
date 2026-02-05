@@ -1,0 +1,953 @@
+Legal Ops Technology
+Roadmap: 
+
+How To Guide
+
+
+© 2020 Corporate Legal Operations Consortium. All Rights Reserved
+Table of Contents
+
+  CHAPTER 1
+
+How To Guide
+
+        5
+ Legal Ops Technology Roadmap: 
+
+        6
+ Challenges of Legal Technology
+
+        7
+ Legal Enterprise Management (LEM) Systems vs. Point Solutions
+
+        8
+ The Legal Tech Roadmap
+
+        9
+ Managing Technology in a Legal Organization
+
+       10
+ Legal Ops Technology Growth Lifecycle
+
+       11 The Legal Technology Ecosystem
+
+  CHAPTER 2
+
+What is a Technology Roadmap?
+
+       15
+ Why Do You Need a Technology Roadmap?
+
+       16
+ Key Value Propositions of a Roadmap
+
+       17
+ Define Functional Needs, Components, and Priorities
+
+       18 Top Functions of a Technology Roadmap
+Table of Contents
+
+  CHAPTER 3
+
+How to Create a Technology Roadmap
+
+       21
+ Identify strategic objectives and goals
+
+       22
+ Create a technology steering committee and prioritization framework
+
+       23
+ Gather input and engage key stakeholders
+
+       24
+ Review and audit current systems and processes
+
+       27
+ Use a template to track system status and needs
+
+       29
+ Plan for the future
+
+       30
+ Develop a budget and estimate the total cost of ownership
+
+       32
+ Assign resources and develop a program plan
+
+       35
+ Presenting the Roadmap to Stakeholders
+
+       37 A final note for smaller organizations
+CHAPTER 1
+
+How To Guide
+
+   1
+     Legal Ops Technology Roadmap: How To Guide
+
+Legal Ops Technology Roadmap: 
+
+How To Guide
+
+
+In recent years, corporate legal departments
+have led the demand for development and
+investment in technology. But while legal
+departments are transforming the legal tech
+landscape, legal technology in its turn is
+driving change in the legal ecosystem at an
+increasing pace. Collaboration between IT and
+legal operations has never been more critical
+in optimizing the ability of legal departments
+to scale, mature, and protect the
+organizations they serve.
+
+Legal Ops Technology Roadmap: How To Guide  5
+LegalOps Technology Roadmap: How to Guide
+
+Challenges of Legal Technology
+
+Finance teams rely on tools like SAP and Oracle. Sales and marketing have Salesforce
+and Marketo. Human resources run Workday. Unlike other G&A functions in a
+corporation, technology for the legal vertical is still developing and has not fully
+matured. There is no obvious one enterprise legal management solution to
+implement, therefore leveraging technology effectively in a legal department requires
+more strategic planning and prioritization. 
+
+
+
+Despite a sizable investment, the legal technology landscape remains fragmented,
+with countless point solutions emerging to solve various parts of the business, often
+targeted at specific practice groups. As the industry matures, legal enterprise
+management consolidates, and several large players are beginning to offer a full suite
+of tools needed to manage the corporate legal department. Depending on the size,
+complexity, and maturity of your legal department, you may consider these one-stop
+shops rather than adopt a host of point solutions.
+
+
+Legal Ops Technology Roadmap: How To Guide                                              6
+                                                                    Legal Ops Technology Roadmap: How To Guide
+
+Enterprise Legal Management (ELM) Systems vs. Point
+Solutions
+
+If you’re starting legal tech with a blank slate, it makes sense to consider an ELM
+solution. This gives you access to a suite of services, not all of which you may need
+today, but the functions will be available for you to gradually integrate with the
+services you are currently using. 
+
+
+Anyone who has implemented a third party solution or developed proprietary
+software knows how challenging this process can be. Add to that the challenges of
+change management, training, and adoption. Once you implement such a system,
+ripping it out and replacing with another can be quite a painful, costly, and
+time-consuming experience. If you use a legacy system, it may be easier to add
+individual point solutions to address particular needs rather than replacing the entire
+system with an enterprise solution. As an added bonus, using different providers gives
+you the greatest flexibility in picking and choosing the provider that is just right for
+each team and each challenge your department faces.
+
+
+Legal Ops Technology Roadmap: How To Guide  7
+                                                                                      Legal Ops Technology Roadmap: How To Guide
+
+The Legal Tech Roadmap
+
+Technology can be used to collect and analyze data to create actionable insights,
+automate manual processes, reduce risks, improve accuracy, scale an organization,
+solve problems, and create efficiencies. In today’s fast moving and constantly changing
+environment, however, teams often find themselves overwhelmed by the possibilities
+that technology presents, as their departments continue to rely on manual,
+time-consuming, and fragmented point solutions. Many teams lack an overall
+technology vision and deploy costly applications that are underused and disconnected
+from the workflow of the team and from the overall IT strategies and objectives of the
+company.
+
+
+As the legal ops department grows, the need to create a clear technology roadmap
+that spans all the needs of organization becomes more critical. Developing a
+technology roadmap can help ease the transition to a modern legal ops organization.
+But where do you start in developing a useful technology roadmap?
+
+
+
+The following guide provides an overview of planning and investment stages to
+consider in the overall technology roadmap.
+
+
+Legal Ops Technology Roadmap: How To Guide  8
+                                                                               Legal Ops Technology Roadmap: How To Guide
+
+Managing Technology in a Legal Organization
+
+The goal is to create a technology implementation plan that accounts for your
+organizational needs. In other words, you want to deploy a strategic technology
+solution that automates manual processes, digitizes physical tasks, and improves
+speed and quality. Below is a high-level snapshot of some of the steps needed to
+leverage technology successfully across your organization:
+
+                Define the technology vision: create and implement a long-term technology roadmap
+                Discover pain points and work to automate repetitive or time-consuming manual processes
+                Determine what to build and what to buy
+                Evaluate new vendors, suppliers, and solutions
+                Incorporate connected tools for e-billing, matter management, contact management, IP
+                management, e-signature, and more
+                Assess emerging technology capabilities and incorporate them into your long-term
+                strategic planning
+                Structure an effective partnership with your corporate IT team and finance team to secure
+                the budget
+
+Use the CLOC Core 12 as a best practice guide. As an organization matures, it
+progresses along a fairly predictable growth lifecycle in its technology, tools, and
+processes. Begin by determining where your organization is in its growth cycle to
+understand where to begin the technology roadmap.
+
+Legal Ops Technology Roadmap: How To Guide                                                                                 9
+                                    Legal Ops Technology Roadmap: How To Guide
+
+Legal Ops Technology Growth Lifecycle
+
+                Underdeveloped      Emerging           Developing             Leading
+
+                  Nonexistent         Business          3-year plan            5-year strategic
+                                      objectives
+Technology                            defined and        broken down            plan with how
+Roadmap                               preferred key      into horizons,         technology will
+                                      technologies       with effort,           support the
+                                      identified         costs, and             objectives of the
+                                                         prioritization         organization
+                                                         framework              with planned
+                                                                                effort, costs,
+                                                                                convergence,
+                                                                                and integrations
+
+Caliber /       Underutilized       Implemented        Integrated             Dashboards;
+Scope of Tools  MS Office suite     matter             matter                 data analytics;
+                or similar
+
+        mgmt/eBilling;     mgmt/claims;           eDiscovery;
+                                    SharePoint or      Legal hold; IP         matter intake;
+                Second-tier legal   Intranet;          mgmt; contracts
+                products not (or    eSignature;        mgmt;                  fl automated
+                no longer)          document Mgmt
+
+
+                considered                             km 
+ ngomwtl;eGdgReC
+  work ows; client
+                market leaders
+     Most tools are                            self-service;
+                                    market leaders
+    All tools are          document
+                                                       market leaders
+        analytics;
+
+                                                                              lmeaarcnhiinnge
+
+
+                                                                              All tools are
+                                                                              market leaders
+
+
+Quality of      Decentralized       Defined, but       Rule-based             Standard core
+Data            and                 limited, standard  validation of          data across
+Level of User   non-standardize     tracking           standard               systems
+
+
+Adoption        d tracking of       elements
+
+
+                information
+
+                          itnrafocrkminag
+ tion  wCeanretrhaol udsaet
+
+a
+                Much of it lies in  Limited
+                email or            compliance and     Complete within        Aligned with
+                unstructured        completeness
+                             legal department
+                forms
+                                 systems, but not       reporting
+                                                       across systems
+        metrics
+
+
+                Most tools only
+                used by support                                               Complete,
+                staff
+                                                                              synched, and
+                                                                              clear primary
+                                                                              sources of
+                                                                              records (no issue
+
+                                                                              doaf trae)d
+ undant
+
+                                    Attorneys using    All levels use a       All levels are
+                                    core tools for     core set of tools      using tools,
+                                    basic tasks, but                          leveraging
+                                    opt out of                                analytics, and
+                                    significant usage                         are represented
+                                                                              in tech steering
+                                                                              committee
+
+                                    Legal Ops Technology Roadmap: How To Guide                     10
+                                                                 Legal Ops Technology Roadmap: How To Guide
+
+The Legal Technology Ecosystem
+
+Improving and using technologies can enhance the overall efficiency of your legal
+operations. In view of the proliferation of specialized legal systems and new enterprise
+capabilities, you must consider a technology strategy that maximizes the use and
+reuse of legal information.
+
+
+Organizations have different priorities that align with their corporate objectives,
+strategy, and vision, from making better data-based decisions to improving business
+intelligence, corporate governance, and record management. The technology needs of
+the legal ecosystem are many and varied.
+
+
+Some have difficulty realizing the benefits of new technologies, whereas others see
+technology as the solution to all their problems. Begin by assessing your current state
+and determining what works well and what could be improved. Often, improvements
+involve replacing people and changing processes. Technology can be a powerful
+enabler, but will not magically resolve issues unless the people and process challenges
+are first addressed.
+
+Legal Ops Technology Roadmap: How To Guide  11
+                                                                               Legal Ops Technology Roadmap: How To Guide
+
+Once you have mapped the current state and the opportunities available for
+leveraging technology, you can start identifying solutions and filling technology gaps.
+Make sure to consider interconnecting department and company systems to eliminate
+overlap, and pinpoint obstacles and system compatibility issues. Remember that each
+point solution you add has its benefits, but also comes with significant continued
+investments of time and resources to support it beyond launch. Evaluate whether it’s
+possible to utilize existing systems. If yes, you may be able to better scale your
+organization and lower the overall costs of technology needs.
+
+
+According to Amara’s Law, organizations tend to overestimate the effect of a
+technology in the short term and underestimate its effect in the long run. By
+developing a robust technology roadmap, organizations can efficiently plan for the
+future and prepare for the effects of new and updated technology.
+
+Legal Ops Technology Roadmap: How To Guide  12
+CHAPTER 2
+
+What is a Technology
+Roadmap?
+
+    2
+                        What is a Technology Roadmap?
+
+What is a Technology Roadmap?
+
+A technology roadmap is a high-level visual
+summary that maps out the vision of your
+organization and plans for a complex
+technology undertaking. It matches
+technology solutions with short- and
+long-term goals. A good technology roadmap
+helps an organization develop the right
+technologies, capabilities, and organizational
+structures at the right time to satisfy needs. It
+is also used to spotlight available additions
+and improvements in your current stack of
+technology solutions.
+
+Legal Ops Technology Roadmap: How To Guide  14
+                                                                                                  What is a Technology Roadmap?
+
+Why Do You Need a Technology Roadmap?
+
+Making any change to the technology environment of a business can be a complicated
+task, which can create a ripple effect across other systems within the organization.
+Implementing a technology change without thinking through all the implications could
+create problems for business operations and adversely affect revenues and customer
+relationships. It could also introduce security and regulatory weaknesses. Even if the
+organization knows how to cope with these risks, the change itself could be disruptive.
+
+
+A technology roadmap can mitigate issues and challenges, and help the organization
+strategically plan complex adjustments to its technology environment. It can also help
+the organization implement its vision and strategy, and devise the best way to
+introduce a technological change. A technology roadmap can include technological
+changes, such as rolling out an eBilling or a contract management system, upgrading
+the financial management systems, or developing a legal intranet.
+
+
+Legal Ops Technology Roadmap: How To Guide  15
+                                                                                                  What is a Technology Roadmap?
+
+Key Value Propositions of a Roadmap
+
+Every organization should have a technology roadmap to understand current
+technology infrastructures. A complete technology stack is capable of supporting your
+business goals and objectives. It has several key functions, including:
+
+                Developing a strategic framework in which to effectively organize and prioritize ideas
+                Building a customized, prioritized list of initiatives and programs to undertake, and ensuring
+                that the technology infrastructure can support identified business goals
+                Auditing the technology infrastructure and application layers to meet current best practices
+                and industry standards
+                Building a gap analysis between the business’s strategic needs, the current state, and the
+                desired state of the technology infrastructure, the application layers, and the connection
+                points between various technology stacks
+                Understanding the estimated costs and duration of each of the programs being proposed
+                Communicating the strategic plan of the department to cross-functional stakeholders and
+                constituents to obtain their buy-in and collaboration throughout the development process
+                Keeping program teams on track and on budget during the process
+
+                    Establishes a clear vision of current and target state
+
+                                 Supports a strategy for change
+
+                 Quantifies future processes and technology investments
+
+Legal Ops Technology Roadmap: How To Guide  16
+                                                                                                  What is a Technology Roadmap?
+
+Define Functional Needs, Components, and Priorities
+
+You need to take into account several issues when developing a roadmap. First,
+identify the components that are a high priority for the organization as a whole and
+for the functional area. Next, apply the same methodology to each component --
+where are we today, where do we want to go, and how do we get there?
+
+
+
+Without clearly defined needs and priorities, there is no way to properly assess the
+options of a department and to plan effectively. Include the following in a technology
+roadmap:
+
+                A comprehensive review of current business processes, with documented inefficiencies
+                Identified technology gaps or areas where existing systems fall short
+                The functional capabilities needed to effectively support or improve processes
+                An itemized and prioritized checklist of what steps need to be taken
+
+Legal Ops Technology Roadmap: How To Guide  17
+                                                              What is a Technology Roadmap?
+
+Top Functions of a Technology Roadmap
+
+ Describes the vision and strategy
+Gets the executives and IT professionals of the organization on the same page and
+communicates all the current technology programs in one place.
+ Brings internal stakeholders into alignment
+Facilitates a discussion around investing in technology and initiates value-based
+conversations. Leadership can easily see that spending time and money to upgrade
+the technology results in better alignment with overall business goals and objectives.
+ Sets the direction and establishes priorities
+Helps functional leaders understand parameters and timelines for each program.
+Anticipated results are clearly communicated, which helps functional leaders think
+strategically when requesting new technology or asking for improvements to current
+infrastructure.
+ Provides a guide for executing the strategy
+Details technology infrastructure improvements that can help the legal ops team
+anticipate resourcing needs, plan assignments, choose the right solutions and
+vendors, and understand the costs involved.
+
+                                                Legal Ops Technology Roadmap: How To Guide 18
+CHAPTER 3
+
+How to Create a
+Technology Roadmap
+
+   3
+                 How to Create a Technology Roadmap
+
+Identify strategic objectives
+and goals
+
+Building an integrated technology roadmap is
+usually accomplished in two phases: the initial
+setup of the roadmap and a period of
+refinement. Time spent in preparation
+up-front will increase success.
+
+Legal Ops Technology Roadmap: How To Guide
+  20
+                                                                                          How to Create a Technology Roadmap
+
+Obtain feedback from various stakeholders. Input from a steering committee, focus
+groups, leaders, and other stakeholders is critical for understanding technology needs
+and ensuring adoption after implementation. Ask your stakeholders the following
+questions:
+
+                What are your strategic priorities? What is the financial and operational impact you
+                hope to generate? Reducing effort and waste is a great initial goal, but don’t limit your
+                thinking. Explore not only today’s needs, but also the future goals of your organization.
+
+                What tools and information can help your team become more insightful, proactive, and
+                responsive?
+
+                How can your department deliver a better experience or create additional value for the
+                organization?
+
+                In what ways can technology make it easier to do business within your company? For
+                example: Will an eBilling system streamline financial management and save costs?
+
+                Are there inefficiencies or tedious processes and tasks that can be eliminated through
+                technology? Determine whether the potential expense of the solution justifies the cost of the
+                technology.
+
+Clearly defining strategic objectives and determining how technology will achieve the
+objectives is a critical step to a successful technology roadmap strategy. Thoughtful
+preparation in the early stages will help drive the success of your technology roadmap.
+
+Legal Ops Technology Roadmap: How To Guide  21
+                                                     How to Create a Technology Roadmap
+
+Cfrraemateewaotrekchnology steering committee and prioritization
+
+A steering committee and executive support are key requirements for success -- not
+only for developing the roadmap, but for clinching management buy-in during
+implementation. Organizational priorities, corporate goals, department strategy, and
+individual opinions vary greatly. Therefore, reaching a consensus and ensuring support
+for the technology roadmap can be difficult. 
+
+
+A technology steering committee should be composed of leaders from various areas in
+your organization and key departments, like IT, to ensure steady and deliberate
+progress towards devising a long-term technology strategy, and focus on high-impact
+initiatives. This will facilitate communication and help overcome sectoral or
+individualistic thinking. Depending on the size of your organization, you may receive
+many legal tech requests from stakeholders who have a limited view of the overall
+needs of the department and who tend to prioritize their own agenda first. This can
+often lead to “squeaky wheels” getting more attention than other parts of the
+organization. The goal of the steering committee is to align technology priorities with
+strategic investment. It will also clear the line of sight between the legal and IT
+departments regarding the top department challenges and tooling needs. The
+committee can manage a centralized channel for technology requests, which will bring
+transparency and accountability to the decision-making and prioritization process. The
+steering committee will evaluate and prioritize requests on an ongoing basis, and can
+communicate with individual teams as requests are received.
+
+
+                                             Legal Ops Technology Roadmap: How To Guide 22
+                                                                                       How to Create a Technology Roadmap
+
+Gather input and engage key stakeholders
+
+Identify problems flagged by the legal department, outside counsel lawyers, and the
+functional organizations that will be affected. Many legal organizations share common
+pain points, but each business is different and may have its own specific point point.
+Remember, when developing a technology roadmap, you don’t have to be an expert
+on every single business process in every practice area. What you must be able to do,
+however, is identify the key people who are the subject matter experts in these
+groups. Often, the practice areas will already have a de facto owner for a given
+application or business process, and they may have already created a roadmap.
+
+
+When beginning to develop a technology roadmap, consider all the stakeholders in
+your organization. It’s important to gather input from everyone who will be affected,
+not only those who are the most obvious. Plan to meet with someone from each
+practice area. Request actionable suggestions and use open-ended rather than yes/no
+questions. Allow stakeholders to submit their comments and ideas through an
+anonymous venue like a survey or poll. This will alleviate any concerns about speaking
+one’s mind on difficult topics and encourage stakeholders to become actively involved
+in adopting the new technology.
+
+
+Legal Ops Technology Roadmap: How To Guide  23
+                                                                                          How to Create a Technology Roadmap
+
+Review and audit current systems and processes
+
+Understand all the systems currently in place to be able to assess future needs and the
+range of potential scenarios that may affect the roadmap. When auditing systems, ask
+the stakeholders a series of questions to understand what is needed, for example:
+
+                What systems are currently in use for daily activities?
+                What is the purpose of the system and what process does it support?
+                Is it cloud-based or on premises?
+                Who supports the system (vendor, or internal IT)?
+                Is data entered manually or populated by another system? What system is used to populate
+                the system?
+                What output is provided and who receives it?
+                What other systems are connected to it?
+
+Legal Ops Technology Roadmap: How To Guide  24
+                                                                                          How to Create a Technology Roadmap
+
+Think about whether systems and technology need to be optimized, upgraded,
+repurposed, or replaced. Waiting until something breaks or becomes obsolete can be
+tempting, but it can lead to downtime and service interruptions. Evaluate each
+technology solution and determine the right path, usually one of the following:
+
+                Optimize. Use the inactive features of the existing system. Often changes can be
+                implemented through configuration without the need for customization.
+
+                Upgrade. Bring the existing system to its most current version. Bear in mind though that
+                there are many horror stories of companies that heavily customized their systems and are
+                now unable to upgrade them.
+
+                Repurpose. Use something you already have. Shop for “new-to-you” technology inside your
+                company, before going outside.
+
+                Replace. Buy a new, different system. Often the most expensive and time-consuming
+                option to implement; however, it may produce massive functional improvements that are
+                not achievable with your existing systems.
+
+Legal Ops Technology Roadmap: How To Guide  25
+                                                                                          How to Create a Technology Roadmap
+
+Evaluating new technology
+
+If you decide to invest in a new system or technology, before committing, you may
+want to identify providers that appear to be furthest along in each relevant use case.
+Obtain initial information from market leaders, and if warranted, plan to conduct
+some demos. If still of interest, acquire access for a fixed time period, and conduct a
+deeper due-diligence. Assess the value proposition in light of concrete use cases. At
+the end of this process you will be able to make an informed recommendation to
+implement or not. Note that several legal consulting firms specialize in doing these
+types of technology assessments.
+
+       Learning about available technology offerings
+
+                CLOC is a fantastic resource for this! CLOC members have access to a document library
+                that contains usage surveys, law department technology resources, and a host of other
+                content from past presentations.
+
+                Another great resource is to work with legal consulting firms that specialize in providing
+                this type of information.
+
+Legal Ops Technology Roadmap: How To Guide  26
+                                                                      How to Create a Technology Roadmap
+
+Use a template to track system status and needs
+
+A simple template can help quickly identify the systems in use and the status of each
+system. Although it may be tempting to create a complex roadmap dashboard with all
+the data points that can be gathered, your goal is to quickly provide a visual
+representation of the various programs on the roadmap. Try not to overcomplicate
+your roadmap!
+
+Examples of simple technology roadmaps
+
+Legal Tech Roadmap           2015  2016  2017  2018                   2019  2020  2021     2022
+eBiling / Matter management
+Contract Management
+Content Management
+IP Management
+Business Intelligence
+Knowledge Management
+Board Management
+Compliance Management
+Legal Hold
+eDiscovery
+Case Management
+Subsidiary Management
+eSignature
+Legal Intranet
+Legal Chat Bot
+Workflow Automation
+
+  1 To start, inventory your legacy systems in the gray area                            LEGACY
+  2 Next, identify recently completed tech refreshes in green area          TECH REFRESH COMPLETED
+  3 Add tech refreshes currently underway in yellow                          TECH REFRESH IN PROCESS
+  4 Show future tech refreshes planned, but not yet started in white
+                                                                               FUTURE TECH REFRESH
+Repeat Assessment 1-2 Times Per year
+
+                                               Legal Ops Technology Roadmap: How To Guide             27
+                                                                      How to Create a Technology Roadmap
+
+Legal Roadmap
+
+  2021         Q1 2021                         Q2 2021                     Q3 2021              Q4 2021
+
+Practice  Jan  FEB      MAR               APR  MAY      JUN           JUL  AUG      SEP  OCT    NOV      DEC
+Area A
+                    Project 1 (Explore Phase)                               Project 1 (Execution Phase)
+
+          Project 2 (Explore Phase)            Project 2 (Execution Phase)
+
+               Project 3 (Explore Phase)                     Project 3 (Execution)
+
+                                                                                     Project 4
+
+Practice       Project 1 (Explore Phase)                Project 1 (Execution Phase)
+Area B
+
+                                                                                     Project 2
+
+                                               Project 3 (Execution)
+
+                                                        Project 4
+
+PROPOSED  IN PROGRESS                AT RISK            OFF TRACK
+
+                                                        Legal Ops Technology Roadmap: How To Guide            28
+                 How to Create a Technology Roadmap
+
+Plan for the future
+
+Investments that address only immediate
+needs result in fewer benefits, duplication of
+effort, and higher costs. In developing a
+technology roadmap, plan for a longer time
+horizon and consider what is needed to stay
+competitive over the next three to five years.
+Technology that is flexible, scalable, and
+expandable enough to accommodate the
+long-term needs of the department, and
+organization will get the most value from the
+investment.
+
+Legal Ops Technology Roadmap: How To Guide  29
+                                                                                          How to Create a Technology Roadmap
+
+Develop a budget and estimate the total cost of ownership
+
+Technology initiatives can be expensive and capital- and resource-intensive.
+Investments can vary significantly depending on company, industry, and the
+complexity and deliverable dates needed for implementation. Realistic budgets must
+consider all business needs and include routine maintenance, system replacement
+costs, hardware and software licenses, support, and infrastructure updates.
+
+
+To ensure success, involve key stakeholders in the budgeting process, including
+leadership, finance, and IT. Take the time to truly understand user needs, and include
+users in the design, implementation, and rollout phases of the roadmap. Getting all
+stakeholders on board has the added benefit of increasing technology adoption rates
+after implementation. As realistic technology needs are prioritized, budget and
+resources can be allocated.
+
+
+Legal Ops Technology Roadmap: How To Guide  30
+                        How to Create a Technology Roadmap
+
+Gather Wish List        Bottom up exercise prioritized within practice areas
+
+Estimate Project Costs  High-level cost and resourse estimates per project. Determine IT vs Legal
+                        budget submissions
+
+    Submit Budget       Finalize budget submissions (Legal and IT components)
+                        Based on funding received, prioritization and resourse availability
+Determine Roadmap
+      Re-baseline budget, prioritization and resourse availability
+  / Project Timeline
+
+Monthly / Quarterly
+
+        Check-ins
+
+Research pricing across a range of vendors and include realistic cost estimates for each
+program. Technology costs go beyond the up-front cost of the technology itself. To
+determine the total cost of ownership, include all direct and indirect costs such as new
+infrastructure costs, subscription fees, annual maintenance and support fees, and staff
+training costs.
+
+                        Legal Ops Technology Roadmap: How To Guide                                 31
+                                                                                          How to Create a Technology Roadmap
+
+Assign resources and develop a program plan
+
+To ensure the greatest success of the technology roadmap, hire a professional
+program manager. An experienced program manager can negotiate achievable
+deadlines with all stakeholders and keep the program on time and on budget.
+Organize the technology roadmap into phases and task lists, and assign roles and
+responsibilities. An effective program manager can ensure that tasks are completed,
+communication lines remain open, and issues are escalated and resolved in a timely
+manner.
+
+
+Bring the key stakeholders and program manager together to review the technology
+roadmap and determine which programs to work on and in which order. Stakeholders
+need to estimate how long each program task will take, and decide which team
+members are responsible for each action item. If stakeholders share in the success of
+the program, they are more likely to adopt and embrace changes in technology.
+
+
+You may be tempted to save the cost of the program manager, but a good program
+manager can hold everything together and ensure that the technology roadmap stays
+on track and delivers at the right time. Make this position a priority to achieve success.
+
+
+Legal Ops Technology Roadmap: How To Guide  32
+                                             How to Create a Technology Roadmap
+
+Example program governance structure
+
+An effective program manager is also instrumental in developing a program
+governance structure, in defining and establishing the processes and procedures
+involved, and ensuring that all policies and best practices are followed. Below is an
+example of a program governance structure. Naturally, you need to adapt your
+governance structure to your concrete situation.
+
+Executive Sponsors    Practice Area Leader   AGC or GC             IT Leader
+
+Technology Steering
+            Cross functional team of practice area leaders and IT
+     Committee
+
+Program Management
+   Practice Area SME      IT Program
+      Legal Ops
+
+          Team                                Manger      Project Manager
+
+Project Workstream
+   Workflow       Data
+   Reporting
+   Change
+                      Enterprise
+
+        Leads                     Migration  Analytics    Mgmt                         Integration
+
+Project Workstream
+
+        Teams
+
+Critical for successful adoption
+
+                                             Legal Ops Technology Roadmap: How To Guide  33
+                                                                                          How to Create a Technology Roadmap
+
+It is critical for adoption success that you have an executive sponsor for the area in
+which you are implementing the change. If the change is related to patent
+prosecution, you ideally want the VP of that group as an executive sponsor. If you are
+releasing a customer-facing CLM application, you want a business counsel VP in your
+corner, and in any case, you want a business counsel attorney on your program
+management team.
+
+
+To boost your chances of adoption, make sure that there is adequate pull from the
+relevant stakeholders, otherwise the implementation is likely to fail. Having to push
+the change on a group is a serious warning sign that program effectiveness is likely to
+suffer.
+
+
+Legal Ops Technology Roadmap: How To Guide  34
+How to Create a Technology Roadmap
+
+Presenting the Roadmap to
+Stakeholders
+
+Presenting the technology roadmap requires a
+great deal of planning and preparation. Expect
+pushback from various stakeholders in your
+organization. Reaching a consensus may be
+challenging. Not everyone will comprehend
+every technology initiative in your roadmap. If
+your audience is not tech-savvy, watch your
+language. Communicate the relevant value
+and goals in a way that your roadmap can be
+easily understood by all.
+
+
+Be aware that subject matter experts in the
+various practice areas are likely to have a
+much better understanding of their business
+processes than you. Therefore, when you
+present a new roadmap vision you are likely to
+run into some resistance. Most of the time,
+the various practice areas will likely have their
+own roadmap improvement plans in place for
+the applications and business processes they
+own, and those plans are likely to contain
+critical business process improvements they
+need to make. If your proposed plan does not
+address their issues, they will not support it.
+
+
+Legal Ops Technology Roadmap: How To Guide  35
+                                                                                          How to Create a Technology Roadmap
+
+To minimize pushback, you must secure the buy-in of key stakeholders early in the
+process, and continue to keep the stakeholders informed along the way. Before
+presenting the roadmap to a large group of stakeholders, consider adopting the
+“meeting before the meeting” strategy. This enables you to preview the
+recommendations in advance with each stakeholder before the general meeting, and
+identify any concerns or issues they have while you still have time to address them.
+Below are a few other suggestions:
+
+                Start with big picture thinking. Don’t overwhelm the presentation with tactics or technical
+                details, or an overcomplicated roadmap. Explain the benefits of the roadmap, what it will
+                do for the company, and how it addresses problems and increases efficiencies
+
+                Make the roadmap visually appealing and easily digestible within seconds. Be concise and use
+                only a few words to explain it
+
+                Call attention to the areas in the roadmap that need to be addressed by all
+
+                Back up the proposal with evidence, data, and goals. Add relevant stats, charts, or links to the
+                data presented
+
+                Communicate to the stakeholders that the roadmap is a statement of intent. It can and will
+                change over time. This will help mitigate any unmet expectations
+
+Creating a robust technology roadmap is not a one and done exercise. It evolves over
+time. Consequently, it will need to be reviewed and re-assessed often. As the business
+grows, priorities may shift and new opportunities or challenges may present
+themselves. To meet the updated priorities, the technology strategy may also change
+and the roadmap will need to be adjusted.
+
+Legal Ops Technology Roadmap: How To Guide  36
+                                                                                          How to Create a Technology Roadmap
+
+Technology roadmaps are rarely perfect the first time around. It’s difficult to
+incorporate every contingency and to map various systems completely and accurately.
+It’s more important to just get started and keep working on the roadmap to move
+closer to achieving the vision and goals of the organization. The best roadmaps are
+flexible, living documents that should be regularly updated, reconsidered, and revised.
+
+Legal Ops Technology Roadmap: How To Guide  37
+          How to Create a Technology Roadmap
+
+A final note for smaller organizations
+
+The process outlined here may appear to be rather daunting and time-intensive, but
+even smaller organizations will benefit from developing a technology roadmap and
+applying this methodology. If you have not attempted something like this before, you
+may wish to begin more simply, using the quick start guide shown below.
+
+Quick Start Guide
+
+ Assess   • Meet with subject matter experts (application/process owners) within each practice area
+
+Validate  • Inventory what they have and what they plan to do
+
+Discuss   • Use a simple template to document current and future plans
+Present
+          • Review initial roadmap with practice area leads and IT to align and gain buy-in
+
+          • Request leader to assign a resource to represent their group on the technology
+
+
+          steering committee
+
+          • Meet with the assigned representatives to review and discuss:
+
+            • Functional needs and strategic priorities
+
+            • Roadmap consolidation opportunities for applications or business processes
+
+            • New technology offerings (Consider consulting with a legal consulting firm if needed)
+
+            • Develop a budget and estimate TCO
+
+          • Present to practice area leaders during initial report out
+
+          • Present to AGC or GC for final approval
+
+Don’t wait! Get started today and plan for future
+technology needs by developing a technology roadmap.
+
+CLOC members, find out more about technology roadmaps online:
+
+Legal Ops Tools & Technology Overview Usage Survey, Roadmaps and Lessons Learned 
+
+Legal IT Budget - Executive Overview and Prioritization Exercise
+
+
+          Legal Ops Technology Roadmap: How To Guide                                                  38
+                      cloc.org
+
+© 2020 Legal Ops Technology Roadmap: How To Guide. All Rights Reserved
+
