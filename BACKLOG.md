@@ -85,6 +85,24 @@ This backlog maps the Michigan civil case lifecycle (benchbook-driven) and legal
 24. **E8** Research/Reference Audits (non-blocking)
 - Steps: OpenContracts, OpenClaw, SSRN/AI research, AI usage policy references
 
+25. **E2/E8** Lawma classifier for auto-tagging
+- Steps: add document type classifier for police/medical/witness/video, map tags to modules, test against labeled examples
+
+26. **E8** LegalBench AI quality testing
+- Steps: run benchmark subset for legal reasoning, build model scorecard, tune prompts/guardrails
+
+27. **E8** Legal Text Analytics resource scan
+- Steps: review tool/dataset list, shortlist OCR/NER/citation extractors, note glossary/annotation tools
+
+28. **E2/E8** LegalNexus RAG architecture reference
+- Steps: review QA/hallucination checks, adopt case-workspace isolation patterns, evaluate retrieval routing
+
+29. **E8** OLAW research framework reference
+- Steps: review safety guardrails, retrieval experiments, and UI testing patterns for non-lawyers
+
+30. **E8** Awesome LegalAI Resources scan
+- Steps: review curated datasets/tools list, shortlist any US-relevant sources, avoid non-US legal data
+
 ## Roadmap Tracker
 
 Status legend: `planned` `in_progress` `done`
