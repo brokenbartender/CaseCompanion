@@ -35,6 +35,8 @@ const RESOURCES = [
   }
 ];
 
+const STATUS_KEY = "case_companion_mifile_reconnect_status_v1";
+
 export default function MiFileReconnect() {
   const settings = readJson<CaseSettings>(SETTINGS_KEY, {
     caseName: "",
@@ -45,6 +47,7 @@ export default function MiFileReconnect() {
   });
   const [state, setState] = useState<ReconnectState>(() => readJson(STORAGE_KEY, {}));
   const [caseNumber, setCaseNumber] = useState(settings.caseNumber || "");
+  const [completedAt, setCompletedAt] = useState<string>(() => readJson(STATUS_KEY, ""));
 
   function toggle(id: string) {
     const next = { ...state, [id]: !state[id] };
@@ -58,6 +61,13 @@ export default function MiFileReconnect() {
   }
 
   const done = STEPS.filter((_, idx) => state[String(idx)]).length;
+  const allDone = done === STEPS.length;
+
+  function markComplete() {
+    const stamp = new Date().toISOString();
+    setCompletedAt(stamp);
+    writeJson(STATUS_KEY, stamp);
+  }
 
   return (
     <Page title="MiFILE Reconnect" subtitle="Reconnect your case so you keep receiving e‑service.">
@@ -74,6 +84,20 @@ export default function MiFileReconnect() {
             <div className="mt-3 text-xs text-slate-400">
               If you stop receiving notices, repeat this process.
             </div>
+            {allDone ? (
+              <button
+                type="button"
+                onClick={markComplete}
+                className="mt-4 w-full rounded-md bg-amber-500 px-3 py-2 text-sm font-semibold text-slate-900"
+              >
+                Mark Reconnect Complete
+              </button>
+            ) : null}
+            {completedAt ? (
+              <div className="mt-2 text-xs text-amber-200">
+                Last completed: {new Date(completedAt).toLocaleString()}
+              </div>
+            ) : null}
           </CardBody>
         </Card>
 
