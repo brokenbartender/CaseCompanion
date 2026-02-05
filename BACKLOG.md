@@ -132,6 +132,8 @@ This backlog maps the Michigan civil case lifecycle (benchbook-driven) and legal
 - Steps: assess RAG/KG/MoE/RLHF guidance, map to CaseCompanion AI pipelines
 51. **E2/E7** AI usage policy + guardrail disclosure (MS Bar guide)
 - Steps: summarize AI benefits/risks, define safe usage boundaries, add disclosure panel
+52. **E5** Trial notebook module (checklists + packets)
+- Steps: witness list, exhibit list, opening/closing prep, printable trial packet
 
 ## Roadmap Tracker
 
