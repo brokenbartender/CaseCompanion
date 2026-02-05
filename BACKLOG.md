@@ -126,6 +126,8 @@ This backlog maps the Michigan civil case lifecycle (benchbook-driven) and legal
 - Steps: review dataset card/license, assess sample quality, decide if safe for demo text only
 48. **E2/E8** OpenClaw feature audit (inspiration only)
 - Steps: review agent routing, tools/skills patterns, status UI for potential workflow integrations
+49. **E2/E7** AI-in-law research watchlist (Q4 2025 SSRN)
+- Steps: review top papers, extract safety/verification guidance, align AI guardrails
 
 ## Roadmap Tracker
 
