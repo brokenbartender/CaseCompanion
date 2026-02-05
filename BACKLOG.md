@@ -130,6 +130,8 @@ This backlog maps the Michigan civil case lifecycle (benchbook-driven) and legal
 - Steps: review top papers, extract safety/verification guidance, align AI guardrails
 50. **E2/E7** Legal AI reliability framework review (arXiv 2412.20468v2)
 - Steps: assess RAG/KG/MoE/RLHF guidance, map to CaseCompanion AI pipelines
+51. **E2/E7** AI usage policy + guardrail disclosure (MS Bar guide)
+- Steps: summarize AI benefits/risks, define safe usage boundaries, add disclosure panel
 
 ## Roadmap Tracker
 
