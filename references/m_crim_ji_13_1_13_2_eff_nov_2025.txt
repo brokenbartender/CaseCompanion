@@ -1,0 +1,153 @@
+                                FROM THE COMMITTEE
+                                 ON MODEL CRIMINAL
+                                  JURY INSTRUCTIONS
+
+===========================================================
+       The Committee on Model Criminal Jury Instructions has adopted amendments
+
+to M Crim JI 13.1 (Assaulting, Resisting, or Obstructing a Police Officer or Person
+Performing Duties) and M Crim JI 13.2 (Assaulting or Obstructing Officer or
+Official Performing Duties). The amended instructions place more emphasis on the
+requirement that the jury receive instructions on the legal framework for assessing
+whether the officers’ actions were lawful. See People v Carroll, 514 Mich 851; 8
+NW3d 576 (2024). Additionally, the references to “resisting” and “opposing” have
+been removed from M Crim JI 13.2, as those terms do not appear in MCL 750.479.
+The amended instructions are effective November 1, 2025.
+===========================================================
+
+[AMENDED]  M Crim JI 13.1  Assaulting, Resisting, or Obstructing a
+                           Police Officer or Person Performing
+                           Duties
+
+       (1) The defendant is charged with the crime of assaulting, battering,
+wounding, resisting, obstructing, opposing, or endangering1 a [police officer / (state
+authorized person)2] who was performing [his / her] duties. To prove this charge,
+the prosecutor must prove each of the following elements beyond a reasonable
+doubt:
+
+       (2) First, that the defendant assaulted, battered, wounded, resisted,
+obstructed, opposed, or endangered1 [name complainant], who was a [police officer
+/ (state authorized person)]. [“Obstruct” includes the use or threatened use of
+physical interference or force or a knowing failure to comply with a lawful
+command.]3 [The defendant must have actually resisted by what (he / she) said or
+did, but physical violence is not necessary.]4
+
+       (3) Second, that the defendant knew or had reason to know that [name
+complainant] was a [police officer / (state authorized person)] performing [his / her]
+duties at the time.
+
+       (4) Third, that [name complainant] gave the defendant a lawful command,
+was making a lawful arrest, or was otherwise performing a lawful act. [Provide
+detailed legal instructions regarding the applicable law governing the officer’s or
+official’s legal authority to act.]5
+
+       [Use the following paragraphs as warranted by the charge and proofs:]
+
+       (5) Fourth, that the defendant’s act in assaulting, battering, wounding,
+resisting, obstructing, opposing, or endangering1 a [police officer / (state authorized
+person)] caused the death of [name complainant].
+
+       (6) Fourth, that the defendant’s act in assaulting, battering, wounding,
+resisting, obstructing, opposing, or endangering1 a [police officer / (state authorized
+person)] caused [name complainant] to suffer serious impairment of a body
+function.6
+
+       (7) Fourth, that the defendant’s act in assaulting, battering, wounding,
+resisting, obstructing, opposing, or endangering1 a [police officer / (state authorized
+person)] caused a bodily injury requiring medical attention or medical care to [name
+complainant].
+
+Use Notes
+
+       This instruction should be used when the defendant is charged with violating
+MCL 750.81d. A defendant could be charged under MCL 750.479 with assaulting
+or obstructing an officer or duly authorized person. In that event, use M Crim JI
+13.2.
+
+       1. MCL 750.81d prohibits “assault[ing], batter[ing], wound[ing],
+resist[ing], obstruct[ing], oppos[ing], or endanger[ing]” certain officers or officials.
+The court may read all of that phrase or may read whatever portions it finds
+appropriate according to the charge and the evidence.
+
+       2. Person for purposes of this statute is defined to include police officers,
+deputy sheriffs, firefighters, and emergency medical service personnel, among
+others. MCL 750.81d(7)(b).
+
+       3. The court may include this sentence where necessary. Obstruct is
+defined in MCL 750.81d(7)(a), as amended in 2006.
+
+       4. The court may include this sentence where necessary.
+
+       5. See People v Carroll, 514 Mich 851; 8 NW3d 576 (2024) (holding that
+trial court must provide jury with “a legal framework for assessing whether the
+officers’ actions were lawful”); M Crim JI 13.5.
+       6. MCL 750.81d(7)(c) defines serious impairment of a body function
+according to MCL 257.58c in the Michigan Vehicle Code. See M Crim JI 15.2a.
+
+[AMENDED] M Crim JI 13.2 Assaulting or Obstructing Officer or
+                                                Official Performing Duties
+
+       (1) The defendant is charged with the crime of assaulting, battering,
+wounding, obstructing, or endangering1 a [state authorized person]2 who was acting
+in the performance of [his / her] duties. To prove this charge, the prosecutor must
+prove each of the following elements beyond a reasonable doubt:
+
+       (2) First, that the defendant assaulted, battered, wounded, obstructed, or
+endangered1 [name complainant], who was a [state authorized person] performing
+[his / her] duties. [“Obstruct” includes the use or threatened use of physical
+interference or force or a knowing failure to comply with a lawful command.]3
+
+       (3) Second, that the defendant knew or had reason to know that [name
+complainant] was then a [state authorized person] performing [his / her] duties at
+the time.
+
+       (4) Third, that [name complainant] gave the defendant a lawful command,
+was making a lawful arrest, or was otherwise performing a lawful act. [Provide
+detailed legal instructions regarding the applicable law governing the officer’s or
+official’s legal authority to act.]4
+
+       (5) Fourth, that the defendant’s actions were intended by the defendant,
+that is, not accidental.
+
+       [Use the following paragraphs as warranted by the charge and proofs:]
+
+       (6) Fifth, that the defendant’s act in assaulting, battering, wounding,
+obstructing, or endangering1 a [state authorized person] caused the death of [name
+complainant].
+
+       (7) Fifth, that the defendant’s act in assaulting, battering, wounding,
+obstructing, or endangering1 a [state authorized person] caused serious impairment
+of a body function5 to [name complainant].
+
+       (8) Fifth, that the defendant’s act in assaulting, battering, wounding,
+obstructing, or endangering1 a [state authorized person] caused a bodily injury
+requiring medical attention or medical care to [name complainant].6
+Use Notes
+
+       This instruction should be used when the defendant is charged with violating
+MCL 750.479. A defendant could be charged under MCL 750.81d with assaulting,
+resisting, or obstructing an officer. In that event, use M Crim JI 13.1.
+
+       1. MCL 750.479 prohibits “assault[ing], batter[ing], wound[ing],
+obstruct[ing], or endanger[ing]” certain officers or officials. The court may read all
+of that phrase or may read whatever portions it finds appropriate according to the
+charge and the evidence.
+
+       2. The statute lists authorized persons as medical examiners, township
+treasurers, judges, magistrates, probation officers, parole officers, prosecutors, city
+attorneys, court employees, court officers, or other officers or duly authorized
+persons. MCL 750.479(1)(a).
+
+       3. The court may include this sentence where necessary. Obstruct is
+defined in MCL 750.479(8)(a), as amended in 2002.
+
+       4. See People v Carroll, 514 Mich 851; 8 NW3d 576 (2024) (holding that
+trial court must provide jury with “a legal framework for assessing whether the
+officers’ actions were lawful”); M Crim JI 13.5.
+
+       5. MCL 750.479(8)(b) defines serious impairment of a body function
+according to MCL 257.58c in the Michigan Vehicle Code. See M Crim JI 15.2a.
+
+       6. This aggravating circumstance could be the charged offense or a lesser
+offense, if warranted by the evidence.
+

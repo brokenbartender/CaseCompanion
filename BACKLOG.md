@@ -148,6 +148,8 @@ This backlog maps the Michigan civil case lifecycle (benchbook-driven) and legal
 - Steps: authentication theory checklist, format/codec guidance, courtroom playback prep
 59. **E7** Victim-rights compliance checklist template (MML model)
 - Steps: checklist format for rights notices, reporting deadlines, and documentation
+60. **E1/E7** Criminal-case context reference (M Crim JI 13.1/13.2)
+- Steps: store instructions for reference only; ensure civil app displays criminal-side context accurately when needed
 56. **E2** Layout-aware document parsing (RAGFlow DeepDoc)
 - Steps: evaluate OCR + layout + table structure extraction for PDFs/forms
 
