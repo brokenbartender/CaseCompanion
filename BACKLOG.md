@@ -68,6 +68,12 @@ This backlog maps the Michigan civil case lifecycle (benchbook-driven) and legal
 - Steps: audit + fixes
 19. **E1/E8** Dashboard design spec from court dashboard guide
 - Steps: KPI hierarchy, layout grid, chart types, accessibility + responsive standards
+20. **E1/E8** Case management UI spec from Digital Lawyer Diary guide
+- Steps: cases list, case detail, hearings/status, mobile navigation, PWA install flow
+21. **E8** Dashboard widget library (Diary-style widgets)
+- Steps: today/tomorrow, case status, upcoming hearings, evidence alerts
+22. **E1** Case detail page redesign (Diary-style case file)
+- Steps: tabs for timeline, evidence, tasks, hearings, motions, discovery
 
 ## Roadmap Tracker
 
