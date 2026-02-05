@@ -49,12 +49,8 @@ import FeeWaiverGuide from "./modules/FeeWaiverGuide";
 import ProofReview from "./modules/ProofReview";
 import FilingRejectionLibrary from "./modules/FilingRejectionLibrary";
 import EvidenceOps from "./modules/EvidenceOps";
-import IntegrityOverviewLite from "./modules/IntegrityOverviewLite";
 import AutoChronology from "./modules/AutoChronology";
-import CaseAssistantLite from "./modules/CaseAssistantLite";
 import AdmissibilityAudit from "./modules/AdmissibilityAudit";
-import VerificationHubLite from "./modules/VerificationHubLite";
-import BatesRedactionSuiteLite from "./modules/BatesRedactionSuiteLite";
 import PrivacyVaultLite from "./modules/PrivacyVaultLite";
 import IntegrityOverviewPage from "./modules/IntegrityOverviewPage";
 import ExhibitManager from "./modules/ExhibitManager";
@@ -62,6 +58,17 @@ import IntegrityAudit from "./modules/IntegrityAudit";
 import VerificationHub from "./modules/VerificationHub";
 import BatesRedactionSuite from "./modules/BatesRedactionSuite";
 import CaseAssistant from "./modules/CaseAssistant";
+import CaseTypeLibrary from "./modules/CaseTypeLibrary";
+import EvidenceElementMapper from "./modules/EvidenceElementMapper";
+import WitnessPrepPackets from "./modules/WitnessPrepPackets";
+import ObjectionDrill from "./modules/ObjectionDrill";
+import SelfDefensePlanner from "./modules/SelfDefensePlanner";
+import LostIncomeTracker from "./modules/LostIncomeTracker";
+import BusinessLossWorksheet from "./modules/BusinessLossWorksheet";
+import WarRoom from "./modules/WarRoom";
+import TrialExhibitOrder from "./modules/TrialExhibitOrder";
+import ClientPrintPack from "./modules/ClientPrintPack";
+import RulesQuickReference from "./modules/RulesQuickReference";
 
 function App() {
   return (
@@ -93,11 +100,11 @@ function App() {
           <Route path="design-system" element={<DesignSystem />} />
           <Route path="classifier" element={<ClassifierHub />} />
           <Route path="mifile-reconnect" element={<MiFileReconnect />} />
+          <Route path="war-room" element={<WarRoom />} />
           <Route path="fee-waiver" element={<FeeWaiverGuide />} />
           <Route path="proof-review" element={<ProofReview />} />
           <Route path="filing-rejections" element={<FilingRejectionLibrary />} />
           <Route path="evidence-ops" element={<EvidenceOps />} />
-          <Route path="integrity-overview" element={<IntegrityOverviewLite />} />
           <Route path="auto-chronology" element={<AutoChronology />} />
           <Route path="case-assistant" element={<CaseAssistant />} />
           <Route path="admissibility-audit" element={<AdmissibilityAudit />} />
@@ -107,6 +114,16 @@ function App() {
           <Route path="integrity-overview" element={<IntegrityOverviewPage />} />
           <Route path="exhibit-manager" element={<ExhibitManager />} />
           <Route path="integrity-audit" element={<IntegrityAudit />} />
+          <Route path="case-type-library" element={<CaseTypeLibrary />} />
+          <Route path="evidence-elements" element={<EvidenceElementMapper />} />
+          <Route path="witness-prep" element={<WitnessPrepPackets />} />
+          <Route path="objection-drill" element={<ObjectionDrill />} />
+          <Route path="self-defense-planner" element={<SelfDefensePlanner />} />
+          <Route path="lost-income" element={<LostIncomeTracker />} />
+          <Route path="business-loss" element={<BusinessLossWorksheet />} />
+          <Route path="exhibit-order" element={<TrialExhibitOrder />} />
+          <Route path="print-pack" element={<ClientPrintPack />} />
+          <Route path="rules-quick" element={<RulesQuickReference />} />
           <Route path="rules" element={<RulesLibrary />} />
           <Route path="rules-index" element={<RulesIndex />} />
           <Route path="service" element={<ServiceOfProcessWizard />} />

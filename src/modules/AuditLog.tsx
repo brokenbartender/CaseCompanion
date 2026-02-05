@@ -49,6 +49,21 @@ export default function AuditLogView() {
             >
               Load Audit Logs
             </button>
+            <button
+              type="button"
+              onClick={() => {
+                const blob = new Blob([JSON.stringify(events, null, 2)], { type: "application/json" });
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement("a");
+                a.href = url;
+                a.download = "audit_log.json";
+                a.click();
+                URL.revokeObjectURL(url);
+              }}
+              className="rounded-md border border-amber-400/60 px-3 py-2 text-sm font-semibold text-amber-200"
+            >
+              Export Audit Log
+            </button>
             <span className="text-xs text-slate-500">{status}</span>
           </div>
           <div className="mt-4 space-y-2 text-sm text-slate-300 max-h-[500px] overflow-auto">

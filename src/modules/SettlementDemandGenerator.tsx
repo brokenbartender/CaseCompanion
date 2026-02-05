@@ -56,6 +56,14 @@ export default function SettlementDemandGenerator() {
     w.print();
   }
 
+  function downloadPdf() {
+    const w = window.open("", "_blank");
+    if (!w) return;
+    w.document.write(`<pre style='font-family: Arial; white-space: pre-wrap;'>${body}</pre>`);
+    w.document.close();
+    w.print();
+  }
+
   return (
     <Page title="Settlement Demand Generator" subtitle="Draft a demand letter (informational only).">
       <div className="grid gap-6 lg:grid-cols-2">
@@ -77,6 +85,7 @@ export default function SettlementDemandGenerator() {
               <button type="button" onClick={download} className="rounded-md bg-amber-500 px-3 py-2 text-sm font-semibold text-slate-900">Download Draft</button>
               <button type="button" onClick={printPdf} className="rounded-md border border-white/10 bg-white/5 px-3 py-2 text-sm text-slate-100">Print to PDF</button>
               <button type="button" onClick={exportPacket} className="rounded-md border border-amber-400/50 px-3 py-2 text-sm font-semibold text-amber-200">Export Packet JSON</button>
+              <button type="button" onClick={downloadPdf} className="rounded-md border border-amber-400/50 px-3 py-2 text-sm font-semibold text-amber-200">Generate PDF</button>
             </div>
           </CardBody>
         </Card>

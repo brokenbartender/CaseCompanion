@@ -62,12 +62,17 @@ export default function EvidenceVault() {
     }
   }
 
-  const trialPicks = EVIDENCE_INDEX.filter((item) => /police report|victim statement|video/i.test(item.name)).slice(0, 3);
+  const dynamicEvidence = readJson<{ name: string; path: string; ext: string; category: string }[]>(
+    "case_companion_dynamic_evidence_v1",
+    []
+  );
+  const combinedIndex = [...dynamicEvidence, ...EVIDENCE_INDEX];
+  const trialPicks = combinedIndex.filter((item) => /police report|victim statement|video/i.test(item.name)).slice(0, 3);
   const filteredIndex = useMemo(() => {
-    if (!filter.trim()) return EVIDENCE_INDEX;
+    if (!filter.trim()) return combinedIndex;
     const needle = filter.toLowerCase();
-    return EVIDENCE_INDEX.filter((item) => item.name.toLowerCase().includes(needle) || item.path.toLowerCase().includes(needle));
-  }, [filter]);
+    return combinedIndex.filter((item) => item.name.toLowerCase().includes(needle) || item.path.toLowerCase().includes(needle));
+  }, [filter, combinedIndex]);
 
   const tagFilteredIndex = useMemo(() => {
     if (!tagFilter) return filteredIndex;
@@ -90,7 +95,7 @@ export default function EvidenceVault() {
   }
 
   function exportPacket() {
-    const payload = { index: EVIDENCE_INDEX, meta };
+    const payload = { index: combinedIndex, meta };
     const blob = new Blob([JSON.stringify(payload, null, 2)], { type: "application/json" });
     const url = URL.createObjectURL(blob);
     const a = document.createElement("a");
@@ -105,7 +110,7 @@ export default function EvidenceVault() {
       "Case Companion Exhibit Map",
       "",
       ...EVIDENCE_CATEGORIES.flatMap((category) => {
-        const items = EVIDENCE_INDEX.filter((item) => item.category === category);
+        const items = combinedIndex.filter((item) => item.category === category);
         return [
           `## ${category}`,
           ...items.map((item) => `- ${item.name} (${item.path})`),
@@ -294,7 +299,7 @@ export default function EvidenceVault() {
           </CardBody>
         </Card>
 
-        {EVIDENCE_CATEGORIES.map((category) => {
+        {[...new Set([...EVIDENCE_CATEGORIES, ...combinedIndex.map((i) => i.category)])].map((category) => {
           const items = tagFilteredIndex.filter((item) => item.category === category);
           return (
             <Card key={category}>
