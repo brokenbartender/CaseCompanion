@@ -52,6 +52,7 @@ export default function Dashboard() {
     jurisdiction: "Oakland County, MI"
   });
   const deadlines = readJson<Deadline[]>(DEADLINES_KEY, []).slice(0, 3);
+  const todayTask = nextTask || "Complete case setup in Case Settings.";
 
   return (
     <Page
@@ -59,6 +60,29 @@ export default function Dashboard() {
       subtitle="Your civil procedure hub with rule-linked guidance, tasks, and evidence."
     >
       <div className="grid grid-cols-1 gap-6 lg:grid-cols-3">
+        <Card className="lg:col-span-3 border border-amber-400/30 bg-amber-500/10">
+          <CardHeader>
+            <CardSubtitle>Locked Focus</CardSubtitle>
+            <CardTitle>Today’s Task</CardTitle>
+          </CardHeader>
+          <CardBody>
+            <div className="text-sm text-slate-200">{todayTask}</div>
+            <div className="mt-3 flex flex-wrap gap-3">
+              <a
+                href="/guided-start"
+                className="rounded-md bg-amber-500 px-3 py-2 text-xs font-semibold text-slate-900"
+              >
+                Continue Guided Start
+              </a>
+              <a
+                href="/checklist"
+                className="rounded-md border border-amber-400/60 px-3 py-2 text-xs font-semibold text-amber-200"
+              >
+                Open Checklist
+              </a>
+            </div>
+          </CardBody>
+        </Card>
         {(!settings.caseName || !settings.court) ? (
           <Card className="lg:col-span-3">
             <CardHeader>

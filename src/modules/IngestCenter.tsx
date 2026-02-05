@@ -19,12 +19,18 @@ type RecentIngest = {
   size: number;
   status: string;
   at: string;
+  tags: string[];
 };
 
 export default function IngestCenter() {
   const settings = readJson<CaseSettings>(SETTINGS_KEY, { apiBase: "", workspaceId: "", authToken: "" });
   const [status, setStatus] = useState("");
-  const [recent, setRecent] = useState<RecentIngest[]>(() => readJson(RECENT_KEY, []));
+  const [recent, setRecent] = useState<RecentIngest[]>(() =>
+    readJson<RecentIngest[]>(RECENT_KEY, []).map((entry) => ({
+      ...entry,
+      tags: Array.isArray(entry.tags) ? entry.tags : []
+    }))
+  );
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
 
   const ready = useMemo(() => Boolean(settings.apiBase && settings.workspaceId && settings.authToken), [settings]);
@@ -37,6 +43,13 @@ export default function IngestCenter() {
     }
     try {
       setStatus("Uploading and hashing...");
+      const lower = selectedFile.name.toLowerCase();
+      const inferredTags: string[] = [];
+      if (/(police|report|ocso)/.test(lower)) inferredTags.push("police-report");
+      if (/(medical|er|hospital|trinity|bill|invoice)/.test(lower)) inferredTags.push("medical");
+      if (/(video|footage|clip)/.test(lower) || /(mp4|mov|avi|mkv)$/.test(lower)) inferredTags.push("video");
+      if (/(witness|statement)/.test(lower)) inferredTags.push("witness");
+
       const config: ApiConfig = {
         apiBase: settings.apiBase,
         workspaceId: settings.workspaceId,
@@ -49,7 +62,8 @@ export default function IngestCenter() {
           filename: selectedFile.name,
           size: selectedFile.size,
           status: "Uploaded",
-          at: new Date().toISOString()
+          at: new Date().toISOString(),
+          tags: inferredTags
         },
         ...recent
       ].slice(0, 8);
@@ -108,6 +122,15 @@ export default function IngestCenter() {
                     <div className="text-xs text-slate-400">
                       {entry.status} • {(entry.size / (1024 * 1024)).toFixed(2)} MB • {new Date(entry.at).toLocaleString()}
                     </div>
+                    {entry.tags && entry.tags.length ? (
+                      <div className="mt-2 flex flex-wrap gap-2 text-[10px] text-amber-200">
+                        {entry.tags.map((tag) => (
+                          <span key={tag} className="rounded-full border border-amber-400/40 bg-amber-500/10 px-2 py-0.5">
+                            {tag}
+                          </span>
+                        ))}
+                      </div>
+                    ) : null}
                   </div>
                 ))}
               </div>

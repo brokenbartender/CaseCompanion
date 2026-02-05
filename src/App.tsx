@@ -43,7 +43,8 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<AppLayout />}>
-          <Route index element={<Dashboard />} />
+          <Route index element={<GuidedStartWizard />} />
+          <Route path="dashboard" element={<Dashboard />} />
           <Route path="roadmap" element={<ProceduralRoadmap />} />
           <Route path="checklist" element={<ProceduralChecklist />} />
           <Route path="timeline" element={<CaseTimeline />} />

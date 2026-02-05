@@ -27,7 +27,8 @@ import {
 import { APP_NAME } from "../config/branding";
 
 const navItems = [
-  { to: "/", label: "Dashboard", icon: LayoutDashboard },
+  { to: "/", label: "Guided Start", icon: LayoutDashboard },
+  { to: "/dashboard", label: "Dashboard", icon: LayoutDashboard },
   { to: "/assault-hub", label: "Assault Hub", icon: Shield },
   { to: "/trial-mode", label: "Trial Mode", icon: Monitor },
   { to: "/self-defense", label: "Self-Defense", icon: Target },
