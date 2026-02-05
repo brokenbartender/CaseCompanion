@@ -11,12 +11,12 @@ const STEPS = [
   {
     title: "2) Build Your Filing Pack",
     description: "Prepare summons, complaint, and fee waiver/PII forms as separate PDFs.",
-    action: { label: "Open Filing Flow", href: "/filing-flow" }
+    action: { label: "Open Document Pack", href: "/doc-pack" }
   },
   {
     title: "3) File in MiFILE",
     description: "Initiate a new case and upload each document with correct labels.",
-    action: { label: "Open Procedural Checklist", href: "/checklist" }
+    action: { label: "Open Filing Flow", href: "/filing-flow" }
   },
   {
     title: "4) Serve the Defendant",
