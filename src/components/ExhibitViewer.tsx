@@ -1,5 +1,7 @@
 ﻿import React, { useEffect, useMemo, useRef, useState } from "react";
 import { Document, Page, pdfjs } from "react-pdf";
+import "react-pdf/dist/Page/AnnotationLayer.css";
+import "react-pdf/dist/Page/TextLayer.css";
 import { Download } from "lucide-react";
 import { fetchExhibitFile } from "../services/api";
 import { useSession } from "../hooks/useSession";
@@ -9,9 +11,6 @@ import { getCsrfHeader } from "../services/csrf";
 import { logForensicEvent } from "../services/forensicLogger";
 import SniperOverlay from "./ui/SniperOverlay";
 import type { TeleportSignal } from "../types";
-// NOTE: React-PDF layer styles are injected per-build:
-// - Standalone SPA: imported globally in src/main.tsx
-// - Embeddable <lexipro-app>: injected into ShadowRoot in src/embed/LexiProElement.tsx
 
 const workerUrl = new URL("pdfjs-dist/build/pdf.worker.min.mjs", import.meta.url);
 workerUrl.searchParams.set("worker_version", pdfjs.version);
