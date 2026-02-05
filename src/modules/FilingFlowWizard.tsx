@@ -2,8 +2,11 @@ import React, { useState } from "react";
 import Page from "../components/ui/Page";
 import { Card, CardBody, CardHeader, CardSubtitle, CardTitle } from "../components/ui/Card";
 import { readJson, writeJson } from "../utils/localStore";
+import { computeRuleDeadlines, CaseProfile } from "../services/workflowEngine";
 
 const SETTINGS_KEY = "case_companion_settings_v1";
+const PROFILE_KEY = "case_companion_case_profile_v1";
+const HOLIDAYS_KEY = "case_companion_holidays_v1";
 
 type CaseSettings = {
   caseName: string;
@@ -21,6 +24,16 @@ export default function FilingFlowWizard() {
     caseNumber: "",
     jurisdiction: "Oakland County, MI"
   });
+  const profile = readJson<CaseProfile>(PROFILE_KEY, {
+    jurisdictionId: "mi",
+    courtLevel: "district",
+    county: "Oakland",
+    filingDate: "",
+    serviceDate: "",
+    answerDate: ""
+  });
+  const holidays = readJson<string[]>(HOLIDAYS_KEY, []);
+  const ruleDeadlines = computeRuleDeadlines(profile, holidays);
   const [court, setCourt] = useState(settings.court || "");
   const [claimAmount, setClaimAmount] = useState("");
   const [caseType, setCaseType] = useState("");
@@ -35,6 +48,28 @@ export default function FilingFlowWizard() {
   return (
     <Page title="Filing Flow" subtitle="Choose your court and prep MiFILE steps.">
       <div className="grid gap-6 lg:grid-cols-2">
+        <Card className="lg:col-span-2">
+          <CardHeader>
+            <CardSubtitle>Rule Engine</CardSubtitle>
+            <CardTitle>Upcoming Rule Deadlines</CardTitle>
+          </CardHeader>
+          <CardBody>
+            {ruleDeadlines.length === 0 ? (
+              <div className="text-sm text-slate-400">Add filing or service dates in Deadlines to compute rule-based dates.</div>
+            ) : (
+              <div className="grid gap-3 md:grid-cols-2 text-sm text-slate-300">
+                {ruleDeadlines.map((item) => (
+                  <div key={item.id} className="rounded-md border border-white/10 bg-white/5 p-3">
+                    <div className="text-xs text-slate-400">Due {item.dueDate}</div>
+                    <div className="text-sm text-white">{item.label}</div>
+                    <div className="text-xs text-slate-400">{item.rule.source.citation}</div>
+                  </div>
+                ))}
+              </div>
+            )}
+            <a href="/deadlines" className="mt-3 inline-flex text-xs text-amber-200">Open Deadlines Engine</a>
+          </CardBody>
+        </Card>
         <Card>
           <CardHeader>
             <CardSubtitle>Step 1</CardSubtitle>
@@ -69,7 +104,7 @@ export default function FilingFlowWizard() {
                 />
                 <span>6th Circuit Court (claims above $25,000)</span>
               </label>
-              <div className="text-xs text-slate-400 mt-2">Case type (for e‑file eligibility)</div>
+              <div className="text-xs text-slate-400 mt-2">Case type (for e-file eligibility)</div>
               <select
                 className="w-full rounded-md border border-white/10 bg-white/5 px-3 py-2 text-sm text-slate-100"
                 value={caseType}
@@ -83,7 +118,7 @@ export default function FilingFlowWizard() {
               </select>
               {caseType === "small-claims" ? (
                 <div className="text-xs text-amber-200">
-                  This case type may not be eligible for e‑filing. Do not proceed until confirmed with the clerk.
+                  This case type may not be eligible for e-filing. Do not proceed until confirmed with the clerk.
                 </div>
               ) : null}
               <div className="text-xs text-slate-400">
@@ -136,7 +171,7 @@ export default function FilingFlowWizard() {
             </label>
             {needsPraecipe ? (
               <div className="mt-3 text-sm text-slate-300">
-                Use the county’s ePraecipe system when required. Confirm with the clerk if you’re unsure.
+                Use the county's ePraecipe system when required. Confirm with the clerk if you're unsure.
                 <div className="mt-3 flex flex-wrap gap-3">
                   <a
                     href="https://www.oakgov.com/government/clerk-register-of-deeds/court-records/efiling"
@@ -149,7 +184,7 @@ export default function FilingFlowWizard() {
                 </div>
               </div>
             ) : (
-              <div className="mt-2 text-xs text-slate-400">If you’re not sure, ask the clerk before filing.</div>
+              <div className="mt-2 text-xs text-slate-400">If you're not sure, ask the clerk before filing.</div>
             )}
           </CardBody>
         </Card>
@@ -176,8 +211,8 @@ export default function FilingFlowWizard() {
                 <div className="text-sm text-slate-300">
                   Fix steps:
                   <ul className="mt-2 space-y-1 text-xs text-slate-400">
-                    <li>Correct the issue and re‑export each PDF separately.</li>
-                    <li>Re‑submit in MiFILE with the correct labels.</li>
+                    <li>Correct the issue and re-export each PDF separately.</li>
+                    <li>Re-submit in MiFILE with the correct labels.</li>
                     <li>Confirm the court and filing code before submitting.</li>
                   </ul>
                 </div>
