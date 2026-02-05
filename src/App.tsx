@@ -29,6 +29,9 @@ import SelfDefenseDestroyer from "./modules/SelfDefenseDestroyer";
 import ExhibitDetail from "./modules/ExhibitDetail";
 import EvidenceStandards from "./modules/EvidenceStandards";
 import VideoAdmissibility from "./modules/VideoAdmissibility";
+import DiscoverySuite from "./modules/DiscoverySuite";
+import DefaultMediation from "./modules/DefaultMediation";
+import MotionBuilder from "./modules/MotionBuilder";
 
 function App() {
   return (
@@ -43,6 +46,9 @@ function App() {
           <Route path="exhibit-detail" element={<ExhibitDetail />} />
           <Route path="evidence-standards" element={<EvidenceStandards />} />
           <Route path="video-admissibility" element={<VideoAdmissibility />} />
+          <Route path="discovery" element={<DiscoverySuite />} />
+          <Route path="default-mediation" element={<DefaultMediation />} />
+          <Route path="motion-builder" element={<MotionBuilder />} />
           <Route path="rules" element={<RulesLibrary />} />
           <Route path="rules-index" element={<RulesIndex />} />
           <Route path="service" element={<ServiceOfProcessWizard />} />
