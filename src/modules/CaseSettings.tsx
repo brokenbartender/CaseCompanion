@@ -5,6 +5,8 @@ import { readJson, writeJson } from "../utils/localStore";
 import { getMatterId, getWorkspaceId } from "../services/authStorage";
 
 const STORAGE_KEY = "case_companion_settings_v1";
+const DEFAULT_API_BASE = import.meta.env.VITE_API_BASE_URL || "http://localhost:8787";
+const DEFAULT_WORKSPACE_ID = import.meta.env.VITE_DEFAULT_WORKSPACE_ID || "lexis-workspace-01";
 const EXPORT_KEYS = [
   "case_companion_settings_v1",
   "case_companion_checklist_v1",
@@ -32,8 +34,8 @@ export default function CaseSettingsView() {
       judge: "",
       caseNumber: "",
       jurisdiction: "Oakland County, MI",
-      apiBase: "",
-      workspaceId: "",
+      apiBase: DEFAULT_API_BASE,
+      workspaceId: DEFAULT_WORKSPACE_ID,
       authToken: ""
     })
   );
@@ -171,23 +173,23 @@ export default function CaseSettingsView() {
             <div className="grid gap-3 md:grid-cols-2">
               <div className="rounded-md border border-white/10 bg-white/5 px-3 py-2 text-sm text-slate-200">
                 <div className="text-xs text-slate-400">Workspace ID</div>
-                <div className="mt-1 break-all">{sessionIds.workspaceId || "Not set"}</div>
-                <button
-                  type="button"
-                  className="mt-2 text-xs text-amber-200"
-                  onClick={() => copyText(sessionIds.workspaceId)}
-                >
-                  Copy
-                </button>
-              </div>
-              <div className="rounded-md border border-white/10 bg-white/5 px-3 py-2 text-sm text-slate-200">
-                <div className="text-xs text-slate-400">Matter ID</div>
-                <div className="mt-1 break-all">{sessionIds.matterId || "Not set"}</div>
-                <button
-                  type="button"
-                  className="mt-2 text-xs text-amber-200"
-                  onClick={() => copyText(sessionIds.matterId)}
-                >
+              <div className="mt-1 break-all">{sessionIds.workspaceId || settings.workspaceId || "Not set"}</div>
+              <button
+                type="button"
+                className="mt-2 text-xs text-amber-200"
+                onClick={() => copyText(sessionIds.workspaceId || settings.workspaceId)}
+              >
+                Copy
+              </button>
+            </div>
+            <div className="rounded-md border border-white/10 bg-white/5 px-3 py-2 text-sm text-slate-200">
+              <div className="text-xs text-slate-400">Matter ID</div>
+              <div className="mt-1 break-all">{sessionIds.matterId || "Not set"}</div>
+              <button
+                type="button"
+                className="mt-2 text-xs text-amber-200"
+                onClick={() => copyText(sessionIds.matterId)}
+              >
                   Copy
                 </button>
               </div>

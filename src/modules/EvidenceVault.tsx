@@ -1,10 +1,11 @@
-import React, { useState } from "react";
+import React, { useMemo, useState } from "react";
 import Page from "../components/ui/Page";
 import { Card, CardBody, CardHeader, CardSubtitle, CardTitle } from "../components/ui/Card";
 import { EVIDENCE_CATEGORIES, EVIDENCE_INDEX } from "../data/evidenceIndex";
 import { MICHIGAN_OBJECTION_CARDS } from "../data/michiganEvidenceObjections";
 import { readJson, writeJson } from "../utils/localStore";
 import { uploadExhibit } from "../services/apiClient";
+import { useLocation } from "react-router-dom";
 
 const META_KEY = "case_companion_evidence_meta_v1";
 const SETTINGS_KEY = "case_companion_settings_v1";
@@ -24,9 +25,13 @@ function defaultMeta(): EvidenceMeta {
 }
 
 export default function EvidenceVault() {
+  const location = useLocation();
+  const query = useMemo(() => new URLSearchParams(location.search), [location.search]);
+  const highlight = query.get("highlight") || "";
   const [meta, setMeta] = useState<MetaState>(() => readJson(META_KEY, {}));
   const [trialMode, setTrialMode] = useState(false);
   const [uploadStatus, setUploadStatus] = useState<string>("");
+  const [filter, setFilter] = useState<string>(highlight);
   const settings = readJson<CaseSettings>(SETTINGS_KEY, { apiBase: "", workspaceId: "", authToken: "" });
 
   function updateMeta(path: string, next: Partial<EvidenceMeta>) {
@@ -55,6 +60,11 @@ export default function EvidenceVault() {
   }
 
   const trialPicks = EVIDENCE_INDEX.filter((item) => /police report|victim statement|video/i.test(item.name)).slice(0, 3);
+  const filteredIndex = useMemo(() => {
+    if (!filter.trim()) return EVIDENCE_INDEX;
+    const needle = filter.toLowerCase();
+    return EVIDENCE_INDEX.filter((item) => item.name.toLowerCase().includes(needle) || item.path.toLowerCase().includes(needle));
+  }, [filter]);
 
   function exportPacket() {
     const payload = { index: EVIDENCE_INDEX, meta };
@@ -184,7 +194,7 @@ export default function EvidenceVault() {
         </Card>
 
         {EVIDENCE_CATEGORIES.map((category) => {
-          const items = EVIDENCE_INDEX.filter((item) => item.category === category);
+          const items = filteredIndex.filter((item) => item.category === category);
           return (
             <Card key={category}>
               <CardHeader>
@@ -193,11 +203,23 @@ export default function EvidenceVault() {
               </CardHeader>
               <CardBody>
                 <div className="text-sm text-slate-400 mb-3">{items.length} items</div>
+                <input
+                  className="mb-3 w-full rounded-md border border-white/10 bg-white/5 px-2 py-1 text-xs text-slate-100"
+                  placeholder="Filter by name or path"
+                  value={filter}
+                  onChange={(e) => setFilter(e.target.value)}
+                />
                 <ul className="space-y-3 text-sm text-slate-300">
                   {items.map((item) => {
                     const itemMeta = meta[item.path] || defaultMeta();
+                    const isHighlighted = highlight && item.path === highlight;
                     return (
-                      <li key={item.path} className="rounded-md border border-white/5 bg-white/5 p-3">
+                      <li
+                        key={item.path}
+                        className={`rounded-md border border-white/5 bg-white/5 p-3 ${
+                          isHighlighted ? "ring-2 ring-amber-400/60" : ""
+                        }`}
+                      >
                         <div className="flex items-center justify-between gap-4">
                           <span className="truncate">{item.name}</span>
                           <span className="text-xs text-slate-500">.{item.ext}</span>
