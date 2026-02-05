@@ -636,6 +636,19 @@ export function createExhibitRouter(deps: {
         file,
         matterIdOrSlug
       });
+      const rawTags = typeof req.body?.tags === 'string'
+        ? req.body.tags.split(',').map((tag: string) => tag.trim()).filter(Boolean)
+        : [];
+      if (rawTags.length) {
+        await deps.prisma.exhibit.update({
+          where: { id: exhibit.id },
+          data: { triageJson: JSON.stringify({ tags: rawTags }) }
+        }).catch(() => null);
+        await deps.logAuditEvent(req.workspaceId, req.userId, 'EXHIBIT_TRIAGE_TAGS', {
+          exhibitId: exhibit.id,
+          tags: rawTags
+        }).catch(() => null);
+      }
       res.json(exhibit);
     } catch (err: any) {
       if (err?.code === 'MATTER_SCOPE_FORBIDDEN') {
@@ -669,6 +682,19 @@ export function createExhibitRouter(deps: {
         file,
         matterIdOrSlug
       });
+      const rawTags = typeof req.body?.tags === 'string'
+        ? req.body.tags.split(',').map((tag: string) => tag.trim()).filter(Boolean)
+        : [];
+      if (rawTags.length) {
+        await deps.prisma.exhibit.update({
+          where: { id: exhibit.id },
+          data: { triageJson: JSON.stringify({ tags: rawTags }) }
+        }).catch(() => null);
+        await deps.logAuditEvent(req.workspaceId, req.userId, 'EXHIBIT_TRIAGE_TAGS', {
+          exhibitId: exhibit.id,
+          tags: rawTags
+        }).catch(() => null);
+      }
       res.json(exhibit);
     } catch (err: any) {
       if (err?.code === 'MATTER_SCOPE_FORBIDDEN') {
@@ -700,6 +726,19 @@ export function createExhibitRouter(deps: {
         file,
         matterIdOrSlug: req.params.matterId
       });
+      const rawTags = typeof req.body?.tags === 'string'
+        ? req.body.tags.split(',').map((tag: string) => tag.trim()).filter(Boolean)
+        : [];
+      if (rawTags.length) {
+        await deps.prisma.exhibit.update({
+          where: { id: exhibit.id },
+          data: { triageJson: JSON.stringify({ tags: rawTags }) }
+        }).catch(() => null);
+        await deps.logAuditEvent(req.workspaceId, req.userId, 'EXHIBIT_TRIAGE_TAGS', {
+          exhibitId: exhibit.id,
+          tags: rawTags
+        }).catch(() => null);
+      }
       res.json(exhibit);
     } catch (err: any) {
       if (err?.code === 'MATTER_SCOPE_FORBIDDEN') {
