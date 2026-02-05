@@ -22,7 +22,8 @@ export const PROCEDURE_STEPS: ProcedureStep[] = [
     checklist: [
       "Confirm PII handling and use MC 97 for protected information.",
       "Track any sealing or confidentiality needs early.",
-      "Organize records with clear labels and dates."
+      "Organize records with clear labels and dates.",
+      "Plan fee waiver request if applicable (MC 20)."
     ]
   },
   {
@@ -39,7 +40,8 @@ export const PROCEDURE_STEPS: ProcedureStep[] = [
     checklist: [
       "Select 52nd District Court (<= $25,000) or 6th Circuit (> $25,000).",
       "Confirm venue is Oakland County and defendant resides/acted there.",
-      "Gather party names, addresses, and service details."
+      "Gather party names, addresses, and service details.",
+      "Confirm personal jurisdiction before filing."
     ]
   },
   {
@@ -56,7 +58,8 @@ export const PROCEDURE_STEPS: ProcedureStep[] = [
     checklist: [
       "Draft complaint with numbered paragraphs and relief requested.",
       "Prepare summons and separate PDFs for each filing.",
-      "Initiate the case in MiFILE and save stamped copies."
+      "Initiate the case in MiFILE and save stamped copies.",
+      "Verify pleadings are signed and formatted per rules."
     ]
   },
   {
@@ -68,7 +71,8 @@ export const PROCEDURE_STEPS: ProcedureStep[] = [
     checklist: [
       "Use a qualified server and complete personal service if possible.",
       "Record service date and method.",
-      "File proof of service promptly."
+      "File proof of service promptly.",
+      "Track summons validity window after filing."
     ]
   },
   {
@@ -80,7 +84,8 @@ export const PROCEDURE_STEPS: ProcedureStep[] = [
     checklist: [
       "Calendar the response deadline after service.",
       "Track any counterclaims or affirmative defenses.",
-      "If no answer, prepare default request checklist."
+      "If no answer, prepare default request checklist.",
+      "Log the answer date to drive next deadlines."
     ]
   },
   {
@@ -99,7 +104,8 @@ export const PROCEDURE_STEPS: ProcedureStep[] = [
     checklist: [
       "Serve discovery requests and track response due dates.",
       "Track response deadlines and follow up on missing items.",
-      "Organize exhibits by element and timeline."
+      "Organize exhibits by element and timeline.",
+      "Document disputes for motion to compel if needed."
     ]
   },
   {
@@ -114,7 +120,8 @@ export const PROCEDURE_STEPS: ProcedureStep[] = [
     checklist: [
       "Assess summary disposition grounds and evidence support.",
       "Prepare mediation packet with damages support.",
-      "Track motion response and hearing deadlines."
+      "Track motion response and hearing deadlines.",
+      "Confirm local motion practice requirements."
     ]
   },
   {
@@ -132,7 +139,8 @@ export const PROCEDURE_STEPS: ProcedureStep[] = [
     checklist: [
       "Finalize witness list, subpoenas, and exhibit list.",
       "Prepare trial notebook, objections, and questions.",
-      "Ensure all exhibits are authenticated and ready."
+      "Ensure all exhibits are authenticated and ready.",
+      "Review jury instructions or bench trial procedure."
     ]
   },
   {
