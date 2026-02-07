@@ -1,25 +1,23 @@
-# LexiPro Forensic OS - Enterprise V2.1.0 (Audited)
+# [EDIT ME: App Name] — Pro Se Case Companion for Michigan
 
-## Core Pillars
-- Zero-Trust Chain: RSASSA-PSS signing with hash-linked audit events.
-- Optical Release Gate: No Anchor  No Output (pixel verification enforced).
-- Immutable Log Shipping: Dual-write to S3 WORM for tamper-evident recovery.
-- Admissibility Export: Self-authenticating .zip packets with Offline Validator.
-- Security Posture: See SECURITY.md and docs/SOC2_CONTROLS.md.
+Not a lawyer. Not legal advice. Procedural help + document organization only.
 
-## Quick Start (Demo)
-- Seed demo data: `npm run seed`
-- Red Team verification: `npm run sabotage`
+## Purpose
+This project pivots the original enterprise forensic OS into a trauma‑informed, pro se companion focused on Michigan civil litigation workflows. It keeps the evidence vault, audit trails, and export integrity, while adding procedural gating, deadline tracking, and filing‑ready packet assembly.
 
-## Diligence
-- Technical diligence manifest: `TECHNICAL_DILIGENCE_MANIFEST.md`
-- Proof packet overview: `proof/README.md`
+## Core Capabilities
+- Evidence vault with hash integrity and audit trails.
+- Procedural rule engine for Michigan civil timelines.
+- PII scan + MC97 protected list generator before public exports.
+- Filing, service, and trial binder packet exports with manifests.
 
-## Risk Mitigation & Defensibility
-LexiPro is engineered for hostile environments. Every access is signed, every chain is verifiable, and every evidence packet can be validated offline without LexiPro infrastructure.
-## Process Proof
-- Automated evidence captures: `server/exhibit_snapshots/`
-- ROI dashboard: `/roi`
-- Silent partner alerts: bell icon in header
-## Troubleshooting
-- Browser extension errors (chrome-extension://...) are not from LexiPro. Disable extensions or use Incognito when demoing.
+## Quick Start
+- Run client + server: `npm run dev`
+- Run server tests: `npm test`
+
+## Docs
+- Pro se Michigan architecture overview: `docs/pro-se-michigan/README.md`
+- Security posture: `SECURITY.md`
+
+## Safety
+This tool does not provide legal advice, legal strategy, or court filing automation. Always verify deadlines and local rules with the court.

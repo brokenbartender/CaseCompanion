@@ -22,13 +22,13 @@ export default function FilingFlowWizard() {
     court: "",
     judge: "",
     caseNumber: "",
-    jurisdiction: "Oakland County, MI"
+    jurisdiction: "Michigan (County TBD)"
   });
   const [profile, setProfile] = useState<CaseProfile>(() =>
     readJson(PROFILE_KEY, {
       jurisdictionId: "mi",
       courtLevel: "district",
-      county: "Oakland",
+      county: "Unknown",
       filingDate: "",
       serviceDate: "",
       answerDate: "",
@@ -37,7 +37,7 @@ export default function FilingFlowWizard() {
       pretrialDate: "",
       claimAmount: undefined,
       venueBasis: "",
-      venueCounty: "Oakland"
+      venueCounty: "Unknown"
     })
   );
   const holidays = readJson<string[]>(HOLIDAYS_KEY, []);
@@ -48,7 +48,7 @@ export default function FilingFlowWizard() {
   const [rejectionReason, setRejectionReason] = useState("");
   const [needsPraecipe, setNeedsPraecipe] = useState(false);
   const [venueBasis, setVenueBasis] = useState(profile.venueBasis || "");
-  const [venueCounty, setVenueCounty] = useState(profile.venueCounty || profile.county || "Oakland");
+  const [venueCounty, setVenueCounty] = useState(profile.venueCounty || profile.county || "Unknown");
 
   const amountValue = Number((claimAmount || "").replace(/[^0-9.]/g, ""));
   const amountKnown = Number.isFinite(amountValue) && amountValue > 0;
@@ -171,7 +171,7 @@ export default function FilingFlowWizard() {
               <div className="text-xs text-slate-400">Venue county</div>
               <input
                 className="w-full rounded-md border border-white/10 bg-white/5 px-3 py-2 text-sm text-slate-100"
-                placeholder="County (e.g., Oakland)"
+                placeholder="County (e.g., Wayne)"
                 value={venueCounty}
                 onChange={(e) => {
                   const value = e.target.value;
@@ -214,7 +214,7 @@ export default function FilingFlowWizard() {
           <CardBody>
             <ul className="space-y-2 text-sm text-slate-300">
               <li>Create a MiFILE account as a pro se filer.</li>
-              <li>Select the correct Oakland County court.</li>
+              <li>Select the correct county court.</li>
               <li>Prepare each filing as its own PDF (Complaint, Summons, MC 20/MC 97 if needed).</li>
               <li>Initiate a new case, upload each PDF separately, and pay or request fee waiver.</li>
               <li>Save stamped copies for service of process.</li>
@@ -257,7 +257,7 @@ export default function FilingFlowWizard() {
                     rel="noreferrer"
                     className="rounded-md border border-amber-400/50 px-3 py-2 text-xs font-semibold text-amber-200"
                   >
-                    Oakland County eFiling Info
+                    County eFiling Info
                   </a>
                 </div>
               </div>

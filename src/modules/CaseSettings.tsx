@@ -33,7 +33,7 @@ export default function CaseSettingsView() {
       court: "",
       judge: "",
       caseNumber: "",
-      jurisdiction: "Oakland County, MI",
+      jurisdiction: "Michigan (County TBD)",
       apiBase: DEFAULT_API_BASE,
       workspaceId: DEFAULT_WORKSPACE_ID,
       authToken: ""

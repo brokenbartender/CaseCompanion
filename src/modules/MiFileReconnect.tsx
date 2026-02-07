@@ -26,12 +26,12 @@ const STEPS = [
 
 const RESOURCES = [
   {
-    label: "Oakland County Circuit Court eFiling page",
-    href: "https://www.oakgov.com/government/courts/circuit-court/programs/efiling"
+    label: "MiFILE portal",
+    href: "https://mifile.courts.michigan.gov"
   },
   {
-    label: "Oakland County Clerk eFiling page",
-    href: "https://www.oakgov.com/government/clerk-register-of-deeds/court-records/efiling"
+    label: "Michigan Courts eFiling help",
+    href: "https://courts.michigan.gov"
   }
 ];
 
@@ -43,7 +43,7 @@ export default function MiFileReconnect() {
     court: "",
     judge: "",
     caseNumber: "",
-    jurisdiction: "Oakland County, MI"
+    jurisdiction: "Michigan (County TBD)"
   });
   const [state, setState] = useState<ReconnectState>(() => readJson(STORAGE_KEY, {}));
   const [caseNumber, setCaseNumber] = useState(settings.caseNumber || "");

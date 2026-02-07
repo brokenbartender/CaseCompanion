@@ -49,7 +49,7 @@ export default function Dashboard() {
     court: "",
     judge: "",
     caseNumber: "",
-    jurisdiction: "Oakland County, MI"
+    jurisdiction: "Michigan (County TBD)"
   });
   const reconnectState = readJson<Record<string, boolean>>("case_companion_mifile_reconnect_v1", {});
   const reconnectDone = Object.values(reconnectState).filter(Boolean).length >= 4;

@@ -12,8 +12,8 @@ type Deadline = { date: string; title: string; note: string };
 
 const DEADLINE_TEMPLATES = [
   {
-    id: "service-90",
-    title: "Service deadline (90 days from filing)",
+    id: "service-91",
+    title: "Summons expires (91 days from filing)",
     note: "Confirm the service window for your court."
   },
   {
@@ -35,7 +35,7 @@ export default function DeadlinesView() {
     readJson(PROFILE_KEY, {
       jurisdictionId: "mi",
       courtLevel: "district",
-      county: "Oakland",
+      county: "Unknown",
       filingDate: "",
       serviceDate: "",
       answerDate: "",
@@ -44,7 +44,7 @@ export default function DeadlinesView() {
       pretrialDate: "",
       claimAmount: undefined,
       venueBasis: "",
-      venueCounty: "Oakland"
+      venueCounty: "Unknown"
     })
   );
   const [templateId, setTemplateId] = useState(DEADLINE_TEMPLATES[0].id);

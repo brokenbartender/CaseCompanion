@@ -29,7 +29,7 @@ export const PROCEDURE_STEPS: ProcedureStep[] = [
   {
     id: "court-selection",
     title: "Court selection and case setup",
-    summary: "Choose the correct Oakland County court and prepare to file.",
+    summary: "Choose the correct county court and prepare to file.",
     sources: ["Civil Benchbook", "MCR Chapter 2"],
     benchbookSections: [
       "2.1 Jurisdiction in General",
@@ -38,8 +38,8 @@ export const PROCEDURE_STEPS: ProcedureStep[] = [
       "2.14 Venue"
     ],
     checklist: [
-      "Select 52nd District Court (<= $25,000) or 6th Circuit (> $25,000).",
-      "Confirm venue is Oakland County and defendant resides/acted there.",
+      "Select the correct District Court (<= court limit) or Circuit Court (> court limit).",
+      "Confirm venue is the correct county and defendant resides/acted there.",
       "Gather party names, addresses, and service details.",
       "Confirm personal jurisdiction before filing."
     ]
