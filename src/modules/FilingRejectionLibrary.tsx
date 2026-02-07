@@ -21,7 +21,7 @@ const REJECTIONS = [
   {
     id: "wrong-court",
     title: "Wrong court selected",
-    fix: "Confirm Oakland County court selection before filing."
+    fix: "Confirm the correct county court selection before filing."
   }
 ];
 

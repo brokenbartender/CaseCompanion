@@ -39,7 +39,7 @@ export default function ClientPrintPack() {
     court: "",
     judge: "",
     caseNumber: "",
-    jurisdiction: "Oakland County, MI"
+    jurisdiction: "Michigan (County TBD)"
   });
   const timeline = readJson<TimelineEvent[]>(TIMELINE_KEY, []);
   const damages = readJson<DamageEntry[]>(DAMAGES_KEY, []);
@@ -48,7 +48,7 @@ export default function ClientPrintPack() {
   const profile = readJson<CaseProfile>(PROFILE_KEY, {
     jurisdictionId: "mi",
     courtLevel: "district",
-    county: "Oakland",
+    county: "Unknown",
     filingDate: "",
     serviceDate: "",
     answerDate: ""

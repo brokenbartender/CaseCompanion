@@ -102,10 +102,10 @@ export const MICHIGAN_CIVIL_RULESET: JurisdictionDefinition = {
           summary: "Complaint, summons, and case initiation.",
           rules: [
             {
-              id: "service-90",
-              label: "Service deadline (90 days from filing)",
+              id: "service-91",
+              label: "Summons expires (91 days from filing)",
               trigger: "filing_date",
-              days: 90,
+              days: 91,
               businessDays: false,
               source: MCR_2_102
             }
@@ -184,10 +184,10 @@ export const MICHIGAN_CIVIL_RULESET: JurisdictionDefinition = {
           summary: "Complaint, summons, and case initiation.",
           rules: [
             {
-              id: "service-90",
-              label: "Service deadline (90 days from filing)",
+              id: "service-91",
+              label: "Summons expires (91 days from filing)",
               trigger: "filing_date",
-              days: 90,
+              days: 91,
               businessDays: false,
               source: MCR_2_102
             }
@@ -256,13 +256,5 @@ export const MICHIGAN_CIVIL_RULESET: JurisdictionDefinition = {
       ]
     }
   ],
-  localOverlays: [
-    {
-      county: "Oakland",
-      notes: [
-        "E-filing via MiFILE required for most civil cases.",
-        "Confirm local pretrial or ADR requirements with the clerk."
-      ]
-    }
-  ]
+  localOverlays: []
 };

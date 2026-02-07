@@ -24,13 +24,13 @@ import {
   Target,
   Monitor
 } from "lucide-react";
-import { APP_NAME } from "../config/branding";
+import { APP_NAME, APP_DISCLAIMER } from "../config/branding";
 import { readJson, writeJson } from "../utils/localStore";
 
 const MODE_KEY = "case_companion_mode_v1";
 
 const coreNavItems = [
-  { to: "/war-room", label: "My Case", icon: LayoutDashboard },
+  { to: "/case-status", label: "Case Status", icon: LayoutDashboard },
   { to: "/deadlines", label: "My Deadlines", icon: Timer },
   { to: "/evidence", label: "My Evidence", icon: Archive },
   { to: "/filing-flow", label: "My Filings", icon: ClipboardList },
@@ -113,7 +113,7 @@ export default function AppLayout() {
       <div className="flex">
         <aside className="w-72 border-r border-white/5 bg-[#0A0E17] px-5 py-6">
           <div className="text-lg font-semibold tracking-tight text-white">{APP_NAME}</div>
-          <div className="mt-1 text-xs text-slate-400">Self-representation civil companion</div>
+          <div className="mt-1 text-xs text-slate-400">Michigan civil, pro se companion</div>
 
           <nav className="mt-6 space-y-1">
             {coreNavItems.map((item) => (
@@ -166,7 +166,7 @@ export default function AppLayout() {
           ) : null}
 
           <div className="mt-8 rounded-lg border border-amber-400/30 bg-amber-500/10 p-3 text-xs text-amber-200">
-            This app provides information and organization help, not legal advice.
+            {APP_DISCLAIMER}
           </div>
         </aside>
 

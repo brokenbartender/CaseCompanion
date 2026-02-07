@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import AppLayout from "./components/AppLayout";
 
 const Dashboard = React.lazy(() => import("./modules/Dashboard"));
+const CaseStatusDashboard = React.lazy(() => import("./modules/CaseStatusDashboard"));
 const ProceduralRoadmap = React.lazy(() => import("./modules/ProceduralRoadmap"));
 const ProceduralChecklist = React.lazy(() => import("./modules/ProceduralChecklist"));
 const CaseTimeline = React.lazy(() => import("./modules/CaseTimeline"));
@@ -87,6 +88,7 @@ function App() {
           <Route path="/" element={<AppLayout />}>
             <Route index element={<GuidedStartWizard />} />
             <Route path="dashboard" element={<Dashboard />} />
+            <Route path="case-status" element={<CaseStatusDashboard />} />
             <Route path="roadmap" element={<ProceduralRoadmap />} />
             <Route path="checklist" element={<ProceduralChecklist />} />
             <Route path="timeline" element={<CaseTimeline />} />

@@ -46,7 +46,7 @@ export default function WarRoom() {
     court: "",
     judge: "",
     caseNumber: "",
-    jurisdiction: "Oakland County, MI"
+    jurisdiction: "Michigan (County TBD)"
   });
   const dynamicEvidence = readJson<DynamicEvidenceItem[]>(DYNAMIC_EVIDENCE_KEY, []);
   const evidenceList = [...dynamicEvidence, ...EVIDENCE_INDEX].slice(0, 6);

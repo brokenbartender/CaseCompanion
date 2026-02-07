@@ -1,9 +1,9 @@
 export const FILING_CHECKLIST = [
   {
-    title: "Court selection (Oakland County)",
+    title: "Court selection (your county)",
     tasks: [
-      "Choose 52nd District Court for claims up to $25,000.",
-      "Choose 6th Circuit Court for claims above $25,000.",
+      "Select the correct District Court for claims up to the court limit.",
+      "Select the correct Circuit Court for claims above the court limit.",
       "Confirm venue based on where the incident occurred or defendant resides."
     ],
     sources: ["Civil Benchbook", "MCR Chapter 2"]

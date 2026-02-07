@@ -24,7 +24,7 @@ export default function DocumentPackBuilder() {
   const profile = readJson<CaseProfile>(PROFILE_KEY, {
     jurisdictionId: "mi",
     courtLevel: "district",
-    county: "Oakland",
+    county: "Unknown",
     filingDate: "",
     serviceDate: "",
     answerDate: "",
@@ -33,7 +33,7 @@ export default function DocumentPackBuilder() {
     pretrialDate: "",
     claimAmount: undefined,
     venueBasis: "",
-    venueCounty: "Oakland"
+    venueCounty: "Unknown"
   });
 
   const amountKnown = typeof profile.claimAmount === "number" && profile.claimAmount > 0;
