@@ -19,4 +19,6 @@ Not a lawyer. Not legal advice. Procedural help + document organization only.
 - `server/services/proceduralRules.ts`: rule evaluation + persistence
 - `server/services/piiScanService.ts`: scan + MC97 list generator
 - `server/services/filingPacketService.ts`: filing packet assembly
+- `server/services/servicePacketService.ts`: service packet assembly
+- `server/services/trialBinderService.ts`: trial binder assembly
 - UI uses `src/modules/CaseStatusDashboard.tsx` to surface next actions

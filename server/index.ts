@@ -43,6 +43,8 @@ import { getPublicKeyFingerprint, getPublicKeyPem, getSigningAlgorithm, signPayl
 import AdmZip from 'adm-zip';
 import { generateAdmissibilityPackage, generateUnassailablePacket } from './services/packagingService.js';
 import { generateFilingPacket } from './services/filingPacketService.js';
+import { generateServicePacket } from './services/servicePacketService.js';
+import { generateTrialBinderPacket } from './services/trialBinderService.js';
 import { agentTaskQueue } from './agent/state/taskQueue.js';
 import { generateSalesWinningPDF } from './services/exportService.js';
 import { getClioSuggestions } from './services/clioConnector.js';
@@ -91,6 +93,7 @@ import { logAiRefusal } from './services/forensicLogger.js';
 import { verifyGrounding } from './services/HallucinationKiller.js';
 import { computeRuleDeadlines, syncProceduralDeadlines } from './services/proceduralRules.js';
 import { generateProtectedPiiList, scanMatterForPii } from './services/piiScanService.js';
+import { evaluateProceduralGates } from './services/proceduralGateService.js';
 import {
   extractPrimaryDate,
   inferCustodianFromName,
@@ -144,6 +147,35 @@ const caseProfileSchema = z.object({
   discoveryServedDate: z.string().optional().nullable(),
   motionServedDate: z.string().optional().nullable(),
   pretrialDate: z.string().optional().nullable()
+});
+const schedulingOrderSchema = z.object({
+  orderDate: z.string().min(1),
+  overrides: z.record(z.any()).default({})
+});
+const courtProfileSchema = z.object({
+  courtName: z.string().min(1),
+  judgeName: z.string().optional().nullable(),
+  overrides: z.record(z.any()).default({})
+});
+const serviceAttemptSchema = z.object({
+  attemptedAt: z.string().min(1),
+  address: z.string().min(1),
+  method: z.string().min(1),
+  outcome: z.enum(['SUCCESS', 'FAILED', 'PENDING']).default('PENDING'),
+  notes: z.string().optional().nullable()
+});
+const caseDocumentSchema = z.object({
+  title: z.string().min(1),
+  status: z.enum(['DRAFT', 'FINAL']).default('DRAFT'),
+  filed: z.boolean().optional(),
+  served: z.boolean().optional(),
+  signatureStatus: z.enum(['MISSING', 'PENDING', 'SIGNED']).default('MISSING')
+});
+const partySchema = z.object({
+  role: z.string().min(1),
+  name: z.string().min(1),
+  type: z.enum(['individual', 'business', 'state_entity']),
+  contactJson: z.string().optional().nullable()
 });
 const JWT_SECRET = process.env.JWT_SECRET;
 if (!JWT_SECRET) {
@@ -2083,6 +2115,17 @@ function toOptionalDate(value?: string | null) {
   return Number.isNaN(parsed.getTime()) ? null : parsed;
 }
 
+function parseOverridesJson(raw?: string | null) {
+  if (!raw) return {};
+  try {
+    const parsed = JSON.parse(raw);
+    if (parsed && typeof parsed === 'object') return parsed;
+  } catch {
+    return {};
+  }
+  return {};
+}
+
 async function ensureCaseProfile(workspaceId: string, matterId: string, matterName: string) {
   const existing = await prisma.case.findFirst({ where: { workspaceId, matterId } });
   if (existing) return existing;
@@ -2118,6 +2161,34 @@ async function enforcePiiGate(req: any, res: any, matterId: string, context: str
     mc97: piiList.json
   });
   return true;
+}
+
+async function enforceSignatureGate(req: any, res: any, matterId: string, context: string) {
+  const matter = await findMatterByIdOrSlug(req.workspaceId, matterId, false);
+  if (!matter) return true;
+  const profile = await ensureCaseProfile(req.workspaceId, matter.id, matter.name);
+  const docs = await prisma.caseDocument.findMany({
+    where: { caseId: profile.id }
+  });
+  if (!docs.length) {
+    res.status(422).json({
+      error: "SIGNATURE_REQUIRED",
+      message: "At least one signed document is required before export.",
+      context
+    });
+    return true;
+  }
+  const unsigned = docs.filter((doc) => doc.signatureStatus !== "SIGNED");
+  if (unsigned.length) {
+    res.status(422).json({
+      error: "SIGNATURE_REQUIRED",
+      message: "Signed documents required before export.",
+      context,
+      unsignedCount: unsigned.length
+    });
+    return true;
+  }
+  return false;
 }
 
 app.get('/api/workspaces/:workspaceId/matters', authenticate as any, requireWorkspace as any, requireRole('viewer') as any, (async (req: any, res: any) => {
@@ -2253,6 +2324,14 @@ app.get('/api/workspaces/:workspaceId/matters/:matterId/procedural/deadlines', a
     where: { caseId: profile.id },
     orderBy: { orderDate: "desc" }
   });
+  const courtProfile = await prisma.courtProfile.findFirst({ where: { caseId: profile.id } });
+  const courtOverrides = courtProfile
+    ? [{
+        courtName: courtProfile.courtName,
+        judgeName: courtProfile.judgeName || undefined,
+        overrides: parseOverridesJson(courtProfile.localRuleOverridesJson)
+      }]
+    : [];
   const caseProfile = {
     jurisdictionId: profile.jurisdictionId,
     courtLevel: profile.courtLevel,
@@ -2264,7 +2343,7 @@ app.get('/api/workspaces/:workspaceId/matters/:matterId/procedural/deadlines', a
     motionServedDate: profile.motionServedDate?.toISOString().slice(0, 10),
     pretrialDate: profile.pretrialDate?.toISOString().slice(0, 10)
   };
-  const { deadlines, alerts } = computeRuleDeadlines(caseProfile, [], [], latestOrder?.overridesJson || null);
+  const { deadlines, alerts } = computeRuleDeadlines(caseProfile, [], courtOverrides, latestOrder?.overridesJson || null);
   await syncProceduralDeadlines({
     caseId: profile.id,
     profile: caseProfile,
@@ -2272,6 +2351,267 @@ app.get('/api/workspaces/:workspaceId/matters/:matterId/procedural/deadlines', a
     scheduleOverridesJson: latestOrder?.overridesJson || null
   }).catch(() => null);
   res.json({ profile: caseProfile, deadlines, alerts });
+}) as any);
+
+app.get('/api/workspaces/:workspaceId/matters/:matterId/procedural/status', authenticate as any, requireWorkspace as any, requireRole('viewer') as any, requireMatterAccess('matterId') as any, (async (req: any, res: any) => {
+  const matterId = String(req.params.matterId || '').trim();
+  const matter = await findMatterByIdOrSlug(req.workspaceId, matterId, false);
+  if (!matter) return res.status(404).json({ error: 'Matter not found' });
+  const profile = await ensureCaseProfile(req.workspaceId, matter.id, matter.name);
+  const latestOrder = await prisma.schedulingOrder.findFirst({
+    where: { caseId: profile.id },
+    orderBy: { orderDate: "desc" }
+  });
+  const courtProfile = await prisma.courtProfile.findFirst({ where: { caseId: profile.id } });
+  const courtOverrides = courtProfile
+    ? [{
+        courtName: courtProfile.courtName,
+        judgeName: courtProfile.judgeName || undefined,
+        overrides: parseOverridesJson(courtProfile.localRuleOverridesJson)
+      }]
+    : [];
+  const caseProfile = {
+    jurisdictionId: profile.jurisdictionId,
+    courtLevel: profile.courtLevel,
+    county: profile.county,
+    filingDate: profile.filingDate?.toISOString().slice(0, 10),
+    serviceDate: profile.serviceDate?.toISOString().slice(0, 10),
+    answerDate: profile.answerDate?.toISOString().slice(0, 10),
+    discoveryServedDate: profile.discoveryServedDate?.toISOString().slice(0, 10),
+    motionServedDate: profile.motionServedDate?.toISOString().slice(0, 10),
+    pretrialDate: profile.pretrialDate?.toISOString().slice(0, 10)
+  };
+  const { deadlines, alerts } = computeRuleDeadlines(caseProfile, [], courtOverrides, latestOrder?.overridesJson || null);
+  const gates = await evaluateProceduralGates({
+    workspaceId: req.workspaceId,
+    matterId: matter.id,
+    caseId: profile.id
+  });
+  res.json({ profile: caseProfile, deadlines, alerts, gates });
+}) as any);
+
+app.get('/api/workspaces/:workspaceId/matters/:matterId/pii-scan', authenticate as any, requireWorkspace as any, requireRole('member') as any, requireMatterAccess('matterId') as any, (async (req: any, res: any) => {
+  const matterId = String(req.params.matterId || '').trim();
+  const matter = await findMatterByIdOrSlug(req.workspaceId, matterId, false);
+  if (!matter) return res.status(404).json({ error: 'Matter not found' });
+  const findings = await scanMatterForPii(req.workspaceId, matter.id);
+  const piiList = await generateProtectedPiiList(findings);
+  res.json({ findings, mc97: piiList.json });
+}) as any);
+
+app.post('/api/workspaces/:workspaceId/matters/:matterId/exhibits/:exhibitId/redaction/complete', authenticate as any, requireWorkspace as any, requireRole('member') as any, requireMatterAccess('matterId') as any, (async (req: any, res: any) => {
+  const matterId = String(req.params.matterId || '').trim();
+  const exhibitId = String(req.params.exhibitId || '').trim();
+  if (!exhibitId) return res.status(400).json({ error: 'exhibitId required' });
+  const exhibit = await prisma.exhibit.findFirst({
+    where: { workspaceId: req.workspaceId, matterId, id: exhibitId }
+  });
+  if (!exhibit) return res.status(404).json({ error: 'Exhibit not found' });
+  const updated = await prisma.exhibit.update({
+    where: { id: exhibitId },
+    data: { redactionStatus: "APPLIED" }
+  });
+  await logAuditEvent(req.workspaceId, req.userId, 'REDACTION_MARKED_APPLIED', {
+    exhibitId,
+    matterId
+  }).catch(() => null);
+  res.json({ exhibit: updated });
+}) as any);
+
+app.get('/api/workspaces/:workspaceId/matters/:matterId/service-attempts', authenticate as any, requireWorkspace as any, requireRole('member') as any, requireMatterAccess('matterId') as any, (async (req: any, res: any) => {
+  const matterId = String(req.params.matterId || '').trim();
+  const matter = await findMatterByIdOrSlug(req.workspaceId, matterId, false);
+  if (!matter) return res.status(404).json({ error: 'Matter not found' });
+  const profile = await ensureCaseProfile(req.workspaceId, matter.id, matter.name);
+  const attempts = await prisma.serviceAttempt.findMany({
+    where: { caseId: profile.id },
+    orderBy: { attemptedAt: "desc" }
+  });
+  res.json({ attempts });
+}) as any);
+
+app.post('/api/workspaces/:workspaceId/matters/:matterId/service-attempts', authenticate as any, requireWorkspace as any, requireRole('member') as any, requireMatterAccess('matterId') as any, (async (req: any, res: any) => {
+  const matterId = String(req.params.matterId || '').trim();
+  const matter = await findMatterByIdOrSlug(req.workspaceId, matterId, false);
+  if (!matter) return res.status(404).json({ error: 'Matter not found' });
+  const parsed = serviceAttemptSchema.safeParse(req.body || {});
+  if (!parsed.success) return res.status(400).json({ error: 'Invalid service attempt payload' });
+  const profile = await ensureCaseProfile(req.workspaceId, matter.id, matter.name);
+  const attempt = await prisma.serviceAttempt.create({
+    data: {
+      caseId: profile.id,
+      attemptedAt: new Date(parsed.data.attemptedAt),
+      address: parsed.data.address,
+      method: parsed.data.method,
+      outcome: parsed.data.outcome,
+      notes: parsed.data.notes || null
+    }
+  });
+  await logAuditEvent(req.workspaceId, req.userId, 'SERVICE_ATTEMPT_LOGGED', {
+    caseId: profile.id,
+    attemptId: attempt.id
+  }).catch(() => null);
+  res.json({ attempt });
+}) as any);
+
+app.get('/api/workspaces/:workspaceId/matters/:matterId/case-documents', authenticate as any, requireWorkspace as any, requireRole('member') as any, requireMatterAccess('matterId') as any, (async (req: any, res: any) => {
+  const matterId = String(req.params.matterId || '').trim();
+  const matter = await findMatterByIdOrSlug(req.workspaceId, matterId, false);
+  if (!matter) return res.status(404).json({ error: 'Matter not found' });
+  const profile = await ensureCaseProfile(req.workspaceId, matter.id, matter.name);
+  const docs = await prisma.caseDocument.findMany({
+    where: { caseId: profile.id },
+    orderBy: { createdAt: 'desc' }
+  });
+  res.json({ documents: docs });
+}) as any);
+
+app.post('/api/workspaces/:workspaceId/matters/:matterId/case-documents', authenticate as any, requireWorkspace as any, requireRole('member') as any, requireMatterAccess('matterId') as any, (async (req: any, res: any) => {
+  const matterId = String(req.params.matterId || '').trim();
+  const matter = await findMatterByIdOrSlug(req.workspaceId, matterId, false);
+  if (!matter) return res.status(404).json({ error: 'Matter not found' });
+  const parsed = caseDocumentSchema.safeParse(req.body || {});
+  if (!parsed.success) return res.status(400).json({ error: 'Invalid case document payload' });
+  const profile = await ensureCaseProfile(req.workspaceId, matter.id, matter.name);
+  const doc = await prisma.caseDocument.create({
+    data: {
+      caseId: profile.id,
+      title: parsed.data.title,
+      status: parsed.data.status,
+      filed: parsed.data.filed ?? false,
+      served: parsed.data.served ?? false,
+      signatureStatus: parsed.data.signatureStatus
+    }
+  });
+  await logAuditEvent(req.workspaceId, req.userId, 'CASE_DOCUMENT_CREATED', {
+    caseId: profile.id,
+    documentId: doc.id
+  }).catch(() => null);
+  res.json({ document: doc });
+}) as any);
+
+app.put('/api/workspaces/:workspaceId/matters/:matterId/case-documents/:documentId', authenticate as any, requireWorkspace as any, requireRole('member') as any, requireMatterAccess('matterId') as any, (async (req: any, res: any) => {
+  const matterId = String(req.params.matterId || '').trim();
+  const documentId = String(req.params.documentId || '').trim();
+  const matter = await findMatterByIdOrSlug(req.workspaceId, matterId, false);
+  if (!matter) return res.status(404).json({ error: 'Matter not found' });
+  const parsed = caseDocumentSchema.partial().safeParse(req.body || {});
+  if (!parsed.success) return res.status(400).json({ error: 'Invalid case document payload' });
+  const profile = await ensureCaseProfile(req.workspaceId, matter.id, matter.name);
+  const doc = await prisma.caseDocument.findFirst({
+    where: { id: documentId, caseId: profile.id }
+  });
+  if (!doc) return res.status(404).json({ error: 'Document not found' });
+  const updated = await prisma.caseDocument.update({
+    where: { id: documentId },
+    data: parsed.data
+  });
+  res.json({ document: updated });
+}) as any);
+
+app.get('/api/workspaces/:workspaceId/matters/:matterId/parties', authenticate as any, requireWorkspace as any, requireRole('member') as any, requireMatterAccess('matterId') as any, (async (req: any, res: any) => {
+  const matterId = String(req.params.matterId || '').trim();
+  const matter = await findMatterByIdOrSlug(req.workspaceId, matterId, false);
+  if (!matter) return res.status(404).json({ error: 'Matter not found' });
+  const profile = await ensureCaseProfile(req.workspaceId, matter.id, matter.name);
+  const parties = await prisma.party.findMany({
+    where: { caseId: profile.id },
+    orderBy: { createdAt: 'desc' }
+  });
+  res.json({ parties });
+}) as any);
+
+app.post('/api/workspaces/:workspaceId/matters/:matterId/parties', authenticate as any, requireWorkspace as any, requireRole('member') as any, requireMatterAccess('matterId') as any, (async (req: any, res: any) => {
+  const matterId = String(req.params.matterId || '').trim();
+  const matter = await findMatterByIdOrSlug(req.workspaceId, matterId, false);
+  if (!matter) return res.status(404).json({ error: 'Matter not found' });
+  const parsed = partySchema.safeParse(req.body || {});
+  if (!parsed.success) return res.status(400).json({ error: 'Invalid party payload' });
+  const profile = await ensureCaseProfile(req.workspaceId, matter.id, matter.name);
+  const party = await prisma.party.create({
+    data: {
+      caseId: profile.id,
+      role: parsed.data.role,
+      name: parsed.data.name,
+      type: parsed.data.type,
+      contactJson: parsed.data.contactJson || null
+    }
+  });
+  res.json({ party });
+}) as any);
+
+app.delete('/api/workspaces/:workspaceId/matters/:matterId/parties/:partyId', authenticate as any, requireWorkspace as any, requireRole('member') as any, requireMatterAccess('matterId') as any, (async (req: any, res: any) => {
+  const matterId = String(req.params.matterId || '').trim();
+  const partyId = String(req.params.partyId || '').trim();
+  const matter = await findMatterByIdOrSlug(req.workspaceId, matterId, false);
+  if (!matter) return res.status(404).json({ error: 'Matter not found' });
+  const profile = await ensureCaseProfile(req.workspaceId, matter.id, matter.name);
+  await prisma.party.deleteMany({
+    where: { id: partyId, caseId: profile.id }
+  });
+  res.json({ ok: true });
+}) as any);
+
+app.get('/api/workspaces/:workspaceId/matters/:matterId/court-profile', authenticate as any, requireWorkspace as any, requireRole('member') as any, requireMatterAccess('matterId') as any, (async (req: any, res: any) => {
+  const matterId = String(req.params.matterId || '').trim();
+  const matter = await findMatterByIdOrSlug(req.workspaceId, matterId, false);
+  if (!matter) return res.status(404).json({ error: 'Matter not found' });
+  const profile = await ensureCaseProfile(req.workspaceId, matter.id, matter.name);
+  const courtProfile = await prisma.courtProfile.findFirst({ where: { caseId: profile.id } });
+  res.json({ courtProfile });
+}) as any);
+
+app.put('/api/workspaces/:workspaceId/matters/:matterId/court-profile', authenticate as any, requireWorkspace as any, requireRole('member') as any, requireMatterAccess('matterId') as any, (async (req: any, res: any) => {
+  const matterId = String(req.params.matterId || '').trim();
+  const matter = await findMatterByIdOrSlug(req.workspaceId, matterId, false);
+  if (!matter) return res.status(404).json({ error: 'Matter not found' });
+  const parsed = courtProfileSchema.safeParse(req.body || {});
+  if (!parsed.success) return res.status(400).json({ error: 'Invalid court profile payload' });
+  const profile = await ensureCaseProfile(req.workspaceId, matter.id, matter.name);
+  const courtProfile = await prisma.courtProfile.upsert({
+    where: { caseId: profile.id },
+    update: {
+      courtName: parsed.data.courtName,
+      judgeName: parsed.data.judgeName || null,
+      localRuleOverridesJson: JSON.stringify(parsed.data.overrides || {})
+    },
+    create: {
+      caseId: profile.id,
+      courtName: parsed.data.courtName,
+      judgeName: parsed.data.judgeName || null,
+      localRuleOverridesJson: JSON.stringify(parsed.data.overrides || {})
+    }
+  });
+  res.json({ courtProfile });
+}) as any);
+
+app.get('/api/workspaces/:workspaceId/matters/:matterId/scheduling-orders', authenticate as any, requireWorkspace as any, requireRole('member') as any, requireMatterAccess('matterId') as any, (async (req: any, res: any) => {
+  const matterId = String(req.params.matterId || '').trim();
+  const matter = await findMatterByIdOrSlug(req.workspaceId, matterId, false);
+  if (!matter) return res.status(404).json({ error: 'Matter not found' });
+  const profile = await ensureCaseProfile(req.workspaceId, matter.id, matter.name);
+  const orders = await prisma.schedulingOrder.findMany({
+    where: { caseId: profile.id },
+    orderBy: { orderDate: 'desc' }
+  });
+  res.json({ orders });
+}) as any);
+
+app.post('/api/workspaces/:workspaceId/matters/:matterId/scheduling-orders', authenticate as any, requireWorkspace as any, requireRole('member') as any, requireMatterAccess('matterId') as any, (async (req: any, res: any) => {
+  const matterId = String(req.params.matterId || '').trim();
+  const matter = await findMatterByIdOrSlug(req.workspaceId, matterId, false);
+  if (!matter) return res.status(404).json({ error: 'Matter not found' });
+  const parsed = schedulingOrderSchema.safeParse(req.body || {});
+  if (!parsed.success) return res.status(400).json({ error: 'Invalid scheduling order payload' });
+  const profile = await ensureCaseProfile(req.workspaceId, matter.id, matter.name);
+  const order = await prisma.schedulingOrder.create({
+    data: {
+      caseId: profile.id,
+      orderDate: new Date(parsed.data.orderDate),
+      overridesJson: JSON.stringify(parsed.data.overrides || {})
+    }
+  });
+  res.json({ order });
 }) as any);
 
 const ipAllowlistSchema = z.object({
@@ -2794,6 +3134,7 @@ app.post('/api/intake/upload', authenticate as any, requireWorkspace as any, req
     (async (req: any, res: any) => {
       try {
         const matterId = String(req.params.matterId);
+        if (await enforceSignatureGate(req, res, matterId, 'FILING_PACKET')) return;
         if (await enforcePiiGate(req, res, matterId, 'FILING_PACKET')) return;
         const packet = await generateFilingPacket(req.workspaceId, matterId);
         await logAuditEvent(req.workspaceId, req.userId, 'FILING_PACKET_EXPORT', {
@@ -2807,6 +3148,60 @@ app.post('/api/intake/upload', authenticate as any, requireWorkspace as any, req
         res.send(packet.buffer);
       } catch (err: any) {
         res.status(500).json({ error: 'Filing packet failed', detail: err?.message || String(err) });
+      }
+    }) as any
+  );
+
+  app.get(
+    '/api/workspaces/:workspaceId/matters/:matterId/service-packet',
+    authenticate as any,
+    requireWorkspace as any,
+    requireRole('member') as any,
+    requireMatterAccess('matterId') as any,
+    (async (req: any, res: any) => {
+      try {
+        const matterId = String(req.params.matterId);
+        if (await enforceSignatureGate(req, res, matterId, 'SERVICE_PACKET')) return;
+        if (await enforcePiiGate(req, res, matterId, 'SERVICE_PACKET')) return;
+        const packet = await generateServicePacket(req.workspaceId, matterId);
+        await logAuditEvent(req.workspaceId, req.userId, 'SERVICE_PACKET_EXPORT', {
+          matterId,
+          findings: packet.piiFindings.length
+        }).catch(() => null);
+        const filename = `matter_${matterId}_service_packet.zip`;
+        res.setHeader('Cache-Control', 'no-store, no-cache, must-revalidate');
+        res.setHeader('Content-Type', 'application/zip');
+        res.setHeader('Content-Disposition', `attachment; filename="${filename}"`);
+        res.send(packet.buffer);
+      } catch (err: any) {
+        res.status(500).json({ error: 'Service packet failed', detail: err?.message || String(err) });
+      }
+    }) as any
+  );
+
+  app.get(
+    '/api/workspaces/:workspaceId/matters/:matterId/trial-binder',
+    authenticate as any,
+    requireWorkspace as any,
+    requireRole('member') as any,
+    requireMatterAccess('matterId') as any,
+    (async (req: any, res: any) => {
+      try {
+        const matterId = String(req.params.matterId);
+        if (await enforceSignatureGate(req, res, matterId, 'TRIAL_BINDER')) return;
+        if (await enforcePiiGate(req, res, matterId, 'TRIAL_BINDER')) return;
+        const packet = await generateTrialBinderPacket(req.workspaceId, matterId);
+        await logAuditEvent(req.workspaceId, req.userId, 'TRIAL_BINDER_EXPORT', {
+          matterId,
+          findings: packet.piiFindings.length
+        }).catch(() => null);
+        const filename = `matter_${matterId}_trial_binder.zip`;
+        res.setHeader('Cache-Control', 'no-store, no-cache, must-revalidate');
+        res.setHeader('Content-Type', 'application/zip');
+        res.setHeader('Content-Disposition', `attachment; filename="${filename}"`);
+        res.send(packet.buffer);
+      } catch (err: any) {
+        res.status(500).json({ error: 'Trial binder failed', detail: err?.message || String(err) });
       }
     }) as any
   );

@@ -1,9 +1,17 @@
-import React, { useMemo, useState } from "react";
+import React, { useMemo, useState, useEffect } from "react";
 import Page from "../components/ui/Page";
 import { Card, CardBody, CardHeader, CardSubtitle, CardTitle } from "../components/ui/Card";
 import { readJson, writeJson } from "../utils/localStore";
 import { computeRuleDeadlines, CaseProfile } from "../services/workflowEngine";
 import { APP_DISCLAIMER } from "../config/branding";
+import { FEATURE_FLAGS } from "../config/featureFlags";
+import {
+  fetchProceduralStatus,
+  updateCaseProfile,
+  listCaseDocuments,
+  createCaseDocument,
+  updateCaseDocument
+} from "../services/caseApi";
 
 const PROFILE_KEY = "case_companion_case_profile_v1";
 
@@ -30,10 +38,74 @@ export default function CaseStatusDashboard() {
       pretrialDate: ""
     })
   );
+  const [serverDeadlines, setServerDeadlines] = useState<any[]>([]);
+  const [serverGates, setServerGates] = useState<any[]>([]);
+  const [statusMessage, setStatusMessage] = useState("");
+  const [caseDocuments, setCaseDocuments] = useState<any[]>([]);
+  const [docForm, setDocForm] = useState({ title: "", status: "DRAFT", signatureStatus: "MISSING" });
 
   const deadlines = useMemo(() => computeRuleDeadlines(profile, []), [profile]);
-  const upcoming = useMemo(() => deadlines.filter((d) => d.dueDate), [deadlines]);
+  const upcoming = useMemo(
+    () => (serverDeadlines.length ? serverDeadlines : deadlines).filter((d) => d.dueDate),
+    [deadlines, serverDeadlines]
+  );
   const nextActions = upcoming.slice(0, 5);
+
+  useEffect(() => {
+    if (!FEATURE_FLAGS.useServerCaseProfile) return;
+    fetchProceduralStatus()
+      .then((data: any) => {
+        if (data?.profile) {
+          const next = { ...profile, ...data.profile };
+          setProfile(next);
+          writeJson(PROFILE_KEY, next);
+        }
+        if (Array.isArray(data?.deadlines)) setServerDeadlines(data.deadlines);
+        if (Array.isArray(data?.gates?.gates)) setServerGates(data.gates.gates);
+      })
+      .catch(() => {
+        setStatusMessage("Offline mode: showing locally saved dates.");
+      });
+    listCaseDocuments()
+      .then((data: any) => setCaseDocuments(Array.isArray(data?.documents) ? data.documents : []))
+      .catch(() => null);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  async function saveProfileToServer(next: CaseProfile) {
+    writeJson(PROFILE_KEY, next);
+    if (!FEATURE_FLAGS.useServerCaseProfile) return;
+    try {
+      await updateCaseProfile(next);
+      const data: any = await fetchProceduralStatus();
+      if (Array.isArray(data?.deadlines)) setServerDeadlines(data.deadlines);
+      if (Array.isArray(data?.gates?.gates)) setServerGates(data.gates.gates);
+      setStatusMessage("Saved to server.");
+      setTimeout(() => setStatusMessage(""), 2000);
+    } catch {
+      setStatusMessage("Unable to save to server. Local changes kept.");
+    }
+  }
+
+  async function addDocument() {
+    if (!docForm.title.trim()) return;
+    try {
+      const result: any = await createCaseDocument(docForm);
+      setCaseDocuments([result.document, ...caseDocuments].filter(Boolean));
+      setDocForm({ title: "", status: "DRAFT", signatureStatus: "MISSING" });
+    } catch {
+      setStatusMessage("Failed to add document.");
+    }
+  }
+
+  async function updateDoc(id: string, updates: any) {
+    try {
+      const result: any = await updateCaseDocument(id, updates);
+      setCaseDocuments(caseDocuments.map((doc) => (doc.id === id ? result.document : doc)));
+    } catch {
+      setStatusMessage("Failed to update document.");
+    }
+  }
 
   return (
     <Page
@@ -60,7 +132,7 @@ export default function CaseStatusDashboard() {
                   onChange={(e) => {
                     const next = { ...profile, courtLevel: e.target.value as CaseProfile["courtLevel"] };
                     setProfile(next);
-                    writeJson(PROFILE_KEY, next);
+                    saveProfileToServer(next);
                   }}
                 >
                   <option value="district">District</option>
@@ -75,7 +147,7 @@ export default function CaseStatusDashboard() {
                   onChange={(e) => {
                     const next = { ...profile, county: e.target.value };
                     setProfile(next);
-                    writeJson(PROFILE_KEY, next);
+                    saveProfileToServer(next);
                   }}
                 />
               </label>
@@ -96,12 +168,13 @@ export default function CaseStatusDashboard() {
                     onChange={(e) => {
                       const next = { ...profile, [field.key]: e.target.value };
                       setProfile(next);
-                      writeJson(PROFILE_KEY, next);
+                      saveProfileToServer(next);
                     }}
                   />
                 </label>
               ))}
             </div>
+            {statusMessage ? <div className="mt-3 text-xs text-amber-200">{statusMessage}</div> : null}
           </CardBody>
         </Card>
 
@@ -142,6 +215,98 @@ export default function CaseStatusDashboard() {
                 <div className="text-sm text-slate-400">Set filing or service dates to compute deadlines.</div>
               )}
             </div>
+          </CardBody>
+        </Card>
+
+        <Card className="lg:col-span-3">
+          <CardHeader>
+            <CardSubtitle>Documents</CardSubtitle>
+            <CardTitle>Signature Readiness</CardTitle>
+          </CardHeader>
+          <CardBody>
+            <div className="grid gap-3 md:grid-cols-3 text-sm text-slate-300">
+              <input
+                className="w-full rounded-md border border-white/10 bg-white/5 px-3 py-2 text-sm text-slate-100"
+                placeholder="Document title"
+                value={docForm.title}
+                onChange={(e) => setDocForm({ ...docForm, title: e.target.value })}
+              />
+              <select
+                className="w-full rounded-md border border-white/10 bg-white/5 px-3 py-2 text-sm text-slate-100"
+                value={docForm.status}
+                onChange={(e) => setDocForm({ ...docForm, status: e.target.value })}
+              >
+                <option value="DRAFT">Draft</option>
+                <option value="FINAL">Final</option>
+              </select>
+              <select
+                className="w-full rounded-md border border-white/10 bg-white/5 px-3 py-2 text-sm text-slate-100"
+                value={docForm.signatureStatus}
+                onChange={(e) => setDocForm({ ...docForm, signatureStatus: e.target.value })}
+              >
+                <option value="MISSING">Missing</option>
+                <option value="PENDING">Pending</option>
+                <option value="SIGNED">Signed</option>
+              </select>
+            </div>
+            <button
+              type="button"
+              onClick={addDocument}
+              className="mt-3 rounded-md bg-amber-500 px-3 py-2 text-xs font-semibold text-slate-900"
+            >
+              Add Document
+            </button>
+            {caseDocuments.length ? (
+              <div className="mt-4 grid gap-2 text-xs text-slate-300">
+                {caseDocuments.map((doc) => (
+                  <div key={doc.id} className="rounded-md border border-white/10 bg-white/5 p-2">
+                    <div className="flex items-center justify-between">
+                      <div>{doc.title}</div>
+                      <select
+                        className="rounded-md border border-white/10 bg-white/5 px-2 py-1 text-xs text-slate-100"
+                        value={doc.signatureStatus}
+                        onChange={(e) => updateDoc(doc.id, { signatureStatus: e.target.value })}
+                      >
+                        <option value="MISSING">Missing</option>
+                        <option value="PENDING">Pending</option>
+                        <option value="SIGNED">Signed</option>
+                      </select>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            ) : (
+              <div className="mt-3 text-xs text-slate-400">No case documents added yet.</div>
+            )}
+          </CardBody>
+        </Card>
+
+        <Card className="lg:col-span-3">
+          <CardHeader>
+            <CardSubtitle>Export Gates</CardSubtitle>
+            <CardTitle>Readiness Checks</CardTitle>
+          </CardHeader>
+          <CardBody>
+            {serverGates.length ? (
+              <div className="grid gap-3 md:grid-cols-2">
+                {serverGates.map((gate) => (
+                  <div key={gate.id} className="rounded-lg border border-white/10 bg-white/5 p-4 text-sm text-slate-300">
+                    <div className="flex items-center justify-between">
+                      <div className="text-white font-semibold">{gate.label}</div>
+                      <span className={`rounded-full border px-2 py-0.5 text-[10px] uppercase tracking-wide ${
+                        gate.status === "PASS" ? "text-emerald-200 border-emerald-400/30" : "text-rose-200 border-rose-400/30"
+                      }`}>
+                        {gate.status}
+                      </span>
+                    </div>
+                    <div className="mt-2 text-xs text-slate-400">{gate.action}</div>
+                    {gate.details ? <div className="mt-1 text-xs text-slate-500">{gate.details}</div> : null}
+                  </div>
+                ))}
+              </div>
+            ) : (
+              <div className="text-sm text-slate-400">No gate data yet. Save your case profile to compute.</div>
+            )}
           </CardBody>
         </Card>
       </div>

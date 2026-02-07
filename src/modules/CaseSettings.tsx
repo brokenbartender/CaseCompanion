@@ -3,6 +3,7 @@ import Page from "../components/ui/Page";
 import { Card, CardBody, CardHeader, CardSubtitle, CardTitle } from "../components/ui/Card";
 import { readJson, writeJson } from "../utils/localStore";
 import { getMatterId, getWorkspaceId } from "../services/authStorage";
+import { fetchCourtProfile, updateCourtProfile, createSchedulingOrder, listSchedulingOrders } from "../services/caseApi";
 
 const STORAGE_KEY = "case_companion_settings_v1";
 const DEFAULT_API_BASE = import.meta.env.VITE_API_BASE_URL || "http://localhost:8787";
@@ -43,6 +44,10 @@ export default function CaseSettingsView() {
     workspaceId: "",
     matterId: ""
   });
+  const [courtProfile, setCourtProfile] = useState({ courtName: "", judgeName: "", overrides: "{}" });
+  const [scheduleOrder, setScheduleOrder] = useState({ orderDate: "", overrides: "{}" });
+  const [scheduleOrders, setScheduleOrders] = useState<any[]>([]);
+  const [proseStatus, setProseStatus] = useState("");
 
   function update(next: Partial<CaseSettings>) {
     const updated = { ...settings, ...next };
@@ -55,6 +60,20 @@ export default function CaseSettingsView() {
       workspaceId: getWorkspaceId(),
       matterId: getMatterId()
     });
+    fetchCourtProfile()
+      .then((data: any) => {
+        if (data?.courtProfile) {
+          setCourtProfile({
+            courtName: data.courtProfile.courtName || "",
+            judgeName: data.courtProfile.judgeName || "",
+            overrides: data.courtProfile.localRuleOverridesJson || "{}"
+          });
+        }
+      })
+      .catch(() => null);
+    listSchedulingOrders()
+      .then((data: any) => setScheduleOrders(Array.isArray(data?.orders) ? data.orders : []))
+      .catch(() => null);
   }, []);
 
   function copyText(value: string) {
@@ -86,6 +105,35 @@ export default function CaseSettingsView() {
     });
     const nextSettings = readJson(STORAGE_KEY, settings);
     setSettings(nextSettings);
+  }
+
+  async function saveCourtProfile() {
+    try {
+      const overrides = JSON.parse(courtProfile.overrides || "{}");
+      await updateCourtProfile({
+        courtName: courtProfile.courtName,
+        judgeName: courtProfile.judgeName,
+        overrides
+      });
+      setProseStatus("Court profile saved.");
+    } catch {
+      setProseStatus("Invalid JSON or failed to save court profile.");
+    }
+  }
+
+  async function addSchedulingOrder() {
+    try {
+      const overrides = JSON.parse(scheduleOrder.overrides || "{}");
+      const result: any = await createSchedulingOrder({
+        orderDate: scheduleOrder.orderDate,
+        overrides
+      });
+      setScheduleOrders([result.order, ...scheduleOrders].filter(Boolean));
+      setScheduleOrder({ orderDate: "", overrides: "{}" });
+      setProseStatus("Scheduling order saved.");
+    } catch {
+      setProseStatus("Invalid JSON or failed to save scheduling order.");
+    }
   }
 
   return (
@@ -129,6 +177,79 @@ export default function CaseSettingsView() {
                 onChange={(e) => update({ jurisdiction: e.target.value })}
               />
             </div>
+          </CardBody>
+        </Card>
+
+        <Card>
+          <CardHeader>
+            <CardSubtitle>Court Profile</CardSubtitle>
+            <CardTitle>Local Rule Overrides</CardTitle>
+          </CardHeader>
+          <CardBody>
+            <div className="grid gap-3 md:grid-cols-2">
+              <input
+                className="w-full rounded-md border border-white/10 bg-white/5 px-3 py-2 text-sm text-slate-100"
+                placeholder="Court name"
+                value={courtProfile.courtName}
+                onChange={(e) => setCourtProfile({ ...courtProfile, courtName: e.target.value })}
+              />
+              <input
+                className="w-full rounded-md border border-white/10 bg-white/5 px-3 py-2 text-sm text-slate-100"
+                placeholder="Judge name (optional)"
+                value={courtProfile.judgeName}
+                onChange={(e) => setCourtProfile({ ...courtProfile, judgeName: e.target.value })}
+              />
+            </div>
+            <div className="mt-3 text-xs text-slate-400">Overrides JSON (by rule id)</div>
+            <textarea
+              className="mt-2 w-full rounded-md border border-white/10 bg-white/5 px-3 py-2 text-sm text-slate-100"
+              rows={4}
+              value={courtProfile.overrides}
+              onChange={(e) => setCourtProfile({ ...courtProfile, overrides: e.target.value })}
+            />
+            <button
+              type="button"
+              onClick={saveCourtProfile}
+              className="mt-3 rounded-md bg-amber-500 px-3 py-2 text-xs font-semibold text-slate-900"
+            >
+              Save Court Profile
+            </button>
+          </CardBody>
+        </Card>
+
+        <Card>
+          <CardHeader>
+            <CardSubtitle>Scheduling Orders</CardSubtitle>
+            <CardTitle>Overrides</CardTitle>
+          </CardHeader>
+          <CardBody>
+            <div className="grid gap-3 md:grid-cols-2">
+              <input
+                className="w-full rounded-md border border-white/10 bg-white/5 px-3 py-2 text-sm text-slate-100"
+                placeholder="Order date (YYYY-MM-DD)"
+                value={scheduleOrder.orderDate}
+                onChange={(e) => setScheduleOrder({ ...scheduleOrder, orderDate: e.target.value })}
+              />
+            </div>
+            <div className="mt-3 text-xs text-slate-400">Overrides JSON (by rule id)</div>
+            <textarea
+              className="mt-2 w-full rounded-md border border-white/10 bg-white/5 px-3 py-2 text-sm text-slate-100"
+              rows={4}
+              value={scheduleOrder.overrides}
+              onChange={(e) => setScheduleOrder({ ...scheduleOrder, overrides: e.target.value })}
+            />
+            <button
+              type="button"
+              onClick={addSchedulingOrder}
+              className="mt-3 rounded-md border border-amber-400/60 px-3 py-2 text-xs font-semibold text-amber-200"
+            >
+              Add Scheduling Order
+            </button>
+            {scheduleOrders.length ? (
+              <div className="mt-3 text-xs text-slate-400">
+                Latest orders: {scheduleOrders.slice(0, 3).map((order) => order.orderDate?.slice(0, 10)).join(", ")}
+              </div>
+            ) : null}
           </CardBody>
         </Card>
 
@@ -197,6 +318,7 @@ export default function CaseSettingsView() {
             <div className="mt-3 text-xs text-slate-500">
               If these are blank, log in and return here. These IDs are required for document ingestion.
             </div>
+            {proseStatus ? <div className="mt-2 text-xs text-amber-200">{proseStatus}</div> : null}
           </CardBody>
         </Card>
 
