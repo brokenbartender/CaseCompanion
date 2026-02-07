@@ -4,7 +4,7 @@ import { Card, CardBody, CardHeader, CardSubtitle, CardTitle } from "../componen
 import { SERVICE_OF_PROCESS_GUIDE } from "../data/serviceOfProcess";
 import { useState } from "react";
 import { readJson, writeJson } from "../utils/localStore";
-import { createServiceAttempt, listServiceAttempts } from "../services/caseApi";
+import { createServiceAttempt, listServiceAttempts, uploadServiceAttemptProof } from "../services/caseApi";
 
 export default function ServiceOfProcessWizard() {
   const [useEService, setUseEService] = useState(false);
@@ -21,6 +21,7 @@ export default function ServiceOfProcessWizard() {
     notes: ""
   });
   const [attemptStatus, setAttemptStatus] = useState("");
+  const [proofStatus, setProofStatus] = useState("");
 
   React.useEffect(() => {
     listServiceAttempts()
@@ -41,6 +42,16 @@ export default function ServiceOfProcessWizard() {
       setAttemptForm({ attemptedAt: "", address: "", method: "", outcome: "PENDING", notes: "" });
     } catch (err: any) {
       setAttemptStatus(err?.message || "Failed to log service attempt.");
+    }
+  }
+
+  async function attachProof(attemptId: string, file?: File | null) {
+    if (!file) return;
+    try {
+      await uploadServiceAttemptProof(attemptId, file);
+      setProofStatus("Proof uploaded.");
+    } catch (err: any) {
+      setProofStatus(err?.message || "Proof upload failed.");
     }
   }
 
@@ -131,11 +142,20 @@ export default function ServiceOfProcessWizard() {
               <ul className="mt-2 space-y-2 text-xs text-slate-300">
                 {attempts.slice(0, 5).map((attempt) => (
                   <li key={attempt.id} className="rounded-md border border-white/10 bg-white/5 p-2">
-                    {attempt.attemptedAt?.slice(0, 10)} • {attempt.method} • {attempt.outcome}
+                    <div>{attempt.attemptedAt?.slice(0, 10)} • {attempt.method} • {attempt.outcome}</div>
+                    <label className="mt-2 block text-xs text-slate-400">
+                      Attach proof file
+                      <input
+                        type="file"
+                        onChange={(e) => attachProof(attempt.id, e.target.files?.[0])}
+                        className="mt-1 text-xs text-slate-300"
+                      />
+                    </label>
                   </li>
                 ))}
               </ul>
             ) : null}
+            {proofStatus ? <div className="mt-2 text-xs text-amber-200">{proofStatus}</div> : null}
           </CardBody>
         </Card>
 
