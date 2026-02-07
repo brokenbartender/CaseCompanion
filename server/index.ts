@@ -2249,6 +2249,10 @@ app.get('/api/workspaces/:workspaceId/matters/:matterId/procedural/deadlines', a
   const matter = await findMatterByIdOrSlug(req.workspaceId, matterId, false);
   if (!matter) return res.status(404).json({ error: 'Matter not found' });
   const profile = await ensureCaseProfile(req.workspaceId, matter.id, matter.name);
+  const latestOrder = await prisma.schedulingOrder.findFirst({
+    where: { caseId: profile.id },
+    orderBy: { orderDate: "desc" }
+  });
   const caseProfile = {
     jurisdictionId: profile.jurisdictionId,
     courtLevel: profile.courtLevel,
@@ -2260,11 +2264,12 @@ app.get('/api/workspaces/:workspaceId/matters/:matterId/procedural/deadlines', a
     motionServedDate: profile.motionServedDate?.toISOString().slice(0, 10),
     pretrialDate: profile.pretrialDate?.toISOString().slice(0, 10)
   };
-  const { deadlines, alerts } = computeRuleDeadlines(caseProfile, [], [], null);
+  const { deadlines, alerts } = computeRuleDeadlines(caseProfile, [], [], latestOrder?.overridesJson || null);
   await syncProceduralDeadlines({
     caseId: profile.id,
     profile: caseProfile,
-    holidays: []
+    holidays: [],
+    scheduleOverridesJson: latestOrder?.overridesJson || null
   }).catch(() => null);
   res.json({ profile: caseProfile, deadlines, alerts });
 }) as any);
