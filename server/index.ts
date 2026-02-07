@@ -2454,6 +2454,52 @@ app.post('/api/workspaces/:workspaceId/matters/:matterId/service-attempts', auth
   res.json({ attempt });
 }) as any);
 
+app.post('/api/workspaces/:workspaceId/matters/:matterId/service-attempts/:attemptId/proof', authenticate as any, requireWorkspace as any, requireRole('member') as any, requireMatterAccess('matterId') as any, upload.single('file') as any, (async (req: any, res: any) => {
+  const attemptId = String(req.params.attemptId || '').trim();
+  const matterId = String(req.params.matterId || '').trim();
+  if (!attemptId) return res.status(400).json({ error: 'attemptId required' });
+  const file = req.file;
+  if (!file) return res.status(400).json({ error: 'File missing' });
+  const attempt = await prisma.serviceAttempt.findFirst({ where: { id: attemptId } });
+  if (!attempt) return res.status(404).json({ error: 'Service attempt not found' });
+  const fileBuffer = await fs.promises.readFile(file.path);
+  const magicCheck = validateFileMagic(fileBuffer, file.mimetype, file.originalname);
+  if (!magicCheck.ok) {
+    await fs.promises.unlink(file.path).catch(() => null);
+    return res.status(415).json({ error: 'MAGIC_MISMATCH', detail: magicCheck.reason });
+  }
+  const scanResult = await scanBufferForMalware(fileBuffer, { filename: file.originalname });
+  if (!scanResult.ok) {
+    await fs.promises.unlink(file.path).catch(() => null);
+    const status = scanResult.status === 'INFECTED' ? 422 : 503;
+    return res.status(status).json({ error: 'MALWARE_SCAN_FAILED', detail: scanResult.detail || scanResult.status });
+  }
+  const safeName = sanitizeFilename(file.originalname);
+  const storageKey = `${req.workspaceId}/service_attempts/${attemptId}/${safeName}`;
+  await storageService.upload(storageKey, fileBuffer);
+  await fs.promises.unlink(file.path).catch(() => null);
+  const updated = await prisma.serviceAttempt.update({
+    where: { id: attemptId },
+    data: { proofStorageKey: storageKey }
+  });
+  await logAuditEvent(req.workspaceId, req.userId, 'SERVICE_PROOF_UPLOADED', {
+    attemptId,
+    matterId
+  }).catch(() => null);
+  res.json({ attempt: updated });
+}) as any);
+
+app.get('/api/workspaces/:workspaceId/matters/:matterId/service-attempts/:attemptId/proof', authenticate as any, requireWorkspace as any, requireRole('member') as any, requireMatterAccess('matterId') as any, (async (req: any, res: any) => {
+  const attemptId = String(req.params.attemptId || '').trim();
+  const attempt = await prisma.serviceAttempt.findFirst({ where: { id: attemptId } });
+  if (!attempt || !attempt.proofStorageKey) return res.status(404).json({ error: 'Proof not found' });
+  const buffer = await storageService.download(attempt.proofStorageKey);
+  const filename = path.basename(attempt.proofStorageKey);
+  res.setHeader('Content-Type', 'application/octet-stream');
+  res.setHeader('Content-Disposition', `attachment; filename="${filename}"`);
+  res.send(buffer);
+}) as any);
+
 app.get('/api/workspaces/:workspaceId/matters/:matterId/case-documents', authenticate as any, requireWorkspace as any, requireRole('member') as any, requireMatterAccess('matterId') as any, (async (req: any, res: any) => {
   const matterId = String(req.params.matterId || '').trim();
   const matter = await findMatterByIdOrSlug(req.workspaceId, matterId, false);
@@ -2488,6 +2534,58 @@ app.post('/api/workspaces/:workspaceId/matters/:matterId/case-documents', authen
     documentId: doc.id
   }).catch(() => null);
   res.json({ document: doc });
+}) as any);
+
+app.post('/api/workspaces/:workspaceId/matters/:matterId/case-documents/:documentId/upload', authenticate as any, requireWorkspace as any, requireRole('member') as any, requireMatterAccess('matterId') as any, upload.single('file') as any, (async (req: any, res: any) => {
+  const matterId = String(req.params.matterId || '').trim();
+  const documentId = String(req.params.documentId || '').trim();
+  const file = req.file;
+  if (!file) return res.status(400).json({ error: 'File missing' });
+  const matter = await findMatterByIdOrSlug(req.workspaceId, matterId, false);
+  if (!matter) return res.status(404).json({ error: 'Matter not found' });
+  const profile = await ensureCaseProfile(req.workspaceId, matter.id, matter.name);
+  const doc = await prisma.caseDocument.findFirst({ where: { id: documentId, caseId: profile.id } });
+  if (!doc) return res.status(404).json({ error: 'Document not found' });
+  const fileBuffer = await fs.promises.readFile(file.path);
+  const magicCheck = validateFileMagic(fileBuffer, file.mimetype, file.originalname);
+  if (!magicCheck.ok) {
+    await fs.promises.unlink(file.path).catch(() => null);
+    return res.status(415).json({ error: 'MAGIC_MISMATCH', detail: magicCheck.reason });
+  }
+  const scanResult = await scanBufferForMalware(fileBuffer, { filename: file.originalname });
+  if (!scanResult.ok) {
+    await fs.promises.unlink(file.path).catch(() => null);
+    const status = scanResult.status === 'INFECTED' ? 422 : 503;
+    return res.status(status).json({ error: 'MALWARE_SCAN_FAILED', detail: scanResult.detail || scanResult.status });
+  }
+  const safeName = sanitizeFilename(file.originalname);
+  const storageKey = `${req.workspaceId}/case_documents/${documentId}/${safeName}`;
+  await storageService.upload(storageKey, fileBuffer);
+  await fs.promises.unlink(file.path).catch(() => null);
+  const updated = await prisma.caseDocument.update({
+    where: { id: documentId },
+    data: { storageKey }
+  });
+  await logAuditEvent(req.workspaceId, req.userId, 'CASE_DOCUMENT_UPLOADED', {
+    documentId,
+    matterId
+  }).catch(() => null);
+  res.json({ document: updated });
+}) as any);
+
+app.get('/api/workspaces/:workspaceId/matters/:matterId/case-documents/:documentId/download', authenticate as any, requireWorkspace as any, requireRole('member') as any, requireMatterAccess('matterId') as any, (async (req: any, res: any) => {
+  const matterId = String(req.params.matterId || '').trim();
+  const documentId = String(req.params.documentId || '').trim();
+  const matter = await findMatterByIdOrSlug(req.workspaceId, matterId, false);
+  if (!matter) return res.status(404).json({ error: 'Matter not found' });
+  const profile = await ensureCaseProfile(req.workspaceId, matter.id, matter.name);
+  const doc = await prisma.caseDocument.findFirst({ where: { id: documentId, caseId: profile.id } });
+  if (!doc || !doc.storageKey) return res.status(404).json({ error: 'Document not found' });
+  const buffer = await storageService.download(doc.storageKey);
+  const filename = path.basename(doc.storageKey);
+  res.setHeader('Content-Type', 'application/octet-stream');
+  res.setHeader('Content-Disposition', `attachment; filename="${filename}"`);
+  res.send(buffer);
 }) as any);
 
 app.put('/api/workspaces/:workspaceId/matters/:matterId/case-documents/:documentId', authenticate as any, requireWorkspace as any, requireRole('member') as any, requireMatterAccess('matterId') as any, (async (req: any, res: any) => {

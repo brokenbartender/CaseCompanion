@@ -35,6 +35,12 @@ export async function createServiceAttempt(payload: any) {
   return api.post(scopePath("/service-attempts"), payload);
 }
 
+export async function uploadServiceAttemptProof(attemptId: string, file: File) {
+  const form = new FormData();
+  form.append("file", file);
+  return api.postForm(scopePath(`/service-attempts/${attemptId}/proof`), form);
+}
+
 export async function listCaseDocuments() {
   return api.get(scopePath("/case-documents"));
 }
@@ -45,6 +51,12 @@ export async function createCaseDocument(payload: any) {
 
 export async function updateCaseDocument(documentId: string, payload: any) {
   return api.put(scopePath(`/case-documents/${documentId}`), payload);
+}
+
+export async function uploadCaseDocumentFile(documentId: string, file: File) {
+  const form = new FormData();
+  form.append("file", file);
+  return api.postForm(scopePath(`/case-documents/${documentId}/upload`), form);
 }
 
 export async function listParties() {

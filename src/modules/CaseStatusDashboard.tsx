@@ -10,7 +10,8 @@ import {
   updateCaseProfile,
   listCaseDocuments,
   createCaseDocument,
-  updateCaseDocument
+  updateCaseDocument,
+  uploadCaseDocumentFile
 } from "../services/caseApi";
 
 const PROFILE_KEY = "case_companion_case_profile_v1";
@@ -104,6 +105,16 @@ export default function CaseStatusDashboard() {
       setCaseDocuments(caseDocuments.map((doc) => (doc.id === id ? result.document : doc)));
     } catch {
       setStatusMessage("Failed to update document.");
+    }
+  }
+
+  async function attachDocumentFile(id: string, file?: File | null) {
+    if (!file) return;
+    try {
+      const result: any = await uploadCaseDocumentFile(id, file);
+      setCaseDocuments(caseDocuments.map((doc) => (doc.id === id ? result.document : doc)));
+    } catch {
+      setStatusMessage("Failed to upload document.");
     }
   }
 
@@ -272,6 +283,14 @@ export default function CaseStatusDashboard() {
                         <option value="SIGNED">Signed</option>
                       </select>
                     </div>
+                    <label className="mt-2 block text-[10px] text-slate-400">
+                      Attach file
+                      <input
+                        type="file"
+                        onChange={(e) => attachDocumentFile(doc.id, e.target.files?.[0])}
+                        className="mt-1 text-xs text-slate-300"
+                      />
+                    </label>
                   </div>
                 ))}
               </div>

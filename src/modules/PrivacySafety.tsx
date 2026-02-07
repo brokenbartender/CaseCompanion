@@ -3,10 +3,14 @@ import Page from "../components/ui/Page";
 import { Card, CardBody, CardHeader, CardSubtitle, CardTitle } from "../components/ui/Card";
 import { PRIVACY_CHECKLIST, SAFETY_OPTIONS, VICTIM_RIGHTS } from "../data/privacySafety";
 import { fetchPiiScan, markRedactionApplied } from "../services/caseApi";
+import { api } from "../services/api";
+import { getMatterId, getWorkspaceId } from "../services/authStorage";
 
 export default function PrivacySafety() {
   const [piiFindings, setPiiFindings] = React.useState<any[]>([]);
   const [piiStatus, setPiiStatus] = React.useState("");
+  const [redactionStatus, setRedactionStatus] = React.useState("");
+  const [redactionTerms, setRedactionTerms] = React.useState("");
 
   React.useEffect(() => {
     fetchPiiScan()
@@ -20,6 +24,32 @@ export default function PrivacySafety() {
       setPiiStatus("Marked as redacted.");
     } catch (err: any) {
       setPiiStatus(err?.message || "Failed to mark redaction.");
+    }
+  }
+
+  async function runRedactionJob() {
+    try {
+      const exhibitIds = Array.from(new Set(piiFindings.map((finding) => finding.exhibitId)));
+      if (!exhibitIds.length) {
+        setRedactionStatus("No exhibits with PII to redact.");
+        return;
+      }
+      const terms = redactionTerms
+        ? redactionTerms.split(",").map((term) => term.trim()).filter(Boolean)
+        : Array.from(new Set(piiFindings.map((finding) => String(finding.match || "")).filter(Boolean))).slice(0, 10);
+      if (!terms.length) {
+        setRedactionStatus("Add at least one redaction term.");
+        return;
+      }
+      const ws = getWorkspaceId();
+      const matter = getMatterId();
+      await api.post(`/workspaces/${ws}/matters/${matter}/redactions`, {
+        terms,
+        exhibitIds
+      });
+      setRedactionStatus("Redaction job queued.");
+    } catch (err: any) {
+      setRedactionStatus(err?.message || "Failed to queue redaction job.");
     }
   }
 
@@ -95,6 +125,21 @@ export default function PrivacySafety() {
               <div className="text-sm text-slate-400">No PII findings detected.</div>
             )}
             {piiStatus ? <div className="mt-2 text-xs text-amber-200">{piiStatus}</div> : null}
+            <div className="mt-4 text-xs text-slate-400">Run a redaction job (PDFs only)</div>
+            <input
+              className="mt-2 w-full rounded-md border border-white/10 bg-white/5 px-3 py-2 text-sm text-slate-100"
+              placeholder="Optional terms, comma-separated"
+              value={redactionTerms}
+              onChange={(e) => setRedactionTerms(e.target.value)}
+            />
+            <button
+              type="button"
+              onClick={runRedactionJob}
+              className="mt-2 rounded-md bg-amber-500 px-3 py-2 text-xs font-semibold text-slate-900"
+            >
+              Run Redaction Job
+            </button>
+            {redactionStatus ? <div className="mt-2 text-xs text-amber-200">{redactionStatus}</div> : null}
           </CardBody>
         </Card>
       </div>
