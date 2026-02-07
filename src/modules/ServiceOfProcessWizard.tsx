@@ -4,6 +4,7 @@ import { Card, CardBody, CardHeader, CardSubtitle, CardTitle } from "../componen
 import { SERVICE_OF_PROCESS_GUIDE } from "../data/serviceOfProcess";
 import { useState } from "react";
 import { readJson, writeJson } from "../utils/localStore";
+import { createServiceAttempt, listServiceAttempts } from "../services/caseApi";
 
 export default function ServiceOfProcessWizard() {
   const [useEService, setUseEService] = useState(false);
@@ -11,6 +12,37 @@ export default function ServiceOfProcessWizard() {
   const [uploadStatus, setUploadStatus] = useState("");
   const [defendantRegistered, setDefendantRegistered] = useState<"yes" | "no" | "unsure">("unsure");
   const [defendantType, setDefendantType] = useState("individual");
+  const [attempts, setAttempts] = useState<any[]>([]);
+  const [attemptForm, setAttemptForm] = useState({
+    attemptedAt: "",
+    address: "",
+    method: "",
+    outcome: "PENDING",
+    notes: ""
+  });
+  const [attemptStatus, setAttemptStatus] = useState("");
+
+  React.useEffect(() => {
+    listServiceAttempts()
+      .then((data: any) => setAttempts(Array.isArray(data?.attempts) ? data.attempts : []))
+      .catch(() => null);
+  }, []);
+
+  async function saveAttempt() {
+    if (!attemptForm.attemptedAt || !attemptForm.address || !attemptForm.method) {
+      setAttemptStatus("Date, address, and method are required.");
+      return;
+    }
+    try {
+      const result: any = await createServiceAttempt(attemptForm);
+      const next = [result.attempt, ...attempts].filter(Boolean);
+      setAttempts(next);
+      setAttemptStatus("Service attempt logged.");
+      setAttemptForm({ attemptedAt: "", address: "", method: "", outcome: "PENDING", notes: "" });
+    } catch (err: any) {
+      setAttemptStatus(err?.message || "Failed to log service attempt.");
+    }
+  }
 
   function handleProofUpload(file?: File | null) {
     if (!file) return;
@@ -29,6 +61,84 @@ export default function ServiceOfProcessWizard() {
   return (
     <Page title="Service of Process" subtitle="Rule-aligned guidance and checklist.">
       <div className="grid gap-6">
+        <Card>
+          <CardHeader>
+            <CardSubtitle>Tracker</CardSubtitle>
+            <CardTitle>Service Attempt Log</CardTitle>
+          </CardHeader>
+          <CardBody>
+            <div className="grid gap-3 md:grid-cols-2 text-sm text-slate-300">
+              <label className="space-y-1">
+                <span className="text-xs text-slate-400">Attempt Date</span>
+                <input
+                  className="w-full rounded-md border border-white/10 bg-white/5 px-3 py-2 text-sm text-slate-100"
+                  placeholder="YYYY-MM-DD"
+                  value={attemptForm.attemptedAt}
+                  onChange={(e) => setAttemptForm({ ...attemptForm, attemptedAt: e.target.value })}
+                />
+              </label>
+              <label className="space-y-1">
+                <span className="text-xs text-slate-400">Address</span>
+                <input
+                  className="w-full rounded-md border border-white/10 bg-white/5 px-3 py-2 text-sm text-slate-100"
+                  value={attemptForm.address}
+                  onChange={(e) => setAttemptForm({ ...attemptForm, address: e.target.value })}
+                />
+              </label>
+              <label className="space-y-1">
+                <span className="text-xs text-slate-400">Method</span>
+                <input
+                  className="w-full rounded-md border border-white/10 bg-white/5 px-3 py-2 text-sm text-slate-100"
+                  placeholder="Personal service, certified mail, etc."
+                  value={attemptForm.method}
+                  onChange={(e) => setAttemptForm({ ...attemptForm, method: e.target.value })}
+                />
+              </label>
+              <label className="space-y-1">
+                <span className="text-xs text-slate-400">Outcome</span>
+                <select
+                  className="w-full rounded-md border border-white/10 bg-white/5 px-3 py-2 text-sm text-slate-100"
+                  value={attemptForm.outcome}
+                  onChange={(e) => setAttemptForm({ ...attemptForm, outcome: e.target.value })}
+                >
+                  <option value="PENDING">Pending</option>
+                  <option value="SUCCESS">Success</option>
+                  <option value="FAILED">Failed</option>
+                </select>
+              </label>
+              <label className="space-y-1 md:col-span-2">
+                <span className="text-xs text-slate-400">Notes</span>
+                <textarea
+                  className="w-full rounded-md border border-white/10 bg-white/5 px-3 py-2 text-sm text-slate-100"
+                  rows={3}
+                  value={attemptForm.notes}
+                  onChange={(e) => setAttemptForm({ ...attemptForm, notes: e.target.value })}
+                />
+              </label>
+            </div>
+            <button
+              type="button"
+              onClick={saveAttempt}
+              className="mt-4 rounded-md bg-amber-500 px-3 py-2 text-xs font-semibold text-slate-900"
+            >
+              Log Service Attempt
+            </button>
+            {attemptStatus ? <div className="mt-2 text-xs text-amber-200">{attemptStatus}</div> : null}
+            <div className="mt-4 text-xs text-slate-400">
+              {attempts.length ? `Recent attempts: ${attempts.length}` : "No service attempts logged yet."}
+            </div>
+            {attempts.length ? (
+              <ul className="mt-2 space-y-2 text-xs text-slate-300">
+                {attempts.slice(0, 5).map((attempt) => (
+                  <li key={attempt.id} className="rounded-md border border-white/10 bg-white/5 p-2">
+                    {attempt.attemptedAt?.slice(0, 10)} • {attempt.method} • {attempt.outcome}
+                  </li>
+                ))}
+              </ul>
+            ) : null}
+          </CardBody>
+        </Card>
+
         <Card>
           <CardHeader>
             <CardSubtitle>Service Mode</CardSubtitle>

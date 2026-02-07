@@ -25,6 +25,7 @@ import {
   Monitor
 } from "lucide-react";
 import { APP_NAME, APP_DISCLAIMER } from "../config/branding";
+import { FEATURE_FLAGS } from "../config/featureFlags";
 import { readJson, writeJson } from "../utils/localStore";
 
 const MODE_KEY = "case_companion_mode_v1";
@@ -100,6 +101,28 @@ const advancedNavItems = [
   { to: "/settings", label: "Case Settings", icon: Settings }
 ];
 
+const PRO_SE_ADVANCED_ROUTES = new Set([
+  "/guided-start",
+  "/roadmap",
+  "/checklist",
+  "/timeline",
+  "/doc-pack",
+  "/mifile-reconnect",
+  "/fee-waiver",
+  "/filing-rejections",
+  "/filing",
+  "/service",
+  "/discovery",
+  "/motion-builder",
+  "/trial-prep",
+  "/rules",
+  "/rules-quick",
+  "/rules-index",
+  "/privacy-safety",
+  "/resources",
+  "/settings"
+]);
+
 export default function AppLayout() {
   const [advancedOpen, setAdvancedOpen] = useState<boolean>(() => readJson(MODE_KEY, { advanced: false }).advanced);
 
@@ -147,7 +170,10 @@ export default function AppLayout() {
 
           {advancedOpen ? (
             <nav className="mt-6 space-y-1">
-              {advancedNavItems.map((item) => (
+              {(FEATURE_FLAGS.showLegacyModules
+                ? advancedNavItems
+                : advancedNavItems.filter((item) => PRO_SE_ADVANCED_ROUTES.has(item.to))
+              ).map((item) => (
                 <NavLink
                   key={item.to}
                   to={item.to}

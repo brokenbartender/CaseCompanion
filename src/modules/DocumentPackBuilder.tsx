@@ -3,6 +3,8 @@ import Page from "../components/ui/Page";
 import { Card, CardBody, CardHeader, CardSubtitle, CardTitle } from "../components/ui/Card";
 import { readJson, writeJson } from "../utils/localStore";
 import { CaseProfile } from "../services/workflowEngine";
+import { api } from "../services/api";
+import { getWorkspaceId, getMatterId } from "../services/authStorage";
 
 const STORAGE_KEY = "case_companion_doc_pack_v1";
 const PROFILE_KEY = "case_companion_case_profile_v1";
@@ -75,6 +77,25 @@ export default function DocumentPackBuilder() {
     URL.revokeObjectURL(url);
   }
 
+  const [exportStatus, setExportStatus] = useState("");
+  const workspaceId = getWorkspaceId();
+  const matterId = getMatterId();
+  const exportDisabled = !workspaceId || !matterId;
+
+  async function downloadPacket(path: string, filename: string) {
+    try {
+      const url = await api.downloadBlobUrl(path);
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = filename;
+      a.click();
+      URL.revokeObjectURL(url);
+      setExportStatus("Packet downloaded.");
+    } catch (err: any) {
+      setExportStatus(err?.message || "Packet download failed.");
+    }
+  }
+
   return (
     <Page title="A-to-Z Document Pack" subtitle="Build your filing packet step-by-step.">
       <div className="grid gap-6 lg:grid-cols-3">
@@ -135,6 +156,53 @@ export default function DocumentPackBuilder() {
                 </li>
               ))}
             </ul>
+          </CardBody>
+        </Card>
+      </div>
+
+      <div className="mt-6 grid gap-6 lg:grid-cols-2">
+        <Card>
+          <CardHeader>
+            <CardSubtitle>Exports</CardSubtitle>
+            <CardTitle>Packet Downloads</CardTitle>
+          </CardHeader>
+          <CardBody>
+            <div className="grid gap-3 text-sm text-slate-300">
+              <button
+                type="button"
+                onClick={() => downloadPacket(`/workspaces/${workspaceId}/matters/${matterId}/filing-packet`, "filing_packet.zip")}
+                disabled={exportDisabled}
+                className={`rounded-md px-3 py-2 text-xs font-semibold ${
+                  exportDisabled ? "bg-slate-700 text-slate-400" : "bg-amber-500 text-slate-900"
+                }`}
+              >
+                Download Filing Packet
+              </button>
+              <button
+                type="button"
+                onClick={() => downloadPacket(`/workspaces/${workspaceId}/matters/${matterId}/service-packet`, "service_packet.zip")}
+                disabled={exportDisabled}
+                className={`rounded-md px-3 py-2 text-xs font-semibold ${
+                  exportDisabled ? "bg-slate-700 text-slate-400" : "border border-amber-400/60 text-amber-200"
+                }`}
+              >
+                Download Service Packet
+              </button>
+              <button
+                type="button"
+                onClick={() => downloadPacket(`/workspaces/${workspaceId}/matters/${matterId}/trial-binder`, "trial_binder.zip")}
+                disabled={exportDisabled}
+                className={`rounded-md px-3 py-2 text-xs font-semibold ${
+                  exportDisabled ? "bg-slate-700 text-slate-400" : "border border-amber-400/60 text-amber-200"
+                }`}
+              >
+                Download Trial Binder
+              </button>
+              {exportDisabled ? (
+                <div className="text-xs text-amber-200">Set workspace + matter in Case Settings to enable downloads.</div>
+              ) : null}
+              {exportStatus ? <div className="text-xs text-amber-200">{exportStatus}</div> : null}
+            </div>
           </CardBody>
         </Card>
       </div>
