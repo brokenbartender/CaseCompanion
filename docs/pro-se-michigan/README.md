@@ -17,6 +17,8 @@ Not a lawyer. Not legal advice. Procedural help + document organization only.
 - Evidence Vault + Exhibit Builder
 - PII Scan + MC97 protected list generator
 - Filing Packet export (complaint/summons placeholders + manifest)
+- Service Packet + Trial Binder exports
+- Service Attempt tracker + signature/PII gates
 
 ## Data-Driven Court Profiles
 Local rules are modeled as `CourtProfile` overrides rather than hard-coded assumptions. Configure them per court or judge as needed.
