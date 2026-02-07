@@ -42,6 +42,7 @@ import { attachReleaseCert, buildReleaseCertPayload, getReleaseCertMeta, verifyR
 import { getPublicKeyFingerprint, getPublicKeyPem, getSigningAlgorithm, signPayload, verifySignature } from './utils/signing.js';
 import AdmZip from 'adm-zip';
 import { generateAdmissibilityPackage, generateUnassailablePacket } from './services/packagingService.js';
+import { generateFilingPacket } from './services/filingPacketService.js';
 import { agentTaskQueue } from './agent/state/taskQueue.js';
 import { generateSalesWinningPDF } from './services/exportService.js';
 import { getClioSuggestions } from './services/clioConnector.js';
@@ -88,6 +89,8 @@ import { selfAuditService } from './services/SelfAuditService.js';
 import { sendIntakeWebhook } from './webhookSecurity.js';
 import { logAiRefusal } from './services/forensicLogger.js';
 import { verifyGrounding } from './services/HallucinationKiller.js';
+import { computeRuleDeadlines, syncProceduralDeadlines } from './services/proceduralRules.js';
+import { generateProtectedPiiList, scanMatterForPii } from './services/piiScanService.js';
 import {
   extractPrimaryDate,
   inferCustodianFromName,
@@ -130,6 +133,17 @@ const matterCreateSchema = z.object({
   jurisdiction: z.string().max(120).optional(),
   allowedUserIds: z.array(z.string().min(1)).optional(),
   ethicalWallEnabled: z.boolean().optional()
+});
+const caseProfileSchema = z.object({
+  jurisdictionId: z.string().min(1),
+  courtLevel: z.enum(['district', 'circuit', 'other']),
+  county: z.string().min(1),
+  filingDate: z.string().optional().nullable(),
+  serviceDate: z.string().optional().nullable(),
+  answerDate: z.string().optional().nullable(),
+  discoveryServedDate: z.string().optional().nullable(),
+  motionServedDate: z.string().optional().nullable(),
+  pretrialDate: z.string().optional().nullable()
 });
 const JWT_SECRET = process.env.JWT_SECRET;
 if (!JWT_SECRET) {
@@ -2063,6 +2077,49 @@ const requireWorkspaceSilent = async (req: any, res: any, next: any) => {
   next();
 };
 
+function toOptionalDate(value?: string | null) {
+  if (!value) return null;
+  const parsed = new Date(value);
+  return Number.isNaN(parsed.getTime()) ? null : parsed;
+}
+
+async function ensureCaseProfile(workspaceId: string, matterId: string, matterName: string) {
+  const existing = await prisma.case.findFirst({ where: { workspaceId, matterId } });
+  if (existing) return existing;
+  return prisma.case.create({
+    data: {
+      workspaceId,
+      matterId,
+      name: matterName,
+      jurisdictionId: "mi",
+      courtLevel: "district",
+      county: "Unknown"
+    }
+  });
+}
+
+async function enforcePiiGate(req: any, res: any, matterId: string, context: string) {
+  const findings = await scanMatterForPii(req.workspaceId, matterId);
+  if (!findings.length) return false;
+  const exhibitIds = Array.from(new Set(findings.map((finding) => finding.exhibitId)));
+  const exhibits = await prisma.exhibit.findMany({
+    where: { workspaceId: req.workspaceId, matterId, id: { in: exhibitIds } },
+    select: { id: true, redactionStatus: true }
+  });
+  const redactionMap = new Map(exhibits.map((exhibit) => [exhibit.id, exhibit.redactionStatus]));
+  const blockingFindings = findings.filter((finding) => redactionMap.get(finding.exhibitId) !== "APPLIED");
+  if (!blockingFindings.length) return false;
+  const piiList = await generateProtectedPiiList(blockingFindings);
+  res.status(422).json({
+    error: "PII_SCAN_REQUIRED",
+    message: "PII detected. Redaction required before export.",
+    context,
+    findings: blockingFindings.slice(0, 20),
+    mc97: piiList.json
+  });
+  return true;
+}
+
 app.get('/api/workspaces/:workspaceId/matters', authenticate as any, requireWorkspace as any, requireRole('viewer') as any, (async (req: any, res: any) => {
   const role = String(req.workspaceRole || '').toLowerCase();
   const includeDeleted = (role === 'admin' || role === 'owner') && String(req.query?.includeDeleted || '').toLowerCase() === 'true';
@@ -2134,6 +2191,82 @@ app.get('/api/workspaces/:workspaceId/matters/:matterId', authenticate as any, r
     }
   }
   res.json({ matter });
+}) as any);
+
+app.get('/api/workspaces/:workspaceId/matters/:matterId/case-profile', authenticate as any, requireWorkspace as any, requireRole('viewer') as any, requireMatterAccess('matterId') as any, (async (req: any, res: any) => {
+  const matterId = String(req.params.matterId || '').trim();
+  const matter = await findMatterByIdOrSlug(req.workspaceId, matterId, false);
+  if (!matter) return res.status(404).json({ error: 'Matter not found' });
+  const profile = await ensureCaseProfile(req.workspaceId, matter.id, matter.name);
+  res.json({ profile });
+}) as any);
+
+app.put('/api/workspaces/:workspaceId/matters/:matterId/case-profile', authenticate as any, requireWorkspace as any, requireRole('member') as any, requireMatterAccess('matterId') as any, (async (req: any, res: any) => {
+  const matterId = String(req.params.matterId || '').trim();
+  const matter = await findMatterByIdOrSlug(req.workspaceId, matterId, false);
+  if (!matter) return res.status(404).json({ error: 'Matter not found' });
+  const parsed = caseProfileSchema.safeParse(req.body || {});
+  if (!parsed.success) return res.status(400).json({ error: 'Invalid case profile payload' });
+  const data = parsed.data;
+  const profile = await prisma.case.upsert({
+    where: { workspaceId_matterId: { workspaceId: req.workspaceId, matterId: matter.id } },
+    update: {
+      name: matter.name,
+      jurisdictionId: data.jurisdictionId,
+      courtLevel: data.courtLevel,
+      county: data.county,
+      filingDate: toOptionalDate(data.filingDate),
+      serviceDate: toOptionalDate(data.serviceDate),
+      answerDate: toOptionalDate(data.answerDate),
+      discoveryServedDate: toOptionalDate(data.discoveryServedDate),
+      motionServedDate: toOptionalDate(data.motionServedDate),
+      pretrialDate: toOptionalDate(data.pretrialDate)
+    },
+    create: {
+      workspaceId: req.workspaceId,
+      matterId: matter.id,
+      name: matter.name,
+      jurisdictionId: data.jurisdictionId,
+      courtLevel: data.courtLevel,
+      county: data.county,
+      filingDate: toOptionalDate(data.filingDate),
+      serviceDate: toOptionalDate(data.serviceDate),
+      answerDate: toOptionalDate(data.answerDate),
+      discoveryServedDate: toOptionalDate(data.discoveryServedDate),
+      motionServedDate: toOptionalDate(data.motionServedDate),
+      pretrialDate: toOptionalDate(data.pretrialDate)
+    }
+  });
+  await logAuditEvent(req.workspaceId, req.userId, 'CASE_PROFILE_UPDATED', {
+    matterId: matter.id,
+    caseId: profile.id
+  }).catch(() => null);
+  res.json({ profile });
+}) as any);
+
+app.get('/api/workspaces/:workspaceId/matters/:matterId/procedural/deadlines', authenticate as any, requireWorkspace as any, requireRole('viewer') as any, requireMatterAccess('matterId') as any, (async (req: any, res: any) => {
+  const matterId = String(req.params.matterId || '').trim();
+  const matter = await findMatterByIdOrSlug(req.workspaceId, matterId, false);
+  if (!matter) return res.status(404).json({ error: 'Matter not found' });
+  const profile = await ensureCaseProfile(req.workspaceId, matter.id, matter.name);
+  const caseProfile = {
+    jurisdictionId: profile.jurisdictionId,
+    courtLevel: profile.courtLevel,
+    county: profile.county,
+    filingDate: profile.filingDate?.toISOString().slice(0, 10),
+    serviceDate: profile.serviceDate?.toISOString().slice(0, 10),
+    answerDate: profile.answerDate?.toISOString().slice(0, 10),
+    discoveryServedDate: profile.discoveryServedDate?.toISOString().slice(0, 10),
+    motionServedDate: profile.motionServedDate?.toISOString().slice(0, 10),
+    pretrialDate: profile.pretrialDate?.toISOString().slice(0, 10)
+  };
+  const { deadlines, alerts } = computeRuleDeadlines(caseProfile, [], [], null);
+  await syncProceduralDeadlines({
+    caseId: profile.id,
+    profile: caseProfile,
+    holidays: []
+  }).catch(() => null);
+  res.json({ profile: caseProfile, deadlines, alerts });
 }) as any);
 
 const ipAllowlistSchema = z.object({
@@ -2597,6 +2730,7 @@ app.post('/api/intake/upload', authenticate as any, requireWorkspace as any, req
     (async (req: any, res: any) => {
       try {
         const matterId = String(req.params.matterId);
+        if (await enforcePiiGate(req, res, matterId, 'PROOF_PACKET')) return;
         const result = await generateUnassailablePacket(req.workspaceId, matterId);
         try {
           await logAuditEvent(req.workspaceId, req.userId, 'EXPORT_PACKET', {
@@ -2647,6 +2781,32 @@ app.post('/api/intake/upload', authenticate as any, requireWorkspace as any, req
   );
 
   app.get(
+    '/api/workspaces/:workspaceId/matters/:matterId/filing-packet',
+    authenticate as any,
+    requireWorkspace as any,
+    requireRole('member') as any,
+    requireMatterAccess('matterId') as any,
+    (async (req: any, res: any) => {
+      try {
+        const matterId = String(req.params.matterId);
+        if (await enforcePiiGate(req, res, matterId, 'FILING_PACKET')) return;
+        const packet = await generateFilingPacket(req.workspaceId, matterId);
+        await logAuditEvent(req.workspaceId, req.userId, 'FILING_PACKET_EXPORT', {
+          matterId,
+          findings: packet.piiFindings.length
+        }).catch(() => null);
+        const filename = `matter_${matterId}_filing_packet.zip`;
+        res.setHeader('Cache-Control', 'no-store, no-cache, must-revalidate');
+        res.setHeader('Content-Type', 'application/zip');
+        res.setHeader('Content-Disposition', `attachment; filename="${filename}"`);
+        res.send(packet.buffer);
+      } catch (err: any) {
+        res.status(500).json({ error: 'Filing packet failed', detail: err?.message || String(err) });
+      }
+    }) as any
+  );
+
+  app.get(
     '/api/workspaces/:workspaceId/matters/:matterId/final-export',
     authenticate as any,
     requireWorkspace as any,
@@ -2655,6 +2815,7 @@ app.post('/api/intake/upload', authenticate as any, requireWorkspace as any, req
     (async (req: any, res: any) => {
       try {
         const matterId = String(req.params.matterId);
+        if (await enforcePiiGate(req, res, matterId, 'FINAL_EXPORT')) return;
         const packet = await generateUnassailablePacket(req.workspaceId, matterId);
         const pdf = await generateSalesWinningPDF(matterId);
         const affidavit = await buildAffidavitPdf(req.workspaceId);

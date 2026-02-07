@@ -62,11 +62,67 @@ enum RiskLevel {
   CRITICAL
 }
 
+enum RiskSeverity {
+  INFO
+  WARNING
+  CRITICAL
+  FATAL
+}
+
 enum ExhibitType {
   PDF
   VIDEO
   AUDIO
   WEB_CAPTURE
+}
+
+enum PartyType {
+  individual
+  business
+  state_entity
+}
+
+enum CaseCourtLevel {
+  district
+  circuit
+  other
+}
+
+enum ProceduralDeadlineStatus {
+  OPEN
+  COMPLETE
+  MISSED
+  WAIVED
+}
+
+enum CaseDocumentStatus {
+  DRAFT
+  FINAL
+}
+
+enum SignatureStatus {
+  MISSING
+  PENDING
+  SIGNED
+}
+
+enum ServiceOutcome {
+  SUCCESS
+  FAILED
+  PENDING
+}
+
+enum ExportPacketType {
+  FILING
+  SERVICE
+  TRIAL_BINDER
+  CUSTOM
+}
+
+enum ExportPacketStatus {
+  DRAFT
+  GENERATED
+  FAILED
 }
 
 enum IntegrationType {
@@ -262,6 +318,7 @@ model Workspace {
   documentVersions   DocumentVersion[]
   workProducts       WorkProduct[]
   redactionJobs      RedactionJob[]
+  cases       Case[]
 }
 
 model WorkspacePreference {
@@ -410,6 +467,7 @@ model Matter {
   people    Person[]
   workProducts WorkProduct[]
   redactionJobs RedactionJob[]
+  caseProfile Case?
   
   // Back-relations for Auto-Chronology
   chronologyRuns    ChronologyRun[]
@@ -484,6 +542,181 @@ model Exhibit {
   @@index([verificationStatus])
   @@index([batesNumber])
   @@unique([matterId, batesNumber])
+}
+
+model Case {
+  id          String   @id @default(cuid())
+  workspaceId String
+  matterId    String?
+  name        String
+  jurisdictionId String
+  courtLevel  CaseCourtLevel @default(district)
+  county      String
+  filingDate  DateTime?
+  serviceDate DateTime?
+  answerDate  DateTime?
+  discoveryServedDate DateTime?
+  motionServedDate DateTime?
+  pretrialDate DateTime?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  workspace Workspace @relation(fields: [workspaceId], references: [id], onDelete: Cascade)
+  matter    Matter?   @relation(fields: [matterId], references: [id], onDelete: SetNull)
+  parties   Party[]
+  courtProfile CourtProfile?
+  schedulingOrders SchedulingOrder[]
+  proceduralDeadlines ProceduralDeadline[]
+  caseDocuments CaseDocument[]
+  serviceAttempts ServiceAttempt[]
+  evidenceItems EvidenceItem[]
+  exportPackets ExportPacket[]
+  riskRules RiskRule[]
+
+  @@unique([workspaceId, matterId])
+  @@index([workspaceId])
+  @@index([matterId])
+}
+
+model Party {
+  id          String   @id @default(cuid())
+  caseId      String
+  role        String
+  name        String
+  type        PartyType
+  contactJson String?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  case Case @relation(fields: [caseId], references: [id], onDelete: Cascade)
+
+  @@index([caseId])
+}
+
+model CourtProfile {
+  id          String   @id @default(cuid())
+  caseId      String   @unique
+  courtName   String
+  judgeName   String?
+  localRuleOverridesJson String?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  case Case @relation(fields: [caseId], references: [id], onDelete: Cascade)
+}
+
+model SchedulingOrder {
+  id          String   @id @default(cuid())
+  caseId      String
+  orderDate   DateTime
+  overridesJson String
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  case Case @relation(fields: [caseId], references: [id], onDelete: Cascade)
+
+  @@index([caseId])
+}
+
+model ProceduralDeadline {
+  id          String   @id @default(cuid())
+  caseId      String
+  ruleId      String
+  label       String
+  dueDate     DateTime
+  triggerDate DateTime?
+  status      ProceduralDeadlineStatus @default(OPEN)
+  severity    RiskSeverity @default(INFO)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  case Case @relation(fields: [caseId], references: [id], onDelete: Cascade)
+
+  @@unique([caseId, ruleId])
+  @@index([caseId])
+  @@index([dueDate])
+}
+
+model CaseDocument {
+  id          String   @id @default(cuid())
+  caseId      String
+  title       String
+  status      CaseDocumentStatus @default(DRAFT)
+  filed       Boolean  @default(false)
+  served      Boolean  @default(false)
+  signatureStatus SignatureStatus @default(MISSING)
+  storageKey  String?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  case Case @relation(fields: [caseId], references: [id], onDelete: Cascade)
+
+  @@index([caseId])
+}
+
+model ServiceAttempt {
+  id          String   @id @default(cuid())
+  caseId      String
+  attemptedAt DateTime
+  address     String
+  method      String
+  outcome     ServiceOutcome @default(PENDING)
+  notes       String?
+  proofStorageKey String?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  case Case @relation(fields: [caseId], references: [id], onDelete: Cascade)
+
+  @@index([caseId])
+}
+
+model EvidenceItem {
+  id          String   @id @default(cuid())
+  caseId      String
+  exhibitId   String?
+  hash        String
+  metadataJson String?
+  redactionStatus RedactionStatus @default(NONE)
+  anchorRefsJson String?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  case Case @relation(fields: [caseId], references: [id], onDelete: Cascade)
+  exhibit Exhibit? @relation(fields: [exhibitId], references: [id], onDelete: SetNull)
+
+  @@index([caseId])
+  @@index([exhibitId])
+}
+
+model ExportPacket {
+  id          String   @id @default(cuid())
+  caseId      String
+  type        ExportPacketType
+  status      ExportPacketStatus @default(DRAFT)
+  manifestJson String?
+  storageKey  String?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  case Case @relation(fields: [caseId], references: [id], onDelete: Cascade)
+
+  @@index([caseId])
+}
+
+model RiskRule {
+  id          String   @id @default(cuid())
+  caseId      String
+  ruleId      String
+  severity    RiskSeverity
+  message     String
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  case Case @relation(fields: [caseId], references: [id], onDelete: Cascade)
+
+  @@index([caseId])
+  @@index([severity])
 }
 
 model DocumentVersion {

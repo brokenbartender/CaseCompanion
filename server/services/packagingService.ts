@@ -647,6 +647,13 @@ export async function generateUnassailablePacket(
   };
 
   recordFile(
+    'NOTICE_NOT_LEGAL_ADVICE.md',
+    Buffer.from(
+      "# Notice\n\nNot a lawyer. Not legal advice. Procedural help + document organization only.\n"
+    )
+  );
+
+  recordFile(
     'forensic_metadata/integrity_mode.json',
     Buffer.from(JSON.stringify({
       mode: 'hash-only',
