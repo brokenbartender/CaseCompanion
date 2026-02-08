@@ -175,6 +175,8 @@ export default function CaseFlowHub() {
 
   const completedSteps = steps.filter((step) => stepStatuses[step.key]?.done).length;
   const progress = Math.round((completedSteps / steps.length) * 100);
+  const nextStep = steps.find((step) => stepStatuses[step.key]?.status === "Not Started")
+    || steps.find((step) => stepStatuses[step.key]?.status === "In Progress");
 
   const missingProfileFields = [
     !profile.filingDate ? "Filing date" : null,
@@ -218,6 +220,21 @@ export default function CaseFlowHub() {
         </Button>
       }
     >
+      <div className="mb-6 rounded-lg border border-emerald-400/20 bg-emerald-500/5 p-4">
+        <div className="text-[10px] uppercase tracking-[0.3em] text-emerald-300">Start Here</div>
+        <div className="mt-2 text-sm text-slate-200">
+          Follow the gated steps below to keep pleadings, discovery, and trial prep in order.
+        </div>
+        <div className="mt-3 flex flex-wrap gap-2">
+          <Button variant="secondary" size="sm" onClick={() => navigate("/case-status")}>
+            Open Case Status
+          </Button>
+          <Button variant="secondary" size="sm" onClick={() => navigate("/evidence")}>
+            Open Evidence Vault
+          </Button>
+        </div>
+      </div>
+
       <div className="grid gap-4 lg:grid-cols-2">
         <Card>
           <CardHeader>
@@ -235,25 +252,29 @@ export default function CaseFlowHub() {
 
         <Card>
           <CardHeader>
-            <CardSubtitle>Progress</CardSubtitle>
-            <CardTitle>{progress}% Complete</CardTitle>
+            <CardSubtitle>Next Required Action</CardSubtitle>
+            <CardTitle>{nextStep ? nextStep.label : "All Steps Complete"}</CardTitle>
           </CardHeader>
           <CardBody className="space-y-3 text-sm text-slate-200">
+            <div className="text-xs text-slate-400">
+              Completed {completedSteps} of {steps.length} stages. Keep entries evidence-anchored.
+            </div>
             <div className="rounded-full border border-white/10 bg-white/5">
               <div
                 className="h-2 rounded-full bg-emerald-400"
                 style={{ width: `${progress}%` }}
               />
             </div>
-            <div className="text-xs text-slate-400">
-              Completed {completedSteps} of {steps.length} stages. Blocked stages require earlier steps to be complete.
-            </div>
             <div className="flex flex-wrap gap-2">
-              <Button variant="secondary" size="sm" onClick={() => navigate("/case-status")}>
-                Open Case Status
+              <Button
+                variant="primary"
+                size="sm"
+                onClick={() => navigate(nextStep ? nextStep.route : "/doc-pack")}
+              >
+                {nextStep ? "Open Next Step" : "Open Lawyer Packet"}
               </Button>
               <Button variant="secondary" size="sm" onClick={() => navigate("/doc-pack")}>
-                Open Packet Builder
+                Lawyer-Ready Packet
               </Button>
             </div>
           </CardBody>
