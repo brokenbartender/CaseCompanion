@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import React, { useState } from "react";
 import ModuleLayout from "../components/ui/ModuleLayout";
 import Button from "../components/ui/Button";
 import { Card, CardBody, CardHeader, CardTitle } from "../components/ui/Card";
@@ -106,7 +105,7 @@ export default function JurisdictionCompare() {
             </div>
             <div className="rounded-lg border border-slate-800 bg-slate-950/50 p-3">
               <div className="text-[10px] uppercase tracking-[0.3em] text-slate-500">Statute Hierarchy</div>
-              <div className="mt-2 text-slate-200">Federal Code > Title 28 > Chapter 13 > Section 2072</div>
+              <div className="mt-2 text-slate-200">Federal Code &gt; Title 28 &gt; Chapter 13 &gt; Section 2072</div>
             </div>
             <div className="rounded-lg border border-slate-800 bg-slate-950/50 p-3">
               <div className="text-[10px] uppercase tracking-[0.3em] text-slate-500">Normalized View</div>

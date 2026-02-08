@@ -1,6 +1,6 @@
 import React, { useEffect, useMemo, useState } from "react";
 import { Brain, X, Zap } from "lucide-react";
-import ThoughtTrace from "./ThoughtTrace";
+import ThoughtTrace, { type ThoughtTraceStep } from "./ThoughtTrace";
 import { useIntegrityAlerts } from "../../hooks/useIntegrityAlerts";
 import { useLiveIntegrity } from "../../hooks/useLiveIntegrity";
 import { getAuthToken, getWorkspaceId } from "../../services/authStorage";
@@ -13,7 +13,7 @@ export default function AigisFloatingBubble() {
   const [prompt, setPrompt] = useState("");
   const active = false;
   const narration = "";
-  const trace = [];
+  const trace: ThoughtTraceStep[] = [];
   const { alert, clear } = useIntegrityAlerts();
   const breachActive = Boolean(alert);
   const location = useLocation();
@@ -59,8 +59,9 @@ export default function AigisFloatingBubble() {
     const onLog = (event: Event) => {
       if (!diagnosticMode) return;
       const detail = (event as CustomEvent).detail as { line?: string } | undefined;
-      if (!detail?.line) return;
-      setDiagnosticLog((prev) => [detail.line, ...prev].slice(0, 6));
+      const line = detail?.line;
+      if (!line) return;
+      setDiagnosticLog((prev) => [line, ...prev].slice(0, 6));
     };
     window.addEventListener("lexipro:diag-log", onLog as EventListener);
     return () => window.removeEventListener("lexipro:diag-log", onLog as EventListener);

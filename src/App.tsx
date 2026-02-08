@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import AppLayout from "./components/AppLayout";
 
 const Dashboard = React.lazy(() => import("./modules/Dashboard"));
+const CaseFlowHub = React.lazy(() => import("./modules/CaseFlowHub"));
 const CaseStatusDashboard = React.lazy(() => import("./modules/CaseStatusDashboard"));
 const ProceduralRoadmap = React.lazy(() => import("./modules/ProceduralRoadmap"));
 const ProceduralChecklist = React.lazy(() => import("./modules/ProceduralChecklist"));
@@ -11,6 +12,7 @@ const EvidenceVault = React.lazy(() => import("./modules/EvidenceVault"));
 const RulesLibrary = React.lazy(() => import("./modules/RulesLibrary"));
 const RulesIndex = React.lazy(() => import("./modules/RulesIndex"));
 const ServiceOfProcessWizard = React.lazy(() => import("./modules/ServiceOfProcessWizard"));
+const AnswerDefaultWorkflow = React.lazy(() => import("./modules/AnswerDefaultWorkflow"));
 const SummaryDispositionGuide = React.lazy(() => import("./modules/SummaryDispositionGuide"));
 const FilingChecklist = React.lazy(() => import("./modules/FilingChecklist"));
 const CaseSettingsView = React.lazy(() => import("./modules/CaseSettings"));
@@ -71,6 +73,7 @@ const TrialExhibitOrder = React.lazy(() => import("./modules/TrialExhibitOrder")
 const ClientPrintPack = React.lazy(() => import("./modules/ClientPrintPack"));
 const RulesQuickReference = React.lazy(() => import("./modules/RulesQuickReference"));
 const ClaimTreeBuilder = React.lazy(() => import("./modules/ClaimTreeBuilder"));
+const JudgmentCenter = React.lazy(() => import("./modules/JudgmentCenter"));
 
 function App() {
   return (
@@ -86,7 +89,8 @@ function App() {
       >
         <Routes>
           <Route path="/" element={<AppLayout />}>
-            <Route index element={<GuidedStartWizard />} />
+            <Route index element={<CaseFlowHub />} />
+            <Route path="case-flow" element={<CaseFlowHub />} />
             <Route path="dashboard" element={<Dashboard />} />
             <Route path="case-status" element={<CaseStatusDashboard />} />
             <Route path="roadmap" element={<ProceduralRoadmap />} />
@@ -100,6 +104,7 @@ function App() {
             <Route path="default-mediation" element={<DefaultMediation />} />
             <Route path="motion-builder" element={<MotionBuilder />} />
             <Route path="trial-prep" element={<TrialPrep />} />
+            <Route path="judgment" element={<JudgmentCenter />} />
             <Route path="privacy-safety" element={<PrivacySafety />} />
             <Route path="resources" element={<ResourcesHub />} />
             <Route path="guided-start" element={<GuidedStartWizard />} />
@@ -140,6 +145,7 @@ function App() {
             <Route path="rules" element={<RulesLibrary />} />
             <Route path="rules-index" element={<RulesIndex />} />
             <Route path="service" element={<ServiceOfProcessWizard />} />
+            <Route path="answer-default" element={<AnswerDefaultWorkflow />} />
             <Route path="summary-disposition" element={<SummaryDispositionGuide />} />
             <Route path="filing" element={<FilingChecklist />} />
             <Route path="settings" element={<CaseSettingsView />} />

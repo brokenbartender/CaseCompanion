@@ -1,7 +1,7 @@
-import { api } from "./api";
-import { getCsrfHeader } from "./csrf";
-import { getWorkspaceId, refreshSession, setAuthToken, setWorkspaceId } from "./authStorage";
-import { getApiBase } from "./apiBase";
+import { api } from "../services/api";
+import { getCsrfHeader } from "../services/csrf";
+import { getWorkspaceId, refreshSession, setAuthToken, setWorkspaceId } from "../services/authStorage";
+import { getApiBase } from "../services/apiBase";
 import { dispatchDemoAction } from "./demoActions";
 
 export type AutoDemoStage = {

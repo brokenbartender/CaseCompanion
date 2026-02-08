@@ -31,7 +31,7 @@ if (shouldSpawnWorker) {
 } else {
   pdfjs.GlobalWorkerOptions.workerPort = null as any;
 }
-pdfjs.GlobalWorkerOptions.standardFontDataUrl = new URL(
+(pdfjs.GlobalWorkerOptions as any).standardFontDataUrl = new URL(
   /* @vite-ignore */ "pdfjs-dist/standard_fonts/",
   import.meta.url,
 ).toString();
@@ -83,7 +83,7 @@ type Props = {
   onScaleChange?: (next: number) => void;
   className?: string;
   verificationStatus?: "PENDING" | "CERTIFIED" | "REVOKED";
-  exhibitType?: "PDF" | "VIDEO" | "AUDIO";
+  exhibitType?: "PDF" | "VIDEO" | "AUDIO" | "IMAGE" | "WEB_CAPTURE";
   transcriptSegments?: Array<{ startTime: number; endTime: number; text: string; speaker?: string | null }>;
   mediaStartTime?: number | null;
   exhibitId?: string | null;
@@ -144,6 +144,12 @@ export default function ExhibitViewer({
   const [pageWidth, setPageWidth] = useState<number | null>(null);
   const [mediaFlash, setMediaFlash] = useState(false);
   const mediaRef = useRef<HTMLMediaElement | null>(null);
+  const setVideoRef = (node: HTMLVideoElement | null) => {
+    mediaRef.current = node;
+  };
+  const setAudioRef = (node: HTMLAudioElement | null) => {
+    mediaRef.current = node;
+  };
   const imageRef = useRef<HTMLImageElement | null>(null);
   const mediaFlashTimeoutRef = useRef<number | null>(null);
   const [mediaRetryCount, setMediaRetryCount] = useState(0);
@@ -1191,7 +1197,7 @@ export default function ExhibitViewer({
               {mediaUrl ? (
                 exhibitType === "VIDEO" ? (
                   <video
-                    ref={mediaRef}
+                    ref={setVideoRef}
                     className="w-full rounded-lg"
                     controls
                     src={mediaUrl}
@@ -1205,7 +1211,7 @@ export default function ExhibitViewer({
                   />
                 ) : (
                   <audio
-                    ref={mediaRef}
+                    ref={setAudioRef}
                     className="w-full"
                     controls
                     src={mediaUrl}
@@ -1298,7 +1304,13 @@ export default function ExhibitViewer({
                     >
             <div className="flex flex-col gap-6">
               {pages.map((pageNumber) => (
-                <div key={pageNumber} ref={(n) => (pageRefs.current[pageNumber] = n)} className="w-full flex justify-center">
+                <div
+                  key={pageNumber}
+                  ref={(n) => {
+                    pageRefs.current[pageNumber] = n;
+                  }}
+                  className="w-full flex justify-center"
+                >
                   <div
                     className="relative"
                     style={{

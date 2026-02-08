@@ -58,7 +58,6 @@ function extractZip(zipPath) {
   if (!fs.existsSync(admPath)) {
     throw new Error("adm-zip not found; run npm ci --prefix server");
   }
-  // eslint-disable-next-line @typescript-eslint/no-var-requires
   const AdmZip = require(admPath);
   const tmpDir = fs.mkdtempSync(path.join(os.tmpdir(), "lexipro-proof-"));
   const zip = new AdmZip(zipPath);

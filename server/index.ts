@@ -106,7 +106,6 @@ import {
 } from './utils/indexHelpers.js';
 
 declare global {
-  // eslint-disable-next-line no-var
   var __lexiproDevContext: { userId: string; workspaceId: string } | undefined;
 }
 

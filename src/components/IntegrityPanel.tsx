@@ -19,7 +19,7 @@ type IntegrityPanelProps = {
 const statusTone = (status: IntegrityPanelProps["status"]) => {
   if (status === "VERIFIED") return "green";
   if (status === "REVOKED") return "red";
-  return "yellow";
+  return "amber";
 };
 
 export default function IntegrityPanel({

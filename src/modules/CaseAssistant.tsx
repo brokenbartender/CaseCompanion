@@ -87,7 +87,7 @@ export default function CaseAssistant() {
       sentences: direct.sentences,
       citations: response.citations,
       followUps: response.suggestedFollowUps,
-      audit: "audit" in response ? response.audit : undefined
+      audit: "audit" in response ? (response.audit as VerificationResult) : undefined
     };
 
     response.citations?.forEach((cite) => {

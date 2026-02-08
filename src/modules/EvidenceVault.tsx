@@ -6,9 +6,20 @@ import { MICHIGAN_OBJECTION_CARDS } from "../data/michiganEvidenceObjections";
 import { readJson, writeJson } from "../utils/localStore";
 import { uploadExhibit } from "../services/apiClient";
 import { useLocation } from "react-router-dom";
+import JSZip from "jszip";
 
 const META_KEY = "case_companion_evidence_meta_v1";
 const SETTINGS_KEY = "case_companion_settings_v1";
+const PACKET_LAYOUT_KEY = "case_companion_packet_layout_v1";
+const PACKET_OUTPUTS_KEY = "case_companion_packet_outputs_v1";
+const PACKET_LAYOUT_OVERRIDE_KEY = "case_companion_packet_layout_override_v1";
+const PREFILE_AUDIT_KEY = "case_companion_prefile_audit_v1";
+const TIMELINE_KEY = "case_companion_timeline_v1";
+const DAMAGES_KEY = "case_companion_damages_v1";
+const MEDICAL_KEY = "case_companion_medical_items_v1";
+const WAGE_LOSS_KEY = "case_companion_wage_loss_v1";
+const WAGE_THEFT_KEY = "case_companion_wage_theft_v1";
+const WC_BENEFITS_KEY = "case_companion_wc_benefits_v1";
 
 type EvidenceMeta = { tags: string[]; status: "new" | "reviewed" | "linked" };
 
@@ -18,6 +29,16 @@ type CaseSettings = {
   apiBase: string;
   workspaceId: string;
   authToken: string;
+};
+
+const PACKET_SECTION_KEYWORDS: Record<string, string[]> = {
+  incident: ["incident", "assault", "police", "report", "witness", "statement"],
+  medical: ["medical", "er", "hospital", "trinity", "injury", "bill", "diagnosis"],
+  negligence: ["negligence", "employer", "safety", "miosha", "protocol", "training"],
+  retaliation: ["retaliation", "termination", "wage complaint", "mdcr", "discrimination"],
+  "wage-theft": ["wage", "pay", "payroll", "stub", "hours", "salary", "uia"],
+  "workers-comp": ["workers", "comp", "wc", "compensation", "mediation"],
+  misconduct: ["threat", "surveillance", "hostile", "misconduct", "mlcc"]
 };
 
 function defaultMeta(): EvidenceMeta {
@@ -36,6 +57,73 @@ export default function EvidenceVault() {
   const [statusLookupId, setStatusLookupId] = useState("");
   const [statusResult, setStatusResult] = useState<string>("");
   const settings = readJson<CaseSettings>(SETTINGS_KEY, { apiBase: "", workspaceId: "", authToken: "" });
+  const packetLayout = readJson<Record<string, boolean>>(PACKET_LAYOUT_KEY, {});
+  const packetLayoutOverrides = readJson<Record<string, boolean>>(PACKET_LAYOUT_OVERRIDE_KEY, {});
+  const packetOutputs = readJson<Record<string, boolean>>(PACKET_OUTPUTS_KEY, {});
+  const preFileAudit = readJson<Record<string, boolean>>(PREFILE_AUDIT_KEY, {});
+  const timeline = readJson<any[]>(TIMELINE_KEY, []);
+  const damages = readJson<any[]>(DAMAGES_KEY, []);
+  const medicalItems = readJson<any[]>(MEDICAL_KEY, []);
+  const wageLoss = readJson<any>(WAGE_LOSS_KEY, {});
+  const wageTheft = readJson<any>(WAGE_THEFT_KEY, {});
+  const wcBenefits = readJson<any>(WC_BENEFITS_KEY, {});
+
+  function autoCompletePacketLayoutWith(metaState: MetaState) {
+    const existing = readJson<Record<string, boolean>>(PACKET_LAYOUT_KEY, {});
+    const overrides = readJson<Record<string, boolean>>(PACKET_LAYOUT_OVERRIDE_KEY, {});
+    const next: Record<string, boolean> = { ...existing };
+    for (const [sectionId, keywords] of Object.entries(PACKET_SECTION_KEYWORDS)) {
+      if (typeof overrides[sectionId] === "boolean") {
+        next[sectionId] = overrides[sectionId];
+        continue;
+      }
+      const matched = combinedIndex.some((item) => {
+        const metaTags = (metaState[item.path]?.tags || []).map((tag) => tag.toLowerCase());
+        const status = metaState[item.path]?.status || "";
+        if (status === "linked") return true;
+        const haystack = [
+          item.name,
+          item.path,
+          item.category,
+          ...metaTags
+        ]
+          .filter(Boolean)
+          .join(" ")
+          .toLowerCase();
+        return keywords.some((keyword) => haystack.includes(keyword));
+      });
+      if (matched) next[sectionId] = true;
+    }
+    writeJson(PACKET_LAYOUT_KEY, next);
+  }
+
+  function autoCompletePacketOutputs() {
+    const existing = readJson<Record<string, boolean>>(PACKET_OUTPUTS_KEY, {});
+    const next: Record<string, boolean> = { ...existing };
+    const hasMasterTimeline = timeline.some((event: any) => event.track === "master");
+    const hasRetaliation = timeline.some((event: any) => event.track === "retaliation");
+    const hasTermination = timeline.some((event: any) => event.track === "termination");
+    const hasDamages = damages.length > 0;
+    const hasMedical = medicalItems.length > 0;
+    const hasWageLoss = Number(wageLoss?.aww) > 0 && Number(wageLoss?.weeks) > 0;
+    const hasWageTheft = Number(wageTheft?.unpaidHours) > 0 || Number(wageTheft?.missingPayPeriods) > 0;
+    const hasWC = Number(wcBenefits?.rate) > 0 && Number(wcBenefits?.weeks) > 0;
+
+    if (combinedIndex.length) {
+      next["evidence-index"] = true;
+      next["case-summary"] = true;
+      next["key-facts"] = true;
+    }
+    if (hasMasterTimeline) next["master-timeline"] = true;
+    if (hasRetaliation) next["retaliation-timeline"] = true;
+    if (hasTermination) next["termination-summary"] = true;
+    if (hasDamages || hasWageLoss || hasWageTheft || hasWC) next["damages-summary"] = true;
+    if (hasWageLoss || hasWageTheft || hasWC) next["wage-loss-summary"] = true;
+    if (hasMedical) next["medical-summary"] = true;
+    if (hasWC) next["wc-summary"] = true;
+
+    writeJson(PACKET_OUTPUTS_KEY, next);
+  }
 
   function updateMeta(path: string, next: Partial<EvidenceMeta>) {
     setMeta((prev) => {
@@ -43,6 +131,8 @@ export default function EvidenceVault() {
       const updated = { ...current, ...next };
       const merged = { ...prev, [path]: updated };
       writeJson(META_KEY, merged);
+      autoCompletePacketLayoutWith(merged);
+      autoCompletePacketOutputs();
       return merged;
     });
   }
@@ -95,7 +185,20 @@ export default function EvidenceVault() {
   }
 
   function exportPacket() {
-    const payload = { index: combinedIndex, meta };
+    const payload = {
+      generatedAt: new Date().toISOString(),
+      index: combinedIndex,
+      meta,
+      packetLayout,
+      packetOutputs,
+      preFileAudit,
+      timeline,
+      damages,
+      medicalItems,
+      wageLoss,
+      wageTheft,
+      wcBenefits
+    };
     const blob = new Blob([JSON.stringify(payload, null, 2)], { type: "application/json" });
     const url = URL.createObjectURL(blob);
     const a = document.createElement("a");
@@ -123,6 +226,108 @@ export default function EvidenceVault() {
     const a = document.createElement("a");
     a.href = url;
     a.download = "case_companion_exhibit_map.txt";
+    a.click();
+    URL.revokeObjectURL(url);
+  }
+
+  function autoCompletePacketLayout() {
+    autoCompletePacketLayoutWith(meta);
+    autoCompletePacketOutputs();
+  }
+
+  function setPacketLayoutOverride(sectionId: string, value: boolean) {
+    const next = { ...packetLayoutOverrides, [sectionId]: value };
+    writeJson(PACKET_LAYOUT_OVERRIDE_KEY, next);
+    autoCompletePacketLayoutWith(meta);
+  }
+
+  function clearPacketLayoutOverrides() {
+    writeJson(PACKET_LAYOUT_OVERRIDE_KEY, {});
+    autoCompletePacketLayoutWith(meta);
+  }
+
+  function buildTimelineText(track: "master" | "retaliation" | "termination") {
+    const rows = timeline
+      .filter((event: any) => event.track === track)
+      .sort((a: any, b: any) => String(a.date || "").localeCompare(String(b.date || "")));
+    const lines = [
+      `${track.toUpperCase()} TIMELINE`,
+      "",
+      ...rows.map((event: any) => `${event.date || "TBD"} - ${event.title}${event.note ? ` :: ${event.note}` : ""}`)
+    ];
+    return lines.join("\n");
+  }
+
+  function buildDamagesSummaryText() {
+    const total = damages.reduce((sum, entry) => sum + (Number(entry.amount) || 0), 0);
+    const wageLossTotal = (Number(wageLoss?.aww) || 0) * (Number(wageLoss?.weeks) || 0);
+    const wageTheftTotal = (() => {
+      const hourlyRate = Number(wageTheft?.hourlyRate) || 0;
+      const unpaidHours = Number(wageTheft?.unpaidHours) || 0;
+      const salaryPerPeriod = Number(wageTheft?.salaryPerPeriod) || 0;
+      const missingPayPeriods = Number(wageTheft?.missingPayPeriods) || 0;
+      const deductions = Number(wageTheft?.deductions) || 0;
+      const base = hourlyRate * unpaidHours + salaryPerPeriod * missingPayPeriods + deductions;
+      return wageTheft?.liquidated ? base * 2 : base;
+    })();
+    const wcBenefitsTotal = (Number(wcBenefits?.rate) || 0) * (Number(wcBenefits?.weeks) || 0);
+    const lines = [
+      "DAMAGES SUMMARY",
+      "",
+      `Total damages ledger: $${total.toFixed(2)}`,
+      `Wage loss (AWW): $${wageLossTotal.toFixed(2)}`,
+      `Wage theft: $${wageTheftTotal.toFixed(2)}`,
+      `Workers' comp benefits: $${wcBenefitsTotal.toFixed(2)}`,
+      "",
+      "Entries:",
+      ...damages.map((entry: any) => `- ${entry.category}: ${entry.description} ($${Number(entry.amount || 0).toFixed(2)})`)
+    ];
+    return lines.join("\n");
+  }
+
+  function buildPacketReadinessText() {
+    const layoutKeys = Object.keys(packetLayout);
+    const outputKeys = Object.keys(packetOutputs);
+    const auditKeys = Object.keys(preFileAudit);
+    const layoutDone = layoutKeys.filter((key) => packetLayout[key]).length;
+    const outputDone = outputKeys.filter((key) => packetOutputs[key]).length;
+    const auditDone = auditKeys.filter((key) => preFileAudit[key]).length;
+    return [
+      "PACKET READINESS REPORT",
+      "",
+      `Layout completion: ${layoutDone}/${layoutKeys.length || 0}`,
+      `Output completion: ${outputDone}/${outputKeys.length || 0}`,
+      `Pre-file audit completion: ${auditDone}/${auditKeys.length || 0}`
+    ].join("\n");
+  }
+
+  async function exportPacketZip() {
+    const payload = {
+      generatedAt: new Date().toISOString(),
+      index: combinedIndex,
+      meta,
+      packetLayout,
+      packetOutputs,
+      preFileAudit,
+      timeline,
+      damages,
+      medicalItems,
+      wageLoss,
+      wageTheft,
+      wcBenefits
+    };
+    const zip = new JSZip();
+    zip.file("evidence_packet.json", JSON.stringify(payload, null, 2));
+    zip.file("packet_readiness.txt", buildPacketReadinessText());
+    zip.file("timeline_master.txt", buildTimelineText("master"));
+    zip.file("timeline_retaliation.txt", buildTimelineText("retaliation"));
+    zip.file("timeline_termination.txt", buildTimelineText("termination"));
+    zip.file("damages_summary.txt", buildDamagesSummaryText());
+    const blob = await zip.generateAsync({ type: "blob" });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = "evidence_packet.zip";
     a.click();
     URL.revokeObjectURL(url);
   }
@@ -240,13 +445,61 @@ export default function EvidenceVault() {
               </button>
               <button
                 type="button"
+                onClick={exportPacketZip}
+                className="rounded-md bg-emerald-500 px-3 py-2 text-sm font-semibold text-slate-900"
+              >
+                Export Evidence Packet ZIP
+              </button>
+              <button
+                type="button"
+                onClick={autoCompletePacketLayout}
+                className="rounded-md border border-emerald-400/60 px-3 py-2 text-sm font-semibold text-emerald-200"
+              >
+                Auto-Complete Packet Layout
+              </button>
+              <button
+                type="button"
                 onClick={exportExhibitMap}
                 className="rounded-md border border-amber-400/60 px-3 py-2 text-sm font-semibold text-amber-200"
               >
                 Export Exhibit Map
               </button>
+              <button
+                type="button"
+                onClick={clearPacketLayoutOverrides}
+                className="rounded-md border border-slate-500/60 px-3 py-2 text-sm font-semibold text-slate-300"
+              >
+                Clear Layout Overrides
+              </button>
             </div>
             <div className="mt-2 text-xs text-slate-500">Exports local evidence index + tags/status.</div>
+          </CardBody>
+        </Card>
+
+        <Card>
+          <CardHeader>
+            <CardSubtitle>Packet Layout</CardSubtitle>
+            <CardTitle>Manual Overrides</CardTitle>
+          </CardHeader>
+          <CardBody>
+            <div className="text-xs text-slate-400 mb-3">
+              Overrides persist and will supersede auto-complete for the selected section.
+            </div>
+            <div className="space-y-2 text-sm text-slate-300">
+              {Object.entries(PACKET_SECTION_KEYWORDS).map(([sectionId]) => (
+                <label key={sectionId} className="flex items-start gap-3">
+                  <input
+                    type="checkbox"
+                    className="mt-1 h-4 w-4 accent-emerald-400"
+                    checked={Boolean(packetLayoutOverrides[sectionId])}
+                    onChange={(e) => setPacketLayoutOverride(sectionId, e.target.checked)}
+                  />
+                  <span className={packetLayoutOverrides[sectionId] ? "text-slate-300" : "text-slate-500"}>
+                    {sectionId.replace(/-/g, " ")}
+                  </span>
+                </label>
+              ))}
+            </div>
           </CardBody>
         </Card>
 

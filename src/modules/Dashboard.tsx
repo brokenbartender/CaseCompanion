@@ -34,7 +34,7 @@ function computeProgress(state: ChecklistState) {
 }
 
 export default function Dashboard() {
-  const checklistState = readJson(CHECKLIST_KEY, {});
+  const checklistState = readJson<Record<string, Record<string, boolean>>>(CHECKLIST_KEY, {});
   const progress = computeProgress(checklistState);
   const focusIndex = Math.max(
     0,

@@ -60,7 +60,7 @@ export default function FilingFlowWizard() {
   function saveCourt(next: string) {
     setCourt(next);
     writeJson(SETTINGS_KEY, { ...settings, court: next });
-    const level = next.includes("Circuit") ? "circuit" : "district";
+    const level: CaseProfile["courtLevel"] = next.includes("Circuit") ? "circuit" : "district";
     const updated = { ...profile, courtLevel: level };
     setProfile(updated);
     writeJson(PROFILE_KEY, updated);

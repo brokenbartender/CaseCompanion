@@ -124,7 +124,6 @@ export default function ExhibitDetail() {
 
   useEffect(() => {
     if (exhibitId) loadExhibit();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (

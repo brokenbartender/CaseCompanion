@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React, { useMemo, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import Page from "../components/ui/Page";
 import { dashboardWidgetsStore, DashboardWidget } from "../services/dashboardWidgets";
+import { readJson } from "../utils/localStore";
 import {
   MessageSquare,
   BadgeCheck,
@@ -41,11 +42,64 @@ const SECTION_STYLES: Record<string, { title: string; text: string; hover: strin
   emerald: { title: "text-emerald-500", text: "group-hover:text-emerald-400", hover: "hover:shadow-emerald-500/10" }
 };
 
+const DAMAGES_KEY = "case_companion_damages_v1";
+const WAGE_LOSS_KEY = "case_companion_wage_loss_v1";
+const WAGE_THEFT_KEY = "case_companion_wage_theft_v1";
+const WC_BENEFITS_KEY = "case_companion_wc_benefits_v1";
+const PACKET_LAYOUT_KEY = "case_companion_packet_layout_v1";
+const PACKET_OUTPUTS_KEY = "case_companion_packet_outputs_v1";
+const PREFILE_AUDIT_KEY = "case_companion_prefile_audit_v1";
+const TIMELINE_KEY = "case_companion_timeline_v1";
+
 export default function HomeDashboard() {
   const navigate = useNavigate();
   const { matterId } = useParams();
   const [customizing, setCustomizing] = useState(false);
   const [widgets, setWidgets] = useState<DashboardWidget[]>(() => dashboardWidgetsStore.getWidgets());
+
+  const damages = readJson<any[]>(DAMAGES_KEY, []);
+  const wageLoss = readJson<any>(WAGE_LOSS_KEY, {});
+  const wageTheft = readJson<any>(WAGE_THEFT_KEY, {});
+  const wcBenefits = readJson<any>(WC_BENEFITS_KEY, {});
+  const packetLayout = readJson<Record<string, boolean>>(PACKET_LAYOUT_KEY, {});
+  const packetOutputs = readJson<Record<string, boolean>>(PACKET_OUTPUTS_KEY, {});
+  const preFileAudit = readJson<Record<string, boolean>>(PREFILE_AUDIT_KEY, {});
+  const timeline = readJson<any[]>(TIMELINE_KEY, []);
+
+  const damagesTotal = useMemo(
+    () => damages.reduce((sum, entry) => sum + (Number(entry.amount) || 0), 0),
+    [damages]
+  );
+  const wageLossTotal = useMemo(() => (Number(wageLoss?.aww) || 0) * (Number(wageLoss?.weeks) || 0), [wageLoss]);
+  const wageTheftTotal = useMemo(() => {
+    const hourlyRate = Number(wageTheft?.hourlyRate) || 0;
+    const unpaidHours = Number(wageTheft?.unpaidHours) || 0;
+    const salaryPerPeriod = Number(wageTheft?.salaryPerPeriod) || 0;
+    const missingPayPeriods = Number(wageTheft?.missingPayPeriods) || 0;
+    const deductions = Number(wageTheft?.deductions) || 0;
+    const base = hourlyRate * unpaidHours + salaryPerPeriod * missingPayPeriods + deductions;
+    return wageTheft?.liquidated ? base * 2 : base;
+  }, [wageTheft]);
+  const wcBenefitsTotal = useMemo(
+    () => (Number(wcBenefits?.rate) || 0) * (Number(wcBenefits?.weeks) || 0),
+    [wcBenefits]
+  );
+
+  const packetLayoutDone = useMemo(() => {
+    const keys = Object.keys(packetLayout);
+    if (!keys.length) return 0;
+    return keys.filter((key) => packetLayout[key]).length / keys.length;
+  }, [packetLayout]);
+  const packetOutputsDone = useMemo(() => {
+    const keys = Object.keys(packetOutputs);
+    if (!keys.length) return 0;
+    return keys.filter((key) => packetOutputs[key]).length / keys.length;
+  }, [packetOutputs]);
+  const preFileDone = useMemo(() => {
+    const keys = Object.keys(preFileAudit);
+    if (!keys.length) return 0;
+    return keys.filter((key) => preFileAudit[key]).length / keys.length;
+  }, [preFileAudit]);
 
   const navigateTo = (path: string) => {
     navigate(`/matters/${matterId}/${path}`);
@@ -194,6 +248,44 @@ export default function HomeDashboard() {
   return (
     <Page title="LexiPro Dashboard" subtitle={`Active Matter: ${matterId}`}>
       <div className="space-y-10">
+        <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+          <div className="rounded-xl border border-slate-800 bg-slate-950/70 p-4">
+            <div className="text-[10px] uppercase tracking-[0.3em] text-slate-500">Damages Total</div>
+            <div className="mt-2 text-2xl font-semibold text-white">${damagesTotal.toFixed(2)}</div>
+            <div className="mt-1 text-xs text-slate-400">From damages ledger</div>
+          </div>
+          <div className="rounded-xl border border-slate-800 bg-slate-950/70 p-4">
+            <div className="text-[10px] uppercase tracking-[0.3em] text-slate-500">Wage + WC Loss</div>
+            <div className="mt-2 text-2xl font-semibold text-white">
+              ${(wageLossTotal + wageTheftTotal + wcBenefitsTotal).toFixed(2)}
+            </div>
+            <div className="mt-1 text-xs text-slate-400">Wage loss + theft + WC</div>
+          </div>
+          <div className="rounded-xl border border-slate-800 bg-slate-950/70 p-4">
+            <div className="text-[10px] uppercase tracking-[0.3em] text-slate-500">Packet Layout</div>
+            <div className="mt-2 text-2xl font-semibold text-white">{Math.round(packetLayoutDone * 100)}%</div>
+            <div className="mt-1 text-xs text-slate-400">Sections complete</div>
+          </div>
+          <div className="rounded-xl border border-slate-800 bg-slate-950/70 p-4">
+            <div className="text-[10px] uppercase tracking-[0.3em] text-slate-500">Pre‑File Audit</div>
+            <div className="mt-2 text-2xl font-semibold text-white">{Math.round(preFileDone * 100)}%</div>
+            <div className="mt-1 text-xs text-slate-400">Gate readiness</div>
+          </div>
+        </div>
+
+        <div className="grid gap-4 md:grid-cols-2">
+          <div className="rounded-xl border border-slate-800 bg-slate-950/70 p-4">
+            <div className="text-[10px] uppercase tracking-[0.3em] text-slate-500">Timeline Events</div>
+            <div className="mt-2 text-2xl font-semibold text-white">{timeline.length}</div>
+            <div className="mt-1 text-xs text-slate-400">Master + retaliation + termination</div>
+          </div>
+          <div className="rounded-xl border border-slate-800 bg-slate-950/70 p-4">
+            <div className="text-[10px] uppercase tracking-[0.3em] text-slate-500">Packet Outputs</div>
+            <div className="mt-2 text-2xl font-semibold text-white">{Math.round(packetOutputsDone * 100)}%</div>
+            <div className="mt-1 text-xs text-slate-400">Required documents</div>
+          </div>
+        </div>
+
         <div className={`rounded-xl border ${customizing ? "border-blue-500/50 bg-blue-500/10" : "border-slate-800 bg-slate-950/60"} p-4 text-xs text-slate-300`}>
           <div className="flex items-center justify-between">
             <div>
@@ -245,7 +337,7 @@ export default function HomeDashboard() {
                     className={`flex flex-col items-center justify-center p-6 bg-slate-900 border border-slate-800 rounded-xl hover:bg-slate-800 hover:border-slate-600 hover:shadow-lg ${styles.hover} transition-all group`}
                   >
                     <div className={`text-slate-400 ${styles.text} group-hover:scale-110 transition-all mb-3`}>
-                      {React.cloneElement(item.icon as React.ReactElement, { size: 28 })}
+                      {React.cloneElement(item.icon as React.ReactElement<{ size?: number }>, { size: 28 })}
                     </div>
                     <span className="text-xs font-medium text-slate-300 text-center">{item.label}</span>
                   </button>

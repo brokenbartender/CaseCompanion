@@ -170,7 +170,7 @@ export default function AutoDiscoveryAgent() {
                           </p>
                           <p className="text-slate-500 text-xs mt-2">{hit.excerpt}</p>
                           <div className="mt-3 text-xs text-slate-500 font-mono">
-                            {hit.from} -> {hit.to}
+                            {hit.from} {"->"} {hit.to}
                           </div>
                           <div className="mt-3">
                             <div className="text-[10px] uppercase tracking-[0.2em] text-slate-500">

@@ -85,6 +85,13 @@ export default function ExhibitManager({ onSelectExhibit }: Props) {
     setBatesLog((prev) => [line, ...prev].slice(0, 6));
   }, []);
 
+  const refreshExhibits = useCallback(() => {
+    if (!workspaceId || !matterId) return;
+    api.get(`/workspaces/${workspaceId}/matters/${matterId}/exhibits`)
+      .then((data) => setExhibits(Array.isArray(data) ? data : []))
+      .catch((e) => console.error("Failed to load exhibits", e));
+  }, [workspaceId, matterId]);
+
   const toggleRedactionSelection = useCallback((exhibitId: string) => {
     setRedactionSelection((prev) => {
       const next = new Set(prev);
@@ -216,13 +223,6 @@ export default function ExhibitManager({ onSelectExhibit }: Props) {
     if (approvalToken) headers["x-approval-token"] = approvalToken;
     return headers;
   }, [workspaceId, approvalToken]);
-
-  const refreshExhibits = useCallback(() => {
-    if (!workspaceId || !matterId) return;
-    api.get(`/workspaces/${workspaceId}/matters/${matterId}/exhibits`)
-      .then((data) => setExhibits(Array.isArray(data) ? data : []))
-      .catch((e) => console.error("Failed to load exhibits", e));
-  }, [workspaceId, matterId]);
 
   useEffect(() => {
     refreshExhibits();
