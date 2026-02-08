@@ -172,6 +172,27 @@ export default function EvidenceVault() {
     });
   }
 
+  function autoFillAuthenticity() {
+    const next: EvidenceAuthState = { ...auth };
+    combinedIndex.forEach((item) => {
+      const current = next[item.path] || { receivedDate: "", source: "", chainNotes: "", verified: false };
+      if (!current.receivedDate) {
+        const match = item.name.match(/\b(\d{4}-\d{2}-\d{2})\b/);
+        current.receivedDate = match?.[1] || current.receivedDate;
+      }
+      if (!current.source) {
+        current.source = item.path.includes("OneDrive") ? "Client provided (OneDrive)" : "Local reference";
+      }
+      if (!current.chainNotes) {
+        current.chainNotes = "Stored in CaseCompanion evidence vault. Verify original source chain.";
+      }
+      next[item.path] = current;
+    });
+    setAuth(next);
+    writeJson(AUTH_KEY, next);
+    logAuditEvent("Evidence authenticity auto-filled", { count: Object.keys(next).length });
+  }
+
   async function handleUpload(file?: File | null) {
     if (!file) return;
     if (!settings.apiBase || !settings.workspaceId || !settings.authToken) {
@@ -633,6 +654,13 @@ export default function EvidenceVault() {
                 className="rounded-md border border-emerald-400/60 px-3 py-2 text-sm font-semibold text-emerald-200"
               >
                 Auto-Tag Evidence
+              </button>
+              <button
+                type="button"
+                onClick={autoFillAuthenticity}
+                className="rounded-md border border-emerald-400/60 px-3 py-2 text-sm font-semibold text-emerald-200"
+              >
+                Auto-Fill Authenticity
               </button>
               <button
                 type="button"
