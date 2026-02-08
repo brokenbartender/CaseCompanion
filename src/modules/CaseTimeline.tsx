@@ -3,6 +3,7 @@ import Page from "../components/ui/Page";
 import { Card, CardBody, CardHeader, CardSubtitle, CardTitle } from "../components/ui/Card";
 import { readJson, writeJson } from "../utils/localStore";
 import { EVIDENCE_INDEX } from "../data/evidenceIndex";
+import { logAuditEvent } from "../utils/auditLog";
 
 const STORAGE_KEY = "case_companion_timeline_v1";
 const TRACKS = [
@@ -17,6 +18,8 @@ type TimelineEvent = {
   note: string;
   evidence: string[];
   proof?: string;
+  exhibitRef?: string;
+  pageRef?: string;
   track: "master" | "retaliation" | "termination";
 };
 
@@ -64,12 +67,15 @@ function inferTrack(name: string) {
 
 export default function CaseTimeline() {
   const [events, setEvents] = useState<TimelineEvent[]>(() => readJson(STORAGE_KEY, []));
+  const [summary, setSummary] = useState(() => readJson("case_companion_neutral_summary_v1", ""));
   const [form, setForm] = useState<TimelineEvent>({
     date: "",
     title: "",
     note: "",
     evidence: [],
     proof: "",
+    exhibitRef: "",
+    pageRef: "",
     track: "master"
   });
   const [activeTrack, setActiveTrack] = useState<"all" | TimelineEvent["track"]>("all");
@@ -84,7 +90,8 @@ export default function CaseTimeline() {
     const next = [...events, { ...form }];
     setEvents(next);
     writeJson(STORAGE_KEY, next);
-    setForm({ date: "", title: "", note: "", evidence: [], proof: "", track: form.track });
+    logAuditEvent("Timeline event added", { title: form.title, date: form.date, track: form.track });
+    setForm({ date: "", title: "", note: "", evidence: [], proof: "", exhibitRef: "", pageRef: "", track: form.track });
   }
 
   function toggleEvidence(path: string) {
@@ -147,6 +154,33 @@ export default function CaseTimeline() {
     URL.revokeObjectURL(url);
   }
 
+  function generateNeutralSummary() {
+    const list = [...events].sort((a, b) => a.date.localeCompare(b.date));
+    const lines = [
+      "Neutral Case Summary",
+      "",
+      ...list.map((event) => {
+        const cite = event.exhibitRef || event.pageRef ? ` [${event.exhibitRef || "Exhibit"}${event.pageRef ? `, ${event.pageRef}` : ""}]` : "";
+        return `On ${event.date || "TBD"}, ${event.title}.${cite}`;
+      })
+    ];
+    const text = lines.join("\n");
+    setSummary(text);
+    writeJson("case_companion_neutral_summary_v1", text);
+    logAuditEvent("Neutral summary generated", { events: list.length });
+  }
+
+  function exportNeutralSummary() {
+    const blob = new Blob([summary || ""], { type: "text/plain" });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = "neutral_case_summary.txt";
+    a.click();
+    URL.revokeObjectURL(url);
+    logAuditEvent("Neutral summary exported", { format: "txt" });
+  }
+
   function autoBuildTimeline() {
     const dynamicEvidence = readJson<{ name: string; path: string; ext: string; category: string }[]>(
       "case_companion_dynamic_evidence_v1",
@@ -177,6 +211,7 @@ export default function CaseTimeline() {
     ];
     setEvents(merged);
     writeJson(STORAGE_KEY, merged);
+    logAuditEvent("Timeline auto-built from evidence", { added: merged.length - events.length });
   }
 
   return (
@@ -227,6 +262,18 @@ export default function CaseTimeline() {
                 placeholder="Proof of service filename (optional)"
                 value={form.proof || ""}
                 onChange={(e) => setForm({ ...form, proof: e.target.value })}
+              />
+              <input
+                className="w-full rounded-md border border-white/10 bg-white/5 px-3 py-2 text-sm text-slate-100"
+                placeholder="Exhibit reference (e.g., Exhibit H)"
+                value={form.exhibitRef || ""}
+                onChange={(e) => setForm({ ...form, exhibitRef: e.target.value })}
+              />
+              <input
+                className="w-full rounded-md border border-white/10 bg-white/5 px-3 py-2 text-sm text-slate-100"
+                placeholder="Page reference (e.g., p. 3)"
+                value={form.pageRef || ""}
+                onChange={(e) => setForm({ ...form, pageRef: e.target.value })}
               />
               <div className="rounded-md border border-white/10 bg-white/5 p-2">
                 <div className="text-xs text-slate-400 mb-2">Link evidence</div>
@@ -296,6 +343,11 @@ export default function CaseTimeline() {
                     {event.proof ? (
                       <div className="mt-2 text-xs text-amber-200">Proof: {event.proof}</div>
                     ) : null}
+                    {event.exhibitRef || event.pageRef ? (
+                      <div className="mt-2 text-xs text-slate-300">
+                        Citation: {event.exhibitRef || "Exhibit"} {event.pageRef ? `(${event.pageRef})` : ""}
+                      </div>
+                    ) : null}
                     {event.evidence?.length ? (
                       <div className="mt-2 text-xs text-slate-500">
                         Linked evidence: {event.evidence.length}
@@ -359,6 +411,37 @@ export default function CaseTimeline() {
                 </div>
               ))}
             </div>
+          </CardBody>
+        </Card>
+
+        <Card className="lg:col-span-3">
+          <CardHeader>
+            <CardSubtitle>Summary</CardSubtitle>
+            <CardTitle>Neutral Case Summary</CardTitle>
+          </CardHeader>
+          <CardBody>
+            <div className="flex flex-wrap gap-2">
+              <button
+                type="button"
+                onClick={generateNeutralSummary}
+                className="rounded-md border border-emerald-400/60 px-3 py-2 text-xs font-semibold text-emerald-200"
+              >
+                Generate Summary
+              </button>
+              <button
+                type="button"
+                onClick={exportNeutralSummary}
+                className="rounded-md border border-amber-400/60 px-3 py-2 text-xs font-semibold text-amber-200"
+              >
+                Export Summary
+              </button>
+            </div>
+            <textarea
+              className="mt-3 min-h-[160px] w-full rounded-md border border-white/10 bg-white/5 px-3 py-2 text-sm text-slate-100"
+              placeholder="Generate a neutral summary from timeline events."
+              value={summary}
+              onChange={(e) => setSummary(e.target.value)}
+            />
           </CardBody>
         </Card>
       </div>

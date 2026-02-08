@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Page from "../components/ui/Page";
 import { Card, CardBody, CardHeader, CardSubtitle, CardTitle } from "../components/ui/Card";
 import { readJson } from "../utils/localStore";
+import { readAuditEvents } from "../utils/auditLog";
 
 const SETTINGS_KEY = "case_companion_settings_v1";
 
@@ -12,6 +13,7 @@ type AuditEvent = { id?: string; action?: string; createdAt?: string; details?: 
 export default function AuditLogView() {
   const settings = readJson<CaseSettings>(SETTINGS_KEY, { apiBase: "", workspaceId: "", authToken: "" });
   const [events, setEvents] = useState<AuditEvent[]>([]);
+  const [localEvents, setLocalEvents] = useState(() => readAuditEvents());
   const [status, setStatus] = useState<string>("");
 
   async function loadAudit() {
@@ -34,7 +36,51 @@ export default function AuditLogView() {
   }
 
   return (
-    <Page title="Audit Log" subtitle="Backend audit events (optional).">
+    <Page title="Audit Log" subtitle="Local + backend audit events (optional).">
+      <Card className="mb-6">
+        <CardHeader>
+          <CardSubtitle>Local</CardSubtitle>
+          <CardTitle>Local Audit Trail</CardTitle>
+        </CardHeader>
+        <CardBody>
+          <div className="flex items-center gap-3">
+            <button
+              type="button"
+              onClick={() => setLocalEvents(readAuditEvents())}
+              className="rounded-md border border-emerald-400/60 px-3 py-2 text-sm font-semibold text-emerald-200"
+            >
+              Refresh Local Log
+            </button>
+            <button
+              type="button"
+              onClick={() => {
+                const blob = new Blob([JSON.stringify(localEvents, null, 2)], { type: "application/json" });
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement("a");
+                a.href = url;
+                a.download = "local_audit_log.json";
+                a.click();
+                URL.revokeObjectURL(url);
+              }}
+              className="rounded-md border border-amber-400/60 px-3 py-2 text-sm font-semibold text-amber-200"
+            >
+              Export Local Log
+            </button>
+          </div>
+          <div className="mt-4 space-y-2 text-sm text-slate-300 max-h-[400px] overflow-auto">
+            {localEvents.length === 0 ? (
+              <div className="text-xs text-slate-500">No local audit events yet.</div>
+            ) : (
+              localEvents.map((evt) => (
+                <div key={evt.id} className="rounded-md border border-white/5 bg-white/5 p-3">
+                  <div className="text-xs text-slate-500">{evt.createdAt}</div>
+                  <div className="text-sm text-slate-100">{evt.action}</div>
+                </div>
+              ))
+            )}
+          </div>
+        </CardBody>
+      </Card>
       <Card>
         <CardHeader>
           <CardSubtitle>Audit</CardSubtitle>

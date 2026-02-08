@@ -7,6 +7,7 @@ import { APP_DISCLAIMER } from "../config/branding";
 import { FEATURE_FLAGS } from "../config/featureFlags";
 import { CASE_PROFILE_SEED } from "../data/caseProfileSeed";
 import { EVIDENCE_DATE_SCAN } from "../data/evidenceDateScan";
+import { logAuditEvent } from "../utils/auditLog";
 import {
   fetchProceduralStatus,
   updateCaseProfile,
@@ -125,7 +126,17 @@ export default function CaseStatusDashboard() {
     saveProfileToServer(next);
     setStatusMessage("Auto-filled dates from evidence scan. Verify for accuracy.");
     setTimeout(() => setStatusMessage(""), 3000);
+    logAuditEvent("Case profile auto-filled from evidence scan", { pretrialDate: next.pretrialDate, filingDate: next.filingDate });
   }
+
+  const complianceAlerts = [
+    !profile.filingDate ? "Filing date missing" : "",
+    !profile.serviceDate ? "Service date missing" : "",
+    profile.serviceDate && !profile.answerDate ? "Answer date not recorded" : "",
+    !profile.discoveryServedDate ? "Discovery served date missing" : "",
+    !profile.motionServedDate ? "Motion served date missing" : "",
+    !profile.pretrialDate ? "Pretrial/scheduling date missing" : ""
+  ].filter(Boolean);
 
   return (
     <Page
@@ -217,6 +228,24 @@ export default function CaseStatusDashboard() {
           </CardHeader>
           <CardBody>
             <div className="text-sm text-amber-200">{APP_DISCLAIMER}</div>
+          </CardBody>
+        </Card>
+
+        <Card>
+          <CardHeader>
+            <CardSubtitle>Compliance</CardSubtitle>
+            <CardTitle>Rule Check Alerts</CardTitle>
+          </CardHeader>
+          <CardBody>
+            {complianceAlerts.length ? (
+              <ul className="space-y-2 text-sm text-amber-200">
+                {complianceAlerts.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
+            ) : (
+              <div className="text-sm text-emerald-200">No missing compliance triggers detected.</div>
+            )}
           </CardBody>
         </Card>
 

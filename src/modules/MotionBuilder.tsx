@@ -3,6 +3,7 @@ import Page from "../components/ui/Page";
 import { Card, CardBody, CardHeader, CardSubtitle, CardTitle } from "../components/ui/Card";
 import { MOTION_BUILDER } from "../data/motionsChecklist";
 import { readJson, writeJson } from "../utils/localStore";
+import { logAuditEvent } from "../utils/auditLog";
 
 const MOTION_PACKET_KEY = "case_companion_motion_packet_v1";
 
@@ -93,6 +94,7 @@ export default function MotionBuilder() {
     URL.revokeObjectURL(url);
     setExportStatus("Motion packet exported.");
     setTimeout(() => setExportStatus(""), 2000);
+    logAuditEvent("Motion packet exported", { motionType: state.motionType });
   }
 
   function generateOutline() {
@@ -111,6 +113,7 @@ export default function MotionBuilder() {
       ...template.map((item, idx) => `${idx + 1}. ${item}`)
     ];
     setOutline(lines.join("\n"));
+    logAuditEvent("Motion outline generated", { motionType: type || "General Motion" });
   }
 
   return (
