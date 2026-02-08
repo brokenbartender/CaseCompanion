@@ -104,6 +104,16 @@ export default function AnswerDefaultWorkflow() {
       lastUpdated="Feb 8, 2026"
       right={<Button variant="primary" size="sm" onClick={exportDefaultPacket}>Export Snapshot</Button>}
     >
+      <div className="mb-6 rounded-lg border border-emerald-400/20 bg-emerald-500/5 p-4">
+        <div className="text-[10px] uppercase tracking-[0.3em] text-emerald-300">Oakland County Guidance</div>
+        <div className="mt-2 text-sm text-slate-200">
+          Answer deadline is typically 21 days after personal service in Michigan and 28 days if served by mail or outside Michigan.
+        </div>
+        <div className="mt-2 text-xs text-slate-400">
+          See MCR 2.108 for exact timing. If no answer, you may request entry of default under MCR 2.603.
+        </div>
+      </div>
+
       <div className="grid gap-4 lg:grid-cols-2">
         <Card>
           <CardHeader>
