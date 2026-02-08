@@ -5,6 +5,7 @@ export type CitationSegment =
 
 const mediaPattern = /\[([^\]@]+?)\s*@\s*(\d{1,2}):(\d{2})\]/g;
 const docPattern = /\[([^\],]+?),\s*p\.?\s*(\d+)\]/g;
+const legalCitationPattern = /\b\d+\s+U\.S\.\s+\d+\b|\b\d+\s+F\.\d+d?\s+\d+\b|\b\d+\s+S\.Ct\.\s+\d+\b|\b\d+\s+N\.W\.\d+d?\s+\d+\b|\b\d+\s+P\.\d+d?\s+\d+\b|\b\d+\s+So\.\d+d?\s+\d+\b/g;
 
 function toSeconds(minutes: string, seconds: string) {
   const mm = Number(minutes);
@@ -69,4 +70,9 @@ export function parseCitations(text: string): CitationSegment[] {
   }
 
   return segments.length ? segments : [{ type: "text", value: input }];
+}
+
+export function extractLegalCitations(text: string): string[] {
+  const matches = String(text || "").match(legalCitationPattern) || [];
+  return Array.from(new Set(matches.map((m) => m.trim()))).slice(0, 50);
 }

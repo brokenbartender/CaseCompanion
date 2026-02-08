@@ -4,6 +4,7 @@ import { Card, CardBody, CardHeader, CardSubtitle, CardTitle } from "../componen
 import { readJson, writeJson } from "../utils/localStore";
 import { EVIDENCE_INDEX } from "../data/evidenceIndex";
 import { logAuditEvent } from "../utils/auditLog";
+import SourcesPanel from "../components/ui/SourcesPanel";
 
 const STORAGE_KEY = "case_companion_timeline_v1";
 const TRACKS = [
@@ -175,6 +176,22 @@ export default function CaseTimeline() {
     writeJson("case_companion_neutral_summary_v1", text);
     logAuditEvent("Neutral summary generated", { events: list.length });
   }
+
+  const sourceCards = useMemo(() => {
+    const sources = new Map<string, { label: string; detail: string; status: "verified" | "pending" | "flagged" }>();
+    events.forEach((event) => {
+      if (!event.exhibitRef && !event.evidence?.length) return;
+      const label = event.exhibitRef || "Linked Exhibit";
+      const detail = event.pageRef ? `${event.pageRef} - ${event.title}` : event.title;
+      const status = event.exhibitRef ? "verified" : "pending";
+      const key = `${label}|${detail}`;
+      sources.set(key, { label, detail, status });
+    });
+    return Array.from(sources.entries()).map(([key, value]) => ({
+      id: key,
+      ...value
+    }));
+  }, [events]);
 
   function exportNeutralSummary() {
     const blob = new Blob([summary || ""], { type: "text/plain" });
@@ -469,6 +486,20 @@ export default function CaseTimeline() {
               value={summary}
               onChange={(e) => setSummary(e.target.value)}
             />
+          </CardBody>
+        </Card>
+
+        <Card className="lg:col-span-3">
+          <CardHeader>
+            <CardSubtitle>Citations</CardSubtitle>
+            <CardTitle>Source Highlights</CardTitle>
+          </CardHeader>
+          <CardBody>
+            {sourceCards.length ? (
+              <SourcesPanel title="Timeline Sources" sources={sourceCards} />
+            ) : (
+              <div className="text-sm text-slate-400">Add exhibit references to generate sources.</div>
+            )}
           </CardBody>
         </Card>
       </div>
