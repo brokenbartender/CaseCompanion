@@ -18,6 +18,33 @@ type MotionPacketState = {
   notes: string;
 };
 
+const OUTLINE_TEMPLATES: Record<string, string[]> = {
+  "Summary Disposition": [
+    "Caption + Case Info",
+    "Relief Requested",
+    "Statement of Facts (with citations)",
+    "Standard of Review",
+    "Argument (elements and undisputed facts)",
+    "Conclusion + Proposed Order"
+  ],
+  "Motion to Compel": [
+    "Caption + Case Info",
+    "Relief Requested",
+    "Discovery Background",
+    "Good Faith / Conferral Statement",
+    "Argument (rules + relevance)",
+    "Conclusion + Proposed Order"
+  ],
+  "Motion in Limine": [
+    "Caption + Case Info",
+    "Relief Requested",
+    "Facts/Context",
+    "Legal Standard",
+    "Argument (exclude specific evidence)",
+    "Conclusion + Proposed Order"
+  ]
+};
+
 export default function MotionBuilder() {
   const [state, setState] = useState<MotionPacketState>(() =>
     readJson(MOTION_PACKET_KEY, {
@@ -33,6 +60,7 @@ export default function MotionBuilder() {
     })
   );
   const [exportStatus, setExportStatus] = useState("");
+  const [outline, setOutline] = useState("");
 
   function update<K extends keyof MotionPacketState>(key: K, value: MotionPacketState[K]) {
     const next = { ...state, [key]: value } as MotionPacketState;
@@ -65,6 +93,24 @@ export default function MotionBuilder() {
     URL.revokeObjectURL(url);
     setExportStatus("Motion packet exported.");
     setTimeout(() => setExportStatus(""), 2000);
+  }
+
+  function generateOutline() {
+    const type = state.motionType.trim();
+    const template = OUTLINE_TEMPLATES[type] || [
+      "Caption + Case Info",
+      "Relief Requested",
+      "Statement of Facts (with citations)",
+      "Legal Standard",
+      "Argument",
+      "Conclusion + Proposed Order"
+    ];
+    const lines = [
+      `Motion Outline: ${type || "General Motion"}`,
+      "",
+      ...template.map((item, idx) => `${idx + 1}. ${item}`)
+    ];
+    setOutline(lines.join("\n"));
   }
 
   return (
@@ -168,6 +214,29 @@ export default function MotionBuilder() {
         ))}
       </div>
       <div className="mt-6">
+        <Card className="mb-6">
+          <CardHeader>
+            <CardSubtitle>Drafting Assistant</CardSubtitle>
+            <CardTitle>Motion Outline</CardTitle>
+          </CardHeader>
+          <CardBody>
+            <div className="flex flex-wrap gap-2">
+              <button
+                type="button"
+                onClick={generateOutline}
+                className="rounded-md border border-emerald-400/60 px-3 py-2 text-xs font-semibold text-emerald-200"
+              >
+                Generate Outline
+              </button>
+            </div>
+            <textarea
+              className="mt-3 min-h-[180px] w-full rounded-md border border-white/10 bg-white/5 px-3 py-2 text-sm text-slate-100"
+              placeholder="Click Generate Outline to create a drafting scaffold."
+              value={outline}
+              onChange={(e) => setOutline(e.target.value)}
+            />
+          </CardBody>
+        </Card>
         <Card>
           <CardHeader>
             <CardSubtitle>Praecipe</CardSubtitle>
