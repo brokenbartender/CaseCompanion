@@ -30,18 +30,40 @@ import { readJson, writeJson } from "../utils/localStore";
 
 const MODE_KEY = "case_companion_mode_v1";
 
-const coreNavItems = [
-  { to: "/case-flow", label: "Case Flow", icon: LayoutDashboard },
-  { to: "/deadlines", label: "Deadlines", icon: Timer },
-  { to: "/evidence", label: "Evidence", icon: Archive },
-  { to: "/filing-flow", label: "Filings", icon: ClipboardList },
-  { to: "/discovery", label: "Discovery", icon: FileText },
-  { to: "/answer-default", label: "Answer + Default", icon: ClipboardCheck },
-  { to: "/motion-builder", label: "Motions", icon: FileSignature },
-  { to: "/trial-prep", label: "Trial Prep", icon: Gavel },
-  { to: "/judgment", label: "Judgment", icon: Scale },
-  { to: "/doc-pack", label: "Export Packets", icon: FileText },
-  { to: "/audit", label: "Audit Log", icon: ClipboardCheck }
+const coreNavSections = [
+  {
+    title: "Workflow",
+    items: [
+      { to: "/case-flow", label: "Case Flow", icon: LayoutDashboard },
+      { to: "/case-status", label: "Case Status", icon: ListChecks },
+      { to: "/deadlines", label: "Deadlines", icon: Timer }
+    ]
+  },
+  {
+    title: "Pleadings",
+    items: [
+      { to: "/filing-flow", label: "Pleadings", icon: ClipboardList },
+      { to: "/service", label: "Service", icon: FileText },
+      { to: "/answer-default", label: "Answer + Default", icon: ClipboardCheck }
+    ]
+  },
+  {
+    title: "Litigation",
+    items: [
+      { to: "/discovery", label: "Discovery", icon: FileText },
+      { to: "/motion-builder", label: "Motions", icon: FileSignature },
+      { to: "/trial-prep", label: "Trial Prep", icon: Gavel },
+      { to: "/judgment", label: "Judgment", icon: Scale }
+    ]
+  },
+  {
+    title: "Evidence",
+    items: [
+      { to: "/evidence", label: "Evidence Vault", icon: Archive },
+      { to: "/doc-pack", label: "Lawyer Packet", icon: FileText },
+      { to: "/audit", label: "Audit Log", icon: ClipboardCheck }
+    ]
+  }
 ];
 
 const advancedNavItems = [
@@ -147,22 +169,31 @@ export default function AppLayout() {
           <div className="text-lg font-semibold tracking-tight text-white">{APP_NAME}</div>
           <div className="mt-1 text-xs text-slate-400">Michigan civil, pro se companion</div>
 
-          <nav className="mt-6 space-y-1">
-            {coreNavItems.map((item) => (
-              <NavLink
-                key={item.to}
-                to={item.to}
-                className={({ isActive }) =>
-                  [
-                    "flex items-center gap-2 rounded-md px-3 py-2 text-sm",
-                    isActive ? "bg-white/10 text-white" : "text-slate-300 hover:bg-white/5"
-                  ].join(" ")
-                }
-                end={item.to === "/"}
-              >
-                <item.icon size={16} />
-                <span>{item.label}</span>
-              </NavLink>
+          <nav className="mt-6 space-y-4">
+            {coreNavSections.map((section) => (
+              <div key={section.title}>
+                <div className="mb-2 text-[10px] uppercase tracking-[0.3em] text-slate-500">
+                  {section.title}
+                </div>
+                <div className="space-y-1">
+                  {section.items.map((item) => (
+                    <NavLink
+                      key={item.to}
+                      to={item.to}
+                      className={({ isActive }) =>
+                        [
+                          "flex items-center gap-2 rounded-md px-3 py-2 text-sm",
+                          isActive ? "bg-white/10 text-white" : "text-slate-300 hover:bg-white/5"
+                        ].join(" ")
+                      }
+                      end={item.to === "/"}
+                    >
+                      <item.icon size={16} />
+                      <span>{item.label}</span>
+                    </NavLink>
+                  ))}
+                </div>
+              </div>
             ))}
           </nav>
 
