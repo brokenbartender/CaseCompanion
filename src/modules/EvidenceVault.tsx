@@ -41,6 +41,16 @@ const PACKET_SECTION_KEYWORDS: Record<string, string[]> = {
   misconduct: ["threat", "surveillance", "hostile", "misconduct", "mlcc"]
 };
 
+const AUTO_TAG_KEYWORDS: Record<string, string[]> = {
+  medical: ["medical", "er", "hospital", "injury", "bill", "diagnosis", "trinity"],
+  police: ["police", "report", "incident", "assault"],
+  witness: ["witness", "statement", "victim", "testimony"],
+  wage: ["wage", "pay", "payroll", "salary", "uia", "termination"],
+  retaliation: ["retaliation", "termination", "complaint", "discrimination"],
+  workers_comp: ["workers", "comp", "wc", "mediation"],
+  timeline: ["timeline", "summary", "sequence", "chronology"]
+};
+
 function defaultMeta(): EvidenceMeta {
   return { tags: [], status: "new" };
 }
@@ -67,6 +77,7 @@ export default function EvidenceVault() {
   const wageLoss = readJson<any>(WAGE_LOSS_KEY, {});
   const wageTheft = readJson<any>(WAGE_THEFT_KEY, {});
   const wcBenefits = readJson<any>(WC_BENEFITS_KEY, {});
+  const damagesSummary = readJson<string>("case_companion_damages_summary_v1", "");
 
   function autoCompletePacketLayoutWith(metaState: MetaState) {
     const existing = readJson<Record<string, boolean>>(PACKET_LAYOUT_KEY, {});
@@ -230,6 +241,107 @@ export default function EvidenceVault() {
     URL.revokeObjectURL(url);
   }
 
+  function exportEvidencePacketHtml() {
+    const html = `
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Evidence Packet</title>
+    <style>
+      body { font-family: "Times New Roman", serif; margin: 32px; color: #0a0a0a; }
+      h1 { font-size: 20px; text-transform: uppercase; letter-spacing: 0.08em; }
+      h2 { font-size: 16px; margin-top: 18px; }
+      ul { margin-top: 8px; }
+      .section { margin-top: 16px; }
+      .muted { color: #444; font-size: 12px; }
+    </style>
+  </head>
+  <body>
+    <h1>Evidence Packet</h1>
+    <div class="muted">Generated ${new Date().toLocaleString()}</div>
+    <div class="section">
+      <h2>Packet Layout</h2>
+      <ul>
+        ${Object.entries(packetLayout).map(([key, value]) => `<li>${key}: ${value ? "Complete" : "Missing"}</li>`).join("")}
+      </ul>
+    </div>
+    <div class="section">
+      <h2>Packet Outputs</h2>
+      <ul>
+        ${Object.entries(packetOutputs).map(([key, value]) => `<li>${key}: ${value ? "Complete" : "Missing"}</li>`).join("")}
+      </ul>
+    </div>
+    <div class="section">
+      <h2>Prefile Audit</h2>
+      <ul>
+        ${Object.entries(preFileAudit).map(([key, value]) => `<li>${key}: ${value ? "Complete" : "Missing"}</li>`).join("")}
+      </ul>
+    </div>
+    <div class="section">
+      <h2>Evidence Index</h2>
+      <ul>
+        ${combinedIndex.map((item) => `<li>${item.name} (${item.category})</li>`).join("")}
+      </ul>
+    </div>
+    <div class="section">
+      <h2>Timelines</h2>
+      <pre>${buildTimelineText("master")}</pre>
+      <pre>${buildTimelineText("retaliation")}</pre>
+      <pre>${buildTimelineText("termination")}</pre>
+    </div>
+    <div class="section">
+      <h2>Damages Summary</h2>
+      <pre>${damagesSummary || "No damages summary yet."}</pre>
+    </div>
+  </body>
+</html>
+    `.trim();
+    const blob = new Blob([html], { type: "text/html" });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = "evidence_packet.html";
+    a.click();
+    URL.revokeObjectURL(url);
+  }
+
+  function exportExhibitBinderHtml() {
+    const html = `
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Exhibit Binder</title>
+    <style>
+      body { font-family: "Times New Roman", serif; margin: 32px; color: #0a0a0a; }
+      h1 { font-size: 20px; text-transform: uppercase; letter-spacing: 0.08em; }
+      h2 { font-size: 16px; margin-top: 18px; }
+      ul { margin-top: 8px; }
+      .muted { color: #444; font-size: 12px; }
+    </style>
+  </head>
+  <body>
+    <h1>Exhibit Binder</h1>
+    <div class="muted">Generated ${new Date().toLocaleString()}</div>
+    ${EVIDENCE_CATEGORIES.map((category) => `
+      <h2>${category}</h2>
+      <ul>
+        ${combinedIndex.filter((item) => item.category === category).map((item, idx) => `<li>Exhibit ${idx + 1}: ${item.name}</li>`).join("")}
+      </ul>
+    `).join("")}
+  </body>
+</html>
+    `.trim();
+    const blob = new Blob([html], { type: "text/html" });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = "exhibit_binder.html";
+    a.click();
+    URL.revokeObjectURL(url);
+  }
+
   function autoCompletePacketLayout() {
     autoCompletePacketLayoutWith(meta);
     autoCompletePacketOutputs();
@@ -244,6 +356,27 @@ export default function EvidenceVault() {
   function clearPacketLayoutOverrides() {
     writeJson(PACKET_LAYOUT_OVERRIDE_KEY, {});
     autoCompletePacketLayoutWith(meta);
+  }
+
+  function autoTagEvidence() {
+    const next: MetaState = { ...meta };
+    combinedIndex.forEach((item) => {
+      const current = next[item.path] || defaultMeta();
+      const haystack = `${item.name} ${item.path} ${item.category}`.toLowerCase();
+      const tags = new Set(current.tags);
+      for (const [tag, keywords] of Object.entries(AUTO_TAG_KEYWORDS)) {
+        if (keywords.some((keyword) => haystack.includes(keyword))) {
+          tags.add(tag);
+        }
+      }
+      if (!current.tags.length && tags.size) {
+        next[item.path] = { ...current, tags: Array.from(tags) };
+      }
+    });
+    setMeta(next);
+    writeJson(META_KEY, next);
+    autoCompletePacketLayoutWith(next);
+    autoCompletePacketOutputs();
   }
 
   function buildTimelineText(track: "master" | "retaliation" | "termination") {
@@ -452,6 +585,13 @@ export default function EvidenceVault() {
               </button>
               <button
                 type="button"
+                onClick={exportEvidencePacketHtml}
+                className="rounded-md border border-emerald-400/60 px-3 py-2 text-sm font-semibold text-emerald-200"
+              >
+                Export Evidence Packet (HTML)
+              </button>
+              <button
+                type="button"
                 onClick={autoCompletePacketLayout}
                 className="rounded-md border border-emerald-400/60 px-3 py-2 text-sm font-semibold text-emerald-200"
               >
@@ -459,10 +599,24 @@ export default function EvidenceVault() {
               </button>
               <button
                 type="button"
+                onClick={autoTagEvidence}
+                className="rounded-md border border-emerald-400/60 px-3 py-2 text-sm font-semibold text-emerald-200"
+              >
+                Auto-Tag Evidence
+              </button>
+              <button
+                type="button"
                 onClick={exportExhibitMap}
                 className="rounded-md border border-amber-400/60 px-3 py-2 text-sm font-semibold text-amber-200"
               >
                 Export Exhibit Map
+              </button>
+              <button
+                type="button"
+                onClick={exportExhibitBinderHtml}
+                className="rounded-md border border-amber-400/60 px-3 py-2 text-sm font-semibold text-amber-200"
+              >
+                Export Exhibit Binder (HTML)
               </button>
               <button
                 type="button"

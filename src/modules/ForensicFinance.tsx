@@ -31,6 +31,9 @@ export default function ForensicFinance() {
     })
   );
   const [wcBenefits, setWcBenefits] = useState(() => readJson(WC_BENEFITS_KEY, { rate: "", weeks: "", notes: "" }));
+  const [nonEconomicMultiplier, setNonEconomicMultiplier] = useState(() =>
+    readJson("case_companion_non_econ_multiplier_v1", 1.5)
+  );
 
   const total = useMemo(
     () => entries.reduce((sum, entry) => sum + (Number(entry.amount) || 0), 0),
@@ -76,9 +79,20 @@ export default function ForensicFinance() {
     return lines.join("\n");
   }, [entries, total, medicalTotal, wageLossTotal, wageTheftTotal, wcBenefitsTotal]);
 
+  const scenarioBase = useMemo(
+    () => medicalTotal + wageLossTotal + wageTheftTotal + wcBenefitsTotal,
+    [medicalTotal, wageLossTotal, wageTheftTotal, wcBenefitsTotal]
+  );
+  const nonEconomicEstimate = scenarioBase * (Number(nonEconomicMultiplier) || 0);
+  const scenarioTotal = total + nonEconomicEstimate;
+
   useEffect(() => {
     writeJson(DAMAGES_SUMMARY_KEY, damagesSummaryText);
   }, [damagesSummaryText]);
+
+  useEffect(() => {
+    writeJson("case_companion_non_econ_multiplier_v1", nonEconomicMultiplier);
+  }, [nonEconomicMultiplier]);
 
   function exportDamagesSummaryHtml() {
     const html = `
@@ -256,6 +270,35 @@ export default function ForensicFinance() {
             >
               Download Damages Summary (HTML)
             </button>
+          </CardBody>
+        </Card>
+
+        <Card className="lg:col-span-3">
+          <CardHeader>
+            <CardSubtitle>Scenario</CardSubtitle>
+            <CardTitle>Non-Economic Estimate</CardTitle>
+          </CardHeader>
+          <CardBody>
+            <div className="grid gap-4 md:grid-cols-2">
+              <div>
+                <div className="text-xs text-slate-400 mb-2">Multiplier</div>
+                <input
+                  type="range"
+                  min="0"
+                  max="5"
+                  step="0.1"
+                  value={nonEconomicMultiplier}
+                  onChange={(e) => setNonEconomicMultiplier(Number(e.target.value))}
+                  className="w-full"
+                />
+                <div className="text-sm text-slate-300 mt-2">x{Number(nonEconomicMultiplier).toFixed(1)}</div>
+              </div>
+              <div className="space-y-2 text-sm text-slate-300">
+                <div>Scenario base (medical + wage + WC): ${scenarioBase.toFixed(2)}</div>
+                <div>Non-economic estimate: ${nonEconomicEstimate.toFixed(2)}</div>
+                <div className="text-emerald-200">Scenario total: ${scenarioTotal.toFixed(2)}</div>
+              </div>
+            </div>
           </CardBody>
         </Card>
       </div>

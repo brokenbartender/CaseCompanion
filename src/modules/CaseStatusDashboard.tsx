@@ -6,6 +6,7 @@ import { computeRuleDeadlines, CaseProfile } from "../services/workflowEngine";
 import { APP_DISCLAIMER } from "../config/branding";
 import { FEATURE_FLAGS } from "../config/featureFlags";
 import { CASE_PROFILE_SEED } from "../data/caseProfileSeed";
+import { EVIDENCE_DATE_SCAN } from "../data/evidenceDateScan";
 import {
   fetchProceduralStatus,
   updateCaseProfile,
@@ -112,6 +113,20 @@ export default function CaseStatusDashboard() {
     }
   }
 
+  function autoFillFromEvidence() {
+    const next = { ...profile };
+    if (!next.pretrialDate && EVIDENCE_DATE_SCAN.pretrialDate) {
+      next.pretrialDate = EVIDENCE_DATE_SCAN.pretrialDate;
+    }
+    if (!next.filingDate && EVIDENCE_DATE_SCAN.demandDate) {
+      next.filingDate = EVIDENCE_DATE_SCAN.demandDate;
+    }
+    setProfile(next);
+    saveProfileToServer(next);
+    setStatusMessage("Auto-filled dates from evidence scan. Verify for accuracy.");
+    setTimeout(() => setStatusMessage(""), 3000);
+  }
+
   return (
     <Page
       title="Case Status Dashboard"
@@ -180,6 +195,18 @@ export default function CaseStatusDashboard() {
               ))}
             </div>
             {statusMessage ? <div className="mt-3 text-xs text-amber-200">{statusMessage}</div> : null}
+            <div className="mt-4">
+              <button
+                type="button"
+                onClick={autoFillFromEvidence}
+                className="rounded-md border border-emerald-400/60 px-3 py-2 text-xs font-semibold text-emerald-200"
+              >
+                Auto-Fill Dates from Evidence Scan
+              </button>
+              <div className="mt-2 text-[11px] text-slate-500">
+                Uses scanned evidence hints only. Confirm court-verified deadlines.
+              </div>
+            </div>
           </CardBody>
         </Card>
 

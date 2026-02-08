@@ -176,6 +176,16 @@ export default function CaseFlowHub() {
   const completedSteps = steps.filter((step) => stepStatuses[step.key]?.done).length;
   const progress = Math.round((completedSteps / steps.length) * 100);
 
+  const missingProfileFields = [
+    !profile.filingDate ? "Filing date" : null,
+    !profile.serviceDate ? "Service date" : null,
+    !answer.answerReceived && !answer.defaultFiled ? "Answer received or default filed" : null,
+    !profile.discoveryServedDate ? "Discovery served date" : null,
+    !profile.motionServedDate ? "Motion served date" : null,
+    !profile.pretrialDate ? "Pretrial/scheduling date" : null,
+    !judgment?.judgmentDate ? "Judgment date" : null
+  ].filter(Boolean) as string[];
+
   function toggleOverride(stepKey: string) {
     const next = { ...overrides };
     if (next[stepKey]) {
@@ -339,6 +349,23 @@ export default function CaseFlowHub() {
                 ))
             ) : (
               <div className="text-xs text-emerald-200">No blockers detected.</div>
+            )}
+          </CardBody>
+        </Card>
+        <Card>
+          <CardHeader>
+            <CardSubtitle>Missing Data</CardSubtitle>
+            <CardTitle>Gatekeeper</CardTitle>
+          </CardHeader>
+          <CardBody className="space-y-2 text-sm text-slate-200">
+            {missingProfileFields.length ? (
+              missingProfileFields.slice(0, 6).map((item) => (
+                <div key={item} className="text-xs text-amber-200">
+                  {item}
+                </div>
+              ))
+            ) : (
+              <div className="text-xs text-emerald-200">Core dates present.</div>
             )}
           </CardBody>
         </Card>

@@ -20,6 +20,48 @@ type TimelineEvent = {
   track: "master" | "retaliation" | "termination";
 };
 
+const DATE_PATTERNS = [
+  /\b\d{4}-\d{2}-\d{2}\b/,
+  /\b\d{1,2}\/\d{1,2}\/\d{2,4}\b/,
+  /\b(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Sept|Oct|Nov|Dec)\.?\s+\d{1,2},\s+\d{4}\b/i,
+  /\b(?:January|February|March|April|May|June|July|August|September|October|November|December)\s+\d{1,2},\s+\d{4}\b/i
+];
+
+function normalizeDate(raw: string) {
+  if (!raw) return "";
+  if (/^\d{4}-\d{2}-\d{2}$/.test(raw)) return raw;
+  if (/^\d{1,2}\/\d{1,2}\/\d{2,4}$/.test(raw)) {
+    const [m, d, y] = raw.split("/");
+    const year = y.length === 2 ? `20${y}` : y;
+    const mm = m.padStart(2, "0");
+    const dd = d.padStart(2, "0");
+    return `${year}-${mm}-${dd}`;
+  }
+  const parsed = new Date(raw);
+  if (Number.isNaN(parsed.getTime())) return raw;
+  return parsed.toISOString().slice(0, 10);
+}
+
+function extractDate(text: string) {
+  for (const pattern of DATE_PATTERNS) {
+    const match = text.match(pattern);
+    if (match?.[0]) return normalizeDate(match[0]);
+  }
+  return "";
+}
+
+function cleanTitle(name: string) {
+  const base = name.replace(/\.[^.]+$/, "");
+  return base.replace(/^\d{4}-\d{2}-\d{2}\s*[-–—]\s*/i, "").trim();
+}
+
+function inferTrack(name: string) {
+  const lower = name.toLowerCase();
+  if (lower.includes("retaliation")) return "retaliation";
+  if (lower.includes("termination")) return "termination";
+  return "master";
+}
+
 export default function CaseTimeline() {
   const [events, setEvents] = useState<TimelineEvent[]>(() => readJson(STORAGE_KEY, []));
   const [form, setForm] = useState<TimelineEvent>({
@@ -105,6 +147,38 @@ export default function CaseTimeline() {
     URL.revokeObjectURL(url);
   }
 
+  function autoBuildTimeline() {
+    const dynamicEvidence = readJson<{ name: string; path: string; ext: string; category: string }[]>(
+      "case_companion_dynamic_evidence_v1",
+      []
+    );
+    const combined = [...dynamicEvidence, ...EVIDENCE_INDEX];
+    const generated = combined
+      .map((item) => {
+        const date = extractDate(item.name);
+        if (!date) return null;
+        const title = cleanTitle(item.name);
+        return {
+          date,
+          title,
+          note: `Auto-added from evidence: ${item.name}`,
+          evidence: [item.path],
+          proof: "",
+          track: inferTrack(item.name)
+        } as TimelineEvent;
+      })
+      .filter(Boolean) as TimelineEvent[];
+
+    if (!generated.length) return;
+    const existingKeys = new Set(events.map((event) => `${event.date}|${event.title}|${event.track}`));
+    const merged = [
+      ...events,
+      ...generated.filter((event) => !existingKeys.has(`${event.date}|${event.title}|${event.track}`))
+    ];
+    setEvents(merged);
+    writeJson(STORAGE_KEY, merged);
+  }
+
   return (
     <Page
       title="Timeline"
@@ -176,6 +250,13 @@ export default function CaseTimeline() {
                 className="w-full rounded-md bg-amber-500 px-3 py-2 text-sm font-semibold text-slate-900"
               >
                 Add Event
+              </button>
+              <button
+                type="button"
+                onClick={autoBuildTimeline}
+                className="w-full rounded-md border border-emerald-400/60 px-3 py-2 text-xs font-semibold text-emerald-200"
+              >
+                Auto-Build Timeline from Evidence
               </button>
             </div>
           </CardBody>
