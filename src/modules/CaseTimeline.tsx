@@ -65,6 +65,12 @@ function inferTrack(name: string) {
   return "master";
 }
 
+function inferExhibitRef(name: string) {
+  const match = name.match(/exhibit\s+([a-z0-9-]+)/i);
+  if (!match?.[1]) return "";
+  return `Exhibit ${match[1].toUpperCase()}`;
+}
+
 export default function CaseTimeline() {
   const [events, setEvents] = useState<TimelineEvent[]>(() => readJson(STORAGE_KEY, []));
   const [summary, setSummary] = useState(() => readJson("case_companion_neutral_summary_v1", ""));
@@ -214,6 +220,20 @@ export default function CaseTimeline() {
     logAuditEvent("Timeline auto-built from evidence", { added: merged.length - events.length });
   }
 
+  function autoFillCitations() {
+    const updated = events.map((event) => {
+      if (event.exhibitRef) return event;
+      const linked = event.evidence?.[0];
+      const linkedItem = EVIDENCE_INDEX.find((item) => item.path === linked);
+      const exhibit = linkedItem ? inferExhibitRef(linkedItem.name) : inferExhibitRef(event.title);
+      if (!exhibit) return event;
+      return { ...event, exhibitRef: exhibit };
+    });
+    setEvents(updated);
+    writeJson(STORAGE_KEY, updated);
+    logAuditEvent("Timeline citations auto-filled", { updated: updated.length });
+  }
+
   return (
     <Page
       title="Timeline"
@@ -304,6 +324,13 @@ export default function CaseTimeline() {
                 className="w-full rounded-md border border-emerald-400/60 px-3 py-2 text-xs font-semibold text-emerald-200"
               >
                 Auto-Build Timeline from Evidence
+              </button>
+              <button
+                type="button"
+                onClick={autoFillCitations}
+                className="w-full rounded-md border border-emerald-400/60 px-3 py-2 text-xs font-semibold text-emerald-200"
+              >
+                Auto-Fill Exhibit Citations
               </button>
             </div>
           </CardBody>
