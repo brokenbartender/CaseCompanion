@@ -13,12 +13,13 @@ export default function SettlementDemandGenerator() {
   const [extraDamages, setExtraDamages] = useState("");
 
   const damages = readJson<DamagesEntry[]>("case_companion_damages_v1", []);
+  const damagesSummary = readJson<string>("case_companion_damages_summary_v1", "");
   const damagesTotal = useMemo(
     () => damages.reduce((sum, entry) => sum + (Number(entry.amount) || 0), 0),
     [damages]
   );
 
-  const body = `Settlement Demand\n\nTo: ${to}\nFrom: ${from}\nDate: ${date}\n\nSummary:\n${summary}\n\nKey exhibits:\n${exhibits}\n\nDamages total (from app): $${damagesTotal.toFixed(2)}\nAdditional damages notes:\n${extraDamages}\n\nThis draft is for informational purposes only and is not legal advice.`;
+  const body = `Settlement Demand\n\nTo: ${to}\nFrom: ${from}\nDate: ${date}\n\nSummary:\n${summary}\n\nKey exhibits:\n${exhibits}\n\nDamages total (from app): $${damagesTotal.toFixed(2)}\n\nDamages detail:\n${damagesSummary || "No damages summary yet."}\n\nAdditional damages notes:\n${extraDamages}\n\nThis draft is for informational purposes only and is not legal advice.`;
 
   function download() {
     const blob = new Blob([body], { type: "text/plain" });

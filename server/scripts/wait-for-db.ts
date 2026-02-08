@@ -51,13 +51,11 @@ function tryConnect(): Promise<boolean> {
 
 async function waitForDb() {
   while (Date.now() - startedAt < timeoutMs) {
-    // eslint-disable-next-line no-await-in-loop
     const ok = await tryConnect();
     if (ok) {
       console.log(`DB reachable at ${host}:${port}`);
       process.exit(0);
     }
-    // eslint-disable-next-line no-await-in-loop
     await new Promise((resolve) => setTimeout(resolve, intervalMs));
   }
   console.error(`DB not reachable at ${host}:${port} within ${timeoutMs}ms`);

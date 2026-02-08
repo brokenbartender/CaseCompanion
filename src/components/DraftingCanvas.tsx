@@ -8,6 +8,7 @@ import { useSession } from "../hooks/useSession";
 import { parseCitations } from "../utils/citationParser";
 import { insertClause, validateContract } from "../services/clauseLibrary";
 import { logForensicEvent } from "../services/forensicLogger";
+import Button from "./ui/Button";
 
 export type RiskSeverity = "LOW" | "MEDIUM" | "HIGH" | "CRITICAL";
 
@@ -292,7 +293,7 @@ export default function DraftingCanvas({
 
   useEffect(() => {
     if (!editor) return;
-    editor.commands.setContent(buildHtmlFromText(docText), false);
+    editor.commands.setContent(buildHtmlFromText(docText));
   }, [editor, docText]);
 
   useEffect(() => {

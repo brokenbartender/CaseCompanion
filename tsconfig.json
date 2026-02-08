@@ -16,6 +16,20 @@
     "noEmit": true,
     "jsx": "react-jsx"
   },
-  "include": ["**/*.ts", "**/*.tsx"],
-  "exclude": ["node_modules", "dist"]
+  "include": ["src/**/*.ts", "src/**/*.tsx", "shared/**/*.ts", "shared/**/*.tsx"],
+  "exclude": [
+    "node_modules",
+    "dist",
+    "server",
+    "docs",
+    "scripts",
+    "cloudflare",
+    "deploy",
+    "reports",
+    "references",
+    "public",
+    "e2e",
+    "proof",
+    "zap"
+  ]
 }

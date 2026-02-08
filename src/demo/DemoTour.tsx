@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { driver } from "driver.js";
+import type { DriveStep } from "driver.js";
 import "driver.js/dist/driver.css";
 import { getWorkspaceId } from "../services/authStorage";
 import { fetchWorkspacePrefs, setWorkspacePref, TOUR_PREF_KEY } from "../services/workspacePrefs";
@@ -111,7 +112,7 @@ export default function DemoTour() {
     tourFinishedRef.current = false;
     navigateTo("/");
 
-    const steps = demoEnabled
+    const steps = (demoEnabled
       ? [
           {
             element: "#integrity-meter",
@@ -140,7 +141,7 @@ export default function DemoTour() {
               description: fallbackNarration["Ready to Launch?"] || "Narration unavailable.",
               side: "bottom",
               align: "end",
-              onNextClick: (_el, _step, opts) => {
+              onNextClick: (_el: unknown, _step: unknown, opts: { driver: { destroy: () => void } }) => {
                 tourFinishedRef.current = true;
                 opts.driver.destroy();
               }
@@ -189,7 +190,7 @@ export default function DemoTour() {
             },
             onHighlightStarted: () => applyNarration("The Proof Packet")
           }
-        ];
+        ]) as DriveStep[];
 
     const tour = driver({
       showProgress: true,

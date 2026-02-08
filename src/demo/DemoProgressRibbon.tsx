@@ -1,5 +1,5 @@
 import React from "react";
-import { isAutoDemoEnabled, useAutoDemo } from "../../hooks/useAutoDemo";
+import { isAutoDemoEnabled, useAutoDemo } from "./useAutoDemo";
 
 export default function DemoProgressRibbon() {
   const demo = useAutoDemo();

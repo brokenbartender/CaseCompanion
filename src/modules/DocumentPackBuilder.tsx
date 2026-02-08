@@ -7,6 +7,9 @@ import { api } from "../services/api";
 import { getWorkspaceId, getMatterId } from "../services/authStorage";
 
 const STORAGE_KEY = "case_companion_doc_pack_v1";
+const PACKET_LAYOUT_KEY = "case_companion_packet_layout_v1";
+const PACKET_OUTPUTS_KEY = "case_companion_packet_outputs_v1";
+const PREFILE_AUDIT_KEY = "case_companion_prefile_audit_v1";
 const PROFILE_KEY = "case_companion_case_profile_v1";
 
 type PackState = Record<string, boolean>;
@@ -20,8 +23,48 @@ const PACK_ITEMS = [
   { id: "separate", label: "Each document is a separate PDF (no bundling)" }
 ];
 
+const PACKET_SECTIONS = [
+  { id: "incident", label: "Incident Documentation" },
+  { id: "medical", label: "Medical Evidence" },
+  { id: "negligence", label: "Employer Negligence Evidence" },
+  { id: "retaliation", label: "Retaliation Evidence" },
+  { id: "wage-theft", label: "Wage Theft Evidence" },
+  { id: "workers-comp", label: "Workers’ Comp Evidence" },
+  { id: "misconduct", label: "Additional Misconduct Evidence" }
+];
+
+const PACKET_OUTPUTS = [
+  { id: "evidence-index", label: "Evidence Index" },
+  { id: "case-summary", label: "Case Summary" },
+  { id: "master-timeline", label: "Master Timeline" },
+  { id: "retaliation-timeline", label: "Retaliation Timeline" },
+  { id: "termination-summary", label: "Termination Summary" },
+  { id: "wc-summary", label: "Workers’ Comp Violation Summary" },
+  { id: "damages-summary", label: "Damages Summary" },
+  { id: "wage-loss-summary", label: "Wage Loss Summary" },
+  { id: "medical-summary", label: "Medical Records Summary" },
+  { id: "key-facts", label: "Key Facts One‑Pager" },
+  { id: "case-value", label: "Why This Case Has Value" },
+  { id: "counsel-needs", label: "What I Need From Counsel" },
+  { id: "questions", label: "Questions for Attorneys" }
+];
+
+const PREFILE_AUDIT = [
+  { id: "scao", label: "SCAO formatting check (margins, font, caption)" },
+  { id: "signature", label: "Signature blocks verified" },
+  { id: "pii", label: "PII redacted + MC 97 completed if needed" },
+  { id: "deadlines", label: "Deadlines verified against court calendar" },
+  { id: "service", label: "Service method confirmed + proof plan ready" },
+  { id: "exhibit-index", label: "Exhibit index linked to evidence" },
+  { id: "packet-layout", label: "Packet layout sections complete" },
+  { id: "attachments", label: "All required attachments included" }
+];
+
 export default function DocumentPackBuilder() {
   const [state, setState] = useState<PackState>(() => readJson(STORAGE_KEY, {}));
+  const [packetLayout, setPacketLayout] = useState<PackState>(() => readJson(PACKET_LAYOUT_KEY, {}));
+  const [packetOutputs, setPacketOutputs] = useState<PackState>(() => readJson(PACKET_OUTPUTS_KEY, {}));
+  const [preFileAudit, setPreFileAudit] = useState<PackState>(() => readJson(PREFILE_AUDIT_KEY, {}));
   const [notes, setNotes] = useState(() => readJson(`${STORAGE_KEY}_notes`, ""));
   const profile = readJson<CaseProfile>(PROFILE_KEY, {
     jurisdictionId: "mi",
@@ -38,8 +81,9 @@ export default function DocumentPackBuilder() {
     venueCounty: "Unknown"
   });
 
-  const amountKnown = typeof profile.claimAmount === "number" && profile.claimAmount > 0;
-  const amountSuggestsCircuit = amountKnown && profile.claimAmount > 25000;
+  const claimAmount = profile.claimAmount ?? 0;
+  const amountKnown = claimAmount > 0;
+  const amountSuggestsCircuit = amountKnown && claimAmount > 25000;
   const courtMismatch =
     (amountSuggestsCircuit && profile.courtLevel === "district") ||
     (!amountSuggestsCircuit && amountKnown && profile.courtLevel === "circuit");
@@ -52,12 +96,34 @@ export default function DocumentPackBuilder() {
     writeJson(STORAGE_KEY, next);
   }
 
+  function togglePacketLayout(id: string) {
+    const next = { ...packetLayout, [id]: !packetLayout[id] };
+    setPacketLayout(next);
+    writeJson(PACKET_LAYOUT_KEY, next);
+  }
+
+  function togglePacketOutput(id: string) {
+    const next = { ...packetOutputs, [id]: !packetOutputs[id] };
+    setPacketOutputs(next);
+    writeJson(PACKET_OUTPUTS_KEY, next);
+  }
+
+  function togglePreFileAudit(id: string) {
+    const next = { ...preFileAudit, [id]: !preFileAudit[id] };
+    setPreFileAudit(next);
+    writeJson(PREFILE_AUDIT_KEY, next);
+  }
+
   function saveNotes(value: string) {
     setNotes(value);
     writeJson(`${STORAGE_KEY}_notes`, value);
   }
 
   const completed = PACK_ITEMS.filter((item) => state[item.id]).length;
+  const layoutCompleted = PACKET_SECTIONS.filter((item) => packetLayout[item.id]).length;
+  const outputsCompleted = PACKET_OUTPUTS.filter((item) => packetOutputs[item.id]).length;
+  const preFileCompleted = PREFILE_AUDIT.filter((item) => preFileAudit[item.id]).length;
+  const preFileReady = preFileCompleted === PREFILE_AUDIT.length;
   const exportLines = [
     "CaseCompanion Filing Packet Checklist",
     "",
@@ -77,10 +143,34 @@ export default function DocumentPackBuilder() {
     URL.revokeObjectURL(url);
   }
 
+  function exportEvidencePacketLayout() {
+    const payload = {
+      title: "Evidence Packet Layout",
+      updatedAt: new Date().toISOString(),
+      sections: PACKET_SECTIONS.map((item) => ({
+        id: item.id,
+        label: item.label,
+        complete: Boolean(packetLayout[item.id])
+      })),
+      outputs: PACKET_OUTPUTS.map((item) => ({
+        id: item.id,
+        label: item.label,
+        complete: Boolean(packetOutputs[item.id])
+      }))
+    };
+    const blob = new Blob([JSON.stringify(payload, null, 2)], { type: "application/json" });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = "evidence_packet_layout.json";
+    a.click();
+    URL.revokeObjectURL(url);
+  }
+
   const [exportStatus, setExportStatus] = useState("");
   const workspaceId = getWorkspaceId();
   const matterId = getMatterId();
-  const exportDisabled = !workspaceId || !matterId;
+  const exportDisabled = !workspaceId || !matterId || !preFileReady;
 
   async function downloadPacket(path: string, filename: string) {
     try {
@@ -199,10 +289,117 @@ export default function DocumentPackBuilder() {
                 Download Trial Binder
               </button>
               {exportDisabled ? (
-                <div className="text-xs text-amber-200">Set workspace + matter in Case Settings to enable downloads.</div>
+                <div className="text-xs text-amber-200">
+                  Set workspace + matter in Case Settings and complete the pre-file audit to enable downloads.
+                </div>
               ) : null}
               {exportStatus ? <div className="text-xs text-amber-200">{exportStatus}</div> : null}
             </div>
+          </CardBody>
+        </Card>
+      </div>
+
+      <div className="mt-6 grid gap-6 lg:grid-cols-2">
+        <Card>
+          <CardHeader>
+            <CardSubtitle>Court Compliance Gate</CardSubtitle>
+            <CardTitle>Pre‑File Audit</CardTitle>
+          </CardHeader>
+          <CardBody>
+            <div className="text-sm text-slate-300">
+              Completed {preFileCompleted} of {PREFILE_AUDIT.length} items.
+            </div>
+            <div className="mt-3 space-y-2 text-sm text-slate-300">
+              {PREFILE_AUDIT.map((item) => (
+                <label key={item.id} className="flex items-start gap-3">
+                  <input
+                    type="checkbox"
+                    className="mt-1 h-4 w-4 accent-emerald-400"
+                    checked={Boolean(preFileAudit[item.id])}
+                    onChange={() => togglePreFileAudit(item.id)}
+                  />
+                  <span className={preFileAudit[item.id] ? "text-slate-400 line-through" : ""}>{item.label}</span>
+                </label>
+              ))}
+            </div>
+            {!preFileReady ? (
+              <div className="mt-3 text-xs text-amber-200">
+                Pre-file audit must be complete before downloads are enabled.
+              </div>
+            ) : (
+              <div className="mt-3 text-xs text-emerald-200">Pre-file audit complete.</div>
+            )}
+          </CardBody>
+        </Card>
+      </div>
+
+      <div className="mt-6 grid gap-6 lg:grid-cols-3">
+        <Card className="lg:col-span-1">
+          <CardHeader>
+            <CardSubtitle>Evidence Packet</CardSubtitle>
+            <CardTitle>Layout Progress</CardTitle>
+          </CardHeader>
+          <CardBody>
+            <div className="text-sm text-slate-300">
+              Sections complete {layoutCompleted} of {PACKET_SECTIONS.length}.
+            </div>
+            <div className="mt-2 text-sm text-slate-300">
+              Outputs complete {outputsCompleted} of {PACKET_OUTPUTS.length}.
+            </div>
+            <div className="mt-3 text-xs text-slate-400">
+              These are the court‑ready packet sections derived from the Evidence Index.
+            </div>
+            <button
+              type="button"
+              onClick={exportEvidencePacketLayout}
+              className="mt-4 w-full rounded-md bg-emerald-400/90 px-3 py-2 text-sm font-semibold text-slate-900"
+            >
+              Export Packet Layout
+            </button>
+          </CardBody>
+        </Card>
+
+        <Card className="lg:col-span-1">
+          <CardHeader>
+            <CardSubtitle>Layout Sections</CardSubtitle>
+            <CardTitle>Evidence Packet Sections</CardTitle>
+          </CardHeader>
+          <CardBody>
+            <ul className="space-y-2 text-sm text-slate-300">
+              {PACKET_SECTIONS.map((item) => (
+                <li key={item.id} className="flex items-start gap-3">
+                  <input
+                    type="checkbox"
+                    className="mt-1 h-4 w-4 accent-emerald-400"
+                    checked={Boolean(packetLayout[item.id])}
+                    onChange={() => togglePacketLayout(item.id)}
+                  />
+                  <span className={packetLayout[item.id] ? "text-slate-400 line-through" : ""}>{item.label}</span>
+                </li>
+              ))}
+            </ul>
+          </CardBody>
+        </Card>
+
+        <Card className="lg:col-span-1">
+          <CardHeader>
+            <CardSubtitle>Packet Outputs</CardSubtitle>
+            <CardTitle>Required Documents</CardTitle>
+          </CardHeader>
+          <CardBody>
+            <ul className="space-y-2 text-sm text-slate-300">
+              {PACKET_OUTPUTS.map((item) => (
+                <li key={item.id} className="flex items-start gap-3">
+                  <input
+                    type="checkbox"
+                    className="mt-1 h-4 w-4 accent-emerald-400"
+                    checked={Boolean(packetOutputs[item.id])}
+                    onChange={() => togglePacketOutput(item.id)}
+                  />
+                  <span className={packetOutputs[item.id] ? "text-slate-400 line-through" : ""}>{item.label}</span>
+                </li>
+              ))}
+            </ul>
           </CardBody>
         </Card>
       </div>

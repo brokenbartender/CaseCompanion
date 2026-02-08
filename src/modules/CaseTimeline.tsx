@@ -5,23 +5,44 @@ import { readJson, writeJson } from "../utils/localStore";
 import { EVIDENCE_INDEX } from "../data/evidenceIndex";
 
 const STORAGE_KEY = "case_companion_timeline_v1";
+const TRACKS = [
+  { id: "master", label: "Master Timeline" },
+  { id: "retaliation", label: "Retaliation Timeline" },
+  { id: "termination", label: "Termination Timeline" }
+];
 
-type TimelineEvent = { date: string; title: string; note: string; evidence: string[]; proof?: string };
+type TimelineEvent = {
+  date: string;
+  title: string;
+  note: string;
+  evidence: string[];
+  proof?: string;
+  track: "master" | "retaliation" | "termination";
+};
 
 export default function CaseTimeline() {
   const [events, setEvents] = useState<TimelineEvent[]>(() => readJson(STORAGE_KEY, []));
-  const [form, setForm] = useState<TimelineEvent>({ date: "", title: "", note: "", evidence: [], proof: "" });
+  const [form, setForm] = useState<TimelineEvent>({
+    date: "",
+    title: "",
+    note: "",
+    evidence: [],
+    proof: "",
+    track: "master"
+  });
+  const [activeTrack, setActiveTrack] = useState<"all" | TimelineEvent["track"]>("all");
 
   const sorted = useMemo(() => {
-    return [...events].sort((a, b) => a.date.localeCompare(b.date));
-  }, [events]);
+    const list = activeTrack === "all" ? events : events.filter((event) => event.track === activeTrack);
+    return [...list].sort((a, b) => a.date.localeCompare(b.date));
+  }, [events, activeTrack]);
 
   function addEvent() {
     if (!form.title.trim()) return;
     const next = [...events, { ...form }];
     setEvents(next);
     writeJson(STORAGE_KEY, next);
-    setForm({ date: "", title: "", note: "", evidence: [] });
+    setForm({ date: "", title: "", note: "", evidence: [], proof: "", track: form.track });
   }
 
   function toggleEvidence(path: string) {
@@ -30,6 +51,58 @@ export default function CaseTimeline() {
       const next = has ? prev.evidence.filter((p) => p !== path) : [...prev.evidence, path];
       return { ...prev, evidence: next };
     });
+  }
+
+  function exportTimeline(track: "master" | "retaliation" | "termination") {
+    const list = events.filter((event) => event.track === track);
+    const payload = {
+      track,
+      updatedAt: new Date().toISOString(),
+      events: list
+    };
+    const blob = new Blob([JSON.stringify(payload, null, 2)], { type: "application/json" });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = `${track}_timeline.json`;
+    a.click();
+    URL.revokeObjectURL(url);
+  }
+
+  function exportTimelineHtml(track: "master" | "retaliation" | "termination") {
+    const list = events.filter((event) => event.track === track).sort((a, b) => a.date.localeCompare(b.date));
+    const html = `
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>${track.toUpperCase()} Timeline</title>
+    <style>
+      body { font-family: "Times New Roman", serif; margin: 32px; color: #0a0a0a; }
+      h1 { font-size: 18px; text-transform: uppercase; letter-spacing: 0.08em; }
+      .row { margin: 12px 0; }
+      .date { font-weight: bold; }
+      .note { margin-top: 4px; color: #333; }
+    </style>
+  </head>
+  <body>
+    <h1>${track.toUpperCase()} Timeline</h1>
+    ${list.map((event) => `
+      <div class="row">
+        <div class="date">${event.date || "TBD"} - ${event.title}</div>
+        ${event.note ? `<div class="note">${event.note}</div>` : ""}
+      </div>
+    `).join("")}
+  </body>
+</html>
+    `.trim();
+    const blob = new Blob([html], { type: "text/html" });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = `${track}_timeline.html`;
+    a.click();
+    URL.revokeObjectURL(url);
   }
 
   return (
@@ -45,6 +118,17 @@ export default function CaseTimeline() {
           </CardHeader>
           <CardBody>
             <div className="space-y-3">
+              <select
+                className="w-full rounded-md border border-white/10 bg-white/5 px-3 py-2 text-sm text-slate-100"
+                value={form.track}
+                onChange={(e) => setForm({ ...form, track: e.target.value as TimelineEvent["track"] })}
+              >
+                {TRACKS.map((track) => (
+                  <option key={track.id} value={track.id}>
+                    {track.label}
+                  </option>
+                ))}
+              </select>
               <input
                 className="w-full rounded-md border border-white/10 bg-white/5 px-3 py-2 text-sm text-slate-100"
                 placeholder="Date (YYYY-MM-DD)"
@@ -103,12 +187,28 @@ export default function CaseTimeline() {
             <CardTitle>Timeline Entries</CardTitle>
           </CardHeader>
           <CardBody>
+            <div className="mb-4 flex flex-wrap items-center gap-2 text-xs text-slate-300">
+              <span className="uppercase tracking-[0.2em] text-slate-500">Filter</span>
+              {["all", ...TRACKS.map((t) => t.id)].map((value) => (
+                <button
+                  key={value}
+                  type="button"
+                  onClick={() => setActiveTrack(value as typeof activeTrack)}
+                  className={`rounded-full border px-3 py-1 ${
+                    activeTrack === value ? "border-amber-400 bg-amber-500/20 text-amber-200" : "border-slate-800 bg-slate-900"
+                  }`}
+                >
+                  {value === "all" ? "All" : value}
+                </button>
+              ))}
+            </div>
             {sorted.length === 0 ? (
               <div className="text-sm text-slate-400">No events yet. Add your first entry.</div>
             ) : (
               <div className="space-y-4">
                 {sorted.map((event, idx) => (
                   <div key={`${event.title}-${idx}`} className="rounded-lg border border-white/5 bg-white/5 p-4">
+                    <div className="text-[10px] uppercase tracking-[0.3em] text-slate-500">{event.track} timeline</div>
                     <div className="text-sm text-slate-400">{event.date || "TBD"}</div>
                     <div className="text-base text-white font-semibold">{event.title}</div>
                     {event.note ? <div className="text-sm text-slate-300 mt-1">{event.note}</div> : null}
@@ -139,6 +239,7 @@ export default function CaseTimeline() {
               <div className="space-y-3 text-sm text-slate-300">
                 {sorted.map((event, idx) => (
                   <div key={`${event.title}-${idx}`} className="rounded-md border border-white/10 bg-white/5 p-3">
+                    <div className="text-[10px] uppercase tracking-[0.3em] text-slate-500">{event.track} timeline</div>
                     <div className="text-xs text-slate-400">{event.date || "TBD"}</div>
                     <div className="text-sm text-white">{event.title}</div>
                     <div className="text-xs text-slate-400">
@@ -148,6 +249,35 @@ export default function CaseTimeline() {
                 ))}
               </div>
             )}
+          </CardBody>
+        </Card>
+
+        <Card className="lg:col-span-3">
+          <CardHeader>
+            <CardSubtitle>Exports</CardSubtitle>
+            <CardTitle>Download Timelines</CardTitle>
+          </CardHeader>
+          <CardBody>
+            <div className="grid gap-3 text-sm text-slate-300 md:grid-cols-3">
+              {TRACKS.map((track) => (
+                <div key={track.id} className="flex gap-2">
+                  <button
+                    type="button"
+                    onClick={() => exportTimeline(track.id as TimelineEvent["track"])}
+                    className="rounded-md border border-amber-400/60 px-3 py-2 text-xs font-semibold text-amber-200"
+                  >
+                    Export {track.label}
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => exportTimelineHtml(track.id as TimelineEvent["track"])}
+                    className="rounded-md border border-emerald-400/60 px-3 py-2 text-xs font-semibold text-emerald-200"
+                  >
+                    HTML
+                  </button>
+                </div>
+              ))}
+            </div>
           </CardBody>
         </Card>
       </div>

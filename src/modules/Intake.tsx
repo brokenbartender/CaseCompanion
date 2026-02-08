@@ -40,6 +40,12 @@ export default function Intake() {
   const workspaceId = getWorkspaceId();
   const routeMatterId = useMatterId();
   const resolvedMatterId = routeMatterId || "";
+  type UploadStatusItem = {
+    id: string;
+    filename: string;
+    status: "PENDING" | "UPLOADING" | "DONE" | "FAILED";
+    message?: string;
+  };
   const [exhibits, setExhibits] = useState<IntakeExhibit[]>([]);
   const [selectedId, setSelectedId] = useState<string>("");
   const [events, setEvents] = useState<AuditEvent[]>([]);
@@ -48,12 +54,7 @@ export default function Intake() {
   const [custodianName, setCustodianName] = useState("");
   const [custodianEmail, setCustodianEmail] = useState("");
   const [uploadsEnabled, setUploadsEnabled] = useState(true);
-  const [uploadStatus, setUploadStatus] = useState<Array<{
-    id: string;
-    filename: string;
-    status: "PENDING" | "UPLOADING" | "DONE" | "FAILED";
-    message?: string;
-  }>>([]);
+  const [uploadStatus, setUploadStatus] = useState<UploadStatusItem[]>([]);
   const liveIntegrity = useLiveIntegrity(workspaceId);
   const FILE_LIMIT = 10;
   const MAX_MB = 20;
@@ -141,10 +142,8 @@ export default function Intake() {
     setBusy(true);
     setError(null);
     const uploadId = `${Date.now()}-${Math.random().toString(16).slice(2)}`;
-    setUploadStatus((prev) => [
-      { id: uploadId, filename: file.name, status: "UPLOADING" },
-      ...prev
-    ].slice(0, FILE_LIMIT));
+    const newItem: UploadStatusItem = { id: uploadId, filename: file.name, status: "UPLOADING" };
+    setUploadStatus((prev) => [newItem, ...prev].slice(0, FILE_LIMIT));
     try {
       form.set("matterId", resolvedMatterId);
       await api.postForm(`/workspaces/${workspaceId}/matters/${resolvedMatterId}/intake/upload`, form);

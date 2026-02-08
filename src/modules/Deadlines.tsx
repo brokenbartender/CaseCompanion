@@ -161,8 +161,8 @@ export default function DeadlinesView() {
                     writeJson(PROFILE_KEY, next);
                   }}
                 >
-                  <option value="district">District (<= $25k)</option>
-                  <option value="circuit">Circuit (> $25k)</option>
+                  <option value="district">District (&lt;= $25k)</option>
+                  <option value="circuit">Circuit (&gt; $25k)</option>
                 </select>
               </label>
               <label className="space-y-1">

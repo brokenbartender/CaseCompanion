@@ -137,40 +137,6 @@ export default function IntegrityAudit() {
   const [verifyingRowId, setVerifyingRowId] = useState<string | null>(null);
   const [verifiedRowId, setVerifiedRowId] = useState<string | null>(null);
   const [pageIndex, setPageIndex] = useState(0);
-  const pageSize = 25;
-  const fixtureMode = fixtureEnabled;
-
-  if (!authed || !workspaceId) {
-    return (
-      <Page
-        title="Admissibility Ledger"
-        subtitle="Court-ready admissibility packets with cryptographic verification."
-      >
-        <div className="rounded-3xl border border-white/10 bg-slate-950/70 p-8 text-center">
-          <div className="text-xs uppercase tracking-[0.4em] text-slate-500">Export Admissibility</div>
-          <h2 className="mt-4 text-2xl font-semibold text-white">Generate a court-grade admissibility packet.</h2>
-          <p className="mt-3 text-sm text-slate-400">
-            Every export is backed by a verifiable ledger trail and integrity proofs.
-          </p>
-          <div className="mt-6 flex items-center justify-center">
-            <Button
-              variant="primary"
-              size="sm"
-              onClick={() => {
-                if (!authed) {
-                  nav("/login");
-                  return;
-                }
-                nav(matterLink("admissibility"));
-              }}
-            >
-              Export admissibility packet
-            </Button>
-          </div>
-        </div>
-      </Page>
-    );
-  }
   const [packetOverlayStep, setPacketOverlayStep] = useState<number | null>(null);
   const [teleportNotice, setTeleportNotice] = useState<string | null>(null);
   const { alert: integrityAlert } = useIntegrityAlerts();
@@ -184,6 +150,8 @@ export default function IntegrityAudit() {
     reason: string;
     action: string;
   } | null>(null);
+  const pageSize = 25;
+  const fixtureMode = fixtureEnabled;
 
   const refresh = async () => {
     if (!workspaceId || !authed) return;
@@ -557,6 +525,38 @@ export default function IntegrityAudit() {
       setSabotageBusy(false);
     }
   };
+
+  if (!authed || !workspaceId) {
+    return (
+      <Page
+        title="Admissibility Ledger"
+        subtitle="Court-ready admissibility packets with cryptographic verification."
+      >
+        <div className="rounded-3xl border border-white/10 bg-slate-950/70 p-8 text-center">
+          <div className="text-xs uppercase tracking-[0.4em] text-slate-500">Export Admissibility</div>
+          <h2 className="mt-4 text-2xl font-semibold text-white">Generate a court-grade admissibility packet.</h2>
+          <p className="mt-3 text-sm text-slate-400">
+            Every export is backed by a verifiable ledger trail and integrity proofs.
+          </p>
+          <div className="mt-6 flex items-center justify-center">
+            <Button
+              variant="primary"
+              size="sm"
+              onClick={() => {
+                if (!authed) {
+                  nav("/login");
+                  return;
+                }
+                nav(matterLink("admissibility"));
+              }}
+            >
+              Export admissibility packet
+            </Button>
+          </div>
+        </div>
+      </Page>
+    );
+  }
 
 
   return (
@@ -1135,7 +1135,7 @@ export default function IntegrityAudit() {
             <span className={`h-2 w-2 rounded-full ${aiPulse ? "bg-emerald-400" : "bg-emerald-700"} animate-pulse`} />
           </div>
           <div className="space-y-3">
-            {aiInsights.insights.length ? aiInsights.insights.map((insight) => (
+            {aiInsights.insights.length ? aiInsights.insights.map((insight: { id: string; label: string; detail: string; confidence: number }) => (
               <div key={insight.id} className="rounded-xl border border-white/10 bg-black/30 p-3">
                 <div className="text-[10px] uppercase tracking-[0.25em] text-amber-300">{insight.label}</div>
                 <div className="mt-1 text-xs text-slate-200">{insight.detail}</div>
@@ -1150,7 +1150,7 @@ export default function IntegrityAudit() {
           <div>
             <div className="text-[10px] uppercase tracking-[0.35em] text-slate-400 mb-2">Predicted Threats</div>
             <div className="space-y-2">
-              {aiInsights.predicted.length ? aiInsights.predicted.map((insight) => (
+              {aiInsights.predicted.length ? aiInsights.predicted.map((insight: { id: string; label: string; detail: string; confidence: number }) => (
                 <div key={insight.id} className="rounded-xl border border-red-500/30 bg-red-500/10 p-3">
                   <div className="text-[10px] uppercase tracking-[0.25em] text-red-200">{insight.label}</div>
                   <div className="mt-1 text-xs text-red-100">{insight.detail}</div>

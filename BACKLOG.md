@@ -40,6 +40,11 @@ This backlog maps the Michigan civil case lifecycle (benchbook-driven) and legal
 25. **E8** Research/Benchmark consolidation (non-blocking)
 
 ## Backlog Items
+0. **E0** Master Plan Preservation (Assault + Dual-Track + Glass Citadel)
+- Store current plan as canonical backlog reference for phased implementation
+- Includes: case flow hub, court-profile rules, pre-file audit, SCAO forms, narrative dossier,
+  video forensics lab, security/IP safeguards, and dual-track wage/retaliation module
+
 1. **E1** MiFILE reconnect completion status
 - Steps: suppress banner after completion, show last completion date
 

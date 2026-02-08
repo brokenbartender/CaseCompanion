@@ -31,11 +31,17 @@ import { readJson, writeJson } from "../utils/localStore";
 const MODE_KEY = "case_companion_mode_v1";
 
 const coreNavItems = [
-  { to: "/case-status", label: "Case Status", icon: LayoutDashboard },
-  { to: "/deadlines", label: "My Deadlines", icon: Timer },
-  { to: "/evidence", label: "My Evidence", icon: Archive },
-  { to: "/filing-flow", label: "My Filings", icon: ClipboardList },
-  { to: "/print-pack", label: "Generate Packet", icon: FileText }
+  { to: "/case-flow", label: "Case Flow", icon: LayoutDashboard },
+  { to: "/deadlines", label: "Deadlines", icon: Timer },
+  { to: "/evidence", label: "Evidence", icon: Archive },
+  { to: "/filing-flow", label: "Filings", icon: ClipboardList },
+  { to: "/discovery", label: "Discovery", icon: FileText },
+  { to: "/answer-default", label: "Answer + Default", icon: ClipboardCheck },
+  { to: "/motion-builder", label: "Motions", icon: FileSignature },
+  { to: "/trial-prep", label: "Trial Prep", icon: Gavel },
+  { to: "/judgment", label: "Judgment", icon: Scale },
+  { to: "/doc-pack", label: "Export Packets", icon: FileText },
+  { to: "/audit", label: "Audit Log", icon: ClipboardCheck }
 ];
 
 const advancedNavItems = [
@@ -66,6 +72,7 @@ const advancedNavItems = [
   { to: "/witness-prep", label: "Witness Prep Packets", icon: Users },
   { to: "/filing", label: "Filing Checklist", icon: ClipboardList },
   { to: "/service", label: "Service of Process", icon: FileText },
+  { to: "/answer-default", label: "Answer + Default", icon: ClipboardCheck },
   { to: "/summary-disposition", label: "Summary Disposition", icon: FileText },
   { to: "/discovery", label: "Discovery Suite", icon: ClipboardList },
   { to: "/default-mediation", label: "Default + Mediation", icon: FileText },
@@ -102,6 +109,7 @@ const advancedNavItems = [
 ];
 
 const PRO_SE_ADVANCED_ROUTES = new Set([
+  "/case-flow",
   "/guided-start",
   "/roadmap",
   "/checklist",
@@ -112,6 +120,7 @@ const PRO_SE_ADVANCED_ROUTES = new Set([
   "/filing-rejections",
   "/filing",
   "/service",
+  "/answer-default",
   "/discovery",
   "/motion-builder",
   "/trial-prep",

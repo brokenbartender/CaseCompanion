@@ -70,7 +70,6 @@ export default function CaseStatusDashboard() {
     listCaseDocuments()
       .then((data: any) => setCaseDocuments(Array.isArray(data?.documents) ? data.documents : []))
       .catch(() => null);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   async function saveProfileToServer(next: CaseProfile) {

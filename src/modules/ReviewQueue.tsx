@@ -24,21 +24,27 @@ export default function ReviewQueue() {
   );
 
   const markDone = (id: string) => {
-    const next = items.map((item) => (item.id === id ? { ...item, status: "completed" } : item));
+    const next: ReviewItem[] = items.map((item) =>
+      item.id === id ? { ...item, status: "completed" as ReviewItem["status"] } : item
+    );
     setItems(next);
     opsStore.saveReviewQueue(next);
     logForensicEvent("review.completed", { resourceId: id });
   };
 
   const markQcHold = (ids: string[]) => {
-    const next = items.map((item) => (ids.includes(item.id) ? { ...item, status: "qc-hold" } : item));
+    const next: ReviewItem[] = items.map((item) =>
+      ids.includes(item.id) ? { ...item, status: "qc-hold" as ReviewItem["status"] } : item
+    );
     setItems(next);
     opsStore.saveReviewQueue(next);
     ids.forEach((id) => logForensicEvent("review.qc_hold", { resourceId: id }));
   };
 
   const markBulkComplete = (ids: string[]) => {
-    const next = items.map((item) => (ids.includes(item.id) ? { ...item, status: "completed" } : item));
+    const next: ReviewItem[] = items.map((item) =>
+      ids.includes(item.id) ? { ...item, status: "completed" as ReviewItem["status"] } : item
+    );
     setItems(next);
     opsStore.saveReviewQueue(next);
     ids.forEach((id) => logForensicEvent("review.completed", { resourceId: id }));
