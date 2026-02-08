@@ -4,6 +4,7 @@ import { Card, CardBody, CardHeader, CardSubtitle, CardTitle } from "../componen
 import { DAMAGES_CATEGORIES, DamagesEntry } from "../data/damagesTemplates";
 import { EVIDENCE_INDEX } from "../data/evidenceIndex";
 import { readJson, writeJson } from "../utils/localStore";
+import { logAuditEvent } from "../utils/auditLog";
 
 const STORAGE_KEY = "case_companion_damages_v1";
 const WAGE_LOSS_KEY = "case_companion_wage_loss_v1";
@@ -146,12 +147,14 @@ export default function ForensicFinance() {
     setEntries(next);
     writeJson(STORAGE_KEY, next);
     setForm({ category: "Medical expenses", description: "", amount: "", evidence: "" });
+    logAuditEvent("Damages entry added", { category: form.category, amount: Number(form.amount) || 0 });
   }
 
   function removeEntry(id: string) {
     const next = entries.filter((entry) => entry.id !== id);
     setEntries(next);
     writeJson(STORAGE_KEY, next);
+    logAuditEvent("Damages entry removed", { id });
   }
 
   function pushDamagesEntry(category: string, description: string, amount: number) {

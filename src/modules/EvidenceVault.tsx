@@ -7,6 +7,7 @@ import { readJson, writeJson } from "../utils/localStore";
 import { uploadExhibit } from "../services/apiClient";
 import { useLocation } from "react-router-dom";
 import JSZip from "jszip";
+import { logAuditEvent } from "../utils/auditLog";
 
 const META_KEY = "case_companion_evidence_meta_v1";
 const SETTINGS_KEY = "case_companion_settings_v1";
@@ -14,6 +15,7 @@ const PACKET_LAYOUT_KEY = "case_companion_packet_layout_v1";
 const PACKET_OUTPUTS_KEY = "case_companion_packet_outputs_v1";
 const PACKET_LAYOUT_OVERRIDE_KEY = "case_companion_packet_layout_override_v1";
 const PREFILE_AUDIT_KEY = "case_companion_prefile_audit_v1";
+const AUTH_KEY = "case_companion_evidence_auth_v1";
 const TIMELINE_KEY = "case_companion_timeline_v1";
 const DAMAGES_KEY = "case_companion_damages_v1";
 const MEDICAL_KEY = "case_companion_medical_items_v1";
@@ -30,6 +32,15 @@ type CaseSettings = {
   workspaceId: string;
   authToken: string;
 };
+
+type EvidenceAuth = {
+  receivedDate: string;
+  source: string;
+  chainNotes: string;
+  verified: boolean;
+};
+
+type EvidenceAuthState = Record<string, EvidenceAuth>;
 
 const PACKET_SECTION_KEYWORDS: Record<string, string[]> = {
   incident: ["incident", "assault", "police", "report", "witness", "statement"],
@@ -60,6 +71,7 @@ export default function EvidenceVault() {
   const query = useMemo(() => new URLSearchParams(location.search), [location.search]);
   const highlight = query.get("highlight") || "";
   const [meta, setMeta] = useState<MetaState>(() => readJson(META_KEY, {}));
+  const [auth, setAuth] = useState<EvidenceAuthState>(() => readJson(AUTH_KEY, {}));
   const [trialMode, setTrialMode] = useState(false);
   const [uploadStatus, setUploadStatus] = useState<string>("");
   const [filter, setFilter] = useState<string>(highlight);
@@ -144,6 +156,18 @@ export default function EvidenceVault() {
       writeJson(META_KEY, merged);
       autoCompletePacketLayoutWith(merged);
       autoCompletePacketOutputs();
+      logAuditEvent("Evidence metadata updated", { path, status: updated.status, tags: updated.tags });
+      return merged;
+    });
+  }
+
+  function updateAuth(path: string, updates: Partial<EvidenceAuth>) {
+    setAuth((prev) => {
+      const current = prev[path] || { receivedDate: "", source: "", chainNotes: "", verified: false };
+      const next = { ...current, ...updates };
+      const merged = { ...prev, [path]: next };
+      writeJson(AUTH_KEY, merged);
+      logAuditEvent("Evidence authenticity updated", { path, verified: next.verified });
       return merged;
     });
   }
@@ -217,6 +241,7 @@ export default function EvidenceVault() {
     a.download = "case_companion_evidence_packet.json";
     a.click();
     URL.revokeObjectURL(url);
+    logAuditEvent("Evidence packet exported", { format: "json" });
   }
 
   function exportExhibitMap() {
@@ -239,6 +264,7 @@ export default function EvidenceVault() {
     a.download = "case_companion_exhibit_map.txt";
     a.click();
     URL.revokeObjectURL(url);
+    logAuditEvent("Exhibit map exported", { format: "txt" });
   }
 
   function exportEvidencePacketHtml() {
@@ -304,6 +330,7 @@ export default function EvidenceVault() {
     a.download = "evidence_packet.html";
     a.click();
     URL.revokeObjectURL(url);
+    logAuditEvent("Evidence packet exported", { format: "html" });
   }
 
   function exportExhibitBinderHtml() {
@@ -340,6 +367,7 @@ export default function EvidenceVault() {
     a.download = "exhibit_binder.html";
     a.click();
     URL.revokeObjectURL(url);
+    logAuditEvent("Exhibit binder exported", { format: "html" });
   }
 
   function autoCompletePacketLayout() {
@@ -377,6 +405,7 @@ export default function EvidenceVault() {
     writeJson(META_KEY, next);
     autoCompletePacketLayoutWith(next);
     autoCompletePacketOutputs();
+    logAuditEvent("Evidence auto-tagged", { taggedCount: Object.keys(next).length });
   }
 
   function buildTimelineText(track: "master" | "retaliation" | "termination") {
@@ -463,6 +492,7 @@ export default function EvidenceVault() {
     a.download = "evidence_packet.zip";
     a.click();
     URL.revokeObjectURL(url);
+    logAuditEvent("Evidence packet exported", { format: "zip" });
   }
 
   return (
@@ -627,6 +657,56 @@ export default function EvidenceVault() {
               </button>
             </div>
             <div className="mt-2 text-xs text-slate-500">Exports local evidence index + tags/status.</div>
+          </CardBody>
+        </Card>
+
+        <Card>
+          <CardHeader>
+            <CardSubtitle>Integrity</CardSubtitle>
+            <CardTitle>Authenticity Checklist</CardTitle>
+          </CardHeader>
+          <CardBody>
+            <div className="text-xs text-slate-400 mb-3">
+              Track source, receipt date, and chain-of-custody notes for each exhibit.
+            </div>
+            <div className="max-h-[360px] space-y-3 overflow-auto">
+              {combinedIndex.map((item) => {
+                const current = auth[item.path] || { receivedDate: "", source: "", chainNotes: "", verified: false };
+                return (
+                  <div key={item.path} className="rounded-md border border-white/10 bg-white/5 p-3">
+                    <div className="text-sm text-slate-100">{item.name}</div>
+                    <div className="mt-2 grid gap-2 md:grid-cols-3 text-xs text-slate-300">
+                      <input
+                        className="rounded-md border border-white/10 bg-white/5 px-2 py-1"
+                        placeholder="Received date (YYYY-MM-DD)"
+                        value={current.receivedDate}
+                        onChange={(e) => updateAuth(item.path, { receivedDate: e.target.value })}
+                      />
+                      <input
+                        className="rounded-md border border-white/10 bg-white/5 px-2 py-1"
+                        placeholder="Source"
+                        value={current.source}
+                        onChange={(e) => updateAuth(item.path, { source: e.target.value })}
+                      />
+                      <label className="flex items-center gap-2 text-xs">
+                        <input
+                          type="checkbox"
+                          checked={current.verified}
+                          onChange={(e) => updateAuth(item.path, { verified: e.target.checked })}
+                        />
+                        Verified
+                      </label>
+                    </div>
+                    <textarea
+                      className="mt-2 w-full rounded-md border border-white/10 bg-white/5 px-2 py-1 text-xs text-slate-200"
+                      placeholder="Chain-of-custody notes"
+                      value={current.chainNotes}
+                      onChange={(e) => updateAuth(item.path, { chainNotes: e.target.value })}
+                    />
+                  </div>
+                );
+              })}
+            </div>
           </CardBody>
         </Card>
 
