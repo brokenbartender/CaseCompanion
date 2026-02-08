@@ -118,6 +118,22 @@ export default function MotionBuilder() {
 
   return (
     <Page title="Motion Builder" subtitle="Structure motions and summary disposition packets.">
+      <Card className="mb-6">
+        <CardHeader>
+          <CardSubtitle>Oakland County Guidance</CardSubtitle>
+          <CardTitle>Motion Scheduling</CardTitle>
+        </CardHeader>
+        <CardBody>
+          <div className="space-y-2 text-sm text-slate-300">
+            <div>Oakland County Circuit Court motion day is typically Wednesday morning.</div>
+            <div>ePraecipe is required to schedule hearings and must be filed at least 7 days before the hearing.</div>
+            <div className="text-xs text-slate-400">
+              Verify judge-specific motion practices and deadlines before filing.
+            </div>
+          </div>
+        </CardBody>
+      </Card>
+
       <div className="grid gap-6 lg:grid-cols-2">
         <Card>
           <CardHeader>

@@ -50,6 +50,22 @@ export default function DiscoverySuite() {
   return (
     <Page title="Discovery Suite" subtitle="Track interrogatories, production requests, and admissions.">
       <div className="grid gap-6 lg:grid-cols-3">
+        <Card className="lg:col-span-3">
+          <CardHeader>
+            <CardSubtitle>Oakland County Guidance</CardSubtitle>
+            <CardTitle>Initial Disclosures</CardTitle>
+          </CardHeader>
+          <CardBody>
+            <div className="space-y-2 text-sm text-slate-300">
+              <div>MCR 2.302(A) requires initial disclosures in Michigan civil cases.</div>
+              <div>Initial disclosures are generally due within 14 days after the defendant files an answer.</div>
+              <div className="text-xs text-slate-400">
+                Follow the court’s scheduling order for additional discovery deadlines.
+              </div>
+            </div>
+          </CardBody>
+        </Card>
+
         <Card className="lg:col-span-1">
           <CardHeader>
             <CardSubtitle>New Request</CardSubtitle>

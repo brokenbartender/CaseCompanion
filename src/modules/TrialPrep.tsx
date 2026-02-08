@@ -113,6 +113,22 @@ ${timeline.map((event) => `<li>${event.date || "TBD"} - ${event.title}</li>`).jo
 
   return (
     <Page title="Trial Prep" subtitle="Trial notebook, witness prep, and objection quick cards.">
+      <Card className="mb-6">
+        <CardHeader>
+          <CardSubtitle>Oakland County Guidance</CardSubtitle>
+          <CardTitle>Case Evaluation + Trial Readiness</CardTitle>
+        </CardHeader>
+        <CardBody>
+          <div className="space-y-2 text-sm text-slate-300">
+            <div>Michigan circuit court cases may be submitted to case evaluation under MCR 2.403.</div>
+            <div>Watch the scheduling order for case evaluation briefs and hearing dates.</div>
+            <div className="text-xs text-slate-400">
+              Settlement conferences and pretrial statements are often required before trial.
+            </div>
+          </div>
+        </CardBody>
+      </Card>
+
       <div className="grid gap-6 lg:grid-cols-2">
         <Card>
           <CardHeader>

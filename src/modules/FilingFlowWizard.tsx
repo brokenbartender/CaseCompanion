@@ -71,6 +71,23 @@ export default function FilingFlowWizard() {
       <div className="grid gap-6 lg:grid-cols-2">
         <Card className="lg:col-span-2">
           <CardHeader>
+            <CardSubtitle>Oakland County Guidance</CardSubtitle>
+            <CardTitle>Start the Civil Case (Pro Se)</CardTitle>
+          </CardHeader>
+          <CardBody>
+            <div className="space-y-2 text-sm text-slate-300">
+              <div>Choose court based on claimed damages: district (&le; $25,000) or circuit (&gt; $25,000).</div>
+              <div>Oakland County Circuit Court uses MiFILE e-filing for civil cases.</div>
+              <div>Summons + complaint must be filed to open the civil case; a demand letter is not a filing.</div>
+              <div className="text-xs text-slate-400">
+                Verify filing fees and e-filing system fees in MiFILE before submitting.
+              </div>
+            </div>
+          </CardBody>
+        </Card>
+
+        <Card className="lg:col-span-2">
+          <CardHeader>
             <CardSubtitle>Rule Engine</CardSubtitle>
             <CardTitle>Upcoming Rule Deadlines</CardTitle>
           </CardHeader>
@@ -122,20 +139,20 @@ export default function FilingFlowWizard() {
                   type="radio"
                   name="court"
                   className="mt-1 h-4 w-4 accent-amber-400"
-                  checked={court === "52nd District Court (<= $25,000)"}
-                  onChange={() => saveCourt("52nd District Court (<= $25,000)")}
+                  checked={court === "50th District Court (<= $25,000)"}
+                  onChange={() => saveCourt("50th District Court (<= $25,000)")}
                 />
-                <span>52nd District Court (claims up to $25,000)</span>
+                <span>50th District Court (claims up to $25,000)</span>
               </label>
               <label className="flex items-start gap-2">
                 <input
                   type="radio"
                   name="court"
                   className="mt-1 h-4 w-4 accent-amber-400"
-                  checked={court === "6th Circuit Court (> $25,000)"}
-                  onChange={() => saveCourt("6th Circuit Court (> $25,000)")}
+                  checked={court === "Oakland County Circuit Court (> $25,000)"}
+                  onChange={() => saveCourt("Oakland County Circuit Court (> $25,000)")}
                 />
-                <span>6th Circuit Court (claims above $25,000)</span>
+                <span>Oakland County Circuit Court (claims above $25,000)</span>
               </label>
               <div className="text-xs text-slate-400 mt-2">Case type (for e-file eligibility)</div>
               <select

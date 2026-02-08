@@ -74,6 +74,22 @@ export default function ServiceOfProcessWizard() {
       <div className="grid gap-6">
         <Card>
           <CardHeader>
+            <CardSubtitle>Oakland County Guidance</CardSubtitle>
+            <CardTitle>Service Window + Proof</CardTitle>
+          </CardHeader>
+          <CardBody>
+            <div className="space-y-2 text-sm text-slate-300">
+              <div>Summons generally expires 91 days after it is issued. Serve before it expires.</div>
+              <div>After service, file proof of service with the court promptly.</div>
+              <div className="text-xs text-slate-400">
+                Methods of service and proof requirements are in MCR 2.103, 2.104, and 2.105. Confirm with the clerk.
+              </div>
+            </div>
+          </CardBody>
+        </Card>
+
+        <Card>
+          <CardHeader>
             <CardSubtitle>Tracker</CardSubtitle>
             <CardTitle>Service Attempt Log</CardTitle>
           </CardHeader>
