@@ -5,6 +5,7 @@ import { readJson, writeJson } from "../utils/localStore";
 import { computeRuleDeadlines, CaseProfile } from "../services/workflowEngine";
 import { APP_DISCLAIMER } from "../config/branding";
 import { FEATURE_FLAGS } from "../config/featureFlags";
+import { CASE_PROFILE_SEED } from "../data/caseProfileSeed";
 import {
   fetchProceduralStatus,
   updateCaseProfile,
@@ -28,15 +29,9 @@ function severityForDate(date: string) {
 export default function CaseStatusDashboard() {
   const [profile, setProfile] = useState<CaseProfile>(() =>
     readJson(PROFILE_KEY, {
-      jurisdictionId: "mi",
-      courtLevel: "district",
-      county: "Unknown",
-      filingDate: "",
-      serviceDate: "",
-      answerDate: "",
-      discoveryServedDate: "",
-      motionServedDate: "",
-      pretrialDate: ""
+      ...CASE_PROFILE_SEED,
+      county: CASE_PROFILE_SEED.county || "Unknown",
+      venueCounty: CASE_PROFILE_SEED.venueCounty || "Unknown"
     })
   );
   const [serverDeadlines, setServerDeadlines] = useState<any[]>([]);
