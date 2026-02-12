@@ -1,0 +1,44 @@
+{
+  "project": "JusticeAutomator",
+  "repository": "CaseCompanion",
+  "defaults": {
+    "plaintiff": "Cody McKenzie",
+    "defendant": "Jeffrey Snyder",
+    "venue": "STATE OF MICHIGAN, CIRCUIT COURT FOR THE COUNTY OF OAKLAND"
+  },
+  "safety": {
+    "legal_disclaimer": "Informational draft support only. Not legal advice.",
+    "requires_user_approval_for_actions": true
+  },
+  "modules": [
+    {"path": "requirements.txt", "owner": "Engineer", "phase": 2},
+    {"path": "database/schema.sql", "owner": "Engineer", "phase": 2},
+    {"path": "logic/court_rules.py", "owner": "Engineer", "phase": 2},
+    {"path": "templates/complaint_master.docx", "owner": "Engineer", "phase": 2},
+    {"path": "templates/complaint_master.jinja2", "owner": "Engineer", "phase": 2},
+    {"path": "app.py", "owner": "Engineer", "phase": 2},
+    {"path": "council/engine.py", "owner": "Engineer", "phase": 2},
+    {"path": "tests/test_justiceautomator.py", "owner": "Tester", "phase": 3},
+    {"path": "validation_report.md", "owner": "Tester", "phase": 3}
+  ],
+  "phases": [
+    {
+      "id": 1,
+      "name": "Ingestion and Planning",
+      "status": "in_progress",
+      "deliverables": ["docs/justiceautomator/GAP_ANALYSIS.md", "plan.json", "logs/rolling_log.md"]
+    },
+    {
+      "id": 2,
+      "name": "Execution",
+      "status": "pending",
+      "deliverables": ["requirements.txt", "database/schema.sql", "logic/court_rules.py", "templates/*", "app.py", "council/*"]
+    },
+    {
+      "id": 3,
+      "name": "Validation",
+      "status": "pending",
+      "deliverables": ["tests/test_justiceautomator.py", "validation_report.md"]
+    }
+  ]
+}
