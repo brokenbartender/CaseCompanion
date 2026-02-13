@@ -48,3 +48,8 @@ references/*.mp4
 references/*.mkv
 references/*.avi
 references/*.webm
+
+# Keep reference payloads local-only
+references/**
+!references/README_LOCAL.md
+!references/.gitkeep
