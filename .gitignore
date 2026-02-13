@@ -42,8 +42,8 @@ server/server/
 release_artifacts/
 
 # Local developer data (manifests, exports, scratch)
-local/
-!local/
+# Keep *all* content local-only, but allow a placeholder file so the folder exists.
+local/**
 !local/.gitkeep
 
 # Local-only case materials (do not commit)
