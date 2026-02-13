@@ -22,6 +22,7 @@ const MEDICAL_KEY = "case_companion_medical_items_v1";
 const WAGE_LOSS_KEY = "case_companion_wage_loss_v1";
 const WAGE_THEFT_KEY = "case_companion_wage_theft_v1";
 const WC_BENEFITS_KEY = "case_companion_wc_benefits_v1";
+const DYNAMIC_EVIDENCE_KEY = "case_companion_dynamic_evidence_v1";
 
 type EvidenceMeta = { tags: string[]; status: "new" | "reviewed" | "linked" };
 
@@ -74,6 +75,7 @@ export default function EvidenceVault() {
   const [auth, setAuth] = useState<EvidenceAuthState>(() => readJson(AUTH_KEY, {}));
   const [trialMode, setTrialMode] = useState(false);
   const [uploadStatus, setUploadStatus] = useState<string>("");
+  const [manifestStatus, setManifestStatus] = useState<string>("");
   const [filter, setFilter] = useState<string>(highlight);
   const [tagFilter, setTagFilter] = useState<string>("");
   const [statusLookupId, setStatusLookupId] = useState("");
@@ -208,10 +210,7 @@ export default function EvidenceVault() {
     }
   }
 
-  const dynamicEvidence = readJson<{ name: string; path: string; ext: string; category: string }[]>(
-    "case_companion_dynamic_evidence_v1",
-    []
-  );
+  const dynamicEvidence = readJson<{ name: string; path: string; ext: string; category: string }[]>(DYNAMIC_EVIDENCE_KEY, []);
   const combinedIndex = [...dynamicEvidence, ...EVIDENCE_INDEX];
   const trialPicks = combinedIndex.filter((item) => /police report|victim statement|video/i.test(item.name)).slice(0, 3);
   const filteredIndex = useMemo(() => {
@@ -224,6 +223,47 @@ export default function EvidenceVault() {
     if (!tagFilter) return filteredIndex;
     return filteredIndex.filter((item) => (meta[item.path]?.tags || []).includes(tagFilter));
   }, [filteredIndex, meta, tagFilter]);
+
+  async function importEvidenceManifest(file?: File | null) {
+    if (!file) return;
+    try {
+      setManifestStatus("Importing...");
+      const text = await file.text();
+      const parsed = JSON.parse(text);
+      if (!Array.isArray(parsed)) {
+        throw new Error("Manifest must be a JSON array of items.");
+      }
+
+      const normalized = parsed
+        .map((row: any) => {
+          const name = String(row?.name || "").trim();
+          const path = String(row?.path || "").trim();
+          if (!name || !path) return null;
+          const ext = String(row?.ext || (name.split(".").pop() || "file")).trim().toLowerCase();
+          const category = String(row?.category || "Other").trim() || "Other";
+          return { name, path, ext, category };
+        })
+        .filter(Boolean) as Array<{ name: string; path: string; ext: string; category: string }>;
+
+      const existing = readJson<Array<{ name: string; path: string; ext: string; category: string }>>(DYNAMIC_EVIDENCE_KEY, []);
+      const mergedByPath = new Map<string, { name: string; path: string; ext: string; category: string }>();
+      existing.forEach((item) => mergedByPath.set(item.path, item));
+      normalized.forEach((item) => mergedByPath.set(item.path, item));
+      const merged = Array.from(mergedByPath.values());
+      writeJson(DYNAMIC_EVIDENCE_KEY, merged);
+
+      setManifestStatus(`Imported ${normalized.length} item(s). Dynamic evidence now: ${merged.length}.`);
+      logAuditEvent("Evidence manifest imported", { imported: normalized.length, merged: merged.length, filename: file.name });
+    } catch (err: any) {
+      setManifestStatus(err?.message || "Manifest import failed.");
+    }
+  }
+
+  function clearDynamicEvidence() {
+    writeJson(DYNAMIC_EVIDENCE_KEY, []);
+    setManifestStatus("Cleared dynamic evidence list.");
+    logAuditEvent("Dynamic evidence cleared", {});
+  }
 
   async function fetchStatus() {
     if (!settings.apiBase || !statusLookupId.trim()) return;
@@ -535,6 +575,37 @@ export default function EvidenceVault() {
                 className="text-sm text-slate-300"
               />
               <span className="text-xs text-slate-500">{uploadStatus}</span>
+            </div>
+          </CardBody>
+        </Card>
+
+        <Card>
+          <CardHeader>
+            <CardSubtitle>Local Only</CardSubtitle>
+            <CardTitle>Import Evidence Manifest (JSON)</CardTitle>
+          </CardHeader>
+          <CardBody>
+            <div className="space-y-3">
+              <div className="text-sm text-slate-300">
+                Load or refresh your evidence index from a local JSON manifest. This updates{" "}
+                <code className="text-slate-100">{DYNAMIC_EVIDENCE_KEY}</code> in your browser storage.
+              </div>
+              <div className="flex flex-wrap items-center gap-3">
+                <input
+                  type="file"
+                  accept="application/json,.json"
+                  onChange={(e) => importEvidenceManifest(e.target.files?.[0])}
+                  className="text-sm text-slate-300"
+                />
+                <button
+                  type="button"
+                  onClick={clearDynamicEvidence}
+                  className="rounded-md border border-white/10 bg-white/5 px-3 py-2 text-sm font-semibold text-slate-100"
+                >
+                  Clear Dynamic Evidence
+                </button>
+              </div>
+              {manifestStatus ? <div className="text-xs text-slate-500">{manifestStatus}</div> : null}
             </div>
           </CardBody>
         </Card>

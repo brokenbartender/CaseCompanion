@@ -40,16 +40,13 @@ codex-*.patch
 _line.txt
 server/server/
 release_artifacts/
-# Add to .gitignore
-`n# Private case files (do not commit)
-references/Assault Case/
-references/*.mov
-references/*.mp4
-references/*.mkv
-references/*.avi
-references/*.webm
 
-# Keep reference payloads local-only
+# Local developer data (manifests, exports, scratch)
+local/
+!local/
+!local/.gitkeep
+
+# Local-only case materials (do not commit)
 references/**
 !references/README_LOCAL.md
 !references/.gitkeep
