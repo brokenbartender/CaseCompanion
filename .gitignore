@@ -48,3 +48,19 @@ references/*.mp4
 references/*.mkv
 references/*.avi
 references/*.webm
+
+# Python / Streamlit
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+venv/
+
+# JusticeAutomator outputs
+output/
+*.pdf
+
+# Large private imports
+casefiles/
+server/uploads.local.bak/
+
